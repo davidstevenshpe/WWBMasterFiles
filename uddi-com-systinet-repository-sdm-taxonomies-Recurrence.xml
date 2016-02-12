@@ -1,34 +1,35 @@
-<?xml version="1.0" encoding="UTF-8"?><taxonomy check="true" xmlns="http://systinet.com/uddi/taxonomy/v3/5.5">
-  <tModel tModelKey="uddi:localhost:com.systinet.soa:model:taxonomies:Recurrence" deleted="false" xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
-    <name xmlns="urn:uddi-org:api_v3">Recurrence</name>
-    <categoryBag xmlns="urn:uddi-org:api_v3">
-      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="tModel"/>
-      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="businessService"/>
-      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="businessEntity"/>
-      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="bindingTemplate"/>
-      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Checked value set" keyValue="checked"/>
-    </categoryBag>
-  </tModel>
-  <compatibilityBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
-    <compatibility>tModel</compatibility>
-    <compatibility>businessService</compatibility>
-    <compatibility>businessEntity</compatibility>
-    <compatibility>bindingTemplate</compatibility>
-  </compatibilityBag>
-  <categorizationBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
-    <categorization>categorization</categorization>
-  </categorizationBag>
-  <validation xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
-    <categories>
-      <category keyName="One-Off" keyValue="one-off" disabled="false"/>
-      <category keyName="Add" keyValue="add" disabled="false"/>
-      <category keyName="Per Month" keyValue="perMonth" disabled="false"/>
-      <category keyName="Per Day" keyValue="perDay" disabled="false"/>
-      <category keyName="Per Hour" keyValue="perHour" disabled="false"/>
-      <category keyName="Per Week" keyValue="perWeek" disabled="false"/>
-      <category keyName="Per Minute" keyValue="perMinute" disabled="false"/>
-      <category keyName="Per Second" keyValue="perSecond" disabled="false"/>
-      <category keyName="Per Event" keyValue="perEvent" disabled="false"/>
-    </categories>
-  </validation>
+<?xml version="1.0" encoding="UTF-8"?>
+<taxonomy check="true" xmlns="http://systinet.com/uddi/taxonomy/v3/5.5">
+    <tModel deleted="false" tModelKey="uddi:localhost:com.systinet.soa:model:taxonomies:Recurrence" xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+        <name xmlns="urn:uddi-org:api_v3">Recurrence</name>
+        <categoryBag xmlns="urn:uddi-org:api_v3">
+            <keyedReference keyName="Compatibility" keyValue="tModel" tModelKey="uddi:systinet.com:taxonomy:compatibility"/>
+            <keyedReference keyName="Compatibility" keyValue="businessService" tModelKey="uddi:systinet.com:taxonomy:compatibility"/>
+            <keyedReference keyName="Compatibility" keyValue="businessEntity" tModelKey="uddi:systinet.com:taxonomy:compatibility"/>
+            <keyedReference keyName="Compatibility" keyValue="bindingTemplate" tModelKey="uddi:systinet.com:taxonomy:compatibility"/>
+            <keyedReference keyName="Checked value set" keyValue="checked" tModelKey="uddi:uddi.org:categorization:types"/>
+        </categoryBag>
+    </tModel>
+    <compatibilityBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+        <compatibility>tModel</compatibility>
+        <compatibility>businessService</compatibility>
+        <compatibility>businessEntity</compatibility>
+        <compatibility>bindingTemplate</compatibility>
+    </compatibilityBag>
+    <categorizationBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+        <categorization>categorization</categorization>
+    </categorizationBag>
+    <validation xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+        <categories>
+            <category disabled="false" keyName="One-Off" keyValue="one-off"/>
+            <category disabled="false" keyName="Add" keyValue="add"/>
+            <category disabled="false" keyName="Per Month" keyValue="perMonth"/>
+            <category disabled="false" keyName="Per Day" keyValue="perDay"/>
+            <category disabled="false" keyName="Per Hour" keyValue="perHour"/>
+            <category disabled="false" keyName="Per Week" keyValue="perWeek"/>
+            <category disabled="false" keyName="Per Minute" keyValue="perMinute"/>
+            <category disabled="false" keyName="Per Second" keyValue="perSecond"/>
+            <category disabled="false" keyName="Per Event" keyValue="perEvent"/>
+        </categories>
+    </validation>
 </taxonomy>

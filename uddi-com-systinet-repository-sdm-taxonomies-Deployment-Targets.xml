@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <taxonomy check="true" xmlns="http://systinet.com/uddi/taxonomy/v3/5.5">
-    <tModel deleted="false" tModelKey="uddi:localhost:com.systinet.soa:model:taxonomies:Fixed-Var" xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
-        <name xmlns="urn:uddi-org:api_v3">Fixed-Var</name>
+    <tModel deleted="false" tModelKey="uddi:localhost:com.systinet.soa:model:taxonomies:Deployment_Targets" xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+        <name xmlns="urn:uddi-org:api_v3">Deployment Targets</name>
         <categoryBag xmlns="urn:uddi-org:api_v3">
             <keyedReference keyName="Compatibility" keyValue="tModel" tModelKey="uddi:systinet.com:taxonomy:compatibility"/>
             <keyedReference keyName="Compatibility" keyValue="businessService" tModelKey="uddi:systinet.com:taxonomy:compatibility"/>
@@ -21,8 +21,8 @@
     </categorizationBag>
     <validation xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
         <categories>
-            <category disabled="false" keyName="Fixed" keyValue="fixed"/>
-            <category disabled="false" keyName="Variable" keyValue="variable"/>
+            <category disabled="false" keyName="Amazon Web Services (AWS)" keyValue="HPCS"/>
+            <category disabled="false" keyName="HP ECS Virtual Private Cloud (VPC)" keyValue="ECS-VPC"/>
         </categories>
     </validation>
 </taxonomy>

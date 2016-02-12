@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <taxonomy check="true" xmlns="http://systinet.com/uddi/taxonomy/v3/5.5">
-    <tModel deleted="false" tModelKey="uddi:localhost:com.systinet.soa:model:taxonomies:Fixed-Var" xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
-        <name xmlns="urn:uddi-org:api_v3">Fixed-Var</name>
+    <tModel deleted="false" tModelKey="uddi:localhost:com.systinet.soa:model:taxonomies:Unit_Of_Measure" xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+        <name xmlns="urn:uddi-org:api_v3">Unit Of Measure</name>
         <categoryBag xmlns="urn:uddi-org:api_v3">
             <keyedReference keyName="Compatibility" keyValue="tModel" tModelKey="uddi:systinet.com:taxonomy:compatibility"/>
             <keyedReference keyName="Compatibility" keyValue="businessService" tModelKey="uddi:systinet.com:taxonomy:compatibility"/>
@@ -21,8 +21,11 @@
     </categorizationBag>
     <validation xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
         <categories>
-            <category disabled="false" keyName="Fixed" keyValue="fixed"/>
-            <category disabled="false" keyName="Variable" keyValue="variable"/>
+            <category disabled="false" keyName="Per User" keyValue="perUser"/>
+            <category disabled="false" keyName="Per Named User" keyValue="perNamedUser"/>
+            <category disabled="false" keyName="Per Case" keyValue="perCase"/>
+            <category disabled="false" keyName="Per Gbyte" keyValue="perGbyte"/>
+            <category disabled="false" keyName="Per Manday" keyValue="perManday"/>
         </categories>
     </validation>
 </taxonomy>

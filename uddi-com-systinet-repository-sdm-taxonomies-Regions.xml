@@ -1,30 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?><taxonomy check="true" xmlns="http://systinet.com/uddi/taxonomy/v3/5.5">
-  <tModel tModelKey="uddi:localhost:com.systinet.soa:model:taxonomies:Regions" deleted="false" xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
-    <name xmlns="urn:uddi-org:api_v3">Regions</name>
-    <categoryBag xmlns="urn:uddi-org:api_v3">
-      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="tModel"/>
-      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="businessService"/>
-      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="businessEntity"/>
-      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="bindingTemplate"/>
-      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Checked value set" keyValue="checked"/>
-    </categoryBag>
-  </tModel>
-  <compatibilityBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
-    <compatibility>tModel</compatibility>
-    <compatibility>businessService</compatibility>
-    <compatibility>businessEntity</compatibility>
-    <compatibility>bindingTemplate</compatibility>
-  </compatibilityBag>
-  <categorizationBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
-    <categorization>categorization</categorization>
-  </categorizationBag>
-  <validation xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
-    <categories>
-      <category keyName="All" keyValue="all" disabled="false"/>
-      <category keyName="APJ" keyValue="apj" disabled="false"/>
-      <category keyName="AMS" keyValue="ams" disabled="false"/>
-      <category keyName="EMEA" keyValue="emea" disabled="false"/>
-      <category keyName="USPS" keyValue="usps" disabled="false"/>
-    </categories>
-  </validation>
+<?xml version="1.0" encoding="UTF-8"?>
+<taxonomy check="true" xmlns="http://systinet.com/uddi/taxonomy/v3/5.5">
+    <tModel deleted="false" tModelKey="uddi:localhost:com.systinet.soa:model:taxonomies:Regions" xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+        <name xmlns="urn:uddi-org:api_v3">Regions</name>
+        <categoryBag xmlns="urn:uddi-org:api_v3">
+            <keyedReference keyName="Compatibility" keyValue="tModel" tModelKey="uddi:systinet.com:taxonomy:compatibility"/>
+            <keyedReference keyName="Compatibility" keyValue="businessService" tModelKey="uddi:systinet.com:taxonomy:compatibility"/>
+            <keyedReference keyName="Compatibility" keyValue="businessEntity" tModelKey="uddi:systinet.com:taxonomy:compatibility"/>
+            <keyedReference keyName="Compatibility" keyValue="bindingTemplate" tModelKey="uddi:systinet.com:taxonomy:compatibility"/>
+            <keyedReference keyName="Checked value set" keyValue="checked" tModelKey="uddi:uddi.org:categorization:types"/>
+        </categoryBag>
+    </tModel>
+    <compatibilityBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+        <compatibility>tModel</compatibility>
+        <compatibility>businessService</compatibility>
+        <compatibility>businessEntity</compatibility>
+        <compatibility>bindingTemplate</compatibility>
+    </compatibilityBag>
+    <categorizationBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+        <categorization>categorization</categorization>
+    </categorizationBag>
+    <validation xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+        <categories>
+            <category disabled="false" keyName="All" keyValue="all"/>
+            <category disabled="false" keyName="APJ" keyValue="apj"/>
+            <category disabled="false" keyName="AMS" keyValue="ams"/>
+            <category disabled="false" keyName="EMEA" keyValue="emea"/>
+            <category disabled="false" keyName="USPS" keyValue="usps"/>
+        </categories>
+    </validation>
 </taxonomy>

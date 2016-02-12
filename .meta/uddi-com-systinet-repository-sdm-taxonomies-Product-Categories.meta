@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rest:resource aclURI="http://c4w23400.itcs.hp.com:8080/em/systinet/platform/restBasic/repository/taxonomies/uddi-com-systinet-repository-sdm-taxonomies-Product-Categories?acl" deleteRevisionURI="http://c4w23400.itcs.hp.com:8080/em/systinet/platform/restBasic/repository/taxonomies/uddi-com-systinet-repository-sdm-taxonomies-Product-Categories?delete&amp;revision=1" deleteURI="http://c4w23400.itcs.hp.com:8080/em/systinet/platform/restBasic/repository/taxonomies/uddi-com-systinet-repository-sdm-taxonomies-Product-Categories?delete" name="uddi-com-systinet-repository-sdm-taxonomies-Product-Categories" purgeRevisionURI="http://c4w23400.itcs.hp.com:8080/em/systinet/platform/restBasic/repository/taxonomies/uddi-com-systinet-repository-sdm-taxonomies-Product-Categories?purge&amp;revision=1" purgeURI="http://c4w23400.itcs.hp.com:8080/em/systinet/platform/restBasic/repository/taxonomies/uddi-com-systinet-repository-sdm-taxonomies-Product-Categories?purge"
+    readURI="http://c4w23400.itcs.hp.com:8080/em/systinet/platform/restBasic/repository/taxonomies/uddi-com-systinet-repository-sdm-taxonomies-Product-Categories?meta&amp;desc&amp;data" requestURI="http://c4w23400.itcs.hp.com:8080/em/systinet/platform/restBasic/repository/taxonomies/uddi-com-systinet-repository-sdm-taxonomies-Product-Categories?data=&amp;meta=&amp;desc=" revision="1" revisionURI="http://c4w23400.itcs.hp.com:8080/em/systinet/platform/restBasic/repository/taxonomies/uddi-com-systinet-repository-sdm-taxonomies-Product-Categories?revision=1" type="document" undeleteURI="http://c4w23400.itcs.hp.com:8080/em/systinet/platform/restBasic/repository/taxonomies/uddi-com-systinet-repository-sdm-taxonomies-Product-Categories?undelete" updateRevisionURI="http://c4w23400.itcs.hp.com:8080/em/systinet/platform/restBasic/repository/taxonomies/uddi-com-systinet-repository-sdm-taxonomies-Product-Categories?update&amp;revision=1"
+    updateURI="http://c4w23400.itcs.hp.com:8080/em/systinet/platform/restBasic/repository/taxonomies/uddi-com-systinet-repository-sdm-taxonomies-Product-Categories?update" viewRevisionURI="http://c4w23400.itcs.hp.com:8080/em/systinet/platform/restBasic/repository/taxonomies/uddi-com-systinet-repository-sdm-taxonomies-Product-Categories?view&amp;revision=1" viewURI="http://c4w23400.itcs.hp.com:8080/em/systinet/platform/restBasic/repository/taxonomies/uddi-com-systinet-repository-sdm-taxonomies-Product-Categories?view" xlink:href="http://c4w23400.itcs.hp.com:8080/em/systinet/platform/restBasic/repository/taxonomies/uddi-com-systinet-repository-sdm-taxonomies-Product-Categories" xml:base="http://c4w23400.itcs.hp.com:8080/em/systinet/platform/restBasic/repository/" xmlns:a="http://systinet.com/2005/05/soa/model/artifact" xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup" xmlns:p="http://systinet.com/2005/05/soa/model/property"
+    xmlns:pt="http://systinet.com/2005/05/soa/model/property/type" xmlns:r="http://systinet.com/2005/05/repository" xmlns:rest="http://systinet.com/2005/05/soa/resource" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <rest:metadata>
+        <rest:path>taxonomies/uddi-com-systinet-repository-sdm-taxonomies-Product-Categories</rest:path>
+        <rest:collection>taxonomies/</rest:collection>
+        <rest:binary>0</rest:binary>
+        <rest:contentType>text/xml; charset=utf-8</rest:contentType>
+        <rest:type>document</rest:type>
+        <rest:deleted>0</rest:deleted>
+        <rest:owner>systinet:admin</rest:owner>
+        <rest:uuid>0d4e2681-ba16-4d14-ab8c-7f341131e8fd</rest:uuid>
+        <rest:domainId>topLevelDomain</rest:domainId>
+        <rest:revision>
+            <rest:number>1</rest:number>
+            <rest:timestamp>1970-01-01T00:00:00.000Z</rest:timestamp>
+            <rest:creator>systinet:admin</rest:creator>
+            <rest:label xsi:nil="true"/>
+            <rest:last>1</rest:last>
+        </rest:revision>
+        <rest:relationships/>
+        <rest:cached>0</rest:cached>
+        <rest:checksum>0</rest:checksum>
+        <rest:extensions/>
+    </rest:metadata>
+    <rest:descriptor>
+        <a:taxonomyArtifact deleted="0" xlink:href="taxonomies/uddi-com-systinet-repository-sdm-taxonomies-Product-Categories" xml:base="http://c4w23400.itcs.hp.com:8080/em/systinet/platform/restBasic/repository/" xmlns:a="http://systinet.com/2005/05/soa/model/artifact" xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup" xmlns:p="http://systinet.com/2005/05/soa/model/property" xmlns:pt="http://systinet.com/2005/05/soa/model/property/type" xmlns:r="http://systinet.com/2005/05/repository" xmlns:rest="http://systinet.com/2005/05/soa/resource" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <nameGroup xmlns="http://systinet.com/2005/05/soa/model/propertyGroup">
+                <name xmlns="http://systinet.com/2005/05/soa/model/property">Product Categories</name>
+            </nameGroup>
+            <p:checked>true</p:checked>
+            <p:hierarchical>false</p:hierarchical>
+            <p:revision>1</p:revision>
+            <p:valueDisplayFormat name="Name" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:valueDisplayFormat" value="Name"/>
+            <p:lastRevision>1</p:lastRevision>
+        </a:taxonomyArtifact>
+    </rest:descriptor>
+</rest:resource>
