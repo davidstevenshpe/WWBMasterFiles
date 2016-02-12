@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rest:resource xmlns:rest="http://systinet.com/2005/05/soa/resource">
+    <rest:descriptor>
+        <a:taxonomyArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact">
+            <g:nameGroup xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup">
+                <p:name xmlns:p="http://systinet.com/2005/05/soa/model/property">Contact classifications taxonomy</p:name>
+            </g:nameGroup>
+            <p:checked xmlns:p="http://systinet.com/2005/05/soa/model/property">true</p:checked>
+            <p:hierarchical xmlns:p="http://systinet.com/2005/05/soa/model/property">false</p:hierarchical>
+            <p:revision xmlns:p="http://systinet.com/2005/05/soa/model/property">0</p:revision>
+            <p:valueDisplayFormat name="Name" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:valueDisplayFormat" value="Name" xmlns:p="http://systinet.com/2005/05/soa/model/property"/>
+        </a:taxonomyArtifact>
+    </rest:descriptor>
+</rest:resource>

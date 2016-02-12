@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taxonomy brief="false" check="true" xmlns="http://systinet.com/uddi/taxonomy/v3/5.5">
+    <tModel deleted="false" tModelKey="uddi:systinet.com:soa:model:taxonomies:contactRoles" tModelKeyV2="uuid:ab915df5-a78b-3c44-99db-fe0e1502d3c5" xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+        <name xmlns="urn:uddi-org:api_v3">Contact roles taxonomy</name>
+        <description xmlns="urn:uddi-org:api_v3">SDM taxonomy.</description>
+        <overviewDoc xmlns="urn:uddi-org:api_v3">
+            <overviewURL>http://www.systinet.com</overviewURL>
+        </overviewDoc>
+        <categoryBag xmlns="urn:uddi-org:api_v3">
+            <keyedReference keyName="uddi-org:types:cacheable" keyValue="cacheable" tModelKey="uddi:uddi.org:categorization:types"/>
+            <keyedReference keyName="uddi-org:types:valueSet" keyValue="valueSet" tModelKey="uddi:uddi.org:categorization:types"/>
+            <keyedReference keyName="Categorization system" keyValue="categorization" tModelKey="uddi:uddi.org:categorization:types"/>
+            <keyedReference keyName="Compatibility" keyValue="tModel" tModelKey="uddi:systinet.com:taxonomy:compatibility"/>
+            <keyedReference keyName="Compatibility" keyValue="businessEntity" tModelKey="uddi:systinet.com:taxonomy:compatibility"/>
+            <keyedReference keyName="Compatibility" keyValue="businessService" tModelKey="uddi:systinet.com:taxonomy:compatibility"/>
+            <keyedReference keyName="Compatibility" keyValue="bindingTemplate" tModelKey="uddi:systinet.com:taxonomy:compatibility"/>
+            <keyedReference keyName="" keyValue="uddi:8f8df370-e4d6-11da-bf82-c9765be1bf81" tModelKey="uddi:uddi.org:categorization:validatedby"/>
+            <keyedReference keyName="Checked value set" keyValue="checked" tModelKey="uddi:uddi.org:categorization:types"/>
+        </categoryBag>
+    </tModel>
+    <compatibilityBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+        <compatibility>tModel</compatibility>
+        <compatibility>businessEntity</compatibility>
+        <compatibility>businessService</compatibility>
+        <compatibility>bindingTemplate</compatibility>
+    </compatibilityBag>
+    <categorizationBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+        <categorization>categorization</categorization>
+    </categorizationBag>
+    <validation xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+        <categories>
+            <category disabled="false" keyName="Practice CT" keyValue="practiceCt"/>
+            <category disabled="false" keyName="Account CT" keyValue="accountCt"/>
+            <category disabled="false" keyName="Product Manager" keyValue="productManager"/>
+            <category disabled="false" keyName="Lead Architect" keyValue="leadArchitect"/>
+            <category disabled="false" keyName="Product Owner" keyValue="productOwner"/>
+            <category disabled="false" keyName="Business Expert" keyValue="uddi:systinet.com:soa:model:taxonomies:contactRoles:businessExpert"/>
+            <category disabled="false" keyName="Architect" keyValue="uddi:systinet.com:soa:model:taxonomies:contactRoles:architect"/>
+            <category disabled="false" keyName="Developer" keyValue="uddi:systinet.com:soa:model:taxonomies:contactRoles:developer"/>
+            <category disabled="false" keyName="Administrator" keyValue="uddi:systinet.com:soa:model:taxonomies:contactRoles:administrator"/>
+            <category disabled="false" keyName="Operations Manager" keyValue="uddi:systinet.com:soa:model:taxonomies:contactRoles:operationsManager"/>
+        </categories>
+        <bindingTemplate bindingKey="uddi:8f8df370-e4d6-11da-bf82-c9765be1bf81" serviceKey="uddi:8f893880-e4d6-11da-bf82-c9765be1bf81" xmlns="urn:uddi-org:api_v3">
+            <accessPoint useType="endPoint">class:com.systinet.uddi.publishing.v3.validation.service.InternalValidator</accessPoint>
+            <tModelInstanceDetails>
+                <tModelInstanceInfo tModelKey="uddi:uddi.org:v3_valuesetvalidation"/>
+                <tModelInstanceInfo tModelKey="uddi:systinet.com:soa:model:taxonomies:contactRoles"/>
+            </tModelInstanceDetails>
+        </bindingTemplate>
+        <bindingTemplate bindingKey="uddi:8f92d570-e4d6-11da-bf82-c9765be1bf81" serviceKey="uddi:8f893880-e4d6-11da-bf82-c9765be1bf81" xmlns="urn:uddi-org:api_v3">
+            <accessPoint useType="endPoint">class:com.systinet.uddi.publishing.v2.validation.service.InternalValidator</accessPoint>
+            <tModelInstanceDetails>
+                <tModelInstanceInfo tModelKey="uddi:systinet.com:v2_validatevalues"/>
+                <tModelInstanceInfo tModelKey="uddi:systinet.com:soa:model:taxonomies:contactRoles"/>
+            </tModelInstanceDetails>
+        </bindingTemplate>
+        <bindingTemplate bindingKey="uddi:8f979060-e4d6-11da-bf82-c9765be1bf81" serviceKey="uddi:8f893880-e4d6-11da-bf82-c9765be1bf81" xmlns="urn:uddi-org:api_v3">
+            <accessPoint useType="endPoint">class:com.systinet.uddi.publishing.v1.validation.service.InternalValidator</accessPoint>
+            <tModelInstanceDetails>
+                <tModelInstanceInfo tModelKey="uddi:systinet.com:v1_validatevalues"/>
+                <tModelInstanceInfo tModelKey="uddi:systinet.com:soa:model:taxonomies:contactRoles"/>
+            </tModelInstanceDetails>
+        </bindingTemplate>
+    </validation>
+</taxonomy>

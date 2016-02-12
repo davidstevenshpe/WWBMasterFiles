@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taxonomy brief="false" check="true" xmlns="http://systinet.com/uddi/taxonomy/v3/5.5">
+    <tModel deleted="false" tModelKey="uddi:systinet.com:soa:model:taxonomies:lifecycleStages" tModelKeyV2="uuid:203381a8-f169-3ae9-816b-96ec00a61998" xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+        <name xmlns="urn:uddi-org:api_v3">Lifecycle stages</name>
+        <description xmlns="urn:uddi-org:api_v3">SDM taxonomy.</description>
+        <overviewDoc xmlns="urn:uddi-org:api_v3">
+            <overviewURL>http://www.systinet.com</overviewURL>
+        </overviewDoc>
+        <categoryBag xmlns="urn:uddi-org:api_v3">
+            <keyedReference keyName="uddi-org:types:cacheable" keyValue="cacheable" tModelKey="uddi:uddi.org:categorization:types"/>
+            <keyedReference keyName="uddi-org:types:valueSet" keyValue="valueSet" tModelKey="uddi:uddi.org:categorization:types"/>
+            <keyedReference keyName="Categorization system" keyValue="categorization" tModelKey="uddi:uddi.org:categorization:types"/>
+            <keyedReference keyName="Compatibility" keyValue="tModel" tModelKey="uddi:systinet.com:taxonomy:compatibility"/>
+            <keyedReference keyName="Compatibility" keyValue="businessEntity" tModelKey="uddi:systinet.com:taxonomy:compatibility"/>
+            <keyedReference keyName="Compatibility" keyValue="businessService" tModelKey="uddi:systinet.com:taxonomy:compatibility"/>
+            <keyedReference keyName="Compatibility" keyValue="bindingTemplate" tModelKey="uddi:systinet.com:taxonomy:compatibility"/>
+            <keyedReference keyName="" keyValue="uddi:c4173340-e4d6-11da-bf82-c9765be1bf81" tModelKey="uddi:uddi.org:categorization:validatedby"/>
+            <keyedReference keyName="Checked value set" keyValue="checked" tModelKey="uddi:uddi.org:categorization:types"/>
+        </categoryBag>
+    </tModel>
+    <compatibilityBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+        <compatibility>tModel</compatibility>
+        <compatibility>businessEntity</compatibility>
+        <compatibility>businessService</compatibility>
+        <compatibility>bindingTemplate</compatibility>
+    </compatibilityBag>
+    <categorizationBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+        <categorization>categorization</categorization>
+    </categorizationBag>
+    <validation xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+        <categories>
+            <category disabled="false" keyName="Kick-off" keyValue="uddi:systinet.com:soa:model:taxonomies:lifecycleStages:kickoff"/>
+            <category disabled="false" keyName="Obligation Agreement" keyValue="uddi:systinet.com:soa:model:taxonomies:lifecycleStages:obligationagreement"/>
+            <category disabled="false" keyName="Candidate" keyValue="uddi:systinet.com:soa:model:taxonomies:lifecycleStages:candidate"/>
+            <category disabled="false" keyName="Initial" keyValue="uddi:systinet.com:soa:model:taxonomies:lifecycleStages:initial"/>
+            <category disabled="false" keyName="Draft" keyValue="uddi:systinet.com:soa:model:taxonomies:lifecycleStages:draft"/>
+            <category disabled="false" keyName="Design" keyValue="uddi:systinet.com:soa:model:taxonomies:lifecycleStages:design"/>
+            <category disabled="false" keyName="Development" keyValue="uddi:systinet.com:soa:model:taxonomies:lifecycleStages:development"/>
+            <category disabled="false" keyName="Implementation" keyValue="uddi:systinet.com:soa:model:taxonomies:lifecycleStages:implementation"/>
+            <category disabled="false" keyName="Testing" keyValue="uddi:systinet.com:soa:model:taxonomies:lifecycleStages:testing"/>
+            <category disabled="false" keyName="Production" keyValue="uddi:systinet.com:soa:model:taxonomies:lifecycleStages:production"/>
+            <category disabled="false" keyName="Deprecated" keyValue="uddi:systinet.com:soa:model:taxonomies:lifecycleStages:deprecated"/>
+            <category disabled="false" keyName="Retired" keyValue="uddi:systinet.com:soa:model:taxonomies:lifecycleStages:retired"/>
+            <category disabled="false" keyName="Complete" keyValue="uddi:systinet.com:soa:model:taxonomies:lifecycleStages:complete"/>
+            <category disabled="false" keyName="Closed" keyValue="uddi:systinet.com:soa:model:taxonomies:lifecycleStages:closed"/>
+            <category disabled="false" keyName="Cancelled" keyValue="uddi:systinet.com:soa:model:taxonomies:lifecycleStages:cancelled"/>
+            <category disabled="false" keyName="Obsolete" keyValue="uddi:systinet.com:soa:model:taxonomies:lifecycleStages:obsolete"/>
+            <category disabled="false" keyName="Active" keyValue="uddi:systinet.com:soa:model:taxonomies:lifecycleStages:active"/>
+            <category disabled="false" keyName="Requested" keyValue="uddi:systinet.com:soa:model:taxonomies:lifecycleStages:requested"/>
+            <category disabled="false" keyName="Revoked" keyValue="uddi:systinet.com:soa:model:taxonomies:lifecycleStages:revoked"/>
+            <category disabled="false" keyName="On roadmap" keyValue="uddi:systinet.com:soa:model:taxonomies:lifecycleStages:onroadmap"/>
+            <category disabled="false" keyName="Implemented" keyValue="uddi:systinet.com:soa:model:taxonomies:lifecycleStages:implemented"/>
+            <category disabled="false" keyName="Pending Review" keyValue="uddi:systinet.com:soa:model:taxonomies:lifecycleStages:pendingreview"/>
+            <category disabled="false" keyName="Innovation Office - Start" keyValue="uddi:systinet.com:soa:model:taxonomies:lifecycleStages:innovationoffice-start"/>
+            <category disabled="false" keyName="New Product Vision Rejected" keyValue="uddi:systinet.com:soa:model:taxonomies:lifecycleStages:newproductvisionrejected"/>
+            <category disabled="false" keyName="Review" keyValue="uddi:systinet.com:soa:model:taxonomies:lifecycleStages:review"/>
+        </categories>
+        <bindingTemplate bindingKey="uddi:c4173340-e4d6-11da-bf82-c9765be1bf81" serviceKey="uddi:c4100750-e4d6-11da-bf82-c9765be1bf81" xmlns="urn:uddi-org:api_v3">
+            <accessPoint useType="endPoint">class:com.systinet.uddi.publishing.v3.validation.service.InternalValidator</accessPoint>
+            <tModelInstanceDetails>
+                <tModelInstanceInfo tModelKey="uddi:uddi.org:v3_valuesetvalidation"/>
+                <tModelInstanceInfo tModelKey="uddi:systinet.com:soa:model:taxonomies:lifecycleStages"/>
+            </tModelInstanceDetails>
+        </bindingTemplate>
+        <bindingTemplate bindingKey="uddi:c41bee30-e4d6-11da-bf82-c9765be1bf81" serviceKey="uddi:c4100750-e4d6-11da-bf82-c9765be1bf81" xmlns="urn:uddi-org:api_v3">
+            <accessPoint useType="endPoint">class:com.systinet.uddi.publishing.v2.validation.service.InternalValidator</accessPoint>
+            <tModelInstanceDetails>
+                <tModelInstanceInfo tModelKey="uddi:systinet.com:v2_validatevalues"/>
+                <tModelInstanceInfo tModelKey="uddi:systinet.com:soa:model:taxonomies:lifecycleStages"/>
+            </tModelInstanceDetails>
+        </bindingTemplate>
+        <bindingTemplate bindingKey="uddi:c420a920-e4d6-11da-bf82-c9765be1bf81" serviceKey="uddi:c4100750-e4d6-11da-bf82-c9765be1bf81" xmlns="urn:uddi-org:api_v3">
+            <accessPoint useType="endPoint">class:com.systinet.uddi.publishing.v1.validation.service.InternalValidator</accessPoint>
+            <tModelInstanceDetails>
+                <tModelInstanceInfo tModelKey="uddi:systinet.com:v1_validatevalues"/>
+                <tModelInstanceInfo tModelKey="uddi:systinet.com:soa:model:taxonomies:lifecycleStages"/>
+            </tModelInstanceDetails>
+        </bindingTemplate>
+    </validation>
+</taxonomy>
