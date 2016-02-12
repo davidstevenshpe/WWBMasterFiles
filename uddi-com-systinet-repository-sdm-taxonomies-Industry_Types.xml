@@ -22,16 +22,16 @@
     <validation xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
         <categories>
             <category disabled="false" keyName="Consumer Industries" keyValue="consumerIndustries"/>
-            <category disabled="false" keyName="Manufacturing" keyValue="manufacturing"/>
+            <category disabled="false" keyName="Communications" keyValue="communications"/>
             <category disabled="false" keyName="Defenc​e" keyValue="defenc​e"/>
-            <category disabled="false" keyName="Travel" keyValue="travel"/>
             <category disabled="false" keyName="Life Sciences​" keyValue="lifeSciences​"/>
             <category disabled="false" keyName="Healthcare" keyValue="healthcare"/>
+            <category disabled="false" keyName="Manufacturing" keyValue="manufacturing"/>
             <category disabled="false" keyName="Transportation" keyValue="transportation"/>
             <category disabled="false" keyName="Financial Services" keyValue="financial"/>
             <category disabled="false" keyName="Public Sector" keyValue="publicSector"/>
-            <category disabled="false" keyName="Communications" keyValue="communications"/>
             <category disabled="false" keyName="Media &amp; Entertainment" keyValue="mediaAndEntertainment"/>
+            <category disabled="false" keyName="Travel" keyValue="travel"/>
             <category disabled="false" keyName="Utilities &amp; Energy" keyValue="utilitiesAndEnergy"/>
         </categories>
     </validation>
