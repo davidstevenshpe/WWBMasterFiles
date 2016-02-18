@@ -11969,7 +11969,11 @@
 				<property name="sdmName" value="infrastructureServiceArtifact"/>
 			</type>
 			<!-- HPE Custom Extensions -->
-			
+			<attribute name="c_HPE-TerraResourceProvider"> 
+				 <mapping> 
+ 					<select-attribute name="tag:HPE-TerraResourceProvider"/> 
+				</mapping> 
+			</attribute> 
 			<!-- HPE Custom Extensions -->
 			<attribute name="name">
 				<mapping>
@@ -12053,6 +12057,14 @@
 				</sparx:element>
 			</type>
 			<!-- HPE Custom Extensions -->
+			<!-- ********************* -->
+			<!-- Terraform.io Resource Provider -->
+			<attribute name="tag:HPE-TerraResourceProvider"> 
+				 <mapping> 
+ 					<select-attribute name="c_HPE-TerraResourceProvider"/> 
+				</mapping> 
+			</attribute> 
+			<!-- ********************* -->
 			<!-- HPE Custom Extensions -->
 			<attribute name="Name">
 				<mapping>
