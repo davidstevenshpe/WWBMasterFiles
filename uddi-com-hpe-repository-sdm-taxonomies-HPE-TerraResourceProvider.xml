@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <taxonomy check="true" xmlns="http://systinet.com/uddi/taxonomy/v3/5.5">
-    <tModel deleted="false" tModelKey="uddi:systinet.com:soa:model:taxonomies:BinaryDocumentType" xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
-        <name xmlns="urn:uddi-org:api_v3">Binary Document Type</name>
+    <tModel deleted="false" tModelKey="uddi:hpe.com:soa:model:taxonomies:HPE-TerraResourceProvider" xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+        <name xmlns="urn:uddi-org:api_v3">HPE-TerraResourceProvider</name>
         <categoryBag xmlns="urn:uddi-org:api_v3">
             <keyedReference keyName="Compatibility" keyValue="tModel" tModelKey="uddi:systinet.com:taxonomy:compatibility"/>
             <keyedReference keyName="Compatibility" keyValue="businessService" tModelKey="uddi:systinet.com:taxonomy:compatibility"/>
@@ -21,10 +21,8 @@
     </categorizationBag>
     <validation xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
         <categories>
-            <category disabled="false" keyName="Microsoft Excel Spreadsheet" keyValue="Microsoft Excel Spreadsheet"/>
-            <category disabled="false" keyName="Microsoft Word" keyValue="Microsoft Word"/>
-            <category disabled="false" keyName="RTF" keyValue="RTF"/>
-            <category disabled="false" keyName="Other" keyValue="Other"/>
+            <category disabled="false" keyName="aws" keyValue="aws"/>
+            <category disabled="false" keyName="azure" keyValue="azure"/>
         </categories>
     </validation>
 </taxonomy>

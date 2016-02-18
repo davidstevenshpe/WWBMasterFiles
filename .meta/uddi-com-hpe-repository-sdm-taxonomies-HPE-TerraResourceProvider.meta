@@ -3,7 +3,7 @@
     <rest:descriptor>
         <a:taxonomyArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact">
             <g:nameGroup xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup">
-                <p:name xmlns:p="http://systinet.com/2005/05/soa/model/property">Binary Document Type</p:name>
+                <p:name xmlns:p="http://systinet.com/2005/05/soa/model/property">HPE-TerraResourceProvider</p:name>
             </g:nameGroup>
             <p:checked xmlns:p="http://systinet.com/2005/05/soa/model/property">true</p:checked>
             <p:hierarchical xmlns:p="http://systinet.com/2005/05/soa/model/property">false</p:hierarchical>
@@ -11,4 +11,7 @@
             <p:valueDisplayFormat name="Name" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:valueDisplayFormat" value="Name" xmlns:p="http://systinet.com/2005/05/soa/model/property"/>
         </a:taxonomyArtifact>
     </rest:descriptor>
+    <rest:metadata>
+        <rest:uuid>02c5cd3f-e5a1-4079-9053-6025d0a5defe</rest:uuid>
+    </rest:metadata>
 </rest:resource>
