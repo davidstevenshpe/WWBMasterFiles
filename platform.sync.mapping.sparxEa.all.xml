@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entityMappings xmlns="urn:com.hp.systinet.sync.mapping:1.0" 
-                xmlns:sparx="urn:com.hp.systinet.sync.mapping:extension:sparx:1.0"
-                name="EM's ArchiMate types excluding systemSoftware and node"
-                referenceAttributes="useType,name,description,cost,externalEffort,internalEffort,prerequisite"
-                externalType="sparxEa">
+		xmlns:sparx="urn:com.hp.systinet.sync.mapping:extension:sparx:1.0" 
+		name="EM's ArchiMate types"
+		referenceAttributes="useType,name,description,cost,externalEffort,internalEffort,prerequisite"
+		externalType="sparxEa">
 	<!--
    *********************************************
    ** Archimate: ApplicationCollaboration
@@ -42,7 +42,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -207,6 +207,7 @@
 			</reference>
 		</external>
 	</entityMapping>
+	
 	<!--
    *********************************************
    ** Archimate: ApplicationComponent
@@ -1102,6 +1103,7 @@
 			</reference>
 		</external>
 	</entityMapping>
+
 	<!--
    *********************************************
    ** Archimate: ApplicationFunction
@@ -1140,7 +1142,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -1343,7 +1345,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -1546,7 +1548,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -1749,7 +1751,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -1953,7 +1955,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -2157,7 +2159,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -2361,7 +2363,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -2565,7 +2567,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -2769,7 +2771,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -2973,7 +2975,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -3177,7 +3179,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -3381,7 +3383,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -3585,7 +3587,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -3788,7 +3790,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -3991,7 +3993,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -4195,7 +4197,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -4399,7 +4401,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -4603,7 +4605,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -4807,7 +4809,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -5010,7 +5012,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -5213,7 +5215,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -5416,7 +5418,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -5629,7 +5631,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -5832,7 +5834,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -6009,6 +6011,15 @@
 			<type>
 				<property name="sdmName" value="businessObjectArtifact"/>
 			</type>
+			<!-- HPE Custom Extensions -->
+			<!-- ********************* -->
+			<attribute name="c_planLevel"> 
+ 				<mapping> 
+ 					<select-attribute name="tag:HPEProductPlanLevel"/> 
+				 </mapping> 
+			</attribute> 
+			<!-- ********************* -->
+			<!-- HPE Custom Extensions -->
 			<attribute name="name">
 				<mapping>
 					<first>
@@ -6035,20 +6046,11 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
 			</attribute>
-			<!-- HPE Custom Extensions -->
-			<!-- ********************* -->
-			<attribute name="c_planLevel"> 
- 				<mapping> 
- 					<select-attribute name="tag:HPEProductPlanLevel"/> 
-				 </mapping> 
-			</attribute> 
-			<!-- ********************* -->
-			<!-- HPE Custom Extensions -->
 			<attribute name="lifecycleApprovedStage" classifier="virt"/>
 			<attribute name="lifecycleRef" classifier="virt"/>
 			<reference name="accesses">
@@ -6114,6 +6116,15 @@
 					<sparx:createInPackage>Elements without package/Business Layer/Business Objects</sparx:createInPackage>
 				</sparx:element>
 			</type>
+			<!-- HPE Custom Extensions -->
+			<!-- ********************* -->
+			<attribute name="tag:HPEProductPlanLevel"> 
+ 				<mapping> 
+  					<select-attribute name="c_planLevel"/> 
+ 				</mapping> 
+			</attribute> 
+			<!-- ********************* -->
+			<!-- HPE Custom Extensions -->
 			<attribute name="Name">
 				<mapping>
 					<select-attribute name="name"/>
@@ -6152,15 +6163,6 @@
 					<select-attribute name="lifecycleRef" classifier="virt"/>
 				</mapping>
 			</attribute>
-			<!-- HPE Custom Extensions -->
-			<!-- ********************* -->
-			<attribute name="tag:HPEProductPlanLevel"> 
- 				<mapping> 
-  					<select-attribute name="c_planLevel"/> 
- 				</mapping> 
-			</attribute> 
-			<!-- ********************* -->
-			<!-- HPE Custom Extensions -->
 			<reference name="EAM_previousVersion" type="Association.out">
 				<mapping>
 					<select-reference refId="r_previousVersion"/>
@@ -6218,6 +6220,7 @@
 			</reference>
 		</external>
 	</entityMapping>
+
 	<!--
    *********************************************
    ** Archimate: Contract
@@ -6256,7 +6259,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -6460,7 +6463,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -6663,7 +6666,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -6866,7 +6869,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -7069,7 +7072,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -7476,7 +7479,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -7679,7 +7682,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -7882,7 +7885,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -8085,7 +8088,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -8288,7 +8291,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -8823,7 +8826,7 @@
 					<select-attribute name="tag:em:associatedPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -9048,7 +9051,7 @@
 					<select-attribute name="tag:em:associatedPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -9268,7 +9271,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -9471,7 +9474,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -9674,7 +9677,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -9877,7 +9880,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -10042,6 +10045,7 @@
 			</reference>
 		</external>
 	</entityMapping>
+
 	<!--
    *********************************************
    ** Archimate: Stakeholder
@@ -10080,7 +10084,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -10245,7 +10249,6 @@
 			</reference>
 		</external>
 	</entityMapping>
-
 	<!--
    *********************************************
    ** Archimate: Goal
@@ -10284,7 +10287,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -10487,7 +10490,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -10690,7 +10693,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -11221,7 +11224,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -11592,16 +11595,16 @@
 					</match>
 				</mapping>
 			</attribute>
-            <attribute name="repositoryPackage">
-               <mapping>
-                  <select-attribute name="tag:em:repositoryPackage"/>
-               </mapping>
-            </attribute>
 			<attribute name="description">
 				<mapping>
 					<select-attribute name="Note"/>
 				</mapping>
 			</attribute>
+            <attribute name="repositoryPackage">
+               <mapping>
+                  <select-attribute name="tag:em:repositoryPackage"/>
+               </mapping>
+            </attribute>
 			<attribute name="lifecycleApprovedStage" classifier="virt"/>
 			<attribute name="lifecycleRef" classifier="virt"/>
 			<reference name="accesses">
@@ -11790,7 +11793,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -12184,7 +12187,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -12351,6 +12354,1527 @@
 	</entityMapping>   
 	<!--
    *********************************************
+   ** Archimate: Node
+   ** Sparx:     Class, Stereotype=ArchiMate_Node
+   ** EAM:  nodeArtifact
+   *********************************************
+   -->
+	<entityMapping id="nodeArtifact">
+		<internal>
+			<type>
+				<property name="sdmName" value="nodeArtifact"/>
+			</type>
+			<attribute name="name">
+				<mapping>
+					<first>
+						<select-attribute name="Name"/>
+						<value>&lt;noname&gt;</value>
+					</first>
+					<match pattern="" literal="true">
+						<value>&lt;noname&gt;</value>
+					</match>
+				</mapping>
+			</attribute>
+			<attribute name="description">
+				<mapping>
+					<select-attribute name="Note"/>
+				</mapping>
+			</attribute>
+			<attribute name="version">
+				<mapping>
+					<select-attribute name="Version"/>
+				</mapping>
+			</attribute>
+			<attribute name="repositoryPackage">
+				<mapping>
+					<select-attribute name="tag:em:repositoryPackage"/>
+				</mapping>
+			</attribute>
+			<attribute name="keyword">
+				<mapping>
+					<select-attribute name="Tag"/>
+				</mapping>
+			</attribute>
+			<attribute name="lifecycleApprovedStage" classifier="virt"/>
+			<attribute name="lifecycleRef" classifier="virt"/>
+			<reference name="accesses">
+				<mapping>
+					<select-reference refId="ArchiMate_Access"/>
+				</mapping>
+			</reference>
+			<reference name="aggregates">
+				<mapping>
+					<select-reference refId="ArchiMate_Aggregation"/>
+				</mapping>
+			</reference>
+			<reference name="assignedFrom">
+				<mapping>
+					<select-reference refId="ArchiMate_Assignment"/>
+				</mapping>
+			</reference>
+			<reference name="associatedWith">
+				<mapping>
+					<select-reference refId="ArchiMate_Association"/>
+				</mapping>
+			</reference>
+			<reference name="composedOf">
+				<mapping>
+					<select-reference refId="ArchiMate_Composition"/>
+				</mapping>
+			</reference>
+			<reference name="flowsTo">
+				<mapping>
+					<select-reference refId="ArchiMate_Flow"/>
+				</mapping>
+			</reference>
+			<reference name="realizes">
+				<mapping>
+					<select-reference refId="ArchiMate_Realization"/>
+				</mapping>
+			</reference>
+			<reference name="specializes">
+				<mapping>
+					<select-reference refId="ArchiMate_Specialization"/>
+				</mapping>
+			</reference>
+			<reference name="triggers">
+				<mapping>
+					<select-reference refId="ArchiMate_Triggering"/>
+				</mapping>
+			</reference>
+			<reference name="usedBy">
+				<mapping>
+					<select-reference refId="ArchiMate_UsedBy"/>
+				</mapping>
+			</reference>
+			<reference name="r_previousVersion">
+				<mapping>
+					<select-reference refId="EAM_previousVersion"/>
+				</mapping>
+			</reference>
+		</internal>
+		<external>
+			<type>
+				<property name="Stereotype" value="ArchiMate_Node"/>            
+				<sparx:element type="Class">
+					<sparx:createInPackage>Elements without package/Technology Layer/Nodes</sparx:createInPackage>
+				</sparx:element>
+			</type>
+			<attribute name="Name">
+				<mapping>
+					<select-attribute name="name"/>
+					<match pattern="&lt;noname&gt;" literal="true">
+						<null/>
+					</match>
+				</mapping>
+			</attribute>
+			<attribute name="Note">
+				<mapping>
+					<select-attribute name="description"/>
+				</mapping>
+			</attribute>
+			<attribute name="Version">
+				<mapping>
+					<select-attribute name="version"/>
+				</mapping>
+			</attribute>
+			<attribute name="tag:em:repositoryPackage">
+				<mapping>
+					<select-attribute name="repositoryPackage"/>
+				</mapping>
+			</attribute>
+			<attribute name="Tag">
+				<mapping>
+					<select-attribute name="keyword"/>
+				</mapping>
+			</attribute>
+			<attribute name="Status">
+				<mapping>
+					<select-attribute name="lifecycleApprovedStage" classifier="virt"/>
+				</mapping>
+			</attribute>
+			<attribute name="tag:sync:lifecycleUuid" description="EM's Governance Process UUID is required to setup target status of an architecture element in the context of plateau or deliverable">
+				<mapping>
+					<select-attribute name="lifecycleRef" classifier="virt"/>
+				</mapping>
+			</attribute>
+			<reference name="EAM_previousVersion" type="Association.out">
+				<mapping>
+					<select-reference refId="r_previousVersion"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Access" type="Dependency.out">
+				<mapping>
+					<select-reference refId="accesses"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Aggregation" type="Aggregation.in">
+				<mapping>
+					<select-reference refId="aggregates"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Assignment" type="Association.in">
+				<mapping>
+					<select-reference refId="assignedFrom"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Association" type="Association.out">
+				<mapping>
+					<select-reference refId="associatedWith"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Composition" type="Aggregation_Strong.in">
+				<mapping>
+					<select-reference refId="composedOf"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Flow" type="ControlFlow.out">
+				<mapping>
+					<select-reference refId="flowsTo"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Realization" type="Dependency.out">
+				<mapping>
+					<select-reference refId="realizes"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Specialization" type="Generalization.out">
+				<mapping>
+					<select-reference refId="specializes"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Triggering" type="ControlFlow.out">
+				<mapping>
+					<select-reference refId="triggers"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_UsedBy" type="Dependency.out">
+				<mapping>
+					<select-reference refId="usedBy"/>
+				</mapping>
+			</reference>
+		</external>
+	</entityMapping>
+
+	<!--
+   *********************************************
+   ** Archimate: Device
+   ** Sparx:     Class, Stereotype=ArchiMate_Device
+   ** EAM:  deviceArtifact
+   *********************************************
+   -->
+	<entityMapping id="deviceArtifact">
+		<internal>
+			<type>
+				<property name="sdmName" value="deviceArtifact"/>
+			</type>
+			<attribute name="name">
+				<mapping>
+					<first>
+						<select-attribute name="Name"/>
+						<value>&lt;noname&gt;</value>
+					</first>
+					<match pattern="" literal="true">
+						<value>&lt;noname&gt;</value>
+					</match>
+				</mapping>
+			</attribute>
+			<attribute name="description">
+				<mapping>
+					<select-attribute name="Note"/>
+				</mapping>
+			</attribute>
+			<attribute name="version">
+				<mapping>
+					<select-attribute name="Version"/>
+				</mapping>
+			</attribute>
+			<attribute name="repositoryPackage">
+				<mapping>
+					<select-attribute name="tag:em:repositoryPackage"/>
+				</mapping>
+			</attribute>
+			<attribute name="keyword">
+				<mapping>
+					<select-attribute name="Tag"/>
+				</mapping>
+			</attribute>
+			<attribute name="lifecycleApprovedStage" classifier="virt"/>
+			<attribute name="lifecycleRef" classifier="virt"/>
+			<reference name="accesses">
+				<mapping>
+					<select-reference refId="ArchiMate_Access"/>
+				</mapping>
+			</reference>
+			<reference name="aggregates">
+				<mapping>
+					<select-reference refId="ArchiMate_Aggregation"/>
+				</mapping>
+			</reference>
+			<reference name="assignedFrom">
+				<mapping>
+					<select-reference refId="ArchiMate_Assignment"/>
+				</mapping>
+			</reference>
+			<reference name="associatedWith">
+				<mapping>
+					<select-reference refId="ArchiMate_Association"/>
+				</mapping>
+			</reference>
+			<reference name="composedOf">
+				<mapping>
+					<select-reference refId="ArchiMate_Composition"/>
+				</mapping>
+			</reference>
+			<reference name="flowsTo">
+				<mapping>
+					<select-reference refId="ArchiMate_Flow"/>
+				</mapping>
+			</reference>
+			<reference name="realizes">
+				<mapping>
+					<select-reference refId="ArchiMate_Realization"/>
+				</mapping>
+			</reference>
+			<reference name="specializes">
+				<mapping>
+					<select-reference refId="ArchiMate_Specialization"/>
+				</mapping>
+			</reference>
+			<reference name="triggers">
+				<mapping>
+					<select-reference refId="ArchiMate_Triggering"/>
+				</mapping>
+			</reference>
+			<reference name="usedBy">
+				<mapping>
+					<select-reference refId="ArchiMate_UsedBy"/>
+				</mapping>
+			</reference>
+			<reference name="r_previousVersion">
+				<mapping>
+					<select-reference refId="EAM_previousVersion"/>
+				</mapping>
+			</reference>
+		</internal>
+		<external>
+			<type>
+				<property name="Stereotype" value="ArchiMate_Device"/>            
+				<sparx:element type="Class">
+					<sparx:createInPackage>Elements without package/Technology Layer/Devices</sparx:createInPackage>
+				</sparx:element>
+			</type>
+			<attribute name="Name">
+				<mapping>
+					<select-attribute name="name"/>
+					<match pattern="&lt;noname&gt;" literal="true">
+						<null/>
+					</match>
+				</mapping>
+			</attribute>
+			<attribute name="Note">
+				<mapping>
+					<select-attribute name="description"/>
+				</mapping>
+			</attribute>
+			<attribute name="Version">
+				<mapping>
+					<select-attribute name="version"/>
+				</mapping>
+			</attribute>
+			<attribute name="tag:em:repositoryPackage">
+				<mapping>
+					<select-attribute name="repositoryPackage"/>
+				</mapping>
+			</attribute>
+			<attribute name="Tag">
+				<mapping>
+					<select-attribute name="keyword"/>
+				</mapping>
+			</attribute>
+			<attribute name="Status">
+				<mapping>
+					<select-attribute name="lifecycleApprovedStage" classifier="virt"/>
+				</mapping>
+			</attribute>
+			<attribute name="tag:sync:lifecycleUuid" description="EM's Governance Process UUID is required to setup target status of an architecture element in the context of plateau or deliverable">
+				<mapping>
+					<select-attribute name="lifecycleRef" classifier="virt"/>
+				</mapping>
+			</attribute>
+			<reference name="EAM_previousVersion" type="Association.out">
+				<mapping>
+					<select-reference refId="r_previousVersion"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Access" type="Dependency.out">
+				<mapping>
+					<select-reference refId="accesses"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Aggregation" type="Aggregation.in">
+				<mapping>
+					<select-reference refId="aggregates"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Assignment" type="Association.in">
+				<mapping>
+					<select-reference refId="assignedFrom"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Association" type="Association.out">
+				<mapping>
+					<select-reference refId="associatedWith"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Composition" type="Aggregation_Strong.in">
+				<mapping>
+					<select-reference refId="composedOf"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Flow" type="ControlFlow.out">
+				<mapping>
+					<select-reference refId="flowsTo"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Realization" type="Dependency.out">
+				<mapping>
+					<select-reference refId="realizes"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Specialization" type="Generalization.out">
+				<mapping>
+					<select-reference refId="specializes"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Triggering" type="ControlFlow.out">
+				<mapping>
+					<select-reference refId="triggers"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_UsedBy" type="Dependency.out">
+				<mapping>
+					<select-reference refId="usedBy"/>
+				</mapping>
+			</reference>
+		</external>
+	</entityMapping>
+
+	<!--
+   *********************************************
+   ** Archimate: Server
+   ** Sparx:     Class, Stereotype=ArchiMate_Device, Specialization=server
+   ** EM:  serverArtifact
+   *********************************************
+   -->
+	<entityMapping id="serverArtifact">
+		<internal>
+			<type>
+				<property name="sdmName" value="serverArtifact"/>
+			</type>
+			<attribute name="name">
+				<mapping>
+					<first>
+						<select-attribute name="Name"/>
+						<value>&lt;noname&gt;</value>
+					</first>
+					<match pattern="" literal="true">
+						<value>&lt;noname&gt;</value>
+					</match>
+				</mapping>
+			</attribute>
+			<attribute name="description">
+				<mapping>
+					<select-attribute name="Note"/>
+				</mapping>
+			</attribute>
+			<attribute name="version">
+				<mapping>
+					<select-attribute name="Version"/>
+				</mapping>
+			</attribute>
+			<attribute name="repositoryPackage">
+				<mapping>
+					<select-attribute name="tag:em:repositoryPackage"/>
+				</mapping>
+			</attribute>
+			<attribute name="keyword">
+				<mapping>
+					<select-attribute name="Tag"/>
+				</mapping>
+			</attribute>
+			<attribute name="lifecycleApprovedStage" classifier="virt"/>
+			<attribute name="lifecycleRef" classifier="virt"/>
+			<reference name="accesses">
+				<mapping>
+					<select-reference refId="ArchiMate_Access"/>
+				</mapping>
+			</reference>
+			<reference name="aggregates">
+				<mapping>
+					<select-reference refId="ArchiMate_Aggregation"/>
+				</mapping>
+			</reference>
+			<reference name="assignedFrom">
+				<mapping>
+					<select-reference refId="ArchiMate_Assignment"/>
+				</mapping>
+			</reference>
+			<reference name="associatedWith">
+				<mapping>
+					<select-reference refId="ArchiMate_Association"/>
+				</mapping>
+			</reference>
+			<reference name="composedOf">
+				<mapping>
+					<select-reference refId="ArchiMate_Composition"/>
+				</mapping>
+			</reference>
+			<reference name="flowsTo">
+				<mapping>
+					<select-reference refId="ArchiMate_Flow"/>
+				</mapping>
+			</reference>
+			<reference name="realizes">
+				<mapping>
+					<select-reference refId="ArchiMate_Realization"/>
+				</mapping>
+			</reference>
+			<reference name="specializes">
+				<mapping>
+					<select-reference refId="ArchiMate_Specialization"/>
+				</mapping>
+			</reference>
+			<reference name="triggers">
+				<mapping>
+					<select-reference refId="ArchiMate_Triggering"/>
+				</mapping>
+			</reference>
+			<reference name="usedBy">
+				<mapping>
+					<select-reference refId="ArchiMate_UsedBy"/>
+				</mapping>
+			</reference>
+			<reference name="r_previousVersion">
+				<mapping>
+					<select-reference refId="EAM_previousVersion"/>
+				</mapping>
+			</reference>
+		</internal>
+		<external>
+			<type>
+				<property name="Stereotype" value="ArchiMate_Device"/>  
+				<property name="Specialization" value="server"/>          
+				<sparx:element type="Class">
+					<sparx:createInPackage>Elements without package/Technology Layer/Devices/Servers</sparx:createInPackage>
+				</sparx:element>
+			</type>
+			<attribute name="Name">
+				<mapping>
+					<select-attribute name="name"/>
+					<match pattern="&lt;noname&gt;" literal="true">
+						<null/>
+					</match>
+				</mapping>
+			</attribute>
+			<attribute name="Note">
+				<mapping>
+					<select-attribute name="description"/>
+				</mapping>
+			</attribute>
+			<attribute name="Version">
+				<mapping>
+					<select-attribute name="version"/>
+				</mapping>
+			</attribute>
+			<attribute name="tag:em:repositoryPackage">
+				<mapping>
+					<select-attribute name="repositoryPackage"/>
+				</mapping>
+			</attribute>
+			<attribute name="Tag">
+				<mapping>
+					<select-attribute name="keyword"/>
+				</mapping>
+			</attribute>
+			<attribute name="Status">
+				<mapping>
+					<select-attribute name="lifecycleApprovedStage" classifier="virt"/>
+				</mapping>
+			</attribute>
+			<attribute name="tag:sync:lifecycleUuid" description="EM's Governance Process UUID is required to setup target status of an architecture element in the context of plateau or deliverable">
+				<mapping>
+					<select-attribute name="lifecycleRef" classifier="virt"/>
+				</mapping>
+			</attribute>
+			<reference name="EAM_previousVersion" type="Association.out">
+				<mapping>
+					<select-reference refId="r_previousVersion"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Access" type="Dependency.out">
+				<mapping>
+					<select-reference refId="accesses"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Aggregation" type="Aggregation.in">
+				<mapping>
+					<select-reference refId="aggregates"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Assignment" type="Association.in">
+				<mapping>
+					<select-reference refId="assignedFrom"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Association" type="Association.out">
+				<mapping>
+					<select-reference refId="associatedWith"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Composition" type="Aggregation_Strong.in">
+				<mapping>
+					<select-reference refId="composedOf"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Flow" type="ControlFlow.out">
+				<mapping>
+					<select-reference refId="flowsTo"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Realization" type="Dependency.out">
+				<mapping>
+					<select-reference refId="realizes"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Specialization" type="Generalization.out">
+				<mapping>
+					<select-reference refId="specializes"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Triggering" type="ControlFlow.out">
+				<mapping>
+					<select-reference refId="triggers"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_UsedBy" type="Dependency.out">
+				<mapping>
+					<select-reference refId="usedBy"/>
+				</mapping>
+			</reference>
+		</external>
+	</entityMapping>
+
+	<!--
+   *********************************************
+   ** Archimate: Device
+   ** Sparx:     Class, Stereotype=ArchiMate_Device, Specialization=serverClass
+   ** EM:  serverClassArtifact
+   *********************************************
+   -->
+	<entityMapping id="serverClassArtifact">
+		<internal>
+			<type>
+				<property name="sdmName" value="serverClassArtifact"/>
+			</type>
+			<attribute name="name">
+				<mapping>
+					<first>
+						<select-attribute name="Name"/>
+						<value>&lt;noname&gt;</value>
+					</first>
+					<match pattern="" literal="true">
+						<value>&lt;noname&gt;</value>
+					</match>
+				</mapping>
+			</attribute>
+			<attribute name="ramSize">
+				<mapping overwrite="false">
+					<select-attribute name="tag:em:ramSize"/>
+				</mapping>
+			</attribute>
+			<attribute name="cpuCores">
+				<mapping overwrite="false">
+					<select-attribute name="tag:em:cpuCores"/>
+				</mapping>
+			</attribute>
+			<attribute name="storageSize">
+				<mapping overwrite="false">
+					<select-attribute name="tag:em:storageSize"/>
+				</mapping>
+			</attribute>
+			<attribute name="description">
+				<mapping>
+					<select-attribute name="Note"/>
+				</mapping>
+			</attribute>
+			<attribute name="version">
+				<mapping>
+					<select-attribute name="Version"/>
+				</mapping>
+			</attribute>
+			<attribute name="repositoryPackage">
+				<mapping>
+					<select-attribute name="tag:em:repositoryPackage"/>
+				</mapping>
+			</attribute>
+			<attribute name="keyword">
+				<mapping>
+					<select-attribute name="Tag"/>
+				</mapping>
+			</attribute>
+			<attribute name="lifecycleApprovedStage" classifier="virt"/>
+			<attribute name="lifecycleRef" classifier="virt"/>
+			<reference name="accesses">
+				<mapping>
+					<select-reference refId="ArchiMate_Access"/>
+				</mapping>
+			</reference>
+			<reference name="aggregates">
+				<mapping>
+					<select-reference refId="ArchiMate_Aggregation"/>
+				</mapping>
+			</reference>
+			<reference name="assignedFrom">
+				<mapping>
+					<select-reference refId="ArchiMate_Assignment"/>
+				</mapping>
+			</reference>
+			<reference name="associatedWith">
+				<mapping>
+					<select-reference refId="ArchiMate_Association"/>
+				</mapping>
+			</reference>
+			<reference name="composedOf">
+				<mapping>
+					<select-reference refId="ArchiMate_Composition"/>
+				</mapping>
+			</reference>
+			<reference name="flowsTo">
+				<mapping>
+					<select-reference refId="ArchiMate_Flow"/>
+				</mapping>
+			</reference>
+			<reference name="realizes">
+				<mapping>
+					<select-reference refId="ArchiMate_Realization"/>
+				</mapping>
+			</reference>
+			<reference name="specializes">
+				<mapping>
+					<select-reference refId="ArchiMate_Specialization"/>
+				</mapping>
+			</reference>
+			<reference name="triggers">
+				<mapping>
+					<select-reference refId="ArchiMate_Triggering"/>
+				</mapping>
+			</reference>
+			<reference name="usedBy">
+				<mapping>
+					<select-reference refId="ArchiMate_UsedBy"/>
+				</mapping>
+			</reference>
+			<reference name="r_previousVersion">
+				<mapping>
+					<select-reference refId="EAM_previousVersion"/>
+				</mapping>
+			</reference>
+		</internal>
+		<external>
+			<type>
+				<property name="Stereotype" value="ArchiMate_Device"/>  
+				<property name="Specialization" value="serverClass"/>          
+				<sparx:element type="Class">
+					<sparx:createInPackage>Elements without package/Technology Layer/Devices/Server Classes</sparx:createInPackage>
+				</sparx:element>
+			</type>
+			<attribute name="Name">
+				<mapping>
+					<select-attribute name="name"/>
+					<match pattern="&lt;noname&gt;" literal="true">
+						<null/>
+					</match>
+				</mapping>
+			</attribute>
+			<attribute name="tag:em:ramSize">
+				<mapping>
+					<select-attribute name="ramSize"/>
+				</mapping>
+			</attribute>
+			<attribute name="tag:em:cpuCores">
+				<mapping>
+					<select-attribute name="cpuCores"/>
+				</mapping>
+			</attribute>
+			<attribute name="tag:em:storageSize">
+				<mapping>
+					<select-attribute name="storageSize"/>
+				</mapping>
+			</attribute>
+			<attribute name="Note">
+				<mapping>
+					<select-attribute name="description"/>
+				</mapping>
+			</attribute>
+			<attribute name="Version">
+				<mapping>
+					<select-attribute name="version"/>
+				</mapping>
+			</attribute>
+			<attribute name="tag:em:repositoryPackage">
+				<mapping>
+					<select-attribute name="repositoryPackage"/>
+				</mapping>
+			</attribute>
+			<attribute name="Tag">
+				<mapping>
+					<select-attribute name="keyword"/>
+				</mapping>
+			</attribute>
+			<attribute name="Status">
+				<mapping>
+					<select-attribute name="lifecycleApprovedStage" classifier="virt"/>
+				</mapping>
+			</attribute>
+			<attribute name="tag:sync:lifecycleUuid" description="EM's Governance Process UUID is required to setup target status of an architecture element in the context of plateau or deliverable">
+				<mapping>
+					<select-attribute name="lifecycleRef" classifier="virt"/>
+				</mapping>
+			</attribute>
+			<reference name="EAM_previousVersion" type="Association.out">
+				<mapping>
+					<select-reference refId="r_previousVersion"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Access" type="Dependency.out">
+				<mapping>
+					<select-reference refId="accesses"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Aggregation" type="Aggregation.in">
+				<mapping>
+					<select-reference refId="aggregates"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Assignment" type="Association.in">
+				<mapping>
+					<select-reference refId="assignedFrom"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Association" type="Association.out">
+				<mapping>
+					<select-reference refId="associatedWith"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Composition" type="Aggregation_Strong.in">
+				<mapping>
+					<select-reference refId="composedOf"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Flow" type="ControlFlow.out">
+				<mapping>
+					<select-reference refId="flowsTo"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Realization" type="Dependency.out">
+				<mapping>
+					<select-reference refId="realizes"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Specialization" type="Generalization.out">
+				<mapping>
+					<select-reference refId="specializes"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Triggering" type="ControlFlow.out">
+				<mapping>
+					<select-reference refId="triggers"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_UsedBy" type="Dependency.out">
+				<mapping>
+					<select-reference refId="usedBy"/>
+				</mapping>
+			</reference>
+		</external>
+	</entityMapping>
+	
+	<!--
+   *********************************************
+   ** Archimate: Device
+   ** Sparx:     Class, Stereotype=ArchiMate_Device, Specialization=serverProfile
+   ** EM:  serverProfileArtifact
+   *********************************************
+   -->
+	<entityMapping id="serverProfileArtifact">
+		<internal>
+			<type>
+				<property name="sdmName" value="serverProfileArtifact"/>
+			</type>
+			<attribute name="name">
+				<mapping>
+					<first>
+						<select-attribute name="Name"/>
+						<value>&lt;noname&gt;</value>
+					</first>
+					<match pattern="" literal="true">
+						<value>&lt;noname&gt;</value>
+					</match>
+				</mapping>
+			</attribute>
+			<attribute name="ramSize">
+				<mapping overwrite="false">
+					<select-attribute name="tag:em:ramSize"/>
+				</mapping>
+			</attribute>
+			<attribute name="cpuCores">
+				<mapping overwrite="false">
+					<select-attribute name="tag:em:cpuCores"/>
+				</mapping>
+			</attribute>
+			<attribute name="storageSize">
+				<mapping overwrite="false">
+					<select-attribute name="tag:em:storageSize"/>
+				</mapping>
+			</attribute>
+			<attribute name="totalCostOfAcquisition">
+				<mapping overwrite="false">
+					<select-attribute name="tag:em:totalCostOfAcquisition"/>
+				</mapping>
+			</attribute>
+			<attribute name="perHourCost">
+				<mapping overwrite="false">
+					<select-attribute name="tag:em:perHourCost"/>
+				</mapping>
+			</attribute>
+			<attribute name="expectedLifetime">
+				<mapping overwrite="false">
+					<select-attribute name="tag:em:expectedLifetime"/>
+				</mapping>
+			</attribute>
+			<attribute name="description">
+				<mapping>
+					<select-attribute name="Note"/>
+				</mapping>
+			</attribute>
+			<attribute name="version">
+				<mapping>
+					<select-attribute name="Version"/>
+				</mapping>
+			</attribute>
+			<attribute name="repositoryPackage">
+				<mapping>
+					<select-attribute name="tag:em:repositoryPackage"/>
+				</mapping>
+			</attribute>
+			<attribute name="keyword">
+				<mapping>
+					<select-attribute name="Tag"/>
+				</mapping>
+			</attribute>
+			<attribute name="lifecycleApprovedStage" classifier="virt"/>
+			<attribute name="lifecycleRef" classifier="virt"/>
+			<reference name="accesses">
+				<mapping>
+					<select-reference refId="ArchiMate_Access"/>
+				</mapping>
+			</reference>
+			<reference name="aggregates">
+				<mapping>
+					<select-reference refId="ArchiMate_Aggregation"/>
+				</mapping>
+			</reference>
+			<reference name="assignedFrom">
+				<mapping>
+					<select-reference refId="ArchiMate_Assignment"/>
+				</mapping>
+			</reference>
+			<reference name="associatedWith">
+				<mapping>
+					<select-reference refId="ArchiMate_Association"/>
+				</mapping>
+			</reference>
+			<reference name="composedOf">
+				<mapping>
+					<select-reference refId="ArchiMate_Composition"/>
+				</mapping>
+			</reference>
+			<reference name="flowsTo">
+				<mapping>
+					<select-reference refId="ArchiMate_Flow"/>
+				</mapping>
+			</reference>
+			<reference name="realizes">
+				<mapping>
+					<select-reference refId="ArchiMate_Realization"/>
+				</mapping>
+			</reference>
+			<reference name="specializes">
+				<mapping>
+					<select-reference refId="ArchiMate_Specialization"/>
+				</mapping>
+			</reference>
+			<reference name="triggers">
+				<mapping>
+					<select-reference refId="ArchiMate_Triggering"/>
+				</mapping>
+			</reference>
+			<reference name="usedBy">
+				<mapping>
+					<select-reference refId="ArchiMate_UsedBy"/>
+				</mapping>
+			</reference>
+			<reference name="r_previousVersion">
+				<mapping>
+					<select-reference refId="EAM_previousVersion"/>
+				</mapping>
+			</reference>
+		</internal>
+		<external>
+			<type>
+				<property name="Stereotype" value="ArchiMate_Device"/>  
+				<property name="Specialization" value="serverProfile"/>          
+				<sparx:element type="Class">
+					<sparx:createInPackage>Elements without package/Technology Layer/Devices/Server Profiles</sparx:createInPackage>
+				</sparx:element>
+			</type>
+			<attribute name="Name">
+				<mapping>
+					<select-attribute name="name"/>
+					<match pattern="&lt;noname&gt;" literal="true">
+						<null/>
+					</match>
+				</mapping>
+			</attribute>
+			<attribute name="tag:em:ramSize">
+				<mapping>
+					<select-attribute name="ramSize"/>
+				</mapping>
+			</attribute>
+			<attribute name="tag:em:cpuCores">
+				<mapping>
+					<select-attribute name="cpuCores"/>
+				</mapping>
+			</attribute>
+			<attribute name="tag:em:storageSize">
+				<mapping>
+					<select-attribute name="storageSize"/>
+				</mapping>
+			</attribute>
+			<attribute name="tag:em:totalCostOfAcquisition">
+				<mapping>
+					<select-attribute name="totalCostOfAcquisition"/>
+				</mapping>
+			</attribute>
+			<attribute name="tag:em:perHourCost">
+				<mapping>
+					<select-attribute name="perHourCost"/>
+				</mapping>
+			</attribute>
+			<attribute name="tag:em:expectedLifetime">
+				<mapping>
+					<select-attribute name="expectedLifetime"/>
+				</mapping>
+			</attribute>
+			<attribute name="Note">
+				<mapping>
+					<select-attribute name="description"/>
+				</mapping>
+			</attribute>
+			<attribute name="Version">
+				<mapping>
+					<select-attribute name="version"/>
+				</mapping>
+			</attribute>
+			<attribute name="tag:em:repositoryPackage">
+				<mapping>
+					<select-attribute name="repositoryPackage"/>
+				</mapping>
+			</attribute>
+			<attribute name="Tag">
+				<mapping>
+					<select-attribute name="keyword"/>
+				</mapping>
+			</attribute>
+			<attribute name="Status">
+				<mapping>
+					<select-attribute name="lifecycleApprovedStage" classifier="virt"/>
+				</mapping>
+			</attribute>
+			<attribute name="tag:sync:lifecycleUuid" description="EM's Governance Process UUID is required to setup target status of an architecture element in the context of plateau or deliverable">
+				<mapping>
+					<select-attribute name="lifecycleRef" classifier="virt"/>
+				</mapping>
+			</attribute>
+			<reference name="EAM_previousVersion" type="Association.out">
+				<mapping>
+					<select-reference refId="r_previousVersion"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Access" type="Dependency.out">
+				<mapping>
+					<select-reference refId="accesses"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Aggregation" type="Aggregation.in">
+				<mapping>
+					<select-reference refId="aggregates"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Assignment" type="Association.in">
+				<mapping>
+					<select-reference refId="assignedFrom"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Association" type="Association.out">
+				<mapping>
+					<select-reference refId="associatedWith"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Composition" type="Aggregation_Strong.in">
+				<mapping>
+					<select-reference refId="composedOf"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Flow" type="ControlFlow.out">
+				<mapping>
+					<select-reference refId="flowsTo"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Realization" type="Dependency.out">
+				<mapping>
+					<select-reference refId="realizes"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Specialization" type="Generalization.out">
+				<mapping>
+					<select-reference refId="specializes"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Triggering" type="ControlFlow.out">
+				<mapping>
+					<select-reference refId="triggers"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_UsedBy" type="Dependency.out">
+				<mapping>
+					<select-reference refId="usedBy"/>
+				</mapping>
+			</reference>
+		</external>
+	</entityMapping>
+	
+	<!--
+   *********************************************
+   ** Archimate: SystemSoftware
+   ** Sparx:     Class, Stereotype=ArchiMate_SystemSoftware
+   ** EAM:  systemSoftwareArtifact
+   *********************************************
+   -->
+	<entityMapping id="systemSoftwareArtifact">
+		<internal>
+			<type>
+				<property name="sdmName" value="systemSoftwareArtifact"/>
+			</type>
+			<attribute name="name">
+				<mapping>
+					<first>
+						<select-attribute name="Name"/>
+						<value>&lt;noname&gt;</value>
+					</first>
+					<match pattern="" literal="true">
+						<value>&lt;noname&gt;</value>
+					</match>
+				</mapping>
+			</attribute>
+			<attribute name="description">
+				<mapping>
+					<select-attribute name="Note"/>
+				</mapping>
+			</attribute>
+			<attribute name="version">
+				<mapping>
+					<select-attribute name="Version"/>
+				</mapping>
+			</attribute>
+			<attribute name="repositoryPackage">
+				<mapping>
+					<select-attribute name="tag:em:repositoryPackage"/>
+				</mapping>
+			</attribute>
+			<attribute name="keyword">
+				<mapping>
+					<select-attribute name="Tag"/>
+				</mapping>
+			</attribute>
+			<attribute name="lifecycleApprovedStage" classifier="virt"/>
+			<attribute name="lifecycleRef" classifier="virt"/>
+			<reference name="accesses">
+				<mapping>
+					<select-reference refId="ArchiMate_Access"/>
+				</mapping>
+			</reference>
+			<reference name="aggregates">
+				<mapping>
+					<select-reference refId="ArchiMate_Aggregation"/>
+				</mapping>
+			</reference>
+			<reference name="assignedFrom">
+				<mapping>
+					<select-reference refId="ArchiMate_Assignment"/>
+				</mapping>
+			</reference>
+			<reference name="associatedWith">
+				<mapping>
+					<select-reference refId="ArchiMate_Association"/>
+				</mapping>
+			</reference>
+			<reference name="composedOf">
+				<mapping>
+					<select-reference refId="ArchiMate_Composition"/>
+				</mapping>
+			</reference>
+			<reference name="flowsTo">
+				<mapping>
+					<select-reference refId="ArchiMate_Flow"/>
+				</mapping>
+			</reference>
+			<reference name="realizes">
+				<mapping>
+					<select-reference refId="ArchiMate_Realization"/>
+				</mapping>
+			</reference>
+			<reference name="specializes">
+				<mapping>
+					<select-reference refId="ArchiMate_Specialization"/>
+				</mapping>
+			</reference>
+			<reference name="triggers">
+				<mapping>
+					<select-reference refId="ArchiMate_Triggering"/>
+				</mapping>
+			</reference>
+			<reference name="usedBy">
+				<mapping>
+					<select-reference refId="ArchiMate_UsedBy"/>
+				</mapping>
+			</reference>
+			<reference name="r_previousVersion">
+				<mapping>
+					<select-reference refId="EAM_previousVersion"/>
+				</mapping>
+			</reference>
+		</internal>
+		<external>
+			<type>
+				<property name="Stereotype" value="ArchiMate_SystemSoftware"/>
+				<sparx:element type="Class">
+					<sparx:createInPackage>Elements without package/Technology Layer/System Softwares</sparx:createInPackage>
+				</sparx:element>
+			</type>
+			<attribute name="Name">
+				<mapping>
+					<select-attribute name="name"/>
+					<match pattern="&lt;noname&gt;" literal="true">
+						<null/>
+					</match>
+				</mapping>
+			</attribute>
+			<attribute name="Note">
+				<mapping>
+					<select-attribute name="description"/>
+				</mapping>
+			</attribute>
+			<attribute name="Version">
+				<mapping>
+					<select-attribute name="version"/>
+				</mapping>
+			</attribute>
+			<attribute name="tag:em:repositoryPackage">
+				<mapping>
+					<select-attribute name="repositoryPackage"/>
+				</mapping>
+			</attribute>
+			<attribute name="Tag">
+				<mapping>
+					<select-attribute name="keyword"/>
+				</mapping>
+			</attribute>
+			<attribute name="Status">
+				<mapping>
+					<select-attribute name="lifecycleApprovedStage" classifier="virt"/>
+				</mapping>
+			</attribute>
+			<attribute name="tag:sync:lifecycleUuid" description="EM's Governance Process UUID is required to setup target status of an architecture element in the context of plateau or deliverable">
+				<mapping>
+					<select-attribute name="lifecycleRef" classifier="virt"/>
+				</mapping>
+			</attribute>
+			<reference name="EAM_previousVersion" type="Association.out">
+				<mapping>
+					<select-reference refId="r_previousVersion"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Access" type="Dependency.out">
+				<mapping>
+					<select-reference refId="accesses"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Aggregation" type="Aggregation.in">
+				<mapping>
+					<select-reference refId="aggregates"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Assignment" type="Association.in">
+				<mapping>
+					<select-reference refId="assignedFrom"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Association" type="Association.out">
+				<mapping>
+					<select-reference refId="associatedWith"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Composition" type="Aggregation_Strong.in">
+				<mapping>
+					<select-reference refId="composedOf"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Flow" type="ControlFlow.out">
+				<mapping>
+					<select-reference refId="flowsTo"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Realization" type="Dependency.out">
+				<mapping>
+					<select-reference refId="realizes"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Specialization" type="Generalization.out">
+				<mapping>
+					<select-reference refId="specializes"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Triggering" type="ControlFlow.out">
+				<mapping>
+					<select-reference refId="triggers"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_UsedBy" type="Dependency.out">
+				<mapping>
+					<select-reference refId="usedBy"/>
+				</mapping>
+			</reference>
+		</external>
+	</entityMapping>
+	
+	<!--
+   *********************************************
+   ** Archimate: SystemSoftware
+   ** Sparx:     Class, Stereotype=ArchiMate_SystemSoftware, Specialization=operatingSystem
+   ** EAM:  operatingSystemArtifact
+   *********************************************
+   -->
+	<entityMapping id="operatingSystemArtifact">
+		<internal>
+			<type>
+				<property name="sdmName" value="operatingSystemArtifact"/>
+			</type>
+			<attribute name="name">
+				<mapping>
+					<first>
+						<select-attribute name="Name"/>
+						<value>&lt;noname&gt;</value>
+					</first>
+					<match pattern="" literal="true">
+						<value>&lt;noname&gt;</value>
+					</match>
+				</mapping>
+			</attribute>
+			<attribute name="description">
+				<mapping>
+					<select-attribute name="Note"/>
+				</mapping>
+			</attribute>
+			<attribute name="version">
+				<mapping>
+					<select-attribute name="Version"/>
+				</mapping>
+			</attribute>
+			<attribute name="repositoryPackage">
+				<mapping>
+					<select-attribute name="tag:em:repositoryPackage"/>
+				</mapping>
+			</attribute>
+			<attribute name="keyword">
+				<mapping>
+					<select-attribute name="Tag"/>
+				</mapping>
+			</attribute>
+			<attribute name="lifecycleApprovedStage" classifier="virt"/>
+			<attribute name="lifecycleRef" classifier="virt"/>
+			<reference name="accesses">
+				<mapping>
+					<select-reference refId="ArchiMate_Access"/>
+				</mapping>
+			</reference>
+			<reference name="aggregates">
+				<mapping>
+					<select-reference refId="ArchiMate_Aggregation"/>
+				</mapping>
+			</reference>
+			<reference name="assignedFrom">
+				<mapping>
+					<select-reference refId="ArchiMate_Assignment"/>
+				</mapping>
+			</reference>
+			<reference name="associatedWith">
+				<mapping>
+					<select-reference refId="ArchiMate_Association"/>
+				</mapping>
+			</reference>
+			<reference name="composedOf">
+				<mapping>
+					<select-reference refId="ArchiMate_Composition"/>
+				</mapping>
+			</reference>
+			<reference name="flowsTo">
+				<mapping>
+					<select-reference refId="ArchiMate_Flow"/>
+				</mapping>
+			</reference>
+			<reference name="realizes">
+				<mapping>
+					<select-reference refId="ArchiMate_Realization"/>
+				</mapping>
+			</reference>
+			<reference name="specializes">
+				<mapping>
+					<select-reference refId="ArchiMate_Specialization"/>
+				</mapping>
+			</reference>
+			<reference name="triggers">
+				<mapping>
+					<select-reference refId="ArchiMate_Triggering"/>
+				</mapping>
+			</reference>
+			<reference name="usedBy">
+				<mapping>
+					<select-reference refId="ArchiMate_UsedBy"/>
+				</mapping>
+			</reference>
+			<reference name="r_previousVersion">
+				<mapping>
+					<select-reference refId="EAM_previousVersion"/>
+				</mapping>
+			</reference>
+		</internal>
+		<external>
+			<type>
+				<property name="Stereotype" value="ArchiMate_SystemSoftware"/>
+				<property name="Specialization" value="operatingSystem"/>
+				<sparx:element type="Class">
+					<sparx:createInPackage>Elements without package/Technology Layer/System Softwares/Operating Systems</sparx:createInPackage>
+				</sparx:element>
+			</type>
+			<attribute name="Name">
+				<mapping>
+					<select-attribute name="name"/>
+					<match pattern="&lt;noname&gt;" literal="true">
+						<null/>
+					</match>
+				</mapping>
+			</attribute>
+			<attribute name="Note">
+				<mapping>
+					<select-attribute name="description"/>
+				</mapping>
+			</attribute>
+			<attribute name="Version">
+				<mapping>
+					<select-attribute name="version"/>
+				</mapping>
+			</attribute>
+			<attribute name="tag:em:repositoryPackage">
+				<mapping>
+					<select-attribute name="repositoryPackage"/>
+				</mapping>
+			</attribute>
+			<attribute name="Tag">
+				<mapping>
+					<select-attribute name="keyword"/>
+				</mapping>
+			</attribute>
+			<attribute name="Status">
+				<mapping>
+					<select-attribute name="lifecycleApprovedStage" classifier="virt"/>
+				</mapping>
+			</attribute>
+			<attribute name="tag:sync:lifecycleUuid" description="EM's Governance Process UUID is required to setup target status of an architecture element in the context of plateau or deliverable">
+				<mapping>
+					<select-attribute name="lifecycleRef" classifier="virt"/>
+				</mapping>
+			</attribute>
+			<reference name="EAM_previousVersion" type="Association.out">
+				<mapping>
+					<select-reference refId="r_previousVersion"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Access" type="Dependency.out">
+				<mapping>
+					<select-reference refId="accesses"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Aggregation" type="Aggregation.in">
+				<mapping>
+					<select-reference refId="aggregates"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Assignment" type="Association.in">
+				<mapping>
+					<select-reference refId="assignedFrom"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Association" type="Association.out">
+				<mapping>
+					<select-reference refId="associatedWith"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Composition" type="Aggregation_Strong.in">
+				<mapping>
+					<select-reference refId="composedOf"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Flow" type="ControlFlow.out">
+				<mapping>
+					<select-reference refId="flowsTo"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Realization" type="Dependency.out">
+				<mapping>
+					<select-reference refId="realizes"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Specialization" type="Generalization.out">
+				<mapping>
+					<select-reference refId="specializes"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_Triggering" type="ControlFlow.out">
+				<mapping>
+					<select-reference refId="triggers"/>
+				</mapping>
+			</reference>
+			<reference name="ArchiMate_UsedBy" type="Dependency.out">
+				<mapping>
+					<select-reference refId="usedBy"/>
+				</mapping>
+			</reference>
+		</external>
+	</entityMapping>
+	<!--
+   *********************************************
    ** Archimate: WorkPackage
    ** Sparx:     Class, Stereotype=ArchiMate_WorkPackage, specalization=project
    ** EAM:  projectArtifact
@@ -12387,7 +13911,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -12616,7 +14140,7 @@
 					<select-attribute name="tag:em:repositoryPackage"/>
 				</mapping>
 			</attribute>
-			<attribute name="keyword"> 
+			<attribute name="keyword">
 				<mapping>
 					<select-attribute name="Tag"/>
 				</mapping>
@@ -12782,8 +14306,7 @@
 			</reference>
 		</external>
 	</entityMapping>
-	
-   <!--
+	<!--
    *********************************************
    ** Archimate: Artifact
    ** Sparx:     Class, Stereotype=ArchiMate_Artifact
@@ -12985,7 +14508,7 @@
 				</mapping>
 			</reference>
 		</external>
-	</entityMapping>
+	</entityMapping>   
    <!--
    *********************************************
    ** Archimate: Artifact
@@ -13189,12 +14712,14 @@
 				</mapping>
 			</reference>
 		</external>
-	</entityMapping>    
+	</entityMapping>  
 	<sparx:types>
 		<sparx:attribute name="tag:em:endDate" baseStereotype="ArchiMate_WorkPackage,ArchiMate_Deliverable,ArchiMate_Plateau" type="DateTime" description="End date"/>
 		<sparx:attribute name="tag:em:plannedFinishDate" baseStereotype="ArchiMate_WorkPackage" type="DateTime" description="Planned Finish Date"/>
-		<sparx:attribute name="tag:em:Specialization:Location" type="Enum" values="dataCenter" description="Specialization for Location" baseStereotype="ArchiMate_Location"/>
 		<sparx:attribute name="tag:em:Specialization:ApplicationComponent" type="Enum" values="databaseSchema,j2eeApplication,webApplication" description="Specialization for ApplicationComponent" baseStereotype="ArchiMate_ApplicationComponent"/>
+		<sparx:attribute name="tag:em:Specialization:Location" type="Enum" values="dataCenter" description="Specialization for Location" baseStereotype="ArchiMate_Location"/>
+		<sparx:attribute name="tag:em:Specialization:SystemSoftware" type="Enum" values="operatingSystem" description="Specialization for System Software" baseStereotype="ArchiMate_SystemSoftware"/>
+		<sparx:attribute name="tag:em:Specialization:Device" type="Enum" values="server,serverClass,serverProfile" description="Specialization for Device" baseStereotype="ArchiMate_Device"/>
 		<sparx:attribute name="tag:em:Specialization:ApplicationInteraction" type="Enum" values="bpelProcess" description="Specialization for ApplicationInteraction" baseStereotype="ArchiMate_ApplicationInteraction"/>
 		<sparx:attribute name="tag:em:Specialization:ApplicationInterface" type="Enum" values="databaseInterface,fileExchange,publishSubscribe,queue,remoteProcInvocation,restInterface,webService,userInterface,xmlService" description="Specialization for ArchiMate_ApplicationInterface" baseStereotype="ArchiMate_ApplicationInterface"/>
 		<sparx:attribute name="tag:em:Specialization:DataObject" type="Enum" values="binaryDocument,csvFile,xmlDocument,sqlTable" description="Specialization for DataObject" baseStereotype="ArchiMate_DataObject"/>
@@ -13225,6 +14750,14 @@
 		<sparx:attribute name="tag:em:associatedPackage" type="AddinBroadcast" description="Associates packages to plateau/deliverable" baseStereotype="ArchiMate_Deliverable,ArchiMate_Plateau" values="HP EM Extension for Sparx EA" />
 		<sparx:attribute name="tag:em:estimatedNumberOfServers" type="Integer" description="Estimated number of servers used by the app. comp." baseStereotype="ArchiMate_ApplicationComponent"/>
 		<sparx:attribute name="tag:em:estimatedNetworkTraffic" type="Double" description="An Estimated Outgoing Network Traffic" baseStereotype="ArchiMate_ApplicationComponent"/>
+		<!-- server profile attributes-->
+		<sparx:attribute name="tag:em:totalCostOfAcquisition" type="Double" description="The Total Cost of Acquisition (TCA)" baseStereotype="ArchiMate_Device"/>
+		<sparx:attribute name="tag:em:perHourCost" type="Double" description="Cost of 1 hour of ownership of a server" baseStereotype="ArchiMate_Device"/>
+		<sparx:attribute name="tag:em:expectedLifetime" type="Integer" description="Expected Lifetime(Months) of a server" baseStereotype="ArchiMate_Device"/>
+		<!--  server class and server class attributes-->
+		<sparx:attribute name="tag:em:ramSize" type="Double" description="Amount of RAM in gigabytes available to the server" baseStereotype="ArchiMate_Device"/>
+		<sparx:attribute name="tag:em:cpuCores" type="Integer" description="Number of CPU cores available to the server" baseStereotype="ArchiMate_Device"/>
+		<sparx:attribute name="tag:em:storageSize" type="Integer" description="Dedicated Storage Size (GB) to the server" baseStereotype="ArchiMate_Device"/>
 		<!-- HPE Custom Extensions -->
 		<!-- ********************* -->
 		<sparx:attribute name="tag:HPEProductPlanLevel" baseStereotype="ArchiMate_BusinessObject" type="Enum" values="Try Before You Buy,Silver,Gold,Platinum" description="TODO"/>
