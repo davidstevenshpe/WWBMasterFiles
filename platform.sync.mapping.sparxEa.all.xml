@@ -220,6 +220,25 @@
 			<type>
 				<property name="sdmName" value="applicationComponentArtifact"/>
 			</type>
+
+         <!-- CBS Custom -->
+         <attribute name="c_vendor">
+           <mapping>
+             <select-attribute name="tag:HPETAG-Vendor"/>
+           </mapping>
+         </attribute>
+         <attribute name="c_endOfSupportDate">
+           <mapping>
+             <select-attribute name="tag:HPETAG-EndOfSaleDate"/>
+           </mapping>
+         </attribute>
+         <attribute name="c_endOfSaleDate">
+           <mapping>
+             <select-attribute name="tag:HPETAG-EndOfSupportDate"/>
+           </mapping>
+         </attribute>
+         <!-- END CBS Custom -->
+
 			<attribute name="name">
 				<mapping>
 					<first>
@@ -326,6 +345,25 @@
 					<sparx:createInPackage>Elements without package/Application Layer/Application Components</sparx:createInPackage>
 				</sparx:element>
 			</type>
+
+ <!-- CBS Custom -->
+         <attribute name="tag:HPETAG-Vendor">
+           <mapping>
+             <select-attribute name="c_vendor"/>
+           </mapping>
+         </attribute>
+         <attribute name="tag:HPETAG-EndOfSaleDate">
+           <mapping>
+             <select-attribute name="c_endOfSupportDate"/>
+           </mapping>
+         </attribute>
+         <attribute name="tag:HPETAG-EndOfSupportDate">
+           <mapping>
+             <select-attribute name="c_endOfSaleDate"/>
+           </mapping>
+         </attribute>
+         <!-- END CBS Custom -->
+
 			<attribute name="Name">
 				<mapping>
 					<select-attribute name="name"/>
@@ -6013,11 +6051,31 @@
 			</type>
 			<!-- HPE Custom Extensions -->
 			<!-- ********************* -->
-			<attribute name="c_planLevel"> 
- 				<mapping> 
- 					<select-attribute name="tag:HPEProductPlanLevel"/> 
-				 </mapping> 
-			</attribute> 
+			 <attribute name="c_isProductPlan">
+    	        <mapping>
+        	       	<select-attribute name="tag:HPETAG-ProductPlan"/>
+            	</mapping>
+         	</attribute>
+		  	<attribute name="c_planLevel">
+            	<mapping>
+               		<select-attribute name="tag:HPETAG-ProductPlanLevel"/>
+            	</mapping>
+         	</attribute>
+		  	<attribute name="c_lowVolumeTreshold">
+            	<mapping>
+               		<select-attribute name="tag:HPETAG-LowVolumeThreshold"/>
+            	</mapping>
+         	</attribute>
+		  	<attribute name="c_highVolumeTreshold">
+            	<mapping>
+               		<select-attribute name="tag:HPETAG-HighVolumeThreshold"/>
+            	</mapping>
+         	</attribute>
+		  	<attribute name="c_sizingOptions">
+           		 <mapping>
+               		<select-attribute name="tag:HPETAG-SizingOptions"/>
+            	</mapping>
+         	</attribute>
 			<!-- ********************* -->
 			<!-- HPE Custom Extensions -->
 			<attribute name="name">
@@ -6118,11 +6176,31 @@
 			</type>
 			<!-- HPE Custom Extensions -->
 			<!-- ********************* -->
-			<attribute name="tag:HPEProductPlanLevel"> 
+			<attribute name="tag:HPETAG-ProductPlanLevel"> 
  				<mapping> 
   					<select-attribute name="c_planLevel"/> 
  				</mapping> 
 			</attribute> 
+			 <attribute name="tag:HPETAG-ProductPlan">
+	            <mapping>
+	               <select-attribute name="c_isProductPlan"/>
+	            </mapping>
+	         </attribute>
+			 <attribute name="tag:HPETAG-LowVolumeThreshold">
+	            <mapping>
+	               <select-attribute name="c_lowVolumeTreshold"/>
+	            </mapping>
+	         </attribute>
+			  <attribute name="tag:HPETAG-HighVolumeThreshold">
+	            <mapping>
+	               <select-attribute name="c_highVolumeTreshold"/>
+	            </mapping>
+	         </attribute>
+			  <attribute name="tag:HPETAG-SizingOptions">
+	            <mapping>
+	               <select-attribute name="c_sizingOptions"/>
+	            </mapping>
+	         </attribute>
 			<!-- ********************* -->
 			<!-- HPE Custom Extensions -->
 			<attribute name="Name">
@@ -7656,6 +7734,26 @@
 			<type>
 				<property name="sdmName" value="productArtifact"/>
 			</type>
+
+		<!-- CBS Custom -->
+		<attribute name="r_specification">
+            <mapping>
+               <select-attribute name="tag:HPETAG-Specification"/>
+            </mapping>
+         </attribute>
+		 <attribute name="c_industryType">
+            <mapping>
+               <select-attribute name="tag:HPETAG-Industries"/>
+            </mapping>
+         </attribute>
+		 <attribute name="c_elevatorPitch">
+            <mapping>
+               <select-attribute name="tag:HPETAG-ElevatorPitch"/>
+            </mapping>
+         </attribute>
+		 <!-- END CBS Custom -->
+
+
 			<attribute name="name">
 				<mapping>
 					<first>
@@ -7752,6 +7850,26 @@
 					<sparx:createInPackage>Elements without package/Business Layer/Products</sparx:createInPackage>
 				</sparx:element>
 			</type>
+
+		<!-- CBS Custom -->
+		
+		 <attribute name="tag:HPETAG-Specification">
+            <mapping>
+               <select-attribute name="r_specification"/>
+            </mapping>
+         </attribute>
+		 <attribute name="tag:HPETAG-Industries">
+            <mapping>
+               <select-attribute name="c_industryType"/>
+            </mapping>
+         </attribute>
+		 <attribute name="tag:HPETAG-ElevatorPitch">
+            <mapping>
+               <select-attribute name="c_elevatorPitch"/>
+            </mapping>
+         </attribute>
+		 <!-- END CBS Custom -->
+
 			<attribute name="Name">
 				<mapping>
 					<select-attribute name="name"/>
@@ -11974,7 +12092,7 @@
 			<!-- HPE Custom Extensions -->
 			<attribute name="hPE_TerraResourceProvider_"> 
 				 <mapping> 
- 					<select-attribute name="tag:HPE-TerraResourceProvider"/> 
+ 					<select-attribute name="tag:HPETAG-ResourceProvider"/> 
 				</mapping> 
 			</attribute> 
 			<!-- HPE Custom Extensions -->
@@ -12062,7 +12180,7 @@
 			<!-- HPE Custom Extensions -->
 			<!-- ********************* -->
 			<!-- Terraform.io Resource Provider -->
-			<attribute name="tag:HPE-TerraResourceProvider"> 
+			<attribute name="tag:HPETAG-ResourceProvider"> 
 				 <mapping> 
  					<select-attribute name="hPE_TerraResourceProvider_"/> 
 				</mapping> 
@@ -14758,11 +14876,51 @@
 		<sparx:attribute name="tag:em:ramSize" type="Double" description="Amount of RAM in gigabytes available to the server" baseStereotype="ArchiMate_Device"/>
 		<sparx:attribute name="tag:em:cpuCores" type="Integer" description="Number of CPU cores available to the server" baseStereotype="ArchiMate_Device"/>
 		<sparx:attribute name="tag:em:storageSize" type="Integer" description="Dedicated Storage Size (GB) to the server" baseStereotype="ArchiMate_Device"/>
+		
 		<!-- HPE Custom Extensions -->
 		<!-- ********************* -->
-		<sparx:attribute name="tag:HPEProductPlanLevel" baseStereotype="ArchiMate_BusinessObject" type="Enum" values="Try Before You Buy,Silver,Gold,Platinum" description="TODO"/>
-	    <sparx:attribute name="tag:HPE-TerraResourceProvider" baseStereotype="ArchiMate_InfrastructureService" type="Enum" values="aws,azure" description="TODO"/>
+		<!-- NOTE EM DOES NOT SUPPORT DEFAULT VALUES IN TAGS AND MUST INCLUDE THE BASESTEREOTYPE -->
+		<!-- <sparx:attribute name="tag:HPETAG-" baseStereotype=" " type=" " description="todo"/> -->
+   		<!-- INCLUDED WITHIN WWB TAXONOMY FILE -->
+
+   		<!-- Tags for WWB and Master Reference Model-->
+   		<sparx:attribute name="tag:HPETAG-ProductPlan" baseStereotype="ArchiMate_BusinessObject" type="Boolean" description="Flag to identify if the object is a Product Plan"/>
+	  	<sparx:attribute name="tag:HPETAG-ProductPlanLevel" baseStereotype="ArchiMate_BusinessObject" type="Enum" values="Try Before You Buy,Silver,Gold,Platinum" description="Level of the product plan"/>
+	  	<sparx:attribute name="tag:HPETAG-LowVolumeThreshold" baseStereotype="ArchiMate_BusinessObject" type="Double" description="Low volume threshold for the product plan"/>
+	  	<sparx:attribute name="tag:HPETAG-HighVolumeThreshold" baseStereotype="ArchiMate_BusinessObject" type="Double" description="high volume threshold for the product plan"/>
+	  	<sparx:attribute name="tag:HPETAG-SizingOptions" baseStereotype="ArchiMate_BusinessObject" type="String" description="sizing options assoicated to the product plan"/>
+	  	<sparx:attribute name="tag:HPETAG-Specification" baseStereotype="ArchiMate_Product" type="String" description="free text field for specification - do not use"/>
+	  	<sparx:attribute name="tag:HPETAG-Industries" baseStereotype="ArchiMate_Product" type="String" description="Target industries for the solution"/>
+	  	<sparx:attribute name="tag:HPETAG-ElevatorPitch" baseStereotype="ArchiMate_Product" type="String" description="Short description of the solution"/>
+	  	<sparx:attribute name="tag:HPETAG-Vendor" baseStereotype="ArchiMate_ApplicationComponent" type="String" description="Applicaiton Vendor"/>
+     	<sparx:attribute name="tag:HPETAG-EndOfSaleDate" baseStereotype="ArchiMate_ApplicationComponent" type="DateTime" description="End of Sale date for the applicaiton component"/>
+     	<sparx:attribute name="tag:HPETAG-EndOfSupportDate" baseStereotype="ArchiMate_ApplicationComponent" type="DateTime" description="End of Support date for the applicaiton component"/>
+
+		<!-- INFRA AS CODE TAGS-->
+		<sparx:attribute name="tag:HPETAG-ResourceProvider" baseStereotype="ArchiMate_InfrastructureService" type="Enum" values="please select,aws,azure" description="Resource Provider"/>
+
+		<!-- ***************************************************************************** -->
+	   	<!-- NOT INCLUDED WITHIN WWB TAXONOMY FILE -->
+   		<!-- INFRA AS CODE TAGS-->
+   		<sparx:attribute name="tag:HPETAG-ResourceRegion" baseStereotype="ArchiMate_InfrastructureService" type="String" description="Resource Provider Region"/>
+
+   		<!-- Tags for ITSA attributes -->
+   		<sparx:attribute name="tag:HPETAG-GoalMetric" baseStereotype="ArchiMate_Goal" type="String" description="Goal Metric"/>
+		<sparx:attribute name="tag:HPETAG-PrincipleImplication" baseStereotype="ArchiMate_Principle" type="String" description="Principle Implication"/>
+		<sparx:attribute name="tag:HPETAG-PrincipleObstacles" baseStereotype="ArchiMate_Principle" type="String" description="Principle Obstacles"/>
+		<sparx:attribute name="tag:HPETAG-PrincipleRational" baseStereotype="ArchiMate_Principle" type="String" description="Principle Rationale"/>
+		<sparx:attribute name="tag:HPETAG-RequirementImpact" baseStereotype="ArchiMate_Requirement" type="String" description="Requirement Impact"/>
+		<sparx:attribute name="tag:HPETAG-RequirementJustification" baseStereotype="ArchiMate_Requirement" type="String" description="Requirement Justification"/>
+		<sparx:attribute name="tag:HPETAG-RequirementSource" baseStereotype="ArchiMate_Requirement" type="String" description="Requirement source"/>
+		<sparx:attribute name="tag:HPETAG-RequirementSuccessFactors" baseStereotype="ArchiMate_Requirement" type="String" description="Requirement Success Factors"/>
+		
+   		<!--Tags from Project Jigsaw -->
+   		<sparx:attribute name="tag:HPETAG-CompState" baseStereotype="ArchiMate_Product,ArchiMate_ApplicationComponent" type="Enum" values="Please Select,New,New-Modified,Reused,Reused-Modified" description="TODO"/>
+   		<sparx:attribute name="tag:HPETAG-DeployLoc" baseStereotype="ArchiMate_Product,ArchiMate_ApplicationComponent" type="Enum" values="Please Select,Customer,HP,3rd Party" description="TODO"/>
+   		<sparx:attribute name="tag:HPETAG-MO" baseStereotype="ArchiMate_Product,ArchiMate_ApplicationComponent" type="Enum" values="Please Select,CMO,TMO,FMO" description="TODO"/>
 		<!-- ********************* -->
 		<!-- HPE Custom Extensions -->
+
+
 	</sparx:types>
 </entityMappings>
