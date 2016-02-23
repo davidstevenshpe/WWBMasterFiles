@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/principleArtifacts/bae2b0b0-955c-41ce-9b30-6392699077f0</r:path>
+   <r:collection>/principleArtifacts/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType></r:contentType>
+   <r:owner>admin</r:owner>
+   <r:uuid>bae2b0b0-955c-41ce-9b30-6392699077f0</r:uuid>
+   <r:domainId>defaultDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2013-12-09T10:54:55.452Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>admin</r:creator>
+      <r:lastDataRevision>0</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:principleArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                              xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                              xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                              xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                              deleted="0"
+                              xlink:href="principleArtifacts/bae2b0b0-955c-41ce-9b30-6392699077f0">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="Motivation"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:motivationArtifact"/>
+               <p:artifactType name="Principle"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:principleArtifact"/>
+            </g:artifactTypeGroup>
+            <g:aggregatesGroup>
+               <p:aggregates xlink:href="principleArtifacts/eeb3a478-136f-4d55-bc43-132dd0f5f5b4"/>
+               <p:aggregates xlink:href="principleArtifacts/b1cfb8c7-408d-43aa-9cd2-63a5682a1f38"/>
+               <p:aggregates xlink:href="principleArtifacts/82eea527-7815-4b9f-b296-5b6fbb1151b2"/>
+               <p:aggregates xlink:href="principleArtifacts/2bb39f8b-838b-42a4-a3de-b4e596ff7687"/>
+               <p:aggregates xlink:href="principleArtifacts/3fc9d0f5-f07f-4708-bb08-82548efc7195"/>
+               <p:aggregates xlink:href="principleArtifacts/1dad3c28-7eb3-4fe9-8062-73c72f7c5691"/>
+               <p:aggregates xlink:href="principleArtifacts/b527a8d3-fce4-40b6-bce0-c3f2f681f1f5"/>
+            </g:aggregatesGroup>
+            <g:nameGroup>
+               <p:name>Common use of services and applications</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup>
+               <p:description>Development, acquisition, and operation of IT services and applications widely used across the enterprise are preferred over the development, acquisition, and operation of similar or duplicative services and applications provided just to a particular organization.</p:description>
+            </g:descriptionGroup>
+            <p:revision>1</p:revision>
+            <g:keywordGroup/>
+            <p:version>1.0</p:version>
+            <g:architectureLayerGroup>
+               <p:architectureLayer name="Application Layer"
+                                    taxonomyUri="uddi:systinet.com:soa:model:taxonomies:architectureLayer"
+                                    value="applicationLayer"/>
+               <p:architectureLayer name="Technology Layer"
+                                    taxonomyUri="uddi:systinet.com:soa:model:taxonomies:architectureLayer"
+                                    value="technologyLayer"/>
+            </g:architectureLayerGroup>
+            <g:qualityFeatureGroup>
+               <p:qualityFeature name="Effectiveness"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="effectiveness"/>
+               <p:qualityFeature name="Efficiency"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="efficiency"/>
+               <p:qualityFeature name="Reliability"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="reliability"/>
+            </g:qualityFeatureGroup>
+            <p:rationale>Duplicative capability is expensive, increases an unwanted complexity of the information environment, and proliferates conflicting data and information.
+The use of common solutions is favored wherever it is possible and feasible.</p:rationale>
+            <p:implications>Particular organizations, which depend upon a capability that does not serve the entire enterprise, must change over to the enterprise-wide solution. Only in specific cases, when a specific capability cannot be provided by the enterprise-wide solution, can exceptions be allowed. These need to be documented, tracked over time, and if a sufficient capability is available in an enterprise-wide solution, they must be replaced. If there is no sufficient equivalent in an enterprise-wide solution, these exceptions can be adopted and enforced to become a part of the enterprise-wide solution.
+The policies enforcing an adherence of these rules need to defined, documented and put in place. Any exception must be documented and tracked over time.
+This mechanism will help to ensure that data and information supporting enterprise decision-making and business processes will be standardized and managed in the same manner. Data processing will use the same mechanisms across the entire enterprise.</p:implications>
+         </a:principleArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

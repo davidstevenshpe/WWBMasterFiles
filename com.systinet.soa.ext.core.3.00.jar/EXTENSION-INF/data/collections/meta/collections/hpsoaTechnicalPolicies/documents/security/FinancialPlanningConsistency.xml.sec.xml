@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:acl xmlns:r="http://systinet.com/2005/05/repository"
+       xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <r:owner xsi:type="xsd:string">_sstntrl:Administrator</r:owner>
+   <r:ace>
+      <r:principal type="role">CatalogUser</r:principal>
+      <r:permission defaultAceId="ca0892c2-6121-4a16-91d7-fde97fe6acea">read</r:permission>
+   </r:ace>
+   <r:ace>
+      <r:principal type="role">Administrator</r:principal>
+      <r:permission defaultAceId="afa12ce8-0808-4a03-97d0-69b0e18844cd">read</r:permission>
+   </r:ace>
+</r:acl>

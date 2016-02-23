@@ -1,0 +1,44 @@
+<closure maxDepth="10" maxResults="400" maxProcessingTime="30000" nodesTraversedOnlyOnce="true">
+
+    <artifactStopList>
+        <artifact sdmName="personArtifact"/>
+        <artifact sdmName="organizationUnitArtifact"/>
+    </artifactStopList>
+
+    <traversableRelations>
+        <relation sdmName="accesses"/>
+        <relation sdmName="aggregates"/>
+        <relation sdmName="composedOf"/>
+        <relation sdmName="flowsTo"/>
+        <relation sdmName="influencedBy"/>
+        <relation sdmName="realizedBy"/>
+        <relation sdmName="triggers"/>
+        <relation sdmName="uses"/>
+
+        <relation sdmName="providedBy"/>
+        <relation sdmName="r_operation"/>
+
+        <relation sdmName="associatedWith"/>
+        <relation sdmName="associatedWithIncoming"/>
+        
+        <relation sdmName="specializes"/>
+		
+		<!-- AssignedFrom -->
+		<relation sdmName="assignedFrom" sourceArtifact="businessInterfaceArtifact" targetArtifact="businessServiceArtifact"/>
+		<relation sdmName="assignedFrom" sourceArtifact="businessRoleArtifact" targetArtifact="businessProcessArtifact,businessFunctionArtifact,businessInteractionArtifact,workPackageArtifact"/>
+		<relation sdmName="assignedFrom" sourceArtifact="businessActorArtifact" targetArtifact="businessRoleArtifact,stakeholderArtifact"/>
+		<relation sdmName="assignedFrom" sourceArtifact="locationArtifact" targetArtifact="representationArtifact, businessObjectArtifact, businessActorArtifact"/>
+		<relation sdmName="assignedFrom" sourceArtifact="locationArtifact" targetArtifact="dataObjectArtifact,applicationComponentArtifact,appCollaborationArtifact,nodeArtifact,systemSoftwareArtifact,deviceArtifact,networkArtifact,deploymentArtifact"/>
+		<relation sdmName="assignedFrom" sourceArtifact="locationArtifact" targetArtifact="workPackageArtifact,deliverableArtifact"/>
+		<relation sdmName="assignedFrom" sourceArtifact="applicationInteractionArtifact" targetArtifact="applicationServiceArtifact,businessServiceArtifact"/>
+		<relation sdmName="assignedFrom" sourceArtifact="applicationComponentArtifact" targetArtifact="applicationFunctionArtifact,businessProcessArtifact,businessFunctionArtifact,businessInteractionArtifact"/>
+		<relation sdmName="assignedFrom" sourceArtifact="appCollaborationArtifact" targetArtifact="applicationInteractionArtifact"/>
+		<relation sdmName="assignedFrom" sourceArtifact="infrastructureInterface" targetArtifact="infrastructureServiceArtifact"/>
+		<relation sdmName="assignedFrom" sourceArtifact="nodeArtifact,systemSoftwareArtifact,deviceArtifact" targetArtifact="infrastructureFunctionArtifact"/>
+		<relation sdmName="assignedFrom" sourceArtifact="nodeArtifact,systemSoftwareArtifact,deviceArtifact" targetArtifact="deploymentArtifact"/>
+		<!-- AssignedTo -->
+		<relation sdmName="assignedTo" sourceArtifact="systemSoftware" targetArtifact="deviceArtifact"/>		
+        
+    </traversableRelations>
+
+</closure>

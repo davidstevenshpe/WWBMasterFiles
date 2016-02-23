@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><taxonomy check="true" xmlns="http://systinet.com/uddi/taxonomy/v3/5.5">
+    <tModel tModelKey="uddi:com.systinet.soa:model:taxonomies:dataChangeHandling" deleted="false" xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+        <name xmlns="urn:uddi-org:api_v3">Data Change Handling</name>
+        <categoryBag xmlns="urn:uddi-org:api_v3">
+            <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="tModel"/>
+            <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="businessService"/>
+            <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="businessEntity"/>
+            <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="bindingTemplate"/>
+            <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Checked value set" keyValue="checked"/>
+        </categoryBag>
+    </tModel>
+    <compatibilityBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+        <compatibility>tModel</compatibility>
+        <compatibility>businessService</compatibility>
+        <compatibility>businessEntity</compatibility>
+        <compatibility>bindingTemplate</compatibility>
+    </compatibilityBag>
+    <categorizationBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+        <categorization>categorization</categorization>
+    </categorizationBag>
+    <validation xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+        <categories>
+            <category keyName="Ignore changes to underlying data" keyValue="ignore" disabled="false"/>
+            <category keyName="Rebuild on change of result artifact collection" keyValue="collectionLevel" disabled="false"/>
+        </categories>
+    </validation>
+</taxonomy>

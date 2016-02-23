@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taxonomy check="true" brief="false" xmlns="http://systinet.com/uddi/taxonomy/v3/5.5">
+  <tModel tModelKey="uddi:systinet.com:taxonomy:system" deleted="false" tModelKeyV2="uuid:9c9f94d3-8657-3e90-81a8-8d0a0437542b" xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <name xmlns="urn:uddi-org:api_v3">systinet-com:taxonomy:system</name>
+    <description xml:lang="en" xmlns="urn:uddi-org:api_v3">Taxonomy for categorization Systinet registry's system tModels. Such tModels can be exluded from find_tModel results with special findQualifier.</description>
+    <categoryBag xmlns="urn:uddi-org:api_v3">
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:system" keyName="system tModel" keyValue="yes"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Categorization system" keyValue="categorization"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="tModel"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Checked value set" keyValue="checked"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:validatedby" keyName="" keyValue="uddi:3c6fc560-c08d-11d9-bd24-3c6e3ec1bd24"/>
+    </categoryBag>
+  </tModel>
+  <compatibilityBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <compatibility>tModel</compatibility>
+  </compatibilityBag>
+  <categorizationBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <categorization>categorization</categorization>
+  </categorizationBag>
+  <validation xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <categories>
+      <category keyName="yes" keyValue="yes" disabled="false"/>
+      <category keyName="no" keyValue="no" disabled="false"/>
+    </categories>
+    <bindingTemplate bindingKey="uddi:3c6fc560-c08d-11d9-bd24-3c6e3ec1bd24" serviceKey="uddi:3c6e3ec2-c08d-11d9-bd24-3c6e3ec1bd24" xmlns="urn:uddi-org:api_v3">
+      <accessPoint useType="endPoint">class:com.systinet.uddi.publishing.v3.validation.service.InternalValidator</accessPoint>
+      <tModelInstanceDetails>
+        <tModelInstanceInfo tModelKey="uddi:uddi.org:v3_valuesetvalidation"/>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:taxonomy:system"/>
+      </tModelInstanceDetails>
+    </bindingTemplate>
+    <bindingTemplate bindingKey="uddi:3c714c00-c08d-11d9-bd24-3c6e3ec1bd24" serviceKey="uddi:3c6e3ec2-c08d-11d9-bd24-3c6e3ec1bd24" xmlns="urn:uddi-org:api_v3">
+      <accessPoint useType="endPoint">class:com.systinet.uddi.publishing.v2.validation.service.InternalValidator</accessPoint>
+      <tModelInstanceDetails>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:v2_validatevalues"/>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:taxonomy:system"/>
+      </tModelInstanceDetails>
+    </bindingTemplate>
+    <bindingTemplate bindingKey="uddi:3c745940-c08d-11d9-bd24-3c6e3ec1bd24" serviceKey="uddi:3c6e3ec2-c08d-11d9-bd24-3c6e3ec1bd24" xmlns="urn:uddi-org:api_v3">
+      <accessPoint useType="endPoint">class:com.systinet.uddi.publishing.v1.validation.service.InternalValidator</accessPoint>
+      <tModelInstanceDetails>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:v1_validatevalues"/>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:taxonomy:system"/>
+      </tModelInstanceDetails>
+    </bindingTemplate>
+  </validation>
+</taxonomy>

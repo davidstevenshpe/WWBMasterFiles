@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pm:Assertion xmlns:pm="http://systinet.com/2005/10/soa/policy"  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <pm:Template>
+       <p0:HasApprovedReferences artifactType="" referenceProperty="" referenceType="" stage="" xmlns:a="http://systinet.com/2005/05/soa/model/artifact" xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup" xmlns:p="http://systinet.com/2005/05/soa/model/property" xmlns:p0="urn:com.hp.systinet.soa:lifecycle-assertions" xmlns:pm="http://systinet.com/2005/10/soa/policy" xmlns:pt="http://systinet.com/2005/05/soa/model/property/type" xmlns:r="http://systinet.com/2005/05/repository" xmlns:rest="http://systinet.com/2005/05/soa/resource" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+   </pm:Template>
+   <pm:Bundle>
+       <pm:String Key="not-appr-in">Artifact ''{0}'' referenced with relation of type ''{1}'' should be approved in the given stage but its last approved stage is ''{2}''.</pm:String>
+   </pm:Bundle>
+   <pm:Parameter Name="referenceProperty" Optional="false" Type="p1:string" XPointer="xpointer(@referenceProperty)" xmlns:p1="http://www.w3.org/2001/XMLSchema">
+       <pm:Description>Local name of the reference element as appears in the XML representation of the resource. For example: service (used for implementation), documentation.</pm:Description>
+   </pm:Parameter>
+    <pm:Parameter Name="referenceType" Optional="true" Type="pm:taxonomy" Taxonomy="uddi:systinet.com:soa:model:taxonomies:artifactTypes" XPointer="xpointer(@referenceType)" xmlns:p1="http://www.w3.org/2001/XMLSchema">
+       <pm:Description>Artifact SDM name of the referenced resource. For example: businessServiceArtifact</pm:Description>
+   </pm:Parameter>
+   <pm:Parameter Name="stage" Optional="false" Type="pm:taxonomy" Taxonomy="uddi:systinet.com:soa:model:taxonomies:lifecycleStages" XPointer="xpointer(@stage)" xmlns:p1="http://www.w3.org/2001/XMLSchema">
+       <pm:Description>Required approved lifecycle stage of the referenced artifact.</pm:Description>
+   </pm:Parameter>
+   <pm:Parameter Name="artifactType" Optional="true" Type="pm:taxonomy" Taxonomy="uddi:systinet.com:soa:model:taxonomies:artifactTypes" XPointer="xpointer(@artifactType)" xmlns:p1="http://www.w3.org/2001/XMLSchema">
+       <pm:Description>Artifact type to restrict applicability.</pm:Description>
+   </pm:Parameter>
+   <pm:Validation SourceType="xmlns(ns=http://systinet.com/2005/05/soa/resource)qname(ns:resource)">
+       <XQuery xmlns="http://systinet.com/2005/10/soa/policy/validation" xmlns:pm="http://systinet.com/2005/10/soa/policy">(: ----------------------------------------------------------------- :)
+(: Policy to check whether references are in desired lifecycle stage :)
+(: ----------------------------------------------------------------- :)
+import module namespace pm = "http://systinet.com/2005/10/soa/policy/validation/xquery";
+
+declare namespace val="http://systinet.com/2005/10/soa/policy/validation";
+declare namespace rest="http://systinet.com/2005/05/soa/resource";
+declare namespace a="http://systinet.com/2005/05/soa/model/artifact";
+declare namespace p="http://systinet.com/2005/05/soa/model/property";
+declare namespace g="http://systinet.com/2005/05/soa/model/propertyGroup";
+declare namespace xlink="http://www.w3.org/1999/xlink";
+(: lfc namespace required to use lifecycle functions :)
+declare namespace lfc="http://hp.com/systinet/2009/05/lifecycle";
+declare namespace pmex="http://hp.com/systinet/2010/07/policy";
+
+declare variable $metadata.source.url as xs:string external;
+declare variable $referenceProperty as xs:string external;
+declare variable $referenceType as xs:string external;
+declare variable $stage as xs:string external;
+declare variable $artifactType as xs:string external;
+
+declare function local:getResourceDescriptorName($resource)
+{
+	$resource/rest:resource/rest:descriptor/a:*[1]/g:nameGroup/p:name[1]
+};
+
+if (not(string($artifactType) = "") and empty(/rest:resource/rest:descriptor/a:*[1]/g:artifactTypeGroup/p:artifactType[@value=$artifactType])) then
+   val:assertionNotApplicable()
+else
+   let $refType := pmex:getArtifactCollection($referenceType)
+   let $refs := if (empty($refType)) then
+                    /rest:resource/rest:descriptor/a:*[1]/g:*/p:*[local-name() = $referenceProperty and (@deleted='false' or @deleted='0')]
+                else
+                    /rest:resource/rest:descriptor/a:*[1]/g:*/p:*[local-name() = $referenceProperty and starts-with(@xlink:href,$refType) and (@deleted='false' or @deleted='0')]
+   return
+        if (empty($refs)) then
+            val:assertionNotApplicable()
+        else
+            let $failedReferences :=
+                for $ref in $refs
+                    let $refArtifact := pm:downloadS2Resource($ref/@xlink:href, $metadata.source.url)
+
+                    let $gr := lfc:getGovernanceRecord(string($refArtifact/rest:resource/rest:metadata/rest:uuid))
+                    let $lastApprovedStage as xs:string := string($gr/lfc:lastApprovedStage/lfc:value/text())
+                    let $lastApprovedStageName as xs:string := string($gr/lfc:lastApprovedStage/lfc:name/text()) 
+                    let $failed as xs:boolean := not($stage = $lastApprovedStage)
+
+                    return
+                        if ($failed) then
+                            let $name :=
+                                 if (empty(local:getResourceDescriptorName($refArtifact))) then
+                                    string($refArtifact/rest:resource/rest:metadata/rest:path/text())
+                                 else
+                                    string(local:getResourceDescriptorName($refArtifact)/text())
+                            return
+                                val:assertionFailed(val:l10n('not-appr-in', $name, $referenceType, $lastApprovedStageName))
+                        else
+                            ()
+            return
+                if (empty($failedReferences)) then
+                   val:assertionOK()
+                else
+                   () (: error already reported in let block :)</XQuery>
+     </pm:Validation>
+ </pm:Assertion>

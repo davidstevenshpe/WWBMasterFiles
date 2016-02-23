@@ -1,0 +1,78 @@
+<config name="operations" savingPeriod="5000">
+    <webFramework>
+
+        <component name="/operations/navigation" page="navigation/root.jsp"/>
+
+        <component name="/provision/progressMonitor" page="/provision/progressMonitor.jsp"/>
+        <component name="/provision/createProxyWindow" page="/provision/createProxyWindow.jsp"/>
+        <component name="/provision/setupProxy" page="/provision/setupProxy.jsp" className="com.hp.systinet.proxy.mgmt.ui.BackButtonCheckerComponent"/>
+        <component name="/provision/chooseFrontend" page="/provision/chooseFrontend.jsp"/>
+        <component name="/provision/chooseEndpoints" page="/provision/chooseEndpoints.jsp"/>
+        <component name="/provision/checkForExistingProxies" page="/provision/checkForExistingProxies.jsp"/>
+        <component name="/provision/confirmLayout" page="/provision/confirmLayout.jsp"/>
+        <task uri="/admin/provision/setupProxy" component="/provision/setupProxy" context=".." caption="Setup message proxy"/>
+
+        <component name="/devices/createXI50" page="/devices/createXI50.jsp" className="com.hp.systinet.proxy.mgmt.ui.BackButtonCheckerComponent"/>
+        <task uri="/admin/devices/createXI50" component="/devices/createXI50" context=".." caption="Register Datapower XI50 domain"/>
+
+        <component name="/operations/contracts/main" page="/contracts/main.jsp"/>
+        <component name="/operations/contracts/undeploy" page="/contracts/undeploy.jsp"/>
+        <component name="/operations/contracts/browse" page="/contracts/browse.jsp" className="com.hp.systinet.proxy.mgmt.ui.BackButtonCheckerComponent"/>
+        <task uri="/admin/contracts/browse" component="/operations/contracts/browse" context=".." caption="Browse Contracts and their deployment status"/>
+
+        <component name="/operations/proxies/main" page="/proxies/main.jsp"/>
+        <component name="/operations/proxies/browse" page="/proxies/browse.jsp" className="com.hp.systinet.proxy.mgmt.ui.BackButtonCheckerComponent"/>
+        <task uri="/admin/proxies/browse" component="/operations/proxies/browse" context=".." caption="Browse Service Proxies"/>
+
+        <component name="/operations/policies/main" page="/policies/main.jsp"/>
+        <component name="/operations/policies/browse" page="/policies/browse.jsp" className="com.hp.systinet.proxy.mgmt.ui.BackButtonCheckerComponent"/>
+        <component name="/operations/policies/dependencyMappingGrid" page="/policies/dependencyMappingGrid.jsp" className="com.hp.systinet.proxy.mgmt.ui.catalog.DependencyMappingComponent"/>
+        <task uri="/admin/policies/browse" component="/operations/policies/browse" context=".." caption="Browse Message Processing Policies"/>
+
+
+        <component name="/operations/monitoring/browse" page="/monitoring/browse.jsp" className="com.hp.systinet.proxy.mgmt.ui.catalog.MonitoringComponent"/>
+        <component name="/operations/monitoring/main" page="/monitoring/main.jsp"/>
+        <task uri="/reports/monitoring/browse" component="/operations/monitoring/browse" context=".." caption="Monitor contracts"/>
+
+        <component name="/operations/configuration/configuration" page="/configuration/configuration.jsp" className="com.hp.systinet.proxy.mgmt.ui.BackButtonCheckerComponent"/>
+        <component name="/operations/configuration/main" page="/configuration/main.jsp"/>
+		<component name="/operations/configuration/osbtemplate/download" className="com.hp.systinet.proxy.mgmt.ui.config.OsbTemplateDownloadComponent"/>
+		<component name="/operations/configuration/osbtemplate/upload" className="com.hp.systinet.proxy.mgmt.ui.config.OsbTemplateUploadComponent" page="/configuration/osbTemplateUpload.jsp"/>
+		<task uri="/admin/configuration/osbtemplate/download" component="/operations/configuration/osbtemplate/download" style=""/>
+        <!--<task uri="/admin/configuration/configuration" component="/operations/configuration/configuration" context=".." caption="Configuration"/>-->
+        <component name="/operations/widgets/contractsPerStage" page="/widgets/contractsPerStage.jsp"/>
+
+        <component name="/operations/widgets/version" page="/widgets/version.jsp" className="com.hp.systinet.proxy.mgmt.ui.catalog.VersionWidget"/>
+
+        <component name="/operations/widgets/lifecycleAction" page="/widgets/lifecycleAction.jsp" className="com.hp.systinet.proxy.mgmt.auto.lifecycle.ui.CreateProxyAction"/>
+        <component name="/operations/widgets/lifecycleActionRowRenderer" page="/widgets/lifecycleActionRowRenderer.jsp" className="com.hp.systinet.proxy.mgmt.auto.lifecycle.ui.CreateProxyRowRenderer"/>
+        <component name="/operations/widgets/lifecycleActionUpdateProxies" page="/widgets/lifecycleActionUpdateProxies.jsp" className="com.hp.systinet.proxy.mgmt.auto.lifecycle.ui.UpdateProxiesAction"/>
+        <component name="/operations/widgets/lifecycleActionUpdateProxiesRowRenderer" page="/widgets/lifecycleActionUpdateProxiesRowRenderer.jsp" className="com.hp.systinet.proxy.mgmt.auto.lifecycle.ui.UpdateProxiesRowRenderer"/>
+
+        <component name="/data/RowExpander" page="/data/RowExpander.jsp"/>
+        <component name="/data/GridFilters" page="/data/GridFilters.jsp"/>
+        <component name="/data/windowManagement" page="/data/windowManagement.jsp"/>
+
+        <component name="/operations/failure-report/main" page="/failure-report/main.jsp"/>
+        <component name="/operations/failure-report/browse" page="/failure-report/browse.jsp" className="com.hp.systinet.proxy.mgmt.ui.BackButtonCheckerComponent"/>
+        <task uri="/admin/failure-report/browse" component="/operations/failure-report/browse" context=".." caption="Browse Lifecycle Driven Contract Deployment Failures"/>
+        
+        <component name="/reports/sync/scheduleProxyValidationTask" page="/schedule-report/scheduleProxyValidationTask.jsp"
+    		className="com.hp.systinet.proxy.mgmt.reports.proxies.ProxyValidationScheduleAction"/>	
+    	<task uri="/reports/sync/scheduleProxyValidationTask" component="/reports/sync/scheduleProxyValidationTask" context=".." caption="Schedule Proxy Validation Task"/>
+
+		<component name="/operations/schedule-report/main" page="/schedule-report/main.jsp"/>
+        <component name="/operations/schedule-report/browse" page="/schedule-report/browse.jsp" className="com.hp.systinet.proxy.mgmt.ui.BackButtonCheckerComponent"/>
+        <task uri="/admin/schedule-report/browse" component="/operations/schedule-report/browse" context=".." caption="Browse Proxy Validation Reports"/>
+
+        <component name="/admin/devices/createL7"
+                        page="devices/createL7.jsp" className="com.hp.systinet.proxy.mgmt.ui.BackButtonCheckerComponent"/>
+        <component name="/admin/devices/createOSB" page="devices/createOSB.jsp" className="com.hp.systinet.proxy.mgmt.ui.BackButtonCheckerComponent"/>
+        <task uri="/admin/devices/createOSB" component="/admin/devices/createOSB" context=".." caption="Register Oracle Service Bus Domain"/>
+        <task uri="/admin/devices/createL7" component="/admin/devices/createL7" context=".." caption="Register Layer 7 Secure Span Gateway"/>
+        <component name="/reports/proxyValidationReport" page="/widgets/proxyValidationReport.jsp" className="com.hp.systinet.proxy.mgmt.ui.catalog.ProxyValidationReportComponent"/>
+
+
+</webFramework>
+</config>
+

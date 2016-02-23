@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/principleArtifacts/407f0024-bf66-4745-a468-37985286f02c</r:path>
+   <r:collection>/principleArtifacts/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType></r:contentType>
+   <r:owner>admin</r:owner>
+   <r:uuid>407f0024-bf66-4745-a468-37985286f02c</r:uuid>
+   <r:domainId>defaultDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2013-12-09T10:53:50.009Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>admin</r:creator>
+      <r:lastDataRevision>0</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:principleArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                              xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                              xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                              xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                              deleted="0"
+                              xlink:href="principleArtifacts/407f0024-bf66-4745-a468-37985286f02c">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="Motivation"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:motivationArtifact"/>
+               <p:artifactType name="Principle"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:principleArtifact"/>
+            </g:artifactTypeGroup>
+            <g:nameGroup>
+               <p:name>Lowest access rights</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup>
+               <p:description>Access rights should be based on what is needed for the exercise of the function</p:description>
+            </g:descriptionGroup>
+            <p:revision>1</p:revision>
+            <g:keywordGroup/>
+            <p:version>1.0</p:version>
+            <g:architectureLayerGroup>
+               <p:architectureLayer name="Application Layer"
+                                    taxonomyUri="uddi:systinet.com:soa:model:taxonomies:architectureLayer"
+                                    value="applicationLayer"/>
+            </g:architectureLayerGroup>
+            <g:qualityFeatureGroup>
+               <p:qualityFeature name="Functionality"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="functionality"/>
+            </g:qualityFeatureGroup>
+            <p:rationale>Managing access rules are more complex, as they are often inconsistent with the function of the employee. When users or systems extend rights further or longer than necessary, it can present unnecessary risks. </p:rationale>
+            <p:implications>Users never log in as administrator. The user is based on a user role. User rights are granted only for the time they are needed, and withdrawn if a user no longer has that role.</p:implications>
+         </a:principleArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

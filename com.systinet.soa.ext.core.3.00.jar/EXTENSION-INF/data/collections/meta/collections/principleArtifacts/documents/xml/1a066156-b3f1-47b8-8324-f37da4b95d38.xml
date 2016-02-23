@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/principleArtifacts/1a066156-b3f1-47b8-8324-f37da4b95d38</r:path>
+   <r:collection>/principleArtifacts/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType></r:contentType>
+   <r:owner>admin</r:owner>
+   <r:uuid>1a066156-b3f1-47b8-8324-f37da4b95d38</r:uuid>
+   <r:domainId>defaultDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2013-12-09T10:54:09.188Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>admin</r:creator>
+      <r:lastDataRevision>0</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:principleArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                              xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                              xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                              xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                              deleted="0"
+                              xlink:href="principleArtifacts/1a066156-b3f1-47b8-8324-f37da4b95d38">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="Motivation"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:motivationArtifact"/>
+               <p:artifactType name="Principle"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:principleArtifact"/>
+            </g:artifactTypeGroup>
+            <g:nameGroup>
+               <p:name>Early validations</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup>
+               <p:description>Validations are performed as early as possible</p:description>
+            </g:descriptionGroup>
+            <p:revision>1</p:revision>
+            <g:keywordGroup/>
+            <p:version>1.0</p:version>
+            <g:architectureLayerGroup>
+               <p:architectureLayer name="Application Layer"
+                                    taxonomyUri="uddi:systinet.com:soa:model:taxonomies:architectureLayer"
+                                    value="applicationLayer"/>
+            </g:architectureLayerGroup>
+            <g:qualityFeatureGroup>
+               <p:qualityFeature name="Usability"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="usability"/>
+            </g:qualityFeatureGroup>
+            <p:rationale>Users today expect a rich user experience. In addition, user-friendly  validations are performed after filling out a form.</p:rationale>
+            <p:implications>There are validations provided in the presentation layers, which are carried out directly, entering the individual fields. Use is made of a standard framework for Rich Internet Application (RIA) which validations do not need to be fully programmed.</p:implications>
+         </a:principleArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/principleArtifacts/a8b82557-2902-4203-b8ab-0330a6d787cf</r:path>
+   <r:collection>/principleArtifacts/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType></r:contentType>
+   <r:owner>admin</r:owner>
+   <r:uuid>a8b82557-2902-4203-b8ab-0330a6d787cf</r:uuid>
+   <r:domainId>defaultDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2013-12-09T10:53:50.802Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>admin</r:creator>
+      <r:lastDataRevision>0</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:principleArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                              xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                              xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                              xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                              deleted="0"
+                              xlink:href="principleArtifacts/a8b82557-2902-4203-b8ab-0330a6d787cf">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="Motivation"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:motivationArtifact"/>
+               <p:artifactType name="Principle"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:principleArtifact"/>
+            </g:artifactTypeGroup>
+            <g:nameGroup>
+               <p:name>Logging operations management</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup>
+               <p:description>Acts of functional and technical managers are explicitly logged</p:description>
+            </g:descriptionGroup>
+            <p:revision>1</p:revision>
+            <g:keywordGroup/>
+            <p:version>1.0</p:version>
+            <g:architectureLayerGroup>
+               <p:architectureLayer name="Application Layer"
+                                    taxonomyUri="uddi:systinet.com:soa:model:taxonomies:architectureLayer"
+                                    value="applicationLayer"/>
+               <p:architectureLayer name="Technology Layer"
+                                    taxonomyUri="uddi:systinet.com:soa:model:taxonomies:architectureLayer"
+                                    value="technologyLayer"/>
+            </g:architectureLayerGroup>
+            <g:qualityFeatureGroup>
+               <p:qualityFeature name="Functionality"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="functionality"/>
+            </g:qualityFeatureGroup>
+            <p:rationale>Capturing reports of systems is necessary to implement and to help inform, or many error situations can occur afterwards.   Capturing reports is also necessary as evidence for private or criminal control.</p:rationale>
+            <p:implications>Operations performed in the context of information management are logged as changes in configuration and settings.</p:implications>
+         </a:principleArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

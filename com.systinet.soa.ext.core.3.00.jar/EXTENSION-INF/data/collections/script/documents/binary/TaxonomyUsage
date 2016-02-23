@@ -1,0 +1,6 @@
+function getTransformationStrategyCategories() {
+    return com.hp.systinet.sc.ui.util.TaxonomyUtils.getTransformationStrategyCategories();
+}
+function updateTransformationStrategy(uuid, value) {
+    return com.hp.systinet.sc.ui.util.TaxonomyUtils.updateTransformationStrategyValue(uuid, value);
+}

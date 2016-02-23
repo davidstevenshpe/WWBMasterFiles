@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/assertions/BusinessFunctionStatusIsSet</r:path>
+   <r:collection>/assertions/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType>text/xml; charset=utf-8</r:contentType>
+   <r:owner>systinet:admin</r:owner>
+   <r:uuid>9f2d318e-f9cd-404d-bb23-21212a951fbb</r:uuid>
+   <r:domainId>topLevelDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2014-05-12T08:39:45.608Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>systinet:admin</r:creator>
+	  <r:lastDataRevision>1</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:assertionArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                              xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                              xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                              xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                              deleted="0"
+                              xlink:href="assertions/BusinessFunctionStatusIsSet">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="Content"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:content"/>
+               <p:artifactType name="Policy"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:soa:policy"/>
+               <p:artifactType name="Assertion"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:soa:policy:assertion"/>
+            </g:artifactTypeGroup>
+            <g:nameGroup>
+               <p:name>Business Function Status Is Set</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup>
+               <p:description>&lt;P&gt;
+	Business Function status should be set.&lt;/P&gt;</p:description>
+            </g:descriptionGroup>
+            <p:revision>1</p:revision>
+            <p:categoryBag/>
+            <g:keywordGroup/>
+            <p:isCached>0</p:isCached>
+            <p:checksum>0</p:checksum>
+            <p:dataLength>1842</p:dataLength>
+            <p:contentType>text/xml; charset=utf-8</p:contentType>
+            <p:assertionQName>{http://systinet.com/assertions}BusinessFunctionStatusIsSet</p:assertionQName>
+            <g:applicableSourceMimetypeGroup/>
+            <g:applicableSourceQNameGroup>
+               <p:applicableSourceQName>{http://systinet.com/2005/05/soa/model/artifact}businessFunctionArtifact</p:applicableSourceQName>
+            </g:applicableSourceQNameGroup>
+            <g:r_usedTaxonomyGroup/>
+         </a:assertionArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/principleArtifacts/910e5ad4-26a0-40dd-93f8-28c810dcf167</r:path>
+   <r:collection>/principleArtifacts/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType></r:contentType>
+   <r:owner>admin</r:owner>
+   <r:uuid>910e5ad4-26a0-40dd-93f8-28c810dcf167</r:uuid>
+   <r:domainId>defaultDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2013-12-09T10:54:05.089Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>admin</r:creator>
+      <r:lastDataRevision>0</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:principleArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                              xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                              xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                              xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                              deleted="0"
+                              xlink:href="principleArtifacts/910e5ad4-26a0-40dd-93f8-28c810dcf167">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="Motivation"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:motivationArtifact"/>
+               <p:artifactType name="Principle"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:principleArtifact"/>
+            </g:artifactTypeGroup>
+            <g:nameGroup>
+               <p:name>Standard definition and format</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup>
+               <p:description>Data apply a standard definition and are available in a standardized format</p:description>
+            </g:descriptionGroup>
+            <p:revision>1</p:revision>
+            <g:keywordGroup/>
+            <p:version>1.0</p:version>
+            <g:architectureLayerGroup>
+               <p:architectureLayer name="Application Layer"
+                                    taxonomyUri="uddi:systinet.com:soa:model:taxonomies:architectureLayer"
+                                    value="applicationLayer"/>
+            </g:architectureLayerGroup>
+            <g:qualityFeatureGroup>
+               <p:qualityFeature name="Functionality"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="functionality"/>
+               <p:qualityFeature name="Portability"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="portability"/>
+            </g:qualityFeatureGroup>
+            <p:rationale>In order to exchange data, it is important that their structure and definition is clear. By standardizing these definitions, a uniform interpretation is possible, and dependence on specific applications or vendors can be avoided. The form (format) is also relevant; otherwise data may still not be accessible. A standard definition format allows much easier integration between both applications and migrations (new versions) of applications.</p:rationale>
+            <p:implications>There are standard data definitions and formats for the various types of data, which are connected up to existing standards as indicated in the list of the Standardization Forum. Applications are selected to support the selected data definitions and formats.</p:implications>
+         </a:principleArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

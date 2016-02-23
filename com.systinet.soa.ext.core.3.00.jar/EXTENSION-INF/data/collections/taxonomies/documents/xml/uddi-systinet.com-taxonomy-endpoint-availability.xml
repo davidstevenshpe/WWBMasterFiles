@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taxonomy check="true" brief="false" xmlns="http://systinet.com/uddi/taxonomy/v3/5.5">
+  <tModel tModelKey="uddi:systinet.com:taxonomy:endpoint:availability" deleted="false" tModelKeyV2="uuid:a275b4b5-cc03-3fd5-b7a9-9f44e7a3d984" xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <name xmlns="urn:uddi-org:api_v3">systinet-com:taxonomy:endpoint:availability</name>
+    <description xmlns="urn:uddi-org:api_v3">The operational availability of a Web service endpoint</description>
+    <overviewDoc xmlns="urn:uddi-org:api_v3">
+      <overviewURL>http://www.systinet.com</overviewURL>
+    </overviewDoc>
+    <categoryBag xmlns="urn:uddi-org:api_v3">
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Categorization system" keyValue="categorization"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="bindingTemplate"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Checked value set" keyValue="checked"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:validatedby" keyName="" keyValue="uddi:4ead6860-2f40-11d9-862f-4cf61b70862f"/>
+    </categoryBag>
+  </tModel>
+  <compatibilityBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <compatibility>bindingTemplate</compatibility>
+  </compatibilityBag>
+  <categorizationBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <categorization>categorization</categorization>
+  </categorizationBag>
+  <validation xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <categories>
+      <category keyName="Available" keyValue="Available" disabled="false"/>
+      <category keyName="Degraded" keyValue="Degraded" disabled="false"/>
+      <category keyName="Unavailable" keyValue="Unavailable" disabled="false"/>
+    </categories>
+    <bindingTemplate bindingKey="uddi:4ead6860-2f40-11d9-862f-4cf61b70862f" serviceKey="uddi:4ea970c0-2f40-11d9-862f-4cf61b70862f" xmlns="urn:uddi-org:api_v3">
+      <accessPoint useType="endPoint">class:com.systinet.uddi.publishing.v3.validation.service.InternalValidator</accessPoint>
+      <tModelInstanceDetails>
+        <tModelInstanceInfo tModelKey="uddi:uddi.org:v3_valuesetvalidation"/>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:taxonomy:endpoint:availability"/>
+      </tModelInstanceDetails>
+    </bindingTemplate>
+    <bindingTemplate bindingKey="uddi:4eb22350-2f40-11d9-862f-4cf61b70862f" serviceKey="uddi:4ea970c0-2f40-11d9-862f-4cf61b70862f" xmlns="urn:uddi-org:api_v3">
+      <accessPoint useType="endPoint">class:com.systinet.uddi.publishing.v2.validation.service.InternalValidator</accessPoint>
+      <tModelInstanceDetails>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:v2_validatevalues"/>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:taxonomy:endpoint:availability"/>
+      </tModelInstanceDetails>
+    </bindingTemplate>
+    <bindingTemplate bindingKey="uddi:4eb41f20-2f40-11d9-862f-4cf61b70862f" serviceKey="uddi:4ea970c0-2f40-11d9-862f-4cf61b70862f" xmlns="urn:uddi-org:api_v3">
+      <accessPoint useType="endPoint">class:com.systinet.uddi.publishing.v1.validation.service.InternalValidator</accessPoint>
+      <tModelInstanceDetails>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:v1_validatevalues"/>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:taxonomy:endpoint:availability"/>
+      </tModelInstanceDetails>
+    </bindingTemplate>
+  </validation>
+</taxonomy>

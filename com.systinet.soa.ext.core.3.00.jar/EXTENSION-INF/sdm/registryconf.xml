@@ -1,0 +1,47 @@
+<registryIntegration>
+  <registryInstance href="*">
+    <entity type="urn:com:systinet:soa:model:artifacts:soa:policy:wsPolicy" cacheContent="true" direction="both" label="WS-Policies">
+      <mapType>
+        <keyedReference tModelKey="uddi:schemas.xmlsoap.org:policytypes:2003_03" keyName="policy" keyValue="policy"/>
+      </mapType>
+      <mapProperty name="originUrl" type="text" multiple="false">
+        <keyedReference tModelKey="uddi:schemas.xmlsoap.org:remotepolicyreference:2003_03" keyName="policy reference"/>
+      </mapProperty>
+      <mapProperty name="version" type="text" multiple="false" direction="both">
+        <keyedReference tModelKey="uddi:systinet.com:soa:model:taxonomies:version" keyName="Version"/>
+      </mapProperty>
+    </entity>
+    <entity type="urn:com:systinet:soa:model:artifacts:soa:endpoint" direction="both">
+      <mapProperty name="r_destination" type="text" multiple="false" direction="both">
+        <keyedReference tModelKey="uddi:systinet.com:soa:model:taxonomies:destination" keyName="Destination"/>
+      </mapProperty>
+      <mapProperty name="r_targetService" type="text" multiple="false" direction="both">
+        <keyedReference tModelKey="uddi:systinet.com:soa:model:taxonomies:targetService" keyName="Target Service"/>
+      </mapProperty>
+      <mapProperty name="r_connectionFactory" type="text" multiple="false" direction="both">
+        <keyedReference tModelKey="uddi:systinet.com:soa:model:taxonomies:connectionFactory" keyName="Connection Factory"/>
+      </mapProperty>
+      <mapProperty name="r_jndiIntialContextFactory" type="text" multiple="false" direction="both">
+        <keyedReference tModelKey="uddi:systinet.com:soa:model:taxonomies:jndiIntialContextFactory" keyName="Jndi Initial Context Factory"/>
+      </mapProperty>
+      <mapProperty name="r_jndiUrl" type="text" multiple="false" direction="both">
+        <keyedReference tModelKey="uddi:systinet.com:soa:model:taxonomies:jndiUrl" keyName="Jndi Url"/>
+      </mapProperty>
+      <mapProperty name="r_replyTo" type="text" multiple="false" direction="both">
+        <keyedReference tModelKey="uddi:systinet.com:soa:model:taxonomies:replyTo" keyName="Reply To"/>
+      </mapProperty>
+      <mapProperty name="r_replyToTopic" type="text" multiple="false" direction="both">
+        <keyedReference tModelKey="uddi:systinet.com:soa:model:taxonomies:replyToTopic" keyName="Reply To Topic"/>
+      </mapProperty>
+      <mapProperty name="r_timeToLive" type="integer" multiple="false" direction="both">
+        <keyedReference tModelKey="uddi:systinet.com:soa:model:taxonomies:timeToLive" keyName="Time To Live"/>
+      </mapProperty>
+      <mapProperty name="r_priority" type="integer" multiple="false" direction="both">
+        <keyedReference tModelKey="uddi:systinet.com:soa:model:taxonomies:priority" keyName="Priority"/>
+      </mapProperty>
+      <mapProperty name="r_jndiParameter" type="nameValuePair" multiple="true" direction="both">
+        <keyedReference tModelKey="uddi:systinet.com:soa:model:taxonomies:jndiParameter" keyName="tModel"/>
+      </mapProperty>
+    </entity>
+  </registryInstance>
+</registryIntegration>

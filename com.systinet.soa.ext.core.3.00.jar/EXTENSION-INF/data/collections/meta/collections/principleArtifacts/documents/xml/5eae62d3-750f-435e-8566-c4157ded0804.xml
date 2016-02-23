@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/principleArtifacts/5eae62d3-750f-435e-8566-c4157ded0804</r:path>
+   <r:collection>/principleArtifacts/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType></r:contentType>
+   <r:owner>admin</r:owner>
+   <r:uuid>5eae62d3-750f-435e-8566-c4157ded0804</r:uuid>
+   <r:domainId>defaultDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2013-12-09T10:55:29.328Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>admin</r:creator>
+      <r:lastDataRevision>0</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:principleArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                              xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                              xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                              xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                              deleted="0"
+                              xlink:href="principleArtifacts/5eae62d3-750f-435e-8566-c4157ded0804">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="Motivation"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:motivationArtifact"/>
+               <p:artifactType name="Principle"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:principleArtifact"/>
+            </g:artifactTypeGroup>
+            <g:aggregatesGroup>
+               <p:aggregates xlink:href="principleArtifacts/406964da-1fef-4b9f-a086-e69f76a89e44"/>
+               <p:aggregates xlink:href="principleArtifacts/a3b31d33-a74f-4e8c-ac50-5a2d46af4275"/>
+               <p:aggregates xlink:href="principleArtifacts/cc1b77f2-8d4a-4992-9a39-c29a5737babc"/>
+               <p:aggregates xlink:href="principleArtifacts/14534095-62ad-43db-bf7b-e33f5acaffd6"/>
+               <p:aggregates xlink:href="principleArtifacts/1ad27457-de33-4d3e-ac4f-15e5f7e140ef"/>
+               <p:aggregates xlink:href="principleArtifacts/d80b536f-4cf9-4389-873f-bfcab4d0d2b8"/>
+               <p:aggregates xlink:href="principleArtifacts/9abfab18-6d4c-4daa-b3b6-65501b0eddbb"/>
+            </g:aggregatesGroup>
+            <g:nameGroup>
+               <p:name>Process Standardization</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup>
+               <p:description>Business Processes are standardized</p:description>
+            </g:descriptionGroup>
+            <p:revision>1</p:revision>
+            <g:keywordGroup/>
+            <p:version>1.0</p:version>
+            <g:architectureLayerGroup>
+               <p:architectureLayer name="Business Layer"
+                                    taxonomyUri="uddi:systinet.com:soa:model:taxonomies:architectureLayer"
+                                    value="businessLayer"/>
+            </g:architectureLayerGroup>
+            <g:qualityFeatureGroup>
+               <p:qualityFeature name="Reliability"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="reliability"/>
+               <p:qualityFeature name="Efficiency"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="efficiency"/>
+               <p:qualityFeature name="Maintainability"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="maintainability"/>
+               <p:qualityFeature name="Portability"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="portability"/>
+            </g:qualityFeatureGroup>
+            <p:rationale>Standard processes are repeatable, predictable, scalable and more efficient. Process Standardization may also be necessary to comply with laws and quality standards.</p:rationale>
+            <p:implications>Process standardization defines the standard process, based on current and best practices of all departments. All departments implement the standard process.</p:implications>
+         </a:principleArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

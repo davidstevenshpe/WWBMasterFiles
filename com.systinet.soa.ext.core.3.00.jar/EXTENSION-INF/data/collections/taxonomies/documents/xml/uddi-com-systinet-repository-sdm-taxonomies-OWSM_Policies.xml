@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><taxonomy check="true" xmlns="http://systinet.com/uddi/taxonomy/v3/5.5">
+  <tModel tModelKey="uddi:localhost:com.systinet.soa:model:taxonomies:OWSM_Policies" deleted="false" xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <name xmlns="urn:uddi-org:api_v3">OWSM Policies</name>
+    <categoryBag xmlns="urn:uddi-org:api_v3">
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="tModel"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="businessService"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="businessEntity"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="bindingTemplate"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Checked value set" keyValue="checked"/>
+    </categoryBag>
+  </tModel>
+  <compatibilityBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <compatibility>tModel</compatibility>
+    <compatibility>businessService</compatibility>
+    <compatibility>businessEntity</compatibility>
+    <compatibility>bindingTemplate</compatibility>
+  </compatibilityBag>
+  <categorizationBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <categorization>categorization</categorization>
+  </categorizationBag>
+  <validation xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <categories>
+      <category keyName="oracle/binding_authorization_denyall_policy" keyValue="oracle/binding_authorization_denyall_policy" disabled="false"/>
+      <category keyName="oracle/binding_authorization_permitall_policy" keyValue="oracle/binding_authorization_permitall_policy" disabled="false"/>
+      <category keyName="oracle/log_policy" keyValue="oracle/log_policy" disabled="false"/>
+      <category keyName="oracle/whitelist_authorization_policy" keyValue="oracle/whitelist_authorization_policy" disabled="false"/>
+      <category keyName="oracle/wss10_message_protection_service_policy" keyValue="oracle/wss10_message_protection_service_policy" disabled="false"/>
+      <category keyName="oracle/wss10_saml20_token_service_policy" keyValue="oracle/wss10_saml20_token_service_policy" disabled="false"/>
+      <category keyName="oracle/wss10_saml20_token_with_message_protection_service_policy" keyValue="oracle/wss10_saml20_token_with_message_protection_service_policy" disabled="false"/>
+      <category keyName="oracle/wss10_saml_hok_token_with_message_protection_service_policy" keyValue="oracle/wss10_saml_hok_token_with_message_protection_service_policy" disabled="false"/>
+      <category keyName="oracle/wss10_saml_token_service_policy" keyValue="oracle/wss10_saml_token_service_policy" disabled="false"/>
+      <category keyName="oracle/wss10_saml_token_with_message_integrity_service_policy" keyValue="oracle/wss10_saml_token_with_message_integrity_service_policy" disabled="false"/>
+      <category keyName="oracle/wss10_saml_token_with_message_protection_service_policy" keyValue="oracle/wss10_saml_token_with_message_protection_service_policy" disabled="false"/>
+      <category keyName="oracle/wss10_saml_token_with_message_protection_ski_basic256_service_policy" keyValue="oracle/wss10_saml_token_with_message_protection_ski_basic256_service_policy" disabled="false"/>
+      <category keyName="oracle/wss10_username_id_propagation_with_msg_protection_service_policy" keyValue="oracle/wss10_username_id_propagation_with_msg_protection_service_policy" disabled="false"/>
+      <category keyName="oracle/wss10_username_token_with_message_protection_service_policy" keyValue="oracle/wss10_username_token_with_message_protection_service_policy" disabled="false"/>
+      <category keyName="oracle/wss10_username_token_with_message_protection_ski_basic256_service_policy" keyValue="oracle/wss10_username_token_with_message_protection_ski_basic256_service_policy" disabled="false"/>
+      <category keyName="oracle/wss10_x509_token_with_message_protection_service_policy" keyValue="oracle/wss10_x509_token_with_message_protection_service_policy" disabled="false"/>
+      <category keyName="oracle/wss11_kerberos_token_service_policy" keyValue="oracle/wss11_kerberos_token_service_policy" disabled="false"/>
+      <category keyName="oracle/wss11_kerberos_token_with_message_protection_basic128_service_policy" keyValue="oracle/wss11_kerberos_token_with_message_protection_basic128_service_policy" disabled="false"/>
+      <category keyName="oracle/wss11_kerberos_token_with_message_protection_service_policy" keyValue="oracle/wss11_kerberos_token_with_message_protection_service_policy" disabled="false"/>
+      <category keyName="oracle/wss11_message_protection_service_policy" keyValue="oracle/wss11_message_protection_service_policy" disabled="false"/>
+      <category keyName="oracle/wss11_saml20_token_with_message_protection_service_policy" keyValue="oracle/wss11_saml20_token_with_message_protection_service_policy" disabled="false"/>
+      <category keyName="oracle/wss11_saml_or_username_token_with_message_protection_service_policy" keyValue="oracle/wss11_saml_or_username_token_with_message_protection_service_policy" disabled="false"/>
+      <category keyName="oracle/wss11_saml_token_with_message_protection_service_policy" keyValue="oracle/wss11_saml_token_with_message_protection_service_policy" disabled="false"/>
+      <category keyName="oracle/wss11_username_token_with_message_protection_service_policy" keyValue="oracle/wss11_username_token_with_message_protection_service_policy" disabled="false"/>
+      <category keyName="oracle/wss11_x509_token_with_message_protection_service_policy" keyValue="oracle/wss11_x509_token_with_message_protection_service_policy" disabled="false"/>
+      <category keyName="oracle/wss_saml_or_username_token_service_policy" keyValue="oracle/wss_saml_or_username_token_service_policy" disabled="false"/>
+      <category keyName="oracle/wss_username_token_service_policy" keyValue="oracle/wss_username_token_service_policy" disabled="false"/>
+    </categories>
+  </validation>
+</taxonomy>

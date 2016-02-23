@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <pm:Assertion xmlns:p="http://systinet.com/2005/05/soa/resource" xmlns:pm="http://systinet.com/2005/10/soa/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <pm:Parameter Name="process" Type="xsd:string" XPointer="xpointer(@GovernanceProcessName)" Optional="true"/>
+        <p:Template xmlns:p="http://systinet.com/2005/10/soa/policy">
+          <BusinessServiceHasApprovalProcess xmlns="http://systinet.com/2005/10/soa/policy/best-practice"/>
+        </p:Template>
+        <pm:Validation SourceType="xmlns(ns=http://systinet.com/2005/05/soa/resource)qname(ns:resource)" xmlns:val="http://systinet.com/2005/10/soa/policy/validation">
+          <val:LifecycleAssociated/>
+        </pm:Validation>
+      </pm:Assertion>

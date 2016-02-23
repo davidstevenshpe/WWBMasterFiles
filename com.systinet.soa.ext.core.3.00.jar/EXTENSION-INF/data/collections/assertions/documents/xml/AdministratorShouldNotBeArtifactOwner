@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><pm:Assertion xmlns:pm="http://systinet.com/2005/10/soa/policy" xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup" xmlns:r="http://systinet.com/2005/05/repository" xmlns:p="http://systinet.com/2005/05/soa/model/property" xmlns:a="http://systinet.com/2005/05/soa/model/artifact" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:pt="http://systinet.com/2005/05/soa/model/property/type" xmlns:rest="http://systinet.com/2005/05/soa/resource" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><pm:Template><p0:AdministratorShouldNotBeArtifactOwner xmlns:p0="urn:localhost:com:enter-your-organization-or-project-specific-namespace"/></pm:Template><pm:Validation><JavaScriptValidator xmlns="http://systinet.com/2005/10/soa/policy/validation" xmlns:xlink="http://www.w3.org/1999/xlink/">/**
+ * This function is called iteratively by the java script validator,
+ * There are some java script objects pre-initialized in the scripting context (e.g. repositoryService ...)  
+ * You can find others and configure more in the managed script environment.js
+ *
+ * @param  resource
+ *         an external resource or an artifact
+ *
+ * @param  params
+ *         a map of params
+ */
+function validate(resource, params) {
+    var artifact = resource;
+    var owner = artifact.get_owner();
+    var principal = null;
+    if (owner.indexOf("_sstntgrp:") != -1) {
+    	principal = Packages.com.hp.systinet.security.role.Principal.getGroupPrincipal(owner.toString());
+    }
+    else if (owner.indexOf("_sstntrl:") != -1) {
+    	principal = Packages.com.hp.systinet.security.role.Principal.getRolePrincipal(owner.toString());
+    }
+    else {
+        principal = Packages.com.hp.systinet.security.role.Principal.getUserPrincipal(owner.toString());
+    }
+    var roleManager = beanFactoryHelper.getBean(Packages.com.hp.systinet.security.role.RoleManager);
+    var userRoles = roleManager.findRoles(principal, Packages.com.hp.systinet.repository.domain.DomainConstants.TOP_LEVEL_DOMAIN_ID);
+    if (userRoles.contains("Administrator")) {
+    		return new JsValidationResult(JsValidationCode.FAILED, "Owner of this artifact is a member of Administrator role. This happens after import from an external source where the owner isn't known and causes problems when the artifact needs to be updated - it requires administrative priviledges then.");
+    }
+    return new JsValidationResult(JsValidationCode.OK);
+}
+</JavaScriptValidator></pm:Validation></pm:Assertion>

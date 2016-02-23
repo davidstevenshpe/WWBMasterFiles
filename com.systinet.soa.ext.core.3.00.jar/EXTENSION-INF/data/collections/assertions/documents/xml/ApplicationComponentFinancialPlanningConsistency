@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><pm:Assertion xmlns:pm="http://systinet.com/2005/10/soa/policy" xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup" xmlns:r="http://systinet.com/2005/05/repository" xmlns:p="http://systinet.com/2005/05/soa/model/property" xmlns:a="http://systinet.com/2005/05/soa/model/artifact" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:pt="http://systinet.com/2005/05/soa/model/property/type" xmlns:rest="http://systinet.com/2005/05/soa/resource" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><pm:Template><p0:ApplicationComponentFinancialPlanningConsistency xmlns:p0="http://systinet.com/2005/10/soa/policy/validation"/></pm:Template><pm:Validation SourceType="xmlns(ns=http://systinet.com/2005/05/soa/model/artifact)qname(ns:applicationComponentArtifact)"><JavaScriptValidator xmlns="http://systinet.com/2005/10/soa/policy/validation" xmlns:xlink="http://www.w3.org/1999/xlink/">/**
+ * This function is called iteratively by the java script validator,
+ * There are some java script objects pre-initialized in the scripting context (e.g. repositoryService ...)
+ * You can find others and configure more in the managed script environment.js
+ * @param  resource
+ *         an external resource or an artifact
+ * @param  params
+ *         a map of params
+ */
+function validate(resource, params) {
+    var FINANCIAL_PROFILE_REL = "financialProfile";
+    var artifact = resource;
+
+    repositoryService.fetchArtifactProperties(artifact, new ArtifactPartSelector(FINANCIAL_PROFILE_REL));
+    var relation = artifact.getRelationProperty(FINANCIAL_PROFILE_REL);
+    if (relation == null) {
+        return new JsValidationResult(JsValidationCode.FAILED, "No financial profile found for the current fiscal period");
+    }
+    return new JsValidationResult(JsValidationCode.OK);
+}
+</JavaScriptValidator></pm:Validation></pm:Assertion>

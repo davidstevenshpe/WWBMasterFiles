@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/principleArtifacts/4d09cd4c-ced7-4773-a764-fd2c32475549</r:path>
+   <r:collection>/principleArtifacts/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType></r:contentType>
+   <r:owner>admin</r:owner>
+   <r:uuid>4d09cd4c-ced7-4773-a764-fd2c32475549</r:uuid>
+   <r:domainId>defaultDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2013-12-09T10:53:22.480Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>admin</r:creator>
+      <r:lastDataRevision>0</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:principleArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                              xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                              xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                              xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                              deleted="0"
+                              xlink:href="principleArtifacts/4d09cd4c-ced7-4773-a764-fd2c32475549">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="Motivation"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:motivationArtifact"/>
+               <p:artifactType name="Principle"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:principleArtifact"/>
+            </g:artifactTypeGroup>
+            <g:nameGroup>
+               <p:name>Controlled Technical Diversity</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup>
+               <p:description>Technological diversity is controlled to minimize costs for maintenance, required expertise, customizations, and interoperability. Diversity is also controlled to prevent unwanted complexity and heterogeneity, which make the manageability of the environment difficult.</p:description>
+            </g:descriptionGroup>
+            <p:revision>1</p:revision>
+            <g:keywordGroup/>
+            <p:version>1.0</p:version>
+            <g:architectureLayerGroup>
+               <p:architectureLayer name="Technology Layer"
+                                    taxonomyUri="uddi:systinet.com:soa:model:taxonomies:architectureLayer"
+                                    value="technologyLayer"/>
+            </g:architectureLayerGroup>
+            <g:qualityFeatureGroup>
+               <p:qualityFeature name="Effectiveness"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="effectiveness"/>
+               <p:qualityFeature name="Efficiency"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="efficiency"/>
+            </g:qualityFeatureGroup>
+            <p:rationale>Excessive diversity of technology is combined with non-trivial costs. Not only for technology itself, but also for maintenance, staff training, customization of the environment enabling required interoperability, and overall management.
+Each piece of new technology increases the overall complexity. If it is not necessary, the diversity of technology should be limited to an unavoidable minimum, to prevent unwanted costs and complexity.
+The business advantages of minimum technical diversity include: standard packaging of components; predictable implementation impact; predictable valuations and returns; redefined testing; utility status; and increased flexibility to accommodate technological advancements. Common technology across the enterprise brings the benefits of economies of scale to the enterprise. Technical administration and support costs are better controlled when limited resources can focus on this shared set of technology.</p:rationale>
+            <p:implications>Policies, standards, and procedures that govern the acquisition of technology must be defined, deployed and followed. A selection of technology needs to be constrained by the choices predefined within the technology blueprint.
+Any deviation from the blueprint needs to be assessed for its benefits, costs, suitability and compatibility with the information environment, and must be approved by the enterprise architecture authority.
+Procedures, policy, and supporting tools should be defined, deployed, and used to enable effective, efficient, and reliable deployment of technology sets to the environment.
+The overall intention here is that only approved, suitable technologies and their implementation are used to meet business needs, not that the principles are blindly followed. Business needs drive the selection of technology, not vice versa.</p:implications>
+         </a:principleArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

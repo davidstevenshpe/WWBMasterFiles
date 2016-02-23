@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/assertions/MultiInheritanceIsNotAllowed</r:path>
+   <r:collection>/assertions/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType>text/xml; charset=utf-8</r:contentType>
+   <r:owner>systinet:admin</r:owner>
+   <r:uuid>ff1a9879-f52c-4370-bd99-dbf6398d95e6</r:uuid>
+   <r:domainId>topLevelDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2014-03-27T07:35:25.717Z</r:timestamp>
+      <r:creator>systinet:admin</r:creator>
+      <r:lastDataRevision>1</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:assertionArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                              xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                              xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                              xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                              xlink:href="assertions/MultiInheritanceIsNotAllowed"
+                              xml:base="http://sgatvm0181.hpswlabs.adapps.hp.com:8080/eam/systinet/platform/restBasic/repository/">
+            <g:nameGroup>
+                <p:name>Multiple Inheritance Is Not Allowed</p:name>
+            </g:nameGroup>
+			
+            <g:descriptionGroup>
+                <p:description>An artifact specializes at most one artifact of the same type.</p:description>
+            </g:descriptionGroup>
+			
+            <p:assertionQName>{urn:localhost:com:enter-your-organization-or-project-specific-namespace}MultiInheritanceIsNotAllowed</p:assertionQName>
+            <g:applicableSourceQNameGroup>
+               <p:applicableSourceQName xmlns:p="http://systinet.com/2005/05/soa/model/property" xsi:type="p:applicableSourceQName">{http://systinet.com/2005/05/soa/resource}resource</p:applicableSourceQName>
+            </g:applicableSourceQNameGroup>
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="Content"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:content"/>
+               <p:artifactType name="Policy"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:soa:policy"/>
+               <p:artifactType name="Assertion"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:soa:policy:assertion"/>
+            </g:artifactTypeGroup>
+         </a:assertionArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

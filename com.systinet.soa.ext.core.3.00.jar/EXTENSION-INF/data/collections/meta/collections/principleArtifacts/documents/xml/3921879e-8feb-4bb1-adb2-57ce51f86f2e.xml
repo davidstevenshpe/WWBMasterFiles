@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/principleArtifacts/3921879e-8feb-4bb1-adb2-57ce51f86f2e</r:path>
+   <r:collection>/principleArtifacts/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType></r:contentType>
+   <r:owner>admin</r:owner>
+   <r:uuid>3921879e-8feb-4bb1-adb2-57ce51f86f2e</r:uuid>
+   <r:domainId>defaultDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2013-12-09T10:55:15.294Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>admin</r:creator>
+      <r:lastDataRevision>0</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:principleArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                              xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                              xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                              xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                              deleted="0"
+                              xlink:href="principleArtifacts/3921879e-8feb-4bb1-adb2-57ce51f86f2e">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="Motivation"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:motivationArtifact"/>
+               <p:artifactType name="Principle"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:principleArtifact"/>
+            </g:artifactTypeGroup>
+            <g:aggregatesGroup>
+               <p:aggregates xlink:href="principleArtifacts/3f43dc29-6cd0-4681-a726-31f24e37256d"/>
+            </g:aggregatesGroup>
+            <g:nameGroup>
+               <p:name>Information trustee</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup>
+               <p:description>Each data element has a trustee accountable for data quality.</p:description>
+            </g:descriptionGroup>
+            <p:revision>1</p:revision>
+            <g:keywordGroup/>
+            <p:version>1.0</p:version>
+            <g:architectureLayerGroup>
+               <p:architectureLayer name="Business Layer"
+                                    taxonomyUri="uddi:systinet.com:soa:model:taxonomies:architectureLayer"
+                                    value="businessLayer"/>
+               <p:architectureLayer name="Technology Layer"
+                                    taxonomyUri="uddi:systinet.com:soa:model:taxonomies:architectureLayer"
+                                    value="technologyLayer"/>
+            </g:architectureLayerGroup>
+            <g:qualityFeatureGroup>
+               <p:qualityFeature name="Integrity"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="integrity"/>
+               <p:qualityFeature name="Confidentiality"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="confidentiality"/>
+               <p:qualityFeature name="Reliability"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="reliability"/>
+               <p:qualityFeature name="Compliance"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="compliance"/>
+            </g:qualityFeatureGroup>
+            <p:rationale>To ensure a high integrity and reliability of managed information, there must be named and assigned a data trustee accountable for content of information. The data trustee should have sole responsibility for data entry managed in the information system to eliminate potential duplicates, reduce redundant human effort, and prevent loss of data integrity. 
+A trustee is different than a steward - a trustee is responsible for accuracy and currency of the data, while responsibilities of a steward may be broader and include data standardization and definition tasks.</p:rationale>
+            <p:implications>A cultural change from simple data ownership to data trusteeship will be required. The data trustee must be responsible for meeting quality requirements on the information for which he is accountable.
+The trustee must be able to provide user confidence in data. A user confidence can be based on several factors: as a data source, currency of data, accuracy, completeness, and so on.
+Information should be captured electronically and validated as close to its source as possible.
+Data quality measures must be defined and used to ensure a lasting integrity of information.
+The importance of a data trustee must be recognized and respected across the enterprise for their efforts to be effective.</p:implications>
+         </a:principleArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

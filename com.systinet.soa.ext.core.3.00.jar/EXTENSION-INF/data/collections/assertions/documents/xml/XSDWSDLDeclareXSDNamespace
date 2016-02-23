@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pm:Assertion xmlns:pm="http://systinet.com/2005/10/soa/policy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:a="http://systinet.com/2005/05/soa/model/artifact" xmlns:r="http://systinet.com/2005/05/repository" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:pt="http://systinet.com/2005/05/soa/model/property/type" xmlns:rest="http://systinet.com/2005/05/soa/resource" xmlns:p="http://systinet.com/2005/05/soa/resource" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup">
+        <pm:Template>
+          <bp:XSDWSDLDeclareXSDNamespace xmlns:bp="http://systinet.com/2005/10/soa/policy/bpa"/>
+        </pm:Template>
+        <pm:Bundle>
+            <pm:String Key="error">A prefix for XML schema is not declared on the root element.</pm:String>
+        </pm:Bundle>
+        <pm:Validation SourceType="xmlns(ns=http://schemas.xmlsoap.org/wsdl/)qname(ns:definitions)" xmlns:val="http://systinet.com/2005/10/soa/policy/validation">
+          <val:XQuery>
+
+    declare namespace wsdl="http://schemas.xmlsoap.org/wsdl/";
+    declare namespace val="http://systinet.com/2005/10/soa/policy/validation";
+
+    declare variable $metadata.source.url external;
+
+    let $ok :=
+        for $prefix in in-scope-prefixes(/wsdl:definitions) where ($prefix!='' and namespace-uri-for-prefix($prefix, /wsdl:definitions)="http://www.w3.org/2001/XMLSchema")
+        return
+            true()
+    return
+        if (count($ok) = 0) then
+            val:assertionFailed(val:l10n('error'))
+        else
+            val:assertionOK()
+
+          </val:XQuery>
+        </pm:Validation>
+        <pm:Validation SourceType="xmlns(ns=http://www.w3.org/2001/XMLSchema)qname(ns:schema)" xmlns:val="http://systinet.com/2005/10/soa/policy/validation">
+          <val:XQuery>
+
+    declare namespace xs="http://www.w3.org/2001/XMLSchema";
+    declare namespace val="http://systinet.com/2005/10/soa/policy/validation";
+
+    declare variable $metadata.source.url external;
+
+    let $ok :=
+        for $prefix in in-scope-prefixes(/xs:schema) where ($prefix!='' and namespace-uri-for-prefix($prefix, /xs:schema)="http://www.w3.org/2001/XMLSchema")
+        return
+            true()
+    return
+        if (count($ok) = 0) then
+            val:assertionFailed(val:l10n('error'))
+        else
+            val:assertionOK()
+
+          </val:XQuery>
+        </pm:Validation>
+      </pm:Assertion>

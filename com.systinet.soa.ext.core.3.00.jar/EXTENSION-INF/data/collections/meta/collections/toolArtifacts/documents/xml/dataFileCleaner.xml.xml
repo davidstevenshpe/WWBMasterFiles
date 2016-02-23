@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/toolArtifacts/dataFileCleaner.xml</r:path>
+   <r:collection>/toolArtifacts/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType>application/xml</r:contentType>
+   <r:owner>systinet:admin</r:owner>
+   <r:domainId>topLevelDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>1970-01-01T00:00:00.000Z</r:timestamp>
+      <r:creator>systinet:admin</r:creator>
+      <r:lastDataRevision>0</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:jobToolArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                            xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                            xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                            xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                            xlink:href="toolArtifacts/dataFileCleaner.xml">
+            <g:nameGroup>
+               <p:name>Data File Cleaner</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup>
+               <p:description>Purges all data files without reference from artifacts.</p:description>
+            </g:descriptionGroup>
+            <p:jobClassId>dataFileCleanerJob</p:jobClassId>
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="System"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:system"/>
+               <p:artifactType name="Tool" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:system:tool"/>
+               <p:artifactType name="Job Tool"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:system:tool:job"/>
+            </g:artifactTypeGroup>
+         </a:jobToolArtifact>
+      </r:descriptor>
+   </r:extensions>
+   <r:uuid>4c102cb6-675f-46ad-9a97-404bb11e6486</r:uuid>
+</r:meta>

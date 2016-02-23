@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/assertions/BP1600</r:path>
+   <r:collection>/assertions/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType>text/xml</r:contentType>
+   <r:owner>systinet:admin</r:owner>
+   <r:uuid>0e169af9-70d9-4c6a-9433-a212b45b0ec2</r:uuid>
+   <r:domainId>topLevelDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2007-02-14T10:21:41.110Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>systinet:admin</r:creator>
+      <r:lastDataRevision>1</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:a="http://systinet.com/2005/05/soa/model/artifact" xmlns:wsi="http://www.ws-i.org/testing/2004/07/assertions/" xmlns:rest="http://systinet.com/2005/05/soa/resource" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:p="http://systinet.com/2005/05/soa/model/property" xmlns:sbp="http://systinet.com/2005/10/soa/policy/bpa" xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup" xmlns:pm="http://systinet.com/2005/10/soa/policy">
+         <p0:assertionArtifact xmlns:p0="http://systinet.com/2005/05/soa/model/artifact" xmlns:ab="http://systinet.com/2005/05/soa/model/property" xmlns:aa="http://systinet.com/2005/05/soa/model/propertyGroup" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:pt="http://systinet.com/2005/05/soa/model/property/type" xmlns:p="http://systinet.com/2005/05/soa/resource" deleted="0" xlink:href="assertions/BP1600.xml" xml:base="http://localhost:8080/soa/systinet/platform/rest/repository/">
+                  <p1:nameGroup xmlns:p1="http://systinet.com/2005/05/soa/model/propertyGroup">
+                       <p2:name xmlns:p2="http://systinet.com/2005/05/soa/model/property">BP1600</p2:name>
+                  </p1:nameGroup>
+                  <p1:descriptionGroup xmlns:p1="http://systinet.com/2005/05/soa/model/propertyGroup">
+                       <p2:description xmlns:p2="http://systinet.com/2005/05/soa/model/property">The envelope conforms to the structure
+specified in SOAP 1.1 Section 4. (BP 1.1 requirement &lt;a href="http://www.ws-i.org/Profiles/BasicProfile-1.1-2004-08-24.html#R9980"&gt;R9980&lt;/a&gt;)</p2:description>
+                  </p1:descriptionGroup>
+               <p:assertionClassification name="WS-I Basic Profile" taxonomyUri="uddi:systinet.com:soa:policymgr:taxonomies:Assertion:Classification:Taxonomy" value="uddi:systinet.com:soa:policymgr:taxonomies:Assertion:Classification:WS-I:BasicProfile" xmlns:p="http://systinet.com/2005/05/soa/model/property"/>
+                <p:assertionQName xmlns:p="http://systinet.com/2005/05/soa/model/property" xsi:type="p:assertionQName">{http://www.ws-i.org/testing/2004/07/assertions/}BP1600</p:assertionQName>
+            <g:applicableSourceQNameGroup>
+               <p:applicableSourceQName xmlns:p="http://systinet.com/2005/05/soa/model/property" xsi:type="p:applicableSourceQName">{http://schemas.xmlsoap.org/soap/envelope/}Envelope</p:applicableSourceQName>
+            </g:applicableSourceQNameGroup>
+            <g:artifactTypeGroup>
+               <ab:artifactType name="Artifact" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes" value="urn:com:systinet:soa:model:artifacts"/>
+               <ab:artifactType name="SOA" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes" value="urn:com:systinet:soa:model:artifacts:soa"/>
+               <ab:artifactType name="Policy" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes" value="urn:com:systinet:soa:model:artifacts:soa:policy"/>
+               <ab:artifactType name="Assertion" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes" value="urn:com:systinet:soa:model:artifacts:soa:policy:assertion"/>
+            </g:artifactTypeGroup>
+            <ab:lastRevision>1</ab:lastRevision>
+            <ab:revision>1</ab:revision>
+            <p:isCached xmlns:p="http://systinet.com/2005/05/soa/model/property">false</p:isCached>
+         </p0:assertionArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

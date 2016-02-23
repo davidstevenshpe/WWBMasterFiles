@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/assertions/InvestmentPriorityIsSet</r:path>
+   <r:collection>/assertions/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType>text/xml; charset=utf-8</r:contentType>
+   <r:owner>systinet:admin</r:owner>
+   <r:uuid>f61a6f88-3362-42d9-b576-b27600eb3829</r:uuid>
+   <r:domainId>topLevelDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2014-04-28T04:37:10.648Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>systinet:admin</r:creator>
+      <r:lastDataRevision>1</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:assertionArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                              xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                              xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                              xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                              deleted="0"
+                              xlink:href="assertions/InvestmentPriorityIsSet"
+                              xml:base="https://sgatvm0047.Hpswlabs.adapps.hp.com:8443/em/systinet/platform/restBasic/repository/">
+            <g:nameGroup>
+                <p:name>Investment Priority Is Set</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup>
+                <p:description>Investment Priority property of Business Function is set.</p:description>
+            </g:descriptionGroup>
+            
+            
+            <p:isCached>0</p:isCached>
+            
+            <p:assertionQName>{urn:localhost:com:enter-your-organization-or-project-specific-namespace}InvestmentPriorityIsSet</p:assertionQName>
+            <g:applicableSourceQNameGroup>
+               <p:applicableSourceQName>{http://systinet.com/2005/05/soa/model/artifact}businessFunctionArtifact</p:applicableSourceQName>
+            </g:applicableSourceQNameGroup>
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="Content"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:content"/>
+               <p:artifactType name="Policy"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:soa:policy"/>
+               <p:artifactType name="Assertion"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:soa:policy:assertion"/>
+            </g:artifactTypeGroup>
+         </a:assertionArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

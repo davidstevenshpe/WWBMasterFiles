@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taxonomy check="true" brief="false" xmlns="http://systinet.com/uddi/taxonomy/v3/5.5">
+  <tModel tModelKey="uddi:systinet.com:soa:model:taxonomies:xqueryInputOutputTypes" deleted="false" tModelKeyV2="uuid:9640fb37-5d5d-3218-bb3e-45844b79d71c" xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <name xmlns="urn:uddi-org:api_v3">systinet-com:repository:sdm:taxonomies:xqueryInputOutputTypes</name>
+    <description xmlns="urn:uddi-org:api_v3">XQuery input and output types.</description>
+    <overviewDoc xmlns="urn:uddi-org:api_v3">
+      <overviewURL>http://www.systinet.com</overviewURL>
+    </overviewDoc>
+    <categoryBag xmlns="urn:uddi-org:api_v3">
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="uddi-org:types:cacheable" keyValue="cacheable"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="uddi-org:types:valueSet" keyValue="valueSet"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Categorization system" keyValue="categorization"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="tModel"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="businessEntity"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="businessService"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="bindingTemplate"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Checked value set" keyValue="checked"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:validatedby" keyName="" keyValue="uddi:27a160c0-e4d7-11da-bf83-c9765be1bf81"/>
+    </categoryBag>
+  </tModel>
+  <compatibilityBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <compatibility>tModel</compatibility>
+    <compatibility>businessEntity</compatibility>
+    <compatibility>businessService</compatibility>
+    <compatibility>bindingTemplate</compatibility>
+  </compatibilityBag>
+  <categorizationBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <categorization>categorization</categorization>
+  </categorizationBag>
+  <validation xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <categories>
+      <category keyName="Boolean" keyValue="uddi:systinet.com:soa:model:taxonomies:xqueryInputOutputTypes:boolean" disabled="false"/>
+      <category keyName="Integer" keyValue="uddi:systinet.com:soa:model:taxonomies:xqueryInputOutputTypes:integer" disabled="false"/>
+      <category keyName="Long" keyValue="uddi:systinet.com:soa:model:taxonomies:xqueryInputOutputTypes:long" disabled="false"/>
+      <category keyName="Double" keyValue="uddi:systinet.com:soa:model:taxonomies:xqueryInputOutputTypes:double" disabled="false"/>
+      <category keyName="Float" keyValue="uddi:systinet.com:soa:model:taxonomies:xqueryInputOutputTypes:float" disabled="false"/>
+      <category keyName="Date" keyValue="uddi:systinet.com:soa:model:taxonomies:xqueryInputOutputTypes:date" disabled="false"/>
+      <category keyName="DateTime" keyValue="uddi:systinet.com:soa:model:taxonomies:xqueryInputOutputTypes:datetime" disabled="false"/>
+      <category keyName="String" keyValue="uddi:systinet.com:soa:model:taxonomies:xqueryInputOutputTypes:string" disabled="false"/>
+      <category keyName="Node" keyValue="uddi:systinet.com:soa:model:taxonomies:xqueryInputOutputTypes:node" disabled="false"/>
+    </categories>
+    <bindingTemplate bindingKey="uddi:27a160c0-e4d7-11da-bf83-c9765be1bf81" serviceKey="uddi:279ca5d0-e4d7-11da-bf83-c9765be1bf81" xmlns="urn:uddi-org:api_v3">
+      <accessPoint useType="endPoint">class:com.systinet.uddi.publishing.v3.validation.service.InternalValidator</accessPoint>
+      <tModelInstanceDetails>
+        <tModelInstanceInfo tModelKey="uddi:uddi.org:v3_valuesetvalidation"/>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:soa:model:taxonomies:xqueryInputOutputTypes"/>
+      </tModelInstanceDetails>
+    </bindingTemplate>
+    <bindingTemplate bindingKey="uddi:27a88cb0-e4d7-11da-bf83-c9765be1bf81" serviceKey="uddi:279ca5d0-e4d7-11da-bf83-c9765be1bf81" xmlns="urn:uddi-org:api_v3">
+      <accessPoint useType="endPoint">class:com.systinet.uddi.publishing.v2.validation.service.InternalValidator</accessPoint>
+      <tModelInstanceDetails>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:v2_validatevalues"/>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:soa:model:taxonomies:xqueryInputOutputTypes"/>
+      </tModelInstanceDetails>
+    </bindingTemplate>
+    <bindingTemplate bindingKey="uddi:27afb8a0-e4d7-11da-bf83-c9765be1bf81" serviceKey="uddi:279ca5d0-e4d7-11da-bf83-c9765be1bf81" xmlns="urn:uddi-org:api_v3">
+      <accessPoint useType="endPoint">class:com.systinet.uddi.publishing.v1.validation.service.InternalValidator</accessPoint>
+      <tModelInstanceDetails>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:v1_validatevalues"/>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:soa:model:taxonomies:xqueryInputOutputTypes"/>
+      </tModelInstanceDetails>
+    </bindingTemplate>
+  </validation>
+</taxonomy>

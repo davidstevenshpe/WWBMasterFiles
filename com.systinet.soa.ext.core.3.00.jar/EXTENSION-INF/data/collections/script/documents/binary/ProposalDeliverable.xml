@@ -1,0 +1,20 @@
+<query>
+    <parameters>
+      <parameter name="proposalUuid" label="proposalUuid" type="uuid" artifactLocalName="proposalArtifact"/>
+      <parameter name="query" label="query" type="string" defaultValue="%%"/>
+      <parameter name="coreSdmList" label="coreSdmList" type="string" defaultValue="businessActorArtifact,businessCollaborationArtifact,businessEventArtifact,businessFunctionArtifact,businessInteractionArtifact,businessInterfaceArtifact,businessContractArtifact,businessObjectArtifact,businessProcessArtifact,businessRoleArtifact,businessServiceArtifact,locationArtifact,productArtifact,representationArtifact,appCollaborationArtifact,databaseSchemaArtifact,j2eeApplicationArtifact,webApplicationArtifact,applicationComponentArtifact,applicationFunctionArtifact,hpsoaBpelProcessArtifact,applicationInteractionArtifact,fileExchangeArtifact,databaseInterfaceArtifact,publishSubscribeArtifact,queueArtifact,restInterfaceArtifact,remoteProcInvocationArtifact,webServiceArtifact,userInterfaceArtifact,webArtifact,xmlServiceArtifact,applicationInterfaceArtifact,applicationServiceArtifact,binaryDocumentArtifact,csvFileArtifact,xmlDocumentArtifact,sqlTableArtifact,dataObjectArtifact,messageArtifact,rpcCallArtifact,storedProcedureArtifact,hpsoaOperationArtifact,deploymentArtifact,networkArtifact,communicationPathArtifact,deploymentSpecification,infrastructureFunctionArtifact,endpointArtifact,infrastructureInterface,infrastructureServiceArtifact,serverArtifact,deviceArtifact,serverGroupArtifact,nodeArtifact,systemSoftwareArtifact"/>
+    </parameters>
+
+    <!-- Proposal realizedBy Plateau aggregates (core element) -->
+    select core._uuid as uuid, core.name as coreName, core.version as coreVersion, core._artifactTypeName as sdmName, core._sdmName as type,  
+           core._ownerName as owner, core._lastApprovedStage.name as lastApprovedStage, core.aggregatedBy.useType as targetStage, 
+           pl._uuid as plateauUuid, pl.name as plateauName,
+           core.aggregatedBy.internalEffort as internalEffort, core.aggregatedBy.externalEffort as externalEffort, core.aggregatedBy.cost as cost
+    from artifactBase core, plateauArtifact pl, proposalArtifact pr 
+         where bind(pr.realizedBy, pl) and bind(core.aggregatedBy, pl)   
+               and pr._uuid = :proposalUuid
+               and (:coreSdmList like ('%' || core._sdmName || '%'))
+               and (upper(core.name) like :query or upper(core._artifactTypeName) like :query or upper(core.version) like :query)
+               and (core.aggregatedBy.prerequisite = 0 or core.aggregatedBy.prerequisite is null)
+        
+</query>

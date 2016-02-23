@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pm:Assertion xmlns:pm="http://systinet.com/2005/10/soa/policy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:a="http://systinet.com/2005/05/soa/model/artifact" xmlns:r="http://systinet.com/2005/05/repository" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:pt="http://systinet.com/2005/05/soa/model/property/type" xmlns:rest="http://systinet.com/2005/05/soa/resource" xmlns:p="http://systinet.com/2005/05/soa/resource" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup">
+        <p:Template xmlns:p="http://systinet.com/2005/10/soa/policy">
+          <XSDAllAttributesUnqualified xmlns="http://systinet.com/2005/10/soa/policy/best-practice"/>
+        </p:Template>
+        <pm:Bundle>
+            <pm:String Key="all-qualified">The schema marks all attributes as qualified. To fix this problem, remove the &amp;lt;code&amp;gt;@attributeFormDefault&amp;lt;/code&amp;gt; attribute from this element.</pm:String>
+            <pm:String Key="attr-qualified">This attribute is marked as "qualified". To fix this problem, remove the &amp;lt;code&amp;gt;@form="qualified"&amp;lt;/code&amp;gt; attribute on this element.</pm:String>
+        </pm:Bundle>
+        <p:Validation SourceType="xmlns(ns=http://www.w3.org/2001/XMLSchema)qname(ns:schema)" xmlns:r="http://systinet.com/2005/05/soa/resource" xmlns:p="http://systinet.com/2005/10/soa/policy" xmlns:p0="http://systinet.com/2005/10/soa/policy/report" xmlns:p1="http://systinet.com/2005/05/soa/resource" xmlns:pr="http://systinet.com/2005/10/soa/policy/report" xmlns:val="http://systinet.com/2005/10/soa/policy/validation">
+          <p:Description/>
+          <val:XQuery>
+      declare namespace xs = "http://www.w3.org/2001/XMLSchema";
+	  declare namespace th = "http://this-namespace";
+
+	  declare namespace rest="http://systinet.com/2005/05/soa/resource";
+	  declare namespace a="http://systinet.com/2005/05/soa/model/artifact";
+	  declare namespace p="http://systinet.com/2005/05/soa/model/property";
+	  declare namespace pm="http://systinet.com/2005/10/soa/policy/report";
+	  declare namespace wsdl="http://schemas.xmlsoap.org/wsdl/";
+      declare namespace val="http://systinet.com/2005/10/soa/policy/validation";
+
+	  if (./@attributeFormDefault = "qualified") then
+	       val:assertionFailed(val:l10n('all-qualified'), .)
+          else
+   	      let $problems := 
+                 for $el in ./xs:*//xs:attribute where ($el/@form = "qualified")
+                 return
+		    val:assertionFailed(val:l10n('attr-qualified'), $el)
+              return
+                if (empty($problems)) then
+  	           val:assertionOK()
+                else
+                   $problems[1]
+
+
+	  </val:XQuery>
+        </p:Validation>
+      </pm:Assertion>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcutsDefinition xmlns="urn:com.hp.eam.shortcuts.definition:1.0">
+	<shortcut id="appComponentToAppService" relationshipType="realizes" autoApprove="true" label="Realized application services" inverseLabel="Realized by application components">
+		<source localName="applicationComponentArtifact" relationshipType="realizes" />
+		<!-- NO REQUIRED INTERMEDIARY DEFINED OOTB, uncomment to create the intermediary  -->
+		<!--
+		<intermediate localName="applicationFunctionArtifact" generateName="${source.name}" relationshipType="assignedTo" />
+		-->
+		<target localName="applicationServiceArtifact" hierarchyRelationshipType="composes"/>
+	</shortcut> 
+</shortcutsDefinition>

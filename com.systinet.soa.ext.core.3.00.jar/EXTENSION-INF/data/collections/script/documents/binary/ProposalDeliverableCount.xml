@@ -1,0 +1,14 @@
+<query>
+    <parameters>
+      <parameter name="proposalUuid" label="proposalUuid" type="uuid" artifactLocalName="proposalArtifact"/>
+      <parameter name="coreSdmList" label="coreSdmList" type="string" defaultValue="businessActorArtifact,businessCollaborationArtifact,businessEventArtifact,businessFunctionArtifact,businessInteractionArtifact,businessInterfaceArtifact,businessContractArtifact,businessObjectArtifact,businessProcessArtifact,businessRoleArtifact,businessServiceArtifact,locationArtifact,productArtifact,representationArtifact,appCollaborationArtifact,databaseSchemaArtifact,j2eeApplicationArtifact,webApplicationArtifact,applicationComponentArtifact,applicationFunctionArtifact,hpsoaBpelProcessArtifact,applicationInteractionArtifact,fileExchangeArtifact,databaseInterfaceArtifact,publishSubscribeArtifact,queueArtifact,restInterfaceArtifact,remoteProcInvocationArtifact,webServiceArtifact,userInterfaceArtifact,webArtifact,xmlServiceArtifact,applicationInterfaceArtifact,applicationServiceArtifact,binaryDocumentArtifact,csvFileArtifact,xmlDocumentArtifact,sqlTableArtifact,dataObjectArtifact,messageArtifact,rpcCallArtifact,storedProcedureArtifact,hpsoaOperationArtifact,deploymentArtifact,networkArtifact,communicationPathArtifact,deploymentSpecification,infrastructureFunctionArtifact,endpointArtifact,infrastructureInterface,infrastructureServiceArtifact,serverArtifact,deviceArtifact,serverGroupArtifact,nodeArtifact,systemSoftwareArtifact"/>
+    </parameters>
+    
+     <!-- Proposal realizedBy Plateau aggregates (core element) -->
+    select count(core._uuid) as total
+    from artifactBase core, plateauArtifact pl, proposalArtifact pr 
+    where bind(pr.realizedBy, pl) and bind(core.aggregatedBy, pl)   
+          and pr._uuid = :proposalUuid
+          and (:coreSdmList like ('%' || core._sdmName || '%'))
+          and (core.aggregatedBy.prerequisite = 0 or core.aggregatedBy.prerequisite is null)
+</query>

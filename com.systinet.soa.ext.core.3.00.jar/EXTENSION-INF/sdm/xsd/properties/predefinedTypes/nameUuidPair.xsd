@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://systinet.com/2005/05/soa/model/property/type"
+           xmlns="http://systinet.com/2005/05/soa/model/property/type" 
+           xmlns:tns="http://systinet.com/2005/05/soa/model/property/type" 
+           xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           elementFormDefault="qualified">
+
+  <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="../../helpers/xml.xsd"/>
+
+    <xs:simpleType name="uuidPropertyType">
+      	<xs:restriction base="xs:string">
+        	<xs:length value="36"/>
+      	</xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="nameUuidPairPropertyType">
+       <xs:attribute name="name" type="xs:string" use="optional"/>
+       <xs:attribute name="uuid" type="tns:uuidPropertyType" use="required">
+	   <xs:annotation xmlns:rdb="http://systinet.com/2006/08/soa/model/rdbmapping">
+						<xs:appinfo>
+							<rdb:type name="string(36)"/>
+						</xs:appinfo>
+					</xs:annotation>
+		</xs:attribute>
+    </xs:complexType>
+
+</xs:schema>

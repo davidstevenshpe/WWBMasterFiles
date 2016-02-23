@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><taxonomy xmlns="http://systinet.com/uddi/taxonomy/v3/5.5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:r="http://systinet.com/2005/05/repository" xmlns:a="http://systinet.com/2005/05/soa/model/artifact" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:rest="http://systinet.com/2005/05/soa/resource" xmlns:pt="http://systinet.com/2005/05/soa/model/property/type" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:p="http://systinet.com/2005/05/soa/model/property" xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup" check="true">
+  <tModel xmlns="http://systinet.com/uddi/taxonomy/v3/5.0" deleted="false" tModelKey="uddi:systinet.com:soa:policymgr:taxonomies:Assertion:Classification:Taxonomy">
+    <name xmlns="urn:uddi-org:api_v3">Assertion Classification Taxonomy</name>
+    <categoryBag xmlns="urn:uddi-org:api_v3">
+      <keyedReference keyName="Checked value set" keyValue="checked" tModelKey="uddi:uddi.org:categorization:types"/>
+    </categoryBag>
+  </tModel>
+  <categorizationBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <categorization>categorization</categorization>
+  </categorizationBag>
+  <validation xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <categories>
+      <category keyName="WS-I Basic Profile" keyValue="uddi:systinet.com:soa:policymgr:taxonomies:Assertion:Classification:WS-I:BasicProfile"/>
+      <category keyName="UDDI" keyValue="uddi:systinet.com:soa:policymgr:taxonomies:Assertion:Classification:SystinetBestPractices:UDDI"/>
+      <category keyName="Interface and Schema" keyValue="uddi:systinet.com:soa:policymgr:taxonomies:Assertion:Classification:SystinetBestPractices:InterfaceAndSchema"/>
+      <category keyName="SOAP Message" keyValue="uddi:systinet.com:soa:policymgr:taxonomies:Assertion:Classification:SystinetBestPractices:SOAPMessage"/>
+      <category keyName="Service Catalog" keyValue="uddi:systinet.com:soa:policymgr:taxonomies:Assertion:Classification:SystinetBestPractices:ServiceCatalog"/>
+      <category keyName="Service Test Management" keyValue="uddi:systinet.com:soa:policymgr:taxonomies:Assertion:Classification:ServiceTestManagement"/>
+    </categories>
+  </validation>
+</taxonomy>

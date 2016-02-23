@@ -1,0 +1,78 @@
+/*
+ *********      SURVEY SAMPLE        ************
+ **
+ ** Survey STRUCTURE:
+ **
+ **   predefinitions: type, value
+ **   processing: mapping properties of scores
+ **   steps: each step will have 1-many questions
+ **
+ **
+ ** Question TYPES:
+ **
+ **   'single-choice' : radio buttons with default values: { 'Yes' : true, 'No' : false, 'Don\'t know': undefined }
+ **   'multi-choices': checkboxes
+ **   'textarea': textarea for multi-line text input
+ **   'text'
+ **   'number'
+ **   'taxonomy' : combobox, will update the selected value to mapped property of Artifact base on question[@type = 'taxonomy'].mapping
+ **   'relationship' : linked artifacts of Artifact base on the relationship and the specified useType
+ **
+ ** Question MAPPING:
+ **   An answer of question can be mapped to artifact property value
+ **
+ ** Question DEPENDENCY (Conditional Questions)
+ ** A question can be defined as dependent on other questions as below
+ **   doNotAnswerWhen: [{questionID:'id1', values:['false']}, {questionID:'id2', values:['yes']}]
+ ** Question dependency is applicable to single-choice and taxonomy questions only
+ ** 
+ ** Default VALUES:
+ **
+ **   predefinedType: if question has no type, it will use the default
+ **   predefinedValues: predefined option values of default type
+ **
+ ** SCORES:
+ **   question[@type='score']: each question which type is score will have 1-many type of scores: technical score, financial score,...
+ **   Each type score, 1 of 4 ways calculation can be set: { 'avg' : average score, 'min' : minimum score, 'max': maximum score, 'first': first answer }
+ **   avg is default
+ **
+ ** COLOR PATTERNS:
+ **
+ **   You can custom background/buttons by predefined theme values: 'primary'(default), 'success', 'info', 'mint', 'purple', 'pink', 'dark', 'warning', 'danger'
+ **   Theme: blue(default): #5fa2dd, green: #9cc96b, purple: #986291, orange: #ebaa4b, red: #f76c51, jade green: #4ebcda
+ **   Icons: cloud, user, info, home, heart, gift, signal, gear, file, trash, clock-o, road, lock, inbox, flag, tags, list
+ ** or all the icons which defined in font awesome. See more:  http://fortawesome.github.io/Font-Awesome/icons/
+ */
+{
+    icon: 'info',
+    processing: {
+        scores: []
+    },
+
+    onCompletion: function(surveyedArtifact, questions, calculatedScores) {
+
+    },
+
+    steps: [{
+        name: 'Fill-in application deployments',
+        description: 'You have been asked to fill-in information about deployments of the application.',
+        icon: 'list',
+        background: '#ebaa4b',
+        questions: [{
+            question: 'Download the spreadsheet template from the following link, fill it in and use the same page to upload the result into Enterprise Maps',
+            id: 'downloadSpreadsheetAppDeployment',
+		    type: 'button',
+		    extraParams: {
+		        label: 'Import application deployments',
+		        icon: 'arrow-right',
+		        url: 'SERVER_URI/../../../service-catalog/common/imports/csvImport?taskLabel=Spreadsheet&artifactType=infrastructureServiceArtifact',
+		        click: '$("#done-button").trigger("click")'
+		    }
+        }]
+    }, {
+        name: 'Finish',
+        description: 'Thank you for participating in this survey',
+        icon: 'check',
+        background: '#4ebcda'
+    }]
+}

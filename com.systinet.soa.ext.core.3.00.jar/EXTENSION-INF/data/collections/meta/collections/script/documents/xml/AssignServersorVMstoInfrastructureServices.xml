@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/script/AssignServersorVMstoInfrastructureServices</r:path>
+   <r:collection>/script/</r:collection>
+   <r:binary>true</r:binary>
+   <r:contentType>text/javascript</r:contentType>
+   <r:owner>admin</r:owner>
+   <r:uuid>00a7ed8a-b92e-4ae0-9cea-2edd733df54c</r:uuid>
+   <r:domainId>topLevelDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>76931906</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2015-07-02T07:11:04.427Z</r:timestamp>
+      <r:creator>systinet:admin</r:creator>
+      <r:lastDataRevision>1</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:surveyDefinitionArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                                 xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                                 xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                                 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                                 xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                                 xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                 deleted="0"
+                                 xlink:href="script/00a7ed8a-b92e-4ae0-9cea-2edd733df54c">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="System"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:system"/>
+               <p:artifactType name="Managed script"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:system:script"/>
+               <p:artifactType name="Survey Script "
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:platform:artifacts:surveyDefinitionArtifact"/>
+            </g:artifactTypeGroup>
+            <g:nameGroup>
+               <p:name>Assign Servers/VMs to Infrastructure Services</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup>
+               <p:description>Assign Servers/VMs to Infrastructure Services</p:description>
+            </g:descriptionGroup>
+            <p:revision>1</p:revision>
+            <g:keywordGroup/>
+            <p:location>/scripts/AssignServersorVMstoInfrastructureServices</p:location>
+            <p:isCached>0</p:isCached>
+            <p:checksum>76931906</p:checksum>
+            <p:dataLength>10543</p:dataLength>
+            <p:contentType>text/javascript</p:contentType>
+			<p:artifactSelectionCustomizationID>infrastructureServiceArtifact</p:artifactSelectionCustomizationID>
+            <g:applicableToArtifactGroup>
+               <p:applicableToArtifact name="Infrastructure Service"
+                                       taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                                       value="urn:com:archimate:technologyLayer:artifacts:infrastructureServiceArtifact"/>
+            </g:applicableToArtifactGroup>
+            <g:targetContactRoleGroup>
+                <p:targetContactRole name="Administrator" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:jobRoles" value="administrator"/>
+                <p:targetContactRole name="Subject Matter Expert / Architect" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:jobRoles" value="architect"/>
+                <p:targetContactRole name="Business Owner" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:jobRoles" value="businessExpert"/>
+                <p:targetContactRole name="Developer" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:jobRoles" value="developer"/>
+                <p:targetContactRole name="Operations Manager" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:jobRoles" value="operationsManager"/>
+                <p:targetContactRole name="Project Manager" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:jobRoles" value="projectManager"/>
+                <p:targetContactRole name="Provider" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:jobRoles" value="provider"/>
+                <p:targetContactRole name="Technical Owner" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:jobRoles" value="technicalSupport"/>
+            </g:targetContactRoleGroup>
+            <p:r_scriptLanguage name="Javascript"
+                                taxonomyUri="uddi:com.systinet.soa:model:taxonomies:scriptLanguage"
+                                value="Javascript"/>
+            <p:r_scriptExecuteOn name="Survey"
+                                 taxonomyUri="uddi:com.systinet.soa:model:taxonomies:scriptExecuteOn"
+                                 value="survey"/>
+         </a:surveyDefinitionArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

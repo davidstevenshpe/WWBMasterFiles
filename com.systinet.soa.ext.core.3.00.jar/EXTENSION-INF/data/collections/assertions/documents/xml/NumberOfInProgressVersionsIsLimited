@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><pm:Assertion xmlns:pm="http://systinet.com/2005/10/soa/policy" xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup" xmlns:r="http://systinet.com/2005/05/repository" xmlns:p="http://systinet.com/2005/05/soa/model/property" xmlns:a="http://systinet.com/2005/05/soa/model/artifact" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:pt="http://systinet.com/2005/05/soa/model/property/type" xmlns:rest="http://systinet.com/2005/05/soa/resource" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<pm:Template>
+<p0:NumberOfInProgressVersionsIsLimited xmlns:p0="urn:localhost:com:enter-your-organization-or-project-specific-namespace" ignoredStages="Retired,Obsolete,Closed,Cancelled,Deprecated" maxInProgressVersions="1"/></pm:Template>
+<pm:Parameter xmlns:p1="http://www.w3.org/2001/XMLSchema" Name="maxInProgressVersions" Optional="false" Type="p1:integer" XPointer="xpointer(@maxInProgressVersions)">
+<pm:Description>It is maximum number of in progress versions</pm:Description></pm:Parameter>
+<pm:Parameter xmlns:p1="http://www.w3.org/2001/XMLSchema" Name="ignoredStages" Optional="false" Type="p1:string" XPointer="xpointer(@ignoredStages)">
+<pm:Description>This parameter is effectively used to enumerate the stage names that do not indicate any expected future progress.</pm:Description>
+</pm:Parameter>
+<pm:Validation>
+<JavaScriptValidator xmlns="http://systinet.com/2005/10/soa/policy/validation" xmlns:xlink="http://www.w3.org/1999/xlink/">/**
+ * This function is called iteratively by the java script validator,
+ * There are some java script objects pre-initialized in the scripting context (e.g. repositoryService ...)  
+ * You can find others and configure more in the managed script environment.js
+ *
+ * @param  resource
+ *         an external resource or an artifact
+ *
+ * @param  params
+ *         a map of params
+ */
+function validate(resource, params) {
+    var artifact = resource;
+	repositoryService.fetchArtifactProperties(artifact, ArtifactPartSelector.ALL_PROPERTIES);
+	var maximumNumberOfVersion = params.get("maxInProgressVersions");
+	var ignoredStages = params.get("ignoredStages");
+	var parsedIgnoredStages = ignoredStages.split(",");
+	var versioningUIApi = beanFactoryHelper.getBean(Packages.com.hp.systinet.sc.ui.impl.versioning.VersioningUIApi);
+	var verMatrix = null;
+	try {
+		verMatrix = versioningUIApi.getMatrix(artifact);
+	}
+	catch (exception) {
+		return new JsValidationResult(JsValidationCode.NOT_APPLICABLE);
+	}
+	var result = new Array();
+	for (var row=0; row&lt;verMatrix.length; row++) {
+		for (var col=0; col&lt;verMatrix[row].length; col++) {
+			var version = verMatrix[row][col].getVersion();
+			if (version != null &amp;&amp; version != "") {
+				result.push(verMatrix[row][col].getArtifactBase().get_uuid());
+			}
+		}
+	}
+	var countArtifacts = 0;
+	var versionsList = new Array();
+	for (var row=0; row&lt;result.length; row++) {
+		var artifactUuid = result[row];
+		var art = repositoryService.getArtifact(UUID.toUuid(java.lang.String.valueOf(artifactUuid)));
+		var aldFactory = beanFactoryHelper.getBean(Packages.com.hp.systinet.lifecycle.ui.common.ArtifactLifecycleDataFactory);
+		var lfeData = aldFactory.create(art.get_uuid());
+		var process = lfeData.getGovernanceProcess();
+		var goalStage = null;
+		repositoryService.fetchArtifactProperties(art, ArtifactPartSelector.ALL_PROPERTIES);
+		versionsList.push("version " + art.getStringProperty("version"));
+		if (process != null) {
+			goalStage = process.getProcessDefaultState();
+		}
+		var targetStageName = null;
+		if (goalStage != null) {
+			targetStageName = goalStage.getState().getName();
+		}
+		var govRec = lfeData.getGovernanceRecord();
+		var lastApprovedStageName = null;
+		if (govRec != null &amp;&amp; govRec.getLastApprovedState() != null) {
+			lastApprovedStageName = govRec.getLastApprovedState().getName();
+		}
+		if (targetStageName != null &amp;&amp; lastApprovedStageName != null &amp;&amp; targetStageName != lastApprovedStageName) {
+			var isIgnored = false;
+			for (var stage=0; stage&lt;parsedIgnoredStages.length; stage++) {
+				if (lastApprovedStageName == parsedIgnoredStages[stage]) {
+					isIgnored = true;
+					break;
+				}
+			}
+			if (!isIgnored) {
+				countArtifacts++;
+			}
+			
+		}
+	}
+	if (countArtifacts &lt;= maximumNumberOfVersion) {
+		return new JsValidationResult(JsValidationCode.OK);
+	}
+	else {
+		var errorMessage = "";
+		if (versionsList != null &amp;&amp; versionsList.length &gt; 1) {
+			errorMessage = errorMessage +"There are '" + versionsList.toString() + "' versions in progress";
+		}
+		else {
+			errorMessage = errorMessage +"There is '" + versionsList.toString() + "' version in progress";
+		}
+		if (maximumNumberOfVersion &gt; 1) {
+			errorMessage = errorMessage + ", be at most "+ maximumNumberOfVersion.toString() +" versions are permitted."
+		}
+		else {
+			errorMessage = errorMessage + ", be at most "+ maximumNumberOfVersion.toString() +" version is permitted."
+		}
+		
+		return new JsValidationResult(JsValidationCode.FAILED, errorMessage);
+		
+	}
+}
+</JavaScriptValidator></pm:Validation></pm:Assertion>

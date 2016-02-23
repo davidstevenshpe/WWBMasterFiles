@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsp:Policy xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+    <a:HasDocumentation artifactType="urn:com:systinet:soa:model:artifacts" documentType="D6" xmlns:a="http://systinet.com/assertions" xmlns:pm="http://systinet.com/2005/10/soa/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+</wsp:Policy>

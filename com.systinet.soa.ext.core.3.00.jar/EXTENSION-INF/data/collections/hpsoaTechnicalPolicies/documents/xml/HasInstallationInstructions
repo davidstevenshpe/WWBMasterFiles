@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsp:Policy xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:a="http://systinet.com/assertions">
+    <a:HasDocumentation artifactType="urn:com:archimate:businessLayer:artifacts:businessService" documentType="D3"/>
+</wsp:Policy>

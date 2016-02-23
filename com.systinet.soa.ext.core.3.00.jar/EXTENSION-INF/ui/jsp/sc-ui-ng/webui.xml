@@ -1,0 +1,1213 @@
+<config name="ui-sc-components.sc-ui" savingPeriod="5000">
+    <webFramework>
+
+        <!-- API Components Start -->
+        <task uri="/common/advancedSearch" component="/core/search/advancedSearch" />
+        <task uri="/common/advancedSearchFulltext" component="/core/search/advancedSearchFulltext" />
+        <task uri="/common/defaultSearch" component="/core/search/defaultSearch" />
+
+        <task uri="/common/browseArtifact" component="/core/browse/browseArtifact" />
+        <task uri="/common/editArtifact" component="/core/artifact/editArtifact" />
+        <task uri="/common/favorites" component="/core/favorites/manageFavorites" />
+        <task uri="/common/newArtifact" component="/core/artifact/newArtifact"  />
+        <task uri="/common/recycleBin" component="/core/artifact/recycleBin"  />
+        <task uri="/common/csvExport" component="/core/impl/export/csvExport"  style=""/>
+
+        <component name="/core/customization/customizableComponent" page="core/customization/customizableComponent.jsp" className="com.hp.systinet.sc.ui.customization.CustomizableComponent"/>
+
+        <!-- New, View, Edit Artifact Pages -->
+        <component name="/core/artifact/editArtifact" page="core/artifact/editArtifact.jsp" className="com.hp.systinet.sc.ui.artifact.EditArtifactComponent"/>
+        <component name="/core/artifact/newArtifact" page="core/artifact/newArtifact.jsp" className="com.hp.systinet.sc.ui.artifact.NewArtifactComponent"/>
+        <component name="/core/artifact/viewArtifact" page="core/artifact/viewArtifact.jsp" className="com.hp.systinet.sc.ui.artifact.ViewArtifactComponent"/>
+        <component name="/core/artifact/typeSelection" page="/core/artifact/typeSelection.jsp" className="com.hp.systinet.sc.ui.artifact.TypeSelectionComponent"/>
+        
+        <!-- New shortcut artifact link -->
+        <task uri="/common/newShortcutArtifactLink" component="/core/artifact/newShortcutArtifactLink"  />
+        <component name="/core/artifact/newShortcutArtifactLink" page="core/relations/newShortcutArtifactLink.jsp" className="com.hp.systinet.sc.ui.layout.NewShortcutArtifactComponentLink"/>
+        <task uri="/catalog/newShortcutArtifact" component="/core/artifact/newShortcutArtifact"  />
+        <component name="/core/artifact/newShortcutArtifact" page="core/artifact/newArtifact.jsp" className="com.hp.systinet.sc.ui.layout.NewShortcutArtifactComponent"/>
+
+        <!-- Domain Selector Common Pages -->
+        <component name="/core/domain/domainSelector" page="core/domain/domainSelector.jsp" className="com.hp.systinet.sc.ui.domain.DomainSelectorComponent"/>
+        <component name="/core/domain/domainSelectorWindow" page="core/domain/domainSelectorWindow.jsp" className="com.hp.systinet.sc.ui.domain.DomainSelectorWindowComponent"/>
+
+        <!-- Tabs -->
+        <component name="/core/layout/tabsInternal" page="core/layout/genericTabs.jsp" className="com.hp.systinet.sc.ui.layout.GenericTabsComponent" />
+        <component name="/core/layout/tabs" page="core/customization/customizableComponent.jsp" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizedComponent" paramValue="/core/layout/tabsInternal"/>
+        </component>
+        <component name="/content/layout/tabs" page="core/customization/customizableComponent.jsp" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizedComponent" paramValue="/content/layout/tabsInternal"/>
+        </component>
+        <component name="/core/artifact/artifactTabsInternal" page="core/layout/genericTabs.jsp" className="com.hp.systinet.sc.ui.artifact.ArtifactTabsComponent" />
+        <component name="/core/artifact/artifactTabs" page="core/customization/customizableComponent.jsp" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizedComponent" paramValue="/core/artifact/artifactTabsInternal"/>
+        </component>
+
+        <!-- Browse Pages -->
+        <component name="/core/browse/browseArtifact" page="/core/browse/browseArtifact.jsp" className="com.hp.systinet.sc.ui.browse.BrowseArtifactComponent"/>
+        <component name="/core/browse/browseArtifactCriteria" page="core/customization/customizableComponent.jsp" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizedComponent" paramValue="/core/browse/browseArtifactCriteriaInternal"/>
+        </component>
+        <component name="/core/browse/browseArtifactCriteriaInternal" page="core/browse/browseArtifactCriteria.jsp" className="com.hp.systinet.sc.ui.search.SearchCriteriaComponent"/>
+        <component name="/core/browse/addNew" page="/core/relations/addNew.jsp" className="com.hp.systinet.sc.ui.browse.AddNew" />
+		<component name="/core/browse/manageSurveyDefinition" page="/core/relations/manageSurveyDefinition.jsp" className="com.hp.systinet.sc.ui.browse.ManageSurveyDefinition" />
+		
+        <!-- Contacts, Provider -->
+        <component name="/core/contact/provider" page="core/contact/provider.jsp" className="com.hp.systinet.sc.ui.contact.ProviderComponent"/>
+
+        <!-- Context Actions -->
+        <component name="/core/contextActions/deleteArtifact" page="core/contextActions/deleteArtifact.jsp" className="com.hp.systinet.sc.ui.contextactions.DeleteArtifact"/>
+        <component name="/core/contextActions/editArtifact" page="core/contextActions/editArtifact.jsp" className="com.hp.systinet.sc.ui.contextactions.EditArtifact"/>
+        <component name="/core/contextActions/undeleteArtifact" page="core/contextActions/undeleteArtifact.jsp" className="com.hp.systinet.sc.ui.contextactions.UndeleteArtifact" />
+        <component name="/core/contextActions/purgeArtifact" page="core/contextActions/purgeArtifact.jsp" className="com.hp.systinet.sc.ui.contextactions.PurgeArtifact" />
+        <component name="/core/contextActions/feeds" page="core/contextActions/feeds.jsp" className="com.hp.systinet.sc.ui.contextactions.FeedsComponent"/>
+		<component name="/core/contextActions/editSpecification" page="core/contextActions/editSpecification.jsp" className="com.hp.systinet.sc.ui.util.EditSpecificationComponent"/>
+		<component name="/core/contextActions/recalculateShortcut" page="core/contextActions/recalculateShortcut.jsp" className="com.hp.systinet.sc.ui.contextactions.RecalculateShortcutComponent"/>
+
+        <!-- Revision View - Context Actions -->
+        <component name="/core/contextActions/revertArtifactToRevision" page="/core/contextActions/revertArtifactToRevision.jsp" className="com.hp.systinet.sc.ui.contextactions.RevertArtifactToRevisionComponent"/>
+        <component name="/core/contextActions/revisionsNavigation" page="/core/contextActions/revisionsNavigation.jsp" className="com.hp.systinet.sc.ui.contextactions.RevisionsNavigationComponent"/>
+
+        <!-- User Events -->
+        <component name="/core/userevent/eventBox" page="core/wrap/wrapComponent.jsp"
+                   className="com.hp.systinet.sc.ui.wrap.WrapComponent">
+            <parameter paramName="wrappedComponent" paramValue="/core/impl/userevent/eventBox"/>
+        </component>
+        <component name="/core/contextActions/configureEventNotifications"
+                   page="/core/contextActions/configureEventNotifications.jsp"
+                   className="com.hp.systinet.sc.ui.contextactions.ConfigureEventNotifications"/>
+
+        <!-- Artifact Rating -->
+        <component name="/core/rating/rateArtifact" page="core/rating/rateArtifact.jsp"
+                   className="com.hp.systinet.sc.ui.rating.RateArtifactComponent"/>
+        <component name="/core/rating/sidebar" page="core/rating/sidebar.jsp" />
+
+		<!-- Feeds -->
+        <component name="/core/feeds/feed" page="core/feeds/feed.jsp"
+                   className="com.hp.systinet.sc.ui.feeds.FeedComponent"/>
+
+        <!-- Favorites -->
+        <component name="/core/favorites/addFavorite" page="core/favorites/addFavoriteComponent.jsp"
+                   className="com.hp.systinet.sc.ui.favorites.AddFavoriteComponent"/>
+        <component name="/core/favorites/favoriteList" page="core/favorites/favoriteListComponent.jsp"
+                   className="com.hp.systinet.sc.ui.favorites.FavoriteListComponent"/>
+        <component name="/core/favorites/manageFavorites" page="core/customization/customizableComponent.jsp" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizationId" paramValue="shared.favorites"/>
+            <parameter paramName="customizedComponent" paramValue="/core/layout/columnsInternal"/>
+            <parameter paramName="dontCustomize" paramValue="true"/>
+        </component>
+
+        <component name="/core/favorites/removeFavorites" page="/core/favorites/removeFavorites.jsp" className="com.hp.systinet.sc.ui.favorites.RemoveFavoritesComponent" />
+
+        <component name="/core/groupMembership" page="/core/groupMembership.jsp" className="com.hp.systinet.sc.ui.GroupMembershipComponent" />
+
+        <!-- Layout -->
+        <component name="/core/layout/artifactDetail" page="core/layout/artifactDetail.jsp" className="com.hp.systinet.sc.ui.layout.ArtifactDetailComponent"/>
+        <component name="/core/layout/columns" page="core/customization/customizableComponent.jsp" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizedComponent" paramValue="/core/layout/columnsInternal"/>
+        </component>
+        <component name="/core/layout/columnsInternal" page="core/layout/columnsComponent.jsp" className="com.hp.systinet.sc.ui.layout.ColumnsComponent"/>
+        <component name="/core/layout/contextActionsInternal" page="core/layout/contextActionsComponent.jsp" className="com.hp.systinet.sc.ui.layout.ContextActionsComponent"/>
+        <component name="/core/layout/contextActions" page="core/customization/customizableComponent.jsp" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizedComponent" paramValue="/core/layout/contextActionsInternal"/>
+            <parameter paramName="rendersCustomizeLinks" paramValue="true"/>
+        </component>
+        <component name="/core/layout/header" page="core/layout/header.jsp" className="com.hp.systinet.sc.ui.layout.HeaderComponent" />
+
+        <!-- Relations -->
+        <component name="/core/relations/addNew" page="/core/relations/addNew.jsp" className="com.hp.systinet.sc.ui.relations.AddNew" />
+        <component name="/core/relations/addRelation" page="/core/relations/addRelation.jsp" className="com.hp.systinet.sc.ui.relations.AddRelation" />
+        <component name="/core/relations/genericRelationshipComponent" page="/core/relations/genericRelationshipComponent.jsp" className="com.hp.systinet.sc.ui.relations.GenericRelationshipComponent" />
+        <component name="/core/relations/removeRelation" page="/core/relations/removeRelation.jsp" className="com.hp.systinet.sc.ui.relations.RemoveRelation" />
+        <component name="/core/impl/relations/removeRelationWindow" page="/core/impl/relations/removeRelationWindow.jsp" />
+
+		<component name="/core/layout/completionStatus" page="/core/layout/completionStatus.jsp" className="com.hp.systinet.sc.ui.layout.CompletionStatusComponent" />
+		
+		<!-- relation for ExtJS4 component -->
+		<component name="/core/relations/selectArtifacts" page="/core/relations/selectArtifacts.jsp" className="com.hp.systinet.sc.ui.relations.ArtifactSelection" />
+		<component name="/core/relations/deliverableRealizes" page="/core/relations/deliverableRealizes.jsp" className="com.hp.systinet.sc.ui.relations.DeliverableRealizesRelation" />
+
+        <!-- Search -->
+        <component name="/core/search/advancedSearch" page="/core/search/advancedSearch.jsp" className="com.hp.systinet.sc.ui.search.AdvancedSearchComponent"/>
+        <component name="/core/search/advancedSearchFulltext" page="/core/search/advancedSearchFulltext.jsp" className="com.hp.systinet.sc.ui.search.AdvancedSearchFulltextComponent"/>
+
+        <component name="/core/search/homepageSearch" page="/core/search/homepageSearch.jsp" className="com.hp.systinet.sc.ui.search.HomepageSearchComponent"/>
+
+        <component name="/core/search/searchCriteria" page="core/customization/customizableComponent.jsp" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizedComponent" paramValue="/core/search/searchCriteriaInternal"/>
+        </component>
+        <component name="/core/search/searchCriteriaInternal" page="core/search/searchCriteria.jsp" className="com.hp.systinet.sc.ui.search.SearchCriteriaComponent"/>
+
+        <component name="/core/search/popupSearchCriteria" page="core/customization/customizableComponent.jsp" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizedComponent" paramValue="/core/search/popupSearchCriteriaInternal"/>
+        </component>
+        <component name="/core/search/popupSearchCriteriaInternal" page="core/search/popupSearchCriteria.jsp" className="com.hp.systinet.sc.ui.search.SearchCriteriaComponent"/>
+
+        <component name="/core/search/searchCriteriaFulltext" page="core/customization/customizableComponent.jsp" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizedComponent" paramValue="/core/search/searchCriteriaFulltextInternal"/>
+        </component>
+        <component name="/core/search/searchCriteriaFulltextInternal" page="core/search/searchCriteriaFulltext.jsp" className="com.hp.systinet.sc.ui.search.SearchCriteriaFulltextComponent"/>
+
+        <component name="/core/search/searchQueryList" page="core/customization/customizableComponent.jsp" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizedComponent" paramValue="/core/search/searchQueryListComponent"/>
+        </component>
+        <component name="/core/search/searchQueryListComponent" page="core/search/searchQueryList.jsp" className="com.hp.systinet.sc.ui.search.SearchQueryListComponent"/>
+        <component name="/core/search/util/searchEditor"
+                   className="com.hp.systinet.sc.ui.search.util.SearchEditorComponent"
+                   page="core/search/util/searchEditor.jsp"/>
+        <component name="/core/search/util/searchViewer"
+                   className="com.hp.systinet.sc.ui.search.util.SearchViewerComponent"
+                   page="core/search/util/searchViewer.jsp"/>
+		<component name="/core/search/defaultSearch"
+				   className="com.hp.systinet.sc.ui.search.DefaultSearchComponent"
+				   page="/core/search/defaultSearch.jsp"/>
+		<component name="/core/search/nameQuote" page="/core/search/nameQuote.jsp" className="com.hp.systinet.sc.ui.search.NameQuoteComponent"/>
+		<component name="/core/search/descriptionQuote" page="/core/search/descriptionQuote.jsp" className="com.hp.systinet.sc.ui.search.DescriptionQuoteComponent"/>
+		<component name="/core/search/navigatorLink" page="/core/search/navigatorLink.jsp" className="com.hp.systinet.sc.ui.search.NavigatorLinkComponent"/>
+
+        <!-- Suggested Search -->
+        <component name="/core/search/suggestedSearch" page="core/customization/customizableComponent.jsp" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizedComponent" paramValue="/core/search/suggestedSearchInternal"/>
+        </component>
+        <component name="/core/search/suggestedSearchInternal" page="/core/search/suggestedSearch.jsp" className="com.hp.systinet.sc.ui.search.SuggestedSearchComponent"/>
+        <component name="/core/impl/search/suggestedSearchData" page="/core/impl/search/suggestedSearchData.jsp" className="com.hp.systinet.sc.ui.impl.search.SuggestedSearchDataComponent"/>
+
+        <!-- Keywords Suggested Search -->
+        <component name="/core/search/keywordsSuggestedSearch" page="/core/search/keywordsSuggestedSearch.jsp" className="com.hp.systinet.sc.ui.search.KeywordsSuggestedSearchComponent" />
+
+        <!-- Table -->
+        <component name="/core/table" page="core/customization/customizableComponent.jsp" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizedComponent" paramValue="/core/table/tableInternal"/>
+        </component>
+        <component name="/core/table/tableInternal" page="core/table/tableComponent.jsp" className="com.hp.systinet.sc.ui.table.TableComponent"/>
+
+        <component name="/core/text/editableRichTextArea" page="/core/text/editableRichTextArea.jsp" className="com.hp.systinet.sc.ui.text.EditableRichTextArea"/>
+        <component name="/core/text/editableRichTextWindow" page="/core/text/editableRichTextWindow.jsp" className="com.hp.systinet.sc.ui.text.EditableRichTextArea"/>
+        <component name="/detail/editArtifactProperties" page="core/customization/customizableComponent.jsp" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizedComponent" paramValue="/core/layout/artifactDetail"/>
+            <parameter paramName="mode" paramValue="edit"/>
+        </component>
+
+        <component name="/detail/viewArtifactProperties" page="core/customization/customizableComponent.jsp" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizedComponent" paramValue="/core/layout/artifactDetail"/>
+            <parameter paramName="mode" paramValue="view"/>
+        </component>
+
+        <component name="/core/task/scheduleTaskWindow" page="core/task/scheduleTaskWindow.jsp" className="com.hp.systinet.sc.ui.task.ScheduleTaskWindow"/>
+        <component name="/core/impl/task/scheduleTaskWindowContent" page="core/impl/task/scheduleTaskWindowContent.jsp" className="com.hp.systinet.sc.ui.impl.task.ScheduleTaskWindowContent"/>
+
+        <!-- API Components End -->
+
+        <!-- IMPL Components Start -->
+
+        <task uri="/common/manageCustomizations" component="/core/impl/customization/manageCustomizations" >
+            <parameter paramName="captionKey" paramValue="com.hp.systinet.sc.ui.util.uimessages$MANAGE_CUSTOMIZATIONS_TASK_CAPTION"/>
+        </task>
+        <task uri="/common/downloadCustomizations" component="/core/impl/customization/downloadCustomizations" style="" contentType="application/zip"/>
+        <task uri="/common/artifactNotAvailable" component="/core/impl/artifact/artifactNotAvailable" />
+        <task uri="/common/artifactNotFound" component="/core/impl/artifact/artifactNotFound" />
+        <task uri="/common/artifactDeleted" component="/core/impl/artifact/artifactDeleted" />
+        <task uri="/common/viewArtifact" component="/core/artifact/viewArtifact" />
+        <!-- TODO REVIEW (Johnny, 02/09/2009) Is this used somewhere? I was not able to find it anywhere. -->
+        <task uri="/core/tree/table/renderJsonTree" component="/core/impl/tree/table/renderJsonRootNode" style="wrapless" />
+        <task uri="/common/userevent/eventBrowser" component="/core/impl/userevent/eventBrowser" />
+
+        <!-- View Artifact Failures -->
+        <component name="/core/impl/artifact/artifactDeleted" page="core/impl/artifact/artifactDeleted.jsp" className="com.hp.systinet.sc.ui.impl.artifact.ArtifactDeleted"/>
+        <component name="/core/impl/artifact/artifactNotAvailable" page="core/impl/artifact/artifactNotAvailable.jsp" className="com.hp.systinet.sc.ui.impl.artifact.ArtifactNotAvailable"/>
+        <component name="/core/impl/artifact/artifactNotFound" page="core/impl/artifact/artifactNotFound.jsp" className="com.hp.systinet.sc.ui.impl.artifact.ArtifactNotFound"/>
+
+        <!-- Breadcrumbs -->
+        <component name="/core/impl/breadcrumbs" page="core/impl/breadcrumbs/breadcrumbs.jsp" className="com.hp.systinet.sc.ui.impl.breadcrumbs.Breadcrumbs" />
+
+        <!-- Customization Editor -->
+        <component name="/core/impl/customization/customizableWebUiEditor" page="core/impl/customization/customizableWebUiEditor.jsp" className="com.hp.systinet.sc.ui.impl.customization.CustomizableWebUiEditor"/>
+        <component name="/core/impl/customization/downloadCustomizations" className="com.hp.systinet.sc.ui.impl.customization.DownloadCustomizations"/>
+        <component name="/core/impl/customization/manageCustomizations" page="core/impl/customization/manageCustomizations.jsp" className="com.hp.systinet.sc.ui.impl.customization.ManageCustomizations"/>
+        <component name="/core/impl/customization/customizationActions" page="core/impl/customization/customizationActions.jsp" className="com.hp.systinet.sc.ui.impl.customization.CustomizationActions"/>
+
+        <!-- obsolete -->
+        <component name="/core/impl/customization/manageCustomizationsActions" page="core/impl/customization/manageCustomizationsActions.jsp" className="com.hp.systinet.sc.ui.impl.customization.ManageCustomizationsActions"/>
+
+        <!-- Customization generator -->
+        <component name="/core/impl/customization/customizationGenerator" page="core/impl/customization/customizationGenerator.jsp" className="com.hp.systinet.sc.ui.impl.customization.generator.CustomizationGeneratorComponent"/>
+
+        <!-- Editors -->
+        <component name="/core/impl/customization/customizationEditor" page="core/impl/edit/popupTextEditor.jsp" className="com.hp.systinet.sc.ui.impl.customization.CustomizationTextEditor"/>
+        <!-- FIXME: johnny - using non standard Java package - NOT MOVED TO COM.HP.SYSTINET.SC.UI.IMPL -->
+        <component name="/core/impl/edit/popupTextEditor" page="core/impl/edit/popupTextEditor.jsp" className="com.hp.systinet.sc.ui.editors.PopupTextEditor"/>
+        <component name="/core/impl/edit/richTextEditor" page="core/impl/edit/richTextEditor.jsp" className="com.hp.systinet.sc.ui.editors.RichTextEditor"/>
+
+        <!-- User Events -->
+        <component name="/core/impl/userevent/eventBox" page="core/impl/userevent/eventBox.jsp"
+                   className="com.hp.systinet.sc.ui.impl.userevent.EventBox"/>
+        <component name="/core/impl/userevent/eventConfigDialog" page="core/impl/userevent/eventConfigDialog.jsp"
+                   className="com.hp.systinet.sc.ui.impl.userevent.EventConfigDialog"/>
+        <component name="/core/impl/userevent/eventBrowser" page="core/impl/userevent/eventBrowser.jsp"
+                   className="com.hp.systinet.sc.ui.impl.userevent.EventBrowserComponent"/>
+        <component name="/core/impl/userevent/artifactEventBrowser"
+                   page="core/impl/userevent/artifactEventBrowser.jsp"
+                   className="com.hp.systinet.sc.ui.impl.userevent.ArtifactEventBrowser"/>
+        <component name="/core/impl/userevent/eventLinkRenderer" page="core/impl/userevent/eventLinkRenderer.jsp"
+                   className="com.hp.systinet.sc.ui.impl.userevent.EventLinkRenderer"/>
+        <component name="/core/impl/userevent/artifactDetailEventLinkRenderer"
+                   page="core/impl/userevent/artifactDetailEventLinkRenderer.jsp"
+                   className="com.hp.systinet.sc.ui.impl.userevent.ArtifactDetailEventLinkRenderer"/>
+        <component name="/core/impl/userevent/taskEventLinkRenderer"
+                   page="core/impl/userevent/taskEventLinkRenderer.jsp"/>
+        <component name="/core/impl/userevent/fallbackEventLinkRenderer"
+                   page="core/impl/userevent/fallbackEventLinkRenderer.jsp"/>
+        <component name="/core/impl/userevent/eventDomainsWidget" page="core/impl/userevent/eventDomainsWidget.jsp"
+                   className="com.hp.systinet.sc.ui.impl.userevent.EventDomainsWidget"/>
+        <component name="/core/impl/userevent/eventDateRenderer" page="core/impl/userevent/eventDateRenderer.jsp"
+                   className="com.hp.systinet.sc.ui.impl.userevent.EventDateRenderer"/>
+        <component name="/core/impl/widget/table/filter/string"
+                   page="core/impl/widgets/table/filter/selectManyTableFilterWidget.jsp"
+                   className="com.hp.systinet.sc.ui.impl.widgets.table.filter.StringSelectManyTableFilterWidget"/>
+        <component name="/core/impl/widget/table/filter/int"
+                   page="core/impl/widgets/table/filter/selectManyTableFilterWidget.jsp"
+                   className="com.hp.systinet.sc.ui.impl.widgets.table.filter.IntegerSelectManyTableFilterWidget"/>
+        <component name="/core/impl/widget/table/filter/stringSelectOne"
+                   page="core/impl/widgets/table/filter/selectOneTableFilterWidget.jsp"
+                   className="com.hp.systinet.sc.ui.impl.widgets.table.filter.StringSelectOneTableFilterWidget"/>
+        <component name="/core/impl/widget/table/filter/booleanSelectOne"
+                   page="core/impl/widgets/table/filter/selectOneTableFilterWidget.jsp"
+                   className="com.hp.systinet.sc.ui.impl.widgets.table.filter.BooleanSelectOneTableFilterWidget"/>
+
+        <component name="/core/impl/userevent/newEventNotification" page="core/impl/userevent/newEventNotification.jsp"
+                   className="com.hp.systinet.sc.ui.impl.userevent.NewEventNotificationComponent"/>
+
+        <component name="/core/impl/userevent/userEventFeed" page="core/impl/userevent/userEventFeed.jsp" className="com.hp.systinet.sc.ui.impl.userevent.UserEventFeedRenderer"/>
+
+        <!--  Favorites -->
+        <component name="/core/impl/favorites/favoritesTable" page="core/impl/favorites/favoritesTable.jsp" className="com.hp.systinet.sc.ui.impl.favorites.FavoritesTableComponent"/>
+
+        <!-- Layout -->
+        <component name="/core/impl/layout/newUi" page="core/impl/layout/newUiMain.jsp" className="com.hp.systinet.sc.ui.impl.layout.NewUiMain"/>
+        <component name="/core/impl/layout/newUiLayout" page="core/impl/layout/newUiLayout.jsp"/>
+        <component name="/core/impl/layout/tabs" page="core/impl/layout/tabsComponent.jsp" className="com.hp.systinet.sc.ui.impl.layout.TabsComponent" />
+        <component name="/core/impl/layout/uiMessage" page="core/impl/layout/uiMessage.jsp" />
+        <!-- Using non standard Java package - NOT MOVED TO COM.HP.SYSTINET.SC.UI.IMPL -->
+        <component name="/core/impl/layout/uiMessageRenderer" page="core/impl/layout/uiMessageRenderer.jsp" className="com.systinet.platform.ui.util.UiMessageHelper"/>
+
+        <!-- UI Messages -->
+        <component name="/core/impl/messages/messageReportProgress" page="/core/impl/messages/messageReportProgress.jsp" />
+        <component name="/core/impl/messages/messageWithTechnicalDetail" page="/core/impl/messages/messageWithTechnicalDetail.jsp" />
+
+        <!-- TODO REVIEW (Johnny, 02/09/2009) Is this used somewhere? I was not able to find it anywhere. -->
+        <component name="/core/impl/messages/messageValidationErrors" page="/core/impl/messages/messageValidationErrors.jsp" />
+
+        <!-- Relations -->
+        <component name="/core/impl/relations/addRelationWindow" page="/core/impl/relations/addRelationWindow.jsp" className="com.hp.systinet.sc.ui.impl.relations.AddRelationWindow" />
+
+        <!-- Search -->
+        <component name="/core/impl/search/sdmNameTranslator" page="/core/impl/search/sdmNameTranslator.jsp" className="com.hp.systinet.sc.ui.impl.search.SdmNameTranslatorComponent" />
+
+        <!-- Table -->
+        <component name="/core/impl/staticTable" page="core/customization/customizableComponent.jsp" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizedComponent" paramValue="/core/impl/table/staticTableInternal"/>
+        </component>
+        <component name="/core/impl/table/actions" page="core/impl/table/actionsComponent.jsp" className="com.hp.systinet.sc.ui.impl.table.ActionsComponent"/>
+        <component name="/core/impl/table/actionsItem" page="core/impl/table/actionsItem.jsp"/>
+        <component name="/core/impl/table/actionsControls" page="core/impl/table/actionsControls.jsp"/>
+        <component name="/core/impl/table/categoryFacet" page="/core/impl/table/categoryFacet.jsp" className="com.hp.systinet.sc.ui.impl.table.facets.CategoryFacetComponent"/>
+        <component name="/core/impl/table/facets" page="/core/impl/table/facets.jsp"/>
+        <component name="/core/impl/table/staticActions" page="core/impl/table/staticActionsComponent.jsp" className="com.hp.systinet.sc.ui.impl.table.ActionsComponent"/>
+        <component name="/core/impl/table/staticTableData" page="core/impl/table/staticDataComponent.jsp" className="com.hp.systinet.sc.ui.impl.table.DataComponent"/>
+        <component name="/core/impl/table/staticTableInternal" page="core/impl/table/staticTableComponent.jsp" className="com.hp.systinet.sc.ui.table.TableComponent"/>
+        <component name="/core/impl/table/tableData" page="core/impl/table/dataComponent.jsp" className="com.hp.systinet.sc.ui.impl.table.DataComponent"/>
+
+        <component name="/core/impl/table/countingComponent" page="core/impl/table/countingComponent.jsp" className="com.hp.systinet.sc.ui.impl.table.CountingComponent"/>
+
+        <component name="/core/impl/table/pagesize/viewPageSizes" page="core/impl/table/pagesize/viewPageSizes.jsp" className="com.hp.systinet.sc.ui.impl.table.pagesize.ViewPageSizesComponent"/>
+        <component name="/core/impl/table/pagesize/editPageSize" page="core/impl/table/pagesize/editPageSize.jsp"/>
+        <component name="/core/impl/table/pagesize/editPageSizeInternal" page="core/impl/table/pagesize/editPageSizeInternal.jsp" className="com.hp.systinet.sc.ui.impl.table.pagesize.EditPageSizeInternalComponent"/>
+
+        <!-- Tree Table -->
+        <component name="/core/impl/tree/table" page="core/customization/customizableComponent.jsp" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+           <parameter paramName="customizedComponent" paramValue="/core/impl/tree/tableImpl"/>
+        </component>
+        <component name="/core/impl/tree/table/renderJsonRootNode" page="core/impl/tree/renderJsonNode.jsp"/>
+        <component name="/core/impl/tree/table/renderJsonNode" page="core/impl/tree/renderJsonNode.jsp" className="com.hp.systinet.sc.ui.impl.treetable.RenderJSONNodeComponent"/>
+        <component name="/core/impl/tree/tableImpl" page="core/impl/tree/table.jsp" className="com.hp.systinet.sc.ui.impl.treetable.TreeTableComponent"/>
+
+        <!-- Utils -->
+        <component name="/core/impl/util/artifactLinkRenderer" page="core/impl/util/artifactLinkRenderer.jsp" className="com.hp.systinet.sc.ui.impl.util.ArtifactLinkRenderer"/>
+        <component name="/core/impl/util/relationshipLinkRenderer" page="core/impl/util/relationshipLinkRenderer.jsp" className="com.hp.systinet.sc.ui.impl.util.ArtifactLinkRenderer"/>
+        <component name="/core/impl/util/artifactListLinkRenderer" page="core/impl/util/artifactListLinkRenderer.jsp"/>
+        <component name="/core/impl/util/componentUserState" page="core/impl/util/componentUserState.jsp" className="com.hp.systinet.sc.ui.impl.util.ComponentUserState"/>
+        <component name="/core/impl/util/enhancedDateRenderer" page="core/impl/util/enhancedDateRenderer.jsp"/>
+        <component name="/core/impl/util/principalLinkRenderer" page="core/impl/util/principalLinkRenderer.jsp" className="com.hp.systinet.sc.ui.impl.util.PrincipalLinkRenderer"/>
+        <component name="/core/impl/util/artifactLockedMessageRenderer" page="core/impl/util/artifactLockedMessageRenderer.jsp"/>
+
+        <!-- Wizard Iterator -->
+        <component name="/core/impl/wizard" page="core/customization/customizableComponent.jsp" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+           <parameter paramName="customizedComponent" paramValue="/core/impl/wizard/wizardIterator"/>
+        </component>
+        <component name="/core/impl/wizard/wizardIterator" page="core/impl/wizard/wizardIterator.jsp" className="com.hp.systinet.sc.ui.impl.wizard.WizardIterator"/>
+
+        <!-- Progress Bar -->
+        <component name="/core/impl/widgets/progressBar" page="/core/impl/widgets/progressbar/progressBarHolder.jsp" />
+
+        <component name="/core/impl/widgets/progressBarReloader" className="com.hp.systinet.sc.ui.progressBar.ProgressBarReloader"
+                   page="/core/impl/widgets/progressbar/progressBarReloader.jsp" />
+
+        <!--  Widgets -->
+        <component name="/core/impl/widget/applicableToArtifact" page="core/impl/widgets/applicableToArtifactWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.ApplicableToArtifactWidget"/>
+        <component name="/core/impl/widget/addressWidget" page="core/impl/widgets/addressWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.AddressWidget"/>
+        <component name="/core/impl/widget/bigIntegerWidget" page="core/impl/widgets/numberWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.ConfigurableDataTypeWidget">
+            <parameter paramName="dataType" paramValue="bigInteger"/>
+        </component>
+        <component name="/core/impl/widget/booleanWidget" page="core/impl/widgets/booleanWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.ConfigurableDataTypeWidget">
+            <parameter paramName="dataType" paramValue="boolean"/>
+        </component>
+        <component name="/core/impl/widget/categoryBagWidget" page="core/impl/widgets/categoryBagWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.CategoryBagWidget"/>
+        <component name="/core/impl/widget/categoryWidget" page="core/impl/widgets/categoryWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.CategoryWidget"/>
+        <component name="/core/impl/widget/dailyIntervalWidget" page="core/impl/widgets/dailyIntervalWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.DailyIntervalWidget"/>
+        <component name="/core/impl/widget/datesView" page="core/impl/widgets/datesWidget.jsp" className="com.hp.systinet.sc.ui.impl.contract.DatesView"/>
+        <component name="/core/impl/widget/dateTimeWidget" page="core/impl/widgets/dateWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.DateWidget">
+            <parameter paramName="dataType" paramValue="dateTime"/>
+        </component>
+        <component name="/core/impl/widget/dateWidget" page="core/impl/widgets/dateWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.DateWidget">
+            <parameter paramName="hideTime" paramValue="true"/>
+            <parameter paramName="dataType" paramValue="date"/>
+        </component>
+        <component name="/core/impl/widget/descriptionWidget" page="core/impl/widgets/descriptionWidget.jsp"/>
+        <component name="/core/impl/widget/specificationWidget" page="core/impl/widgets/specificationWidget.jsp"/>
+        <component name="/core/impl/widget/doubleWidget" page="core/impl/widgets/numberWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.ConfigurableDataTypeWidget">
+            <parameter paramName="dataType" paramValue="double"/>
+        </component>
+        <component name="/core/impl/widget/currencyWidget" page="core/impl/widgets/numberWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.CurrencyWidget">
+            <parameter paramName="dataType" paramValue="double"/>
+            <parameter paramName="pattern" paramValue=",###"/>
+        </component>
+        <component name="/core/impl/widget/customDateWidget" page="core/impl/widgets/dateWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.CustomDateWidget">
+            <parameter paramName="hideTime" paramValue="true"/>
+            <parameter paramName="dataType" paramValue="date"/>
+            <parameter paramName="pattern" paramValue="MMMM yyyy"/>
+        </component>
+        <component name="/core/impl/widget/emailWidget" page="core/impl/widgets/emailWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.EmailWidget">
+            <parameter paramName="dataType" paramValue="default"/>
+        </component>
+        <component name="/core/impl/widget/enhancedDateWidget" page="core/impl/widgets/enhancedDateWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.EnhancedDateWidget"/>
+        <component name="/core/impl/widget/integerWidget" page="core/impl/widgets/numberWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.ConfigurableDataTypeWidget">
+            <parameter paramName="dataType" paramValue="int"/>
+        </component>
+        <component name="/core/impl/widget/integerRangeWidget" page="core/impl/widgets/numberWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.IntegerRangeWidget">
+            <parameter paramName="dataType" paramValue="int"/>
+        </component>
+        <component name="/core/impl/widget/doubleRangeWidget" page="core/impl/widgets/numberWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.DoubleRangeWidget">
+            <parameter paramName="dataType" paramValue="double"/>
+        </component>
+        <component name="/core/impl/widget/keywordWidget" page="core/impl/widgets/keywordWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.KeywordWidget"/>
+        <component name="/core/impl/widget/multipleRelationWidget" page="core/impl/widgets/simpleRelationWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.MultipleRelationWidget"/>
+        <component name="/core/impl/relations/emptyEditorHidingComponent" page="core/impl/relations/emptyEditorHidingComponent.jsp"/>
+        <component name="/core/impl/widget/multipleWidget" page="core/impl/widgets/multipleWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.MultipleWidget"/>
+        <component name="/core/impl/widget/nameUrlPairWidget" page="core/impl/widgets/nameUrlPairWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.ConfigurableDataTypeWidget">
+            <parameter paramName="dataType" paramValue="nameUrlPair"/>
+        </component>
+        <component name="/core/impl/widget/nameValuePairWidget" page="core/impl/widgets/nameValuePairWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.NameValuePairWidget"/>
+        <component name="/core/impl/widget/multipleTextTableWidget" page="core/impl/widgets/multipleTextTableWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.MultipleTextTableWidget"/>
+        <component name="/core/impl/widget/providerWidget" page="core/impl/widgets/simpleRelationWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.ProvidedByRelationWidget"/>
+        <component name="/core/impl/widget/richTextAreaWidget" page="core/impl/widgets/richTextAreaWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.RichTextAreaWidget">
+            <parameter paramName="dataType" paramValue="default"/>
+        </component>
+        <component name="/core/impl/widget/sdmNameToLabelWidget" page="core/impl/widgets/sdmNameToLabelWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.SdmNameToLabelWidget" />
+        <component name="/core/impl/widget/relationToLabelWidget" page="core/impl/widgets/sdmNameToLabelWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.RelationToLabelWidget" />
+        <component name="/core/impl/widget/singleRelationWidget" page="core/impl/widgets/simpleRelationWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.SingleRelationWidget"/>
+        <!-- TODO REVIEW (Johnny, 02/09/2009) Is this used somewhere? I was not able to find it anywhere. -->
+        <component name="/core/impl/widget/textAreaWidget" page="core/impl/widgets/textAreaWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.ConfigurableDataTypeWidget">
+            <parameter paramName="dataType" paramValue="default"/>
+        </component>
+        <component name="/core/impl/widget/textWidget" page="core/impl/widgets/textWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.ConfigurableDataTypeWidget">
+            <parameter paramName="dataType" paramValue="default"/>
+        </component>
+        <component name="/core/impl/widget/entityHealthCategoryWidget" page="core/impl/widgets/entityHealthRenderer.jsp" className="com.hp.systinet.sc.ui.impl.widgets.EntityHealthCategoryWidget"/>
+        <component name="/core/impl/widget/fiscalPeriodCategoryWidget" page="core/impl/widgets/categoryWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.FiscalYearCategoryWidget"/>
+        <component name="/core/impl/widget/timeCombo" page="core/impl/widgets/timeCombo.jsp" className="com.hp.systinet.sc.ui.impl.widgets.TimeComboComponent" />
+        <component name="/core/impl/widget/locationWidget" page="core/impl/widgets/locationWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.LocationWidget" />
+
+        <component name="/core/impl/versioning/widget/versionWidget" page="core/impl/versioning/widgets/versionWidget.jsp" className="com.hp.systinet.sc.ui.impl.versioning.widgets.VersionWidget" />
+        <component name="/core/impl/versioning/widget/versionWidgetContents" page="core/impl/versioning/widgets/versionWidgetContents.jsp" className="com.hp.systinet.sc.ui.impl.versioning.widgets.VersionWidgetContents" />
+
+        <component name="/core/impl/widget/applicableSourceQNameWidget" page="core/impl/widgets/applicableSourceQNameWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.ApplicableSourceQNameWidget" />
+        <component name="/core/impl/widget/domainLocationWidget" page="@/core/impl/widget/textWidget" className="com.hp.systinet.sc.ui.impl.widgets.DomainLocationWidgetComponent" />
+        <component name="/core/impl/widget/credentialUsageWidget" page="core/impl/widgets/credentialUsageWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.CredentialUsageWidget" />
+
+        <!-- Widgets for properties, which are visible only if transport is jms -->
+        <component name="/core/impl/widget/jmsCategoryWidget" page="core/impl/widgets/jmsTransportDependingWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.JmsTransportDependingWidget">
+            <parameter paramName="forWidget" paramValue="/core/impl/widget/categoryWidget"/>
+        </component>
+        <component name="/core/impl/widget/jmsIntegerWidget" page="core/impl/widgets/jmsTransportDependingWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.JmsTransportDependingWidget">
+            <parameter paramName="forWidget" paramValue="/core/impl/widget/integerWidget"/>
+            <parameter paramName="dataType" paramValue="int"/>
+        </component>
+        <component name="/core/impl/widget/jmsTextWidget" page="core/impl/widgets/jmsTransportDependingWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.JmsTransportDependingWidget">
+            <parameter paramName="forWidget" paramValue="/core/impl/widget/textWidget"/>
+            <parameter paramName="dataType" paramValue="default"/>
+        </component>
+        <component name="/core/impl/widget/jmsNameValuePairWidget" page="core/impl/widgets/jmsTransportDependingWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.JmsTransportDependingWidget">
+            <parameter paramName="forWidget" paramValue="/core/impl/widget/nameValuePairWidget"/>
+        </component>
+
+        <!-- Table Widgets -->
+        <component name="/core/impl/widget/emailTableWidget" page="core/impl/widgets/emailTableWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.MultipleTextTableWidget"/>
+        <component name="/core/impl/widget/artifactLinkWidget" page="core/impl/widgets/artifactLinkWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.ArtifactLinkWidget"/>
+        <component name="/core/impl/widget/favoriteWidget" page="core/favorites/addFavoriteComponent.jsp" className="com.hp.systinet.sc.ui.impl.widgets.FavoriteWidget"/>
+        <component name="/core/impl/widget/ratingWidget" page="core/rating/ratingWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.RatingWidget"/>
+        <component name="/core/impl/widget/governanceProcessWidget" page="core/impl/widgets/governanceProcessWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.GovernanceProcessWidget"/>
+        <component name="/core/impl/widget/lifecycleStageWidget" page="core/impl/widgets/lifecycleStageWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.LifecycleStageWidget"/>
+        <component name="/core/impl/widget/lifecycleStageWithStatusWidget" page="core/impl/widgets/lifecycleStageAndStatusWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.LifecycleStageAndStatusWidget"/>
+
+        <component name="/core/impl/widget/lifecycleStatusWidget" page="core/impl/widgets/lifecycleStatusWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.LifecycleStatusWidget"/>
+        <component name="/core/impl/widget/ownerLinkWidget" page="core/impl/util/principalLinkRenderer.jsp" className="com.hp.systinet.sc.ui.impl.widgets.OwnerLinkWidget"/>
+        <component name="/core/impl/widget/ownerNameLinkWidget" page="core/impl/util/principalLinkRenderer.jsp" className="com.hp.systinet.sc.ui.impl.widgets.OwnerNameLinkWidget"/>
+        <component name="/core/impl/widget/domainLinkWidget" page="core/impl/widgets/domainLinkWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.DomainLinkWidget"/>
+        <component name="/core/impl/widget/domainIdLinkWidget" page="core/impl/widgets/domainLinkWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.DomainLinkWidget">
+            <parameter paramName="translateToName" paramValue="true" />
+        </component>
+        <component name="/core/impl/widget/completionStatusWidget" page="core/impl/widgets/completionStatusWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.CompletionStatusWidget"/>
+		<component name="/core/impl/widget/complianceStatusWidget" page="core/impl/widgets/complianceStatusWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.ComplianceStatusWidget"/>
+
+        <!-- Search Widgets -->
+        <component name="/core/impl/widget/search/address" page="core/impl/widgets/search/addressSearchWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.search.AddressSearchWidget" />
+        <component name="/core/impl/widget/search/artifactType" page="core/impl/widgets/search/artifactTypeSearchWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.search.ArtifactTypeSearchWidget"/>
+        <component name="/core/impl/widget/search/applicableSourceQName" page="core/impl/widgets/search/applicableSourceQNameSearchWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.search.ApplicableSourceQNameSearchWidget"/>
+        <component name="/core/impl/widget/search/boolean" page="core/impl/widgets/search/booleanSearchWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.search.TypedSearchWidget">
+            <parameter paramName="dataType" paramValue="boolean" />
+        </component>
+        <component name="/core/impl/widget/search/category" page="core/impl/widgets/search/categorySearchWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.search.CategorySearchWidget" />
+        <component name="/core/impl/widget/search/categoryBag" page="core/impl/widgets/search/categoryBagSearchWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.search.CategoryBagSearchWidget"/>
+        <component name="/core/impl/widget/search/categories" page="core/impl/widgets/search/categoryBagSearchWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.search.CategoriesSearchWidget"/>
+        <!-- TODO REVIEW (Johnny, 02/09/2009) Is this used somewhere? I was not able to find it anywhere. -->
+        <component name="/core/impl/widget/search/dateTime" page="core/impl/widgets/search/typedSearchWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.search.TypedSearchWidget">
+            <parameter paramName="dataType" paramValue="dateTime"/>
+        </component>
+        <component name="/core/impl/widget/search/keywords" page="core/impl/widgets/search/keywordsSearchWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.search.KeywordsSearchWidget">
+            <parameter paramName="dataType" paramValue="keywords" />
+        </component>
+        <component name="/core/impl/widget/search/nameAndDescription" page="core/impl/widgets/search/nameAndDescSearchWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.search.NameAndDescSearchWidget"/>
+        <component name="/core/impl/widget/search/pastRange" page="core/impl/widgets/search/pastRangeSearchWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.search.PastRangeSearchWidget" />
+        <component name="/core/impl/widget/search/removeLink" page="core/impl/widgets/search/removeLink.jsp"/>
+        <component name="/core/impl/widget/search/simple" page="core/impl/widgets/search/typedSearchWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.search.TypedSearchWidget"/>
+        <component name="/core/impl/widget/search/relatedArtifact" page="core/impl/widgets/search/relatedArtifactSearchWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.search.RelatedArtifactSearchWidget"/>
+        <component name="/core/impl/widget/search/domain" page="core/impl/widgets/search/domainSearchWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.search.DomainSearchWidget"/>
+        <component name="/core/impl/widget/search/owner" page="core/impl/widgets/search/ownerSearchWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.search.OwnerSearchWidget"/>
+        <component name="/core/impl/widget/search/provider" page="core/impl/widgets/search/providerSearchWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.search.ProviderSearchWidget"/>
+        <component name="/core/impl/widget/search/date" page="core/impl/widgets/search/dateSearchWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.search.DateSearchWidget"/>
+
+        <component name="/core/impl/widget/search/widgetWrapper" page="core/impl/widgets/search/searchWidgetWrapper.jsp" className="com.hp.systinet.sc.ui.impl.widgets.search.SearchWidgetWrapperComponent"/>
+        <component name="/core/impl/widget/search/lifecycleStatus" page="core/impl/widgets/search/categorySearchWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.search.LifecycleStatusSearchWidget" />
+        <component name="/core/impl/widget/advancedSearch/lifecycleStatus" page="core/impl/widgets/search/categorySearchWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.search.LifecycleStatusAdvancedSearchWidget" />
+        <component name="/core/impl/widget/search/hasLifecycle" page="core/impl/widgets/search/booleanSearchWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.search.HasLifecycleSearchWidget" />
+        <component name="/core/impl/widget/search/governanceProcess" page="core/impl/widgets/search/governanceProcessSearchWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.search.GovernanceProcessSearchWidget"/>
+        <component name="/core/impl/widget/advancedSearch/governanceProcess" page="core/impl/widgets/search/governanceProcessSearchWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.search.GovernanceProcessAdvancedSearchWidget"/>
+		<component name="/core/impl/widget/search/classification" page="core/impl/widgets/search/classificationSearchWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.search.ClassificationSearchWidget"/>
+
+        <!-- table filter widgets -->
+        <component name="/core/impl/widget/table/filter/rating" page="core/impl/widgets/table/filter/ratingTableFilterWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.table.filter.RatingTableFilterWidget"/>
+        <component name="/core/impl/widget/table/filter/artifactType" page="core/impl/widgets/table/filter/selectManyTableFilterWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.table.filter.ArtifactTypeTableFilterWidget"/>
+        <component name="/core/impl/widget/table/filter/category" page="core/impl/widgets/table/filter/selectManyTableFilterWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.table.filter.CategoryTableFilterWidget"/>
+        <component name="/core/impl/widget/table/filter/date" page="core/impl/widgets/table/filter/dateTableFilterWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.table.filter.DateTableFilterWidget"/>
+        <component name="/core/impl/widget/table/filter/domain" page="core/impl/widgets/table/filter/selectManyTableFilterWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.table.filter.DomainTableFilterWidget"/>
+        <component name="/core/impl/widget/table/filter/lifecycleStatus" page="core/impl/widgets/table/filter/selectManyTableFilterWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.table.filter.LifecycleStatusTableFilterWidget"/>
+        <component name="/core/impl/widget/table/filter/relationType" page="core/impl/widgets/table/filter/selectManyTableFilterWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.table.filter.RelationTypeTableFilterWidget"/>
+        <component name="/core/impl/widget/table/filter/completionStatus" page="core/impl/widgets/table/filter/selectOneTableFilterWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.table.filter.CompletionStatusTableFilterWidget"/>
+        <component name="/core/impl/widget/table/filter/roleType" page="core/impl/widgets/table/filter/roleTypeTableFilterWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.table.filter.RoleTypeTableFilterWidget"/>
+        <component name="/core/impl/widget/table/filter/scope" page="core/impl/widgets/table/filter/scopeTableFilterWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.table.filter.ScopeTableFilterWidget"/>
+        <component name="/core/impl/widget/table/filter/personType" page="core/impl/widgets/table/filter/personTypeTableFilterWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.table.filter.PersonTypeTableFilterWidget"/>
+
+        <component name="/core/impl/widget/table/filter/genericExecutionReport" page="core/impl/widgets/table/filter/selectManyTableFilterWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.table.filter.GenericExecutionReportTableFilter"/>
+
+        <!-- IMPL Components End -->
+
+        <!-- Tags - NOT SORTED IN YET -->
+        <component name="/core/keywords/homepageTagCloud" page="core/keywords/homepageTagCloud.jsp"/>
+        <component name="/core/keywords/tagCloud" page="core/customization/customizableComponent.jsp" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizedComponent" paramValue="/core/keywords/tagCloudInternal"/>
+        </component>
+        <component name="/core/keywords/tagCloudInternal" page="core/keywords/tagCloud.jsp" className="com.hp.systinet.sc.ui.keywords.TagCloudComponent" />
+        <component name="/core/keywords/searchLinkRenderer" page="core/keywords/searchLinkRenderer.jsp"/>
+        <component name="/core/impl/widget/search/keywordsSearchWidgetRenderer" page="core/impl/widgets/search/keywordsSearchWidgetRenderer.jsp"/>
+
+
+        <component name="/core/keywords/keywordsDetail" page="/core/impl/keywords/keywordsDetail.jsp" className="com.hp.systinet.sc.ui.impl.keywords.KeywordsDetailComponent" />
+
+        <!-- Catalog Browser - NOT SORTED IN YET -->
+        <component name="/core/catalog/browser" page="core/customization/customizableComponent.jsp" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizedComponent" paramValue="/core/catalog/browserInternal"/>
+        </component>
+
+        <component name="/core/catalog/artifactTypeBrowser" page="core/customization/customizableComponent.jsp" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizedComponent" paramValue="/core/catalog/browserInternal"/>
+            <parameter paramName="browseLinkRenderer" paramValue="/core/impl/catalog/artifactBrowseLinkRenderer"/>
+            <parameter paramName="createLinkRenderer" paramValue="/core/impl/catalog/artifactCreateLinkRenderer"/>
+            <parameter paramName="collectionId" paramValue="artifactBrowserArtifacts"/>
+        </component>
+
+        <component name="/core/catalog/artifactInstanceBrowser" page="core/catalog/artifactInstanceBrowser.jsp" className="com.hp.systinet.sc.ui.catalog.ArtifactInstanceBrowserComponent"/>
+
+        <component name="/core/catalog/browserInternal" page="core/catalog/browserInternal.jsp" className="com.hp.systinet.sc.ui.catalog.BrowserComponent"/>
+        <component name="/core/catalog/browsePopup" page="core/catalog/browsePopup.jsp"/>
+        <component name="/core/catalog/createPopup" page="core/catalog/createPopup.jsp"/>
+
+        <component name="/core/impl/catalog/linkRenderer" page="core/impl/catalog/linkRenderer.jsp" className="com.hp.systinet.sc.ui.impl.catalog.LinkRenderer"/>
+        <component name="/core/impl/catalog/artifactBrowseLinkRenderer" page="core/impl/catalog/linkRenderer.jsp" className="com.hp.systinet.sc.ui.impl.catalog.LinkRenderer">
+            <parameter paramName="targetTask" paramValue="/common/browseArtifact"/>
+            <parameter paramName="label" paramValue="multiple"/>
+            <parameter paramName="idParamName" paramValue="artifactType"/>
+        </component>
+        <component name="/core/impl/catalog/artifactCreateLinkRenderer" page="core/impl/catalog/linkRenderer.jsp" className="com.hp.systinet.sc.ui.impl.catalog.CreateLinkRenderer">
+            <parameter paramName="targetTask" paramValue="/common/newArtifact"/>
+            <parameter paramName="label" paramValue="single"/>
+            <parameter paramName="idParamName" paramValue="artifactType"/>
+        </component>
+
+        <component name="/core/impl/catalog/artifactInstanceLinkRenderer" page="@/core/impl/catalog/linkRenderer" className="com.hp.systinet.sc.ui.impl.catalog.LinkRenderer">
+            <parameter paramName="artifactLink" paramValue="true"/>
+            <parameter paramName="label" paramValue="single"/>
+        </component>
+
+        <component name="/core/window" page="core/window.jsp" className="com.hp.systinet.sc.ui.WindowComponent" />
+        <component name="/core/tipWindow" page="core/tipWindow.jsp" className="com.hp.systinet.sc.ui.WindowComponent" />
+        <component name="/core/impl/window" page="core/impl/window.jsp" className="com.hp.systinet.sc.ui.impl.WindowComponent" />
+
+        <!-- BULK operations -->
+        <component name="/core/impl/bulk/security/owner" page="/core/impl/bulk/security/owner.jsp" className="com.hp.systinet.sc.ui.impl.bulk.security.OwnerComponent" />
+        <component name="/core/impl/bulk/security/ownerWindow" page="/core/impl/bulk/security/ownerWindow.jsp" className="com.hp.systinet.sc.ui.impl.bulk.security.OwnerWindowComponent" />
+
+        <component name="/core/impl/bulk/security/acl" page="/core/impl/bulk/security/acl.jsp" className="com.hp.systinet.sc.ui.impl.bulk.security.AclComponent" />
+        <component name="/core/impl/bulk/security/aclWindow" page="/core/impl/bulk/security/aclWindow.jsp" className="com.hp.systinet.sc.ui.impl.bulk.security.AclWindowComponent" />
+        <component name="/core/impl/bulk/security/aclTable" page="/core/impl/bulk/security/aclTable.jsp" className="com.hp.systinet.sc.ui.impl.bulk.security.AclTableComponent" />
+
+
+        <component name="/core/contextActions/changeDomain" page="/core/contextActions/changeDomain.jsp" />
+
+        <component name="/core/impl/bulk/edit/domain" page="/core/impl/bulk/edit/domain.jsp" className="com.hp.systinet.sc.ui.impl.bulk.edit.DomainComponent" />
+        <component name="/core/impl/bulk/edit/domainWindow" page="/core/impl/bulk/edit/domainWindow.jsp" />
+        <component name="/core/impl/bulk/edit/domainWindowPrincipal" page="/core/impl/bulk/edit/domainWindowPrincipal.jsp" className="com.hp.systinet.sc.ui.impl.bulk.edit.DomainWindowPrincipalComponent" />
+
+        <component name="/core/impl/bulk/delete" page="/core/impl/bulk/delete.jsp" className="com.hp.systinet.sc.ui.impl.bulk.DeleteComponent" />
+        <component name="/core/impl/bulk/deleteSingle" page="/core/impl/bulk/delete.jsp" className="com.hp.systinet.sc.ui.impl.bulk.DeleteSingleComponent" />
+        <component name="/core/impl/bulk/deleteWindow" page="/core/impl/bulk/deleteWindow.jsp" className ="com.hp.systinet.sc.ui.impl.bulk.DeleteWindowComponent"/>
+        <component name="/core/impl/bulk/referencingArtifactsList" page="/core/impl/bulk/referencingArtifactsList.jsp" />
+        <component name="/core/impl/bulk/warningWindow" page="/core/impl/bulk/warningWindow.jsp" />
+
+        <component name="/core/impl/bulk/edit/artifactProperties" page="/core/impl/bulk/edit/artifactProperties.jsp" className="com.hp.systinet.sc.ui.impl.bulk.edit.ArtifactPropertiesComponent" />
+
+        <!-- REPORT stuff -->
+        <component name="/core/report/reportStatistics" page="/core/report/reportStatistics.jsp" className="com.hp.systinet.sc.ui.report.ReportStatisticsComponent" />
+        <component name="/core/report/reportStatus" page="/core/report/reportStatus.jsp" className="com.hp.systinet.sc.ui.report.ReportStatusComponent" />
+        <component name="/core/report/reportProgress" page="/core/report/reportProgress.jsp" className="com.hp.systinet.sc.ui.report.ReportProgressComponent" />
+        <component name="/core/report/progressMessage" page="/core/report/progressMessage.jsp" className="com.hp.systinet.sc.ui.report.ProgressMessageComponent" />
+        <component name="/core/impl/reports/notifyMe" page="/core/impl/reports/notifyMe.jsp" className="com.hp.systinet.sc.ui.impl.reports.NotifyMeComponent" />
+        <component name="/core/impl/reports/stop" page="/core/impl/reports/stop.jsp" className="com.hp.systinet.sc.ui.impl.reports.StopComponent" />
+
+        <!-- PRINCIPAL SELECTOR -->
+        <component name="/core/impl/principal/selectorWindow" page="/core/impl/principal/selectorWindow.jsp" className="com.hp.systinet.sc.ui.impl.principal.SelectorWindowComponent" />
+        <component name="/core/impl/principal/selectorTable" page="/core/impl/principal/selectorTable.jsp" className="com.hp.systinet.sc.ui.impl.principal.SelectorTableComponent" />
+        <component name="/core/impl/principal/addressBook" page="/core/impl/principal/addressBook.jsp" />
+
+        <component name="/core/principal/selector" page="/core/principal/selector.jsp" className="com.hp.systinet.sc.ui.impl.principal.SelectorComponent" />
+
+        <!-- RECYCLE BIN -->
+        <component name="/core/artifact/recycleBin" page="core/customization/customizableComponent.jsp" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizationId" paramValue="shared.recycleBin"/>
+            <parameter paramName="customizedComponent" paramValue="/core/layout/columnsInternal"/>
+            <parameter paramName="dontCustomize" paramValue="true"/>
+        </component>
+
+        <component name="/core/impl/recycleBin/recycleBinTable" page="core/impl/recycleBin/recycleBinTable.jsp"/>
+        <component name="/core/impl/recycleBin/deletePermanently" page="core/impl/recycleBin/deletePermanently.jsp" className="com.hp.systinet.sc.ui.recycleBin.DeletePermanentlyComponent"/>
+        <component name="/core/impl/recycleBin/restore" page="core/impl/recycleBin/restore.jsp" className="com.hp.systinet.sc.ui.recycleBin.RestoreComponent"/>
+
+
+        <!-- BULK EDIT PROPERTIES -->
+        <component name="/core/impl/bulk/edit/properties" page="/core/impl/bulk/edit/properties.jsp" className="com.hp.systinet.sc.ui.impl.bulk.edit.PropertiesComponent" />
+        <component name="/core/impl/bulk/edit/propertiesWindow" page="/core/impl/bulk/edit/propertiesWindow.jsp" className="com.hp.systinet.sc.ui.impl.bulk.edit.PropertiesWindowComponent" />
+        <component name="/core/impl/bulk/edit/propertiesCategoriesTable" page="/core/impl/bulk/edit/propertiesCategoriesTable.jsp" className="com.hp.systinet.sc.ui.impl.bulk.edit.PropertiesCategoriesTableComponent" />
+        <component name="/core/impl/bulk/edit/propertiesKeywordsTable" page="/core/impl/bulk/edit/propertiesKeywordsTable.jsp" className="com.hp.systinet.sc.ui.impl.bulk.edit.PropertiesKeywordsTableComponent" />
+
+
+        <!-- KEYWORDS SELECTOR -->
+        <component name="/core/keywords/keywordsSelector" page="/core/impl/keywords/keywordsSelector.jsp"  className="com.hp.systinet.sc.ui.impl.keywords.KeywordsSelectorComponent" />
+        <component name="/core/keywords/keywordsSelectorInternal" page="/core/impl/keywords/keywordsSelectorInternal.jsp"/>
+
+        <!-- Artifact Selector -->
+        <component name="/core/search/selector/artifactSelector" page="core/search/selector/artifactSelector.jsp" className="com.hp.systinet.sc.ui.search.selector.ArtifactSelector"/>
+
+        <!-- Artifact Comments -->
+        <component name="/core/comments/commentsTable" page="core/comments/commentsTable.jsp"
+                   className="com.hp.systinet.sc.ui.comments.CommentsTableComponent"/>
+        <component name="/core/comments/pager" page="core/comments/pager.jsp" className="com.hp.systinet.sc.ui.comments.PagerComponent"/>
+        <component name="/core/comments/editPopup" page="core/comments/editPopup.jsp" className="com.hp.systinet.sc.ui.comments.EditPopupComponent"/>
+        <component name="/core/comments/discussionTab" page="core/comments/discussionTab.jsp"
+                   className="com.hp.systinet.sc.ui.comments.DiscussionTabComponent"/>
+        <component name="/core/comments/contextActions/commentFeedLink" page="core/comments/contextActions/commentFeedLink.jsp"
+                   className="com.hp.systinet.sc.ui.comments.contextActions.CommentFeedLinkComponent"/>
+        <component name="/core/comments/viewSwitch" page="core/comments/viewSwitch.jsp"
+                   className="com.hp.systinet.sc.ui.comments.ViewSwitchComponent"/>
+        <component name="/core/comments/contextActions/modifyActions" page="core/comments/contextActions/modifyActions.jsp"/>
+
+        <component name="/core/comments/comment" page="core/comments/comment.jsp" />
+        <component name="/core/comments/threadsPreviewTable" page="core/comments/threadsPreviewTable.jsp"
+                   className="com.hp.systinet.sc.ui.comments.ThreadsPreview"/>
+        <component name="/core/comments/commentLinkRenderer" page="core/comments/commentLinkRenderer.jsp" className="com.hp.systinet.sc.ui.comments.CommentLinkRendererComponent"/>
+        <component name="/core/comments/commentEventLinkRenderer" page="core/comments/commentEventLinkRenderer.jsp"/>
+
+        <component name="/core/impl/util/dialog" page="core/impl/util/dialog.jsp" />
+        <component name="/core/impl/util/artifactSelectorWindow" page="core/impl/util/artifactSelectorWindow.jsp" className="com.hp.systinet.sc.ui.impl.util.ArtifactSelectorWindow"/>
+        <!-- selectArtifactLink should not be used - solution with hidden column with js is not working now  -->
+        <component name="/core/impl/edit/selectArtifactLink" page="core/impl/edit/selectArtifactLink.jsp"/>
+
+        <component name="/core/report/reportRenderer"  page="core/report/reportRenderer.jsp" className="com.hp.systinet.sc.ui.report.ReportRendererComponent">
+            <parameter paramName="componentPrefix" paramValue="/reports/" />
+        </component>
+        <!-- Report Renderers -->
+        <component name="/reports/asyncBulkOperation" page="core/impl/report/asyncBulkOperation.jsp" className="com.hp.systinet.sc.impl.report.ExecutionReportComponentBase" />
+        <component name="/reports/export" page="core/impl/report/export.jsp" className="com.hp.systinet.sc.impl.report.ExecutionReportComponentBase" />
+        <component name="/reports/tasks" page="core/impl/report/tasks.jsp" className="com.hp.systinet.sc.impl.report.ExecutionReportComponentBase" />
+        <component name="/reports/import" page="core/impl/report/import.jsp" className="com.hp.systinet.sc.impl.report.ImportReportComponent" />
+        <component name="/reports/importCsv" page="core/impl/report/import.jsp" className="com.hp.systinet.sc.impl.report.ImportReportComponent">
+            <parameter paramName="unsupportUndo" paramValue="true" />
+            <parameter paramName="customizationId" paramValue="shared.viewArtifact.reportArtifact.properties.importCsvReport"/>
+        </component>
+        <component name="/reports/undoImport" page="core/impl/report/undoImport.jsp" className="com.hp.systinet.sc.impl.report.ExecutionReportComponentBase" />
+
+        <!-- Export to CSV -->
+        <component name="/core/impl/export/csvExportLink" page="core/impl/export/csv/csvExportLink.jsp" className="com.hp.systinet.sc.ui.export.csv.CsvExportLinkComponent"/>
+        <component name="/core/impl/export/csvExport" className="com.hp.systinet.sc.ui.export.csv.CsvExportComponent"/>
+
+        <!-- Menu -->
+        <component name="/core/impl/layout/newUiNoMenu" page="core/impl/layout/newUiMain.jsp" className="com.hp.systinet.sc.ui.impl.layout.NewUiMain">
+            <parameter paramName="hideLeftMenu" paramValue="true"/>
+        </component>
+
+        <!-- HISTORY -->
+        <component name="/core/history/historyBrowser" page="/core/history/historyBrowser.jsp" className="com.hp.systinet.sc.ui.history.HistoryBrowserComponent" />
+        <component name="/core/impl/history/compareRevisions" page="/core/impl/history/compareRevisions.jsp" className="com.hp.systinet.sc.ui.impl.history.CompareRevisonsComponent" />
+        <component name="/core/impl/history/relationFilter" page="core/impl/widgets/table/filter/selectManyTableFilterWidget.jsp" className="com.hp.systinet.sc.ui.impl.history.RelationFilterComponent"/>
+
+        <task uri="/common/diff" component="/core/history/visualDiff" />
+        <component name="/core/history/visualDiff" page="/core/history/visualDiff.jsp" className="com.hp.systinet.sc.ui.history.VisualDiffComponent">
+            <parameter paramName="customizationId" paramValue="shared.diff.visualDiffTabs"/>
+            <parameter paramName="dontCustomize" paramValue="true"/>
+        </component>
+
+        <component name="/core/impl/history/propertiesDiff" page="/core/impl/history/propertiesDiff.jsp" className="com.hp.systinet.sc.ui.impl.history.PropertiesDiffComponent"/>
+        <component name="/core/impl/history/relationshipsDiff" page="/core/impl/history/relationshipsDiff.jsp" className="com.hp.systinet.sc.ui.impl.history.RelationshipsDiffComponent"/>
+
+        <component name="/core/impl/widget/history/singleDiffWidget" page="/core/impl/widgets/history/singleDiffWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.history.SingleDiffWidget" />
+        <component name="/core/impl/widget/history/relationDiffWidget" page="/core/impl/widgets/history/relationDiffWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.history.RelationDiffWidget" />
+        <component name="/core/impl/widget/diffPropertyDescriptorWidget" page="/core/impl/widgets/diffPropertyDescriptorWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.DiffPropertyDescriptorWidget" />
+
+        <!-- Import File -->
+        <component name="/core/impl/widget/resourceStatusWidget" page="core/impl/widgets/resourceStatusWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.ResourceStatusWidget"/>
+        <component name="/core/impl/widget/resultCodeWidget" page="core/impl/widgets/resultCodeWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.ResultCodeWidget"/>
+        <component name="/core/impl/widget/table/filter/resourceStatus" page="core/impl/widgets/table/filter/selectManyTableFilterWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.table.filter.ResourceStatusTableFilterWidget"/>
+        <component name="/core/impl/widget/table/filter/resultCode" page="core/impl/widgets/table/filter/selectManyTableFilterWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.table.filter.ResultCodeTableFilterWidget"/>
+
+        <!--  Manage Categories -->
+        <component name="/core/customization/categories/manageCategories" page="/core/customization/categories/manageCategories.jsp" className="com.hp.systinet.sc.ui.customization.categories.ManageCategoriesComponent" />
+        <component name="/core/customization/categories/manageCategoriesLink" page="/core/customization/categories/manageCategoriesLink.jsp" className="com.hp.systinet.sc.ui.customization.categories.ManageCategoriesLinkComponent" />
+        <component name="/core/impl/customization/categories/selectCategories" page="/core/impl/customization/categories/selectCategories.jsp" className="com.hp.systinet.sc.ui.impl.customization.categories.SelectCategoriesComponent" />
+
+         <!-- SAVED SEARCH - SAVE WINDOW -->
+        <component name="/core/search/savedSearch/saveSearchWindow" page="/core/search/savedSearch/saveSearchWindow.jsp" className="com.hp.systinet.sc.ui.search.savedSearch.SaveSearchWindowComponent" />
+        <component name="/core/search/savedSearch/saveSearchWindowInternal" page="/core/search/savedSearch/saveSearchWindowInternal.jsp" className="com.hp.systinet.sc.ui.search.savedSearch.SaveSearchWindowInternalComponent" />
+        <component name="/core/search/savedSearch/saveSearchResultWindow" page="/core/search/savedSearch/saveSearchResultWindow.jsp" className="com.hp.systinet.sc.ui.search.savedSearch.SaveSearchResultWindowComponent" />
+
+        <component name="/core/search/savedSearch/manageSavedWindow" page="/core/search/savedSearch/manageSavedWindow.jsp"/>
+        <component name="/core/search/savedSearch/manageSavedWindowInternal" page="/core/search/savedSearch/manageSavedWindowInternal.jsp" className="com.hp.systinet.sc.ui.search.savedSearch.ManageSavedWindowInternalComponent" />
+
+        <component name="/core/search/searchCriteriaDescription" page="/core/search/searchCriteriaDescription.jsp" className="com.hp.systinet.sc.ui.search.SearchCriteriaDescriptionComponent" />
+
+        <component name="/core/impl/search/shortSearchCriteriaDescription"
+                   page="/core/impl/search/shortSearchCriteriaDescription.jsp"
+                   className="com.hp.systinet.sc.ui.search.SearchCriteriaDescriptionComponent" />
+        <component name="/core/impl/search/customizableSearchCriteriaDescription"
+                   page="core/customization/customizableComponent.jsp"
+                   className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizedComponent" paramValue="/core/impl/search/shortSearchCriteriaDescription"/>
+        </component>
+
+        <!-- DEFAULT (FALLBACK) WIDGET -->
+        <component name="/core/impl/widget/javaLangObjectWidget" page="/core/impl/widgets/javaLangObjectWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.JavaLangObjectWidget" />
+
+        <!-- Suggested search for related artifact -->
+        <component name="/core/impl/widget/relatedArtifactSuggestedSearch" page="/core/impl/widgets/relatedArtifactSuggestedSearch.jsp" className="com.hp.systinet.sc.ui.impl.widgets.search.RelatedArtifactSuggestSearch"/>
+
+        <component name="/core/wrap/wrapComponent" page="core/wrap/wrapComponent.jsp" className="com.hp.systinet.sc.ui.wrap.WrapComponent"/>
+
+        <!-- Versioning -->
+        <component name="/core/versioning/newVersionAction" page="/core/versioning/newVersionAction.jsp" className="com.hp.systinet.sc.ui.versioning.NewVersionAction" />
+        <component name="/core/versioning/newVersion" page="/core/versioning/newVersion.jsp" className="com.hp.systinet.sc.ui.versioning.NewVersionTask"/>
+        <task uri="/common/newVersion" component="/core/versioning/newVersion" context="..">
+            <parameter paramName="captionKey" paramValue="com.hp.systinet.sc.ui.versioning.versioning$task_title"/>
+        </task>
+        <component name="/core/impl/versioning/inconsistentVersions" page="/core/impl/versioning/inconsistentVersions.jsp" className="com.hp.systinet.sc.ui.impl.versioning.InconsistentVersionsTask"/>
+        <task uri="/common/inconsistentVersions" component="/core/impl/versioning/inconsistentVersions" context="..">
+            <parameter paramName="captionKey" paramValue="com.hp.systinet.sc.ui.versioning.versioning$task_title"/>
+        </task>
+
+        <!--  Last Edit Box -->
+        <component name="/core/util/lastEdit" page="/core/util/lastEdit.jsp" className="com.hp.systinet.sc.ui.util.LastEditComponent" />
+
+        <!-- ATOM Feed -->
+        <component name="/core/feeds/restLink" page="/core/feeds/restLink.jsp" className="com.hp.systinet.sc.ui.feeds.RestLinkComponent" />
+
+        <!-- Old REST Link aka XML View -->
+        <component name="/core/feeds/oldRestLink" page="/core/feeds/oldRestLink.jsp" className="com.hp.systinet.sc.ui.feeds.OldRestLinkComponent" />
+
+        <!-- EXPORT -->
+        <component name="/core/export/exportArtifact" page="core/export/exportArtifact.jsp"
+                   className="com.hp.systinet.sc.ui.export.ExportArtifact"/>
+        <component name="/core/export/exportArtifactWindow" page="core/export/exportArtifactWindow.jsp"
+                   className="com.hp.systinet.sc.ui.export.ExportArtifactWindowComponent"/>
+        <component name="/core/export/exportGP" page="core/export/exportArtifact.jsp"
+                   className="com.hp.systinet.sc.ui.export.ExportGPComponent">
+            <parameter paramName="type" paramValue="gp" />
+        </component>
+
+        <component name="/core/export/exportMessage" page="core/wrap/wrapComponent.jsp" className="com.hp.systinet.sc.ui.wrap.WrapComponent">
+            <parameter paramName="wrappedComponent" paramValue="/core/export/exportMessageWrapped"/>
+        </component>
+        <component name="/core/export/exportMessageWrapped" page="/core/export/exportMessage.jsp"
+                   className="com.hp.systinet.sc.ui.export.ExportMessageComponent" />
+        <component name="/core/impl/export/bulkExport" page="/core/impl/export/bulkExport.jsp"
+                   className="com.hp.systinet.sc.ui.impl.export.BulkExportComponent" />
+        <component name="/core/impl/export/bulkGPExport" page="/core/impl/export/bulkExport.jsp"
+                   className="com.hp.systinet.sc.ui.impl.export.BulkGPExportComponent">
+                   <parameter paramName="type" paramValue="gp" />
+        </component>
+
+        <component name="/core/import/importMessage" page="core/wrap/wrapComponent.jsp" className="com.hp.systinet.sc.ui.wrap.WrapComponent">
+            <parameter paramName="wrappedComponent" paramValue="/core/import/importMessageWrapped"/>
+        </component>
+        <component name="/core/import/importMessageWrapped" page="/core/imports/importMessage.jsp"
+                   className="com.hp.systinet.sc.ui.imports.ImportMessageComponent" />
+        <component name="/core/impl/widget/table/filter/impExpCategory" page="core/impl/widgets/table/filter/selectManyTableFilterWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.table.filter.ImpExpCategoryTableFilterWidget"/>
+
+
+        <component name="/core/category/categoryBag" page="/core/category/categoryBag.jsp"
+                    className="com.hp.systinet.sc.ui.category.CategoryBagComponent" />
+
+        <component name="/core/category/domainBag" page="/core/category/domainBag.jsp"
+                    className="com.hp.systinet.sc.ui.category.DomainBagComponent" />
+
+        <component name="/core/category/domainSelectionContent"
+                   page="/core/category/domainSelectionContent.jsp"/>
+
+        <component name="/core/artifact/propertySelector"
+                   page="/core/artifact/propertySelector.jsp"
+                   className="com.hp.systinet.sc.ui.artifact.PropertySelectorComponent"/>
+
+        <component name="/core/artifact/propertySelectorPopUp"
+                   page="/core/artifact/propertySelectorPopUp.jsp"/>
+
+        <component name="/core/util/itemSelector"
+                   page="/core/util/itemSelector.jsp"
+                   className="com.hp.systinet.sc.ui.util.ItemSelectorComponent"/>
+
+        <component name="/core/util/itemSelectorHoriz"
+                   page="/core/util/itemSelectorHoriz.jsp"
+                   className="com.hp.systinet.sc.ui.util.ItemSelectorHorizComponent"/>
+
+        <component name="/core/util/confirmPopUp" page="/core/util/confirmPopUp.jsp"/>
+
+        <component name="/core/impl/customization/editors/renderersCustomizationEditor"
+                   page="/core/impl/customization/editors/renderersCustomizationEditor.jsp"
+                   className="com.hp.systinet.sc.ui.impl.customization.editors.RenderersCustomizationEditor"/>
+
+        <component name="/core/impl/customization/editors/relationRenderersCustomizationEditor"
+                   page="/core/impl/customization/editors/relationRenderersCustomizationEditor.jsp"
+                   className="com.hp.systinet.sc.ui.impl.customization.editors.RelationRenderersCustomizationEditor"/>
+
+        <component name="/core/impl/customization/editors/tabsCustomizationEditor"
+                   page="/core/impl/customization/editors/tabsCustomizationEditor.jsp"
+                   className="com.hp.systinet.sc.ui.impl.customization.editors.TabsCustomizationEditor"/>
+
+        <component name="/core/impl/customization/editors/addtabsCustomization"
+                   page="/core/impl/customization/editors/addtabsCustomizationEditor.jsp"
+                   className="com.hp.systinet.sc.ui.impl.customization.editors.AddTabsCustomization"/>
+
+		<component name="/core/impl/customization/editors/columns/tabEditableLabel"
+                   page="/core/impl/customization/editors/columns/tabEditableLabel.jsp"
+                   className="com.hp.systinet.sc.ui.impl.customization.editors.columns.EditableLabelComponent"/>
+
+        <component name="/core/customization/artifact/addArtifactTypeWizard"
+                   page="/core/customization/artifact/addArtifactTypeWizard.jsp"
+                   className="com.hp.systinet.sc.ui.customization.artifact.AddArtifactTypeWizard" />
+        <task uri="/common/addArtifactType" component="/core/customization/artifact/addArtifactTypeWizard" />
+
+        <component name="/core/customization/artifact/removeArtifactType"
+                   page="/core/customization/artifact/removeArtifactType.jsp"
+                   className="com.hp.systinet.sc.ui.customization.artifact.RemoveArtifactType" />
+        <task uri="/common/removeArtifactType" component="/core/customization/artifact/removeArtifactType" />
+
+        <component name="/core/customization/renderers/manageRenderers"
+                   page="/core/customization/renderers/manageRenderers.jsp"
+                   className="com.hp.systinet.sc.ui.impl.customization.CustomizationTaskBase"/>
+        <task uri="/common/manageRenderers" component="/core/customization/renderers/manageRenderers" />
+
+        <component name="/core/customization/tabs/manageTabs"
+                   page="/core/customization/tabs/manageTabs.jsp"
+                   className="com.hp.systinet.sc.ui.impl.customization.CustomizationTaskBase"/>
+        <task uri="/common/manageTabs" component="/core/customization/tabs/manageTabs" />
+
+        <component name="/core/customization/uiRoles/manageUIRoles"
+                   page="/core/customization/uiRoles/manageUIRoles.jsp"
+                   className="com.hp.systinet.sc.ui.impl.customization.ManageUIRoleTaskBase"/>
+        <task uri="/common/manageUIRoles" component="/core/customization/uiRoles/manageUIRoles" />
+
+		<!-- Manage Artifact Customization -->
+		<component name="/core/customization/artifact/manageArtifacts"
+                   page="/core/customization/artifact/manageArtifacts.jsp"
+                   className="com.hp.systinet.sc.ui.impl.customization.artifact.ManageArtifactsTaskBase"/>
+        <task uri="/common/manageArtifacts" component="/core/customization/artifact/manageArtifacts" />
+
+        <!-- addArtifactTypeWizard steps -->
+        <component name="/core/impl/customization/artifact/steps/selectArtifactTypeStep"
+                   page="/core/impl/customization/artifact/steps/selectArtifactTypeStep.jsp"
+                   className="com.hp.systinet.sc.ui.impl.customization.artifact.steps.SelectArtifactTypeStep"/>
+        <component name="/core/impl/customization/artifact/steps/defineBrowsePageStep"
+                   page="/core/impl/customization/artifact/steps/defineBrowsePageStep.jsp"
+                   className="com.hp.systinet.sc.ui.impl.customization.artifact.steps.DefineBrowsePageStep"/>
+        <component name="/core/impl/customization/artifact/steps/defineViewPageStep"
+                   page="/core/impl/customization/artifact/steps/defineViewPageStep.jsp"
+                   className="com.hp.systinet.sc.ui.impl.customization.artifact.steps.DefineViewPageStep"/>
+
+        <component name="/core/util/inlineStringEditor" page="/core/util/inlineStringEditor.jsp" className="com.hp.systinet.sc.ui.util.InlineStringEditorComponent" />
+        <component name="/core/util/newValuePopupEditor" page="/core/util/newValuePopupEditor.jsp" className="com.hp.systinet.sc.ui.util.NewValuePopupEditorComponent" />
+
+        <component name="/core/util/listEditor" page="core/customization/customizableComponent.jsp" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizedComponent" paramValue="/core/util/listEditorInternal"/>
+        </component>
+        <component name="/core/util/listEditorInternal" page="/core/util/listEditor.jsp" className="com.hp.systinet.sc.ui.util.ListEditorComponent" />
+        <component name="/core/impl/listEditorTable" page="/core/impl/util/listEditorTableInternal.jsp" className="com.hp.systinet.sc.ui.impl.util.ListEditorTableInternalComponent"/>
+
+        <component name="/core/util/sortableEditor"
+                   page="/core/util/sortableEditor.jsp"
+                   className="com.hp.systinet.sc.ui.util.SortableEditor"/>
+        <component name="/core/impl/util/sortableEditorRow"
+                   page="/core/impl/util/sortableEditorRow.jsp"/>
+
+		<component name="/core/util/tabSortableEditor"
+                   page="/core/util/tabSortableEditor.jsp"
+                   className="com.hp.systinet.sc.ui.util.SortableEditor"/>
+
+        <component name="/core/impl/util/tabSortableEditorRow"
+                   page="/core/impl/util/tabSortableEditorRow.jsp"/>
+
+        <component name="/core/impl/customization/editors/columns/toggleVisibility"
+                   page="/core/impl/customization/editors/columns/toggleVisibility.jsp"
+                   className="com.hp.systinet.sc.ui.impl.customization.editors.columns.ToggleVisibilityComponent"/>
+
+        <component name="/core/impl/customization/editors/columns/rendererSelector"
+                   page="/core/impl/customization/editors/columns/rendererSelector.jsp"
+                   className="com.hp.systinet.sc.ui.impl.customization.editors.columns.RendererSelectorComponent"/>
+
+        <component name="/core/impl/customization/editors/columns/editableLabel"
+                   page="/core/impl/customization/editors/columns/editableLabel.jsp"
+                   className="com.hp.systinet.sc.ui.impl.customization.editors.columns.EditableLabelComponent"/>
+
+        <component name="/core/impl/customization/editors/columns/editAction"
+                   page="/core/impl/customization/editors/columns/editAction.jsp"/>
+
+		<component name="/core/impl/customization/editors/columns/editTabAction"
+                   page="/core/impl/customization/editors/columns/editTabAction.jsp"/>
+
+        <component name="/core/impl/customization/editors/columns/editableLabelPopUp"
+                   page="/core/impl/customization/editors/columns/editableLabelPopUp.jsp"
+                   className="com.hp.systinet.sc.ui.impl.customization.editors.columns.EditableLabelPopUpComponent"/>
+
+        <component name="/core/impl/customization/editors/columns/columnIcon"
+                   page="/core/impl/customization/editors/columns/columnIcon.jsp"/>
+
+        <component name="/core/util/artifactTree" page="/core/util/artifactTree.jsp" className="com.hp.systinet.sc.ui.util.ArtifactTreeComponent"/>
+        <component name="/core/impl/util/artifactTreeNode" page="/core/impl/util/artifactTreeNode.jsp" className="com.hp.systinet.sc.ui.impl.util.ArtifactTreeNodeComponent"/>
+
+        <component name="/core/impl/customization/editors/tableCustomizationEditor"
+                   page="/core/impl/customization/editors/tableCustomizationEditor.jsp"
+                   className="com.hp.systinet.sc.ui.impl.customization.editors.TableCustomizationEditor"/>
+
+        <component name="/core/impl/customization/editors/artifactPropertiesCustomizationEditor"
+                   page="/core/impl/customization/editors/artifactPropertiesCustomizationEditor.jsp"
+                   className="com.hp.systinet.sc.ui.impl.customization.editors.ArtifactPropertiesCustomizationEditor"/>
+
+        <!--  Security (Access Rights) Tab -->
+        <!-- fixed defect #65303, keep deprecated component /core/security/securityTab to compatible with 4.00 -->
+        <component name="/core/security/securityTab" page="/core/impl/security/securityTab.jsp" className="com.hp.systinet.sc.ui.impl.security.SecurityTabComponent"/>
+        <component name="/core/impl/security/securityTab" page="/core/impl/security/securityTab.jsp" className="com.hp.systinet.sc.ui.impl.security.SecurityTabComponent"/>
+        <component name="/core/security/owner" page="/core/security/owner.jsp" className="com.hp.systinet.sc.ui.security.OwnerComponent" />
+        <component name="/core/impl/security/principalCategoryWidget" page="/core/impl/security/principalCategoryWidget.jsp" className="com.hp.systinet.sc.ui.impl.security.PrincipalCategoryWidget" />
+        <component name="/core/impl/security/aclWidget" page="/core/impl/security/aclWidget.jsp" className="com.hp.systinet.sc.ui.impl.security.AclWidget" />
+        <component name="/core/impl/security/removeAccess" page="/core/impl/security/removeAccess.jsp" className="com.hp.systinet.sc.ui.impl.security.RemoveAccessComponent" />
+        <component name="/core/impl/security/removeAccessWindow" page="/core/impl/security/removeAccessWindow.jsp" />
+        <component name="/core/impl/security/addAccess" page="/core/impl/security/addAccess.jsp" className="com.hp.systinet.sc.ui.impl.security.AddAccessComponent" />
+        <component name="/core/impl/security/addAccessWindow" page="/core/impl/security/addAccessWindow.jsp" className="com.hp.systinet.sc.ui.impl.security.AddAccessWindowComponent" />/>
+        <component name="/core/security/share" page="/core/security/share.jsp" className="com.hp.systinet.sc.ui.security.ShareComponent" />
+        <component name="/core/security/checkAccess" page="/core/security/checkAccess.jsp" className="com.hp.systinet.sc.ui.security.CheckAccessComponent" />
+        <component name="/core/security/checkAccessContent" page="/core/security/checkAccessContent.jsp" className="com.hp.systinet.sc.ui.security.CheckAccessContentComponent"/>
+
+        <component name="/core/composite/compositeTreeDisplay" page="core/composite/compositeTreeDisplay.jsp" className="com.hp.systinet.sc.ui.composite.CompositeTreeDisplayComponent"/>
+        <component name="/core/composite/customizableCompositeTreeDisplay" className="com.hp.systinet.sc.ui.customization.CustomizableComponent"
+                   page="@/core/customization/customizableComponent">
+            <parameter paramName="customizedComponent" paramValue="/core/composite/compositeTreeDisplay"/>
+        </component>
+        <component name="/core/impl/composite/compositeTreeRow" page="core/impl/composite/compositeTreeRow.jsp" className="com.hp.systinet.sc.ui.impl.composite.CompositeTreeRowComponent"/>
+
+        <!-- Governance Tree Browser -->
+        <component name="/core/composite/governanceTreeDisplay" page="core/composite/compositeTreeDisplay.jsp" className="com.hp.systinet.sc.ui.composite.GovernanceTreeDisplayComponent"/>
+
+        <!-- Repository Import -->
+        <task uri="/common/imports/repositoryImport" component="/core/imports/repositoryImport" />
+        <component name="/core/imports/repositoryImport" page="/core/imports/repositoryImport.jsp" className="com.hp.systinet.sc.ui.imports.RepositoryImportComponent" />
+
+        <component name="/core/impl/imports/importUndoAction" page="@/core/impl/imports/rollbackAction" className="com.hp.systinet.sc.impl.report.ImportUndoActionComponent" />
+
+        <!-- Import export report widgets -->
+        <component name="/core/impl/import/importReportCategoryWidget" page="/core/impl/import/importReportCategoryWidget.jsp" className="com.hp.systinet.sc.ui.impl.imports.ImportReportCategoryWidget" />
+        <component name="/core/impl/import/importReportResultStatusWidget" page="/core/impl/import/importReportResultStatusWidget.jsp" className="com.hp.systinet.sc.ui.impl.imports.ImportReportResultStatusWidget" />
+        <component name="/core/impl/import/table/filter/importReportResultStatus" page="core/impl/widgets/table/filter/selectManyTableFilterWidget.jsp" className="com.hp.systinet.sc.ui.impl.imports.ImportReportResultStatusFilter"/>
+
+
+		<!-- Relationships tab in artifact view -->
+        <component name="/core/relations/relationshipsTabComponent" page="/core/relations/oneDirection/relationshipsTab.jsp" className="com.hp.systinet.sc.ui.relations.oneDirection.RelationshipsTabComponent" />
+        <component name="/core/relations/addRelationshipsComponent" page="/core/relations/oneDirection/addRelationships.jsp" className="com.hp.systinet.sc.ui.relations.oneDirection.AddRelationshipsComponent" />
+        <component name="/core/relations/addRelationshipsInternalComponent" page="/core/relations/oneDirection/addRelationshipsInternal.jsp" className="com.hp.systinet.sc.ui.relations.oneDirection.AddRelationshipsInternalComponent" />
+
+        <component name="/core/help/pageHelpInternal" className="com.hp.systinet.sc.ui.help.PageHelpComponent"
+                   page="core/help/pageHelp.jsp"/>
+
+        <component name="/core/help/pageHelp" className="com.hp.systinet.sc.ui.customization.CustomizableComponent"
+                   page="@/core/customization/customizableComponent">
+            <parameter paramName="customizedComponent" paramValue="/core/help/pageHelpInternal"/>
+        </component>
+
+        <!-- Bulk Share -->
+        <component name="/core/bulk/security/bulkShare" className="com.hp.systinet.sc.ui.impl.bulk.security.BulkShareComponent" page="/core/impl/bulk/security/bulkShare.jsp">
+            <parameter paramName="shared" paramValue="false" />
+        </component>
+
+        <component name="/core/bulk/security/bulkUnshare" className="com.hp.systinet.sc.ui.impl.bulk.security.BulkShareComponent" page="/core/impl/bulk/security/bulkShare.jsp">
+            <parameter paramName="shared" paramValue="true" />
+        </component>
+
+		<component name="/core/project/artifactRelationDetail" page="/core/impl/relations/artifactRelationDetail.jsp" className="com.hp.systinet.sc.ui.impl.relations.ArtifactRelationDetailComponent" />
+
+        <component name="/core/util/project" page="/core/util/project.jsp" className="com.hp.systinet.sc.ui.util.ProjectComponent"/>
+        <component name="/core/util/projectEdit" page="/core/util/projectEdit.jsp" className="com.hp.systinet.sc.ui.util.ProjectEditComponent"/>
+
+        <component name="/core/selector/providerSelector" page="/core/impl/provider/providerSelector.jsp" className="com.hp.systinet.sc.ui.impl.provider.ProviderSelectorComponent" />
+        <component name="/core/selector/providerSelectorInternal" page="/core/impl/provider/providerSelectorInternal.jsp" className="com.hp.systinet.sc.ui.impl.provider.ProviderSelectorInternalComponent" />
+        <component name="/core/selector/providerSelectorLocal" page="/core/impl/provider/providerSelectorLocal.jsp" className="com.hp.systinet.sc.ui.impl.provider.ProviderSelectorLocalComponent" />
+        <component name="/core/selector/providerSelectorGlobal" page="/core/impl/provider/providerSelectorGlobal.jsp" className="com.hp.systinet.sc.ui.impl.provider.ProviderSelectorGlobalComponent" />
+        <component name="/core/selector/providerSelectorNameRenderer" page="/core/impl/provider/providerSelectorNameRenderer.jsp"/>
+
+        <component name="/core/util/specification" page="core/util/specification.jsp" className="com.hp.systinet.sc.ui.util.SpecificationComponent"/>
+        <component name="/core/util/specificationIF" page="core/util/specificationIF.jsp" className="com.hp.systinet.sc.ui.util.SpecificationComponent"/>
+        <task uri="/core/util/specificationIF" component="/core/util/specificationIF" style=""/>
+
+        <component name="/core/util/editSpecification" page="core/util/editSpecification.jsp" className="com.hp.systinet.sc.ui.util.EditSpecificationComponent"/>
+
+        <component name="/core/relations/overview" page="/core/relations/overview.jsp" className="com.hp.systinet.sc.ui.relations.OverviewComponent" />
+
+        <component name="/core/impl/util/productInfo" page="core/impl/util/productInfo.jsp" className="com.hp.systinet.sc.ui.impl.util.ProductInfoComponent"/>
+        <task uri="/common/productInformation" component="/core/impl/util/productInfo" >
+            <parameter paramName="captionKey" paramValue="com.hp.systinet.sc.ui.util.uimessages$PRODUCT_INFO_TASK_CAPTION"/>
+        </task>
+
+        <component name="/core/endpoint/detailsComponent" page="/core/endpoint/endpointDetails.jsp" className="com.hp.systinet.sc.ui.endpoint.EndpointDetailsComponent" />
+        <component name="/core/endpoint/additionErrorComponent" page="/core/endpoint/endpointAdditionError.jsp"/>
+
+        <!-- URI redirectors, @see https://soawiki.emea.hp.com/twiki/bin/view/Hermes320/AnalysisUILinks -->
+        <task uri="/artifact/*" component="/artifactLink" context=".." style="" />
+        <component name="/artifactLink" className="com.hp.systinet.sc.ui.links.ArtifactLink" />
+        <task uri="/document/*" component="/documentLink" context=".." style="" />
+        <component name="/documentLink" className="com.hp.systinet.sc.ui.links.DocumentLink" />
+
+        <component name="/util/stayLoggedIn" page="/core/util/stayLoggedIn.jsp" className="com.hp.systinet.sc.ui.util.StayLoggedIn"/>
+
+        <!-- development tools part -->
+        <task caption="Devel Tools" uri="/admin/util/devel" component="/util/devel/page"/>
+        <component name="/util/devel/page" page="/core/impl/util/devel/page.jsp" className="com.hp.systinet.sc.ui.impl.util.devel.PageComponent" />
+        <component name="/util/devel/refreshWebui" page="/core/impl/util/devel/refreshWebui.jsp" className="com.hp.systinet.sc.ui.impl.util.devel.RefreshWebuiComponent" />
+        <component name="/util/devel/refreshBundles" page="/core/impl/util/devel/refreshBundles.jsp" className="com.hp.systinet.sc.ui.impl.util.devel.RefreshBundlesComponent" />
+        <component name="/util/devel/refreshWidgets" page="/core/impl/util/devel/refreshWidgets.jsp" className="com.hp.systinet.sc.ui.impl.util.devel.RefreshWidgetsComponent" />
+        <component name="/util/devel/refreshBcel" page="/core/impl/util/devel/refreshBcel.jsp" className="com.hp.systinet.sc.ui.impl.util.devel.RefreshBcelComponent" />
+        <component name="/util/devel/refreshUIComponent" page="/core/impl/util/devel/refreshUIComponent.jsp" className="com.hp.systinet.sc.ui.impl.util.devel.RefreshUIComponentComponent" />
+        <component name="/util/devel/refreshInjectionCaches" page="/core/impl/util/devel/refreshInjectionCaches.jsp" className="com.hp.systinet.sc.ui.impl.util.devel.RefreshInjectionCaches" />
+        <component name="/util/devel/generateArtifacts" page="/core/impl/util/devel/generateArtifacts.jsp" className="com.hp.systinet.sc.ui.impl.util.devel.GenerateArtifactsComponent" />
+        <component name="/util/devel/dbAnalyzer" page="/core/impl/util/devel/dbAnalyzer.jsp" className="com.hp.systinet.sc.ui.impl.util.devel.DBAnalyzerComponent" />
+
+        <!-- used in partner UI -->
+        <component name="/util/locationLinkRenderer" page="/core/util/locationLinkRenderer.jsp"
+                   className="com.hp.systinet.sc.ui.util.LocationLinkRenderer" />
+
+        <component name="/core/endpoint/endpointClone" page="/core/endpoint/endpointClone.jsp" className="com.hp.systinet.sc.ui.endpoint.EndpointCloneComponent" />
+        <component name="/core/impl/endpoint/endpointCloneWindow" page="/core/impl/endpoint/endpointCloneWindow.jsp" className="com.hp.systinet.sc.ui.impl.endpoint.EndpointCloneWindowComponent" />
+        <component name="/core/endpoint/endpointEdit" page="/core/endpoint/endpointEdit.jsp" className="com.hp.systinet.sc.ui.endpoint.EndpointEditComponent" />
+
+        <component name="/core/impl/widget/passwordWidget" page="core/impl/widgets/passwordWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.ConfigurableDataTypeWidget">
+            <parameter paramName="dataType" paramValue="default"/>
+        </component>
+        <component name="/core/impl/customization/scriptEditor" page="/core/impl/customization/scriptEditor.jsp" className="com.hp.systinet.sc.impl.customization.ScriptEditorComponent" />
+        <component name="/core/impl/customization/openScriptEditor" page="/core/impl/customization/openScriptEditor.jsp" className="com.hp.systinet.sc.impl.customization.ScriptEditorComponent" />
+        <component name="/data/js" className="com.hp.systinet.sc.ui.scripting.dataService.ServerSideScriptingComponent" page="core/impl/customization/data.jsp"/>
+        <component name="/core/impl/customization/scriptProcessingMode" page="/core/impl/customization/scriptProcessingMode.jsp" className="com.hp.systinet.sc.impl.customization.ScriptProcessingModeComponent" />
+
+		<!-- WebDAV -->
+		<component name="/core/webdav/openInOffice" page="core/webdav/openInOffice.jsp" className="com.hp.systinet.sc.ui.webdav.OpenInOfficeAction"/>
+
+		<!-- New UI -->
+		<!-- ***User Control -->
+		<component name="/core/impl/layout/userControls" page="core/impl/layout/userControls.jsp" className="com.hp.systinet.sc.ui.impl.layout.UserControls" />
+		
+		<!-- ***Domain Selection -->
+		<component name="/core/impl/layout/domainSelection" page="core/impl/layout/domainSelection.jsp" className="com.hp.systinet.sc.ui.impl.layout.DomainSelectionComponent"/>
+		
+		<!-- ***Domain Selection in Catalog Page-->
+		<component name="/core/impl/layout/domainSelectionInCatalog" page="core/impl/layout/domainSelectionInCatalog.jsp" className="com.hp.systinet.sc.ui.impl.layout.DomainSelectionInCatalog" />
+		<component name="/core/impl/layout/domainSelectionInBrowserPage" page="core/impl/layout/domainSelectionInBrowserPage.jsp" className="com.hp.systinet.sc.ui.impl.layout.DomainSelectionCompositeComponent" />
+		<component name="/core/impl/layout/domainSelectionInReport" page="core/impl/layout/domainSelectionInReport.jsp" className="com.hp.systinet.sc.ui.impl.layout.DomainSelectionCompositeComponent" /> 
+		
+
+		<!-- ***Search -->
+		<component name="/core/search/headerSearch" page="/core/search/headerSearch.jsp" className="com.hp.systinet.sc.ui.search.HomepageSearchComponent"/>
+
+		<!-- ***Menu Layout -->
+		<component name="/core/layout/topMenu" page="core/layout/topMenu.jsp" className="com.hp.systinet.sc.ui.layout.NavigationComponent"/>
+		<component name="/core/layout/subMenu" page="core/layout/subMenu.jsp"/>
+
+		<component name="/core/layout/menu" page="core/customization/customizableComponent.jsp" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+        </component>
+
+        <component name="core/catalog/menuItemCatalogRenderer" page="core/customization/customizableComponent.jsp" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizedComponent" paramValue="core/catalog/menuItemArtifactRenderer"/>
+            <parameter paramName="wrap" paramValue="false"/>
+        </component>
+
+        <component name="core/catalog/menuItemArtifactRenderer" page="core/catalog/menuItemArtifactRenderer.jsp" className="com.hp.systinet.sc.ui.catalog.BrowserComponent">
+        	<parameter paramName="wrap" paramValue="false"/>
+        </component>
+
+        <component name="/core/impl/catalog/artifactNewLinkRenderer" page="core/impl/catalog/artifactNewLinkRenderer.jsp" className="com.hp.systinet.sc.ui.impl.catalog.CreateLinkRenderer">
+			<parameter paramName="idParamName" paramValue="artifactType"/>
+			<parameter paramName="collectionId" paramValue="artifactBrowserArtifacts"/>
+		</component>
+
+        <!-- ***Favorite -->
+        <component name="/core/favorites/favoriteMenu" page="core/favorites/favoriteMenuComponent.jsp" className="com.hp.systinet.sc.ui.favorites.FavoriteListComponent"/>
+
+        <!-- ***Recent Document -->
+        <component name="/core/recentlyUsedArtifactsMenu" page="/core/recentlyUsedArtifactsMenu.jsp" className="com.hp.systinet.sc.ui.RecentlyUsedArtifactsComponent"/>
+        <component name="/core/recentlyUsedArtifactsBox" page="/core/recentlyUsedArtifactsBox.jsp" className="com.hp.systinet.sc.ui.RecentlyUsedArtifactsComponent">
+        	<parameter paramName="placeHolder" paramValue="column"/>
+        </component>
+
+        <!-- ***Recyclebin -->
+        <component name="core/impl/recycleBinMenu" page="core/impl/recycleBin/recycleBinMenu.jsp" className="com.hp.systinet.sc.ui.recycleBin.RecycleBinMenuComponent"/>
+
+        <!-- ***Customization Box -->
+        <component name="core/layout/headerCustomizationBox" page="core/layout/headerCustomizationBox.jsp" className="com.hp.systinet.sc.ui.layout.HeaderCustomizationBoxComponent"/>
+
+        <!-- Dropdown (replace tabs) -->
+        <component name="/core/layout/dropdownsInternal" page="core/layout/genericDropdowns.jsp" className="com.hp.systinet.sc.ui.layout.GenericDropdownsComponent" />
+        <component name="/core/layout/dropdowns" page="core/customization/customizableComponent.jsp" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizedComponent" paramValue="/core/layout/dropdownsInternal"/>
+        </component>
+
+        <!-- Render HREF/Icon in Artifact's Documentation tab -->
+        <component name="/core/impl/widget/documentLinkWidget" page="core/impl/widgets/documentLinkWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.ArtifactLinkWidget"/>
+        <component name="/core/portal/core" page="/core/portal/portal.jsp" className="com.hp.systinet.sc.ui.portal.PortalComponent"/>
+
+        <component name="/core/portal"
+                   page="@/core/customization/customizableComponent"
+                   className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizedComponent" paramValue="/core/portal/core"/>
+        </component>
+
+		<!-- Shortcuts Component -->
+		<component name="/core/layout/shortcuts" page="core/layout/shortcutsComponent.jsp" className="com.hp.systinet.sc.ui.layout.ShortcutsComponent" />
+		<!-- Shortcut Item Component -->
+		<component name="/core/layout/shortcutItemComponent" page="core/layout/shortcutItemComponent.jsp" className="com.hp.systinet.sc.ui.layout.ShortcutItemComponent" />
+		<!-- Invalid Relationship Component -->
+		<component name="/core/layout/invalidRelationships" page="core/layout/invalidRelationshipsComponent.jsp" className="com.hp.systinet.sc.ui.layout.InvalidRelationshipsComponent" />
+		<!-- Relationship Item Component -->
+		<component name="/core/layout/relationshipItemComponent" page="core/layout/relationshipItemComponent.jsp" className="com.hp.systinet.sc.ui.layout.RelationshipItemComponent" />
+		<!-- Relationship Button Component -->
+		<component name="/core/layout/relationshipButtonComponent" page="core/layout/relationshipButtonComponent.jsp" className="com.hp.systinet.sc.ui.layout.RelationshipButtonComponent" />
+		<!-- ***Unlink Relationship -->
+		<component name="/core/relations/unlinkRelationship" page="/core/relations/unlinkRelationship.jsp" className="com.hp.systinet.sc.ui.relations.UnlinkRelationshipComponent" />
+		<!-- ***Link Relationship To New Artifact-->
+		<component name="/core/relations/linkRelationshipToNewArtifact" page="/core/relations/linkRelationshipToNewArtifact.jsp" className="com.hp.systinet.sc.ui.relations.LinkRelationshipToNewArtifact">
+			<parameter paramName="linkType" paramValue="new"/>
+		</component>
+		<!-- ***Link Relationship To Existing Artifact-->
+		<component name="/core/relations/linkRelationshipToExistingArtifact" page="/core/relations/linkRelationshipToExistingArtifact.jsp" className="com.hp.systinet.sc.ui.relations.LinkRelationshipToNewArtifact" >
+			<parameter paramName="linkType" paramValue="existing"/>
+		</component>
+		<!-- Display custom relationship that created from extension -->
+		<component name="/core/relations/customRelationshipComponent" page="core/layout/customRelationshipItemComponent.jsp" className="com.hp.systinet.sc.ui.layout.CustomRelationshipItemComponent">
+			<parameter paramName="artifact" paramValue="${artifact}" />
+		</component>
+
+        <!-- Display linked properties -->
+        <component name="/core/catalog/linkedProperties" page="core/catalog/linkedProperties.jsp" className="com.hp.systinet.sc.ui.catalog.LinkedPropertiesComponent">
+            <parameter paramName="artifact" paramValue="${artifact}" />
+        </component>
+        <!-- Display linked properties detail-->
+        <component name="/core/catalog/linkedPropertiesDetail" page="core/catalog/linkedPropertiesDetail.jsp" className="com.hp.systinet.sc.ui.catalog.LinkedPropertiesDetailComponent"/>
+
+		<!-- Display linked Financial properties -->
+        <component name="/core/impl/artifact/financialProfile/linkedFinancialProperties" page="core/impl/artifact/financialProfile/linkedFinancialProperties.jsp" className="com.hp.systinet.sc.ui.impl.artifact.financialProfile.LinkedFinancialPropertiesComponent"/>
+        <!-- Display linked Financial properties detail-->
+        <component name="/core/impl/artifact/financialProfile/linkedFinancialPropertiesDetail" page="core/impl/artifact/financialProfile/linkedFinancialPropertiesDetail.jsp" className="com.hp.systinet.sc.ui.catalog.LinkedPropertiesDetailComponent"/>
+		<!-- Display Financial profile history table --> 
+        <component name="/core/impl/artifact/financialProfile/financialProfileHistory" page="core/impl/artifact/financialProfile/financialProfileHistory.jsp" className="com.hp.systinet.sc.ui.impl.artifact.financialProfile.FinancialProfileHistoryComponent"/>
+        
+        <!-- Display Cloud/CSA Migration Alignment -->
+        <component name="/core/impl/artifact/cloudMigration/cloudMigrationAlignments" page="core/impl/artifact/cloudMigration/cloudMigrationAlignments.jsp"
+            className="com.hp.systinet.sc.ui.impl.artifact.alignment.CloudMigrationAlignmentOverview"/>
+        
+         <!-- Display Cloud/CSA Migration Available Service Designs -->        
+         <component name="/core/impl/artifact/cloudMigration/cloudMigrationIcon" page="core/impl/artifact/cloudMigration/cloudMigrationIcon.jsp"/>
+	
+        <!-- Radar Chart -->
+        <component name="/core/impl/artifact/alignment/radarChart" page="core/impl/artifact/alignment/radarChart.jsp" className="com.hp.systinet.sc.ui.impl.artifact.alignment.RadarChart"/>
+
+		<!-- In view/edit page, it aims to render the properties that were not explicitly named in the ui
+             configuration and are declared as properties of the artifact being viewed or edited.  -->
+		<component name="/customization/customProperties" page="core/layout/artifactCustomPropertiesDetail.jsp"
+		   className="com.hp.systinet.sc.ui.layout.ArtifactCustomPropertiesDetailComponent"/>
+		<component name="/detail/editArtifactCustomProperties"
+			page="core/customization/customizableComponent.jsp" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+			<parameter paramName="customizedComponent" paramValue="/customization/customProperties" />
+		</component>
+
+		<!-- Display Lifecycle plan overview section  -->
+		<component name="/core/layout/lifecyclePlanOverview" page="core/layout/lifecyclePlanOverview.jsp"
+		   className="com.hp.systinet.sc.ui.layout.LifeCyclePlanOverviewComponent">
+		   <parameter paramName="artifact" paramValue="${artifact}"/>
+		</component>
+
+        <component name="/core/datasource/datasourceDeclaration" page="/core/datasource/datasourceDeclaration.jsp" className="com.hp.systinet.sc.ui.datasources.DataSourceDeclarationComponent"/>
+
+        <component name="/core/archimate/prepareTemplate" page="/templates/prepareTemplate.jsp"/>
+         <!-- Repository Import -->
+        <task uri="/common/imports/csvImport" component="/core/imports/csvImport" />
+        <component name="/core/imports/csvImport" page="/core/imports/csvImport.jsp" className="com.hp.systinet.sc.ui.imports.CSVImportComponent" />
+        
+        <component name="/core/impl/description/customDescription" page="core/impl/description/customDescription.jsp"/>
+        <!-- Artifact Type Description -->
+		<component name="/core/layout/artifactTypeDescription" page="core/layout/artifactTypeDescriptionComponent.jsp" className="com.hp.systinet.sc.ui.layout.ArtifactTypeDescriptionComponent" />
+        <!-- Hierachical Taxonomy Location Widget -->
+        <component name="/core/impl/widget/hierTaxLocationWidget" page="core/impl/widgets/hierTaxLocationWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.HierTaxLocationWidget" />
+    	    <!-- CSA landing page -->
+    	<component name="/content/layout/steps" page="core/customization/customizableComponent.jsp" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizedComponent" paramValue="/content/layout/stepsInternal"/>
+    	</component>
+    </webFramework>
+</config>

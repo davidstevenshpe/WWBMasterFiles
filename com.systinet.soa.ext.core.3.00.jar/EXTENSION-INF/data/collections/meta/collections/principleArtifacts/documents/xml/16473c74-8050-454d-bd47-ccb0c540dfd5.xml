@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/principleArtifacts/16473c74-8050-454d-bd47-ccb0c540dfd5</r:path>
+   <r:collection>/principleArtifacts/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType></r:contentType>
+   <r:owner>admin</r:owner>
+   <r:uuid>16473c74-8050-454d-bd47-ccb0c540dfd5</r:uuid>
+   <r:domainId>defaultDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2013-12-09T10:55:32.127Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>admin</r:creator>
+      <r:lastDataRevision>0</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:principleArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                              xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                              xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                              xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                              deleted="0"
+                              xlink:href="principleArtifacts/16473c74-8050-454d-bd47-ccb0c540dfd5">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="Motivation"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:motivationArtifact"/>
+               <p:artifactType name="Principle"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:principleArtifact"/>
+            </g:artifactTypeGroup>
+            <g:aggregatesGroup>
+               <p:aggregates xlink:href="principleArtifacts/b1b05a82-a717-4f68-b654-ab4a4ebf22de"/>
+               <p:aggregates xlink:href="principleArtifacts/8944b6ac-60e7-4b84-9b43-0c258ce8af93"/>
+            </g:aggregatesGroup>
+            <g:nameGroup>
+               <p:name>Service orientation</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup>
+               <p:description>Applications are designed in as service oriented. Discrete pieces of software provide application functionality as services.</p:description>
+            </g:descriptionGroup>
+            <p:revision>1</p:revision>
+            <g:keywordGroup/>
+            <p:version>1.0</p:version>
+            <g:architectureLayerGroup>
+               <p:architectureLayer name="Application Layer"
+                                    taxonomyUri="uddi:systinet.com:soa:model:taxonomies:architectureLayer"
+                                    value="applicationLayer"/>
+            </g:architectureLayerGroup>
+            <g:qualityFeatureGroup>
+               <p:qualityFeature name="Effectiveness"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="effectiveness"/>
+               <p:qualityFeature name="Efficiency"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="efficiency"/>
+               <p:qualityFeature name="Integrity"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="integrity"/>
+            </g:qualityFeatureGroup>
+            <p:rationale>To enable a highly effective cooperation and interoperability in the enterprise environment with a large number of systems, the applications need to be designed and developed in a manner to ensure their reusability, interoperability, and changeability, without significant impact on their neighborhood and the entire enterprise environment.
+When using a service oriented approach, the discrete and highly reusable pieces of software provide a well defined and documented application functionality as a service, that can be easily consumed by other similar pieces of software. A service - in this concept - represents a self-contained logical representation of a repeatable function or activity.
+Large applications are then a combination of services that provide complete functionality.
+Each service is built in a way that ensures that the service can exchange information with any other service within the reach of the network, without human interaction and without the need to make changes to the underlying program itself.
+Adherence of this manner significantly reduces costs for "reinventing a wheel", because a satisfaction of similar functional needs does not require a design and development of duplicates, but just a reusing of already created services. Moreover - when a change of particular functionality is required, it is not necessary to change the entire application, just the service providing the required functionality.</p:rationale>
+            <p:implications>Service oriented design, development patterns, and principles need to be defined, documented and adhered to across the organization.
+Required functionality needs to be identified, documented, and reasonable encapsulation into particular services must be defined. The services then must be documented for their functionality, interfaces, managed data, ownership, and usability.
+A central repository or directory of available services needs to be implemented and managed over time. The directory must provide architects and developers with information on individual services, their consumers, and contracts, version, category, and provisioning mechanisms.
+The accepted standards to be used for designing and developing services need to be defined, documented and followed.
+If there are applications which do not follow the service oriented approach , there must be a replacement or redesign plan for them.</p:implications>
+         </a:principleArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

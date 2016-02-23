@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:relationship xmlns:r="http://systinet.com/2005/05/repository">
+   <r:id>1</r:id>
+   <r:type>{http://systinet.com/2005/05/soa/model/property}tool</r:type>
+   <r:state>open</r:state>
+   <r:deleted>false</r:deleted>
+   <r:obsolete>false</r:obsolete>
+   <r:createdOn>2012-01-09T00:00:00.000Z</r:createdOn>
+   <r:source>
+      <r:path>/taskArtifacts/repositoryDataDiagnosticTask</r:path>
+      <r:revision>1</r:revision>
+      <r:revisionTo>0</r:revisionTo>
+   </r:source>
+   <r:target>
+      <r:path>/toolArtifacts/repositoryDataDiagnosticTool.xml</r:path>
+      <r:uuid>fda35d4c-4ae7-439b-978d-27da6a5e23a9</r:uuid>
+      <r:revision>1</r:revision>
+      <r:revisionTo>0</r:revisionTo>
+      <r:deleted>false</r:deleted>
+   </r:target>
+</r:relationship>

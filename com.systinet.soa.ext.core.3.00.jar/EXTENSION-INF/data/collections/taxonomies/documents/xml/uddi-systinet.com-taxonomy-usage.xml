@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taxonomy check="false" brief="false" xmlns="http://systinet.com/uddi/taxonomy/v3/5.5">
+  <tModel tModelKey="uddi:systinet.com:taxonomy:usage" deleted="false" tModelKeyV2="uuid:358bff76-65d7-32d8-b8b9-0c833a5c8912" xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <name xmlns="urn:uddi-org:api_v3">systinet-com:taxonomy:usage</name>
+    <description xmlns="urn:uddi-org:api_v3">The intended usage of an entity. This classification can be set to any value, and can apply
+to any entity published in Registry.</description>
+    <overviewDoc xmlns="urn:uddi-org:api_v3">
+      <overviewURL>http://www.systinet.com</overviewURL>
+    </overviewDoc>
+    <categoryBag xmlns="urn:uddi-org:api_v3">
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Categorization system" keyValue="categorization"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="tModel"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="businessEntity"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="businessService"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="bindingTemplate"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Unchecked value set" keyValue="unchecked"/>
+    </categoryBag>
+  </tModel>
+  <compatibilityBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <compatibility>tModel</compatibility>
+    <compatibility>businessEntity</compatibility>
+    <compatibility>businessService</compatibility>
+    <compatibility>bindingTemplate</compatibility>
+  </compatibilityBag>
+  <categorizationBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <categorization>categorization</categorization>
+  </categorizationBag>
+</taxonomy>

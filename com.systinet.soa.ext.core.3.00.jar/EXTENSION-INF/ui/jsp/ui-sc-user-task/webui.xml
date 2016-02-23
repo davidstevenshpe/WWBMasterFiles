@@ -1,0 +1,34 @@
+<config name="ui-sc-user-task" savingPeriod="5000">
+    <webFramework>
+
+        <task uri="/common/usertask/taskBrowser" component="/usertask/common/taskBrowser"
+              />
+        
+        <component name="/usertask/common/taskBrowser" page="common/taskBrowser.jsp"/>
+
+        <component name="/usertask/common/renderer/taskSourceRenderer" page="common/renderer/taskSourceRenderer.jsp"
+                className="com.hp.systinet.usertask.ui.common.renderer.TaskSourceRenderer"/>
+
+        <component name="/usertask/common/renderer/genericTaskLinkRenderer" page="common/renderer/genericTaskLinkRenderer.jsp"
+                className="com.hp.systinet.usertask.ui.common.renderer.GenericTaskLinkRenderer"/>
+
+        <component name="/usertask/common/pendingTasksBox" page="common/pendingTasksBox.jsp"
+                className="com.hp.systinet.usertask.ui.common.PendingTasksBox"/>
+
+        <component name="/usertask/common/myTasksBox" page="common/myTasksBox.jsp"
+                className="com.hp.systinet.usertask.ui.common.MyTasksBox"/>
+
+        <component name="/usertask/common/renderer/genericMyTasksItemRenderer" page="common/renderer/genericMyTasksItemRenderer.jsp"
+                className="com.hp.systinet.usertask.ui.common.renderer.GenericMyTasksItemRenderer"/>
+
+        <component name="/usertask/common/widget/pendingTasksCountWidget" page="common/widget/pendingTasksCountWidget.jsp"
+                className="com.hp.systinet.usertask.ui.common.widget.PendingTasksCountWidget"/>
+        
+        <component name="/usertask/common/lifecycleTaskFeed" page="common/feed/lifecycleTaskFeed.jsp"
+                className="com.hp.systinet.usertask.ui.common.feed.LifecycleTasksFeedComponent"/>    
+                
+        <component name="/usertask/common/renderer/doSurveyTaskLinkRenderer"
+                   page="common/renderer/doSurveyTaskLinkRenderer.jsp"
+                   className="com.hp.systinet.usertask.ui.common.renderer.DoSurveyTaskLinkRenderer"/>                                   
+    </webFramework>
+</config>

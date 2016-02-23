@@ -1,0 +1,14 @@
+<closure maxDepth="3" maxResults="400" maxProcessingTime="10000">
+	<resultArtifacts>
+		<artifact sdmName="projectArtifact"/>
+	</resultArtifacts>
+	<traversableArtifacts>
+		<artifact sdmName="plateauArtifact"/>
+		<artifact sdmName="deliverableArtifact"/>
+	</traversableArtifacts>
+	<traversableRelations>
+		<relation sdmName="realizedBy"  sourceArtifact="proposalArtifact" targetArtifact="plateauArtifact"/>
+		<relation sdmName="realizedBy"  sourceArtifact="plateauArtifact" targetArtifact="deliverableArtifact"/>
+		<relation sdmName="realizedBy"  sourceArtifact="deliverableArtifact" targetArtifact="projectArtifact"/>
+	</traversableRelations>
+</closure>

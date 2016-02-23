@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taxonomy check="false" brief="false" xmlns="http://systinet.com/uddi/taxonomy/v3/5.5">
+  <tModel tModelKey="uddi:systinet.com:demo:hierarchy" deleted="false" tModelKeyV2="uuid:8af5f49e-e793-3719-92f3-6ab8998eb5a9" xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <name xmlns="urn:uddi-org:api_v3">demo:hierarchy</name>
+    <description xmlns="urn:uddi-org:api_v3">Business hierarchy taxonomy</description>
+    <categoryBag xmlns="urn:uddi-org:api_v3">
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Categorization system" keyValue="categorization"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Unchecked valueset" keyValue="unchecked"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="businessEntity"/>
+    </categoryBag>
+  </tModel>
+  <compatibilityBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <compatibility>businessEntity</compatibility>
+  </compatibilityBag>
+  <categorizationBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <categorization>categorization</categorization>
+  </categorizationBag>
+</taxonomy>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/nodeArtifacts/51168122-cd31-46f0-9465-4628eb20a603</r:path>
+   <r:collection>/nodeArtifacts/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType></r:contentType>
+   <r:owner>admin</r:owner>
+   <r:uuid>51168122-cd31-46f0-9465-4628eb20a603</r:uuid>
+   <r:domainId>CloudTransformationReference</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2015-07-03T00:07:57.623Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>systinet:admin</r:creator>
+      <r:lastDataRevision>0</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:serverProfileArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                                  xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                                  xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                                  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                                  xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                                  xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                  deleted="0"
+                                  xlink:href="nodeArtifacts/51168122-cd31-46f0-9465-4628eb20a603">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="Technology Layer"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:technologyLayer:artifacts:technologyLayerArtifact"/>
+               <p:artifactType name="Node" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:technologyLayer:artifacts:nodeArtifact"/>
+               <p:artifactType name="Device"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:technologyLayer:artifacts:deviceArtifact"/>
+               <p:artifactType name="Server Profile"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:cloud-assessment:artifacts:serverProfileArtifact"/>
+            </g:artifactTypeGroup>
+            <g:assignedFromGroup>
+               <p:assignedFrom xlink:href="locationArtifacts/a3eb0fd6-b6f3-4bc9-bbf7-6720678fd0c8"/>
+            </g:assignedFromGroup>
+            <p:perHourCost>2.287</p:perHourCost>
+            <p:ramSize>61.0</p:ramSize>
+            <p:cpuCores>27</p:cpuCores>
+            <p:storageSize>1600</p:storageSize>
+            <g:nameGroup>
+               <p:name>AWS i2.2xlarge mswin</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup/>
+            <p:revision>1</p:revision>
+            <p:categoryBag/>
+            <p:identifierBag/>
+            <g:keywordGroup/>
+            <p:version>1.0</p:version>
+            <p:repositoryPackage name="Server Profiles" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:repositoryPackages" value="repository:referencedata:serverprofiles"/>
+         </a:serverProfileArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

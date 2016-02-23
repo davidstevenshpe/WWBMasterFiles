@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:relationship xmlns:r="http://systinet.com/2005/05/repository">
+   <r:id>123331</r:id>
+   <r:type>{http://systinet.com/2005/05/soa/model/property}aggregates</r:type>
+   <r:state>open</r:state>
+   <r:deleted>false</r:deleted>
+   <r:obsolete>false</r:obsolete>
+   <r:createdOn>2013-12-10T07:35:23.543Z</r:createdOn>
+   <r:source>
+      <r:path>/principleArtifacts/446bcb96-1cb6-4ee6-9867-c21f815104fe</r:path>
+      <r:revision>1</r:revision>
+      <r:revisionTo>0</r:revisionTo>
+   </r:source>
+   <r:target>
+      <r:path>/principleArtifacts/51863d57-7c58-4b26-9045-674a3ba12f71</r:path>
+      <r:uuid>51863d57-7c58-4b26-9045-674a3ba12f71</r:uuid>
+      <r:revision>1</r:revision>
+      <r:revisionTo>0</r:revisionTo>
+      <r:deleted>false</r:deleted>
+   </r:target>
+</r:relationship>

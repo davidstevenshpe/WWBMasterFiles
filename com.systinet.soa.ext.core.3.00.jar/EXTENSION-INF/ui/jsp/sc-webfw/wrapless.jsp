@@ -1,0 +1,1 @@
+<%@ taglib prefix="syswf" uri="http://systinet.com/jsp/syswf" %><syswf:component name="${contentArea}" prefix="content" params="${contentParameters}" wrap="false"/>

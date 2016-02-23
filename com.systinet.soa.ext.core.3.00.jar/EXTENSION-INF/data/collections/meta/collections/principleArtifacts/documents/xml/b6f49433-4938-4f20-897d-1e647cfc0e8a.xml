@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/principleArtifacts/b6f49433-4938-4f20-897d-1e647cfc0e8a</r:path>
+   <r:collection>/principleArtifacts/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType></r:contentType>
+   <r:owner>admin</r:owner>
+   <r:uuid>b6f49433-4938-4f20-897d-1e647cfc0e8a</r:uuid>
+   <r:domainId>defaultDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2013-12-09T10:54:59.329Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>admin</r:creator>
+      <r:lastDataRevision>0</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:principleArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                              xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                              xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                              xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                              deleted="0"
+                              xlink:href="principleArtifacts/b6f49433-4938-4f20-897d-1e647cfc0e8a">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="Motivation"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:motivationArtifact"/>
+               <p:artifactType name="Principle"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:principleArtifact"/>
+            </g:artifactTypeGroup>
+            <g:aggregatesGroup>
+               <p:aggregates xlink:href="principleArtifacts/ac88fed8-371c-406a-8ed3-c3f2641f4062"/>
+               <p:aggregates xlink:href="principleArtifacts/d652fe30-a6bb-4b15-aa6f-139784f09e2a"/>
+               <p:aggregates xlink:href="principleArtifacts/4cdb9ac2-e087-4460-ae1e-daaa073f2aa2"/>
+               <p:aggregates xlink:href="principleArtifacts/6c02ee3d-0cee-4b96-b8cb-03dfce94fc77"/>
+               <p:aggregates xlink:href="principleArtifacts/4768eb43-ca32-47a1-b2c5-8cd84ff0b17d"/>
+            </g:aggregatesGroup>
+            <g:nameGroup>
+               <p:name>Ensuring a business continuity</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup>
+               <p:description>Key enterprise operations must be maintained even during system outages.</p:description>
+            </g:descriptionGroup>
+            <p:revision>1</p:revision>
+            <g:keywordGroup/>
+            <p:version>1.0</p:version>
+            <g:architectureLayerGroup>
+               <p:architectureLayer name="Business Layer"
+                                    taxonomyUri="uddi:systinet.com:soa:model:taxonomies:architectureLayer"
+                                    value="businessLayer"/>
+               <p:architectureLayer name="Application Layer"
+                                    taxonomyUri="uddi:systinet.com:soa:model:taxonomies:architectureLayer"
+                                    value="applicationLayer"/>
+               <p:architectureLayer name="Technology Layer"
+                                    taxonomyUri="uddi:systinet.com:soa:model:taxonomies:architectureLayer"
+                                    value="technologyLayer"/>
+            </g:architectureLayerGroup>
+            <g:qualityFeatureGroup>
+               <p:qualityFeature name="Availability"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="availability"/>
+               <p:qualityFeature name="Reliability"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="reliability"/>
+               <p:qualityFeature name="Integrity"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="integrity"/>
+            </g:qualityFeatureGroup>
+            <p:rationale>As the business operation becomes more and more dependent on information and on supporting information systems, their reliability and continuous availability must be considered throughout their design, development, usage, and retirement. All key business operations must be provided with the capability to continue functioning regardless of external events (disasters, system failures, data corruption, loss of key individuals, etc.). There must be alternative information delivery mechanisms enabling enterprise business operations.</p:rationale>
+            <p:implications>Business critical functions must be identified, including their requirements for availability, reliability, and recoverability,  as well as their dependency on IT services, applications, and supporting technologies.
+Risks of business interruption must be identified, qualified, and managed. Risk management must not only be limited to regular reviews, testing for vulnerability, and assessment of threat impact, but must also provide alternative capabilities to ensure a continuous business operation (redundant systems, disaster recovery plans and procedures, data backups, etc.). Recoverability, availability, and maintainability must be addressed through the entire life cycle of IT services, applications, and supporting technologies, especially at the time of design and development.
+IT services, applications, and related technology must be assessed for their criticality and impact of their interruption to the enterprise. Relationships between business functions -&gt; IT services -&gt; applications as well as the criticality of business functions and applications should determine the level of required continuity and corresponding recovery plans and redundant solutions.</p:implications>
+         </a:principleArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

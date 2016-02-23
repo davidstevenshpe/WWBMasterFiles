@@ -1,0 +1,142 @@
+<config name="ui-sc-user-task" savingPeriod="5000">
+    <webFramework>
+        <component name="/model/viewpoint" page="model/viewpoint.jsp" className="com.hp.systinet.ea.ui.widgets.ViewPointPortletComponent"/>
+        <component name="/widgets/roadmap" page="widgets/roadmap.jsp" className="com.hp.systinet.ea.ui.widgets.RoadmapComponent"/>
+        <component name="/widgets/showInformation" page="widgets/showInformation.jsp"/>
+        <component name="/homepage/column/internal" className="com.hp.systinet.ea.ui.homepage.ProductHomeColumnComponent" page="homepage/indexColumn.jsp"/>
+         <component name="/homepage/column" page="@/core/customization/customizableComponent"
+                   className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizedComponent" paramValue="/homepage/column/internal"/>
+        </component>
+        <component name="/homepage/repository" page="homepage/repository.jsp"/>
+        <component name="/homepage/transformation" page="homepage/transformation.jsp"/>
+        <component name="/homepage/governance" page="homepage/governance.jsp"/>
+        <component name="/homepage/administration" page="homepage/administration.jsp"/>
+        <component name="/homepage/artifactList" page="homepage/artifactList.jsp" className="com.hp.systinet.ea.ui.homepage.ArtifactList"/>
+        <component name="/homepage/downloadLink" page="homepage/downloadLink.jsp" className="com.hp.systinet.ea.ui.homepage.DownloadLinkComponent"/>
+        <component name="/homepage/tip" page="homepage/tip.jsp"/>
+        <component name="/homepage/surveysAnswer" page="homepage/surveysAnswer.jsp" className="com.hp.systinet.ea.ui.homepage.SurveysAnswer"/>
+        <!--  Layout -->
+        <component name="/content/layout/tabsInternal" page="/layout/tabsContent.jsp" className="com.hp.systinet.ea.cloud.transformation.TabsContent"/>
+        <!-- Diagram -->
+        <component name="/diagram/archimateDiagram" page="/diagram/archimateDiagram.jsp"/>
+        <component name="/diagram/archimateDiagramIF" page="/diagram/archimateDiagramIF.jsp" className="com.hp.systinet.ea.ui.diagram.ArchimateDiagram"/>
+        <task uri="/diagram/archimateDiagram" component="/diagram/archimateDiagramIF" style=""/>        
+        
+        <component name="/diagram/archimateDiagramEditor" page="/diagram/archimateDiagramEditor.jsp"/>
+        <component name="/diagram/archimateDiagramEditorIF" page="/diagram/archimateDiagramEditorIF.jsp" className="com.hp.systinet.ea.ui.diagram.ArchimateDiagram"/>
+        <task uri="/diagram/archimateDiagramEditor" component="/diagram/archimateDiagramEditorIF" style=""/>
+        <!-- Artifact Overview -->
+        <component name="/core/artifactOverview" className="com.hp.systinet.ea.ui.artifact.overview.ArtifactOverview" page="/artifact/overview/artifactOverview.jsp"/>
+        <!-- Proposal -->
+        <component name="/core/proposal/requirementCoverage" page="/artifact/proposal/requirementCoverage.jsp"/>
+        <component name="/core/proposal/deliverable" page="/artifact/proposal/deliverable.jsp" className="com.hp.systinet.ea.ui.artifact.proposal.ProposalDeliverableComponent"/>
+        <component name="/core/proposal/prerequisite" page="/artifact/proposal/prerequisite.jsp" className="com.hp.systinet.ea.ui.artifact.proposal.ProposalDeliverableComponent"/>
+        <component name="/core/proposal/totalCostCalculation" page="/artifact/proposal/totalCostCalculation.jsp" className="com.hp.systinet.ea.ui.artifact.proposal.ProposalTotalCostCalculationComponent"/>
+        <component name="/core/proposal/architectureDiagrams" page="/artifact/proposal/architectureDiagrams.jsp" className="com.hp.systinet.ea.ui.artifact.proposal.ArchitectureDiagramComponent"/>
+        <component name="/core/proposal/createProject" page="/artifact/proposal/createProjectAction.jsp" className="com.hp.systinet.ea.ui.artifact.proposal.CreateProjectComponent"/>
+        <!-- Plateau -->
+        <component name="/core/plateau/associatedDiagrams" page="/artifact/plateau/associatedDiagrams.jsp"/>
+        <!-- Principle -->
+        <component name="/core/principle/associatedPolicyReports" page="/artifact/principle/associatedPolicyReports.jsp"/>
+        
+        <!-- Survey -->
+        <component name="/newui/nifty" page="/layout/nifty.jsp"/>
+        <component name="/survey/doSurvey" page="/survey/doSurvey.jsp" className="com.hp.systinet.ea.ui.survey.SurveyComponent"/>
+        <task uri="/survey/doSurvey" component="/survey/doSurvey" style=""/>
+		
+		<!-- Survey Assessment Portfolio-->
+		<component name="/survey/assessmentPortfolioComponent" page="/survey/assessmentPortfolioComponent.jsp" className="com.hp.systinet.ea.ui.survey.AssessmentPortfolioComponent"/>
+        
+		<!-- Survey Preview-->
+		<component name="/survey/surveyPreviewComponent" page="/survey/surveyPreviewComponent.jsp" className="com.hp.systinet.ea.ui.survey.SurveyPreviewComponent"/>
+		
+        <!-- Start survey wizard: step 1 -->
+        <component name="/survey/startSurvey" page="/survey/startSurveyWizard.jsp" className="com.hp.systinet.ea.ui.survey.StartSurveyWizardComponent"/>
+        <task uri="/survey/startSurvey" component="/survey/startSurvey"/>
+        
+        <!-- Start survey wizard: step 2 -->
+        <component name="/survey/startSurveySelection" page="/survey/startSurveyArtifactSelection.jsp" className="com.hp.systinet.ea.ui.survey.StartSurveyWizardArtifactSelectionComponent"/>
+        <task uri="/survey/startSurveySelection" component="/survey/startSurveySelection"/>
+        
+        <!-- Start survey wizard: step 3 -->
+        <component name="/survey/startSurveyFinish" page="/survey/startSurveyFinish.jsp" className="com.hp.systinet.ea.ui.survey.StartSurveyWizardFinishComponent"/>
+        <task uri="/survey/startSurveyFinish" component="/survey/startSurveyFinish"/>
+        
+        <!--  Survey definition management -->
+        <task uri="/survey/surveyManagement/*" component="/survey/viewSurveyManagement" style="/core/impl/layout/newUi"/>
+        <component name="/survey/viewSurveyManagement" page="/survey/viewSurveyMagementComponent.jsp" className="com.hp.systinet.ea.ui.survey.ViewSurveyManagementComponent"/>
+        <component name="/survey/progressSurveyManagementComponent" page="/survey/progressSurveyMagementComponent.jsp" className="com.hp.systinet.ea.ui.survey.ProgressSurveyManagementComponent"/>
+        <component name="/survey/action/startSurveyDefinition" page="/survey/startSurveyDefinitionAction.jsp" className="com.hp.systinet.ea.ui.survey.StartSurveyDefinitionActionComponent"/>
+        <component name="/survey/action/editSurveyDefinition" page="/survey/editSurveyDefinitionAction.jsp" className="com.hp.systinet.ea.ui.survey.EditSurveyDefinitionActionComponent"/>
+        
+        
+        <!-- Survey Artifact - Context Actions -->
+        <component name="/survey/surveyedArtifacts" page="/survey/surveyedArtifacts.jsp" className="com.hp.systinet.ea.ui.survey.SurveyedArtifactsComponent"/>
+        <component name="/survey/contextActions/markCompleted" page="/survey/contextActions/markCompleted.jsp" className="com.hp.systinet.ea.ui.survey.contextActions.MarkCompleted"/>
+        <component name="/survey/contextActions/cancelSurvey" page="/survey/contextActions/cancelSurvey.jsp" className="com.hp.systinet.ea.ui.survey.contextActions.CancelSurvey"/>
+        <component name="/survey/viewAnswer" page="/survey/viewSurveyAnswerComponent.jsp" className="com.hp.systinet.ea.ui.survey.ViewSurveyAnswerComponent"/>
+        <component name="/survey/offerSurvey" page="/survey/offerSurveyComponent.jsp" className="com.hp.systinet.ea.ui.survey.OfferSurveyComponent"/>
+
+        <!-- Survey Artifact - Widgets -->
+		<component name="/survey/widgets/surveyStatus" page="/survey/widgets/surveyStatusWidget.jsp" className="com.hp.systinet.ea.ui.survey.widgets.SurveyStatusWidget"/>
+        <component name="/survey/widgets/surveyProgress" page="/survey/widgets/surveyProgressWidget.jsp" className="com.hp.systinet.ea.ui.survey.widgets.SurveyProgressWidget"/>
+        <component name="/survey/widgets/surveyDefinition" page="/survey/widgets/surveyDefinitionWidget.jsp" className="com.hp.systinet.ea.ui.survey.widgets.SurveyDefinitionWidget"/>
+        
+        <!-- CSA Cloud migration -->
+        <component name="/cloud/migration/csa/publishButtonComponent" page="/cloud/migration/csa/publishButtonComponent.jsp" className="com.hp.systinet.ea.cloud.assessment.ui.PublishButtonComponent" />
+        <component name="/cloud/migration/csa/financial/deploymentAlternatives" page="/cloud/migration/csa/deploymentAlternatives.jsp" className="com.hp.systinet.ea.cloud.assessment.ui.DeploymentAlternativesComponent" />
+        <component name="/cloud/migration/csa/deploymentModels" page="/cloud/migration/csa/deploymentModels.jsp" className="com.hp.systinet.ea.cloud.assessment.ui.DeploymentModelsComponent" />
+        <component name="/cloud/migration/csa/deploymentModelPreview" page="/cloud/migration/csa/deploymentModelPreview.jsp" className="com.hp.systinet.ea.cloud.assessment.ui.DeploymentModelPreviewComponent" />
+        <component name="/cloud/migration/csa/financial/financialAlignmentScore" page="/cloud/migration/csa/financialAlignmentScore.jsp" className="com.hp.systinet.ea.cloud.assessment.ui.FinancialAlignmentScore"/>
+		
+		<component name="/cloud/migration/csa/overview/cloudMigrationServiceDesigns" page="/cloud/migration/csa/cloudMigrationServiceDesigns.jsp" 
+		    className="com.hp.systinet.ea.cloud.assessment.ui.CloudMigrationServiceDesigns"/>
+        
+        
+        <component name="/widgets/propertyWithEditButton" page="/widgets/propertyWithEditButton.jsp" className="com.hp.systinet.ea.ui.widgets.PropertyWithEditButton"/>
+        
+        <!-- Start csa publishing wizard: step 1 -->
+        <component name="/cloud/migration/csa/startCSAPublishing" page="/cloud/migration/csa/startCSAPublishingWizard.jsp" className="com.hp.systinet.ea.ui.csa.StartCSAPublishingWizardComponent"/>
+        <task uri="/cloud/migration/csa/startCSAPublishing" component="/cloud/migration/csa/startCSAPublishing"/>
+        
+        <component name="/cloud/migration/csa/startCSAPublishingBuiltInModel" page="/cloud/migration/csa/startCSAPublishingBuiltInModel.jsp" className="com.hp.systinet.ea.ui.csa.StartCSAPublishingBuiltInModelWizardComponent"/>
+        <task uri="/cloud/migration/csa/startCSAPublishingBuiltInModel" component="/cloud/migration/csa/startCSAPublishingBuiltInModel"/>
+        
+        <!-- Start csa publishing wizard: finish -->
+        <component name="/cloud/migration/csa/startCSAPublishingFinish" page="/cloud/migration/csa/startCSAPublishingWizardFinish.jsp" className="com.hp.systinet.ea.ui.csa.StartCSAPublishingWizardFinishComponent"/>
+        <task uri="/cloud/migration/csa/startCSAPublishingFinish" component="/cloud/migration/csa/startCSAPublishingFinish"/>
+        
+        <!-- Respondent Selector -->
+        <component name="/survey/respondentSelector" page="/survey/respondentSelector.jsp" className="com.hp.systinet.ea.ui.survey.RespondentSelectorComponent" />
+        
+        <!--  CSA landing page -->
+        <component name="/newui/layout/verticalPanel/KPI" page="/layout/verticalPanel/KPI.jsp" className="com.hp.systinet.ea.ui.RequestDataHolderComponent"/>
+        <component name="/content/layout/stepsInternal" page="/layout/stepsContent.jsp"/>
+        <component name="/newui/layout/verticalPanel/progressingKPI" page="/layout/verticalPanel/progressingKPI.jsp"/>
+        <component name="/newui/layout/verticalPanel/templatePanel" page="/layout/verticalPanel/templatePanel.jsp" className="com.hp.systinet.ea.ui.TemplateComponent"/>
+        <component name="/cloud/migration/csa/topMenuInternal" page="/cloud/migration/csa/topMenu.jsp" className="com.hp.systinet.sc.ui.layout.NavigationComponent"/>
+        <component name="/cloud/migration/csa/backToCSA" page="/cloud/migration/csa/backToCSALink.jsp" className="com.hp.systinet.ea.ui.csa.BackToCSAComponent"/>
+        <component name="/cloud/migration/csa/topMenu" page="@/core/customization/customizableComponent" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizationId" paramValue="catalog.leftmenu.csa"/>
+            <parameter paramName="customizedComponent" paramValue="/cloud/migration/csa/topMenuInternal"/>
+        </component>
+        
+        <!-- Visualized Portlet -->
+        <component name="/report/impl/visualizedPortlet" page="/portlet/visualizedPortlet.jsp" className="com.hp.systinet.ea.ui.portlet.VisualizedPortletComponent"/>
+        <component name="/report/impl/structureMap" page="/portlet/visualizedPortlet.jsp" className="com.hp.systinet.ea.ui.portlet.VisualizedPortletComponent">
+        	<parameter paramName="portletClass" paramValue="EA.portlets.StructureMap"/>
+        </component>
+        <component name="/report/impl/heatmap" page="/portlet/visualizedPortlet.jsp" className="com.hp.systinet.ea.ui.portlet.VisualizedPortletComponent">
+        	<parameter paramName="portletClass" paramValue="EA.portlets.HeatMapReport"/>
+        </component>
+        <!-- Heat Map -->
+        <task uri="/reports/impl/heatmap" component="/report/impl/heatmap"/>
+         <!-- Structure Map -->        
+        <task uri="/ui-ea-catalog/structureMap"  component="/report/impl/structureMap"/>
+        <task uri="/reports/impl/structureMap" component="/report/impl/structureMap"/>
+        
+        <!--Domain Selection Setting Window  -->
+        <component name="/domain/domainSelectionWindow" page="/domain/domainSelectionWindow.jsp" className="com.hp.systinet.ea.ui.domain.DomainSelectionWindow"/>
+    </webFramework>
+</config>

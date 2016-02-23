@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="sdmConfiguration">
+    <xs:annotation>
+      <xs:documentation>SOA Definition Model configuration</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="taxonomyDescriptors"/>
+        <xs:element ref="propertyDescriptors"/>
+        <xs:element ref="artifactDescriptors"/>
+        <xs:element ref="artifactsTaxonomy"/>
+      </xs:sequence>
+      <xs:attribute ref="version"/>
+      <xs:attribute ref="readOnly"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="taxonomyDescriptors">
+    <xs:annotation>
+      <xs:documentation>Declaration of taxonomies to be used as a range of taxonomic artifact properties</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="taxonomyDescriptor"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="taxonomyDescriptor">
+    <xs:annotation>
+      <xs:documentation>Declaration of a new taxonomy.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="uddiV2Key"/>
+      </xs:sequence>
+      <xs:attribute name="uri" use="required" type="xs:anyURI">
+        <xs:annotation>
+          <xs:documentation>URI used for taxonomy identification. It must be the
+            URI of the tModel that is used for the
+          identification of this taxonomy in UDDI.
+          The key has path term /taxonomy/tModel/@tModelKey in the taxonomy definition.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="uddiV2Key" type="xs:anyURI">
+    <xs:annotation>
+      <xs:documentation>Optional UDDI Version 2 key.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="propertyDescriptors">
+    <xs:annotation>
+      <xs:documentation>Definition of properties.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="predefinedPropertyTypes"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="propertyDescriptor"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="predefinedPropertyTypes">
+    <xs:annotation>
+      <xs:documentation>Basic property types that serve as base types for artifact properties.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="propertyType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="propertyType">
+    <xs:annotation>
+      <xs:documentation>Definition of a property type.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="description">
+          <xs:annotation>
+            <xs:documentation>Property type description (only used for documentation purposes).</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element ref="xmlSchema">
+          <xs:annotation>
+            <xs:documentation>
+                XML Schema related information about the property type.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" ref="annotations"/>
+      </xs:sequence>
+      <xs:attribute name="uri" use="required" type="xs:anyURI">
+        <xs:annotation>
+          <xs:documentation>URI used for referencing the property type.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="annotations">
+    <xs:annotation>
+      <xs:documentation>Miscellaneous name-value pairs which can be used at runtime, by the UI or to pass additional
+          information to tools.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="annotation"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="annotation">
+    <xs:annotation>
+      <xs:documentation>A named item of additional information.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element ref="value"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="name" type="xs:NCName">
+    <xs:annotation>
+      <xs:documentation>Annotation name</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="value" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>Annotation value</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="propertyDescriptor">
+    <xs:annotation>
+      <xs:documentation>Definition of a property.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="label"/>
+        <xs:element ref="description">
+          <xs:annotation>
+            <xs:documentation>Description for use in the user interface and documentation including Javadocs.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element ref="xmlSchema">
+          <xs:annotation>
+            <xs:documentation>XML Schema related definitions.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" ref="annotations"/>
+        <xs:element minOccurs="0" ref="range"/>
+        <xs:element minOccurs="0" ref="relationship"/>
+        <xs:element minOccurs="0" ref="defaultValue"/>
+        <xs:element minOccurs="0" ref="multiple"/>
+        <xs:element minOccurs="0" ref="deprecated"/>
+      </xs:sequence>
+      <xs:attribute name="system" type="xs:boolean">
+        <xs:annotation>
+        <xs:documentation>Determines if the property is 'system'. Such property is set by SDM runtime and cannot be changed by SDM client (UI,...)</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="uri" use="required" type="xs:anyURI">
+        <xs:annotation>
+          <xs:documentation>URI identifying this property in references to it.</xs:documentation>
+         </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="range">
+    <xs:annotation>
+      <xs:documentation>Specifies what values a property can take.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="artifact"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" name="propertyGroup" type="xs:string">
+		    <xs:annotation>
+		      <xs:documentation>If the property is based on the document
+		          relationship property type, this attribute denotes the
+		            URI of the property group that is the target of the
+		            relationship.</xs:documentation>
+		    </xs:annotation>
+		</xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" ref="taxonomy"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="artifact" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>If the property is based on the document
+          relationship property type, this attribute denotes the
+            URI of the artifact type that is the target of the
+            relationship. It can be any node in the artifact taxonomy.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="taxonomy" type="xs:anyURI">
+    <xs:annotation>
+      <xs:documentation>If the property is based on the taxonomy property type, this
+        element denotes the URI of the taxonomy referenced.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="relationship">
+    <xs:annotation>
+      <xs:documentation>If the property is based on the relationship property type, this
+        element specifies the relationship.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="outgoing"/>
+        <xs:element minOccurs="0" ref="inverseRelationship"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="outgoing" type="xs:boolean">
+    <xs:annotation>
+      <xs:documentation>Specifies whether the artifact is the source (else the target) of the relationship.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="inverseRelationship">
+    <xs:annotation>
+      <xs:documentation>Identifies the representation of the same relationship but in the opposite direction.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="propertyUri"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="propertyUri" type="xs:anyURI">
+    <xs:annotation>
+      <xs:documentation>The property that represents the same relationship but in the opposite direction.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="artifactDescriptors">
+    <xs:annotation>
+      <xs:documentation>Definition of artifacts.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="propertyGroup"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="artifactDescriptor"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="propertyGroup">
+    <xs:annotation>
+      <xs:documentation>A set of properties used together in some artifact types.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="label"/>
+        <xs:element maxOccurs="unbounded" ref="property"/>
+      </xs:sequence>
+      <xs:attribute name="uri" use="required" type="xs:anyURI">
+        <xs:annotation>
+          <xs:documentation>URI identifying the property group in references to it.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="artifactDescriptor">
+    <xs:annotation>
+      <xs:documentation>
+          Artifact definition.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="label"/>
+        <xs:element ref="description"/>
+        <xs:element ref="element"/>
+        <xs:element minOccurs="0" ref="properties"/>
+        <xs:element minOccurs="0" ref="multiple"/>
+        <xs:element minOccurs="0" ref="collection"/>
+        <xs:element minOccurs="0" ref="annotations"/>
+        <xs:element minOccurs="0" ref="attachment"/>
+        <xs:element minOccurs="0" ref="deprecated"/>
+      </xs:sequence>
+      <xs:attribute name="isAbstract" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Optional boolean attribute describing whether the artifact can
+          or cannot be instantiated.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="uri" use="required" type="xs:anyURI">
+        <xs:annotation>
+          <xs:documentation>The URI used to identify the
+        artifact.</xs:documentation>
+         </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="extendsArtifact" type="xs:anyURI">
+        <xs:annotation>
+          <xs:documentation>An attribute allowing the extension of an artifact. It contains
+          the URI of the super-artifact.</xs:documentation>
+         </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="properties">
+    <xs:annotation>
+      <xs:documentation>
+          Artifact
+          properties.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="includePropertyGroups"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="property"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="includePropertyGroups" type="uri">
+    <xs:annotation>
+      <xs:documentation>The reference to property groups to be included.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="collection" type="xs:NCName">
+    <xs:annotation>
+      <xs:documentation>The XMLDB collection used to store this type of artifact. Please note that different
+          artifacts may share the same XMLDB collection. In this case exactly one abstract artifact
+          must be declared as mapped to this collection (using this element) and other non-abstract
+          artifacts mapped here must have all the properties of the abstract artifact. In order to
+          achieve this, you may declare the same properties in all artifacts explicitly, inherit
+          from the abstract artifacts or use property groups.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="deprecated" type="xs:boolean">
+    <xs:annotation>
+      <xs:documentation>Boolean value denoting whether the entity is deprecated.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="attachment">
+    <xs:annotation>
+      <xs:documentation>If the artifact also has a data part, specify how it should be rendered. For example,
+          WSDL is an artifact with an attachment and Implementation is an artifact without an
+          attachment.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="renderer"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="renderer" type="xs:anyURI">
+    <xs:annotation>
+      <xs:documentation>URI of attachment renderer used to render data for the artifact type. The attachment renderers are listed in /sdmConfig/ui/attachmentRenderers.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="artifactsTaxonomy">
+    <xs:annotation>
+      <xs:documentation>Taxonomy of artifact types.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="categories"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="categories">
+    <xs:annotation>
+      <xs:documentation>The tree of categories defining the artifact taxonomy.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="category"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="label" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>Label for use in the user interface.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="description" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>Description for use in the user interface and documentation.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="xmlSchema">
+    <xs:annotation>
+      <xs:documentation>XML Schema describing the structure of a property value.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="basedOnPropertyType"/>
+        <xs:element ref="path"/>
+        <xs:element ref="element"/>
+      </xs:sequence>
+      <xs:attribute name="type" type="xs:NCName">
+        <xs:annotation>
+          <xs:documentation>simpleType or complextype.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="basedOnPropertyType" type="xs:anyURI">
+    <xs:annotation>
+      <xs:documentation>The property type (URI) to be used as the base type of this property. Note that every
+          property is based on a property type.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="path" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>The relative path of the XML Schema file. For predefined propertyTypes this is part of the definition and for properties it is generated based on the propertyDescriptor.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="multiple">
+    <xs:annotation>
+      <xs:documentation>Details that apply whenever the property has 'multiple' cardinality in an artifact definition.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="label"/>
+        <xs:element ref="minOccurs" minOccurs="0"/>
+        <xs:element ref="maxOccurs" minOccurs="0"/>
+        <xs:element ref="defaultValue" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="minOccurs" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>Minimum number of occurences in an artifact when the cardinality is 'multiple'.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="maxOccurs" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>Maximum number of occurences in an artifact when the cardinality is 'multiple'.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="property">
+    <xs:annotation>
+      <xs:documentation>Reference to a property and related details.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="uri">
+          <xs:annotation>
+            <xs:documentation>Referencce to the property by its URI.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element ref="cardinality"/>
+        <xs:element ref="label" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>A label which overrides the label specified in the property definition.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element ref="description" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>A description which overrides the description attribute specified in the property definition.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" ref="deprecated"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="uri" type="xs:anyURI">
+    <xs:annotation>
+      <xs:documentation>A reference to an item by its URI.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="uri">
+    <xs:annotation>
+      <xs:documentation>>The URI of the property group to be included.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="uri"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="cardinality" type="xs:NCName">
+    <xs:annotation>
+      <xs:documentation>The property cardinality - can be 'optional',
+          'required' or 'multiple'. Optional means 0 or 1
+          occurence, required means that the property must always be present in the artifact,
+          multiple means that the minOccurs and maxOccurs attributes from the property should be
+          used (the default is 0 to unbounded).</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:attribute name="version" type="xs:string">
+    <xs:annotation>
+    <xs:documentation>Version of SDM module.</xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+  <xs:attribute name="readOnly" type="xs:boolean">
+    <xs:annotation>
+    <xs:documentation>When 'true', then no SDM entity of this SDM module can be modified</xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+  <xs:element name="defaultValue">
+    <xs:annotation>
+    <xs:documentation>Default value holder.</xs:documentation>
+    </xs:annotation>
+      <xs:complexType>
+          <xs:sequence>
+          <xs:any namespace="##any" processContents="lax" minOccurs="1" maxOccurs="1"/>
+          </xs:sequence>
+      </xs:complexType>
+  </xs:element>
+    <xs:element name="element">
+    <xs:annotation>
+      <xs:documentation>QName of an element representing an artifact or property. Note that the QName for a property overrides the QName defined for the property type.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="localName"/>
+        <xs:element minOccurs="0" ref="namespace"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="localName" type="xs:NCName">
+    <xs:annotation>
+      <xs:documentation>The local name of the element.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="namespace" type="xs:anyURI">
+    <xs:annotation>
+      <xs:documentation>XML namespace of an element. For artifacts this is not required - the namespace of the element representing the artifact is always
+        http://systinet.com/2005/05/soa/model/artifact.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="category">
+    <xs:annotation>
+      <xs:documentation>The category definition.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="category"/>
+      </xs:sequence>
+      <xs:attribute name="artifactUri" use="required" type="xs:anyURI">
+        <xs:annotation>
+          <xs:documentation>The URI of the artifact descriptor.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

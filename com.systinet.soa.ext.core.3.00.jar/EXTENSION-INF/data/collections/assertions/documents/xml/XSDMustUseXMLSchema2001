@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pm:Assertion xmlns:pm="http://systinet.com/2005/10/soa/policy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:a="http://systinet.com/2005/05/soa/model/artifact" xmlns:r="http://systinet.com/2005/05/repository" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:pt="http://systinet.com/2005/05/soa/model/property/type" xmlns:rest="http://systinet.com/2005/05/soa/resource" xmlns:p="http://systinet.com/2005/05/soa/resource" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup">
+        <pm:Template>
+          <bp:XSDMustUseXMLSchema2001 xmlns:bp="http://systinet.com/2005/10/soa/policy/bpa"/>
+        </pm:Template>
+        <pm:Bundle>
+            <pm:String Key="bad-ns">The namespace of XML schema is probably incorrect. Use "http://www.w3.org/2001/XMLSchema" namespace instead.</pm:String>
+            <pm:String Key="bad-element">The schema document root element must be xs:schema.</pm:String>
+        </pm:Bundle>
+        <pm:Validation xmlns:val="http://systinet.com/2005/10/soa/policy/validation">
+          <val:XQuery>
+
+    declare namespace val="http://systinet.com/2005/10/soa/policy/validation";
+
+    let $root := /*[1]
+    return
+        if (local-name($root)="schema") then
+            if (namespace-uri($root)="http://www.w3.org/2001/XMLSchema") then
+                val:assertionOK()
+            else
+                (: Not applicable here is also correct. Users can use "schema" element in their own namespace. :)
+                val:assertionFailed(val:l10n('bad-ns'))
+        else
+            if (namespace-uri($root)="http://www.w3.org/2001/XMLSchema") then
+                val:assertionFailed(val:l10n('bad-element'))
+            else
+                val:assertionNotApplicable()
+
+          </val:XQuery>
+        </pm:Validation>
+      </pm:Assertion>

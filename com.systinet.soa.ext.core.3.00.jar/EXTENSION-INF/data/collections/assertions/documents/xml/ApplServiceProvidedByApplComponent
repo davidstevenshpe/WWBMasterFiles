@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><pm:Assertion xmlns:pm="http://systinet.com/2005/10/soa/policy" xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup" xmlns:r="http://systinet.com/2005/05/repository" xmlns:p="http://systinet.com/2005/05/soa/model/property" xmlns:a="http://systinet.com/2005/05/soa/model/artifact" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:pt="http://systinet.com/2005/05/soa/model/property/type" xmlns:rest="http://systinet.com/2005/05/soa/resource" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><pm:Template><p0:ApplServiceProvidedByApplComponent xmlns:p0="urn:localhost:com:enter-your-organization-or-project-specific-namespace"/></pm:Template><pm:Validation SourceType="xmlns(ns=http://systinet.com/2005/05/soa/model/artifact)qname(ns:applicationServiceArtifact)"><XQuery xmlns="http://systinet.com/2005/10/soa/policy/validation" xmlns:xlink="http://www.w3.org/1999/xlink/">declare namespace val="http://systinet.com/2005/10/soa/policy/validation";
+declare namespace pm="http://systinet.com/2005/10/soa/policy/report";
+declare namespace a="http://systinet.com/2005/05/soa/model/artifact";
+declare namespace p="http://systinet.com/2005/05/soa/model/property";
+declare namespace g="http://systinet.com/2005/05/soa/model/propertyGroup";
+declare namespace xlink="http://www.w3.org/1999/xlink";
+declare namespace rest="http://systinet.com/2005/05/soa/resource";
+    
+let $condition := exists(rest:resource/rest:descriptor/a:applicationServiceArtifact/g:realizedByGroup/p:realizedBy[contains(@xlink:href,'applicationComponentArtifacts')])
+ or exists(rest:resource/rest:descriptor/a:applicationServiceArtifact/g:assignedFromGroup/p:assignedFrom[contains(@xlink:href,'appInterfaces')])
+
+return
+   if ($condition) then
+      val:assertionOK()
+   else
+      val:assertionFailed('There is no Application Component this service is assigned to. That means that it is not known how this application service is implemented.')
+</XQuery></pm:Validation></pm:Assertion>

@@ -1,0 +1,25 @@
+<closure maxDepth="1" maxResults="400" maxProcessingTime="10000" seedsAsResults="true">
+    <defaultSeedQuery>
+      select f._uuid from projectArtifact f LEFT JOIN projectFinancialProfileArtifact pfp on bind(f.financialProfile) where not exists 
+        (select 1 from projectArtifact f1 join projectArtifact f2 
+               using f2.composedOf where f1._uuid=f._uuid) and pfp.plannedCost is not null
+    </defaultSeedQuery>
+
+    <orderBy>costValue ASC, name ASC</orderBy>
+
+    <resultArtifacts>
+        <artifact sdmName="projectArtifact">                   
+           <field name="costValue" query="SELECT pfp.plannedCost as costValue FROM  projectArtifact p LEFT JOIN projectFinancialProfileArtifact pfp on bind(p.financialProfile) where p._uuid=:uuid"/>
+           <field name="density" query="SELECT pfp.entityHealth.val as density FROM  projectArtifact p LEFT JOIN projectFinancialProfileArtifact pfp on bind(p.financialProfile) where p._uuid=:uuid"/>        
+        </artifact>  
+    </resultArtifacts>
+
+    <traversableArtifacts>
+        <artifact sdmName="projectArtifact"/>
+    </traversableArtifacts>
+
+    <traversableRelations>
+        <relation sdmName="composedOf"/>
+    </traversableRelations>
+
+</closure>

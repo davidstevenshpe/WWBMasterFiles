@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config name="framework" savingPeriod="5000">
+    <webFramework>
+       
+        <!-- layouting -->
+        <component name="/layout/columns" page="layout/columns.jsp" className="com.systinet.webfw.taglib.layout.layouts.ColumnLayout"/>
+        <component name="/layout/box" page="layout/box.jsp" className="com.systinet.webfw.taglib.layout.BoxComponent"/>
+        <component name="/layout/layoutControls" page="layout/layoutControls.jsp" className="com.systinet.webfw.taglib.layout.LayoutControlsComponent"/>
+    	
+        <!-- dashboard layout -->
+        <component name="/layout/dashboard" page="layout/dashboard_main.jsp" className="com.systinet.webfw.taglib.layout.layouts.ColumnLayout"/>
+        <component name="/layout/dashboard/box" page="layout/dashboard/box.jsp" className="com.systinet.webfw.taglib.layout.BoxComponent"/>
+        <component name="/layout/dashboard/layoutControls" page="layout/dashboard/layoutControls.jsp" className="com.systinet.webfw.taglib.layout.LayoutControlsComponent"/>
+        <component name="/layout/dashboard/layoutAddControl" page="layout/dashboard/layoutAddControl.jsp" className="com.systinet.webfw.taglib.layout.LayoutControlsComponent"/>
+
+        <!-- wideDashboard layout -->
+        <component name="/layout/wideDashboard" page="layout/wideDashboard.jsp" className="com.systinet.webfw.taglib.layout.layouts.ColumnLayout"/>
+        <component name="/layout/wideDashboard/box" page="layout/wideDashboard/box.jsp" className="com.systinet.webfw.taglib.layout.BoxComponent"/>        
+
+        <!-- five box layout -->
+        <component name="/layout/fiveBoxLayout" page="layout/fiveBoxLayout.jsp" className="com.systinet.webfw.taglib.layout.layouts.ColumnLayout"/>
+        <component name="/layout/common" page="layout/common.jsp"/>
+                
+        <component name="main" page="main.jsp" className="com.systinet.webfw.component.MainComponent"/>
+        <component name="wrapless" page="wrapless.jsp"/>
+         
+        <!--
+        Following component was replaced by ui-web-war's shared/pageFooter.jsp.
+        <component name="notices" page="notices.jsp"/>
+        -->
+        <component name="/layout/rootLayout" page="layout/rootLayout.jsp" className="com.systinet.webfw.component.RootComponent"/>        
+        
+        <!-- system -->
+        <component name="home" page="home.jsp"/>
+        <component name="error" page="error.jsp" className="com.systinet.webfw.component.ErrorComponent" context=""/>
+        <component name="lastKnownLocation" page="lastKnownLocation.jsp" className="com.systinet.webfw.component.LastKnownLocation"/>
+        <component name="formattedStackTrace" page="formattedStackTrace.jsp"/>
+        <component name="errorAjax" page="errorAjax.jsp" className="com.systinet.webfw.component.ErrorComponent"/>
+        <component name="login" className="com.systinet.webfw.component.LoginComponent" page="login.jsp"/>
+        <component name="sessionExpired" page="sessionExpired.jsp"/>
+        <component name="backContextLost" page="backContextLost.jsp"/>
+        <component name="logout" className="com.systinet.webfw.component.LogoutComponent"/>
+        <component name="navigationPath" className="com.systinet.webfw.component.NavigationPath" page="navigationPath.jsp"/>
+        <component name="breadcrumbs" page="breadcrumbs.jsp" className="com.systinet.webfw.component.Breadcrumbs"/>
+        <component name="ruler" page="ruler.jsp"/>
+        <component name="logoutLink" className="com.systinet.webfw.component.LogoutLink" page="logoutLink.jsp"/>
+
+        <task uri="/" component="home">
+        	<parameter paramName="captionKey" paramValue="com.systinet.webfw.ui.WebFrameworkComponentMessages$web.home_Home"/>
+        </task>
+        <task uri="/error" component="error">
+            <parameter paramName="captionKey" paramValue="com.systinet.webfw.ui.WebFrameworkComponentMessages$web.error_Error"/>
+        </task>
+
+        <task uri="/errorAjax" component="errorAjax" style="">
+            <parameter paramName="captionKey" paramValue="com.systinet.webfw.ui.WebFrameworkComponentMessages$web.error_Error"/>
+        </task>
+        
+        <task uri="/login" component="login">
+            <parameter paramName="captionKey" paramValue="com.systinet.webfw.ui.WebFrameworkComponentMessages$web.login_SignIn"/>
+        </task>
+        <task uri="/logout" component="logout">
+           <parameter paramName="captionKey" paramValue="com.systinet.webfw.ui.WebFrameworkComponentMessages$web.logout_Logout"/>
+        </task>
+        <task uri="/sessionExpired" component="sessionExpired">
+        	<parameter paramName="captionKey" paramValue="com.systinet.webfw.ui.WebFrameworkComponentMessages$web.sessionExpired_SessionExpired"/>
+        </task>
+        <task uri="/backContextLost" component="backContextLost">
+        	<parameter paramName="captionKey" paramValue="com.systinet.webfw.ui.WebFrameworkComponentMessages$web.backContextLost_BackContextLost"/>
+        </task>
+        <task uri="/redirect" component="redirect">
+        	<parameter paramName="captionKey" paramValue="com.systinet.webfw.ui.WebFrameworkComponentMessages$web.redirect_Redirect"/>
+        </task>
+
+        <component name="/async/asyncComponent" page="async/asyncComponent.jsp" className="com.hp.systinet.webfw.async.AsyncComponent"/>        
+        
+        <!-- TODO move to ui-sc-tools or ui-sc-newui-something (when established) -->
+        <task uri="/newAjaxError" component="newError" style="/core/impl/layout/newUi" />
+        <task uri="/newError" component="newError" style="/core/impl/layout/newUi" context=".." />
+        <component name="newError" page="newErrorComponent.jsp" className="com.systinet.webfw.component.NewErrorComponent"/>
+
+    </webFramework>
+
+</config>

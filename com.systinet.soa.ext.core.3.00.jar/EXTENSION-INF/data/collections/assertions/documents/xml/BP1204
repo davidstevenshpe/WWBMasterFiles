@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pm:Assertion xmlns:pm="http://systinet.com/2005/10/soa/policy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:a="http://systinet.com/2005/05/soa/model/artifact" xmlns:r="http://systinet.com/2005/05/repository" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:pt="http://systinet.com/2005/05/soa/model/property/type" xmlns:rest="http://systinet.com/2005/05/soa/resource" xmlns:p="http://systinet.com/2005/05/soa/resource" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup">
+        <pm:Template xmlns:pe="http://systinet.com/2005/10/soa/policy/report" xmlns:pej="http://systinet.com/2005/10/soa/policy/validation/ejb" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsi="http://www.ws-i.org/testing/2004/07/assertions/">
+          <wsi:BP1204/>
+        </pm:Template>
+        <pm:Validation SourceType="xmlns(ns=http://schemas.xmlsoap.org/soap/envelope/)qname(ns:Envelope)" xmlns:r="http://systinet.com/2005/05/soa/resource" xmlns:pe="http://systinet.com/2005/10/soa/policy/report" xmlns:pej="http://systinet.com/2005/10/soa/policy/validation/ejb" xmlns:pr="http://systinet.com/2005/10/soa/policy/report" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:val="http://systinet.com/2005/10/soa/policy/validation" xmlns:wsi="http://www.ws-i.org/testing/2004/07/assertions/">
+          <wsim:Message AssertionID="BP1204" xmlns:wsim="http://systinet.com/2005/10/soa/policy/validation/wsi-message"/>
+        </pm:Validation>
+      </pm:Assertion>

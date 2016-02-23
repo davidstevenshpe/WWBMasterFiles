@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:relationship xmlns:r="http://systinet.com/2005/05/repository">
+   <r:id>81028</r:id>
+   <r:type>{http://systinet.com/2005/05/soa/model/property}tool</r:type>
+   <r:state>open</r:state>
+   <r:deleted>false</r:deleted>
+   <r:obsolete>false</r:obsolete>
+   <r:createdOn>2009-11-27T12:10:10.018Z</r:createdOn>
+   <r:source>
+      <r:path>/taskArtifacts/updateUsageStatsHourly</r:path>
+      <r:revision>1</r:revision>
+      <r:revisionTo>0</r:revisionTo>
+   </r:source>
+   <r:target>
+      <r:path>/toolArtifacts/usageStatsUpdateJob.xml</r:path>
+      <r:uuid>f7213bb2-5207-4e89-9d6f-d9628ed90c6a</r:uuid>
+      <r:revision>1</r:revision>
+      <r:revisionTo>0</r:revisionTo>
+      <r:deleted>false</r:deleted>
+   </r:target>
+   <r:extensions>
+      <r:com-systinet-soa-model-util-property xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                                              xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                                              xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                                              xmlns:xlink="http://www.w3.org/1999/xlink">
+         <p:tool xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                 xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                 xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 deleted="0"
+                 xlink:href="toolArtifacts/usageStatsUpdateJob.xml"/>
+      </r:com-systinet-soa-model-util-property>
+      <r:com-systinet-soa-model-util-property-path xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                                                   xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                                                   xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                                                   xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                   xpointer="xmlns(g=http://systinet.com/2005/05/soa/model/propertyGroup)xmlns(p=http://systinet.com/2005/05/soa/model/property)xpointer()"/>
+   </r:extensions>
+</r:relationship>

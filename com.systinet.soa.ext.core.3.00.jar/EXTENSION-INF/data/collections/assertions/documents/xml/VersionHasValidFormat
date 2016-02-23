@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><pm:Assertion xmlns:pm="http://systinet.com/2005/10/soa/policy" xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup" xmlns:r="http://systinet.com/2005/05/repository" xmlns:p="http://systinet.com/2005/05/soa/model/property" xmlns:a="http://systinet.com/2005/05/soa/model/artifact" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:pt="http://systinet.com/2005/05/soa/model/property/type" xmlns:rest="http://systinet.com/2005/05/soa/resource" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><pm:Template><p0:VersionHasValidFormat xmlns:p0="urn:localhost:com:enter-your-organization-or-project-specific-namespace" versionPattern="[^A-Za-z][0-9]{0,2}\.[^A-Za-z][0-9]{0,2}"/></pm:Template><pm:Parameter xmlns:p1="http://www.w3.org/2001/XMLSchema" Name="versionPattern" Optional="true" Type="p1:string" XPointer="xpointer(@versionPattern)"><pm:Description>versionPattern parameter is used for defining the pattern of valid version format.</pm:Description></pm:Parameter><pm:Validation><JavaScriptValidator xmlns="http://systinet.com/2005/10/soa/policy/validation" xmlns:xlink="http://www.w3.org/1999/xlink/">/**
+ * This function is called iteratively by the java script validator,
+ * There are some java script objects pre-initialized in the scripting context (e.g. repositoryService ...)  
+ * You can find others and configure more in the managed script environment.js
+ *
+ * @param  resource
+ *         an external resource or an artifact
+ *
+ * @param  params
+ *         a map of params
+ */
+function validate(resource, params) {
+    var artifact = resource;
+    var versionPattern = params.get("versionPattern");
+    repositoryService.fetchArtifactProperties(artifact,new ArtifactPartSelector("version"));
+    try {
+    	var version = artifact.getProperty("version");
+    	var patt = new RegExp(versionPattern);
+    	var isValid = patt.test(version);
+    	if (isValid) {
+    		return new JsValidationResult(JsValidationCode.OK);
+    	}
+    	else {
+    		return new JsValidationResult(JsValidationCode.FAILED, "Version of this artifact is in invalid format.");
+    	}
+    }
+    catch (err) {
+    	return new JsValidationResult(JsValidationCode.FAILED);
+    }
+    
+    
+}
+</JavaScriptValidator></pm:Validation></pm:Assertion>

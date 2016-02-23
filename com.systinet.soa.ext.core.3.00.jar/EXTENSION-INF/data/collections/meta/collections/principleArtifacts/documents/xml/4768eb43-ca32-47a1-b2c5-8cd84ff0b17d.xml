@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/principleArtifacts/4768eb43-ca32-47a1-b2c5-8cd84ff0b17d</r:path>
+   <r:collection>/principleArtifacts/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType></r:contentType>
+   <r:owner>admin</r:owner>
+   <r:uuid>4768eb43-ca32-47a1-b2c5-8cd84ff0b17d</r:uuid>
+   <r:domainId>defaultDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2013-12-09T10:55:26.247Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>admin</r:creator>
+      <r:lastDataRevision>0</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:principleArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                              xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                              xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                              xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                              deleted="0"
+                              xlink:href="principleArtifacts/4768eb43-ca32-47a1-b2c5-8cd84ff0b17d">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="Motivation"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:motivationArtifact"/>
+               <p:artifactType name="Principle"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:principleArtifact"/>
+            </g:artifactTypeGroup>
+            <g:aggregatesGroup>
+               <p:aggregates xlink:href="principleArtifacts/109eba7e-e45d-4e5f-ab63-a97adbfd821e"/>
+               <p:aggregates xlink:href="principleArtifacts/cf5747b3-6b91-4775-969e-7e6b55d61240"/>
+            </g:aggregatesGroup>
+            <g:nameGroup>
+               <p:name>Management of service levels</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup>
+               <p:description>A level of IT services provided by an IT, and supporting the effectiveness of business processes is managed and optimized in accordance to business needs.</p:description>
+            </g:descriptionGroup>
+            <p:revision>1</p:revision>
+            <g:keywordGroup/>
+            <p:version>1.0</p:version>
+            <g:architectureLayerGroup>
+               <p:architectureLayer name="Business Layer"
+                                    taxonomyUri="uddi:systinet.com:soa:model:taxonomies:architectureLayer"
+                                    value="businessLayer"/>
+               <p:architectureLayer name="Technology Layer"
+                                    taxonomyUri="uddi:systinet.com:soa:model:taxonomies:architectureLayer"
+                                    value="technologyLayer"/>
+            </g:architectureLayerGroup>
+            <g:qualityFeatureGroup>
+               <p:qualityFeature name="Effectiveness"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="effectiveness"/>
+               <p:qualityFeature name="Efficiency"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="efficiency"/>
+               <p:qualityFeature name="Availability"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="availability"/>
+               <p:qualityFeature name="Integrity"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="integrity"/>
+               <p:qualityFeature name="Confidentiality"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="confidentiality"/>
+               <p:qualityFeature name="Reliability"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="reliability"/>
+               <p:qualityFeature name="Compliance"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="compliance"/>
+            </g:qualityFeatureGroup>
+            <p:rationale>IT services are representing outcomes of IT development and operation satisfying informational and functional needs of the enterprise. These service must be provided with such quality level that is required by individual enterprise's organizations (customers). A quality level should not be lower than required, otherwise the business of organization consuming the service is in risk. On the other hand - the quality level should not be higher than required, as it can lead to unwarranted costs. The quality needs to be balanced against the requirements and the costs.
+To ensure that only such high level of required service  is provided, the service level must be continuously monitored, evaluated, and optimized over time.</p:rationale>
+            <p:implications>A formalized Service Level Management process should be put in place and followed.
+The service level of individual services must be defined, agreed upon between their consumers and provider, and documented.
+The mechanisms enabling continuous, reliable and accurate measurement and evaluation of service levels must be defined and implemented. It can require investments for acquisition and implementation of supporting SW. 
+IT services, as well as applications and underlying technology forming the services, need to be designed, developed, and implemented to enable delivery of services with various service levels.
+If not done yet, the staff needs to be trained in Service Level Management discipline.
+The Service Level Management MUST NOT be limited just to IT operation, but to all IT departments (incl. development, support etc.) and their business must be driven by service levels.</p:implications>
+         </a:principleArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

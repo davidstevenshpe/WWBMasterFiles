@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+    <r:path>/assertions/AlmServiceHasRequirements</r:path>
+    <r:collection>/assertions/</r:collection>
+    <r:binary>false</r:binary>
+    <r:contentType>text/xml</r:contentType>
+    <r:owner>systinet:admin</r:owner>
+    <r:uuid>9db4f88d-0489-4f7d-a4ee-2f0b61b74990</r:uuid>
+    <r:domainId>topLevelDomain</r:domainId>    
+    <r:type>document</r:type>
+    <r:deleted>false</r:deleted>
+    <r:cached>false</r:cached>
+    <r:checkSum>0</r:checkSum>
+    <r:revision>
+        <r:number>1</r:number>
+        <r:timestamp>2008-04-04T04:04:04.000Z</r:timestamp>
+        <r:creator>admin</r:creator>
+        <r:lastDataRevision>1</r:lastDataRevision>
+    </r:revision>
+    <r:extensions>
+        <r:descriptor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+            xmlns:wsi="http://www.ws-i.org/testing/2004/07/assertions/" xmlns:rest="http://systinet.com/2005/05/soa/resource" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:p="http://systinet.com/2005/05/soa/model/property" xmlns:sbp="http://systinet.com/2005/10/soa/policy/bpa"
+            xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup" xmlns:pm="http://systinet.com/2005/10/soa/policy">
+            <a:assertionArtifact xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:pt="http://systinet.com/2005/05/soa/model/property/type" deleted="0"
+                xlink:href="assertions/AlmServiceHasRequirements.xml" xml:base="http://localhost:8080/soa/systinet/platform/rest/repository/">
+                <g:nameGroup>
+                    <p:name>Alm Service Has Requirements</p:name>
+                </g:nameGroup>
+                <g:descriptionGroup>
+                    <p:description>SOAP Service has test requirements defined in ALM</p:description>
+                </g:descriptionGroup>
+                <p:assertionClassification name="Service Test Management" taxonomyUri="uddi:systinet.com:soa:policymgr:taxonomies:Assertion:Classification:Taxonomy"
+                    value="uddi:systinet.com:soa:policymgr:taxonomies:Assertion:Classification:ServiceTestManagement"/>
+                <p:assertionQName xsi:type="p:assertionQName">{http://hp.com/2012/11/alm}AlmServiceHasRequirements</p:assertionQName>
+                <g:applicableSourceQNameGroup>
+                    <p:applicableSourceQName xsi:type="p:applicableSourceQName">{http://systinet.com/2005/05/soa/model/artifact}webServiceArtifact</p:applicableSourceQName>
+                </g:applicableSourceQNameGroup>
+                <g:artifactTypeGroup>
+                    <p:artifactType name="Artifact" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes" value="urn:com:systinet:soa:model:artifacts"/>
+                    <p:artifactType name="SOA" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes" value="urn:com:systinet:soa:model:artifacts:soa"/>
+                    <p:artifactType name="Policy" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes" value="urn:com:systinet:soa:model:artifacts:soa:policy"/>
+                    <p:artifactType name="Assertion" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes" value="urn:com:systinet:soa:model:artifacts:soa:policy:assertion"/>
+                </g:artifactTypeGroup>
+                <p:lastRevision>1</p:lastRevision>
+                <p:revision>1</p:revision>
+                <p:isCached>false</p:isCached>
+            </a:assertionArtifact>
+        </r:descriptor>
+    </r:extensions>
+</r:meta>

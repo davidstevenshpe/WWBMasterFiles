@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><taxonomy check="true" xmlns="http://systinet.com/uddi/taxonomy/v3/5.5">
+  <tModel tModelKey="uddi:systinet.com:soa:model:taxonomies:fiscalPeriod" deleted="false" xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <name xmlns="urn:uddi-org:api_v3">fiscalPeriod</name>
+	<description xmlns="urn:uddi-org:api_v3">Fiscal Period</description>
+    <categoryBag xmlns="urn:uddi-org:api_v3">
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="tModel"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="businessService"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="businessEntity"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="bindingTemplate"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Checked value set" keyValue="checked"/>
+    </categoryBag>
+  </tModel>
+  <compatibilityBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <compatibility>tModel</compatibility>
+    <compatibility>businessService</compatibility>
+    <compatibility>businessEntity</compatibility>
+    <compatibility>bindingTemplate</compatibility>
+  </compatibilityBag>
+  <categorizationBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <categorization>categorization</categorization>
+  </categorizationBag>
+  <validation xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <categories>
+        <category disabled="false" keyName="FY1980" keyValue="1980"/>
+		<category disabled="false" keyName="FY1981" keyValue="1981"/>
+		<category disabled="false" keyName="FY1982" keyValue="1982"/>
+		<category disabled="false" keyName="FY1983" keyValue="1983"/>
+		<category disabled="false" keyName="FY1984" keyValue="1984"/>
+		<category disabled="false" keyName="FY1985" keyValue="1985"/>
+		<category disabled="false" keyName="FY1986" keyValue="1986"/>
+		<category disabled="false" keyName="FY1987" keyValue="1987"/>
+		<category disabled="false" keyName="FY1988" keyValue="1988"/>
+		<category disabled="false" keyName="FY1989" keyValue="1989"/>
+		<category disabled="false" keyName="FY1990" keyValue="1990"/>
+		<category disabled="false" keyName="FY1991" keyValue="1991"/>
+		<category disabled="false" keyName="FY1992" keyValue="1992"/>
+		<category disabled="false" keyName="FY1993" keyValue="1993"/>
+		<category disabled="false" keyName="FY1994" keyValue="1994"/>
+		<category disabled="false" keyName="FY1995" keyValue="1995"/>
+		<category disabled="false" keyName="FY1996" keyValue="1996"/>
+		<category disabled="false" keyName="FY1997" keyValue="1997"/>
+		<category disabled="false" keyName="FY1998" keyValue="1998"/>
+		<category disabled="false" keyName="FY1999" keyValue="1999"/>
+		<category disabled="false" keyName="FY2000" keyValue="2000"/>
+		<category disabled="false" keyName="FY2001" keyValue="2001"/>
+		<category disabled="false" keyName="FY2002" keyValue="2002"/>
+		<category disabled="false" keyName="FY2003" keyValue="2003"/>
+		<category disabled="false" keyName="FY2004" keyValue="2004"/>
+		<category disabled="false" keyName="FY2005" keyValue="2005"/>
+		<category disabled="false" keyName="FY2006" keyValue="2006"/>
+		<category disabled="false" keyName="FY2007" keyValue="2007"/>
+		<category disabled="false" keyName="FY2008" keyValue="2008"/>
+		<category disabled="false" keyName="FY2009" keyValue="2009"/>
+		<category disabled="false" keyName="FY2010" keyValue="2010"/>
+		<category disabled="false" keyName="FY2011" keyValue="2011"/>
+		<category disabled="false" keyName="FY2012" keyValue="2012"/>
+		<category disabled="false" keyName="FY2013" keyValue="2013"/>
+		<category disabled="false" keyName="FY2014" keyValue="2014"/>
+		<category disabled="false" keyName="FY2015" keyValue="2015"/>
+		<category disabled="false" keyName="FY2016" keyValue="2016"/>
+		<category disabled="false" keyName="FY2017" keyValue="2017"/>
+		<category disabled="false" keyName="FY2018" keyValue="2018"/>
+		<category disabled="false" keyName="FY2019" keyValue="2019"/>
+		<category disabled="false" keyName="FY2020" keyValue="2020"/>
+		<category disabled="false" keyName="FY2021" keyValue="2021"/>
+		<category disabled="false" keyName="FY2022" keyValue="2022"/>
+		<category disabled="false" keyName="FY2023" keyValue="2023"/>
+		<category disabled="false" keyName="FY2024" keyValue="2024"/>
+		<category disabled="false" keyName="FY2025" keyValue="2025"/>
+		<category disabled="false" keyName="FY2026" keyValue="2026"/>
+		<category disabled="false" keyName="FY2027" keyValue="2027"/>
+		<category disabled="false" keyName="FY2028" keyValue="2028"/>
+		<category disabled="false" keyName="FY2029" keyValue="2029"/>
+		<category disabled="false" keyName="FY2030" keyValue="2030"/>
+    </categories>
+  </validation>
+</taxonomy>
+        

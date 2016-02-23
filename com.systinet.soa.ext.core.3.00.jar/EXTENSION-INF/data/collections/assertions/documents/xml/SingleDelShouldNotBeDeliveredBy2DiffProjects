@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><pm:Assertion xmlns:pm="http://systinet.com/2005/10/soa/policy" xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup" xmlns:r="http://systinet.com/2005/05/repository" xmlns:p="http://systinet.com/2005/05/soa/model/property" xmlns:a="http://systinet.com/2005/05/soa/model/artifact" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:pt="http://systinet.com/2005/05/soa/model/property/type" xmlns:rest="http://systinet.com/2005/05/soa/resource" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><pm:Template><p0:SingleDelShouldNotBeDeliveredBy2DiffProjects xmlns:p0="urn:localhost:com:enter-your-organization-or-project-specific-namespace"/></pm:Template><pm:Validation SourceType="xmlns(ns=http://systinet.com/2005/05/soa/model/artifact)qname(ns:deliverableArtifact)"><JavaScriptValidator xmlns="http://systinet.com/2005/10/soa/policy/validation" xmlns:xlink="http://www.w3.org/1999/xlink/">/**
+ * This function is called iteratively by the java script validator,
+ * There are some java script objects pre-initialized in the scripting context (e.g. repositoryService ...)  
+ * You can find others and configure more in the managed script environment.js
+ *
+ * @param  resource
+ *         an external resource or an artifact
+ *
+ * @param  params
+ *         a map of params
+ */
+function validate(resource, params) {
+	var artifact = resource;
+	repositoryService.fetchArtifactProperties(artifact, ArtifactPartSelector.ALL_PROPERTIES);
+	var listRelations = new Array();
+	listRelations = artifact.getMultiRelationProperty("realizedBy");
+	var listWorkPackages = new Array();
+	var countDeliveredProjects = 0;
+	for (var row=0; row &lt; listRelations.size(); row++) {
+		var targetSdmName = listRelations.get(row).getSourceSdmName();
+		if (targetSdmName == "projectArtifact" || targetSdmName == "workPackageArtifact") {
+			listWorkPackages.push(artifact.getName());
+			countDeliveredProjects++;
+		}
+	}
+	if (countDeliveredProjects &lt;= 1) {
+		return JsValidationResult(JsValidationCode.OK);
+	}
+	else {
+		return JsValidationResult(JsValidationCode.FAILED, "Multiple projects or work packages realize the deliverable: '" + listWorkPackages.toString() + "'.");
+	}
+    
+}
+</JavaScriptValidator></pm:Validation></pm:Assertion>

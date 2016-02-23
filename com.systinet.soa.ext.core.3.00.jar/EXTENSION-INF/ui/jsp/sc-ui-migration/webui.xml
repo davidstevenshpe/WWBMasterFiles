@@ -1,0 +1,17 @@
+<config name="ui_configuration" savingPeriod="5000">
+    <webFramework>
+        <component name="/partner320/homepage" page="@/core/customization/customizableComponent" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizationId" paramValue="partner320.homepage"/>
+            <parameter paramName="customizedComponent" paramValue="/core/layout/columnsInternal"/>
+        </component>
+
+        <task uri="/partner320/homepage" component="/partner320/homepage" style="/core/impl/layout/newUi" />
+
+        <component name="/analyst320/homepage" page="@/core/customization/customizableComponent" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizationId" paramValue="analyst320.homepage"/>
+            <parameter paramName="customizedComponent" paramValue="/core/layout/columnsInternal"/>
+        </component>
+        
+        <task uri="/analyst320/homepage" component="/analyst320/homepage" style="/core/impl/layout/newUi" />
+    </webFramework>
+</config>

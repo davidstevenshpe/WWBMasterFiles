@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taxonomy check="true" brief="false" xmlns="http://systinet.com/uddi/taxonomy/v3/5.5">
+  <tModel tModelKey="uddi:systinet.com:soa:model:taxonomies:policyTypes" deleted="false" tModelKeyV2="uuid:faf72c34-b5d8-3778-950b-f292e0e557ed" xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <name xmlns="urn:uddi-org:api_v3">systinet-com:repository:sdm:taxonomies:policyTypes</name>
+    <description xmlns="urn:uddi-org:api_v3">Systinet policy types taxonomy.</description>
+    <overviewDoc xmlns="urn:uddi-org:api_v3">
+      <overviewURL>http://www.systinet.com</overviewURL>
+    </overviewDoc>
+    <categoryBag xmlns="urn:uddi-org:api_v3">
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="uddi-org:types:cacheable" keyValue="cacheable"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="uddi-org:types:valueSet" keyValue="valueSet"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Categorization system" keyValue="categorization"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="tModel"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="businessEntity"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="businessService"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="bindingTemplate"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Checked value set" keyValue="checked"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:validatedby" keyName="" keyValue="uddi:ccf03700-e4d6-11da-bf82-c9765be1bf81"/>
+    </categoryBag>
+  </tModel>
+  <compatibilityBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <compatibility>tModel</compatibility>
+    <compatibility>businessEntity</compatibility>
+    <compatibility>businessService</compatibility>
+    <compatibility>bindingTemplate</compatibility>
+  </compatibilityBag>
+  <categorizationBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <categorization>categorization</categorization>
+  </categorizationBag>
+  <validation xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <categories>
+      <category keyName="Runtime" keyValue="uddi:systinet.com:soa:model:taxonomies:policyTypes:runtime" disabled="false"/>
+      <category keyName="Design time" keyValue="uddi:systinet.com:soa:model:taxonomies:policyTypes:designtime" disabled="false"/>
+      <category keyName="Contract" keyValue="uddi:systinet.com:soa:model:taxonomies:policyTypes:contract" disabled="false"/>
+      <category keyName="General" keyValue="uddi:systinet.com:soa:model:taxonomies:policyTypes:general" disabled="false"/>
+    </categories>
+    <bindingTemplate bindingKey="uddi:ccf03700-e4d6-11da-bf82-c9765be1bf81" serviceKey="uddi:cceb5500-e4d6-11da-bf82-c9765be1bf81" xmlns="urn:uddi-org:api_v3">
+      <accessPoint useType="endPoint">class:com.systinet.uddi.publishing.v3.validation.service.InternalValidator</accessPoint>
+      <tModelInstanceDetails>
+        <tModelInstanceInfo tModelKey="uddi:uddi.org:v3_valuesetvalidation"/>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:soa:model:taxonomies:policyTypes"/>
+      </tModelInstanceDetails>
+    </bindingTemplate>
+    <bindingTemplate bindingKey="uddi:ccf4f1f0-e4d6-11da-bf82-c9765be1bf81" serviceKey="uddi:cceb5500-e4d6-11da-bf82-c9765be1bf81" xmlns="urn:uddi-org:api_v3">
+      <accessPoint useType="endPoint">class:com.systinet.uddi.publishing.v2.validation.service.InternalValidator</accessPoint>
+      <tModelInstanceDetails>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:v2_validatevalues"/>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:soa:model:taxonomies:policyTypes"/>
+      </tModelInstanceDetails>
+    </bindingTemplate>
+    <bindingTemplate bindingKey="uddi:ccf9ace0-e4d6-11da-bf82-c9765be1bf81" serviceKey="uddi:cceb5500-e4d6-11da-bf82-c9765be1bf81" xmlns="urn:uddi-org:api_v3">
+      <accessPoint useType="endPoint">class:com.systinet.uddi.publishing.v1.validation.service.InternalValidator</accessPoint>
+      <tModelInstanceDetails>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:v1_validatevalues"/>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:soa:model:taxonomies:policyTypes"/>
+      </tModelInstanceDetails>
+    </bindingTemplate>
+  </validation>
+</taxonomy>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pm:Assertion xmlns:pm="http://systinet.com/2005/10/soa/policy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:a="http://systinet.com/2005/05/soa/model/artifact" xmlns:r="http://systinet.com/2005/05/repository" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:pt="http://systinet.com/2005/05/soa/model/property/type" xmlns:rest="http://systinet.com/2005/05/soa/resource" xmlns:p="http://systinet.com/2005/05/soa/resource" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup">
+        <p:Template xmlns:p="http://systinet.com/2005/10/soa/policy">
+          <IllegalServiceNameSuffix xmlns="http://systinet.com/2005/10/soa/policy/best-practice"/>
+        </p:Template>
+        <pm:Bundle>
+            <pm:String Key="bad-bs">The name of this service ("{0}") ends with "Service" which is illegal. To fix this problem, remove the trailing "Service" from service&amp;apos;s name.</pm:String>
+            <pm:String Key="bad-ws">The name of this service ("{0}") ends with "Service" which is illegal. To fix this problem, remove the trailing "Service" from service&amp;apos;s name.</pm:String>
+        </pm:Bundle>
+        <pm:Validation SourceType="xmlns(ns=http://systinet.com/2005/05/soa/model/artifact)qname(ns:businessServiceArtifact)" xmlns:val="http://systinet.com/2005/10/soa/policy/validation">
+          <val:XQuery>
+
+    declare namespace rest="http://systinet.com/2005/05/soa/resource";
+    declare namespace a="http://systinet.com/2005/05/soa/model/artifact";
+    declare namespace p="http://systinet.com/2005/05/soa/model/property";
+    declare namespace g="http://systinet.com/2005/05/soa/model/propertyGroup";
+    declare namespace val="http://systinet.com/2005/10/soa/policy/validation";
+
+    let $name := rest:resource/rest:descriptor/a:businessServiceArtifact/g:nameGroup/p:name
+    return
+        if (ends-with($name, "Service")) then
+            val:assertionFailed(val:l10n('bad-bs', $name), $name)
+        else
+            val:assertionOK()
+
+          </val:XQuery>
+        </pm:Validation>
+        <pm:Validation SourceType="xmlns(ns=http://systinet.com/2005/05/soa/model/artifact)qname(ns:applicationServiceArtifact)" xmlns:val="http://systinet.com/2005/10/soa/policy/validation">
+          <val:XQuery>
+
+    declare namespace rest="http://systinet.com/2005/05/soa/resource";
+    declare namespace a="http://systinet.com/2005/05/soa/model/artifact";
+    declare namespace p="http://systinet.com/2005/05/soa/model/property";
+    declare namespace g="http://systinet.com/2005/05/soa/model/propertyGroup";
+    declare namespace val="http://systinet.com/2005/10/soa/policy/validation";
+
+    let $name := rest:resource/rest:descriptor/a:applicationServiceArtifact/g:nameGroup/p:name
+    return
+        if (ends-with($name, "Service")) then
+            val:assertionFailed(val:l10n('bad-ws', $name), $name)
+        else
+            val:assertionOK()
+
+          </val:XQuery>
+        </pm:Validation>
+		 <pm:Validation SourceType="xmlns(ns=http://systinet.com/2005/05/soa/model/artifact)qname(ns:infrastructureServiceArtifact)" xmlns:val="http://systinet.com/2005/10/soa/policy/validation">
+          <val:XQuery>
+
+    declare namespace rest="http://systinet.com/2005/05/soa/resource";
+    declare namespace a="http://systinet.com/2005/05/soa/model/artifact";
+    declare namespace p="http://systinet.com/2005/05/soa/model/property";
+    declare namespace g="http://systinet.com/2005/05/soa/model/propertyGroup";
+    declare namespace val="http://systinet.com/2005/10/soa/policy/validation";
+
+    let $name := rest:resource/rest:descriptor/a:infrastructureServiceArtifact/g:nameGroup/p:name
+    return
+        if (ends-with($name, "Service")) then
+            val:assertionFailed(val:l10n('bad-ws', $name), $name)
+        else
+            val:assertionOK()
+
+          </val:XQuery>
+        </pm:Validation>
+      </pm:Assertion>

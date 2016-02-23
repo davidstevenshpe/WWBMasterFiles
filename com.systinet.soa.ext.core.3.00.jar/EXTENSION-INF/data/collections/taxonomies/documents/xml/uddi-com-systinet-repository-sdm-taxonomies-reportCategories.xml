@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taxonomy check="true" brief="false" xmlns="http://systinet.com/uddi/taxonomy/v3/5.5">
+  <tModel tModelKey="uddi:systinet.com:soa:model:taxonomies:reportCategories" deleted="false" tModelKeyV2="uuid:3f63e4e6-8d7e-3b5b-99e1-ac66e2796332" xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <name xmlns="urn:uddi-org:api_v3">systinet-com:repository:sdm:taxonomies:reportCategories</name>
+    <description xmlns="urn:uddi-org:api_v3">Systinet report types taxonomy.</description>
+    <overviewDoc xmlns="urn:uddi-org:api_v3">
+      <overviewURL>http://www.systinet.com</overviewURL>
+    </overviewDoc>
+    <categoryBag xmlns="urn:uddi-org:api_v3">
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="uddi-org:types:cacheable" keyValue="cacheable"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="uddi-org:types:valueSet" keyValue="valueSet"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Categorization system" keyValue="categorization"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="tModel"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="businessEntity"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="businessService"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="bindingTemplate"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Checked value set" keyValue="checked"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:validatedby" keyName="" keyValue="uddi:e157e8a0-e4d6-11da-bf82-c9765be1bf81"/>
+    </categoryBag>
+  </tModel>
+  <compatibilityBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <compatibility>tModel</compatibility>
+    <compatibility>businessEntity</compatibility>
+    <compatibility>businessService</compatibility>
+    <compatibility>bindingTemplate</compatibility>
+  </compatibilityBag>
+  <categorizationBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <categorization>categorization</categorization>
+  </categorizationBag>
+  <validation xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <categories>
+      <category keyName="Change management" keyValue="uddi:systinet.com:soa:model:taxonomies:reportCategories:changeManagement" disabled="false"/>
+      <category keyName="Impact management" keyValue="uddi:systinet.com:soa:model:taxonomies:reportCategories:impactManagement" disabled="false"/>
+      <category keyName="Compliance" keyValue="uddi:systinet.com:soa:model:taxonomies:reportCategories:compliance" disabled="false"/>
+      <category keyName="Reporting" keyValue="uddi:systinet.com:soa:model:taxonomies:reportCategories:reporting" disabled="false"/>
+      <category keyName="Job" keyValue="uddi:systinet.com:soa:model:taxonomies:reportCategories:job" disabled="false"/>
+      <category keyName="Bulk Operation" keyValue="uddi:systinet.com:soa:model:taxonomies:reportCategories:bulkOperation" disabled="false"/>
+      <category keyName="Undefined" keyValue="uddi:systinet.com:soa:model:taxonomies:reportCategories:undefined" disabled="false"/>
+      <category keyName="Publishing" keyValue="uddi:systinet.com:soa:model:taxonomies:reportCategories:publishing" disabled="false"/>
+      <category keyName="Publishing Rollback" keyValue="uddi:systinet.com:soa:model:taxonomies:reportCategories:publishingRollback" disabled="false"/>
+      <category keyName="Service Discovery" keyValue="uddi:systinet.com:soa:model:taxonomies:reportCategories:serviceDiscovery" disabled="false"/>
+      <category keyName="Import" keyValue="uddi:systinet.com:soa:model:taxonomies:reportCategories:import" disabled="false"/>
+      <category keyName="Export" keyValue="uddi:systinet.com:soa:model:taxonomies:reportCategories:export" disabled="false"/>            
+    </categories>
+    <bindingTemplate bindingKey="uddi:e157e8a0-e4d6-11da-bf82-c9765be1bf81" serviceKey="uddi:e150bcb0-e4d6-11da-bf82-c9765be1bf81" xmlns="urn:uddi-org:api_v3">
+      <accessPoint useType="endPoint">class:com.systinet.uddi.publishing.v3.validation.service.InternalValidator</accessPoint>
+      <tModelInstanceDetails>
+        <tModelInstanceInfo tModelKey="uddi:uddi.org:v3_valuesetvalidation"/>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:soa:model:taxonomies:reportCategories"/>
+      </tModelInstanceDetails>
+    </bindingTemplate>
+    <bindingTemplate bindingKey="uddi:e15ca390-e4d6-11da-bf82-c9765be1bf81" serviceKey="uddi:e150bcb0-e4d6-11da-bf82-c9765be1bf81" xmlns="urn:uddi-org:api_v3">
+      <accessPoint useType="endPoint">class:com.systinet.uddi.publishing.v2.validation.service.InternalValidator</accessPoint>
+      <tModelInstanceDetails>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:v2_validatevalues"/>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:soa:model:taxonomies:reportCategories"/>
+      </tModelInstanceDetails>
+    </bindingTemplate>
+    <bindingTemplate bindingKey="uddi:e1618590-e4d6-11da-bf82-c9765be1bf81" serviceKey="uddi:e150bcb0-e4d6-11da-bf82-c9765be1bf81" xmlns="urn:uddi-org:api_v3">
+      <accessPoint useType="endPoint">class:com.systinet.uddi.publishing.v1.validation.service.InternalValidator</accessPoint>
+      <tModelInstanceDetails>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:v1_validatevalues"/>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:soa:model:taxonomies:reportCategories"/>
+      </tModelInstanceDetails>
+    </bindingTemplate>
+  </validation>
+</taxonomy>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/principleArtifacts/9b81e242-e072-468d-b96a-9cfb031d528b</r:path>
+   <r:collection>/principleArtifacts/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType></r:contentType>
+   <r:owner>admin</r:owner>
+   <r:uuid>9b81e242-e072-468d-b96a-9cfb031d528b</r:uuid>
+   <r:domainId>defaultDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2013-12-09T10:54:57.278Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>admin</r:creator>
+      <r:lastDataRevision>0</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:principleArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                              xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                              xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                              xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                              deleted="0"
+                              xlink:href="principleArtifacts/9b81e242-e072-468d-b96a-9cfb031d528b">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="Motivation"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:motivationArtifact"/>
+               <p:artifactType name="Principle"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:principleArtifact"/>
+            </g:artifactTypeGroup>
+            <g:aggregatesGroup>
+               <p:aggregates xlink:href="principleArtifacts/1a066156-b3f1-47b8-8324-f37da4b95d38"/>
+               <p:aggregates xlink:href="principleArtifacts/01882421-3718-40bd-a3e7-d2a58a6de398"/>
+               <p:aggregates xlink:href="principleArtifacts/9f2719a6-fa1d-41b6-8a22-e83e985d14ae"/>
+            </g:aggregatesGroup>
+            <g:nameGroup>
+               <p:name>Easy-of-Use</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup>
+               <p:description>Applications are easy to use. The underlying technology is transparent to users.
+Applications as well as underlying technology and their usage should not obstruct users in their daily routine work.</p:description>
+            </g:descriptionGroup>
+            <p:revision>1</p:revision>
+            <g:keywordGroup/>
+            <p:version>1.0</p:version>
+            <g:architectureLayerGroup>
+               <p:architectureLayer name="Application Layer"
+                                    taxonomyUri="uddi:systinet.com:soa:model:taxonomies:architectureLayer"
+                                    value="applicationLayer"/>
+               <p:architectureLayer name="Technology Layer"
+                                    taxonomyUri="uddi:systinet.com:soa:model:taxonomies:architectureLayer"
+                                    value="technologyLayer"/>
+            </g:architectureLayerGroup>
+            <g:qualityFeatureGroup>
+               <p:qualityFeature name="Effectiveness"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="effectiveness"/>
+               <p:qualityFeature name="Efficiency"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="efficiency"/>
+            </g:qualityFeatureGroup>
+            <p:rationale>The more users are pushed to understand the underlying technology, the less productive users are. If a user's mental capacity is spent removing obstacles related to technology, customization of applications, keeping application running, then the user's frustration goes up while productiveness falls down.
+Ease-of-use is a positive incentive for use of applications. It encourages users to work within the integrated information environment instead of developing isolated systems (shadow IT) to accomplish the task outside of the enterprise's integrated information environment.
+Most of the knowledge required to operate one system will be similar to using other systems. Training is kept to a minimum, and the risk of using a system improperly is low.
+Application use should be as intuitive as possible.</p:rationale>
+            <p:implications>An Enterprise's applications are required to follow a common look and feel, and support ergonomic design and intuitiveness of use.
+Common look and feel standards must be designed; usability and ergonomic criteria must be defined, developed, and proved for their effectiveness and intuitiveness.
+Guidelines for user interfaces should not be constrained by narrow assumptions about user location, language, systems training, or physical capability. Factors such as linguistics, a customer's physical infirmities (visual acuity, ability to use keyboard/mouse, etc.), and proficiency in the use of technology have broad ramifications in determining the ease-of-use of an application.
+The design/ergonomic experts should be involved to help with accurate design of the applications, whenever it is required.</p:implications>
+         </a:principleArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

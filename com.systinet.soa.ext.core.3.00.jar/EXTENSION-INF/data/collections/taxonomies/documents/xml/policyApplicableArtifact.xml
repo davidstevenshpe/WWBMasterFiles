@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><taxonomy check="true" xmlns="http://systinet.com/uddi/taxonomy/v3/5.5">
+  <tModel tModelKey="uddi:systinet.com:soa:model:taxonomies:policyApplicableArtifact" deleted="false" xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <name xmlns="urn:uddi-org:api_v3">systinet-com:soa:model:taxonomies:policyApplicableArtifact</name>
+    <description xmlns="urn:uddi-org:api_v3">Type of the artifact that the policy can be associated to.</description>
+    <categoryBag xmlns="urn:uddi-org:api_v3">
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Checked value set" keyValue="checked"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="tModel"/>
+    </categoryBag>
+  </tModel>
+  <compatibilityBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <compatibility>tModel</compatibility>
+  </compatibilityBag>
+  <categorizationBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <categorization>categorization</categorization>
+  </categorizationBag>
+  <validation xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <categories>
+      <category keyName="Artifact" keyValue="urn:com:systinet:soa:model:artifacts" disabled="false">
+        <category keyName="SOA" keyValue="urn:com:systinet:soa:model:artifacts:soa" disabled="false">
+          <category keyName="Implementation" keyValue="urn:com:systinet:soa:model:artifacts:soa:implementation" disabled="false">
+            <category keyName="Web Application" keyValue="urn:com:systinet:soa:model:artifacts:soa:implementation:web" disabled="false"/>
+            <category keyName="SOAP Service" keyValue="urn:com:systinet:soa:model:artifacts:soa:implementation:ws" disabled="false"/>
+            <category keyName="XML Service" keyValue="urn:com:systinet:soa:model:artifacts:soa:implementation:xmlService" disabled="false"/>
+          </category>
+        </category>
+      </category>
+    </categories>
+  </validation>
+</taxonomy>

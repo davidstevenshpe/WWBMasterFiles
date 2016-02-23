@@ -1,0 +1,15 @@
+<closure maxDepth="10" maxResults="10000" maxProcessingTime="30000" debug="false" seedsAsResults="true">
+    <!-- Defines which relations are traversable from specified artifact to another artifact  -->
+   <defaultSeedQuery>
+      select f._uuid from applicationServiceArtifact f
+    </defaultSeedQuery>
+    <traversableRelations>
+      <relation sdmName="accesses" sourceArtifact="applicationServiceArtifact" targetArtifact="dataObjectArtifact"/>
+      <relation sdmName="accessedBy" sourceArtifact="applicationServiceArtifact" targetArtifact="dataObjectArtifact"/>
+      <!-- businessFunction to application service -->
+    </traversableRelations>
+    <resultArtifacts>
+       <artifact sdmName="applicationServiceArtifact"/>
+       <artifact sdmName="dataObjectArtifact"/>
+    </resultArtifacts>
+</closure>

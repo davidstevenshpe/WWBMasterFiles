@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/principleArtifacts/ddcf16e6-0e4e-4401-8142-a265aeccfd12</r:path>
+   <r:collection>/principleArtifacts/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType></r:contentType>
+   <r:owner>admin</r:owner>
+   <r:uuid>ddcf16e6-0e4e-4401-8142-a265aeccfd12</r:uuid>
+   <r:domainId>defaultDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2013-12-09T10:53:23.737Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>admin</r:creator>
+      <r:lastDataRevision>0</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:principleArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                              xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                              xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                              xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                              deleted="0"
+                              xlink:href="principleArtifacts/ddcf16e6-0e4e-4401-8142-a265aeccfd12">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="Motivation"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:motivationArtifact"/>
+               <p:artifactType name="Principle"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:principleArtifact"/>
+            </g:artifactTypeGroup>
+            <g:nameGroup>
+               <p:name>Scalability</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup>
+               <p:description>IT systems enabling IT services that satisfy the business needs must be scalable.</p:description>
+            </g:descriptionGroup>
+            <p:revision>1</p:revision>
+            <g:keywordGroup/>
+            <p:version>1.0</p:version>
+            <g:architectureLayerGroup>
+               <p:architectureLayer name="Technology Layer"
+                                    taxonomyUri="uddi:systinet.com:soa:model:taxonomies:architectureLayer"
+                                    value="technologyLayer"/>
+               <p:architectureLayer name="Application Layer"
+                                    taxonomyUri="uddi:systinet.com:soa:model:taxonomies:architectureLayer"
+                                    value="applicationLayer"/>
+            </g:architectureLayerGroup>
+            <g:qualityFeatureGroup>
+               <p:qualityFeature name="Effectiveness"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="effectiveness"/>
+               <p:qualityFeature name="Efficiency"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="efficiency"/>
+            </g:qualityFeatureGroup>
+            <p:rationale>IT applications, systems, and underlying technologies which fit to business needs currently may not suit business needs in future. As the volume of manipulated data grows over time, as there are increasing pressures to increase speed and throughput, the IT systems must grow and satisfy these needs accordingly.
+On the other hand - there can be situations when these requirements may decrease.
+Acquiring IT systems with maximum future capacity is expensive, less flexible, and ineffective. Prices of storage capacity are falling over time; new technologies providing higher capacity or performance are released to market very quickly, and predictably very often for lower prices. 
+The appropriate design, development, acquisition, and deployment of scalable solutions enabling a gradual increase of capacity and performance is more effective than one large purchase of maximum capacity. Moreover - gradual extension of capacity pushes IT to utilize available capacity effectively and economically.</p:rationale>
+            <p:implications>A formalized Capacity Management process, enabling management of current and future capacity needs, must be put in place and followed. The Capacity Management process must ensure that business requirements for capacity are identified, documented and transformed into a design of scalable solutions. Beside that, the Capacity Management process must ensure that a consumption of capacity is monitored and tuned to satisfy business requirements for capacity.
+Capacity Management process must continuously ensure the following tasks: identification of business requirements for capacity, their evaluation against available capacity, modeling and planning of capacity. 
+The outputs from a Capacity Management process need to be reflected in the design, development and deployment of scalable IT solutions.</p:implications>
+         </a:principleArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

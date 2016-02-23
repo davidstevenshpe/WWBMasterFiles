@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taxonomy check="true" unvalidatable="true" brief="false" xmlns="http://systinet.com/uddi/taxonomy/v3/5.5">
+  <tModel tModelKey="uddi:uddi.org:categorization:derivedfrom" deleted="false" tModelKeyV2="uuid:5678dd4f-f95d-35f9-9ea6-f79a7dd64656" xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <name xmlns="urn:uddi-org:api_v3">uddi-org:derivedFrom</name>
+    <description xmlns="urn:uddi-org:api_v3">Category system for referring tModels to other tModels for the purpose of reuse.</description>
+    <overviewDoc xmlns="urn:uddi-org:api_v3">
+      <overviewURL useType="text">http://uddi.org/pubs/uddi_v3.htm#DerivedFrom</overviewURL>
+    </overviewDoc>
+    <categoryBag xmlns="urn:uddi-org:api_v3">
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Categorization system" keyValue="categorization"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Prevents a checked value set from being used" keyValue="unvalidatable"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Uncacheable checked value set" keyValue="uncacheable"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:entitykeyvalues" keyName="entityKeyValues" keyValue="tModelKey"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="tModel"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="businessEntity"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="businessService"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="bindingTemplate"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Checked value set" keyValue="checked"/>
+    </categoryBag>
+  </tModel>
+  <compatibilityBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <compatibility>tModel</compatibility>
+    <compatibility>businessEntity</compatibility>
+    <compatibility>businessService</compatibility>
+    <compatibility>bindingTemplate</compatibility>
+  </compatibilityBag>
+  <categorizationBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <categorization>categorization</categorization>
+  </categorizationBag>
+</taxonomy>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><pm:Assertion xmlns:pm="http://systinet.com/2005/10/soa/policy" xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup" xmlns:r="http://systinet.com/2005/05/repository" xmlns:p="http://systinet.com/2005/05/soa/model/property" xmlns:a="http://systinet.com/2005/05/soa/model/artifact" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:pt="http://systinet.com/2005/05/soa/model/property/type" xmlns:rest="http://systinet.com/2005/05/soa/resource" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<pm:Template><p0:DuplicationArtifactsAreNotAllowed xmlns:p0="urn:localhost:com:enter-your-organization-or-project-specific-namespace" applicableTo="applicationServiceArtifact,applicationFunctionArtifact,applicationComponentArtifact,businessServiceArtifact,businessProcessArtifact"/></pm:Template><pm:Parameter xmlns:p1="http://www.w3.org/2001/XMLSchema" Name="applicableTo" Optional="false" Type="p1:string" XPointer="xpointer(@applicableTo)">
+<pm:Description>Comma-separated list of artifact SDM names that restrict applicibilty of this assertion.</pm:Description></pm:Parameter><pm:Validation><JavaScriptValidator xmlns="http://systinet.com/2005/10/soa/policy/validation" xmlns:xlink="http://www.w3.org/1999/xlink/">/**
+ * This function is called iteratively by the java script validator,
+ * There are some java script objects pre-initialized in the scripting context (e.g. repositoryService ...)  
+ * You can find others and configure more in the managed script environment.js
+ *
+ * @param  resource
+ *         an external resource or an artifact
+ *
+ * @param  params
+ *         a map of params
+ */
+function validate(resource, params) {
+    var artifact = resource;
+    repositoryService.fetchArtifactProperties(artifact, ArtifactPartSelector.ALL_PROPERTIES);
+    var artifactTypes = params.get("applicableTo");
+    var isApplicable = false;
+	if (artifactTypes != null) {
+		try {
+			var artifactTypesList = artifactTypes.split(",");
+				for (var row=0; row&lt;artifactTypesList.length; row++) {
+					if (artifact.get_artifactSdmName() == artifactTypesList[row]) {
+						isApplicable=true;
+						break;
+					}
+				}
+			}
+		catch (err) {
+			if (artifact.get_artifactSdmName() == artifactTypes) {
+				isApplicable=true;
+			}
+		}
+	}
+    if (isApplicable) {
+	     var repoQueryService = beanFactoryHelper.getBean(Packages.com.hp.systinet.dql.RepositoryQueryService);
+	     var dqlQuery = "select _uuid, version, _path from " + 
+           artifact.get_artifactSdmName() + 
+                    " where name = :nameParam" +
+                    " and _uuid &lt;&gt; :uuidParam";
+         var dqlResult = null;
+         var dqlStatement = repoQueryService.parse(dqlQuery); 
+         var request = new Packages.com.hp.systinet.dql.DqlRequest(dqlStatement); 
+         request.addNamedArg("nameParam", artifact.getName());
+         request.addNamedArg("uuidParam", artifact.get_uuid().toString());
+	     repoQueryService.compileQuery(request);
+	     dqlResult = repoQueryService.query(request);
+	     var jsobjs = dqlResult.getData();
+	     var duplicationList = new Array();
+	     var count = 0;
+	     if (jsobjs.size() &gt; 0) {
+		     for(var row=0;row&lt;jsobjs.size(); row++) {
+		    	 var jobject = jsobjs.get(row);
+		    	 var version = jobject.get("version");
+		    	 var artifactVersion = artifact.getStringProperty("version");
+		    	 if (version == artifactVersion) {
+		    		 duplicationList[count]=jobject.getValue(0);
+		    		 count++;
+		    	 }
+		     }
+		     if (duplicationList.length&gt;=1) {
+		    	 var errorMessage = "";
+		    	 if (duplicationList.length&gt;1) {
+		    		 errorMessage = "This artifact is duplicated by the following artifacts: " + duplicationList.toString();
+		    	 }
+		    	 else {
+		    		 errorMessage = "This artifact is duplicated by the following artifact: " + duplicationList.toString();
+		    	 }
+		    	 return new JsValidationResult(JsValidationCode.FAILED, errorMessage);
+		     }
+		     else {
+		    	 return new JsValidationResult(JsValidationCode.OK);
+		     }
+	     }
+	     else {
+	    	 return new JsValidationResult(JsValidationCode.OK);
+	     }
+	 }
+     else {
+    	 return new JsValidationResult(JsValidationCode.NOT_APPLICABLE);
+     }
+}
+</JavaScriptValidator></pm:Validation></pm:Assertion>

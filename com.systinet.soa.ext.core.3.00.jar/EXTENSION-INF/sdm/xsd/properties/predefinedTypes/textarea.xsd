@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://systinet.com/2005/05/soa/model/property/type"
+           xmlns="http://systinet.com/2005/05/soa/model/property/type"
+           xmlns:tns="http://systinet.com/2005/05/soa/model/property/type"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="../../helpers/xml.xsd"/>
+
+    <!--<xs:include schemaLocation="nonEmptyString.xsd"/>-->
+    <xs:complexType name="textareaPropertyType">
+        <xs:annotation>
+           <xs:appinfo xmlns:rdb="http://systinet.com/2006/08/soa/model/rdbmapping">
+             <rdb:type name="string(1024)" path="."/>
+           </xs:appinfo>
+        </xs:annotation>
+        <xs:simpleContent>
+            <xs:extension base="tns:nonEmptyString">
+                <xs:attribute ref="xml:lang" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+</xs:schema>

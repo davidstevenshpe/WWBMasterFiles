@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+	<r:path>script/2c1cf2a9-dae9-41e7-9ba2-508f534e0a9f</r:path>
+	<r:collection>script/</r:collection>
+	<r:binary>1</r:binary>
+	<r:contentType>text/javascript</r:contentType>
+	<r:type>document</r:type>
+	<r:deleted>0</r:deleted>	
+	<r:uuid>2c1cf2a9-dae9-41e7-9ba2-508f534e0a9f</r:uuid>
+	<r:domainId>topLevelDomain</r:domainId>
+	<r:revision>
+		<r:number>1</r:number>
+		<r:timestamp>2014-03-10T08:27:00.899Z</r:timestamp>
+		<r:creator>systinet:admin</r:creator>		
+		<r:lastDataRevision>1</r:lastDataRevision>
+	</r:revision>
+	<r:relationships/>
+	<r:cached>0</r:cached>
+	<r:checksum>0</r:checksum>
+	<r:extensions>
+		<r:descriptor>
+			<a:portletScriptArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                            xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                            xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                            xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                            deleted="0"
+                            xlink:href="script/f1ded427-4342-4c8f-83cb-00bc211f7f66">
+				<g:artifactTypeGroup>
+					<p:artifactType name="Artifact" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes" value="urn:com:systinet:soa:model:artifacts"/><p:artifactType name="System" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes" value="urn:com:systinet:soa:model:artifacts:system"/>
+					<p:artifactType name="Managed script" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes" value="urn:com:systinet:soa:model:artifacts:system:script"/>
+                    <p:artifactType name="Portlet Script"  taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes" value="urn:com:platform:artifacts:portletScriptArtifact"/>
+				</g:artifactTypeGroup>
+				<g:nameGroup>
+					<p:name>ApplicationComponentCost.js</p:name>
+				</g:nameGroup>
+				<g:descriptionGroup>
+					<p:description>Application Component Costs.</p:description>
+				</g:descriptionGroup>
+				<p:revision>1</p:revision>
+				<p:location>/scripts/ApplicationComponentCost.js</p:location>
+				<p:contentType>text/javascript</p:contentType>
+                <p:portletHeader>Application Component Costs</p:portletHeader>
+                <p:portletAddActionLabel>Application Component Costs</p:portletAddActionLabel>
+				<p:scriptCategory name="Finance"
+                              taxonomyUri="uddi:systinet.com:soa:model:taxonomies:portletCategory"
+                              value="finance"/>
+                <p:defaultHeight>500</p:defaultHeight>
+                <p:scriptCategory name="Maintenance"
+                                  taxonomyUri="uddi:systinet.com:soa:model:taxonomies:portletCategory"
+                                  value="maintenance"/>
+				<p:r_scriptLanguage name="Javascript" taxonomyUri="uddi:com.systinet.soa:model:taxonomies:scriptLanguage" value="Javascript"/>
+				<p:r_scriptExecuteOn name="Javascript Report" taxonomyUri="uddi:com.systinet.soa:model:taxonomies:scriptExecuteOn" value="report"/><p:lastRevision>1</p:lastRevision>
+			</a:portletScriptArtifact>
+		</r:descriptor>
+	</r:extensions>	
+</r:meta>

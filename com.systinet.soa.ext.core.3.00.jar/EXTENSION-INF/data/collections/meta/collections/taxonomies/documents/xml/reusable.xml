@@ -1,0 +1,41 @@
+<r:meta xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xmlns:rest="http://systinet.com/2005/05/soa/resource"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:r="http://systinet.com/2005/05/repository"
+        xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+        xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+        xmlns:p="http://systinet.com/2005/05/soa/model/property">
+   <r:path>/taxonomies/uddi-com-systinet-repository-sdm-taxonomies-systinet-com-soa-model-taxonomies-reusable</r:path>
+   <r:uuid>3397428d-05d9-43eb-bce0-bfbefb2468fe</r:uuid>
+   <r:collection>/taxonomies/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType>text/xml; charset=utf-8</r:contentType>
+   <r:domainId>topLevelDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>  
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp/>
+      <r:creator>systinet:admin</r:creator>
+      <r:lastDataRevision>1</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:taxonomyArtifact>
+            <nameGroup xmlns="http://systinet.com/2005/05/soa/model/propertyGroup">
+               <name xmlns="http://systinet.com/2005/05/soa/model/property">systinet-com:soa:model:taxonomies:reusable</name>
+            </nameGroup>
+            <p:checked>true</p:checked>
+            <p:hierarchical>false</p:hierarchical>
+            <p:isCached>false</p:isCached>
+            <p:revision>0</p:revision>
+            <descriptionGroup xmlns="http://systinet.com/2005/05/soa/model/propertyGroup">
+               <description xmlns="http://systinet.com/2005/05/soa/model/property">Indicates if the policy can be associated to more than one artifact.</description>
+            </descriptionGroup>
+         </a:taxonomyArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

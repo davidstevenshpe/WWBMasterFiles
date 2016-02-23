@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taxonomy check="true" brief="false" xmlns="http://systinet.com/uddi/taxonomy/v3/5.5">
+  <tModel tModelKey="uddi:systinet.com:soa:model:taxonomies:artifactTypes" deleted="false" tModelKeyV2="uuid:9606df8d-7ef9-3160-a491-9980050c2632" xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <name xmlns="urn:uddi-org:api_v3">systinet-com:soa:model:taxonomies:artifactTypes</name>
+    <description xmlns="urn:uddi-org:api_v3">Checked taxonomy of SOA artifact types.</description>
+    <categoryBag xmlns="urn:uddi-org:api_v3">
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Categorization system" keyValue="categorization"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="businessEntity"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="businessService"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="bindingTemplate"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="tModel"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Checked value set" keyValue="checked"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:validatedby" keyName="" keyValue="uddi:53346d50-e4d6-11da-bf82-c9765be1bf81"/>
+    </categoryBag>
+  </tModel>
+  <compatibilityBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <compatibility>businessEntity</compatibility>
+    <compatibility>businessService</compatibility>
+    <compatibility>bindingTemplate</compatibility>
+    <compatibility>tModel</compatibility>
+  </compatibilityBag>
+  <categorizationBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <categorization>categorization</categorization>
+  </categorizationBag>
+  <validation xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <categories>
+      <category keyName="Artifact" keyValue="urn:com:systinet:soa:model:artifacts" disabled="false">
+        <category keyName="SOA" keyValue="urn:com:systinet:soa:model:artifacts:soa" disabled="false">
+          <category keyName="Business Service" keyValue="urn:com:archimate:businessLayer:artifacts:businessService" disabled="false"/>
+          <category keyName="Implementation" keyValue="urn:com:systinet:soa:model:artifacts:soa:implementation" disabled="false">
+            <category keyName="Web Service" keyValue="urn:com:systinet:soa:model:artifacts:soa:implementation:ws" disabled="false"/>
+            <category keyName="XML Service" keyValue="urn:com:systinet:soa:model:artifacts:soa:implementation:xmlService" disabled="false"/>
+            <category keyName="Web" keyValue="urn:com:systinet:soa:model:artifacts:soa:implementation:web" disabled="false"/>
+          </category>
+          <category keyName="Policy" keyValue="urn:com:systinet:soa:model:artifacts:soa:policy" disabled="false">
+            <category keyName="WS-Policy" keyValue="urn:com:systinet:soa:model:artifacts:soa:policy:wsPolicy" disabled="false"/>
+            <category keyName="Business Policy" keyValue="urn:com:systinet:soa:model:artifacts:soa:policy:businessPolicy" disabled="false"/>
+          </category>
+          <category keyName="Agreement" keyValue="urn:com:systinet:soa:model:artifacts:soa:agreement" disabled="false">
+            <category keyName="Usage Plan" keyValue="urn:com:systinet:soa:model:artifacts:soa:agreement:usagePlan" disabled="false"/>
+            <category keyName="Request" keyValue="urn:com:systinet:soa:model:artifacts:soa:agreement:request" disabled="false"/>
+            <category keyName="Contract" keyValue="urn:com:systinet:soa:model:artifacts:soa:agreement:contract" disabled="false"/>
+            <category keyName="SLO" keyValue="urn:com:systinet:soa:model:artifacts:soa:agreement:slo" disabled="false"/>
+          </category>
+        </category>
+        <category keyName="Content" keyValue="urn:com:systinet:soa:model:artifacts:content" disabled="false">
+          <category keyName="Documentation" keyValue="urn:com:systinet:soa:model:artifacts:content:documentation" disabled="false"/>
+          <category keyName="Interface" keyValue="urn:com:systinet:soa:model:artifacts:content:interface" disabled="false">
+            <category keyName="WSDL" keyValue="uddi:uddi.org:resource:type:repository:wsdl" disabled="false"/>
+          </category>
+          <category keyName="Schema" keyValue="urn:com:systinet:soa:model:artifacts:content:schema" disabled="false">
+            <category keyName="XML Schema" keyValue="uddi:uddi.org:resource:type:repository:xsd" disabled="false"/>
+            <category keyName="Schematron" keyValue="urn:com:systinet:soa:model:artifacts:content:xml:schematron" disabled="false"/>
+            <category keyName="DTD" keyValue="urn:com:systinet:soa:model:artifacts:content:schema:dtd" disabled="false"/>
+          </category>
+          <category keyName="Categorization" keyValue="urn:com:systinet:soa:model:artifacts:content:categorization" disabled="false">
+            <category keyName="Taxonomy" keyValue="urn:com:systinet:soa:model:artifacts:content:categorization:taxonomy" disabled="false"/>
+          </category>
+          <category keyName="Search And Transform" keyValue="urn:com:systinet:soa:model:artifacts:content:searchAndtransform" disabled="false">
+            <category keyName="Stored Search" keyValue="urn:com:systinet:soa:model:artifacts:content:searchAndtransform:storedSearch" disabled="false"/>
+            <category keyName="XSLT" keyValue="uddi:uddi.org:resource:type:repository:xslt" disabled="false"/>
+            <category keyName="XQuery" keyValue="uddi:uddi.org:resource:type:repository:xquery" disabled="false"/>
+            <category keyName="Schematron XSLT" keyValue="urn:com:systinet:soa:model:artifacts:content:searchAndtransform:schematronXslt" disabled="false"/>
+          </category>
+          <category keyName="Contact" keyValue="urn:com:systinet:soa:model:artifacts:content:contact" disabled="false">
+            <category keyName="Person" keyValue="urn:com:systinet:soa:model:artifacts:content:contact:person" disabled="false"/>
+            <category keyName="Organization Unit" keyValue="urn:com:systinet:soa:model:artifacts:content:contact:organizationUnit" disabled="false"/>
+          </category>
+          <category keyName="Report" keyValue="urn:com:systinet:soa:model:artifacts:content:report" disabled="false"/>
+        </category>
+        <category keyName="System" keyValue="urn:com:systinet:soa:model:artifacts:system" disabled="false">
+          <category keyName="Task" keyValue="urn:com:systinet:soa:model:artifacts:system:task" disabled="false"/>
+          <category keyName="Tool" keyValue="urn:com:systinet:soa:model:artifacts:system:tool" disabled="false">
+            <category keyName="Impact Tool" keyValue="urn:com:systinet:soa:model:artifacts:system:tool:impact" disabled="false"/>
+          </category>
+          <category keyName="Registry" keyValue="urn:com:systinet:soa:model:artifacts:system:registry" disabled="false">
+            <category keyName="UDDI Registry" keyValue="urn:com:systinet:soa:model:artifacts:system:registry:uddi" disabled="false"/>
+          </category>
+        </category>
+      </category>
+    </categories>
+    <bindingTemplate bindingKey="uddi:53346d50-e4d6-11da-bf82-c9765be1bf81" serviceKey="uddi:532d4160-e4d6-11da-bf82-c9765be1bf81" xmlns="urn:uddi-org:api_v3">
+      <accessPoint useType="endPoint">class:com.systinet.uddi.publishing.v3.validation.service.InternalValidator</accessPoint>
+      <tModelInstanceDetails>
+        <tModelInstanceInfo tModelKey="uddi:uddi.org:v3_valuesetvalidation"/>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:soa:model:taxonomies:artifactTypes"/>
+      </tModelInstanceDetails>
+    </bindingTemplate>
+    <bindingTemplate bindingKey="uddi:53405430-e4d6-11da-bf82-c9765be1bf81" serviceKey="uddi:532d4160-e4d6-11da-bf82-c9765be1bf81" xmlns="urn:uddi-org:api_v3">
+      <accessPoint useType="endPoint">class:com.systinet.uddi.publishing.v2.validation.service.InternalValidator</accessPoint>
+      <tModelInstanceDetails>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:v2_validatevalues"/>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:soa:model:taxonomies:artifactTypes"/>
+      </tModelInstanceDetails>
+    </bindingTemplate>
+    <bindingTemplate bindingKey="uddi:53453630-e4d6-11da-bf82-c9765be1bf81" serviceKey="uddi:532d4160-e4d6-11da-bf82-c9765be1bf81" xmlns="urn:uddi-org:api_v3">
+      <accessPoint useType="endPoint">class:com.systinet.uddi.publishing.v1.validation.service.InternalValidator</accessPoint>
+      <tModelInstanceDetails>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:v1_validatevalues"/>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:soa:model:taxonomies:artifactTypes"/>
+      </tModelInstanceDetails>
+    </bindingTemplate>
+  </validation>
+</taxonomy>

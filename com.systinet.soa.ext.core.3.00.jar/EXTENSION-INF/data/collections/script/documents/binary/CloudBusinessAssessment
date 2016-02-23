@@ -1,0 +1,426 @@
+/*
+ *********      SURVEY SAMPLE        ************
+ **
+ ** Survey STRUCTURE:
+ **
+ **   predefinitions: type, value
+ **   processing: mapping properties of scores
+ **   steps: each step will have 1-many questions
+ **
+ **
+ ** Question TYPES:
+ **
+ **   'single-choice' : radio buttons with default values: { 'Yes' : true, 'No' : false, 'Don\'t know': undefined }
+ **   'multi-choices': checkboxes
+ **   'textarea': textarea for multi-line text input
+ **   'text'
+ **   'number'
+ **   'taxonomy' : combobox, will update the selected value to mapped property of Artifact base on question[@type = 'taxonomy'].mapping
+ **
+ ** Question MAPPING:
+ **   An answer of question can be mapped to artifact property value
+ **
+ ** Default VALUES:
+ **
+ **   predefinedType: if question has no type, it will use the default
+ **   predefinedValues: predefined option values of default type
+ **
+ ** SCORES:
+ **   question[@type='score']: each question which type is score will have 1-many type of scores: technical score, financial score,...
+ **   Each type score, 1 of 4 ways calculation can be set: { 'avg' : average score, 'min' : minimum score, 'max': maximum score, 'first': first answer }
+ **   avg is default
+ **
+ ** COLOR PATTERNS:
+ **
+ **   Theme: blue(default): #5fa2dd, green: #9cc96b, purple: #986291, orange: #ebaa4b, red: #f76c51, jade green: #4ebcda
+ **   Icons: cloud, user, info, home, heart, gift, signal, gear, file, trash, clock-o, road, lock, inbox, flag, tags, list
+ ** or all the icons which are defined in font awesome. See more:  http://fortawesome.github.io/Font-Awesome/icons/
+ */
+{
+	/*
+	   You can custom background/buttons by predefined theme values: 'primary', 'success', 'info', 'mint', 'purple', 'pink', 'dark', 'warning', 'danger'
+	*/
+ 	//theme: 'primary'
+	icon: 'cloud',
+	predefinedType: 'single-choice',
+	predefinedValues: [{
+		'true': 'Yes'
+	},
+	{
+		'false': 'No'
+	},
+	{
+		'undefined': 'Don\'t know'
+	}],
+	processing: {
+		scores: [{// declare the scores defined by the questionnaire and map them to properties
+			name: 'regulatoryScore',
+			property: 'regulatoryAlignment'
+		},
+		{
+			name: 'vendorSupportScore',
+			property: 'vendorSupportAlignment'
+		},
+		{
+			name: 'geographyScore',
+			property: 'geographyAlignment'
+		},
+		{
+			name: 'serviceAvailabilityScore',
+			property: 'serviceAvailabilityAlignment'
+		},
+		{
+			name: 'workloadVariabilityScore',
+			property: 'workloadVariabilityAlignment'
+		},
+		{
+			name: 'securityScore',
+			property: 'securityAlignment'
+		}]
+	},
+	
+	onCompletion: function(surveyedArtifact, questions, calculatedScores) {
+	    var avgScore = calculateGroup('avg', surveyedArtifact, 'c_cloudAssessment_BusinessAlignment');
+		setProperty(surveyedArtifact, 'businessAlignment', avgScore);
+	},
+	
+	steps: [{
+		name: 'Regulatory',
+		// define one step in the survey
+		description: '',
+		icon: 'info',
+		background: '#f76c51',
+		questions: [{
+			question: 'Is the application subject to regulatory requirements (FISMA, HIPAA, ISO 27000, PCI-DSS, etc.) ?',
+			id: 'regulatoryRequirement',
+			type: 'single-choice',
+			//if not defined, default value is 'single-choice'
+			mapping: {
+				type: 'score',
+				scores: {
+					regulatoryScore: {
+						aggregationOperator: 'avg',
+						'true': 0,
+						'false': 100,
+						'undefined': 10
+					}
+				}
+			}
+		},
+		{
+			question: 'Does the application have to run on a government certified operating system image ? ',
+			id: 'governmentCertifiedOS',
+			mapping: {
+				type: 'score',
+				scores: {
+					regulatoryScore: {
+						aggregationOperator: 'avg',
+						'true': 0,
+						'false': 100,
+						'undefined': 10
+					}
+				}
+			}
+		},
+		{
+			question: 'Are there regulatory requirements requiring the data to be restricted to a specific geographic region ?',
+			id: 'geographicRegionRestriction',
+			mapping: {
+				type: 'score',
+				scores: {
+					regulatoryScore: {
+						aggregationOperator: 'avg',
+						'true': 0,
+						'false': 100,
+						'undefined': 10
+					}
+				}
+			}
+		}]
+	},
+	{
+		name: 'Vendor Support',
+		description: '',
+		icon: 'life-ring',
+		background: '#ebaa4b',
+		questions: [{
+			question: 'Does the vendor of this application fully supports runing it in a virtualized environment ? ',
+			id: 'virtualizedEnvironmentSupport',
+			type: 'single-choice',
+			mapping: {
+				type: 'score',
+				scores: {
+					vendorSupportScore: {
+						aggregationOperator: 'avg',
+						'true': 100,
+						'false': 0,
+						'undefined': 10
+					}
+				}
+			}
+		},
+		{
+			question: 'Is the application required to run on a vendor certified operating system image ? ',
+			id: 'vendorCertifiedOS',
+			type: 'single-choice',
+			mapping: {
+				type: 'score',
+				scores: {
+					vendorSupportScore: {
+						aggregationOperator: 'avg',
+						'true': 0,
+						'false': 100,
+						'undefined': 10
+					}
+				}
+			}
+		},
+		{
+			question: 'Is the application required to be hosted in the vendor environment ?',
+			id: 'hostedOnvendorEnv',
+			type: 'single-choice',
+			mapping: {
+				type: 'score',
+				scores: {
+					vendorSupportScore: {
+						aggregationOperator: 'avg',
+						'true': 0,
+						'false': 100,
+						'undefined': 10
+					}
+				}
+			}
+		},
+		{
+			question: 'Are there any licensing restrictions that prevent this application from running in a virtualized or cloud environment ? ',
+			id: 'licensingRestriction',
+			type: 'single-choice',
+			mapping: {
+				type: 'score',
+				scores: {
+					vendorSupportScore: {
+						aggregationOperator: 'avg',
+						'true': 0,
+						'false': 100,
+						'undefined': 10
+					}
+				}
+			}
+		}]
+	},
+	{
+		name: 'Geography',
+		description: '',
+		icon: 'building',
+		background: '#ffd455',
+		questions: [{
+			question: 'Is the geographic location of the user base a factor in your application hosting ? ',
+			id: ' geographicLocation',
+			type: 'single-choice',
+			mapping: {
+				type: 'score',
+				scores: {
+					geographyScore: {
+						aggregationOperator: 'avg',
+						'true': 0,
+						'false': 100,
+						'undefined': 10
+					}
+				}
+			}
+		},
+		{
+			question: 'Is the application hosted in multiple geographic locations ?',
+			id: 'multipleGeographicLocation',
+			type: 'single-choice',
+			mapping: {
+				type: 'score',
+				scores: {
+					geographyScore: {
+						aggregationOperator: 'avg',
+						'true': 0,
+						'false': 100,
+						'undefined': 10
+					}
+				}
+			}
+		}]
+	},
+	{
+		name: 'Service Availability',
+		description: '',
+		icon: 'gear',
+		background: '#9cc96b',
+		questions: [{
+			question: 'What availability service level is required ?',
+			id: ' serviceAvailabilityLevel',
+			type: 'single-choice',
+			values: [{
+				'99': '<=99.9%'
+			},
+			{
+				'100': '>99.9%'
+			},
+			{
+				'undefined': 'Don\'t know'
+			}],
+			mapping: {
+				type: 'score',
+				scores: {
+					serviceAvailabilityScore: {
+						aggregationOperator: 'avg',
+						'99': 100,
+						'100': 0,
+						'undefined': 10
+					}
+				}
+			}
+		},
+		{
+			question: 'Are the public cloud providers server disaster procedures enough to fit your requirements ?',
+			id: 'disasterProcedures',
+			type: 'single-choice',
+			mapping: {
+				type: 'score',
+				scores: {
+					serviceAvailabilityScore: {
+						aggregationOperator: 'avg',
+						'true': 100,
+						'false': 0,
+						'undefined': 10
+					}
+				}
+			}
+		}]
+	},
+	{
+		name: 'Workload Variability',
+		description: '',
+		icon: 'folder',
+		background: '#4ebcda',
+		questions: [{
+			question: 'Does the application have workloads with unpredictable peaks in demand ? ',
+			id: ' workloadUnpredictablePeaks',
+			type: 'single-choice',
+			mapping: {
+				type: 'score',
+				scores: {
+					workloadVariabilityScore: {
+						aggregationOperator: 'avg',
+						'true': 50,
+						'false': 0,
+						'undefined': 10
+					}
+				}
+			}
+		},
+		{
+			question: 'Does the application have spiky or cyclic usage profiles ? ',
+			id: 'usageProfiles',
+			type: 'single-choice',
+			mapping: {
+				type: 'score',
+				scores: {
+					workloadVariabilityScore: {
+						aggregationOperator: 'avg',
+						'true': 50,
+						'false': 0,
+						'undefined': 10
+					}
+				}
+			}
+		}]
+	},
+	{
+		name: 'Security',
+		description: '',
+		icon: 'lock',
+		background: '#986291',
+		questions: [{
+			question: 'Does your organization have any security policies that would prevent a 3rd-party cloud provider from having admin access to the server, storage, or network infrastructure ? ',
+			id: ' securityPolicies',
+			type: 'single-choice',
+			mapping: {
+				type: 'score',
+				scores: {
+					securityScore: {
+						aggregationOperator: 'avg',
+						'true': 100,
+						'false': 0,
+						'undefined': 10
+					}
+				}
+			}
+		},
+		{
+			question: 'Will the level of security of standard internet connectivity be sufficient for this application, such as HTTPS ? ',
+			id: 'standardInternetSecurityLevel',
+			type: 'single-choice',
+			mapping: {
+				type: 'score',
+				scores: {
+					securityScore: {
+						aggregationOperator: 'avg',
+						'true': 100,
+						'false': 0,
+						'undefined': 10
+					}
+				}
+			}
+		},
+		{
+			question: 'Does the application need to use encryption for communication ?',
+			id: 'communicationEncryption',
+			type: 'single-choice',
+			mapping: {
+				type: 'score',
+				scores: {
+					securityScore: {
+						aggregationOperator: 'avg',
+						'true': 0,
+						'false': 50,
+						'undefined': 10
+					}
+				}
+			}
+		},
+		{
+			question: 'Does the application\'s data storage need to be encrypted ? ',
+			id: 'dataEncryption',
+			type: 'single-choice',
+			mapping: {
+				type: 'score',
+				scores: {
+					securityScore: {
+						aggregationOperator: 'avg',
+						'true': 0,
+						'false': 100,
+						'undefined': 10
+					}
+				}
+			}
+		},
+		{
+			question: 'Does your existing security model use proprietary authentication and authorization ? ',
+			id: 'proprietaryAuthentication',
+			type: 'single-choice',
+			mapping: {
+				type: 'score',
+				scores: {
+					securityScore: {
+						aggregationOperator: 'avg',
+						'true': 0,
+						'false': 100,
+						'undefined': 10
+					}
+				}
+			}
+		}]
+	},
+	{
+		name: 'Finish',
+		description: 'Thank you for participating in this survey',
+		icon: 'check',
+		background: '#4ebcda'
+	}]
+}

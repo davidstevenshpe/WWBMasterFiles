@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taxonomy check="false" brief="false" xmlns="http://systinet.com/uddi/taxonomy/v3/5.5">
+  <tModel tModelKey="uddi:weblayers:center:override:indicator:taxonomy" deleted="false" tModelKeyV2="uuid:d86e3860-2796-11d9-8882-a1161ac08882" xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <name xmlns="urn:uddi-org:api_v3">WebLayers Center Override Indicator</name>
+    <description xmlns="urn:uddi-org:api_v3">Taxonomy representing the existence of WebLayers Center conformance failure overrides</description>
+    <categoryBag xmlns="urn:uddi-org:api_v3">
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Categorization system" keyValue="categorization"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Identifier system" keyValue="identifier"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="bindingTemplate"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="businessEntity"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="businessService"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="tModel"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Unchecked value set" keyValue="unchecked"/>
+    </categoryBag>
+  </tModel>
+  <compatibilityBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <compatibility>bindingTemplate</compatibility>
+    <compatibility>businessEntity</compatibility>
+    <compatibility>businessService</compatibility>
+    <compatibility>tModel</compatibility>
+  </compatibilityBag>
+  <categorizationBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <categorization>categorization</categorization>
+    <categorization>identifier</categorization>
+  </categorizationBag>
+</taxonomy>

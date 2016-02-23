@@ -1,0 +1,63 @@
+<query>
+    <parameters>
+         <parameter name="domainIDs" label="domainIDs" type="string" defaultValueQuery="select r_localId from hpsoaDomainArtifact"/>
+         <parameter name="query" label="query" type="string" defaultValue="%%"/>
+    </parameters>
+    SELECT a.name AS appName,
+    a.version AS appVersion,
+    a._uuid AS id,
+
+    a.businessAlignment AS ba,
+    a.technicalAlignment AS ta,
+    a.financialAlignment AS fa,
+    (COALESCE(a.businessAlignment,0) + COALESCE(a.technicalAlignment,0) + COALESCE(a.financialAlignment,0))/3 as oa,
+
+    a._ownerName AS ownerName, a._owner AS owner, c._uuid AS ownerUuid,
+    a.cloudTransformationStrategy.val as transformationStrategy,
+    
+    
+        (   SELECT count(1) 
+            FROM applicationComponentArtifact apa (force_all_domains)
+                JOIN infrastructureServiceArtifact fis (force_all_domains) ON BIND (apa.uses)
+            WHERE
+                (fis._domainId = 'csaServiceDesignsDomain'
+                ) AND 
+                (apa._uuid = a._uuid  OR EXISTS (SELECT 1 FROM applicationComponentArtifact src_apa (force_all_domains) JOIN applicationComponentArtifact target_apa (force_all_domains) ON BIND (src_apa.specializedBy)                            
+                                                 WHERE target_apa._uuid = a._uuid AND src_apa._uuid = apa._uuid)
+                )               
+                
+        ) AS serviceDesign,
+        
+        fin.minEstimatedHwCost,
+        fin.currentHwCostEstimate,
+        fin.annualCostHw as currentHwCost,
+
+        COALESCE(fin.annualCostHw, fin.currentHwCostEstimate) as hardwareCost,
+
+        CASE
+            WHEN fin.minEstimatedHwCost is null THEN 0
+            WHEN fin.annualCostHw is not null THEN COALESCE((fin.annualCostHw - fin.minEstimatedHwCost),0)
+            WHEN fin.currentHwCostEstimate is not null THEN COALESCE((fin.currentHwCostEstimate - fin.minEstimatedHwCost),0)
+            ELSE 0
+            END as savingsOpportunity,
+        
+        CASE
+            WHEN fin.transformationCost is null THEN 0
+            WHEN fin.minEstimatedHwCost is null THEN 0
+            WHEN fin.annualCostHw is not null THEN 100*(COALESCE((fin.annualCostHw - fin.minEstimatedHwCost),0)*5 - fin.transformationCost)/fin.transformationCost
+            WHEN fin.currentHwCostEstimate is not null THEN 100*(COALESCE((fin.currentHwCostEstimate - fin.minEstimatedHwCost),0)*5 - fin.transformationCost)/fin.transformationCost
+            ELSE 0
+            END as ROI,
+
+        fin.transformationCost AS transformationCost,
+        fin.annualCostTotal AS totalCost,
+        fin._uuid AS finProfileUUID,
+        dc.name AS dataCenterName,
+        dc._uuid AS dataCenterUuid
+        
+    FROM applicationComponentArtifact a LEFT JOIN contactArtifact c ON a._owner = c.loginName
+    left join appFinancialProfileArtifact fin using a.financialProfile
+    left join dataCenterArtifact dc (force_all_domains) using a.recommendedDataCenter
+    WHERE LOWER(a.name) like LOWER(:query) or LOWER(a.cloudTransformationStrategy.val) like LOWER(:query)
+    <orderBy>a.name</orderBy>
+</query>

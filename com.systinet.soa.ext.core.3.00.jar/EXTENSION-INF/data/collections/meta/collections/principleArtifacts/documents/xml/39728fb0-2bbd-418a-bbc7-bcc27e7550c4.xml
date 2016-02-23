@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/principleArtifacts/39728fb0-2bbd-418a-bbc7-bcc27e7550c4</r:path>
+   <r:collection>/principleArtifacts/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType></r:contentType>
+   <r:owner>admin</r:owner>
+   <r:uuid>39728fb0-2bbd-418a-bbc7-bcc27e7550c4</r:uuid>
+   <r:domainId>defaultDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2013-12-09T10:54:52.251Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>admin</r:creator>
+      <r:lastDataRevision>0</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:principleArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                              xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                              xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                              xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                              deleted="0"
+                              xlink:href="principleArtifacts/39728fb0-2bbd-418a-bbc7-bcc27e7550c4">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="Motivation"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:motivationArtifact"/>
+               <p:artifactType name="Principle"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:principleArtifact"/>
+            </g:artifactTypeGroup>
+            <g:aggregatesGroup>
+               <p:aggregates xlink:href="principleArtifacts/f44709d5-14cd-42d1-b4e5-a6d20d8b3169"/>
+            </g:aggregatesGroup>
+            <g:nameGroup>
+               <p:name>Canonical Data Model</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup>
+               <p:description>Data to be a subject of exchange or sharing conforms to the canonical data model.</p:description>
+            </g:descriptionGroup>
+            <p:revision>1</p:revision>
+            <g:keywordGroup/>
+            <p:version>1.0</p:version>
+            <g:architectureLayerGroup>
+               <p:architectureLayer name="Application Layer"
+                                    taxonomyUri="uddi:systinet.com:soa:model:taxonomies:architectureLayer"
+                                    value="applicationLayer"/>
+               <p:architectureLayer name="Technology Layer"
+                                    taxonomyUri="uddi:systinet.com:soa:model:taxonomies:architectureLayer"
+                                    value="technologyLayer"/>
+            </g:architectureLayerGroup>
+            <g:qualityFeatureGroup>
+               <p:qualityFeature name="Effectivity"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="effectivity"/>
+               <p:qualityFeature name="Efficiency"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="efficiency"/>
+               <p:qualityFeature name="Integrity"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="integrity"/>
+            </g:qualityFeatureGroup>
+            <p:rationale>When exchanging and sharing data as well as when designing, developing and managing the information environment, the standardized data and component entities (also known as the canonical data model) should be used. A canonical data model standardizes the data and component entities that are to be shared or used in an organization. Usage of standardized entities definition enables an avoidance to misunderstanding, and simplifies a design and a development of the information environment.
+When using a canonical data model, it becomes common knowledge to all users what the data or component entities mean, how they can be used, and in which manner the environment can be described and documented.</p:rationale>
+            <p:implications>There is a common canonical data model describing and standardizing data and component entities to be used for design and development of information management.
+The canonical data model is centrally defined and managed over time. All involved parties can initiate a request for a new entity to be incorporated into the model; nevertheless, only the architecture committee is entitled to approve and incorporate new entities into the canonical data model.
+All data, applications, as well as underlying infrastructure, need to be documented in structures prescribed by the canonical data model. If there are data, applications or underlying infrastructure domains, which are not described and documented in this form yet, there must be a plan in place as to when they will be documented in accordance with the canonical data model.
+Every newly defined or designed data, application or infrastructure component must conform to canonical data model. Even in cases when the data, applications or infrastructure components are acquired from an external subject, their application within the information environment must be documented in the form of the canonical data model.</p:implications>
+         </a:principleArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

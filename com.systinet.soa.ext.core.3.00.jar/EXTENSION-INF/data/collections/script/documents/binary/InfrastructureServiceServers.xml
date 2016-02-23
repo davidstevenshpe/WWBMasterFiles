@@ -1,0 +1,20 @@
+<closure maxDepth="3" maxResults="100" maxProcessingTime="30000" debug="false" seedsAsResults="false">
+  <defaultSeedQuery>select isa._uuid from infrastructureServiceArtifact isa where isa._uuid=:isaUuid</defaultSeedQuery>
+  <parameters>
+         <parameter name="domainTypes" label="domainTypes" type="string" defaultValue="As-is/To-be Architecture,Reference Model,Demo Data"/>
+         <parameter name="isaUuid" label="isaUuid" type="string"/>
+		 <!--
+         <parameter name="domainIDs" label="domainIDs" type="string" defaultValue="defaultDomain"/>
+		 -->
+     </parameters> 
+  
+	<traversableRelations>
+        <relation sdmName="realizedBy" sourceArtifact="infrastructureServiceArtifact" targetArtifact="serverArtifact"/>
+		<relation sdmName="realizedBy" sourceArtifact="infrastructureServiceArtifact" targetArtifact="serverProfileArtifact"/>
+	</traversableRelations>
+	
+	<resultArtifacts>
+		<artifact sdmName="serverArtifact"/>
+		<artifact sdmName="serverProfileArtifact"/>
+    </resultArtifacts>
+</closure>

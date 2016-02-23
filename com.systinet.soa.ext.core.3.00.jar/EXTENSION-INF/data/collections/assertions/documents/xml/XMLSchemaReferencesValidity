@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pm:Assertion xmlns:pm="http://systinet.com/2005/10/soa/policy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:a="http://systinet.com/2005/05/soa/model/artifact" xmlns:r="http://systinet.com/2005/05/repository" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:pt="http://systinet.com/2005/05/soa/model/property/type" xmlns:rest="http://systinet.com/2005/05/soa/resource" xmlns:p="http://systinet.com/2005/05/soa/resource" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup">
+        <pm:Template>
+          <pm:XMLSchemaReferencesValidity/>
+        </pm:Template>
+        <pm:Validation SourceType="xmlns(ns=http://www.w3.org/2001/XMLSchema)qname(ns:schema)">
+          <xsv:XMLSchemaReferencesValidity xmlns:xsv="http://systinet.com/2005/10/soa/policy/validation"/>
+        </pm:Validation>
+      </pm:Assertion>

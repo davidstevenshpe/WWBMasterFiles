@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://systinet.com/2005/05/soa/model/property/type"
+           xmlns="http://systinet.com/2005/05/soa/model/property/type"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+    <xs:include schemaLocation="./category.xsd"/>
+
+    <xs:complexType name="categoryBagPropertyType">
+        <xs:sequence>
+            <xs:element name="category" type="categoryPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="categoryGroup" type="categoryPropertyGroupType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="categoryPropertyGroupType">
+      <xs:annotation xmlns:rdb="http://systinet.com/2006/08/soa/model/rdbmapping">
+         <xs:appinfo>
+            <rdb:table context="multiple">
+               <rdb:ommit-foreign-key>
+                  <rdb:context table-property-key="artifact" table-property-value="true" />
+               </rdb:ommit-foreign-key>
+               <rdb:column name="fk_id" type="number">
+                  <rdb:foreign-key table-name="resource" column-name="id" />
+               </rdb:column>
+            </rdb:table>
+         </xs:appinfo>
+      </xs:annotation>
+        <xs:sequence>
+            <xs:element name="category" type="categoryPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="taxonomyUri" type="xs:anyURI" use="required">
+            <xs:annotation xmlns:rdb="http://systinet.com/2006/08/soa/model/rdbmapping">
+             <xs:appinfo>                
+                <rdb:type name="ascii(255)"/>
+             </xs:appinfo>
+           </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+</xs:schema>

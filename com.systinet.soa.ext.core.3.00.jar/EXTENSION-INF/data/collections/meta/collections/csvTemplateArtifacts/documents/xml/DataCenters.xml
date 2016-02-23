@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/csvTemplateArtifacts/07699139-7bde-476d-9469-c3ddc5230669</r:path>
+   <r:collection>/csvTemplateArtifacts/</r:collection>
+   <r:binary>true</r:binary>
+   <r:contentType>application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</r:contentType>
+   <r:owner>systinet:admin</r:owner>
+   <r:uuid>07699139-7bde-476d-9469-c3ddc5230669</r:uuid>
+   <r:domainId>defaultDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>4230226111</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2015-08-01T17:00:00.000Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>systinet:admin</r:creator>
+      <r:lastDataRevision>1</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:csvTemplateArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                                xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                                xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                                xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                                xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                                xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                deleted="0"
+                                xlink:href="csvTemplateArtifacts/07699139-7bde-476d-9469-c3ddc5230669">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="Content"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:content"/>
+               <p:artifactType name="Spreadsheet Template"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:content:csvTemplateArtifact"/>
+            </g:artifactTypeGroup>
+            <g:nameGroup>
+               <p:name>Data Centers Template</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup>
+               <p:description>&lt;P&gt;
+	XLSX template with several data centers together with offered server profiles, server classes and operating systems.&lt;/P&gt;</p:description>
+            </g:descriptionGroup>
+            <p:revision>1</p:revision>
+            <g:keywordGroup/>
+            <p:version>1.0</p:version>
+            <p:location>/templates/DataCenters.xlsx</p:location>
+            <p:isCached>0</p:isCached>
+            <p:checksum>4230226111</p:checksum>
+            <p:dataLength>37278</p:dataLength>
+            <p:r_filename>DataCenters.xlsx</p:r_filename>
+            <p:contentType>application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</p:contentType>
+            <p:syncStatus>IDENTICAL</p:syncStatus>
+            <p:syncLastChecked>2015-08-23T17:12:56.142Z</p:syncLastChecked>
+            <g:applicableToArtifactGroup>
+               <p:applicableToArtifact name="Data Center"
+                                       taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                                       value="urn:com:cloud-assessment:artifacts:dataCenterArtifact"/>
+               <p:applicableToArtifact name="Operating System"
+                                       taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                                       value="urn:com:cloud-assessment:artifacts:operatingSystemArtifact"/>
+               <p:applicableToArtifact name="Server Class"
+                                       taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                                       value="urn:com:cloud-assessment:artifacts:serverClassArtifact"/>
+               <p:applicableToArtifact name="Server Profile"
+                                       taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                                       value="urn:com:cloud-assessment:artifacts:serverProfileArtifact"/>
+            </g:applicableToArtifactGroup>
+         </a:csvTemplateArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

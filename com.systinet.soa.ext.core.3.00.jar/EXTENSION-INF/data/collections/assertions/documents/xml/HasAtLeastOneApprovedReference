@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pm:Assertion xmlns:pm="http://systinet.com/2005/10/soa/policy">
+    <pm:Template>
+        <p0:HasAtLeastOneApprovedReference sourceArtifactType="" stage="" targetArtifactType="" xmlns:p0="urn:com.hp.systinet.soa:lifecycle-assertions" xmlns:pm="http://systinet.com/2005/10/soa/policy"/>
+    </pm:Template>
+    <pm:Bundle>
+        <pm:String Key="no-approved-reference">Artifact ''{0}'' references no artifact of the given type approved in the given stage.</pm:String>
+    </pm:Bundle>
+    <pm:Parameter Name="stage" Optional="false" Type="pm:taxonomy" Taxonomy="uddi:systinet.com:soa:model:taxonomies:lifecycleStages" XPointer="xpointer(@stage)" xmlns:p1="http://www.w3.org/2001/XMLSchema">
+        <pm:Description>Required approved lifecycle stage of the referenced artifact.</pm:Description>
+    </pm:Parameter>
+    <pm:Parameter Name="targetArtifactType" Optional="false" Type="pm:taxonomy" Taxonomy="uddi:systinet.com:soa:model:taxonomies:artifactTypes" XPointer="xpointer(@targetArtifactType)" xmlns:p1="http://www.w3.org/2001/XMLSchema">
+        <pm:Description>Artifact type of the relation target.</pm:Description>
+    </pm:Parameter>
+    <pm:Parameter Name="sourceArtifactType" Optional="false" Type="pm:taxonomy" Taxonomy="uddi:systinet.com:soa:model:taxonomies:artifactTypes" XPointer="xpointer(@sourceArtifactType)" xmlns:p1="http://www.w3.org/2001/XMLSchema">
+        <pm:Description>Artifact type of the relation source.</pm:Description>
+    </pm:Parameter>
+    <pm:Validation SourceType="xmlns(ns=http://systinet.com/2005/05/soa/resource)qname(ns:resource)">
+	
+        <XQuery xmlns="http://systinet.com/2005/10/soa/policy/validation" xmlns:pm="http://systinet.com/2005/10/soa/policy" xmlns:xlink="http://www.w3.org/1999/xlink/">import module namespace pm = "http://systinet.com/2005/10/soa/policy/validation/xquery";
+
+declare namespace val="http://systinet.com/2005/10/soa/policy/validation";
+declare namespace rest="http://systinet.com/2005/05/soa/resource";
+declare namespace a="http://systinet.com/2005/05/soa/model/artifact";
+declare namespace p="http://systinet.com/2005/05/soa/model/property";
+declare namespace g="http://systinet.com/2005/05/soa/model/propertyGroup";
+declare namespace xlink="http://www.w3.org/1999/xlink";
+declare namespace lfc="http://hp.com/systinet/2009/05/lifecycle";
+
+declare variable $metadata.source.url as xs:string external;
+declare variable $stage as xs:string external;
+declare variable $sourceArtifactType as xs:string external;
+declare variable $targetArtifactType as xs:string external;
+
+declare function local:getResourceDescriptorName($resource)
+{
+	$resource/rest:resource/rest:descriptor/a:*[1]/g:nameGroup/p:name[1]
+};
+
+declare function local:artifactTypeMatches($resource as node(), $artifactType as xs:string) as xs:boolean
+{
+	not(empty($resource/rest:descriptor/a:*[1]/g:artifactTypeGroup/p:artifactType[@value=$artifactType]))
+};
+
+if (not(local:artifactTypeMatches(/rest:resource, $sourceArtifactType))) then
+	val:assertionNotApplicable()
+else
+	let $thisPath as xs:string := string(/rest:resource/rest:metadata/rest:path/text())
+	let $relationship := /rest:resource/rest:metadata/rest:relationships/rest:relationship
+	where
+		($relationship/rest:deleted = 'false' or $relationship/rest:deleted='0')
+		and ($relationship/rest:source/rest:path/text() = $thisPath)
+	return
+		let $okReferences :=
+			for $reference in $relationship/rest:target/rest:path
+				let $referencedArtifact :=  pm:downloadS2Resource($reference, $metadata.source.url)
+				where
+					local:artifactTypeMatches($referencedArtifact/rest:resource, $targetArtifactType)
+				return
+					let $gr := lfc:getGovernanceRecord(string($referencedArtifact/rest:resource/rest:metadata/rest:uuid))
+					let $lastApprovedStage as xs:string := string($gr/lfc:lastApprovedStage/lfc:value/text())
+					return
+						if ($lastApprovedStage = $stage) then
+							$reference
+						else
+							()
+		return
+            if (empty($okReferences)) then
+            	val:assertionFailed(val:l10n('no-approved-reference', $thisPath))
+            else
+            	val:assertionOK()
+</XQuery>
+    </pm:Validation>
+</pm:Assertion>

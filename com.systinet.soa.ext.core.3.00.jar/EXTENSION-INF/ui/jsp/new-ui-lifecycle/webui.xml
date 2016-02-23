@@ -1,0 +1,423 @@
+<config name="analyst-ui-lifecycle" savingPeriod="5000">
+    <webFramework>
+
+        <!-- Start Governance -->
+        <component name="/newUi/lc/common/widget/chooseGPCombo"
+                   className="com.hp.systinet.lifecycle.ui.common.widget.ChooseGPCombo"
+                   page="common/widget/chooseGPCombo.jsp"/>
+        <component name="/newUi/lc/catalog/button/startGovernance"
+                   className="com.hp.systinet.lifecycle.ui.catalog.button.StartGovernance"
+                   page="catalog/button/startGovernance.jsp"/>
+        <component name="/newUi/lc/catalog/button/startGovernanceButton"
+                   className="com.hp.systinet.lifecycle.ui.catalog.button.StartGovernanceButton"
+                   page="catalog/button/startGovernanceButton.jsp"/>
+        
+        <!-- Request Approval -->
+        <component name="/newUi/lc/catalog/button/requestApprovalButton"
+                   className="com.hp.systinet.lifecycle.ui.catalog.button.RequestApprovalButton"
+                   page="catalog/button/requestApprovalButton.jsp"/>
+
+        <!-- Move To -->
+          <component name="/newUi/lc/catalog/button/moveToButton"
+                     className="com.hp.systinet.lifecycle.ui.catalog.button.MoveToButton"
+                     page="catalog/button/moveToButton.jsp"/>
+
+        <!-- View Changes -->
+          <component name="/newUi/lc/catalog/button/viewChangesButton" page="catalog/button/viewChangesButton.jsp"/>
+
+        <!-- End Governance -->
+        <component name="/newUi/lc/catalog/button/endGovernanceButton"
+                   className="com.hp.systinet.lifecycle.ui.catalog.button.EndGovernanceButton"
+                   page="catalog/button/endGovernanceButton.jsp"/>
+
+        <!-- History -->
+        <component name="/newUi/lc/catalog/button/historyButton"
+                   className="com.hp.systinet.lifecycle.ui.catalog.button.HistoryButton"
+                   page="catalog/button/historyButton.jsp"/>        
+
+        <!-- Notify Approvers -->
+        <component name="/newUi/lc/catalog/button/notifyApproversButton"
+                   className="com.hp.systinet.lifecycle.ui.catalog.button.NotifyApproversButton"
+                   page="catalog/button/notifyApproversButton.jsp"/>
+
+        <!-- Cancel Approval -->
+        <component name="/newUi/lc/catalog/button/cancelApprovalButton"
+                   className="com.hp.systinet.lifecycle.ui.catalog.button.CancelApprovalButton"
+                   page="catalog/button/cancelApprovalButton.jsp"/>
+
+        <!-- Set Process -->
+        <component name="/newUi/lc/common/dialog/setProcess"
+                   className="com.hp.systinet.lifecycle.ui.common.dialog.SetProcess"
+                   page="common/dialog/setProcess.jsp"/>
+        <component name="/newUi/lc/catalog/button/setProcessButton"
+                   className="com.hp.systinet.lifecycle.ui.catalog.button.SetProcessButton"
+                   page="catalog/button/setProcessButton.jsp"/>
+
+        <component name="/newUi/lc/common/governanceDetails"
+                   className="com.hp.systinet.lifecycle.ui.common.GovernanceDetails"
+                   page="common/governanceDetails.jsp" />
+
+        <!-- User Events -->
+        <component name="/newUi/lc/userevent/requestDetailLinkRenderer" page="userevent/requestDetailLinkRenderer.jsp"
+                   className="com.hp.systinet.lifecycle.ui.userevent.RequestDetailLinkRenderer"/>
+
+        <!-- Lifecycle tab and visualization component -->
+        <component name="/newUi/lc/catalog/tab/lifecycleTab"
+                   page="catalog/tab/lifecycleTab.jsp"
+                   className="com.hp.systinet.lifecycle.ui.catalog.tab.LifecycleTab"/>
+        <component name="/newUi/lc/catalog/tab/lifecycleTabContents"
+                   page="@/core/customization/customizableComponent"
+                   className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizationId" paramValue="catalog.lifecycle.lifecycleTab"/>
+            <parameter paramName="customizedComponent" paramValue="/core/layout/columnsInternal"/>
+            <parameter paramName="dontCustomize" paramValue="true"/>
+        </component>
+        <component name="/newUi/lc/catalog/tab/buttonPanel"
+                   className="com.hp.systinet.lifecycle.ui.catalog.tab.ButtonPanel"
+                   page="catalog/tab/buttonPanel.jsp"/>
+        <component name="/newUi/lc/catalog/tab/helpPanel"
+                   page="catalog/tab/helpPanel.jsp"/>
+
+        <component name="/newUi/lc/catalog/visualization/visualizerPanel"
+                   className="com.hp.systinet.lifecycle.ui.catalog.visualization.VisualizerPanel"
+                   page="catalog/visualization/visualizerPanel.jsp" />
+        <component name="/newUi/lc/catalog/visualization/descriptionBox"
+                   className="com.hp.systinet.lifecycle.ui.catalog.visualization.DescriptionBox"
+                   page="catalog/visualization/descriptionBox.jsp" />
+        <component name="/newUi/lc/catalog/visualization/headerSection"
+                   className="com.hp.systinet.lifecycle.ui.catalog.visualization.HeaderSection"
+                   page="catalog/visualization/headerSection.jsp" />
+        <component name="/newUi/lc/catalog/visualization/headerVoterRow"
+                   page="catalog/visualization/headerVoterRow.jsp"/>
+        <component name="/newUi/lc/catalog/visualization/tasksSection"
+                   className="com.hp.systinet.lifecycle.ui.catalog.visualization.TasksSection"
+                   page="catalog/visualization/tasksSection.jsp" />
+        <component name="/newUi/lc/catalog/visualization/taskRow"
+                   className="com.hp.systinet.lifecycle.ui.catalog.visualization.TaskRow"
+                   page="catalog/visualization/taskRow.jsp"/>        
+        <component name="/newUi/lc/catalog/visualization/policiesSection"
+                   className="com.hp.systinet.lifecycle.ui.catalog.visualization.PoliciesSection"
+                   page="catalog/visualization/policiesSection.jsp" />
+        <component name="/newUi/lc/catalog/visualization/policyRow"
+                   className="com.hp.systinet.lifecycle.ui.catalog.visualization.PolicyRow"
+                   page="catalog/visualization/policyRow.jsp"/>           
+        <component name="/newUi/lc/catalog/visualization/approversSection"
+                   className="com.hp.systinet.lifecycle.ui.catalog.visualization.ApproversSection"
+                   page="catalog/visualization/approversSection.jsp" />
+
+        <component name="/newUi/lc/common/visualization/visualizer" page="common/visualization/visualizer.jsp"
+                   className="com.hp.systinet.lifecycle.ui.common.visualization.Visualizer"/>
+
+        <!-- Lifecycle admin UI: visualization -->
+        <component name="/newUi/lc/admin/visualization/editTransitionDialog"
+                   page="admin/visualization/editTransitionDialog.jsp"/>
+        <component name="/newUi/lc/admin/visualization/editTransitionComponent"
+                   className="com.hp.systinet.lifecycle.ui.admin.visualization.EditTransitionComponent"
+                   page="admin/visualization/editTransitionComponent.jsp"/>
+        <component name="/newUi/lc/admin/visualization/transitionSelector"
+                   page="admin/visualization/transitionSelector.jsp"/>
+        <component name="/newUi/lc/admin/visualization/transitionSelectorRow"
+                   page="admin/visualization/transitionSelectorRow.jsp"/>
+
+        <!-- Lifecycle admin UI: View Process -->
+        <component name="/newUi/lc/admin/process/processView" page="admin/process/processView.jsp"
+                   className="com.hp.systinet.lifecycle.ui.admin.process.ProcessView"/>
+        <task uri="/admin/lifecycle/process/processView" component="/newUi/lc/admin/process/processView"/>
+        <component name="/newUi/lc/admin/process/processDeleted" page="admin/process/processDeleted.jsp"/>
+        <component name="/newUi/lc/admin/process/processTabOverview" page="admin/process/processTabOverview.jsp"
+                className="com.hp.systinet.lifecycle.ui.admin.process.ProcessTabOverview"/>
+        <component name="/newUi/lc/admin/process/rightPanel" page="admin/process/rightPanel.jsp"/>
+
+        <component name="/newUi/lc/admin/process/action/editProcess" page="/admin/process/action/editProcess.jsp"
+                   className="com.hp.systinet.lifecycle.ui.admin.process.action.CommonProcessActions"/>
+        <component name="/newUi/lc/admin/process/action/publishProcess" page="/admin/process/action/publishProcess.jsp"
+                   className="com.hp.systinet.lifecycle.ui.admin.process.action.CommonProcessActions"/>
+        <component name="/newUi/lc/admin/process/action/deprecateProcess" page="/admin/process/action/deprecateProcess.jsp"
+                   className="com.hp.systinet.lifecycle.ui.admin.process.action.CommonProcessActions"/>
+        <component name="/newUi/lc/admin/process/action/cloneProcess" page="/admin/process/action/cloneProcess.jsp"
+                   className="com.hp.systinet.lifecycle.ui.admin.process.action.CommonProcessActions"/>
+        <component name="/newUi/lc/admin/process/action/deleteProcess" page="/admin/process/action/deleteProcess.jsp"
+                   className="com.hp.systinet.lifecycle.ui.admin.process.action.CommonProcessActions"/>
+        <component name="/newUi/lc/admin/process/action/viewUsage" page="/admin/process/action/viewUsage.jsp"
+                   className="com.hp.systinet.lifecycle.ui.admin.process.action.CommonProcessActions"/>
+
+        <!-- Lifecycle admin UI: View Process: Stages Tab -->
+        <component name="/newUi/lc/admin/process/stagesTab" page="admin/process/stagesTab.jsp"
+                className="com.hp.systinet.lifecycle.ui.admin.process.StagesTab"/>
+        <component name="/newUi/lc/admin/visualization/processDescriptionBox" page="admin/visualization/processDescriptionBox.jsp"
+                className="com.hp.systinet.lifecycle.ui.admin.visualization.ProcessDescriptionBox"/>
+        <component name="/newUi/lc/admin/visualization/tasksSection"
+                   className="com.hp.systinet.lifecycle.ui.admin.visualization.TasksSection"
+                   page="admin/visualization/tasksSection.jsp" />
+        <component name="/newUi/lc/admin/visualization/taskDialog"
+                   className="com.hp.systinet.lifecycle.ui.admin.visualization.TaskDialog"
+                   page="admin/visualization/taskDialog.jsp" />
+        <component name="/newUi/lc/admin/visualization/taskDialogAssigneeValue"
+                   className="com.hp.systinet.lifecycle.ui.admin.visualization.TaskDialogAssigneeValue"
+                   page="admin/visualization/taskDialogAssigneeValue.jsp" />
+        <component name="/newUi/lc/admin/visualization/taskDialogPolicyValue"
+                   className="com.hp.systinet.lifecycle.ui.admin.visualization.TaskDialogPolicyValue"
+                   page="admin/visualization/taskDialogPolicyValue.jsp" />
+        <component name="/newUi/lc/admin/visualization/taskDialogPolicyApplicableTo"
+                   page="admin/visualization/taskDialogPolicyApplicableTo.jsp" />
+        <component name="/newUi/lc/admin/visualization/taskDialogPolicyApplicableLabel"
+                   page="admin/visualization/taskDialogPolicyApplicableLabel.jsp" />
+        <component name="/newUi/lc/admin/visualization/policiesSection"
+                   className="com.hp.systinet.lifecycle.ui.admin.visualization.PoliciesSection"
+                   page="admin/visualization/policiesSection.jsp" />
+        <component name="/newUi/lc/admin/visualization/policyDialog"
+                   className="com.hp.systinet.lifecycle.ui.admin.visualization.PolicyDialog"
+                   page="admin/visualization/policyDialog.jsp" />                   
+        <component name="/newUi/lc/admin/visualization/approversSection"
+                   className="com.hp.systinet.lifecycle.ui.admin.visualization.ApproversSection"
+                   page="admin/visualization/approversSection.jsp" />
+
+        <!--Lifecycle automatic actions-->
+        <component name="/newUi/lc/admin/automaticaction/automaticActionsSection"
+                   className="com.hp.systinet.lifecycle.ui.admin.automaticaction.AutomaticActionsSection"
+                   page="admin/automaticaction/automaticActionsSection.jsp" />
+        <component name="/newUi/lc/admin/automaticaction/eventSelector"
+                   className="com.hp.systinet.lifecycle.ui.admin.automaticaction.EventSelector"
+                   page="admin/automaticaction/eventSelector.jsp" />
+
+        <!--Lifecycle admin UI: Create / Edit Process-->
+        <component name="/newUi/lc/admin/process/processEditor" page="admin/process/processEditor.jsp"
+            className="com.hp.systinet.lifecycle.ui.admin.process.ProcessEditor"/>
+        <component name="/newUi/lc/admin/process/subartifactTypeSelector"
+                   page="admin/process/subartifactTypeSelector.jsp"
+                   className="com.hp.systinet.lifecycle.ui.admin.process.SubartifactTypeSelector"/>
+        <task uri="/admin/lifecycle/process/newProcess" component="/newUi/lc/admin/process/processEditor"/>
+        <task uri="/admin/lifecycle/process/editProcess" component="/newUi/lc/admin/process/processEditor"/>
+
+        <!-- Lifecycle process browser page -->
+        <task uri="/admin/lifecycle/process/processBrowser" component="/newUi/lc/admin/process/processBrowser"/>
+        <component name="/admin/lifecycle/process/processesLeftMenuLink" page="admin/process/processesLeftMenuLink.jsp"
+                   className="com.hp.systinet.lifecycle.ui.admin.process.AdminProcessesComponent"/>
+        <component name="/newUi/lc/admin/process/processBrowser" page="admin/process/processBrowser.jsp"
+                   className="com.hp.systinet.lifecycle.ui.admin.process.AdminProcessesComponent"/>
+        <component name="/newUi/lc/admin/process/action/bulkPublishProcess" page="/admin/process/action/bulkPublishProcess.jsp"
+                   className="com.hp.systinet.lifecycle.ui.admin.process.action.BulkPublishProcess"/>
+        <component name="/newUi/lc/admin/process/action/bulkDeprecateProcess" page="/admin/process/action/bulkDeprecateProcess.jsp"
+                   className="com.hp.systinet.lifecycle.ui.admin.process.action.BulkDeprecateProcess"/>
+        <component name="/newUi/lc/admin/process/action/bulkDeleteProcess" page="/admin/process/action/bulkDeleteProcess.jsp"
+                   className="com.hp.systinet.lifecycle.ui.admin.process.action.BulkDeleteProcess"/>
+        <component name="/newUi/lc/admin/process/action/createProcess" page="/admin/process/action/createProcess.jsp"
+                   className="com.hp.systinet.lifecycle.ui.admin.process.action.CreateProcess"/>
+
+        <!-- Private lifecycle widgets -->
+        <component name="/newUi/lc/common/widget/styledBooleanWidget" page="common/widget/styledBooleanWidget.jsp"
+                   className="com.hp.systinet.lifecycle.ui.common.widget.StyledBooleanWidget">
+        </component>
+        <component name="/newUi/lc/common/renderer/processLinkRenderer"
+                   className="com.hp.systinet.lifecycle.ui.common.renderer.ProcessLinkRenderer"
+                   page="common/renderer/processLinkRenderer.jsp"/>
+
+        <component name="/newUi/lc/common/renderer/stageLinkRenderer"
+                   page="common/renderer/stageLinkRenderer.jsp"/>
+
+        <component name="/newUi/lc/common/widget/infoMessage" page="common/widget/infoMessage.jsp"/>
+        <component name="/newUi/lc/common/widget/flyoutComment" page="common/widget/flyoutComment.jsp"/>
+        <component name="/newUi/lc/common/widget/expandComment" page="common/widget/expandComment.jsp"/>
+        <component name="/newUi/lc/common/widget/expandCommentBody" page="common/widget/expandCommentBody.jsp"/>
+        <component name="/newUi/lc/common/dialog/messageInput" page="common/dialog/messageInput.jsp"/>
+
+		<!-- Responsibilities -->
+        <component name="/newUi/lc/admin/process/responsibilitiesTable"
+                   page="admin/process/responsibilitiesTable.jsp"
+                   className="com.hp.systinet.lifecycle.ui.admin.process.ResponsibilitiesTable"/>
+                   
+        <component name="/newUi/lc/common/renderer/principalsRenderer"
+                   page="common/renderer/principalsRenderer.jsp"
+                   className="com.hp.systinet.lifecycle.ui.common.PrincipalsRenderer"/>
+                   
+        <component name="/newUi/lc/common/renderer/approversRenderer"
+                   page="common/renderer/approversRenderer.jsp"
+                   className="com.hp.systinet.lifecycle.ui.common.ApproversRenderer"/>	                                      
+		
+        <component name="/newUi/lc/common/renderer/stageSharingRenderer"
+                   page="common/renderer/stageSharingRenderer.jsp"
+                   className="com.hp.systinet.lifecycle.ui.common.renderer.StageSharingRenderer"/>
+        
+        <component name="/newUi/lc/admin/responsibilities/addApproverActionWrapped"
+                   page="admin/responsibilities/addApproverAction.jsp" 
+                   className="com.hp.systinet.lifecycle.ui.admin.responsibilities.AddApproverAction" />                                         		
+		<component name="/newUi/lc/admin/responsibilities/addApproverAction" page="@/core/wrap/wrapComponent" 
+				   className="com.hp.systinet.sc.ui.wrap.WrapComponent"> 
+			<parameter paramName="wrappedComponent" paramValue="/newUi/lc/admin/responsibilities/addApproverActionWrapped"/>
+		</component>
+        <component name="/newUi/lc/admin/responsibilities/addApprover"
+                   page="admin/responsibilities/addApprover.jsp" 
+                   className="com.hp.systinet.lifecycle.ui.admin.responsibilities.AddApprover" />
+                   				                      
+        <component name="/newUi/lc/admin/responsibilities/addReadAccessActionWrapped"
+                   page="admin/responsibilities/addPrincipalAccessAction.jsp" 
+                   className="com.hp.systinet.lifecycle.ui.admin.responsibilities.AddPrincipalAccessAction" >
+            <parameter paramName="actionName" paramValue="addRead" />
+        </component>                   
+        <component name="/newUi/lc/admin/responsibilities/addReadAccessAction" page="@/core/wrap/wrapComponent" 
+                   className="com.hp.systinet.sc.ui.wrap.WrapComponent"> 
+            <parameter paramName="wrappedComponent" paramValue="/newUi/lc/admin/responsibilities/addReadAccessActionWrapped"/>
+        </component>
+
+        <component name="/newUi/lc/admin/responsibilities/addWriteAccessActionWrapped"
+                   page="admin/responsibilities/addPrincipalAccessAction.jsp" 
+                   className="com.hp.systinet.lifecycle.ui.admin.responsibilities.AddPrincipalAccessAction" >
+            <parameter paramName="actionName" paramValue="addWrite" />
+        </component>                   
+        <component name="/newUi/lc/admin/responsibilities/addWriteAccessAction" page="@/core/wrap/wrapComponent" 
+                   className="com.hp.systinet.sc.ui.wrap.WrapComponent"> 
+            <parameter paramName="wrappedComponent" paramValue="/newUi/lc/admin/responsibilities/addWriteAccessActionWrapped"/>
+        </component>
+                        
+        <component name="/newUi/lc/admin/responsibilities/setOwnerActionWrapped"
+                   page="admin/responsibilities/setOwnerAction.jsp" 
+                   className="com.hp.systinet.lifecycle.ui.admin.responsibilities.SetOwnerAction" />     
+        <component name="/newUi/lc/admin/responsibilities/setOwnerAction" page="@/core/wrap/wrapComponent" 
+                   className="com.hp.systinet.sc.ui.wrap.WrapComponent"> 
+            <parameter paramName="wrappedComponent" paramValue="/newUi/lc/admin/responsibilities/setOwnerActionWrapped"/>
+        </component>        
+                             
+        <component name="/newUi/lc/admin/responsibilities/clearActionWrapped" 
+                   page="admin/responsibilities/clearAction.jsp" 
+                   className="com.hp.systinet.lifecycle.ui.admin.responsibilities.ClearAction" />
+        <component name="/newUi/lc/admin/responsibilities/clearAction" page="@/core/wrap/wrapComponent" 
+                   className="com.hp.systinet.sc.ui.wrap.WrapComponent"> 
+            <parameter paramName="wrappedComponent" paramValue="/newUi/lc/admin/responsibilities/clearActionWrapped"/>
+        </component>                        
+        <component name="/newUi/lc/admin/responsibilities/clear"
+                   page="admin/responsibilities/clear.jsp" />
+
+        <component name="/newUi/lc/admin/responsibilities/copyActionWrapped" 
+                   page="admin/responsibilities/copyAction.jsp" 
+                   className="com.hp.systinet.lifecycle.ui.admin.responsibilities.CopyAction" />
+        <component name="/newUi/lc/admin/responsibilities/copyAction" page="@/core/wrap/wrapComponent" 
+                   className="com.hp.systinet.sc.ui.wrap.WrapComponent"> 
+            <parameter paramName="wrappedComponent" paramValue="/newUi/lc/admin/responsibilities/copyActionWrapped"/>
+        </component>
+        <component name="/newUi/lc/admin/responsibilities/copy"
+                   page="admin/responsibilities/copy.jsp" />
+
+        <component name="/newUi/lc/admin/responsibilities/editApproversTable"
+                   page="admin/responsibilities/editApproversTable.jsp"
+                   className="com.hp.systinet.lifecycle.ui.admin.responsibilities.EditActorsTable"/>
+                   
+        <component name="/newUi/lc/admin/responsibilities/editAccessTable"
+                   page="admin/responsibilities/editAccessTable.jsp"
+                   className="com.hp.systinet.lifecycle.ui.admin.responsibilities.EditActorsTable"/>                   
+
+        <component name="/newUi/lc/admin/responsibilities/removeActorActionWrapped" 
+                   page="admin/responsibilities/removeActorAction.jsp" 
+                   className="com.hp.systinet.lifecycle.ui.admin.responsibilities.RemoveActorAction" />
+        <component name="/newUi/lc/admin/responsibilities/removeActorAction" page="@/core/wrap/wrapComponent" 
+                   className="com.hp.systinet.sc.ui.wrap.WrapComponent"> 
+            <parameter paramName="wrappedComponent" paramValue="/newUi/lc/admin/responsibilities/removeActorActionWrapped"/>
+        </component>
+
+        <component name="/newUi/lc/admin/responsibilities/addAccessActionWrapped" 
+                   page="admin/responsibilities/addAccessAction.jsp"
+                   className="com.hp.systinet.lifecycle.ui.admin.responsibilities.AddAccessAction" />
+        <component name="/newUi/lc/admin/responsibilities/addAccessAction" page="@/core/wrap/wrapComponent" 
+                   className="com.hp.systinet.sc.ui.wrap.WrapComponent"> 
+            <parameter paramName="wrappedComponent" paramValue="/newUi/lc/admin/responsibilities/addAccessActionWrapped"/>
+        </component>
+        
+        <component name="/newUi/lc/admin/responsibilities/stageRenderer" page="admin/responsibilities/stageRenderer.jsp"/>                   
+        
+        <!-- Bulk operations -->
+        <component name="/newUi/lc/bulk/bulkStartGovernance" 
+                   page="bulk/bulkStartGovernance.jsp"
+                   className="com.hp.systinet.lifecycle.ui.bulk.BulkStartGovernance" />
+
+        <component name="/newUi/lc/bulk/bulkEndGovernance" 
+                   page="bulk/bulkEndGovernance.jsp"
+                   className="com.hp.systinet.lifecycle.ui.bulk.BulkEndGovernance" />
+
+        <component name="/newUi/lc/bulk/bulkSetGovernanceProcess"
+                   page="bulk/bulkSetGovernanceProcess.jsp"
+                   className="com.hp.systinet.lifecycle.ui.bulk.BulkSetGovernanceProcess" />
+        <component name="/newUi/lc/bulk/bulkSetGovernanceProcessWindow"
+                   page="bulk/bulkSetGovernanceProcessWindow.jsp"
+                   className="com.hp.systinet.lifecycle.ui.bulk.BulkSetGovernanceProcessWindow" />
+
+        <!-- User Task renderers -->
+        <component name="/newUi/lc/usertask/lifecycleTaskLinkRenderer"
+                   page="usertask/lifecycleTaskLinkRenderer.jsp"
+                   className="com.hp.systinet.lifecycle.ui.usertask.LifecycleTaskLinkRenderer"/>
+        <component name="/newUi/lc/usertask/lifecycleTaskCheckboxRenderer"
+                   page="usertask/lifecycleTaskCheckboxRenderer.jsp"
+                   className="com.hp.systinet.lifecycle.ui.usertask.LifecycleTaskCheckboxRenderer"/>
+
+        <!--Automatic action Notify-->
+        <component name="/newUi/lc/admin/automaticactionkinds/lifecycleNotificationEditor"
+                   className="com.hp.systinet.lifecycle.ui.admin.automaticactionkinds.LifecycleNotificationEditor"
+                   page="admin/automaticactionkinds/lifecycleNotificationEditor.jsp"/>
+        <task uri="/admin/lifecycle/automaticactionkinds/lifecycleNotificationEditorTask"
+              component="/newUi/lc/admin/automaticactionkinds/lifecycleNotificationEditor">
+            <parameter paramName="captionKey"
+                       paramValue="com.hp.systinet.lifecycle.ui.LifecycleUiL10n$notify.editor.caption"/>
+        </task>
+
+        <component name="/newUi/lc/admin/automaticactionkinds/renderer/notificationRowRenderer"
+                   className="com.hp.systinet.lifecycle.ui.admin.automaticactionkinds.renderer.NotificationRowRenderer"
+                   page="admin/automaticactionkinds/renderer/notificationRowRenderer.jsp"/>
+
+        <component name="/newUi/lc/admin/automaticactionkinds/lifecycleNotificationPreview"
+                   className="com.hp.systinet.lifecycle.ui.admin.automaticactionkinds.LifecycleNotificationPreview"
+                   page="admin/automaticactionkinds/lifecycleNotificationPreview.jsp"/>
+        <task uri="/admin/lifecycle/automaticactionkinds/lifecycleNotificationPreview"
+              component="/newUi/lc/admin/automaticactionkinds/lifecycleNotificationPreview">
+            <parameter paramName="captionKey"
+                       paramValue="com.hp.systinet.lifecycle.ui.LifecycleUiL10n$notify.preview.defaultCaption"/>
+        </task>
+
+        <!-- Lifecycle Artifact Compliance Tab -->
+        <component name="/newUi/lc/catalog/tab/complianceTab"
+                   className="com.hp.systinet.lifecycle.ui.catalog.tab.ComplianceTab"
+                   page="catalog/tab/complianceTab.jsp"/>
+
+        <!-- Row renderer for remove comments automatic action -->
+        <component name="/newUi/lc/admin/automaticactionkinds/renderer/removeCommentsRowRenderer"
+                   className="com.hp.systinet.lifecycle.ui.admin.automaticactionkinds.renderer.RemoveCommentsRowRenderer"
+                   page="admin/automaticactionkinds/renderer/removeCommentsRowRenderer.jsp"/>
+
+        <!--  Automatic action request parent approval -->
+        <component name="/newUi/lc/admin/automaticactionkinds/parentRequestApproval"
+                    className="com.hp.systinet.lifecycle.ui.admin.automaticactionkinds.ParentRequestApproval"
+                    page="admin/automaticactionkinds/parentRequestApproval.jsp" />
+
+        <component name="/newUi/lc/admin/automaticactionkinds/parentRequestApprovalRowRenderer"
+                   className="com.hp.systinet.lifecycle.ui.admin.automaticactionkinds.renderer.ParentRequestApprovalRowRenderer" 
+                   page="admin/automaticactionkinds/renderer/parentRequestApprovalRowRenderer.jsp"/>
+
+        <!-- table row renderer for consumption automatic action -->
+        <component name="/newUi/lc/automaticactionkinds/renderer/consumptionRowRenderer"
+                   className="com.hp.systinet.lifecycle.ui.admin.automaticactionkinds.renderer.ConsumptionRowRenderer"
+                   page="admin/automaticactionkinds/renderer/consumptionRowRenderer.jsp"/>
+
+        <!--  Automatic export to registries action -->
+        <component name="/newUi/lc/automaticactionkinds/exportToRegistries"
+                    className="com.hp.systinet.lifecycle.ui.admin.automaticactionkinds.ExportToRegistry"
+                    page="admin/automaticactionkinds/exportToRegistry.jsp" />
+
+        <component name="/newUi/lc/automaticactionkinds/exportToRegistriesRowRenderer"
+                   className="com.hp.systinet.lifecycle.ui.admin.automaticactionkinds.renderer.ExportToRegistryRowRenderer"
+                   page="admin/automaticactionkinds/renderer/exportToRegistriesRowRenderer.jsp"/>
+
+        <!-- Automatic delete uddi from registries action -->
+        <component name="/newUi/lc/automaticactionkinds/deleteFromRegistries"
+                    className="com.hp.systinet.lifecycle.ui.admin.automaticactionkinds.DeleteFromRegistry"
+                    page="admin/automaticactionkinds/deleteFromRegistry.jsp" />
+
+        <component name="/newUi/lc/automaticactionkinds/deleteFromRegistriesRowRenderer"
+                   className="com.hp.systinet.lifecycle.ui.admin.automaticactionkinds.renderer.DeleteFromRegistryRowRenderer"
+                   page="admin/automaticactionkinds/renderer/deleteFromRegistriesRowRenderer.jsp"/>
+
+        <component name="/newUi/lc/automaticactionkinds/script/executeScript"
+                    className="com.hp.systinet.lifecycle.ui.admin.automaticactionkinds.scripting.ExecuteScript"
+                    page="admin/automaticactionkinds/script/executeScript.jsp" />
+
+        <component name="/newUi/lc/automaticactionkinds/script/executeScriptRowRenderer"
+                   className="com.hp.systinet.lifecycle.ui.admin.automaticactionkinds.scripting.ExecuteScriptRowRenderer"
+                   page="admin/automaticactionkinds/script/executeScriptRowRenderer.jsp"/>
+    </webFramework>
+</config>

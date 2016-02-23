@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/script/17e09d16-2cca-4ba0-a6cb-c0e8212b401f</r:path>
+   <r:collection>/script/</r:collection>
+   <r:binary>true</r:binary>
+   <r:contentType>text/html</r:contentType>
+   <r:owner>admin</r:owner>
+   <r:uuid>17e09d16-2cca-4ba0-a6cb-c0e8212b401f</r:uuid>
+   <r:domainId>defaultDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>3274867278</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2014-07-10T04:53:34.289Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>admin</r:creator>
+      <r:lastDataRevision>1</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:portletScriptArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                                  xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                                  xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                                  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                                  xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                                  xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                  deleted="0"
+                                  xlink:href="script/17e09d16-2cca-4ba0-a6cb-c0e8212b401f">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="System"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:system"/>
+               <p:artifactType name="Managed script"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:system:script"/>
+               <p:artifactType name="Portlet Script"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:platform:artifacts:portletScriptArtifact"/>
+            </g:artifactTypeGroup>
+            <g:nameGroup>
+               <p:name>BusinessProcessStructure.js</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup>
+               <p:description>&lt;P&gt;
+	Structure map of a business process.&lt;/P&gt;</p:description>
+            </g:descriptionGroup>
+            <p:revision>1</p:revision>
+            <g:keywordGroup/>
+            <p:location>/scripts/BusinessProcessStructure.js</p:location>
+            <p:isCached>0</p:isCached>
+            <p:checksum>3274867278</p:checksum>
+            <p:dataLength>503</p:dataLength>
+            <p:contentType>text/html</p:contentType>
+            <g:applicableToArtifactGroup/>
+            <p:portletHeader>Business Process Structure</p:portletHeader>
+            <p:portletAddActionLabel>Business Process Structure</p:portletAddActionLabel>
+            <p:scriptCategory name="Architecture"
+                              taxonomyUri="uddi:systinet.com:soa:model:taxonomies:portletCategory"
+                              value="architecture"/>
+            <p:defaultHeight>400</p:defaultHeight>
+            <p:r_scriptLanguage name="HTML" taxonomyUri="uddi:com.systinet.soa:model:taxonomies:scriptLanguage"
+                                value="HTML"/>
+            <p:r_scriptExecuteOn name="Structure Map"
+                                 taxonomyUri="uddi:com.systinet.soa:model:taxonomies:scriptExecuteOn"
+                                 value="structureMapPortlet"/>
+         </a:portletScriptArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

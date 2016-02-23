@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository" xmlns:xlink="http://www.w3.org/1999/xlink">
+   <r:path>/hpsoaTechnicalPolicies/soap-validity</r:path>
+   <r:collection>/hpsoaTechnicalPolicies/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType>text/xml</r:contentType>
+   <r:owner>systinet:admin</r:owner>
+   <r:uuid>b84110cd-70c1-44dd-ba45-6e4e64187845</r:uuid>
+   <r:domainId>topLevelDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2007-02-07T16:35:27.322Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>systinet:admin</r:creator>
+      <r:lastDataRevision>1</r:lastDataRevision>
+   </r:revision>
+   <r:relationships>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP1305">
+     <r:path>assertions/BP1305</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP1203">
+     <r:path>assertions/BP1203</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP1012">
+     <r:path>assertions/BP1012</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP4100">
+     <r:path>assertions/BP4100</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP1004">
+     <r:path>assertions/BP1004</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP1601">
+     <r:path>assertions/BP1601</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP1032">
+     <r:path>assertions/BP1032</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP1307">
+     <r:path>assertions/BP1307</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP1204">
+     <r:path>assertions/BP1204</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP4101">
+     <r:path>assertions/BP4101</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP4106">
+     <r:path>assertions/BP4106</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP1208">
+     <r:path>assertions/BP1208</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP1006">
+     <r:path>assertions/BP1006</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP1001">
+     <r:path>assertions/BP1001</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP4109">
+     <r:path>assertions/BP4109</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP4102">
+     <r:path>assertions/BP4102</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP1308">
+     <r:path>assertions/BP1308</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP1101">
+     <r:path>assertions/BP1101</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP1201">
+     <r:path>assertions/BP1201</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP1007">
+     <r:path>assertions/BP1007</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP1116">
+     <r:path>assertions/BP1116</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP1302">
+     <r:path>assertions/BP1302</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP1600">
+     <r:path>assertions/BP1600</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP1202">
+     <r:path>assertions/BP1202</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP1309">
+     <r:path>assertions/BP1309</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP1010">
+     <r:path>assertions/BP1010</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/SOAPMessageSyntaxValidity">
+     <r:path>assertions/SOAPMessageSyntaxValidity</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP1005">
+     <r:path>assertions/BP1005</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP1107">
+     <r:path>assertions/BP1107</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP1100">
+     <r:path>assertions/BP1100</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP1011">
+     <r:path>assertions/BP1011</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP4103">
+     <r:path>assertions/BP4103</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP1318">
+     <r:path>assertions/BP1318</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP1211">
+     <r:path>assertions/BP1211</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP1031">
+     <r:path>assertions/BP1031</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP1008">
+     <r:path>assertions/BP1008</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP1214">
+     <r:path>assertions/BP1214</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP4104">
+     <r:path>assertions/BP4104</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP1033">
+     <r:path>assertions/BP1033</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP1002">
+     <r:path>assertions/BP1002</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP1755">
+     <r:path>assertions/BP1755</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP1013">
+     <r:path>assertions/BP1013</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP1301">
+     <r:path>assertions/BP1301</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP1103">
+     <r:path>assertions/BP1103</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP4105">
+     <r:path>assertions/BP4105</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP1009">
+     <r:path>assertions/BP1009</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP1213">
+     <r:path>assertions/BP1213</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP1212">
+     <r:path>assertions/BP1212</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP4107">
+     <r:path>assertions/BP4107</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP1316">
+     <r:path>assertions/BP1316</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP1306">
+     <r:path>assertions/BP1306</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/BP1701">
+     <r:path>assertions/BP1701</r:path>
+    </r:target>
+   </r:relationship>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/soap-validity">
+     <r:path>hpsoaTechnicalPolicies/soap-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/SOAPMessageValidity">
+     <r:path>assertions/SOAPMessageValidity</r:path>
+    </r:target>
+   </r:relationship>
+   </r:relationships>
+   <r:extensions>
+       <r:descriptor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                     xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+                     xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                     xmlns:wsi="http://www.ws-i.org/testing/2004/07/assertions/"
+                     xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                     xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                     xmlns:xlink="http://www.w3.org/1999/xlink"
+                     xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                     xmlns:sbp="http://systinet.com/2005/10/soa/policy/bpa"
+                     xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                     xmlns:pm="http://systinet.com/2005/10/soa/policy">
+           <a:hpsoaTechnicalPolicyArtifact deleted="0" xlink:href="hpsoaTechnicalPolicies/soap-validity"
+                               xml:base="https://localhost:8443/soa/systinet/platform/rest/repository/">
+               <g:r_referencedAssertionGroup>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/SOAPMessageValidity"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP1701"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP1306"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP1316"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP4107"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP1212"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP1213"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP1009"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP4105"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP1103"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP1301"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP1013"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP1755"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP1002"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP1033"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP4104"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP1214"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP1008"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP1031"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP1211"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP1318"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP4103"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP1011"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP1100"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP1107"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP1005"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/SOAPMessageSyntaxValidity"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP1010"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP1309"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP1202"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP1600"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP1302"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP1116"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP1007"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP1201"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP1101"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP1308"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP4102"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP4109"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP1001"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP1006"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP1208"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP4106"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP4101"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP1204"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP1307"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP1032"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP1601"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP1004"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP4100"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP1012"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP1203"/>
+                <p:r_referencedAssertion deleted="0" xlink:href="assertions/BP1305"/>
+               </g:r_referencedAssertionGroup>
+               <g:nameGroup>
+                   <p:name>SOAP Validity Policy</p:name>
+               </g:nameGroup>
+               <g:descriptionGroup>
+                   <p:description>Checks that SOAP messages are compliant with SOAP 1.1 XML Schema and WS-I Basic Profile 1.1</p:description>
+               </g:descriptionGroup>
+
+               <g:artifactTypeGroup>
+               <p:artifactType name="Artifact" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes" value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="SOA" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes" value="urn:com:systinet:soa:model:artifacts:soa"/>
+               <p:artifactType name="Policy" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes" value="urn:com:systinet:soa:model:artifacts:soa:policy"/>
+               <p:artifactType name="Technical Policy" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes" value="urn:com:systinet:soa:model:artifacts:soa:policy:technicalPolicy"/>
+            </g:artifactTypeGroup>
+                     <p:lastRevision>1</p:lastRevision>
+                     <p:revision>1</p:revision>
+            <g:applicableSourceQNameGroup>
+              <p:applicableSourceQName>{http://systinet.com/2005/10/soa/policy/report}Conversation</p:applicableSourceQName>
+              <p:applicableSourceQName>{http://systinet.com/2005/10/soa/policy/report}Message</p:applicableSourceQName>
+              <p:applicableSourceQName>{http://schemas.xmlsoap.org/soap/envelope/}Envelope</p:applicableSourceQName>
+            </g:applicableSourceQNameGroup>
+            <p:isCached>false</p:isCached>
+         </a:hpsoaTechnicalPolicyArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

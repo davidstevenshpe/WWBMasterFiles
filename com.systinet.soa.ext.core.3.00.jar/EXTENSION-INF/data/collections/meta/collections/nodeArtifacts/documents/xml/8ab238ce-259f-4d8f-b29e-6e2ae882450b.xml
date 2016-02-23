@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/nodeArtifacts/8ab238ce-259f-4d8f-b29e-6e2ae882450b</r:path>
+   <r:collection>/nodeArtifacts/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType></r:contentType>
+   <r:owner>admin</r:owner>
+   <r:uuid>8ab238ce-259f-4d8f-b29e-6e2ae882450b</r:uuid>
+   <r:domainId>CloudTransformationReference</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2015-07-03T00:08:35.309Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>systinet:admin</r:creator>
+      <r:lastDataRevision>0</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:serverClassArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                                xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                                xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                                xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                                xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                deleted="0"
+                                xlink:href="nodeArtifacts/8ab238ce-259f-4d8f-b29e-6e2ae882450b">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="Technology Layer"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:technologyLayer:artifacts:technologyLayerArtifact"/>
+               <p:artifactType name="Node" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:technologyLayer:artifacts:nodeArtifact"/>
+               <p:artifactType name="Device"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:technologyLayer:artifacts:deviceArtifact"/>
+               <p:artifactType name="Server Class"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:cloud-assessment:artifacts:serverClassArtifact"/>
+            </g:artifactTypeGroup>
+            <g:nameGroup>
+               <p:name>Class XXL</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup/>
+            <p:revision>1</p:revision>
+            <g:keywordGroup/>
+            <p:version>1.0</p:version>
+            <p:ramSize>8.0</p:ramSize>
+            <p:cpuCores>30</p:cpuCores>
+            <p:storageSize>30</p:storageSize>
+            <p:repositoryPackage name="Server Classes" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:repositoryPackages" value="repository:referencedata:serverclasses"/>
+         </a:serverClassArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

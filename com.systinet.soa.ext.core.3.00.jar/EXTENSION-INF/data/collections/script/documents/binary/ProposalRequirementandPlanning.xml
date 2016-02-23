@@ -1,0 +1,19 @@
+<closure maxDepth="6" maxResults="400" maxProcessingTime="10000">
+    <resultArtifacts>
+        <artifact sdmName="requirementArtifact">
+          <field name="coverageNotRequired" property="coverageNotRequired"/>
+            <field name="coveredByElement" query="select count(p._uuid) as total from artifactBase p left join requirementArtifact r using p.realizes where p._sdmName in ('systemSoftwareArtifact','infrastructureFunctionArtifact','nodeArtifact','deviceArtifact','serverArtifact','communicationPathArtifact','networkArtifact','infrastructureInterface','deploymentArtifact','deploymentSpecification','infrastructureServiceArtifact','serverGroupArtifact','businessServiceArtifact','businessActorArtifact','businessRoleArtifact','businessCollaborationArtifact','businessInterfaceArtifact','locationArtifact','businessObjectArtifact','businessProcessArtifact','businessFunctionArtifact','businessInteractionArtifact','businessEventArtifact','representationArtifact','productArtifact','applicationFunctionArtifact','applicationServiceArtifact','applicationInteractionArtifact','applicationComponentArtifact','appCollaborationArtifact','applicationInterfaceArtifact','dataObjectArtifact','messageArtifact','operationArtifact','endpointArtifact','deliverableArtifact') and r._uuid=:uuid"/>
+        </artifact>
+        <artifact sdmName="diagramArtifact"/>
+    </resultArtifacts>
+
+    <traversableArtifacts>
+        <artifact sdmName="requirementArtifact"/>
+    </traversableArtifacts>
+
+    <traversableRelations>
+        <relation sdmName="composedOf"/>
+        <relation sdmName="aggregates"/>
+      	<relation sdmName="assignedTo"  sourceArtifact="proposalArtifact" targetArtifact="diagramArtifact"/>
+    </traversableRelations>
+</closure>

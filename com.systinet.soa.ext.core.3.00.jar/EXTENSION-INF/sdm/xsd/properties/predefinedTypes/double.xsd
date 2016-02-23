@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://systinet.com/2005/05/soa/model/property/type"
+           xmlns="http://systinet.com/2005/05/soa/model/property/type" 
+           xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           elementFormDefault="qualified">
+
+  <xs:complexType name="doublePropertyType">
+      <xs:simpleContent>
+          <xs:extension base="xs:double">
+          </xs:extension>
+      </xs:simpleContent>
+  </xs:complexType>
+
+</xs:schema>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/principleArtifacts/4151b712-940f-4cdc-ab99-d722b5748332</r:path>
+   <r:collection>/principleArtifacts/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType></r:contentType>
+   <r:owner>admin</r:owner>
+   <r:uuid>4151b712-940f-4cdc-ab99-d722b5748332</r:uuid>
+   <r:domainId>defaultDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2013-12-09T10:55:25.628Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>admin</r:creator>
+      <r:lastDataRevision>0</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:principleArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                              xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                              xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                              xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                              deleted="0"
+                              xlink:href="principleArtifacts/4151b712-940f-4cdc-ab99-d722b5748332">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="Motivation"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:motivationArtifact"/>
+               <p:artifactType name="Principle"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:principleArtifact"/>
+            </g:artifactTypeGroup>
+            <g:aggregatesGroup>
+               <p:aggregates xlink:href="principleArtifacts/f92db3d7-1d59-48ed-990d-63d1d8327778"/>
+               <p:aggregates xlink:href="principleArtifacts/2e79f613-d16e-42d3-ad3d-b7c21d77b278"/>
+               <p:aggregates xlink:href="principleArtifacts/cb1c52c9-6961-4c24-ad68-b385987a2c9c"/>
+               <p:aggregates xlink:href="principleArtifacts/910dc8d7-b70c-4268-9833-11ac8c38866f"/>
+               <p:aggregates xlink:href="principleArtifacts/19a38f55-4c20-4347-89bb-a5d3f5d59239"/>
+            </g:aggregatesGroup>
+            <g:nameGroup>
+               <p:name>Maintainability and supportability</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup>
+               <p:description>For every technology chosen to be operated within the enterprise environment, a reliable level of maintenance and support  must be ensured over its entire life cycle.
+It is unacceptable to operate a technology for which the guaranteed level of maintenance and support are not available.</p:description>
+            </g:descriptionGroup>
+            <p:revision>1</p:revision>
+            <g:keywordGroup/>
+            <p:version>1.0</p:version>
+            <g:architectureLayerGroup>
+               <p:architectureLayer name="Technology Layer"
+                                    taxonomyUri="uddi:systinet.com:soa:model:taxonomies:architectureLayer"
+                                    value="technologyLayer"/>
+            </g:architectureLayerGroup>
+            <g:qualityFeatureGroup>
+               <p:qualityFeature name="Availability"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="availability"/>
+               <p:qualityFeature name="Reliability"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="reliability"/>
+            </g:qualityFeatureGroup>
+            <p:rationale>As the business processes and underlying IT services are dependent on applications and various technologies, it must be ensured that every operated application and technology has ensured an appropriate maintenance and support enabling their continuous reliability and availability.
+Maintenance and support levels must conform to criticality of the application or technology in context of the business process or IT service they support.
+If the application or technology is going to be obsoleted and unsupported, there must be a replacement plan available. Otherwise, the operation of an unsupported application or technology significantly increases the risk of negative influence to business processes, especially when such pieces of technology become non-functional  and there is no alternative how to put it into operation.</p:rationale>
+            <p:implications>Maintenance and support plans must be defined, documented, and managed for all operated applications and technologies.
+If the applications and technologies are maintained and supported by an external supplier, a formal contract describing a level of provided maintenance and support must be available. The contracts should cover not only levels of maintenance and support, but also response times, resolution times, provisioning of spare technology (if necessary) and other conditions and mechanisms enabling a continuous operation of business processes.
+Formalized License Management and Contract Management processes should be put in place to ensure that all applications and technologies are maintained and supported as required. These processes should provide enterprise architecture with information regarding,  primarily, an expiration period of support contracts, and secondarily, obsoleteness of technology or application (as is announced by their vendors) to enable renewal of support contracts or timely planning of replacement.</p:implications>
+         </a:principleArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

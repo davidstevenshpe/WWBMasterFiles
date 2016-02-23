@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/hpsoaDomains/cloudTransformationReferenceModels</r:path>
+   <r:collection>/hpsoaDomains/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType></r:contentType>
+   <r:owner>systinet:admin</r:owner>
+   <r:uuid>42618f38-3f2b-4673-94f7-44283cfe268e</r:uuid>
+   <r:domainId>topLevelDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2015-06-30T21:22:26.456Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>systinet:admin</r:creator>
+      <r:lastDataRevision>0</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:hpsoaDomainArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                                xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                                xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                                xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                                xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                deleted="0"
+                                xlink:href="hpsoaDomains/42618f38-3f2b-4673-94f7-44283cfe268e">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="System"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:system"/>
+               <p:artifactType name="Domain"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:system:domain"/>
+            </g:artifactTypeGroup>
+            <g:nameGroup>
+               <p:name>Cloud Transformation Reference Models</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup>
+               <p:description>&lt;P&gt;
+&lt;SPAN style="color: rgb(68, 72, 102); font-family: HPSimplified, Arial, Verdana, Helvetica, sans-serif; font-size: 13px; line-height: 15px;"&gt;Holds artifacts and models related to cloud transformation such as server types (Server Profiles) offered by Data Centers and their classification (Server Classes).&lt;/SPAN&gt;
+&lt;/P&gt;     </p:description>
+            </g:descriptionGroup>
+            <p:revision>1</p:revision>
+            <g:keywordGroup/>
+            <p:r_localId>CloudTransformationReference</p:r_localId>
+            <p:r_location>/cloudTransformationReferenceModel</p:r_location>
+            <p:domainType name="Reference Model"
+                          taxonomyUri="uddi:systinet.com:soa:model:taxonomies:domainTypes"
+                          value="Reference"/>
+         </a:hpsoaDomainArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

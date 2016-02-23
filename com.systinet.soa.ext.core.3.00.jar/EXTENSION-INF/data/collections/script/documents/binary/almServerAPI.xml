@@ -1,0 +1,23 @@
+// Gets all ALM servers as JSON array
+function getAlmServers() {                              
+    return Packages.com.systinet.platform.ui.integration.alm.AlmServiceJSController.getAlmServers();            
+} 
+
+// Gets all ALM bean from ALM server
+// serverUUID: The ALM server UUID  
+// beanProps: The name and href (view name) of ALM bean as JSON array
+// ex: var beanProps = [{name:almReq, href:viewRequirement}, {name:almDefect, href:viewDefect}]
+// runtimeContext: the runtime context to get Alm bean, must be include serviceUUID
+// ex: var runtimeContext = {serviceUUID:alm_integration_client.uuid}
+function getAlmBeans(serverUUID, beanProps, runtimeContext) {                
+    return Packages.com.systinet.platform.ui.integration.alm.AlmServiceJSController.getAlmBeans(serverUUID, beanProps, runtimeContext);                  
+}
+
+// Gets all ALM bean from all ALM server
+// beanProps: The name and href (view name) of ALM bean as JSON array
+// ex: var beanProps = [{name:almReq, href:viewRequirement}, {name:almDefect, href:viewDefect}]
+// runtimeContext: the runtime context to get Alm bean, must be include serviceUUID
+// ex: var runtimeContext = {serviceUUID:alm_integration_client.uuid}
+function getServiceStatus(beanProps, runtimeContext) {                
+    return Packages.com.systinet.platform.ui.integration.alm.AlmServiceJSController.getServiceStatus(beanProps, runtimeContext);                  
+}

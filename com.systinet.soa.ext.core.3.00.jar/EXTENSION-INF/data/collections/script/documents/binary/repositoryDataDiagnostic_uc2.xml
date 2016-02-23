@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tests>
+    <test name="Check artifacts in non-existing lifecycle process" desc="Artifact has non-existing lifecycle process">
+        <sql>
+        	SELECT R.uuid, R.fk_artifactType, R.d_name
+			FROM  ry_resource R, rylf_record LFR
+			WHERE R.uuid = LFR.artifactUuid
+				  AND LFR.process IS NOT NULL
+				  AND LFR.process NOT IN
+				 (SELECT rylf_process.id
+				  FROM rylf_process)
+			ORDER BY d_name
+		</sql>
+    </test>
+    <test name="Check artifacts in non-existing lifecycle stage" desc="Artifact has non-existing lifecycle stage">
+        <sql>
+        	SELECT R.uuid, R.fk_artifactType, R.d_name
+			FROM  ry_resource R, rylf_record LFR
+			WHERE R.uuid = LFR.artifactUuid
+				  AND LFR.taxUri IS NOT NULL
+				  AND LFR.val NOT IN 
+				 (SELECT keyValue 
+				  FROM ry_taxCategory taxCat 
+				  WHERE LOWER(LFR.taxUri) = taxCat.tModelKeyLower)
+            ORDER BY R.d_name
+		</sql>
+    </test>
+    <test name="Check artifacts in lifecycle stage with invalid/error status" desc="Artifacts which have an error lifecycle">
+    	<sql>
+    		--Find artifacts which have an error lifecycle
+			SELECT ry_resource.uuid, ry_resource.fk_artifactType, ry_resource.d_name
+			FROM 
+				  ry_resource, rylf_govData GovData Inner Join rylf_approvalData ApprovalData ON GovData.id = ApprovalData.id 
+				  Inner Join rylf_record R ON GovData.fk_rylf_govRecord = R.id				  
+			WHERE 
+				  ry_resource.uuid = R.artifactUuid AND
+				  GovData.canPromote = '1' AND R.inTransition = '1' AND R.val=GovData.val 
+				  AND ApprovalData.requiredVotes = 
+										(
+											SELECT count(1) 
+											FROM rylf_approvalResponse ApprovalResponse 
+											WHERE ApprovalResponse.fk_rylf_approvalData=GovData.id AND  ApprovalResponse.response='1'
+										)
+			ORDER BY d_name
+		</sql>
+	</test>
+	<test name="Check artifacts in lifecycle stage with wrong number approver" desc="Artifacts which have wrong number approver">
+		<sql>
+			-- Find artifacts which have wrong number approver
+			SELECT ry_resource.uuid, ry_resource.fk_artifactType, ry_resource.d_name       
+			FROM 
+				  ry_resource, rylf_govData GovData Inner Join rylf_approvalData ApprovalData ON GovData.id = ApprovalData.id 
+				  Inner Join rylf_record R ON GovData.fk_rylf_govRecord = R.id				 
+			WHERE 
+				  ry_resource.uuid = R.artifactUuid AND
+				  R.inTransition = '1' AND R.val=GovData.val 
+				  AND ApprovalData.requiredVotes &gt; 
+										(
+											SELECT  rylf_approvalStateData.requiredVotes
+											FROM 
+												  rylf_process INNER JOIN rylf_state ON rylf_process.id = rylf_state.fk_rylf_process
+												  INNER JOIN rylf_stateData ON rylf_state.id = rylf_stateData.fk_rylf_state
+												  INNER JOIN rylf_approvalStateData ON rylf_stateData.id = rylf_approvalStateData.id												  
+											WHERE
+												  rylf_process.id = R.process
+												  AND rylf_state.val = R.val                
+										)
+			ORDER BY d_name
+    	</sql>
+    </test>
+</tests>

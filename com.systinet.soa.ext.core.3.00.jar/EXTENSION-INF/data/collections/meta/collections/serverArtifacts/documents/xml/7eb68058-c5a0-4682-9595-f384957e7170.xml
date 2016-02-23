@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/serverArtifacts/7eb68058-c5a0-4682-9595-f384957e7170</r:path>
+   <r:collection>/serverArtifacts/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType></r:contentType>
+   <r:owner>_sstntrl:Administrator</r:owner>
+   <r:uuid>7eb68058-c5a0-4682-9595-f384957e7170</r:uuid>
+   <r:domainId>defaultDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2013-10-08T08:30:58.223Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>admin</r:creator>
+      <r:lastDataRevision>0</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:sparxEaRepository xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                              xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                              xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                              xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                              deleted="0"
+                              xlink:href="serverArtifacts/7eb68058-c5a0-4682-9595-f384957e7170">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="System"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:system"/>
+               <p:artifactType name="Integration"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:system:registry"/>
+               <p:artifactType name="Synchronized Repository"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:system:registry:syncRepositoryArtifact"/>
+               <p:artifactType name="Sparx EA Repository"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:system:sync:sparxEaRepository"/>
+            </g:artifactTypeGroup>
+            <g:nameGroup>
+               <p:name>Default Sparx EA Synchronization</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup/>
+            <p:revision>1</p:revision>
+            <g:keywordGroup/>
+			<p:mappingConfiguration>platform.sync.mapping.sparxEa.all</p:mappingConfiguration>
+			<p:importReferenceModelData>1</p:importReferenceModelData>
+            <g:integrationPropertyGroup/>
+         </a:sparxEaRepository>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

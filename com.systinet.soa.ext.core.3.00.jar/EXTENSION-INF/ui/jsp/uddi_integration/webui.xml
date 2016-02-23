@@ -1,0 +1,99 @@
+<config name="tornado_ui_static" savingPeriod="5000">
+    <webFramework>
+        <!-- NEW UI BEGIN -->
+        <component name="/integration2/uddi/bulkExport" page="/integration2/uddi/bulk/bulkExport.jsp" className="com.hp.systinet.ui.uddi.bulk.BulkExportComponent" />
+        
+        <component name="/integration2/uddi/bulkExportWindow" page="/integration2/uddi/bulk/bulkExportWindow.jsp" className="com.hp.systinet.ui.uddi.bulk.BulkExportWindowComponent" />
+		
+		<component name="/reports/uddiImportReport" page="/integration2/uddi/report/uddiImportReport.jsp"
+                    className="com.hp.systinet.ui.uddi.report.UddiIntegrationReportComponent"/>
+                    
+		<component name="/reports/uddiReportDescriptionItem" page="/integration2/uddi/report/uddiReportDescriptionItem.jsp"
+                    className="com.hp.systinet.ui.uddi.report.UddiReportDescriptionItemComponent"/>
+        
+        <component name="/reports/uddiExportReport" page="/integration2/uddi/report/uddiExportReport.jsp"
+                    className="com.hp.systinet.ui.uddi.report.UddiIntegrationReportComponent"/>
+                    
+        <component name="/reports/uddiDeleteReport" page="/integration2/uddi/report/uddiDeleteReport.jsp"
+                    className="com.hp.systinet.ui.uddi.report.UddiIntegrationReportComponent"/>
+                    
+        <component name="/reports/uddiLinkRenderer" page="/integration2/uddi/report/uddiLinkRenderer.jsp"
+                    className="com.hp.systinet.ui.uddi.report.UddiLinkRendererComponent"/>
+                    
+        <component name="/reports/reportStatusColumn" page="/integration2/uddi/report/reportStatusColumn.jsp"
+                    className="com.hp.systinet.ui.uddi.report.ReportStatusColumnComponent"/>
+
+        <component name="/reports/uddiTypeColumn" page="/integration2/uddi/report/column/integrationTypeColumn.jsp"
+                    className="com.hp.systinet.ui.uddi.report.column.UddiTypeColumnComponent"/>
+
+        <component name="/reports/artifactTypeColumn" page="/integration2/uddi/report/column/integrationTypeColumn.jsp"
+                    className="com.hp.systinet.ui.uddi.report.column.ArtifactTypeColumnComponent"/>
+                    
+        <component name="/widgets/removeKeyedReferences" page="/integration2/uddi/widgets/removeKeyedReferences.jsp"
+                    className="com.hp.systinet.ui.uddi.widgets.RemoveKeyedReferencesComponent"/>
+                    
+        <component name="/widgets/removeKeyedReferencesWindow" page="/integration2/uddi/widgets/removeKeyedReferencesWindow.jsp"
+                    className="com.hp.systinet.ui.uddi.widgets.RemoveKeyedReferencesWindowComponent"/>
+                    
+        <component name="/integration/uddi/report/missingTaxonomies" page="/integration2/uddi/report/missingTaxonomies.jsp"
+                    className="com.hp.systinet.ui.uddi.report.MissingTaxonomiesComponent"/>
+
+        <component name="/integration2/uddi/registrySelector" page="/integration2/uddi/registrySelector.jsp"
+                    className="com.hp.systinet.ui.uddi.RegistrySelectorComponent"/>
+
+        <component name="/integration2/uddi/errorWindow" page="/integration2/uddi/errorWindow.jsp"/>
+                    
+        <component name="/integration2/uddi/import/registryImport" page="/integration2/uddi/import/registryImport.jsp"
+                    className="com.hp.systinet.ui.uddiimport.RegistryImportComponent"/>
+        
+        <component name="/integration2/uddi/import/registryImportSelector" page="/integration2/uddi/import/registryImportSelector.jsp"
+                    className="com.hp.systinet.ui.uddiimport.RegistryImportSelectorComponent"/>
+                    
+		<component name="/integration2/uddi/import/selectAuthentication" page="/integration2/uddi/import/selectAuthentication.jsp"
+                    className="com.hp.systinet.ui.uddiimport.SelectAuthenticationComponent"/>
+                    
+        <component name="/integration2/uddi/import/confirmChangeTab" page="/integration2/uddi/import/confirmChangeTab.jsp"/>
+        
+        <component name="/integration2/uddi/taxonomy/taxonomyImport" page="/integration2/uddi/taxonomy/taxonomyImport.jsp"
+        			className="com.hp.systinet.ui.uddi.taxonomy.TaxonomyImportExportComponent"/>
+        <component name="/integration2/uddi/taxonomy/taxonomyImportWindow" page="/integration2/uddi/taxonomy/taxonomyImportWindow.jsp" 
+         			className="com.hp.systinet.ui.uddi.taxonomy.TaxonomyImportExportWindowComponent" />   
+     	<component name="/integration2/uddi/taxonomy/taxonomyExport" page="/integration2/uddi/taxonomy/taxonomyExport.jsp"
+        			className="com.hp.systinet.ui.uddi.taxonomy.TaxonomyImportExportComponent"/>
+        			
+        <component name="/reports/taxonomyImportReport" page="/integration2/uddi/report/taxonomyImportReport.jsp"
+                    className="com.hp.systinet.ui.uddi.report.UddiIntegrationReportComponent"/>
+        
+        <component name="/reports/taxonomyExportReport" page="/integration2/uddi/report/taxonomyExportReport.jsp"
+                    className="com.hp.systinet.ui.uddi.report.UddiIntegrationReportComponent"/>		                                     
+        
+        <component name="/integration2/uddi/artifact/actions/uddiIntegrationArtifactDetailAction" page="/integration2/uddi/artifact/actions/uddiIntegrationArtifactAction.jsp"
+                    className="com.hp.systinet.ui.uddi.artifact.actions.UddiIntegrationArtifactActionComponent"/>
+
+		<component name="/integration2/uddi/artifact/actions/artifactExportWindow" page="/integration2/uddi/artifact/actions/artifactExportWindow.jsp"
+                    className="com.hp.systinet.ui.uddi.artifact.actions.ArtifactExportWindowComponent"/>                    
+
+		<component name="/integration2/uddi/artifact/actions/artifactImportWindow" page="/integration2/uddi/artifact/actions/artifactImportWindow.jsp"
+                    className="com.hp.systinet.ui.uddi.artifact.actions.ArtifactImportWindowComponent"/>                    
+                                                
+        <component name="/integration2/uddi/artifact/actions/selectBusinessEntity" page="/integration2/uddi/artifact/actions/selectBusinessEntity.jsp"
+                    className="com.hp.systinet.ui.uddi.artifact.actions.SelectBusinessEntityComponent"/>
+
+        <component name="/integration2/uddi/uddiIntegrationSection" page="/integration2/uddi/sync/uddiIntegrationSection.jsp"
+                    className="com.hp.systinet.ui.uddi.sync.UddiIntegrationSection"/>
+                    
+        <component name="/integration2/uddi/scheduleRepositorySyncTask" page="/integration2/uddi/sync/scheduleRepositorySyncTask.jsp"
+                    className="com.hp.systinet.ui.uddi.sync.RepositorySyncScheduleAction"/>
+
+		<component name="/integration/uddiRegistryArtifact/connectionCheckerNew"
+                   className="com.hp.systinet.integration.ui.tools.NewUddiConnectionCheckerComponent" 
+                   page="@/integration/testconnection"/>
+                   
+        <component name="/integration2/uddi/report/uddiServerLinkWidget"
+                   page="/integration2/uddi/report/uddiServerLinkWidget.jsp"/>
+        
+        <component name="/integration2/uddi/common/uddiServerLinker" className ="com.hp.systinet.ui.uddi.common.UddiServerLinkerComponent"
+                   page="/integration2/uddi/common/uddiServerLinker.jsp"/>
+                   
+    </webFramework>
+</config>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taxonomy check="true" brief="false" xmlns="http://systinet.com/uddi/taxonomy/v3/5.5">
+  <tModel tModelKey="uddi:systinet.com:istransformedby" deleted="false" tModelKeyV2="uuid:ca64ef2d-e7ba-3862-86a6-951d03824181" xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <name xmlns="urn:uddi-org:api_v3">systinet-com:isTransformedBy</name>
+    <description xml:lang="en" xmlns="urn:uddi-org:api_v3">A category system used to point associated transformer Web service implementations.</description>
+    <categoryBag xmlns="urn:uddi-org:api_v3">
+      <keyedReference tModelKey="uddi:uddi.org:categorization:entitykeyvalues" keyName="entityKeyValues" keyValue="bindingKey"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:validatedBy" keyName="" keyValue="uddi:271ab620-0878-11d9-b839-9310ea30b839"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:system" keyName="system tModel" keyValue="yes"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Categorization system" keyValue="categorization"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="tModel"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Checked value set" keyValue="checked"/>
+    </categoryBag>
+  </tModel>
+  <compatibilityBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <compatibility>tModel</compatibility>
+  </compatibilityBag>
+  <categorizationBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <categorization>categorization</categorization>
+  </categorizationBag>
+  <validation xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <bindingTemplate bindingKey="uddi:388bbd00-0878-11d9-b839-9310ea30b839" serviceKey="uddi:63c198f0-0878-11d9-b839-9310ea30b839" xmlns="urn:uddi-org:api_v3">
+      <accessPoint useType="endPoint">class:com.systinet.uddi.publishing.v1.validation.service.IsTransformedByValidator</accessPoint>
+      <tModelInstanceDetails>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:v1_validateValues"/>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:isTransformedBy"/>
+      </tModelInstanceDetails>
+    </bindingTemplate>
+    <bindingTemplate bindingKey="uddi:496d2e10-0878-11d9-b839-9310ea30b839" serviceKey="uddi:63c198f0-0878-11d9-b839-9310ea30b839" xmlns="urn:uddi-org:api_v3">
+      <accessPoint useType="endPoint">class:com.systinet.uddi.publishing.v2.validation.service.IsTransformedByValidator</accessPoint>
+      <tModelInstanceDetails>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:v2_validateValues"/>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:isTransformedBy"/>
+      </tModelInstanceDetails>
+    </bindingTemplate>
+    <bindingTemplate bindingKey="uddi:271ab620-0878-11d9-b839-9310ea30b839" serviceKey="uddi:63c198f0-0878-11d9-b839-9310ea30b839" xmlns="urn:uddi-org:api_v3">
+      <accessPoint useType="endPoint">class:com.systinet.uddi.publishing.v3.validation.service.IsTransformedByValidator</accessPoint>
+      <tModelInstanceDetails>
+        <tModelInstanceInfo tModelKey="uddi:uddi.org:v3_valueSetValidation"/>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:isTransformedBy"/>
+      </tModelInstanceDetails>
+    </bindingTemplate>
+  </validation>
+</taxonomy>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/principleArtifacts/ae30d857-f57d-481d-93cd-e8a937d0229d</r:path>
+   <r:collection>/principleArtifacts/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType></r:contentType>
+   <r:owner>admin</r:owner>
+   <r:uuid>ae30d857-f57d-481d-93cd-e8a937d0229d</r:uuid>
+   <r:domainId>defaultDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2013-12-09T10:55:27.231Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>admin</r:creator>
+      <r:lastDataRevision>0</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:principleArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                              xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                              xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                              xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                              deleted="0"
+                              xlink:href="principleArtifacts/ae30d857-f57d-481d-93cd-e8a937d0229d">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="Motivation"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:motivationArtifact"/>
+               <p:artifactType name="Principle"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:principleArtifact"/>
+            </g:artifactTypeGroup>
+            <g:aggregatesGroup>
+               <p:aggregates xlink:href="principleArtifacts/67b4be86-083c-4392-89b8-8c4fc66555bb"/>
+            </g:aggregatesGroup>
+            <g:nameGroup>
+               <p:name>Preference of open standards</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup>
+               <p:description>Applications, IT systems and underlying technologies use preferably open standards to avoid unwanted dependency on proprietary vendor specific standards, and to ensure a wide compatibility and interoperability of the operated solutions.</p:description>
+            </g:descriptionGroup>
+            <p:revision>1</p:revision>
+            <g:keywordGroup/>
+            <p:version>1.0</p:version>
+            <g:architectureLayerGroup>
+               <p:architectureLayer name="Application Layer"
+                                    taxonomyUri="uddi:systinet.com:soa:model:taxonomies:architectureLayer"
+                                    value="applicationLayer"/>
+               <p:architectureLayer name="Technology Layer"
+                                    taxonomyUri="uddi:systinet.com:soa:model:taxonomies:architectureLayer"
+                                    value="technologyLayer"/>
+            </g:architectureLayerGroup>
+            <g:qualityFeatureGroup>
+               <p:qualityFeature name="Effectiveness"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="effectiveness"/>
+               <p:qualityFeature name="Efficiency"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="efficiency"/>
+               <p:qualityFeature name="Availability"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="availability"/>
+               <p:qualityFeature name="Reliability"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="reliability"/>
+            </g:qualityFeatureGroup>
+            <p:rationale>High compatibility and interoperability of the managed applications, systems and technologies is dependent on adherence of common rules and standards. The standards define mandatory requirements, rules, conditions, and patterns enabling a desirable compatibility, interoperability, and reusability (see well known standards like IP, TCP, XML etc.).
+In principle, there are two basic groups of standards: open and proprietary (vendor specific). While the open standards enable wide compatibility, interoperability, and reusability, the proprietary standards limit these factors and complicate a wide usage and interoperability of technology based on them.
+If the organization wants to comply with other principles (e.g. Information is Shared, Technology Independence, etc.), and to ensure a generous compatibility and interoperability of its systems, the operated applications, systems, and technologies should be based on the open standards rather than proprietary (vendor specific) technologies.</p:rationale>
+            <p:implications>The requirements of business processes for information sharing, compatibility and interoperability need to be identified and documented. The suitable open standards enabling effective information sharing, compatibility, and interoperability must be defined and shared with architecture.
+Defined standards should be followed within the application development, when purchasing technology or when the changes modifying the architecture of the information environment are planned.
+Any solution considered to be deployed to the enterprise environment must be proven for its support of open standards. If a vendor's out-of-the-box solution is planned for use, it must be formally confirmed that the solution supports open standards enabling effective information sharing and interoperability. If the solution does not support such standards, it should be considered as a risk and a plan how to deal with the solution in the enterprise environment need to be defined and documented.
+Even if the solution utilizes vendor specific standards, which are understood as de-facto standards within a given segment, usage of known open standards is preferable.</p:implications>
+         </a:principleArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config name="contract_manager_extension_static" savingPeriod="5000">
+    <webFramework>
+        <!-- New contract request -->
+        <component name="/contract/newRequest" className="com.hp.systinet.contract.ui.NewRequestTask"
+                   page="/contract/newRequest.jsp"/>
+
+        <!-- Request Consumption context action -->
+        <component name="/contract/actions/requestConsumption"
+                   className="com.hp.systinet.contract.ui.actions.RequestConsumptionAction"
+                   page="contract/actions/requestConsumption.jsp"/>
+
+        <component name="/contract/actions/revokeContract"
+                   className="com.hp.systinet.contract.ui.actions.RevokeContractAction"
+                   page="contract/actions/revokeContract.jsp"/>
+
+        <!-- Contracts list + bulk operations -->
+        <component name="/contract/contractList" page="@/core/customization/customizableComponent" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizedComponent" paramValue="/contract/impl/contractList"/>
+        </component>
+
+        <component name="/contract/myContracts" className="com.hp.systinet.contract.ui.MyContractsTask"
+                   page="contract/myContracts.jsp"/>
+
+        <!-- Search Widget -->
+        <component name="/contract/impl/search/contractRequestStatus" page="contract/impl/search/contractRequestStatusSearchWidget.jsp" className="com.hp.systinet.contract.ui.impl.search.ContractStatusSearchWidget" />
+
+        <!-- Request Contract (deprecated left just for the reason there are links to this in some cutomer extensions)  / Import Contract Wizard -->
+        <task uri="/common/contract/newRequest" component="/contract/newRequest">
+            <restrictions>
+                <role>ContractRequestor</role>
+            </restrictions>
+            <label type="caption" key="com.hp.systinet.contract.ui.impl.ContractUIMessages$Title_NewContractRequest"/>
+            <parameter paramName="artifactType" paramValue="contractArtifact"/>
+            <parameter paramName="sdmName" paramValue="contractArtifact"/>
+            <parameter paramName="importContract" paramValue="true"/>
+            <parameter paramName="contentCustomizationId" paramValue="shared.contract.contractRequestArtifact"/>
+        </task>
+
+        <task uri="/common/contract/createContract" component="/contract/newRequest">
+            <label type="caption" key="com.hp.systinet.contract.ui.impl.ContractUIMessages$Title_NewContract"/>
+            <parameter paramName="artifactType" paramValue="contractArtifact"/>
+            <parameter paramName="sdmName" paramValue="contractArtifact"/>
+            <parameter paramName="importContract" paramValue="true"/>
+            <parameter paramName="contentCustomizationId" paramValue="shared.contract.contractRequestArtifact"/>
+        </task>
+
+        <task uri="/common/contract/myContracts" component="/contract/myContracts">
+            <label type="caption" key="com.hp.systinet.contract.ui.impl.ContractUIMessages$Title_MyContracts"/>
+            <parameter paramName="contentCustomizationId" paramValue="shared.contractsView"/>
+        </task>
+
+        <component name="/contract/impl/view/contractTab"
+                   className="com.hp.systinet.contract.ui.impl.view.ContractTabComponent"
+                   page="contract/impl/view/contractsTab.jsp"/>
+        <component name="/contract/impl/contractList"
+                   className="com.hp.systinet.contract.ui.impl.ContractListComponent"
+                   page="contract/impl/contractList.jsp"/>
+        <component name="/contract/impl/create/createStructure" className="com.hp.systinet.contract.ui.impl.create.CreateStructureComponent"
+                   page="contract/impl/create/createStructure.jsp"/>
+        <component name="/contract/impl/view/contractStructure"
+                   className="com.hp.systinet.contract.ui.view.ContractStructureComponent"
+                   page="contract/impl/view/contractStructure.jsp"/>
+        <component name="/contract/impl/view/contractState" className="com.hp.systinet.contract.ui.impl.view.ContractStateWidget"
+                   page="contract/impl/view/contractState.jsp"/>
+        <component name="/contract/impl/table/contractState" className="com.hp.systinet.contract.ui.impl.table.ContractStateWidget"
+                   page="contract/impl/table/contractState.jsp"/>
+        <component name="/contract/impl/table/contractName" className="com.hp.systinet.contract.ui.impl.table.ContractNameWidget"
+                   page="contract/impl/table/contractName.jsp"/>
+
+        <component name="/contract/impl/create/subArtifactSelector" className="com.hp.systinet.contract.ui.impl.create.SubArtifactSelectorComponent"
+                   page="contract/impl/create/subArtifactSelector.jsp"/>
+        <component name="/contract/impl/create/newRequestButtons"
+                   page="contract/impl/create/newRequestButtons.jsp"/>
+
+        <!-- User Task renderers -->
+        <component name="/contract/usertask/contractRequestLinkRenderer"
+                   page="contract/impl/usertask/contractRequestLinkRenderer.jsp"
+                   className="com.hp.systinet.contract.ui.impl.usertask.ContractRequestLinkRenderer"/>
+
+        <component name="/contract/impl/event/artifactInfo"
+                   page="contract/impl/event/artifactInfo.jsp"
+                   className="com.hp.systinet.contract.ui.impl.event.ArtifactInfoRenderer"/>
+        <component name="/contract/impl/event/contractEventLink"
+                   page="contract/impl/event/contractEventLink.jsp"
+                />
+
+        <component name="/contract/view/artifactContracts"
+                   className="com.hp.systinet.contract.ui.view.ArtifactContractsTask"
+                   page="contract/view/artifactContracts.jsp"/>
+
+        <component name="/contract/view/artifactContractsSidebar" page="@/core/customization/customizableComponent" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <restrictions>
+                <role>ContractRequestor</role>
+            </restrictions>
+            <parameter paramName="customizedComponent" paramValue="/contract/view/myContractsSidebarInternal"/>
+            <parameter paramName="customizationId" paramValue="shared.contract.artifactContractsSidebar"/>
+        </component>
+
+        <component name="/contract/view/myContractsSidebar" page="@/core/customization/customizableComponent" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <restrictions>
+                <role>ContractRequestor</role>
+            </restrictions>
+            <parameter paramName="customizedComponent" paramValue="/contract/view/myContractsSidebarInternal"/>
+            <parameter paramName="customizationId" paramValue="shared.myContractsSidebar"/>
+        </component>
+        <component name="/contract/view/myContractsSidebarInternal"
+                   page="/contract/view/myContractsSidebar.jsp"
+                   className="com.hp.systinet.contract.ui.view.MyContractsSidebarComponent"/>
+
+        <component name="/contract/view/managedContracts"
+                   page="@/core/customization/customizableComponent"
+                   className="com.hp.systinet.contract.ui.impl.view.ManagedContracts">
+            <parameter paramName="customizedComponent" paramValue="/core/layout/columnsInternal"/>
+        </component>
+
+        <task uri="/common/contract/artifactContracts" component="/contract/view/artifactContracts">
+            <restrictions>
+                <role>ContractRequestor</role>
+            </restrictions>
+            <label type="caption" key="com.hp.systinet.contract.ui.impl.ContractUIMessages$Title_ArtifactContracts"/>
+        </task>
+
+        <component name="/contract/actions/changeStatus"
+                   className="com.hp.systinet.contract.ui.impl.lifecycle.ChangeContractStatus"
+                   page="contract/actions/changeStatus.jsp" />
+
+        <component name="/contract/actions/changeStatusRowRenderer"
+                   className="com.hp.systinet.contract.ui.impl.lifecycle.ChangeContractStatusRowRenderer"
+                   page="contract/actions/changeStatusRowRenderer.jsp"/>
+                   
+        <component name="/contract/actions/autoRequestApprovalLifecycleStage"
+                   className="com.hp.systinet.contract.ui.impl.lifecycle.AutoRequestApprovalLifecycleStageRowRenderer"
+                   page="contract/actions/autoRequestApprovalRowRenderer.jsp"/>
+
+		  <component name="/contract/actions/deployUndeployContract" page="contract/actions/deployUndeployContract.jsp" className="com.hp.systinet.contract.ui.impl.view.ContractStateWidget"/>
+                   
+           <component name="/contract/impl/view/lifecycleStatus" className="com.hp.systinet.contract.ui.impl.view.LifecycleStatusComponent"
+                   page="contract/impl/view/lifecycleStatus.jsp"/>
+
+    </webFramework>
+</config>

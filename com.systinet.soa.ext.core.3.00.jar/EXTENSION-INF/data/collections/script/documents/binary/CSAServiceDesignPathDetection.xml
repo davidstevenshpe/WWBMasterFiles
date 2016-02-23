@@ -1,0 +1,29 @@
+<closure maxDepth="2" maxResults="100" maxProcessingTime="30000" debug="false" seedsAsResults="true">
+  <defaultSeedQuery>select artifact._uuid from artifactBase artifact where artifact._uuid=:uuid</defaultSeedQuery>
+    <traversableRelations>
+        <relation sdmName="specializes" sourceArtifact="artifactBase" targetArtifact="artifactBase"/>
+        <relation sdmName="uses,associatedWithIncoming" sourceArtifact="artifactBase" targetArtifact="infrastructureServiceArtifact"/>
+    </traversableRelations>
+    <parameters>
+         <parameter name="domainIDs" label="domainIDs" type="string" defaultValueQuery="select r_localId from hpsoaDomainArtifact"/>
+         <parameter name="uuid" label="uuid" type="string"/>
+     </parameters>
+    <resultArtifacts>
+    	<!-- infrastructureServiceArtifact has [usedBy/associatedWith] to seed artifact -->
+    	<artifact sdmName="infrastructureServiceArtifact"/>
+    	<!-- seed artifact -->
+		<artifact sdmName="artifactBase"  filter="from artifactBase aca left outer join artifactBase aca_1 using aca_1.specializes where aca_1._uuid = :uuid or (aca._uuid = :uuid and aca_1._uuid is null)">
+			<field name="invalidNode">
+				<closure maxDepth="2" nodesTraversedOnlyOnce="true">
+					<traversableRelations>
+						<relation sdmName="aggregates" sourceArtifact="applicationComponentArtifact" targetArtifact="applicationComponentArtifact"/>
+						<relation sdmName="realizedBy" sourceArtifact="applicationComponentArtifact" targetArtifact="systemSoftwareArtifact"/>
+					</traversableRelations>
+					<resultArtifacts>
+				    	<artifact sdmName="artifactBase"/>
+			    	</resultArtifacts>
+				</closure>
+			</field>
+		</artifact>
+  </resultArtifacts>
+</closure>

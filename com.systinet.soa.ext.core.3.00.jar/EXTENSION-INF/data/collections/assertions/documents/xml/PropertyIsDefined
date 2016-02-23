@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><pm:Assertion xmlns:pm="http://systinet.com/2005/10/soa/policy" xmlns:p="http://systinet.com/2005/05/soa/model/property" xmlns:a="http://systinet.com/2005/05/soa/model/artifact" xmlns:rest="http://systinet.com/2005/05/soa/resource" xmlns:r="http://systinet.com/2005/05/repository" xmlns:pt="http://systinet.com/2005/05/soa/model/property/type" xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><pm:Template><p0:PropertyIsDefined xmlns:p0="http://systinet.com/assertions" artifactType="" errorMessage="" properties=""/></pm:Template><pm:Parameter xmlns:p1="http://www.w3.org/2001/XMLSchema" Name="properties" Optional="true" Type="p1:string" XPointer="xpointer(@properties)"><pm:Description>List properties to be checked</pm:Description></pm:Parameter><pm:Parameter xmlns:p1="http://www.w3.org/2001/XMLSchema" Name="errorMessage" Optional="true" Type="p1:string" XPointer="xpointer(@errorMessage)"><pm:Description>Error message to be displayed</pm:Description></pm:Parameter><pm:Parameter xmlns:p1="http://www.w3.org/2001/XMLSchema" Name="artifactType" Optional="true" Type="p1:string" XPointer="xpointer(@artifactType)"><pm:Description>Artifact sdm name</pm:Description></pm:Parameter><pm:Validation><JavaScriptValidator xmlns="http://systinet.com/2005/10/soa/policy/validation" xmlns:xlink="http://www.w3.org/1999/xlink/">/**
+ * This function is called iteratively by the java script validator,
+ * There are some java script objects pre-initialized in the scripting context (e.g. repositoryService ...)  
+ * You can find others and configure more in the managed script environment.js
+ * @param  resource
+ *         an external resource or an artifact
+ * @param  params
+ *         a map of params
+ */
+function validate(resource, params) {
+    var artifact = resource;
+    
+    var propertiesParam = params.get("properties"); // required
+    var artifactType = params.get("artifactType"); // optional
+    var errorMsg = params.get("errorMessage"); // optional    
+    
+    if (artifactType != null &amp;&amp; artifact.get_artifactSdmName() != artifactType) {
+        return new JsValidationResult(JsValidationCode.NOT_APPLICABLE);
+    }
+    
+    repositoryService.fetchArtifactProperties(artifact, ArtifactPartSelector.ALL_PROPERTIES);
+    
+    var propertiesList = propertiesParam != null ? propertiesParam.split(",") : null;
+    if (propertiesList.length == 0) {
+        return new JsValidationResult(JsValidationCode.FAILED, "Parameter properties must be provided!");
+    }
+    var nullProps = [];
+    for (var idx = 0; idx &lt; propertiesList.length; idx++) {
+        var propertyName = propertiesList[idx].trim();
+        var artDesc = artifact.getArtifactDescriptor();
+        var descriptor = artDesc.getPropertyDescriptor(propertyName);
+        if (descriptor == null) {           
+            return new JsValidationResult(JsValidationCode.FAILED, "Invalid property name: " + propertyName);
+        }
+        var propValue = artifact.getProperty(propertyName);
+        
+        var nullPropValue = false;
+        if (propValue == null) {
+            nullPropValue = true;
+        } else if (propValue instanceof com.hp.systinet.repository.sdm.properties.SinglePropertyValue) {
+            nullPropValue = propValue.getValue() == null;
+        } else if (propValue instanceof com.hp.systinet.repository.sdm.properties.MultiplePropertyValue) {
+            nullPropValue = propValue.getValues() == null || propValue.getValues().isEmpty();
+        }
+        if (nullPropValue) {
+            nullProps.push(propertyName);           
+        }
+    }
+    
+    if (nullProps.length == 0) {
+        return new JsValidationResult(JsValidationCode.OK);
+    } else {
+        var errMsgTmp = " {0} has to be defined!";
+        if (nullProps.length &gt; 1) {
+            errMsgTmp = " {0} have to be defined!";
+        }
+        if (errorMsg != null &amp;&amp; errorMsg.length() &gt; 0) {
+            errMsgTmp = errorMsg;
+        }
+        var props = "";
+        for (var idx = 0; idx &lt; nullProps.length; idx++) {
+            props += nullProps[idx];
+            if (idx &lt; nullProps.length - 1) {
+                props += ", ";
+            }
+        }
+        var msg = Packages.java.text.MessageFormat.format(errMsgTmp, props);
+        
+        return new JsValidationResult(JsValidationCode.FAILED, msg);
+    }
+}
+</JavaScriptValidator></pm:Validation></pm:Assertion>

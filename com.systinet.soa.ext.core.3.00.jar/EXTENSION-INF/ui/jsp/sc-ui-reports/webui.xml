@@ -1,0 +1,226 @@
+<config name="ui-sc-perspectives" savingPeriod="5000">
+    <webFramework>
+    	<!-- Dashboard -->
+		<component name="/reports/createDashboard" className="com.hp.systinet.report.ui.impl.dashboard.ReportDashboard" page="/report/impl/dashboard/createDashboard.jsp"/>
+		<component name="/reports/createDashboardWindow" page="/report/impl/dashboard/createDashboardWindow.jsp"/>
+		<component name="/reports/dashboard" page="/report/dashboard.jsp"/>
+		<task uri="/reports/dashboard" component="/core/portal"/> 
+        
+        <component name="/reports/newReportArtifact" page="@/core/artifact/newArtifact" className="com.hp.systinet.report.ui.NewReportComponent">
+        </component>
+        <component name="/reports/editPolicyReport" page="/report/editPolicyReport.jsp"
+                   className="com.hp.systinet.report.ui.EditPolicyReportComponent"/>
+        <component name="/reports/deleteReport" page="/report/deleteReport.jsp" className="com.hp.systinet.report.ui.DeleteReportComponent">
+        </component>
+        <task uri="/reports/newReportArtifact" component="/reports/newReportArtifact"/>  
+               
+        <component name="/reports/tableAdvance" page="/report/tableAdvance.jsp" className="com.hp.systinet.report.ui.LifecycleProcessTableComponent"/>
+        
+        <component name="/reports/createMenuReport" page="/report/createMenuReport.jsp" />
+        <!-- table with chart -->
+        <component name="/reports/chart/pieChartTable" page="@/core/customization/customizableComponent" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizedComponent" paramValue="/reports/chart/pieChartTableInternal"/>
+        </component>
+        <component name="/reports/chart/pieChartTableInternal" page="/report/chart/pieChartTable.jsp" className="com.hp.systinet.report.ui.chart.PieChartTableComponent">
+        </component>
+        
+        <component name="/reports/chart/barsChartTable" page="@/core/customization/customizableComponent" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizedComponent" paramValue="/reports/chart/barsChartTableInternal"/>
+        </component>
+        <component name="/reports/chart/barsChartTableInternal" page="/report/chart/barsChartTable.jsp" className="com.hp.systinet.report.ui.chart.BarsChartTableComponent">
+        </component>
+        
+        <!-- dashboard reports -->
+        <component name="/reports/dashboard/artifactsByLifecycle" page="@/core/customization/customizableComponent" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizedComponent" paramValue="/reports/impl/dashboard/artifactsByLifecycleInternal"/>
+        </component>
+        
+        <component name="/reports/impl/dashboard/artifactsByLifecycleInternal" page="/report/impl/dashboard/artifactsByLifecycle.jsp" className="com.hp.systinet.report.ui.impl.dashboard.ArtifactsByLifecycleComponent">
+        </component>
+        
+        <component name="/reports/dashboard/contractManagement" page="@/core/customization/customizableComponent" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizedComponent" paramValue="/reports/impl/dashboard/contractManagementInternal"/>
+        </component>
+        
+        <component name="/reports/impl/dashboard/contractManagementInternal" page="/report/impl/dashboard/contractManagement.jsp" className="com.hp.systinet.report.ui.impl.dashboard.ContractManagementComponent">
+        </component>
+        
+        <component name="/reports/dashboard/activityReport" className ="com.hp.systinet.report.ui.impl.dashboard.ActivityReportComponent" page="/report/impl/dashboard/activityReport.jsp" />
+        <!-- Feeds -->
+        <component name="/reports/feeds/userFeeds" page="@/core/customization/customizableComponent" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizedComponent" paramValue="/reports/feeds/userFeedsInternal"/>
+        </component>
+        
+        <component name="/reports/feeds/userFeedsInternal" page="/report/feeds/userFeeds.jsp" className="com.hp.systinet.report.ui.feeds.UserFeedsComponent">
+        </component>
+        
+        <!-- artifact reports -->
+    
+		<task uri="/reports/artifact/createArtifactReport" component="/reports/artifact/createArtifactReportWizard" >    		
+    	</task>
+
+		<component name="/reports/artifact/browseLink" page="/report/artifact/browseLink.jsp" className="com.hp.systinet.report.ui.artifact.BrowseLink"/>
+    	
+    	<task uri="/reports/artifact/browseArtifactReport" component="/reports/artifact/BrowseArtifactReport" >    		
+    	</task>
+    	
+    	<component name="/reports/artifact/createArtifactReportWizard" page="/report/artifact/createArtifactReportWizard.jsp" className="com.hp.systinet.report.ui.artifact.CreateArtifactReportWizard"/>
+    	<component name="/reports/artifact/defineDQLQueryStep" page="/report/artifact/defineDQLQueryPage.jsp" className="com.hp.systinet.report.ui.artifact.DefineDQLQueryPage" />
+    	<component name="/reports/artifact/reportTableLayoutStep" page="/report/artifact/reportTableLayoutPage.jsp" className="com.hp.systinet.report.ui.artifact.ReportTableLayoutPage" />
+    	
+    	<component name="/reports/artifact/BrowseArtifactReport" page="/report/artifact/browseArtifactReport.jsp" className="com.hp.systinet.report.ui.artifact.BrowseArtifactReport"/>	
+
+        <task uri="/common/viewReport" component="/reports/viewReport" />
+		<component name="/reports/viewReport" page="/report/viewReport.jsp" className="com.hp.systinet.report.ui.ViewReportComponent"/>
+
+
+        <component name="/reports/catalog/artifactReportBrowser" page="@/core/catalog/browser" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizedComponent" paramValue="/core/catalog/browserInternal"/>
+            <parameter paramName="browseLinkRenderer" paramValue="/reports/impl/catalog/reportBrowseLinkRenderer"/>
+            <parameter paramName="collectionId" paramValue="artifactReports"/>
+        </component>
+
+        <component name="/reports/impl/catalog/reportBrowseLinkRenderer" page="@/core/impl/catalog/linkRenderer" className="com.hp.systinet.sc.ui.impl.catalog.LinkRenderer">
+            <parameter paramName="targetTask" paramValue="/common/viewReport"/>
+            <parameter paramName="label" paramValue="single"/>
+            <parameter paramName="idParamName" paramValue="reportId"/>
+            <parameter paramName="mode" paramValue="browse"/>
+        </component>
+        
+        <component name="/reports/impl/artifact/pendingDate" className="com.hp.systinet.report.ui.impl.artifact.PendingDate" page="/report/pendingDate.jsp" />
+
+        <!-- BIRT report -->
+        <component name="/reports/catalog/birtReportBrowser" page="@/core/catalog/artifactInstanceBrowser" className="com.hp.systinet.report.ui.impl.birt.BirtReportBrowserComponent">
+            <parameter paramName="browseLinkRenderer" paramValue="/core/impl/catalog/artifactInstanceLinkRenderer"/>
+            <parameter paramName="sdmName" paramValue="hpsoaBirtReportArtifact"/>
+            <parameter paramName="collectionId" paramValue="hpsoaBirtReports"/>
+        </component>        
+
+        <component name="/reports/catalog/policyReportBrowser" page="@/core/catalog/artifactInstanceBrowser" className="com.hp.systinet.sc.ui.catalog.ArtifactInstanceBrowserComponent">
+            <parameter paramName="browseLinkRenderer" paramValue="/core/impl/catalog/artifactInstanceLinkRenderer"/>
+            <parameter paramName="sdmName" paramValue="hpsoaPolicyReportArtifact"/>
+            <parameter paramName="collectionId" paramValue="hpsoaPolicyReports"/>
+        </component>
+        
+        <component name="/reports/impl/birt/reportDefinition" page="/report/impl/birt/reportDefinition.jsp" className="com.hp.systinet.report.ui.impl.birt.ReportDefinitionComponent">
+            <parameter paramName="artifact" paramValue="${artifact}"/>
+        </component>
+        
+        <!-- policy report -->
+        
+        <component name="/reports/policy/sourceSelectorTabs" page="/report/impl/policy/sourceSelectorTabs.jsp" 
+        	className="com.hp.systinet.report.ui.impl.policy.SourceSelectorTabsComponent"/>
+
+        <component name="/reports/policy/repositoryArtifactSource" page="/report/impl/policy/repositoryArtifactSource.jsp" 
+        	className="com.hp.systinet.report.ui.impl.policy.RepositoryArtifactSourceComponent" />
+
+        <component name="/reports/policy/externalDocumentSource" page="/report/impl/policy/externalDocumentSource.jsp" 
+        	className="com.hp.systinet.report.ui.impl.policy.ExternalDocumentSourceComponent" />
+
+        <component name="/reports/policy/viewSourceSelector" page="/report/impl/policy/viewSourceSelector.jsp"
+        	className="com.hp.systinet.report.ui.impl.policy.ViewSourceSelectorComponent" />
+        
+        <component name="/reports/policy/complianceChart" page="/report/impl/policy/complianceChart.jsp" 
+        	className="com.hp.systinet.report.ui.impl.policy.ComplianceChartComponent" />
+
+        <component name="/reports/policy/compliantArtifacts" page="/report/impl/policy/compliantArtifacts.jsp" 
+        	className="com.hp.systinet.report.ui.impl.policy.CompliantArtifactsComponent" />
+        
+        <component name="/reports/policy/compliancePanel" page="/report/impl/policy/compliancePanel.jsp" 
+        	className="com.hp.systinet.report.ui.impl.policy.CompliancePanelComponent" />
+
+        <component name="/reports/policy/complianceArtifacts" page="/report/impl/policy/complianceArtifacts.jsp" 
+        	className="com.hp.systinet.report.ui.impl.policy.ComplianceArtifactsComponent" />
+
+        <component name="/reports/policy/complianceData" page="/report/impl/policy/complianceData.jsp" />
+
+        <component name="/reports/policy/complianceRender" page="/report/impl/policy/complianceRender.jsp" 
+        	className="com.hp.systinet.report.ui.impl.policy.ComplianceRenderComponent" />
+        	
+        <component name="/reports/policy/statusRender" page="/report/impl/policy/statusRender.jsp"
+        	className="com.hp.systinet.report.ui.impl.policy.StatusRenderComponent" />
+        	
+        <component name="/reports/policy/detailIdRender" page="/report/impl/policy/detailIdRender.jsp" />
+		
+		<component name="/reports/policy/previewArtifactWindow" page="/report/impl/policy/previewArtifactWindow.jsp" />
+		        
+
+        <!-- Artifact Validation Report -->
+        <task uri="/reports/policy/validationResultReport" component="/reports/policy/validationResultReport">
+            <parameter paramName="captionKey"
+                       paramValue="com.hp.systinet.report.ui.policy.PolicyReportMessages$validationResult.title"/>            
+        </task>
+        <component name="/reports/policy/validationResultBlock"
+                   page="/report/impl/policy/validationResultBlock.jsp"
+                   className="com.hp.systinet.report.ui.impl.policy.ValidationResultBlock"/>
+                   
+        <component name="/reports/policy/validationResultReport"
+                   page="/report/impl/policy/validationResultReport.jsp"
+                   className="com.hp.systinet.report.ui.impl.policy.ValidationResultReport"/>
+
+        <component name="/reports/policy/policyComplianceReport"
+                   page="/report/impl/policy/policyComplianceReport.jsp"
+                   className="com.hp.systinet.report.ui.impl.policy.policyComplianceReport"/>
+                   
+        <component name="/reports/policy/policyCompliancePanel"
+                   page="/report/impl/policy/policyCompliancePanel.jsp"
+                   className="com.hp.systinet.report.ui.impl.policy.policyComplianceReport"/>
+                   
+        <component name="/reports/policy/validationResultStatusRenderer"
+                   page="/report/impl/policy/validationResultStatusRenderer.jsp"
+                   className="com.hp.systinet.report.ui.impl.policy.ValidationResultStatusRenderer"/>
+
+        <task uri="/reports/lifecycle/validationResultReport"
+              component="/reports/lifecycle/validationResultReport">
+            <parameter paramName="captionKey"
+                       paramValue="com.hp.systinet.report.ui.lifecycle.LifecycleReportMessages$validationResult.title"/>
+        </task>
+        <component name="/reports/lifecycle/validationResultReport"
+                   className="com.hp.systinet.report.ui.impl.lifecycle.ValidationResultReport"
+                   page="/report/impl/lifecycle/validationResultReport.jsp"/>
+
+        <component name="/reports/policy/viewModeSelector" page="/report/impl/policy/viewModeSelector.jsp"
+                   className="com.hp.systinet.report.ui.impl.policy.ViewModeSelector"/>
+        <component name="/reports/lifecycle/validatedTasksRenderer"
+                   page="/report/impl/lifecycle/validatedTasksRenderer.jsp"/>
+        <component name="/reports/policy/validationErrorMessage"
+                   page="/report/impl/policy/validationErrorMessage.jsp"
+                   className="com.hp.systinet.report.ui.impl.policy.ValidationErrorMessage"/>
+        <component name="/reports/policy/stackTraceWindow" page="/report/impl/policy/stackTraceWindow.jsp"/>
+        <component name="/reports/policy/validatedAssertionsRenderer" page="/report/impl/policy/validatedAssertionsRenderer.jsp"
+                   className="com.hp.systinet.report.ui.impl.policy.ValidatedAssertionsRenderer"/>
+
+        <!-- View birt report -->
+        <component name ="/reports/impl/birt/viewBirtReport" className ="com.hp.systinet.report.ui.impl.birt.ViewBirtReportComponent" page ="/report/impl/birt/viewBirtReport.jsp"/>
+        <component name ="/reports/impl/birt/recalculateAction" className ="com.hp.systinet.report.ui.impl.birt.RecalculateReportAction" page ="/report/impl/birt/recalculateAction.jsp"/>
+        <component name ="/reports/impl/birt/viewBirtReportAsFile" className ="com.hp.systinet.report.ui.impl.birt.ViewBirtReportAsFileAction" page="/report/impl/birt/viewBirtReportAsFile.jsp" />
+        
+        <component name ="/reports/impl/birt/changeBirtParams" className ="com.hp.systinet.report.ui.impl.birt.ChangeBirtParamsComponent" page ="/report/impl/birt/changeBirtParams.jsp"/>
+        <component name ="/reports/impl/birt/changeBirtParamsWindow" page ="/report/impl/birt/changeBirtParamsWindow.jsp"/>
+        
+        <!-- customize Policy Report Navigation -->
+        <component name="/reports/policy/policyReportNavigator" page="/report/impl/policy/policyReportNavigator.jsp" className="com.hp.systinet.report.ui.impl.policy.PolicyNavigationComponent" />
+        <component name="/reports/layout/navigation" page="@/core/customization/customizableComponent" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizedComponent" paramValue="/reports/policy/policyReportNavigator"/>
+            <parameter paramName="rendersCustomizeLinks" paramValue="true"/>
+        </component>
+
+        <component name="/reports/impl/policy/resultsTab" page="/report/impl/policy/resultsTab.jsp"/>
+        <component name="/reports/impl/policy/showAllResultsLinkRenderer" page="/report/impl/policy/showAllResultsLinkRenderer.jsp"/>
+        
+        <component name="/reports/table" page="/report/table.jsp"/>
+        <!-- rating report -->
+        <component name="/report/impl/ratingReport" page="/report/impl/ratingReport.jsp" className="com.hp.systinet.report.ui.impl.artifact.RatingReportComponent">
+        </component>
+        
+        <!-- policy report portlet content -->
+        <component name="/report/impl/policyReportPortlet" className="com.hp.systinet.report.ui.impl.policy.PolicyReportPortlet" page="/report/impl/policyReportPortletContent.jsp"/>
+		<!-- artifact report portlet content -->
+		<component name="/report/impl/artifactReportPortlet" page="/report/impl/artifactReportPortletContent.jsp"/>
+
+
+		<component name="/reports/applicationCostDiagnosticReport" page="/report/applicationCostDiagnosticReport.jsp" />
+		
+		<task uri="/reports/impl/ratingReport" component="/report/impl/ratingReport"/>
+    </webFramework>
+</config>

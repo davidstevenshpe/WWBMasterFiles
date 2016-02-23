@@ -1,0 +1,24 @@
+<closure maxDepth="10" maxResults="400" maxProcessingTime="30000">
+    <!-- Defines which relations are traversable from specified artifact to another artifact  -->
+    <traversableRelations>
+	    <!-- Path from serverArtifact -->
+                <relation sdmName="assignedTo" sourceArtifact="serverArtifact" targetArtifact="deploymentArtifact"/>
+				<relation sdmName="uses" sourceArtifact="serverArtifact" targetArtifact="infrastructureInterface"/>
+                <relation sdmName="assignedTo" sourceArtifact="serverArtifact" targetArtifact="infrastructureFunctionArtifact"/>
+				<relation sdmName="usedBy" sourceArtifact="serverArtifact" targetArtifact="applicationComponentArtifact"/>
+
+        <!-- Path through infrastructure service, interface and function -->
+                <relation sdmName="realizes" sourceArtifact="infrastructureFunctionArtifact" targetArtifact="infrastructureServiceArtifact"/>
+                <relation sdmName="assignedFrom" sourceArtifact="infrastructureServiceArtifact" targetArtifact="infrastructureInterface"/>
+
+	    <!-- Cross layer dependencies -->
+                <relation sdmName="usedBy" sourceArtifact="infrastructureInterface" targetArtifact="applicationComponentArtifact"/>
+                <relation sdmName="usedBy" sourceArtifact="infrastructureServiceArtifact" targetArtifact="applicationComponentArtifact"/>
+                <relation sdmName="realizes" sourceArtifact="deploymentArtifact" targetArtifact="applicationComponentArtifact"/>
+	</traversableRelations>
+	<resultArtifacts>
+	   <artifact sdmName="serverArtifact"/>
+	   <artifact sdmName="nodeArtifact"/>
+	   <artifact sdmName="applicationComponentArtifact"/>
+    </resultArtifacts>
+</closure>

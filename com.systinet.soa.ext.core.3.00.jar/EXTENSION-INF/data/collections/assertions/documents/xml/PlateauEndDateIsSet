@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pm:Assertion xmlns:pm="http://systinet.com/2005/10/soa/policy">
+    <pm:Template>
+        <p0:PlateauEndDateIsSet xmlns:p0="http://systinet.com/assertions" xmlns:pm="http://systinet.com/2005/10/soa/policy"/>
+    </pm:Template>
+    <pm:Validation SourceType="xmlns(ns=http://systinet.com/2005/05/soa/model/artifact)qname(ns:plateauArtifact)">
+        <JavaScriptValidator xmlns="http://systinet.com/2005/10/soa/policy/validation" xmlns:pm="http://systinet.com/2005/10/soa/policy" xmlns:xlink="http://www.w3.org/1999/xlink/">/**
+ * This function is called iteratively by the java script validator,
+ * There are some java script objects pre-initialized in the scripting context (e.g. repositoryService ...)  
+ * You can find others and configure more in the managed script environment.js
+ *
+ * @param  resource
+ *         an external resource or an artifact
+ *
+ * @param  params
+ *         a map of params
+ */
+function validate(resource, params) {
+	var errMsg = "Plateau is in 'On the roadmap' stage but its end date is not set";
+    var artifact = resource;
+	repositoryService.fetchArtifactProperties(artifact, ArtifactPartSelector.ALL_PROPERTIES);
+	var aldFactory = beanFactoryHelper.getBean(Packages.com.hp.systinet.lifecycle.ui.common.ArtifactLifecycleDataFactory);
+	var lfeData = aldFactory.create(artifact.get_uuid());
+	if (!lfeData.isGoverned()) { //no lfc available
+		return new JsValidationResult(JsValidationCode.OK);
+	}
+	var stage = lfeData.getCurrentStage();
+	if (stage == null) { //no lfc available
+		return new JsValidationResult(JsValidationCode.FAILED, "No stage info");
+	}
+	var stageTaxonomy =  stage.getVal();
+	if (stageTaxonomy.indexOf("onroadmap") &lt; 0) { // not in "On roadmap" stage
+		return new JsValidationResult(JsValidationCode.OK);
+	}
+	var endDate = artifact.getProperty("endDate");
+	if (endDate == null) { // no endDate property
+		return new JsValidationResult(JsValidationCode.FAILED, errMsg);
+	}
+	else {
+		if (endDate.getValue() != null) { //endDate is not empty
+			return new JsValidationResult(JsValidationCode.OK);
+		}
+		else { //endDate is empty
+			return new JsValidationResult(JsValidationCode.FAILED, errMsg);
+		}
+	}
+}
+</JavaScriptValidator>
+    </pm:Validation>
+</pm:Assertion>

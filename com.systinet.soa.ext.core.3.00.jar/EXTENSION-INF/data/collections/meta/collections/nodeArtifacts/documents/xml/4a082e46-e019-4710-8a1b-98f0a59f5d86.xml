@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/nodeArtifacts/4a082e46-e019-4710-8a1b-98f0a59f5d86</r:path>
+   <r:collection>/nodeArtifacts/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType></r:contentType>
+   <r:owner>admin</r:owner>
+   <r:uuid>4a082e46-e019-4710-8a1b-98f0a59f5d86</r:uuid>
+   <r:domainId>CloudTransformationReference</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2015-07-03T00:08:23.045Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>systinet:admin</r:creator>
+      <r:lastDataRevision>0</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:serverProfileArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                                  xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                                  xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                                  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                                  xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                                  xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                  deleted="0"
+                                  xlink:href="nodeArtifacts/4a082e46-e019-4710-8a1b-98f0a59f5d86">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="Technology Layer"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:technologyLayer:artifacts:technologyLayerArtifact"/>
+               <p:artifactType name="Node" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:technologyLayer:artifacts:nodeArtifact"/>
+               <p:artifactType name="Device"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:technologyLayer:artifacts:deviceArtifact"/>
+               <p:artifactType name="Server Profile"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:cloud-assessment:artifacts:serverProfileArtifact"/>
+            </g:artifactTypeGroup>
+            <g:assignedFromGroup>
+               <p:assignedFrom xlink:href="locationArtifacts/62dbea61-ec40-4954-bf18-44f13a159a60"/>
+            </g:assignedFromGroup>
+            <g:specializesGroup>
+               <p:specializes xlink:href="nodeArtifacts/e5601edb-d89f-4947-8dd3-560125b50bf3"/>
+            </g:specializesGroup>
+            <p:perHourCost>0.12</p:perHourCost>
+            <p:ramSize>4.0</p:ramSize>
+            <p:cpuCores>4</p:cpuCores>
+            <p:storageSize>50</p:storageSize>
+            <g:nameGroup>
+               <p:name>HP Cloud M compute_linux</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup/>
+            <p:revision>1</p:revision>
+            <p:categoryBag/>
+            <p:identifierBag/>
+            <g:keywordGroup/>
+            <p:version>1.0</p:version>
+            <p:repositoryPackage name="Server Profiles" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:repositoryPackages" value="repository:referencedata:serverprofiles"/>
+         </a:serverProfileArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

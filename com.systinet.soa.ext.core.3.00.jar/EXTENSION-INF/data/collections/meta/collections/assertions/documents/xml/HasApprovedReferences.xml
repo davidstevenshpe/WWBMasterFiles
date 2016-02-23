@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository" xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+        xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+        xmlns:p="http://systinet.com/2005/05/soa/model/property"
+        xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+        xmlns:rest="http://systinet.com/2005/05/soa/resource" xmlns:xlink="http://www.w3.org/1999/xlink"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <r:path>/assertions/HasApprovedReferences</r:path>
+    <r:collection>/assertions/</r:collection>
+    <r:binary>false</r:binary>
+    <r:contentType>text/xml</r:contentType>
+    <r:owner>systinet:admin</r:owner>
+   <r:uuid>aa4a808d-f2c1-4b6c-aed7-32f2697a2991</r:uuid>
+    <r:domainId>topLevelDomain</r:domainId>
+   <r:type>document</r:type>
+    <r:deleted>false</r:deleted>
+    <r:cached>false</r:cached>
+    <r:checksum>0</r:checksum>
+    <r:revision>
+        <r:number>1</r:number>
+        <r:timestamp>2009-05-25T17:00:00.000Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+        <r:creator>systinet:admin</r:creator>
+        <r:lastDataRevision>1</r:lastDataRevision>
+    </r:revision>
+    <r:extensions>
+        <r:descriptor>
+            <a:assertionArtifact deleted="0">
+                <nameGroup xmlns="http://systinet.com/2005/05/soa/model/propertyGroup">
+                    <name xmlns="http://systinet.com/2005/05/soa/model/property">Has Approved References</name>
+                </nameGroup>
+                <descriptionGroup xmlns="http://systinet.com/2005/05/soa/model/propertyGroup">
+                    <description xmlns="http://systinet.com/2005/05/soa/model/property"
+                            >Checks artifact references for a desired lifecycle stage.</description>
+                </descriptionGroup>
+                <p:assertionClassification name="Service Catalog"
+                                           taxonomyUri="uddi:systinet.com:soa:policymgr:taxonomies:Assertion:Classification:Taxonomy"
+                                           value="uddi:systinet.com:soa:policymgr:taxonomies:Assertion:Classification:SystinetBestPractices:ServiceCatalog"
+                                           xmlns:p="http://systinet.com/2005/05/soa/model/property"/>
+                <p:assertionQName>{urn:com.hp.systinet.soa:lifecycle-assertions}HasApprovedReferences</p:assertionQName>
+                <g:applicableSourceQNameGroup>
+                    <p:applicableSourceQName>{http://systinet.com/2005/05/soa/resource}resource</p:applicableSourceQName>
+                </g:applicableSourceQNameGroup>
+                <g:artifactTypeGroup>
+                    <p:artifactType name="Artifact" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                                    value="urn:com:systinet:soa:model:artifacts"/>
+                    <p:artifactType name="SOA" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                                    value="urn:com:systinet:soa:model:artifacts:soa"/>
+                    <p:artifactType name="Policy" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                                    value="urn:com:systinet:soa:model:artifacts:soa:policy"/>
+                    <p:artifactType name="Assertion" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                                    value="urn:com:systinet:soa:model:artifacts:soa:policy:assertion"/>
+                </g:artifactTypeGroup>
+                <g:r_usedTaxonomyGroup>
+                    <p:r_usedTaxonomy>uddi:systinet.com:soa:model:taxonomies:artifactTypes</p:r_usedTaxonomy>
+                    <p:r_usedTaxonomy>uddi:systinet.com:soa:model:taxonomies:lifecycleStages</p:r_usedTaxonomy>
+                </g:r_usedTaxonomyGroup>
+                <p:isCached>false</p:isCached>
+            </a:assertionArtifact>
+        </r:descriptor>
+    </r:extensions>
+</r:meta>

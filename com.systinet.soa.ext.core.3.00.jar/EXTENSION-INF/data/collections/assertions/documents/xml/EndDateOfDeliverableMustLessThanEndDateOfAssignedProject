@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pm:Assertion xmlns:pm="http://systinet.com/2005/10/soa/policy">
+    <pm:Template>
+        <p0:EndDateOfDeliverableMustLessThanEndDateOfAssignedProject xmlns:p0="http://systinet.com/assertions" xmlns:pm="http://systinet.com/2005/10/soa/policy"/>
+    </pm:Template>
+    <pm:Validation SourceType="xmlns(ns=http://systinet.com/2005/05/soa/model/artifact)qname(ns:deliverableArtifact)">
+        <XQuery xmlns="http://systinet.com/2005/10/soa/policy/validation" xmlns:pm="http://systinet.com/2005/10/soa/policy" xmlns:xlink="http://www.w3.org/1999/xlink/">import module namespace pm = "http://systinet.com/2005/10/soa/policy/validation/xquery";
+
+declare namespace val="http://systinet.com/2005/10/soa/policy/validation";
+
+declare namespace rest="http://systinet.com/2005/05/soa/resource";
+declare namespace a="http://systinet.com/2005/05/soa/model/artifact";
+declare namespace p="http://systinet.com/2005/05/soa/model/property";
+declare namespace g="http://systinet.com/2005/05/soa/model/propertyGroup";
+declare namespace xlink="http://www.w3.org/1999/xlink";
+
+declare variable $metadata.source.url as xs:string external;
+
+if (exists(rest:resource/rest:descriptor/a:deliverableArtifact/g:realizedByGroup/p:realizedBy[contains(@xlink:href,'workPackageArtifacts')])
+     and exists(/rest:resource/rest:descriptor/a:deliverableArtifact/p:endDate))
+  then
+    let $endDate := /rest:resource/rest:descriptor/a:deliverableArtifact/p:endDate/text()
+    let $relationship := /rest:resource/rest:metadata/rest:relationships/rest:relationship
+    let $referenceOK :=
+           for $reference in $relationship/rest:source/rest:path
+             where ($reference/contains(text(),'workPackageArtifacts'))
+             return
+                let $referencedArtifact :=  pm:downloadS2Resource($reference, $metadata.source.url)
+                return
+                if (not($referencedArtifact/rest:resource/rest:descriptor/a:projectArtifact/p:plannedFinishDate) and not($referencedArtifact/rest:resource/rest:descriptor/a:projectArtifact/p:endDate))
+                 then $reference
+                 else
+                  if (($referencedArtifact/rest:resource/rest:descriptor/a:projectArtifact/p:endDate and (xs:dateTime($referencedArtifact/rest:resource/rest:descriptor/a:projectArtifact/p:endDate/text()) &gt;= xs:dateTime($endDate))) 
+                   		or ($referencedArtifact/rest:resource/rest:descriptor/a:projectArtifact/p:plannedFinishDate and (xs:dateTime($referencedArtifact/rest:resource/rest:descriptor/a:projectArtifact/p:plannedFinishDate/text()) &gt;= xs:dateTime($endDate)))
+                      )
+                     then $reference
+                  else ()
+                    
+    return
+    if (empty($referenceOK)) then val:assertionFailed('Deliverable endDate should be less then Project endDate.')
+    else val:assertionOK()
+else val:assertionOK()
+</XQuery>
+    </pm:Validation>
+</pm:Assertion>

@@ -1,0 +1,9 @@
+<xb:config xmlns:xb="http://xml.apache.org/xmlbeans/2004/02/xbean/config"
+		xmlns:yourNS="yourNamespaceHere">
+
+    <xb:namespace uri="##local">
+        <xb:package>com.systinet.platform.rdbms.design.model.sdmconfig.xml</xb:package>
+		<xb:suffix>Bean</xb:suffix>
+    </xb:namespace>
+
+</xb:config>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/script/5944c4b6-9a1f-4397-930a-f6cc6cb343b5</r:path>
+   <r:collection>/script/</r:collection>
+   <r:binary>true</r:binary>
+   <r:contentType>text/html</r:contentType>
+   <r:owner>admin</r:owner>
+   <r:uuid>5944c4b6-9a1f-4397-930a-f6cc6cb343b5</r:uuid>
+   <r:domainId>defaultDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>1023496002</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2014-10-07T05:01:00.353Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>admin</r:creator>
+      <r:lastDataRevision>1</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:dataSourceDefinitionArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                                         xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                                         xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                                         xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                                         xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                                         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                         deleted="0"
+                                         xlink:href="script/5944c4b6-9a1f-4397-930a-f6cc6cb343b5">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="System"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:system"/>
+               <p:artifactType name="Managed script"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:system:script"/>
+               <p:artifactType name="Data Source Definition"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:platform:artifacts:datasourceArtifact"/>
+            </g:artifactTypeGroup>
+            <g:nameGroup>
+               <p:name>ProposalImplementingProjects.xml</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup/>
+            <p:revision>1</p:revision>
+            <g:keywordGroup/>
+            <p:location>/scripts/ProposalImplementingProjects.xml</p:location>
+            <p:isCached>0</p:isCached>
+            <p:checksum>1023496002</p:checksum>
+            <p:dataLength>958</p:dataLength>
+            <p:contentType>text/html</p:contentType>
+            <p:serverSideCaching>0</p:serverSideCaching>
+            <p:roleBasedCaching>0</p:roleBasedCaching>
+			<p:readSecurityMode name="Full read security"
+                                taxonomyUri="uddi:systinet.com:soa:model:taxonomies:readSecurityMode"
+                                value="fullReadSecurity"/>
+            <p:r_scriptLanguage name="XML" taxonomyUri="uddi:com.systinet.soa:model:taxonomies:scriptLanguage"
+                                value="XML"/>
+            <p:r_scriptExecuteOn name="Data Source Definition"
+                                 taxonomyUri="uddi:com.systinet.soa:model:taxonomies:scriptExecuteOn"
+                                 value="dataSource"/>
+         </a:dataSourceDefinitionArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

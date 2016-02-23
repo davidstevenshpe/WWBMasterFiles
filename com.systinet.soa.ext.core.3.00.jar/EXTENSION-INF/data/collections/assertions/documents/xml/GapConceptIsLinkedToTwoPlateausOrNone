@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><pm:Assertion xmlns:pm="http://systinet.com/2005/10/soa/policy" xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup" xmlns:r="http://systinet.com/2005/05/repository" xmlns:p="http://systinet.com/2005/05/soa/model/property" xmlns:a="http://systinet.com/2005/05/soa/model/artifact" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:pt="http://systinet.com/2005/05/soa/model/property/type" xmlns:rest="http://systinet.com/2005/05/soa/resource" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><pm:Template><p0:GapConceptIsLinkedToTwoPlateausOrNone xmlns:p0="urn:localhost:com:enter-your-organization-or-project-specific-namespace"/></pm:Template><pm:Validation SourceType="xmlns(ns=http://systinet.com/2005/05/soa/model/artifact)qname(ns:gapArtifact)"><JavaScriptValidator xmlns="http://systinet.com/2005/10/soa/policy/validation" xmlns:xlink="http://www.w3.org/1999/xlink/">/**
+ * This function is called iteratively by the java script validator,
+ * There are some java script objects pre-initialized in the scripting context (e.g. repositoryService ...)  
+ * You can find others and configure more in the managed script environment.js
+ *
+ * @param  resource
+ *         an external resource or an artifact
+ *
+ * @param  params
+ *         a map of params
+ */
+function validate(resource, params) {
+    var artifact = resource;
+    repositoryService.fetchArtifactProperties(artifact, new ArtifactPartSelector("associatedWith"));
+    repositoryService.fetchArtifactProperties(artifact, new ArtifactPartSelector("associatedWithIncoming"));
+    var associatedWithRels = artifact.getMultiRelationProperty("associatedWith");
+    var associatedWithRelsIncom = artifact.getMultiRelationProperty("associatedWithIncoming");
+    if (associatedWithRels != null || associatedWithRelsIncom!= null){
+    	var countLinkedPlateaus = 0;
+    	for (var row=0; row&lt;associatedWithRels.size(); row++) {
+    		var targetArtifact = associatedWithRels.get(row).getTargetSdmName();
+    		if (targetArtifact == "plateauArtifact") {
+    			countLinkedPlateaus++;
+    		}
+    	}
+        for (var row=0; row&lt;associatedWithRelsIncom.size(); row++) {
+    		var sourceArtifact = associatedWithRelsIncom.get(row).getSourceSdmName();
+    		if (sourceArtifact == "plateauArtifact") {
+    			countLinkedPlateaus++;
+    		}
+    	}
+    	if (countLinkedPlateaus == 0 || countLinkedPlateaus == 2) {
+    		return new JsValidationResult(JsValidationCode.OK);
+    	}
+    	else {
+    		return new JsValidationResult(JsValidationCode.FAILED, "This gap concept is linked to "+ countLinkedPlateaus +" Plateau(s). It should be linked to only two Plateaus or none.");
+    	}
+    }
+    else {
+    	return new JsValidationResult(JsValidationCode.OK);
+    }
+}
+</JavaScriptValidator></pm:Validation></pm:Assertion>

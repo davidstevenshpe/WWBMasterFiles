@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taxonomy check="false" brief="false" xmlns="http://systinet.com/uddi/taxonomy/v3/5.5">
+  <tModel tModelKey="uddi:systinet.com:transformation:outputmethod" deleted="false" tModelKeyV2="uuid:77b12067-1af9-3c89-b2b7-4b2a429a84fc" xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <name xmlns="urn:uddi-org:api_v3">systinet-com:transformation:outputMethod</name>
+    <description xmlns="urn:uddi-org:api_v3">A category that marks the general method how a transformation produces its output</description>
+    <categoryBag xmlns="urn:uddi-org:api_v3">
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:system" keyName="system tModel" keyValue="yes"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Categorization system" keyValue="categorization"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="tModel"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Unchecked value set" keyValue="unchecked"/>
+    </categoryBag>
+  </tModel>
+  <compatibilityBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <compatibility>tModel</compatibility>
+  </compatibilityBag>
+  <categorizationBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <categorization>categorization</categorization>
+  </categorizationBag>
+</taxonomy>

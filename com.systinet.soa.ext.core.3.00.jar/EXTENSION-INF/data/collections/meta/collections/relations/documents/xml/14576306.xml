@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:relationship xmlns:r="http://systinet.com/2005/05/repository">
+   <r:id>14576306</r:id>
+   <r:type>{http://systinet.com/2005/05/soa/model/property}specializes</r:type>
+   <r:state>open</r:state>
+   <r:deleted>false</r:deleted>
+   <r:obsolete>false</r:obsolete>
+   <r:b1>false</r:b1>
+   <r:createdOn>2015-07-03T00:08:31.043Z</r:createdOn>
+   <r:source>
+      <r:path>/nodeArtifacts/30582a47-e00c-4781-9074-5674f594d5e9</r:path>
+      <r:revision>1</r:revision>
+      <r:revisionTo>0</r:revisionTo>
+   </r:source>
+   <r:target>
+      <r:path>/nodeArtifacts/a8b557d2-a5a1-42b6-bf7d-1404e513771e</r:path>
+      <r:uuid>a8b557d2-a5a1-42b6-bf7d-1404e513771e</r:uuid>
+      <r:revision>1</r:revision>
+      <r:revisionTo>0</r:revisionTo>
+      <r:deleted>false</r:deleted>
+   </r:target>
+</r:relationship>

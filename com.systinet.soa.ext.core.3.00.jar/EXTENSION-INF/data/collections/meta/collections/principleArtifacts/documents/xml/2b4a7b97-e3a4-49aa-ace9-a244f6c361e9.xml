@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/principleArtifacts/2b4a7b97-e3a4-49aa-ace9-a244f6c361e9</r:path>
+   <r:collection>/principleArtifacts/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType></r:contentType>
+   <r:owner>admin</r:owner>
+   <r:uuid>2b4a7b97-e3a4-49aa-ace9-a244f6c361e9</r:uuid>
+   <r:domainId>defaultDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2013-12-09T10:55:31.530Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>admin</r:creator>
+      <r:lastDataRevision>0</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:principleArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                              xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                              xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                              xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                              deleted="0"
+                              xlink:href="principleArtifacts/2b4a7b97-e3a4-49aa-ace9-a244f6c361e9">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="Motivation"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:motivationArtifact"/>
+               <p:artifactType name="Principle"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:principleArtifact"/>
+            </g:artifactTypeGroup>
+            <g:aggregatesGroup>
+               <p:aggregates xlink:href="principleArtifacts/5175305c-1c1a-4a70-86d3-21529d6f6eee"/>
+            </g:aggregatesGroup>
+            <g:nameGroup>
+               <p:name>Requirements-Based Change</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup>
+               <p:description>The changes to applications and underlying technology are made only in response to business needs.</p:description>
+            </g:descriptionGroup>
+            <p:revision>1</p:revision>
+            <g:keywordGroup/>
+            <p:version>1.0</p:version>
+            <g:architectureLayerGroup>
+               <p:architectureLayer name="Technology Layer"
+                                    taxonomyUri="uddi:systinet.com:soa:model:taxonomies:architectureLayer"
+                                    value="technologyLayer"/>
+            </g:architectureLayerGroup>
+            <g:qualityFeatureGroup>
+               <p:qualityFeature name="Effectiveness"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="effectiveness"/>
+               <p:qualityFeature name="Efficiency"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="efficiency"/>
+            </g:qualityFeatureGroup>
+            <p:rationale>Since Information Technology is a functional support organization used to support business activities, the changes in the information environment must be driven by business needs. Forcing business to change actual business functions in response to IT changes is unacceptable. Any change to the information environment (except those caused by error or malfunction) needs to have a relevant business justification. This means: there must be a clear business reason or need that substantiates the change to applications or technology.
+Unintended, unwanted effects of changes on the business operations must be minimized.
+As IT disposes appropriate knowledge of enterprise information environment, it can create proposals of change providing opportunities to improve business processes and their operation. Nevertheless - the final decision (whether to implement the change or not) is up to the actual business, and needs to be made with respect to any benefit from the change.</p:rationale>
+            <p:implications>To prevent undesirable and unwarranted investments to improvement or system development, every change must have an appropriate business justification (such  as a documented business need or a business case).
+Any anticipated change to be implemented into the environment must be examined using the enterprise architecture.
+To ensure an effective response to business needs in form of reasonable changes to applications and technology, the formalized Change Management process needs to be developed, implemented and used. The unified Change Management process must be valid for applications as well as for technology.
+The purpose of this principle is to keep a focus on business needs, not technology needs, and to ensure that business needs are transformed into desirable changes of applications or technology in standard way.</p:implications>
+         </a:principleArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

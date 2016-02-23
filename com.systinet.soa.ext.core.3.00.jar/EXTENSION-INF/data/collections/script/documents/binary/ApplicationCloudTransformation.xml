@@ -1,0 +1,38 @@
+<query maxResults="50">
+    <parameters>
+         <parameter name="domainIDs" label="domainIDs" type="string" defaultValueQuery="select r_localId from hpsoaDomainArtifact"/>
+    </parameters>
+        
+    SELECT
+        f._uuid, f.name,
+        f.businessAlignment,
+        f.technicalAlignment,
+        f.financialAlignment,
+        f.cloudTransformationStrategy.name as transformationStrategy,
+        pfp.annualCostTotal AS totalCost, 
+        pfp.transformationCost,
+        pfp.annualCostHw,
+        pfp.currentHwCostEstimate,
+        pfp.minEstimatedHwCost,
+        pfp._uuid AS financialUuid,
+        
+        (   SELECT count(1) 
+            FROM applicationComponentArtifact apa 
+                JOIN infrastructureServiceArtifact fis ON BIND (apa.uses)
+            WHERE
+                (fis._domainId = 'csaServiceDesignsDomain'
+                ) AND 
+                (apa._uuid = f._uuid  OR EXISTS (SELECT 1 FROM applicationComponentArtifact src_apa JOIN applicationComponentArtifact target_apa ON BIND (src_apa.specializedBy)                            
+                                                 WHERE target_apa._uuid = f._uuid AND src_apa._uuid = apa._uuid)
+                )               
+            
+        ) AS hasServiceDesign
+
+    FROM applicationComponentArtifact f LEFT JOIN appFinancialProfileArtifact pfp ON BIND (f.financialProfile)
+    
+    WHERE (f._currentStage.name IS null OR f._currentStage.name NOT IN ('Cancelled', 'Retired'))
+        AND NOT exists (SELECT 1 FROM applicationComponentArtifact f1 JOIN applicationComponentArtifact f2 ON BIND (f2.composedOf) WHERE f1._uuid=f._uuid)
+        AND pfp.annualCostTotal IS NOT null
+      
+    <orderBy>pfp.annualCostTotal DESC</orderBy>
+</query>

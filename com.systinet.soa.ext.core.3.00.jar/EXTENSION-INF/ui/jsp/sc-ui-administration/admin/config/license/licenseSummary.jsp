@@ -1,0 +1,194 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="syswf" uri="http://systinet.com/jsp/syswf" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
+<%-- Set Locale form globalSession. --%>
+<c:if test="${not empty globalSession['userName']}">
+   <fmt:setLocale value="${globalSession['userDefaultLanguage']}" scope="page"/>
+</c:if>
+
+<fmt:setBundle basename="com.hp.systinet.sc.ui.admin.config.license.LicenseMessages" var="license_Messages"/>
+
+<table class="UI Layout">
+    <tbody>
+        <tr>
+            <td class="UI Middle">
+                <div class="UI PageIdentity">
+                    <h1>
+                        <fmt:message key="licenseSummaryPageIndetity_Label" bundle="${license_Messages}" />
+                    </h1>                   
+                    <fmt:message key="licenseSummaryPageIndetity_Note" bundle="${license_Messages}" />
+                </div>              
+
+                <syswf:block className="UI Block Common">
+                    <div class="Content">
+                        <table class="UI Table Properties">
+                            <col>
+                            <c:if test="${not empty newLicenseKeyResultAdded}">
+                                <tr>
+                                    <td>
+                                        <div class="Title">
+                                            <h3><span>
+                                                <fmt:message key="wizardSummary_licenseKeysAdded_title" bundle="${license_Messages}"/>
+                                            </span></h3>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <c:forEach var="licenseResult" items="${newLicenseKeyResultAdded}">
+                                    <tr>
+                                        <td>
+                                            <c:out value="${licenseResult.licenseKey}"/>
+                                            <c:if test="${not empty licenseResult.resultMessage}">
+                                                <br/>[ <c:out value="${licenseResult.resultMessage}"/> ]
+                                            </c:if>
+                                        </td>
+                                    </tr>
+                                </c:forEach>
+                            </c:if>
+                            <c:if test="${not empty newLicenseKeyResultNotAdded}">
+                                <tr>
+                                    <td>
+                                        <div class="Title">
+                                            <h3><span>
+                                                <fmt:message key="wizardSummary_licenseKeysNotAdded_title" bundle="${license_Messages}"/>
+                                            </span></h3>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <c:forEach var="licenseResult" items="${newLicenseKeyResultNotAdded}">
+                                    <tr>
+                                        <td>
+                                            <c:out value="${licenseResult.licenseKey}"/>
+                                            <c:if test="${not empty licenseResult.resultMessage}">
+                                                <br/>[ <c:out value="${licenseResult.resultMessage}"/> ]
+                                            </c:if>
+                                        </td>
+                                    </tr>
+                                </c:forEach>
+                            </c:if>                                         
+                        </table>
+                    </div>
+                </syswf:block>
+
+                
+                <c:if test="${not empty newLicenseKeyResultAdded and newLicenseInfo.valid}">
+                    <syswf:block className="UI Block Common">                   
+                        
+                        <fmt:message key="wizardSummary_licenseConditions_title"
+                            var="licenseConditionsArea" bundle="${license_Messages}" />
+                        <div class="Title">
+                            <h3><span>
+                                <fmt:message key="wizardSummary_licenseConditions_title" bundle="${license_Messages}" />
+                            </span></h3>
+                        </div>
+                        <div class="fix-content" id="content">
+                            <table class="UI Table Properties">
+                                <col class="LabelCol">
+                                   <col>                            
+                                <tr>
+                                    <td style="width:20%">
+                                        <label class="UI Label Inline"> 
+                                            <fmt:message key="wizardSummary_property_validFor" bundle="${license_Messages}" />
+                                        </label>
+                                    </td>
+                                    <td style="width:80%">
+                                        <c:out value="${newLicenseInfo.expirationInfo}" /> 
+                                        <c:if test="${newRemainingDays != null}">
+                                            <fmt:formatDate value="${newRemainingDays}" var="formatedDate" />
+                                            <fmt:message key="licenseOverview_remainingDays_P1"
+                                                bundle="${license_Messages}">
+                                                <fmt:param value="${formatedDate}" />
+                                            </fmt:message>
+                                        </c:if>
+                                    </td>                                           
+                                </tr>
+                            
+                            </table><hr/>
+                            <table class="UI Table Properties">
+                                <col class="LabelCol">
+                                <col>
+                                
+                                <c:forEach var="capacity" items="${newLicenseInfo.capacityNames}">
+                                    <c:choose>
+                                        <c:when test="${not newLicenseInfo.capacitiesMap[capacity].deprecated and capacityNameForLusUsersManagement != null and capacityNameForLusUsersManagement eq capacity}">
+                                            <tr>
+                                                <td style="width:55%; white-space: nowrap">
+                                                    <label class="UI Label Inline">
+                                                        <c:out value="${newLicenseInfo.capacitiesMap[capacity].label}" />:
+                                                    </label>
+                                                </td>
+                                                <td style="width:15%">
+                                                    <c:out value="${newLicenseInfo.capacitiesMap[capacity].capacityStr}" />
+                                                    <c:if test="${limitsUsed[capacity] != null}">
+                                                        <fmt:message key="licenseOverview_used_P1"
+                                                            bundle="${license_Messages}">
+                                                            <fmt:param value="${limitsUsed[capacity]}" />
+                                                        </fmt:message>
+                                                    </c:if>
+                                                </td>
+                                                <td align="right" style="width:30%">
+                                                    <fmt:message key="licenseOverview_manageLUS_caption" var="manageLUSCaption" bundle="${license_Messages}" />
+                                                    <div class="UI Icon Edit">                                      
+                                                        <syswf:control targetTask="/common/license/browseLicensedUsers" caption="${manageLUSCaption}" mode="anchor" />
+                                                    </div>                                      
+                                                </td>
+                                            </tr>
+                                        </c:when>
+                                        <c:otherwise>
+                                            <c:if test="${not newLicenseInfo.capacitiesMap[capacity].deprecated }">
+                                                <tr>
+                                                    <td style="width:55%; white-space: nowrap">
+                                                        <label class="UI Label Inline">
+                                                            <c:out value="${newLicenseInfo.capacitiesMap[capacity].label}" />:
+                                                        </label>
+                                                    </td>
+                                                    <td style="width:15%">
+                                                        <c:out value="${newLicenseInfo.capacitiesMap[capacity].capacityStr}" />
+                                                        <c:if test="${limitsUsed[capacity] != null}">
+                                                            <fmt:message key="licenseOverview_used_P1"
+                                                                bundle="${license_Messages}">
+                                                                <fmt:param value="${limitsUsed[capacity]}" />
+                                                            </fmt:message>
+                                                        </c:if>
+                                                    </td>
+                                                    <td style="width:30%"></td>
+                                                </tr>
+                                            </c:if> 
+                                        </c:otherwise>
+                                    </c:choose>
+                                </c:forEach>
+                            
+                            </table><hr/>
+                            <!-- 
+                            <table class="UI Table Properties">
+                                <col class="LabelCol">
+                                <col>
+                                    <tr>
+                                        <td style="width:20%">
+                                            <label class="UI Label Inline">
+                                                <fmt:message key="wizardSummary_productFeatures_title" bundle="${license_Messages}" />
+                                            </label>
+                                        </td>
+                                        <td style="width:80%">                        
+                                            <c:forEach var="feature" items="${newLicenseInfo.featureNames}">
+                                                <c:if test="${not newLicenseInfo.featuresMap[feature].deprecated}">
+                                                    <c:choose>
+                                                        <c:when test="${newLicenseInfo.featuresMap[feature].enabled}">
+                                                            <span class="UI Icon Feature Yes"><c:out value="${newLicenseInfo.featuresMap[feature].label}" /></span>
+                                                        </c:when>
+                                                        <c:otherwise>
+                                                            <span class="UI Icon Feature No"><c:out value="${newLicenseInfo.featuresMap[feature].label}" /></span>
+                                                        </c:otherwise>
+                                                    </c:choose>
+                                                </c:if>
+                                            </c:forEach>
+                                        </td>
+                                    </tr>                                           
+                            </table> -->                                    
+                        </div>                  
+                    </syswf:block>
+                </c:if>
+            </td>
+        </tr>
+    </tbody>
+</table>

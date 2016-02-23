@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/assertions/ComposedOfConsistency</r:path>
+   <r:collection>/assertions/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType>text/xml; charset=utf-8</r:contentType>
+   <r:owner>systinet:admin</r:owner>
+   <r:uuid>f2155b57-5361-4389-bcd6-056bb604cb59</r:uuid>
+   <r:domainId>topLevelDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2013-12-03T06:33:44.934Z</r:timestamp>
+      <r:creator>systinet:admin</r:creator>
+      <r:lastDataRevision>1</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:assertionArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                              xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                              xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                              xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                              xlink:href="assertions/ComposedOfConsistency"
+                              xml:base="http://localhost:8080/soa/systinet/platform/restBasic/repository/">
+            <g:nameGroup>
+                <p:name>Composed Of Consistency</p:name>
+            </g:nameGroup>
+            
+            <g:descriptionGroup>
+              <p:description>There can't be two artifacts that would both link the same artifact using the composedOf relationship.</p:description>
+            </g:descriptionGroup>
+                        
+            <p:assertionQName xsi:type="p:assertionQName">{http://systinet.com/assertions}ComposedOfConsistency</p:assertionQName>
+            
+            <g:applicableSourceMimetypeGroup>
+				<p:applicableSourceMimetype>*/*</p:applicableSourceMimetype>
+			</g:applicableSourceMimetypeGroup>
+			            
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="Content" 
+               				   taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:content"/>
+               <p:artifactType name="Policy"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:soa:policy"/>
+               <p:artifactType name="Assertion"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:soa:policy:assertion"/>
+            </g:artifactTypeGroup>
+            <p:isCached>false</p:isCached>
+         </a:assertionArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

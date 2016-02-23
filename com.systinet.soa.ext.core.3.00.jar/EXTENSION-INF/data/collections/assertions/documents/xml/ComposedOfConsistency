@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><pm:Assertion xmlns:pm="http://systinet.com/2005/10/soa/policy" xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup" xmlns:r="http://systinet.com/2005/05/repository" xmlns:p="http://systinet.com/2005/05/soa/model/property" xmlns:a="http://systinet.com/2005/05/soa/model/artifact" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:pt="http://systinet.com/2005/05/soa/model/property/type" xmlns:rest="http://systinet.com/2005/05/soa/resource" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><pm:Template><p0:ComposedOfConsistency xmlns:p0="http://systinet.com/assertions"/></pm:Template><pm:Validation><JavaScriptValidator xmlns="http://systinet.com/2005/10/soa/policy/validation" xmlns:xlink="http://www.w3.org/1999/xlink/">/**
+ * This function is called iteratively by the java script validator,
+ * There are some java script objects pre-initialized in the scripting context (e.g. repositoryService ...)  
+ * You can find others and configure more in the managed script environment.js
+ *
+ * @param  resource
+ *         an external resource or an artifact
+ *
+ * @param  params
+ *         a map of params
+ */
+function validate(resource, params) {
+	var artifact = resource;
+	if (!artifact.isPropertyInitialized("composedOf")) {
+		repositoryService.fetchArtifactProperties(artifact, new ArtifactPartSelector("composedOf"));
+	}	
+	var listRelations = new Array();
+	try {
+		listRelations = artifact.getMultiRelationProperty("composedOf");
+	}
+	catch (exeption) {
+		return new JsValidationResult(JsValidationCode.OK);
+	}
+	var isInvalid = false;
+	for (var row = 0; row &lt; listRelations.size(); row++) {
+		var tarArt = repositoryService.getArtifact(UUID.toUuid(java.lang.String.valueOf(listRelations.get(row).getTargetId())), new ArtifactPartSelector("composes"));
+		var listComposeRelationshipOfRelatedArtifact = tarArt.getMultiRelationProperty("composes");
+		if(listComposeRelationshipOfRelatedArtifact != null &amp;&amp; listComposeRelationshipOfRelatedArtifact.size() &gt; 1) {
+            isInvalid = true;
+            break;
+        }
+	}
+	if (!isInvalid) {
+		return new JsValidationResult(JsValidationCode.OK);
+	}
+    else {
+    	return new JsValidationResult(JsValidationCode.FAILED, "This artifact is Composed Of an artifact which is composing other artifact!");
+    }
+}
+</JavaScriptValidator></pm:Validation></pm:Assertion>

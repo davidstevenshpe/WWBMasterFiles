@@ -1,0 +1,38 @@
+<closure maxDepth="3" maxResults="4000" maxProcessingTime="10000" seedsAsResults="true">
+    <parameters>
+      <parameter name="plateauArtifactUuid" label="plateauArtifactUuid" type="uuid" artifactLocalName="plateauArtifact">
+          <description>Plateu artifact uuid</description>
+      </parameter>
+    </parameters>
+   
+    <defaultSeedQuery>
+      select f._uuid from businessFunctionArtifact f where not exists 
+        (select 1 from businessFunctionArtifact f1 join businessFunctionArtifact f2 
+               using f2.composedOf where f1._uuid=f._uuid)
+    </defaultSeedQuery>
+    <orderBy>investmentPriority asc, name asc</orderBy>
+    <resultArtifacts>
+        <artifact sdmName="businessFunctionArtifact">
+           <field name="businessFunctionType" property="businessFunctionType.name"/>
+           <field name="businessFunctionStatus" property="businessFunctionStatus.name"/>
+           <field name="investmentPriority" property="investmentPriority.name"/>
+           <field name="plannedCost" query="select sum(fp.plannedCost) as bfPlannedCost from businessFunctionArtifact f left join projectArtifact p using p.realizes left join projectFinancialProfileArtifact fp using p.financialProfile where f._uuid=:uuid"/>
+           <field name="actualCost" query="select sum(fp.actualCost) as bfActualCost from businessFunctionArtifact f left join projectArtifact p using p.realizes left join projectFinancialProfileArtifact fp using p.financialProfile where f._uuid=:uuid"/>
+           <field name="tobeArchitectureStage" query="select f.aggregatedBy.useType from businessFunctionArtifact f left join plateauArtifact tobe using f.aggregatedBy where f._uuid=:uuid and tobe._uuid=:plateauArtifactUuid"/>
+           <!-- Query category bag
+           <field name="category">
+                <query>
+                    select c.val as category from businessFunctionArtifact f, f._category c where f._uuid=:uuid and c.taxonomyURI='uddi:systinet.com:soa:model:taxonomies:businessFunctionType'
+                </query>
+           </field>-->
+        </artifact>
+    </resultArtifacts>
+
+    <traversableArtifacts>
+        <artifact sdmName="businessFunctionArtifact"/>
+    </traversableArtifacts>
+
+    <traversableRelations>
+        <relation sdmName="composedOf"/>
+    </traversableRelations>
+</closure>

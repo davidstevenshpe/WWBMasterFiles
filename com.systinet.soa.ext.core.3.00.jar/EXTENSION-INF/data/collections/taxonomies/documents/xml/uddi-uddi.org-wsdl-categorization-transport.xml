@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taxonomy check="true" brief="false" xmlns="http://systinet.com/uddi/taxonomy/v3/5.5">
+  <tModel tModelKey="uddi:uddi.org:wsdl:categorization:transport" deleted="false" tModelKeyV2="uuid:e5c43936-86e4-37bf-8196-1d04b35c0099" xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <name xmlns="urn:uddi-org:api_v3">uddi-org:wsdl:categorization:transport</name>
+    <description xml:lang="en" xmlns="urn:uddi-org:api_v3">Category system used to describe the transport supported by a wsdl:binding.</description>
+    <overviewDoc xmlns="urn:uddi-org:api_v3">
+      <overviewURL>http://www.oasis-open.org/committees/uddi-spec/doc/tn/uddi-spec-tc-tn-wsdl-v2.htm#transport</overviewURL>
+    </overviewDoc>
+    <categoryBag xmlns="urn:uddi-org:api_v3">
+      <keyedReference tModelKey="uddi:uddi.org:categorization:entitykeyvalues" keyName="entityKeyValues" keyValue="tModelKey"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Categorization system" keyValue="categorization"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="tModel"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Checked value set" keyValue="checked"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:validatedby" keyName="" keyValue="uddi:8d923870-c380-11d8-b05c-7c163510b05c"/>
+    </categoryBag>
+  </tModel>
+  <compatibilityBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <compatibility>tModel</compatibility>
+  </compatibilityBag>
+  <categorizationBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <categorization>categorization</categorization>
+  </categorizationBag>
+  <validation xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <bindingTemplate bindingKey="uddi:8d93e620-c380-11d8-b05c-7c163510b05c" serviceKey="uddi:8d914e10-c380-11d8-b05c-7c163510b05c" xmlns="urn:uddi-org:api_v3">
+      <accessPoint useType="endPoint">class:com.systinet.uddi.wsdl2uddi.v2.validation.TransportCategorizationValidator</accessPoint>
+      <tModelInstanceDetails>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:v2_validateValues"/>
+        <tModelInstanceInfo tModelKey="uddi:uddi.org:wsdl:categorization:transport"/>
+      </tModelInstanceDetails>
+    </bindingTemplate>
+    <bindingTemplate bindingKey="uddi:8d923870-c380-11d8-b05c-7c163510b05c" serviceKey="uddi:8d914e10-c380-11d8-b05c-7c163510b05c" xmlns="urn:uddi-org:api_v3">
+      <accessPoint useType="endPoint">class:com.systinet.uddi.wsdl2uddi.v3.validation.TransportCategorizationValidator</accessPoint>
+      <tModelInstanceDetails>
+        <tModelInstanceInfo tModelKey="uddi:uddi.org:v3_valueSetValidation"/>
+        <tModelInstanceInfo tModelKey="uddi:uddi.org:wsdl:categorization:transport"/>
+      </tModelInstanceDetails>
+    </bindingTemplate>
+  </validation>
+</taxonomy>

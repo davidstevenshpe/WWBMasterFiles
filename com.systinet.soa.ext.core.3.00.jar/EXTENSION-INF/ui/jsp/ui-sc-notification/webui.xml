@@ -1,0 +1,60 @@
+<config name="ui-sc-notification" savingPeriod="5000">
+    <webFramework>
+
+        <component name="/pushnotification/notificationAdvancedOptionsEditor"
+                   className="com.hp.systinet.pushnotification.ui.NotificationAdvancedOptionsEditor"
+                   page="/pushnotification/notificationAdvancedOptionsEditor.jsp"/>
+        <component name="/pushnotification/notificationMessageEditor"
+                   className="com.hp.systinet.pushnotification.ui.NotificationMessageEditor"
+                   page="/pushnotification/notificationMessageEditor.jsp"/>
+        <component name="/pushnotification/notificationRecipientsSelector"
+                   className="com.hp.systinet.pushnotification.ui.NotificationRecipientsSelector"
+                   page="/pushnotification/notificationRecipientsSelector.jsp"/>
+        <component name="/pushnotification/notificationAdditionalRecipients"
+                   className="com.hp.systinet.pushnotification.ui.NotificationAdditionalRecipients"
+                   page="/pushnotification/notificationAdditionalRecipients.jsp"/>
+        <component name="/pushnotification/notificationRecipientsDetails"
+                   page="/pushnotification/notificationRecipientsDetails.jsp"/>
+        <component name="/pushnotification/notificationRecipientsList"
+                   page="/pushnotification/notificationRecipientsList.jsp"/>
+        <component name="/pushnotification/notificationRecipientsSelectorByRole"
+                   className="com.hp.systinet.pushnotification.ui.NotificationRecipientsSelectorByRole"
+                   page="/pushnotification/notificationRecipientsSelectorByRole.jsp"/>
+
+        <component name="/pushnotification/notificationEditor"
+                   className="com.hp.systinet.pushnotification.ui.NotificationEditor"
+                   page="/pushnotification/notificationEditor.jsp"/>
+        <task component="/pushnotification/notificationEditor" context=".."
+              uri="/common/pushnotification/notificationEditor">
+            <parameter paramName="captionKey"
+                       paramValue="com.hp.systinet.pushnotification.ui.notificationMessages$notificationEditor.caption"/>
+        </task>
+
+        <component name="/pushnotification/notificationEditorPanel"
+                   page="/pushnotification/notificationEditorPanel.jsp"/>
+
+        <component name="/pushnotification/notificationPreview"
+                   className="com.hp.systinet.pushnotification.ui.NotificationPreview"
+                   page="/pushnotification/notificationPreview.jsp"/>
+        <task component="/pushnotification/notificationPreview" uri="/common/pushnotification/notificationPreview">
+            <parameter paramName="captionKey"
+                       paramValue="com.hp.systinet.pushnotification.ui.notificationMessages$notificationPreview.caption"/>
+        </task>
+
+        <component name="/pushnotification/notificationPreviewPanel"
+                   className="com.hp.systinet.pushnotification.ui.NotificationPreviewPanel"
+                   page="/pushnotification/notificationPreviewPanel.jsp"/>
+
+        <component name="/pushnotification/renderer/recipientLinkRenderer"
+                   page="/pushnotification/renderer/recipientLinkRenderer.jsp"/>
+
+        <component name="/pushnotification/action/removeRecipientsAction"
+                   className="com.hp.systinet.pushnotification.ui.action.RemoveRecipients"
+                   page="/pushnotification/action/removeRecipientsAction.jsp"/>
+
+        <component name="/pushnotification/action/addRecipientsAction"
+                   className="com.hp.systinet.pushnotification.ui.action.AddRecipients"
+                   page="/pushnotification/action/addRecipientsAction.jsp"/>
+
+    </webFramework>
+</config>

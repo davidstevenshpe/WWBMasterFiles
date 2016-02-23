@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pm:Assertion xmlns:pm="http://systinet.com/2005/10/soa/policy" xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup" xmlns:r="http://systinet.com/2005/05/repository" xmlns:p="http://systinet.com/2005/05/soa/model/property" xmlns:a="http://systinet.com/2005/05/soa/model/artifact" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:pt="http://systinet.com/2005/05/soa/model/property/type" xmlns:rest="http://systinet.com/2005/05/soa/resource" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<pm:Template><p0:NodeShouldBeLinkedToApplicationComponent xmlns:p0="urn:localhost:com:enter-your-organization-or-project-specific-namespace"/></pm:Template><pm:Parameter xmlns:p1="http://www.w3.org/2001/XMLSchema" Name="artifactType" Optional="false" Type="p1:string" XPointer="xpointer(@artifactType)"><pm:Description>Comma-separated list of artifact SDM names that restricts applicability of this assertion.</pm:Description></pm:Parameter><pm:Validation><JavaScriptValidator xmlns="http://systinet.com/2005/10/soa/policy/validation" xmlns:xlink="http://www.w3.org/1999/xlink/">/**
+ * This function is called iteratively by the java script validator,
+ * There are some java script objects pre-initialized in the scripting context (e.g. repositoryService ...)  
+ * You can find others and configure more in the managed script environment.js
+ *
+ * @param  resource
+ *         an external resource or an artifact
+ *
+ * @param  params
+ *         a map of params
+ */
+function validate(resource, params) {
+    var artifact = resource;
+    var closureComputation = closureApiFactory.getDefinition("/scripts/ServersRelatedToApplicationComponent.xml");
+    var artifactTypes = params.get("artifactType");
+    repositoryService.fetchArtifactProperties(artifact, ArtifactPartSelector.ALL_PROPERTIES);
+    var isApplicable = false;
+	if (artifactTypes != null) {
+	var artifactTypesList = artifactTypes.split(",");
+		for (var row=0; row&lt;artifactTypesList.length; row++) {
+			if (artifact.get_artifactSdmName() == artifactTypesList[row]) {
+				isApplicable=true;
+				break;
+			}
+		}
+	}
+    if (!isApplicable) {
+    	return new JsValidationResult(JsValidationCode.NOT_APPLICABLE);
+    }
+    else {
+    try {
+		var hasLinks = closureComputation.pathToTypeExists(artifact.get_uuid().toString(), "applicationComponentArtifact");
+		if (hasLinks) {
+			return new JsValidationResult(JsValidationCode.OK);
+		}
+		else {
+			return new JsValidationResult(JsValidationCode.FAILED, "This " + artifact.get_artifactSdmName() + " is not utilized by any application component");
+		}
+	} catch(error) {
+		return new JsValidationResult(JsValidationCode.IMPLEMENTATION_ERROR);
+	}
+	}
+}
+</JavaScriptValidator></pm:Validation></pm:Assertion>

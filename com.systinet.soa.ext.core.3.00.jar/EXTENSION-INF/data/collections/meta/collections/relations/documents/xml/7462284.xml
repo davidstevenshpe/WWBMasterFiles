@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:relationship xmlns:r="http://systinet.com/2005/05/repository">
+   <r:id>7462284</r:id>
+   <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+   <r:state>open</r:state>
+   <r:deleted>false</r:deleted>
+   <r:obsolete>false</r:obsolete>
+   <r:createdOn>2014-05-12T08:53:26.456Z</r:createdOn>
+   <r:source>
+      <r:path>/hpsoaTechnicalPolicies/5c07d49c-318f-4a13-994d-94784755a331</r:path>
+      <r:revision>1</r:revision>
+      <r:revisionTo>0</r:revisionTo>
+   </r:source>
+   <r:target>
+      <r:path>/assertions/SingleDelShouldNotBeDeliveredBy2DiffProjects</r:path>
+      <r:uuid>2d61375a-5ea5-4b7b-b40b-b8c15c78f6ff</r:uuid>
+      <r:revision>1</r:revision>
+      <r:revisionTo>0</r:revisionTo>
+      <r:deleted>false</r:deleted>
+   </r:target>
+</r:relationship>

@@ -1,0 +1,19 @@
+<closure maxDepth="5" maxResults="10000" maxProcessingTime="30000" debug="false" seedsAsResults="false">
+    <defaultSeedQuery>  select f._uuid from businessProcessArtifact f where not exists 
+        (select 1 from businessProcessArtifact f1 join businessProcessArtifact f2 
+               using f2.composedOf where f1._uuid=f._uuid)</defaultSeedQuery>
+    <traversableRelations>
+        <!-- Path from serverArtifact -->
+        <relation sdmName="composedOf" sourceArtifact="businessProcessArtifact" targetArtifact="businessProcessArtifact"/>
+	<relation sdmName="uses" sourceArtifact="businessProcessArtifact" targetArtifact="businessServiceArtifact"/>
+	<relation sdmName="uses" sourceArtifact="businessProcessArtifact" targetArtifact="applicationServiceArtifact"/>
+        <relation sdmName="uses" sourceArtifact="businessProcessArtifact" targetArtifact="applicationComponentArtifact"/>
+    </traversableRelations>
+	<orderBy>name desc</orderBy>
+    <resultArtifacts>
+      <artifact sdmName="businessProcessArtifact"/>
+      <artifact sdmName="businessServiceArtifact"/>
+      <artifact sdmName="applicationServiceArtifact"/>
+      <artifact sdmName="applicationComponentArtifact"/>
+    </resultArtifacts>
+</closure>

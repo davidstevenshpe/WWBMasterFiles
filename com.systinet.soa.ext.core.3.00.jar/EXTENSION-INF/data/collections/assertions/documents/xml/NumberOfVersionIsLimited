@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pm:Assertion xmlns:pm="http://systinet.com/2005/10/soa/policy">
+    <pm:Template>
+        <p0:NumberOfVersionIsLimited numberOfVersion="1" xmlns:p0="http://systinet.com/assertions" xmlns:pm="http://systinet.com/2005/10/soa/policy"/>
+    </pm:Template>
+    <pm:Parameter Name="numberOfVersion" Optional="false" Type="p1:integer" XPointer="xpointer(@numberOfVersion)" xmlns:p1="http://www.w3.org/2001/XMLSchema">
+        <pm:Description>Maxinum number of version</pm:Description>
+    </pm:Parameter>
+    <pm:Validation>
+        <JavaScriptValidator xmlns="http://systinet.com/2005/10/soa/policy/validation" xmlns:pm="http://systinet.com/2005/10/soa/policy" xmlns:xlink="http://www.w3.org/1999/xlink/">/**
+ * This function is called iteratively by the java script validator,
+ * There are some java script objects pre-initialized in the scripting context (e.g. repositoryService ...)  
+ * You can find others and configure more in the managed script environment.js
+ *
+ * @param  resource
+ *         an external resource or an artifact
+ *
+ * @param  params
+ *         a map of params
+ */
+function validate(resource, params) {
+    var artifact = resource;
+    repositoryService.fetchArtifactProperties(artifact, ArtifactPartSelector.ALL_PROPERTIES)
+    var countArtifact = 0;
+    var limitedNumberOfVersion = params.get("numberOfVersion");
+ 
+    var versioningUIApi = beanFactoryHelper.getBean(Packages.com.hp.systinet.sc.ui.impl.versioning.VersioningUIApi);
+    var verMatrix = null;
+    try {
+    	verMatrix = versioningUIApi.getMatrix(artifact);
+    }
+    catch (exeption){
+	   return new JsValidationResult(JsValidationCode.FAILED, "Artifact does not have version property");
+    }
+    var result = new Array();
+    for (var row=0; row&lt;verMatrix.length; row++){
+    	for (var col=0; col&lt;verMatrix[0].length; col++){
+    		var version = verMatrix[row][col].getVersion();
+    		if (version != null &amp;&amp; "" != version){
+    			result.push(verMatrix[row][col].getArtifactBase().get_uuid());
+    		}
+    	}
+    }
+    for (var row=0; row&lt;result.length; row++){
+    	var artifactUuid = result[row];
+    	var art = repositoryService.getArtifact(UUID.toUuid(java.lang.String.valueOf(artifactUuid)));
+    	var aldFactory = beanFactoryHelper.getBean(Packages.com.hp.systinet.lifecycle.ui.common.ArtifactLifecycleDataFactory);
+    	var lfeData = aldFactory.create(art.get_uuid());
+    	var process = lfeData.getGovernanceProcess();
+    	var goalState = null;
+    	if (process != null){
+    		goalState= lfeData.getGovernanceProcess().getProcessDefaultState();
+    	}
+    	var targetStageName = null;
+    	if (goalState!= null){
+    		targetStageName = goalState.getState().getName()
+    	}
+    	var govRec = lfeData.getGovernanceRecord();
+    	var lastApprovedStageName = null;
+    	if (govRec != null &amp;&amp; govRec.getLastApprovedState()!= null){
+    		lastApprovedStageName = govRec.getLastApprovedState().getName()
+    	}
+    	if (targetStageName != null &amp;&amp; lastApprovedStageName != null &amp;&amp; lastApprovedStageName == targetStageName){
+    		countArtifact++;
+    	}
+   }
+   if (countArtifact &lt;= limitedNumberOfVersion){
+      return new JsValidationResult(JsValidationCode.OK);
+   } else {
+	   return new JsValidationResult(JsValidationCode.FAILED, "There are too many versions of same thing");
+   }
+    
+}
+</JavaScriptValidator>
+    </pm:Validation>
+</pm:Assertion>

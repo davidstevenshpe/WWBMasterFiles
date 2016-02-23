@@ -1,0 +1,2266 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:eamanager="http://hp.com/eamanager/views"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="100%"
+   height="100%"
+   viewBox="0 0 818.45476 862.60224"
+   id="svg5815"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="introductoryViewpoint.svg">
+  <eamanager:annotations>{
+  artifactCount:[
+    {
+        id:'tspan6555',
+        localName:'businessRoleArtifact'
+    },
+    {
+        id:'tspan6309',
+        localName:'businessEventArtifact'
+    },
+    {
+        id:'tspan6111',
+        localName:'businessProcessArtifact'
+    },
+    {
+        id:'tspan8558',
+        localName:'networkArtifact'
+    },
+    {
+        id:'tspan8072',
+        localName:'serverArtifact'
+    },
+    {
+        id:'tspan7633',
+        localName:'dataObjectArtifact'
+    },
+    {
+        id:'tspan7243',
+        localName:'applicationComponentArtifact'
+    },
+    {
+        id:'tspan6901',
+        localName:'applicationServiceArtifact'
+    },
+    {
+        id:'tspan5961',
+        localName:'businessObjectArtifact'
+    },
+    {
+        id:'tspan5862',
+        localName:'businessServiceArtifact'
+    }
+  ],
+  contentAreas:[
+    {
+        id:'content-flowRoot6541',
+        localName:'businessRoleArtifact'
+    },
+    {
+        id:'content-flowRoot6295',
+        localName:'businessEventArtifact'
+    },
+    {
+        id:'content-flowRoot6097',
+        localName:'businessProcessArtifact'
+    },
+    {
+        id:'content-flowRoot8544',
+        localName:'networkArtifact'
+    },
+    {
+        id:'content-flowRoot8058',
+        localName:'serverArtifact'
+    },
+    {
+        id:'content-flowRoot7619',
+        localName:'dataObjectArtifact'
+    },
+    {
+        id:'content-flowRoot7229',
+        localName:'applicationComponentArtifact'
+    },
+    {
+        id:'content-flowRoot6887',
+        localName:'applicationServiceArtifact'
+    },
+    {
+        id:'content-flowRoot5947',
+        localName:'businessObjectArtifact'
+    },
+    {
+        id:'content-flowRoot5848',
+        localName:'businessServiceArtifact'
+    }
+  ],
+  connectors:[
+    {
+        id:'path15247',
+        sourceLocalName:'networkArtifact',
+        sourceId:'g8536',
+        targetLocalName:'serverArtifact',
+        targetId:'g8050',
+        label:''
+    },
+    {
+        id:'path15249',
+        sourceLocalName:'applicationComponentArtifact',
+        sourceId:'g7221',
+        targetLocalName:'dataObjectArtifact',
+        targetId:'g7611',
+        label:''
+    },
+    {
+        id:'path15251',
+        sourceLocalName:'businessProcessArtifact',
+        sourceId:'g6089',
+        targetLocalName:'applicationServiceArtifact',
+        targetId:'g6879',
+        label:''
+    },
+    {
+        id:'path15253',
+        sourceLocalName:'businessProcessArtifact',
+        sourceId:'g6089',
+        targetLocalName:'businessObjectArtifact',
+        targetId:'g5939',
+        label:''
+    },
+    {
+        id:'path15255',
+        sourceLocalName:'applicationComponentArtifact',
+        sourceId:'g7221',
+        targetLocalName:'applicationServiceArtifact',
+        targetId:'g6879',
+        label:''
+    },
+    {
+        id:'path16767',
+        sourceLocalName:'businessProcessArtifact',
+        sourceId:'g6089',
+        targetLocalName:'businessProcessArtifact',
+        targetId:'g6089',
+        label:''
+    },
+    {
+        id:'path16769',
+        sourceLocalName:'businessEventArtifact',
+        sourceId:'g6287',
+        targetLocalName:'businessProcessArtifact',
+        targetId:'g6089',
+        label:''
+    },
+    {
+        id:'path17143',
+        sourceLocalName:'businessProcessArtifact',
+        sourceId:'g6089',
+        targetLocalName:'businessServiceArtifact',
+        targetId:'g5840',
+        label:''
+    },
+    {
+        id:'path17517',
+        sourceLocalName:'businessServiceArtifact',
+        sourceId:'g5840',
+        targetLocalName:'businessRoleArtifact',
+        targetId:'g6533',
+        label:''
+    },
+    {
+        id:'path17519',
+        sourceLocalName:'serverArtifact',
+        sourceId:'g8050',
+        targetLocalName:'applicationComponentArtifact',
+        targetId:'g7221',
+        label:''
+    }
+  ],
+  boxes:[
+    {
+        localName:'businessRoleArtifact',
+        id:'g6533',
+        label:''
+    },
+    {
+        localName:'businessEventArtifact',
+        id:'g6287',
+        label:''
+    },
+    {
+        localName:'businessProcessArtifact',
+        id:'g6089',
+        label:''
+    },
+    {
+        localName:'networkArtifact',
+        id:'g8536',
+        label:''
+    },
+    {
+        localName:'serverArtifact',
+        id:'g8050',
+        label:''
+    },
+    {
+        localName:'dataObjectArtifact',
+        id:'g7611',
+        label:''
+    },
+    {
+        localName:'applicationComponentArtifact',
+        id:'g7221',
+        label:''
+    },
+    {
+        localName:'applicationServiceArtifact',
+        id:'g6879',
+        label:''
+    },
+    {
+        localName:'businessObjectArtifact',
+        id:'g5939',
+        label:''
+    },
+    {
+        localName:'businessServiceArtifact',
+        id:'g5840',
+        label:''
+    }
+  ],
+  titles:[
+    {
+        localName:'businessRoleArtifact',
+        id:'tspan6539',
+        label:'Business Roles'
+    },
+    {
+        localName:'businessEventArtifact',
+        id:'tspan6293',
+        label:'Business Events'
+    },
+    {
+        localName:'businessProcessArtifact',
+        id:'tspan6095',
+        label:'Business Processes'
+    },
+    {
+        localName:'networkArtifact',
+        id:'tspan8542',
+        label:'Networks'
+    },
+    {
+        localName:'serverArtifact',
+        id:'tspan8056',
+        label:'Servers'
+    },
+    {
+        localName:'dataObjectArtifact',
+        id:'tspan7617',
+        label:'Data Object'
+    },
+    {
+        localName:'applicationComponentArtifact',
+        id:'tspan7227',
+        label:'Application Component'
+    },
+    {
+        localName:'applicationServiceArtifact',
+        id:'tspan6885',
+        label:'Application Service'
+    },
+    {
+        localName:'businessObjectArtifact',
+        id:'tspan5945',
+        label:'Business Object'
+    },
+    {
+        localName:'businessServiceArtifact',
+        id:'tspan5846',
+        label:'Business Services'
+    }
+  ]
+}
+</eamanager:annotations>
+   <style>@media print{g{
+		filter: none !important;
+	}}</style>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.95062647"
+     inkscape:cx="407.72737"
+     inkscape:cy="389.22361"
+     inkscape:document-units="px"
+     inkscape:current-layer="g8536"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1138"
+     inkscape:window-x="1672"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     fit-margin-top="10"
+     fit-margin-left="5"
+     fit-margin-right="8"
+     fit-margin-bottom="10" />
+  <defs
+     id="defs5817">
+    <linearGradient
+       id="linearGradient17535">
+      <stop
+         style="stop-color:#0066cc;stop-opacity:0.11764706;"
+         offset="0"
+         id="stop17537" />
+      <stop
+         style="stop-color:#006633;stop-opacity:0"
+         offset="1"
+         id="stop17539" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient17529">
+      <stop
+         style="stop-color:#ff9933;stop-opacity:0.11764706;"
+         offset="0"
+         id="stop17531" />
+      <stop
+         style="stop-color:#006633;stop-opacity:0"
+         offset="1"
+         id="stop17533" />
+    </linearGradient>
+    <marker
+       inkscape:stockid="DotM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="DotM"
+       style="overflow:visible">
+      <path
+         id="path15833"
+         d="m -2.5,-1 c 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.4,0,0,0.4,2.96,0.4)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Lend"
+       style="overflow:visible">
+      <path
+         id="path15790"
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lend"
+       style="overflow:visible">
+      <path
+         id="path15772"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <filter
+       inkscape:label="Drop Shadow"
+       id="artifactBoxShadow"
+       color-interpolation-filters="sRGB">
+      <feFlood
+         result="flood"
+         flood-color="rgb(0,0,0)"
+         flood-opacity="0.2"
+         id="feFlood4461" />
+      <feComposite
+         result="composite1"
+         operator="in"
+         in="flood"
+         in2="SourceGraphic"
+         id="feComposite4463" />
+      <feGaussianBlur
+         in="SourceAlpha"
+         result="blur"
+         stdDeviation="2"
+         id="feGaussianBlur4465" />
+      <feOffset
+         result="offset"
+         dy="2"
+         dx="2"
+         id="feOffset4467" />
+      <feComposite
+         result="composite2"
+         operator="over"
+         in="SourceGraphic"
+         in2="offset"
+         id="feComposite4469" />
+    </filter>
+    <linearGradient
+       id="linearGradientColor1"
+       inkscape:collect="always">
+      <stop
+         id="stop6419"
+         offset="0"
+         style="stop-color:#006633;stop-opacity:0.07843138" />
+      <stop
+         id="stop6421"
+         offset="1"
+         style="stop-color:#006633;stop-opacity:0" />
+    </linearGradient>
+    <linearGradient
+       y2="32.875473"
+       x2="209.51752"
+       y1="186.35341"
+       x1="209.51752"
+       gradientTransform="matrix(2.0570881,0,0,1.2172514,-40.699331,-77.321731)"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#linearGradientColor1"
+       id="layerGradient1"
+       inkscape:collect="always" />
+    <filter
+       id="filter14580"
+       inkscape:label="Drop Shadow"
+       color-interpolation-filters="sRGB">
+      <feFlood
+         id="feFlood14582"
+         flood-opacity="0.2"
+         flood-color="rgb(0,0,0)"
+         result="flood" />
+      <feComposite
+         id="feComposite14584"
+         in2="SourceGraphic"
+         in="flood"
+         operator="in"
+         result="composite1" />
+      <feGaussianBlur
+         in="SourceAlpha"
+         id="feGaussianBlur14586"
+         stdDeviation="2"
+         result="blur" />
+      <feOffset
+         id="feOffset14588"
+         dx="2"
+         dy="2"
+         result="offset" />
+      <feComposite
+         id="feComposite14590"
+         in2="offset"
+         in="SourceGraphic"
+         operator="over"
+         result="composite2" />
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient14598"
+       xlink:href="#linearGradientColor1"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.0570881,0,0,1.2172514,-40.699331,-79.321731)"
+       x1="209.51752"
+       y1="186.35341"
+       x2="209.51752"
+       y2="32.875473" />
+    <filter
+       inkscape:label="Drop Shadow"
+       id="filter13947"
+       color-interpolation-filters="sRGB">
+      <feFlood
+         result="flood"
+         flood-color="rgb(0,0,0)"
+         flood-opacity="0.2"
+         id="feFlood13949" />
+      <feComposite
+         result="composite1"
+         operator="in"
+         in="flood"
+         in2="SourceGraphic"
+         id="feComposite13951" />
+      <feGaussianBlur
+         in="SourceAlpha"
+         result="blur"
+         stdDeviation="2"
+         id="feGaussianBlur13953" />
+      <feOffset
+         result="offset"
+         dy="2"
+         dx="2"
+         id="feOffset13955" />
+      <feComposite
+         result="composite2"
+         operator="over"
+         in="SourceGraphic"
+         in2="offset"
+         id="feComposite13957" />
+    </filter>
+    <linearGradient
+       y2="32.875473"
+       x2="209.51752"
+       y1="186.35341"
+       x1="209.51752"
+       gradientTransform="matrix(2.0570881,0,0,1.2172514,-40.699331,-79.321731)"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#linearGradientColor1"
+       id="linearGradient13965"
+       inkscape:collect="always" />
+    <filter
+       id="filter13357"
+       inkscape:label="Drop Shadow"
+       color-interpolation-filters="sRGB">
+      <feFlood
+         id="feFlood13359"
+         flood-opacity="0.2"
+         flood-color="rgb(0,0,0)"
+         result="flood" />
+      <feComposite
+         id="feComposite13361"
+         in2="SourceGraphic"
+         in="flood"
+         operator="in"
+         result="composite1" />
+      <feGaussianBlur
+         in="SourceAlpha"
+         id="feGaussianBlur13363"
+         stdDeviation="2"
+         result="blur" />
+      <feOffset
+         id="feOffset13365"
+         dx="2"
+         dy="2"
+         result="offset" />
+      <feComposite
+         id="feComposite13367"
+         in2="offset"
+         in="SourceGraphic"
+         operator="over"
+         result="composite2" />
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient13375"
+       xlink:href="#linearGradientColor1"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.0570881,0,0,1.2172514,-40.699331,-79.321731)"
+       x1="209.51752"
+       y1="186.35341"
+       x2="209.51752"
+       y2="32.875473" />
+    <filter
+       inkscape:label="Drop Shadow"
+       id="filter10093"
+       color-interpolation-filters="sRGB">
+      <feFlood
+         result="flood"
+         flood-color="rgb(0,0,0)"
+         flood-opacity="0.2"
+         id="feFlood10095" />
+      <feComposite
+         result="composite1"
+         operator="in"
+         in="flood"
+         in2="SourceGraphic"
+         id="feComposite10097" />
+      <feGaussianBlur
+         in="SourceAlpha"
+         result="blur"
+         stdDeviation="2"
+         id="feGaussianBlur10099" />
+      <feOffset
+         result="offset"
+         dy="2"
+         dx="2"
+         id="feOffset10101" />
+      <feComposite
+         result="composite2"
+         operator="over"
+         in="SourceGraphic"
+         in2="offset"
+         id="feComposite10103" />
+    </filter>
+    <linearGradient
+       y2="32.875473"
+       x2="209.51752"
+       y1="186.35341"
+       x1="209.51752"
+       gradientTransform="matrix(2.0570881,0,0,1.2172514,-40.699331,-79.321731)"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#linearGradientColor1"
+       id="linearGradient10111"
+       inkscape:collect="always" />
+    <filter
+       id="filter9490"
+       inkscape:label="Drop Shadow"
+       color-interpolation-filters="sRGB">
+      <feFlood
+         id="feFlood9492"
+         flood-opacity="0.2"
+         flood-color="rgb(0,0,0)"
+         result="flood" />
+      <feComposite
+         id="feComposite9494"
+         in2="SourceGraphic"
+         in="flood"
+         operator="in"
+         result="composite1" />
+      <feGaussianBlur
+         in="SourceAlpha"
+         id="feGaussianBlur9496"
+         stdDeviation="2"
+         result="blur" />
+      <feOffset
+         id="feOffset9498"
+         dx="2"
+         dy="2"
+         result="offset" />
+      <feComposite
+         id="feComposite9500"
+         in2="offset"
+         in="SourceGraphic"
+         operator="over"
+         result="composite2" />
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient9508"
+       xlink:href="#linearGradientColor1"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.0570881,0,0,1.2172514,-40.699331,-79.321731)"
+       x1="209.51752"
+       y1="186.35341"
+       x2="209.51752"
+       y2="32.875473" />
+    <filter
+       inkscape:label="Drop Shadow"
+       id="filter8930"
+       color-interpolation-filters="sRGB">
+      <feFlood
+         result="flood"
+         flood-color="rgb(0,0,0)"
+         flood-opacity="0.2"
+         id="feFlood8932" />
+      <feComposite
+         result="composite1"
+         operator="in"
+         in="flood"
+         in2="SourceGraphic"
+         id="feComposite8934" />
+      <feGaussianBlur
+         in="SourceAlpha"
+         result="blur"
+         stdDeviation="2"
+         id="feGaussianBlur8936" />
+      <feOffset
+         result="offset"
+         dy="2"
+         dx="2"
+         id="feOffset8938" />
+      <feComposite
+         result="composite2"
+         operator="over"
+         in="SourceGraphic"
+         in2="offset"
+         id="feComposite8940" />
+    </filter>
+    <linearGradient
+       y2="32.875473"
+       x2="209.51752"
+       y1="186.35341"
+       x1="209.51752"
+       gradientTransform="matrix(2.0570881,0,0,1.2172514,-40.699331,-79.321731)"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#linearGradientColor1"
+       id="linearGradient8948"
+       inkscape:collect="always" />
+    <filter
+       id="filter8403"
+       inkscape:label="Drop Shadow"
+       color-interpolation-filters="sRGB">
+      <feFlood
+         id="feFlood8405"
+         flood-opacity="0.2"
+         flood-color="rgb(0,0,0)"
+         result="flood" />
+      <feComposite
+         id="feComposite8407"
+         in2="SourceGraphic"
+         in="flood"
+         operator="in"
+         result="composite1" />
+      <feGaussianBlur
+         in="SourceAlpha"
+         id="feGaussianBlur8409"
+         stdDeviation="2"
+         result="blur" />
+      <feOffset
+         id="feOffset8411"
+         dx="2"
+         dy="2"
+         result="offset" />
+      <feComposite
+         id="feComposite8413"
+         in2="offset"
+         in="SourceGraphic"
+         operator="over"
+         result="composite2" />
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient8421"
+       xlink:href="#linearGradientColor1"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.0570881,0,0,1.2172514,-40.699331,-79.321731)"
+       x1="209.51752"
+       y1="186.35341"
+       x2="209.51752"
+       y2="32.875473" />
+    <filter
+       inkscape:label="Drop Shadow"
+       id="filter7924"
+       color-interpolation-filters="sRGB">
+      <feFlood
+         result="flood"
+         flood-color="rgb(0,0,0)"
+         flood-opacity="0.2"
+         id="feFlood7926" />
+      <feComposite
+         result="composite1"
+         operator="in"
+         in="flood"
+         in2="SourceGraphic"
+         id="feComposite7928" />
+      <feGaussianBlur
+         in="SourceAlpha"
+         result="blur"
+         stdDeviation="2"
+         id="feGaussianBlur7930" />
+      <feOffset
+         result="offset"
+         dy="2"
+         dx="2"
+         id="feOffset7932" />
+      <feComposite
+         result="composite2"
+         operator="over"
+         in="SourceGraphic"
+         in2="offset"
+         id="feComposite7934" />
+    </filter>
+    <linearGradient
+       y2="32.875473"
+       x2="209.51752"
+       y1="186.35341"
+       x1="209.51752"
+       gradientTransform="matrix(2.0570881,0,0,1.2172514,-40.699331,-79.321731)"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#linearGradientColor1"
+       id="linearGradient7942"
+       inkscape:collect="always" />
+    <filter
+       id="filter7493"
+       inkscape:label="Drop Shadow"
+       color-interpolation-filters="sRGB">
+      <feFlood
+         id="feFlood7495"
+         flood-opacity="0.2"
+         flood-color="rgb(0,0,0)"
+         result="flood" />
+      <feComposite
+         id="feComposite7497"
+         in2="SourceGraphic"
+         in="flood"
+         operator="in"
+         result="composite1" />
+      <feGaussianBlur
+         in="SourceAlpha"
+         id="feGaussianBlur7499"
+         stdDeviation="2"
+         result="blur" />
+      <feOffset
+         id="feOffset7501"
+         dx="2"
+         dy="2"
+         result="offset" />
+      <feComposite
+         id="feComposite7503"
+         in2="offset"
+         in="SourceGraphic"
+         operator="over"
+         result="composite2" />
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient7511"
+       xlink:href="#linearGradientColor1"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.0570881,0,0,1.2172514,-40.699331,-79.321731)"
+       x1="209.51752"
+       y1="186.35341"
+       x2="209.51752"
+       y2="32.875473" />
+    <filter
+       inkscape:label="Drop Shadow"
+       id="filter7110"
+       color-interpolation-filters="sRGB">
+      <feFlood
+         result="flood"
+         flood-color="rgb(0,0,0)"
+         flood-opacity="0.2"
+         id="feFlood7112" />
+      <feComposite
+         result="composite1"
+         operator="in"
+         in="flood"
+         in2="SourceGraphic"
+         id="feComposite7114" />
+      <feGaussianBlur
+         in="SourceAlpha"
+         result="blur"
+         stdDeviation="2"
+         id="feGaussianBlur7116" />
+      <feOffset
+         result="offset"
+         dy="2"
+         dx="2"
+         id="feOffset7118" />
+      <feComposite
+         result="composite2"
+         operator="over"
+         in="SourceGraphic"
+         in2="offset"
+         id="feComposite7120" />
+    </filter>
+    <linearGradient
+       y2="32.875473"
+       x2="209.51752"
+       y1="186.35341"
+       x1="209.51752"
+       gradientTransform="matrix(2.0570881,0,0,1.2172514,-40.699331,-79.321731)"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#linearGradientColor1"
+       id="linearGradient7128"
+       inkscape:collect="always" />
+    <filter
+       id="filter6775"
+       inkscape:label="Drop Shadow"
+       color-interpolation-filters="sRGB">
+      <feFlood
+         id="feFlood6777"
+         flood-opacity="0.2"
+         flood-color="rgb(0,0,0)"
+         result="flood" />
+      <feComposite
+         id="feComposite6779"
+         in2="SourceGraphic"
+         in="flood"
+         operator="in"
+         result="composite1" />
+      <feGaussianBlur
+         in="SourceAlpha"
+         id="feGaussianBlur6781"
+         stdDeviation="2"
+         result="blur" />
+      <feOffset
+         id="feOffset6783"
+         dx="2"
+         dy="2"
+         result="offset" />
+      <feComposite
+         id="feComposite6785"
+         in2="offset"
+         in="SourceGraphic"
+         operator="over"
+         result="composite2" />
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient6793"
+       xlink:href="#linearGradientColor1"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.0570881,0,0,1.2172514,-40.699331,-79.321731)"
+       x1="209.51752"
+       y1="186.35341"
+       x2="209.51752"
+       y2="32.875473" />
+    <filter
+       inkscape:label="Drop Shadow"
+       id="filter6488"
+       color-interpolation-filters="sRGB">
+      <feFlood
+         result="flood"
+         flood-color="rgb(0,0,0)"
+         flood-opacity="0.2"
+         id="feFlood6490" />
+      <feComposite
+         result="composite1"
+         operator="in"
+         in="flood"
+         in2="SourceGraphic"
+         id="feComposite6492" />
+      <feGaussianBlur
+         in="SourceAlpha"
+         result="blur"
+         stdDeviation="2"
+         id="feGaussianBlur6494" />
+      <feOffset
+         result="offset"
+         dy="2"
+         dx="2"
+         id="feOffset6496" />
+      <feComposite
+         result="composite2"
+         operator="over"
+         in="SourceGraphic"
+         in2="offset"
+         id="feComposite6498" />
+    </filter>
+    <linearGradient
+       y2="32.875473"
+       x2="209.51752"
+       y1="186.35341"
+       x1="209.51752"
+       gradientTransform="matrix(2.0570881,0,0,1.2172514,-40.699331,-79.321731)"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#linearGradientColor1"
+       id="linearGradient6506"
+       inkscape:collect="always" />
+    <filter
+       id="filter6249"
+       inkscape:label="Drop Shadow"
+       color-interpolation-filters="sRGB">
+      <feFlood
+         id="feFlood6251"
+         flood-opacity="0.2"
+         flood-color="rgb(0,0,0)"
+         result="flood" />
+      <feComposite
+         id="feComposite6253"
+         in2="SourceGraphic"
+         in="flood"
+         operator="in"
+         result="composite1" />
+      <feGaussianBlur
+         in="SourceAlpha"
+         id="feGaussianBlur6255"
+         stdDeviation="2"
+         result="blur" />
+      <feOffset
+         id="feOffset6257"
+         dx="2"
+         dy="2"
+         result="offset" />
+      <feComposite
+         id="feComposite6259"
+         in2="offset"
+         in="SourceGraphic"
+         operator="over"
+         result="composite2" />
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient6267"
+       xlink:href="#linearGradientColor1"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.0570881,0,0,1.2172514,-40.699331,-79.321731)"
+       x1="209.51752"
+       y1="186.35341"
+       x2="209.51752"
+       y2="32.875473" />
+    <filter
+       inkscape:label="Drop Shadow"
+       id="filter6058"
+       color-interpolation-filters="sRGB">
+      <feFlood
+         result="flood"
+         flood-color="rgb(0,0,0)"
+         flood-opacity="0.2"
+         id="feFlood6060" />
+      <feComposite
+         result="composite1"
+         operator="in"
+         in="flood"
+         in2="SourceGraphic"
+         id="feComposite6062" />
+      <feGaussianBlur
+         in="SourceAlpha"
+         result="blur"
+         stdDeviation="2"
+         id="feGaussianBlur6064" />
+      <feOffset
+         result="offset"
+         dy="2"
+         dx="2"
+         id="feOffset6066" />
+      <feComposite
+         result="composite2"
+         operator="over"
+         in="SourceGraphic"
+         in2="offset"
+         id="feComposite6068" />
+    </filter>
+    <linearGradient
+       y2="32.875473"
+       x2="209.51752"
+       y1="186.35341"
+       x1="209.51752"
+       gradientTransform="matrix(2.0570881,0,0,1.2172514,-40.699331,-79.321731)"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#linearGradientColor1"
+       id="linearGradient6076"
+       inkscape:collect="always" />
+    <filter
+       id="filter5915"
+       inkscape:label="Drop Shadow"
+       color-interpolation-filters="sRGB">
+      <feFlood
+         id="feFlood5917"
+         flood-opacity="0.2"
+         flood-color="rgb(0,0,0)"
+         result="flood" />
+      <feComposite
+         id="feComposite5919"
+         in2="SourceGraphic"
+         in="flood"
+         operator="in"
+         result="composite1" />
+      <feGaussianBlur
+         in="SourceAlpha"
+         id="feGaussianBlur5921"
+         stdDeviation="2"
+         result="blur" />
+      <feOffset
+         id="feOffset5923"
+         dx="2"
+         dy="2"
+         result="offset" />
+      <feComposite
+         id="feComposite5925"
+         in2="offset"
+         in="SourceGraphic"
+         operator="over"
+         result="composite2" />
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient5933"
+       xlink:href="#linearGradientColor1"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.0570881,0,0,1.2172514,-40.699331,-79.321731)"
+       x1="209.51752"
+       y1="186.35341"
+       x2="209.51752"
+       y2="32.875473" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient17529"
+       id="linearGradient15240"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.0570881,0,0,1.2172514,-44.699331,-85.321731)"
+       x1="209.51752"
+       y1="186.35341"
+       x2="209.51752"
+       y2="27.946335" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient17535"
+       id="linearGradient15242"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.0570881,0,0,1.2172514,-40.699331,-79.321731)"
+       x1="209.51752"
+       y1="186.35341"
+       x2="209.51752"
+       y2="32.875473" />
+  </defs>
+  <metadata
+     id="metadata5820">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layers"
+     id="layer2"
+     inkscape:groupmode="layer"
+     transform="translate(29.160631,-3.6853103)">
+    <g
+       id="g14864"
+       inkscape:groupmode="layer"
+       inkscape:label="Application Layer"
+       style="display:inline">
+      <g
+         id="g14866"
+         transform="translate(-37,396)">
+        <rect
+           id="rect14868"
+           ry="5.9636817"
+           style="fill:url(#linearGradient15242);fill-opacity:1;fill-rule:evenodd;stroke:#b2d2f0;stroke-width:2.20658231;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           width="786.47937"
+           height="326.55148"
+           x="23.077311"
+           y="-39.637074" />
+        <g
+           id="g14870"
+           inkscape:groupmode="layer"
+           inkscape:label="policy violation">
+          <g
+             id="g14872"
+             transform="translate(-73.437533,-23.858662)" />
+        </g>
+        <g
+           id="g14880"
+           inkscape:groupmode="layer"
+           inkscape:label="Title"
+           style="display:inline">
+          <rect
+             id="rect14882"
+             style="fill:#0066cc;fill-opacity:1;stroke:#ff9933;stroke-width:0;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+             width="104.93047"
+             height="18.51638"
+             x="32.079342"
+             y="-50.31469"
+             ry="2.8118019" />
+          <text
+             id="text14884"
+             xml:space="preserve"
+             style="font-size:8.48975182px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline;font-family:HP Simplified"
+             x="38.081226"
+             y="-37.398884"
+             sodipodi:linespacing="125%"><tspan
+               sodipodi:role="line"
+               id="tspan6405"
+               x="38.081226"
+               y="-37.398884"
+               style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;font-family:HP Simplified;-inkscape-font-specification:Arial Bold"
+               eamanager:artifactLayerLabel="">Application Layer</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g
+       style="display:inline"
+       inkscape:label="Business Layer"
+       inkscape:groupmode="layer"
+       id="g14224">
+      <g
+         id="g14226"
+         transform="translate(-33,64)">
+        <rect
+           y="-45.637074"
+           x="19.077311"
+           height="320.55148"
+           width="785.47937"
+           style="fill:url(#linearGradient15240);fill-opacity:1;fill-rule:evenodd;stroke:#ffe1c2;stroke-width:2.20658231;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           ry="5.9636817"
+           id="rect14228" />
+        <g
+           inkscape:label="policy violation"
+           inkscape:groupmode="layer"
+           id="g14230">
+          <g
+             transform="translate(-73.437533,-23.858662)"
+             id="g14232" />
+        </g>
+        <g
+           style="display:inline"
+           inkscape:label="Title"
+           inkscape:groupmode="layer"
+           id="g14240">
+          <rect
+             ry="2.8118019"
+             y="-50.31469"
+             x="32.079342"
+             height="18.51638"
+             width="88.930473"
+             style="fill:#ff9933;fill-opacity:1;stroke:#ff9933;stroke-width:0;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+             id="rect14242" />
+          <text
+             sodipodi:linespacing="125%"
+             y="-37.398884"
+             x="38.081226"
+             style="font-size:8.48975182px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline;font-family:HP Simplified"
+             xml:space="preserve"
+             id="text14244"><tspan
+               eamanager:artifactLayerLabel=""
+               style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;font-family:HP Simplified;-inkscape-font-specification:Arial Bold"
+               y="-37.398884"
+               x="38.081226"
+               id="tspan14901"
+               sodipodi:role="line">Business Layer</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g
+       id="g13627"
+       inkscape:groupmode="layer"
+       inkscape:label="Technology Layer"
+       style="display:inline">
+      <g
+         id="g13629"
+         transform="translate(-38,738)">
+        <rect
+           id="rect13631"
+           ry="5.9636817"
+           style="fill:url(#layerGradient1);fill-opacity:1;fill-rule:evenodd;stroke:#b3d2c2;stroke-width:2.20658231;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           width="787.47937"
+           height="154.55148"
+           x="23.077311"
+           y="-37.637074" />
+        <g
+           id="g13633"
+           inkscape:groupmode="layer"
+           inkscape:label="policy violation">
+          <g
+             id="g13635"
+             transform="translate(-73.437533,-23.858662)" />
+          <g
+             id="g13637"
+             transform="translate(0,8)" />
+        </g>
+        <g
+           id="g13643"
+           inkscape:groupmode="layer"
+           inkscape:label="Title"
+           style="display:inline">
+          <rect
+             id="rect13645"
+             style="fill:#006633;fill-opacity:1;stroke:#ff9933;stroke-width:0;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+             width="103.93047"
+             height="18.51638"
+             x="32.079342"
+             y="-48.31469"
+             ry="2.8118019" />
+          <text
+             id="text13647"
+             xml:space="preserve"
+             style="font-size:8.48975182px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline;font-family:HP Simplified"
+             x="38.081226"
+             y="-35.398884"
+             sodipodi:linespacing="125%"><tspan
+               sodipodi:role="line"
+               id="tspan14261"
+               x="38.081226"
+               y="-35.398884"
+               style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;font-family:HP Simplified;-inkscape-font-specification:Arial Bold"
+               eamanager:artifactLayerLabel="">Technology Layer</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g
+     inkscape:label="Artifacts"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(29.160631,-3.6853103)">
+    <g
+       transform="translate(40.603032,-170.53406)"
+       style="display:inline;filter:url(#artifactBoxShadow)"
+       id="g6533"
+       eamanager:artifactBox="businessRoleArtifact">
+      <rect
+         ry="2.8517921"
+         y="201.38644"
+         x="510.2627"
+         height="124"
+         width="205"
+         style="fill:#ffffff;fill-opacity:1;stroke:#c5c5c5;stroke-width:1.21230006;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         id="rect6535" />
+      <text
+         sodipodi:linespacing="125%"
+         y="220.77817"
+         x="539.37463"
+         style="font-size:4.64651918px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:HP Simplified"
+         xml:space="preserve"
+         id="text6537"><tspan
+           eamanager:artifactBoxTitle="businessRoleArtifact"
+           style="font-size:13px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:HP Simplified;-inkscape-font-specification:Arial"
+           y="220.77817"
+           x="539.37463"
+           sodipodi:role="line"
+           id="tspan6539">Business Roles</tspan></text>
+      <clipPath
+         id="clip-businessRoleArtifact">
+        <rect
+           height="165"
+           width="255"
+           id="rect3991"
+           x="0"
+           y="0" />
+      </clipPath>
+      <g
+         eamanager:artifactBoxContent="businessRoleArtifact"
+         transform="translate(452.58458,149.08898)"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:HP Simplified"
+         xml:space="preserve"
+         id="flowRoot6541"
+         clip-path="url(#clip-businessRoleArtifact)"><text
+   style="font-size:11px;line-height:100%;overflow:hidden"
+   y="87"
+   x="90"
+   width="168"
+   height="92"
+   id="content-flowRoot6541"
+   sodipodi:linespacing="100%"><tspan
+     id="tspan3995">Business role desc.</tspan></text>
+
+</g>      <text
+         xml:space="preserve"
+         style="font-size:4.64651918px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:HP Simplified"
+         x="524.76147"
+         y="236.25526"
+         sodipodi:linespacing="125%"
+         id="text6553"><tspan
+           eamanager:artifactBoxCount="businessRoleArtifact"
+           sodipodi:role="line"
+           x="524.76147"
+           y="236.25526"
+           style="font-size:9px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;fill:#808080;fill-opacity:1;font-family:HP Simplified;-inkscape-font-specification:Arial Bold"
+           id="tspan6555">3</tspan></text>
+      <g
+         id="g5044"
+         transform="translate(604.45498,0.46595)">
+        <g
+           id="g5050"
+           transform="matrix(0.11132793,0,0,0.09163128,-29.76824,198.67769)">
+          <path
+             sodipodi:type="arc"
+             style="fill:none;stroke:#000000;stroke-width:9.92881584;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+             id="path4508"
+             sodipodi:cx="-386.5"
+             sodipodi:cy="101.90625"
+             sodipodi:rx="44.5"
+             sodipodi:ry="42.5"
+             d="m -342,101.90625 c 0,23.4721 -19.92333,42.5 -44.5,42.5 -24.57667,0 -44.5,-19.0279 -44.5,-42.5 0,-23.472102 19.92333,-42.5 44.5,-42.5 24.57667,0 44.5,19.027898 44.5,42.5 z"
+             transform="matrix(0.67779693,0,0,0.67439913,-182.6607,59.563119)" />
+          <path
+             style="fill:none;stroke:#000000;stroke-width:6.7128315;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+             d="m -387,146.40625 0,51 -39,55"
+             id="path4510"
+             inkscape:connector-curvature="0"
+             transform="translate(-58.629216,10.382355)" />
+          <path
+             style="fill:none;stroke:#000000;stroke-width:6.7128315;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+             d="m -387,197.40625 36,51"
+             id="path4512"
+             inkscape:connector-curvature="0"
+             transform="translate(-58.629216,10.382355)" />
+          <path
+             style="fill:none;stroke:#000000;stroke-width:6.7128315;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+             d="m -496.62922,174.78861 102,0"
+             id="path5042"
+             inkscape:connector-curvature="0" />
+        </g>
+      </g>
+    </g>
+    <g
+       transform="translate(42.597979,3.2426446)"
+       id="g5939"
+       style="display:inline;filter:url(#artifactBoxShadow)"
+       eamanager:artifactBox="businessObjectArtifact">
+      <rect
+         id="rect5941"
+         style="fill:#ffffff;fill-opacity:1;stroke:#c5c5c5;stroke-width:1.21230006;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         width="205"
+         height="124"
+         x="510.2627"
+         y="201.38644"
+         ry="2.8517921" />
+      <text
+         id="text5943"
+         xml:space="preserve"
+         style="font-size:4.64651918px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:HP Simplified"
+         x="539.37463"
+         y="220.77817"
+         sodipodi:linespacing="125%"><tspan
+           id="tspan5945"
+           sodipodi:role="line"
+           x="539.37463"
+           y="220.77817"
+           style="font-size:13px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:HP Simplified;-inkscape-font-specification:Arial"
+           eamanager:artifactBoxTitle="businessObjectArtifact">Business Object</tspan></text>
+      <clipPath
+         id="clip-businessObjectArtifact">
+        <rect
+           height="165"
+           width="255"
+           id="rect4122"
+           x="0"
+           y="0" />
+      </clipPath>
+      <g
+         clip-path="url(#clip-businessObjectArtifact)"
+         id="flowRoot5947"
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:HP Simplified"
+         transform="translate(452.58458,149.08898)"
+         eamanager:artifactBoxContent="businessObjectArtifact"><text
+   style="font-size:11px;line-height:100%;overflow:hidden"
+   y="87"
+   x="90"
+   width="168"
+   height="92"
+   id="content-flowRoot5947"
+   sodipodi:linespacing="100%"><tspan
+     id="tspan4126">business obj. desc.</tspan></text>
+
+</g>      <text
+         id="text5959"
+         sodipodi:linespacing="125%"
+         y="236.25526"
+         x="524.76147"
+         style="font-size:4.64651918px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:HP Simplified"
+         xml:space="preserve"><tspan
+           id="tspan5961"
+           style="font-size:9px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;fill:#808080;fill-opacity:1;font-family:HP Simplified;-inkscape-font-specification:Arial Bold"
+           y="236.25526"
+           x="524.76147"
+           sodipodi:role="line"
+           eamanager:artifactBoxCount="businessObjectArtifact">3</tspan></text>
+      <g
+         id="g4395-9"
+         transform="matrix(1.1146203,0,0,0.94761587,-157.64795,288.00476)">
+        <g
+           id="g4399-4"
+           transform="matrix(0.15122442,0,0,0.15523809,518.87434,-44.280792)">
+          <rect
+             transform="translate(475.69857,18.31607)"
+             style="fill:none;stroke:#000000;stroke-width:3.88878703;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+             id="rect4389-8"
+             width="100.69408"
+             height="94.054916"
+             x="98.481026"
+             y="-269.36182"
+             ry="2.8517921" />
+          <path
+             style="fill:none;stroke:#000000;stroke-width:3.88878703;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+             d="m 98.481028,-248.33778 99.587552,0 0,0"
+             id="path4393-8"
+             inkscape:connector-curvature="0"
+             transform="translate(475.69857,18.31607)" />
+        </g>
+      </g>
+    </g>
+    <g
+       transform="translate(-511.35953,2.6568499)"
+       id="g6287"
+       style="display:inline;filter:url(#artifactBoxShadow)"
+       eamanager:artifactBox="businessEventArtifact">
+      <rect
+         id="rect6289"
+         style="fill:#ffffff;fill-opacity:1;stroke:#c5c5c5;stroke-width:1.21230006;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         width="205"
+         height="124"
+         x="510.2627"
+         y="201.38644"
+         ry="2.8517921" />
+      <text
+         id="text6291"
+         xml:space="preserve"
+         style="font-size:4.64651918px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:HP Simplified"
+         x="539.37463"
+         y="220.77817"
+         sodipodi:linespacing="125%"><tspan
+           id="tspan6293"
+           sodipodi:role="line"
+           x="539.37463"
+           y="220.77817"
+           style="font-size:13px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:HP Simplified;-inkscape-font-specification:Arial"
+           eamanager:artifactBoxTitle="businessEventArtifact">Business Events</tspan></text>
+      <clipPath
+         id="clip-businessEventArtifact">
+        <rect
+           height="165"
+           width="255"
+           id="rect4008"
+           x="0"
+           y="0" />
+      </clipPath>
+      <g
+         clip-path="url(#clip-businessEventArtifact)"
+         id="flowRoot6295"
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:HP Simplified"
+         transform="translate(452.58458,149.08898)"
+         eamanager:artifactBoxContent="businessEventArtifact"><text
+   style="font-size:11px;line-height:100%;overflow:hidden"
+   y="87"
+   x="90"
+   width="168"
+   height="92"
+   id="content-flowRoot6295"
+   sodipodi:linespacing="100%"><tspan
+     id="tspan4012">Business events desc.</tspan></text>
+
+</g>      <text
+         id="text6307"
+         sodipodi:linespacing="125%"
+         y="236.25526"
+         x="524.76147"
+         style="font-size:4.64651918px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:HP Simplified"
+         xml:space="preserve"><tspan
+           id="tspan6309"
+           style="font-size:9px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;fill:#808080;fill-opacity:1;font-family:HP Simplified;-inkscape-font-specification:Arial Bold"
+           y="236.25526"
+           x="524.76147"
+           sodipodi:role="line"
+           eamanager:artifactBoxCount="businessEventArtifact">3</tspan></text>
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.67799997;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 515.10452,209.34154 c 13.37958,0 13.37958,0 13.37958,0 0,0 5.33375,0 5.33375,6.44707 0,5.95242 -5.33375,6.07511 -5.33375,6.07511 l -13.56038,0.37195 c 0,0 5.87616,0.002 5.87616,-6.57104 0,-6.07513 -5.69536,-6.32309 -5.69536,-6.32309 z"
+         id="path4506"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccsccsc" />
+    </g>
+    <g
+       transform="translate(-235.17366,3.0710684)"
+       style="display:inline;filter:url(#artifactBoxShadow)"
+       id="g6089"
+       eamanager:artifactBox="businessProcessArtifact">
+      <rect
+         ry="2.8517921"
+         y="201.38644"
+         x="510.2627"
+         height="124"
+         width="205"
+         style="fill:#ffffff;fill-opacity:1;stroke:#c5c5c5;stroke-width:1.21230006;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         id="rect6091" />
+      <text
+         sodipodi:linespacing="125%"
+         y="220.77817"
+         x="539.37463"
+         style="font-size:4.64651918px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:HP Simplified"
+         xml:space="preserve"
+         id="text6093"><tspan
+           eamanager:artifactBoxTitle="businessProcessArtifact"
+           style="font-size:13px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:HP Simplified;-inkscape-font-specification:Arial"
+           y="220.77817"
+           x="539.37463"
+           sodipodi:role="line"
+           id="tspan6095">Business Processes</tspan></text>
+      <clipPath
+         id="clip-businessProcessArtifact">
+        <rect
+           height="165"
+           width="255"
+           id="rect4025"
+           x="0"
+           y="0" />
+      </clipPath>
+      <g
+         clip-path="url(#clip-businessProcessArtifact)"
+         eamanager:artifactBoxContent="businessProcessArtifact"
+         transform="translate(452.58458,149.08898)"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:HP Simplified"
+         xml:space="preserve"
+         id="flowRoot6097"><text
+   style="font-size:11px;line-height:100%;overflow:hidden"
+   y="87"
+   x="90"
+   width="168"
+   height="92"
+   id="content-flowRoot6097"
+   sodipodi:linespacing="100%"><tspan
+     id="tspan4029">Here is business process desc.</tspan></text>
+
+</g>      <text
+         xml:space="preserve"
+         style="font-size:4.64651918px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:HP Simplified"
+         x="524.76147"
+         y="236.25526"
+         sodipodi:linespacing="125%"
+         id="text6109"><tspan
+           eamanager:artifactBoxCount="businessProcessArtifact"
+           sodipodi:role="line"
+           x="524.76147"
+           y="236.25526"
+           style="font-size:9px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;fill:#808080;fill-opacity:1;font-family:HP Simplified;-inkscape-font-specification:Arial Bold"
+           id="tspan6111">3</tspan></text>
+      <polygon
+         transform="matrix(0.36336926,0,0,0.36336926,439.187,149.34544)"
+         style="fill:none;stroke:#000000;stroke-width:2.00071955;stroke-miterlimit:10;stroke-dasharray:none;display:inline"
+         stroke-miterlimit="10"
+         points="241.813,190.795 241.813,197.597 264.604,184.456 241.813,171.316 241.813,178.118 218.884,178.118 218.884,190.795 "
+         id="polygon4159" />
+    </g>
+    <g
+       id="g8536"
+       style="display:inline;filter:url(#artifactBoxShadow)"
+       transform="translate(-513.19596,517.77373)"
+       eamanager:artifactBox="networkArtifact">
+      <rect
+         id="rect8538"
+         style="fill:#ffffff;fill-opacity:1;stroke:#c5c5c5;stroke-width:1.21230006;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         width="205"
+         height="124"
+         x="510.2627"
+         y="201.38644"
+         ry="2.8517921" />
+      <text
+         id="text8540"
+         xml:space="preserve"
+         style="font-size:4.64651918px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:HP Simplified"
+         x="539.37463"
+         y="220.77817"
+         sodipodi:linespacing="125%"><tspan
+           id="tspan8542"
+           sodipodi:role="line"
+           x="539.37463"
+           y="220.77817"
+           style="font-size:13px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:HP Simplified;-inkscape-font-specification:Arial"
+           eamanager:artifactBoxTitle="networkArtifact">Networks</tspan></text>
+      <clipPath
+         id="clip-networkArtifact">
+        <rect
+           height="165"
+           width="255"
+           id="rect4039"
+           x="0"
+           y="0" />
+      </clipPath>
+      <g
+         clip-path="url(#clip-networkArtifact)"
+         id="flowRoot8544"
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:HP Simplified"
+         transform="translate(452.58458,149.08898)"
+         eamanager:artifactBoxContent="networkArtifact"><text
+   style="font-size:11px;line-height:100%;overflow:hidden"
+   y="87"
+   x="90"
+   width="168"
+   height="92"
+   id="content-flowRoot8544"
+   sodipodi:linespacing="100%"><tspan
+     id="tspan4043">Networks desc.</tspan></text>
+
+</g>      <text
+         id="text8556"
+         sodipodi:linespacing="125%"
+         y="236.25526"
+         x="524.76147"
+         style="font-size:4.64651918px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:HP Simplified"
+         xml:space="preserve"><tspan
+           id="tspan8558"
+           style="font-size:9px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;fill:#808080;fill-opacity:1;font-family:HP Simplified;-inkscape-font-specification:Arial Bold"
+           y="236.25526"
+           x="524.76147"
+           sodipodi:role="line"
+           eamanager:artifactBoxCount="networkArtifact">3</tspan></text>
+      <g
+         id="g5197"
+         transform="matrix(0.17123372,0,0,0.18849205,509.37984,32.436263)">
+        <g
+           id="g5204"
+           transform="matrix(0.90353994,0,0,0.83318803,4.1578741,170.25828)">
+          <rect
+             style="fill:none;stroke:#000000;stroke-width:3.77388382;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+             id="rect5129"
+             width="73"
+             height="65"
+             x="-315.34879"
+             y="897.4408"
+             transform="matrix(0.92259898,-0.38576046,0.38576046,0.92259898,0,0)"
+             ry="2.8517921" />
+          <path
+             sodipodi:type="arc"
+             style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.67799997;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+             id="path5131-2"
+             sodipodi:cx="108"
+             sodipodi:cy="984.40625"
+             sodipodi:rx="12"
+             sodipodi:ry="11"
+             d="m 120,984.40625 c 0,6.07513 -5.37258,11 -12,11 -6.62742,0 -12,-4.92487 -12,-11 0,-6.07513 5.37258,-11 12,-11 6.62742,0 12,4.92487 12,11 z"
+             transform="matrix(1.4439771,0,0,1.5752477,-12.980762,-572.15248)" />
+          <path
+             sodipodi:type="arc"
+             style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.67799997;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+             id="path5131-2-5"
+             sodipodi:cx="108"
+             sodipodi:cy="984.40625"
+             sodipodi:rx="12"
+             sodipodi:ry="11"
+             d="m 120,984.40625 c 0,6.07513 -5.37258,11 -12,11 -6.62742,0 -12,-4.92487 -12,-11 0,-6.07513 5.37258,-11 12,-11 6.62742,0 12,4.92487 12,11 z"
+             transform="matrix(1.4439771,0,0,1.5752477,-69.980764,-547.83889)" />
+          <path
+             sodipodi:type="arc"
+             style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.67799997;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+             id="path5131-2-1"
+             sodipodi:cx="108"
+             sodipodi:cy="984.40625"
+             sodipodi:rx="12"
+             sodipodi:ry="11"
+             d="m 120,984.40625 c 0,6.07513 -5.37258,11 -12,11 -6.62742,0 -12,-4.92487 -12,-11 0,-6.07513 5.37258,-11 12,-11 6.62742,0 12,4.92487 12,11 z"
+             transform="matrix(1.4439771,0,0,1.5752477,-94.980764,-599.65243)" />
+          <path
+             sodipodi:type="arc"
+             style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.67799997;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+             id="path5131-2-7"
+             sodipodi:cx="108"
+             sodipodi:cy="984.40625"
+             sodipodi:rx="12"
+             sodipodi:ry="11"
+             d="m 120,984.40625 c 0,6.07513 -5.37258,11 -12,11 -6.62742,0 -12,-4.92487 -12,-11 0,-6.07513 5.37258,-11 12,-11 6.62742,0 12,4.92487 12,11 z"
+             transform="matrix(1.4439771,0,0,1.5752477,-35.980764,-624.65243)" />
+        </g>
+      </g>
+    </g>
+    <g
+       style="display:inline;filter:url(#artifactBoxShadow)"
+       id="g8050"
+       transform="translate(-234.35239,513.67323)"
+       eamanager:artifactBox="serverArtifact">
+      <rect
+         ry="2.8517921"
+         y="201.38644"
+         x="510.2627"
+         height="124"
+         width="205"
+         style="fill:#ffffff;fill-opacity:1;stroke:#c5c5c5;stroke-width:1.21230006;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         id="rect8052" />
+      <text
+         sodipodi:linespacing="125%"
+         y="220.77817"
+         x="539.37463"
+         style="font-size:4.64651918px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:HP Simplified"
+         xml:space="preserve"
+         id="text8054"><tspan
+           eamanager:artifactBoxTitle="serverArtifact"
+           style="font-size:13px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:HP Simplified;-inkscape-font-specification:Arial"
+           y="220.77817"
+           x="539.37463"
+           sodipodi:role="line"
+           id="tspan8056">Servers</tspan></text>
+      <clipPath
+         id="clip-serverArtifact">
+        <rect
+           height="165"
+           width="255"
+           id="rect4056"
+           x="0"
+           y="0" />
+      </clipPath>
+      <g
+         clip-path="url(#clip-serverArtifact)"
+         eamanager:artifactBoxContent="serverArtifact"
+         transform="translate(452.58458,149.08898)"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:HP Simplified"
+         xml:space="preserve"
+         id="flowRoot8058"><text
+   style="font-size:11px;line-height:100%;overflow:hidden"
+   y="87"
+   x="90"
+   width="168"
+   height="92"
+   id="content-flowRoot8058"
+   sodipodi:linespacing="100%"><tspan
+     id="tspan4060">servers desc.</tspan></text>
+
+</g>      <text
+         xml:space="preserve"
+         style="font-size:4.64651918px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:HP Simplified"
+         x="524.76147"
+         y="236.25526"
+         sodipodi:linespacing="125%"
+         id="text8070"><tspan
+           eamanager:artifactBoxCount="serverArtifact"
+           sodipodi:role="line"
+           x="524.76147"
+           y="236.25526"
+           style="font-size:9px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;fill:#808080;fill-opacity:1;font-family:HP Simplified;-inkscape-font-specification:Arial Bold"
+           id="tspan8072">3</tspan></text>
+      <g
+         transform="translate(-0.85056907,0.17011381)"
+         id="g8074">
+        <rect
+           style="fill:none;stroke:#000000;stroke-width:0.67799991;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           width="10.556492"
+           height="9.8120584"
+           x="520.16864"
+           y="212.1788"
+           ry="0"
+           id="rect8076" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:0.67799991;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 520.0539,212.11575 5.61452,-2.9684 7.98572,0 0,8.27882 -2.88904,4.57514"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccccc"
+           id="path8078" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:0.67799991;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 530.68333,212.22467 3.07983,-3.07732"
+           inkscape:connector-curvature="0"
+           id="path8080" />
+      </g>
+    </g>
+    <g
+       id="g7611"
+       style="display:inline;filter:url(#artifactBoxShadow)"
+       transform="translate(44.80404,345.79603)"
+       eamanager:artifactBox="dataObjectArtifact">
+      <rect
+         id="rect7613"
+         style="fill:#ffffff;fill-opacity:1;stroke:#c5c5c5;stroke-width:1.21230006;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         width="205"
+         height="124"
+         x="510.2627"
+         y="201.38644"
+         ry="2.8517921" />
+      <text
+         id="text7615"
+         xml:space="preserve"
+         style="font-size:4.64651918px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:HP Simplified"
+         x="539.37463"
+         y="220.77817"
+         sodipodi:linespacing="125%"><tspan
+           id="tspan7617"
+           sodipodi:role="line"
+           x="539.37463"
+           y="220.77817"
+           style="font-size:13px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:HP Simplified;-inkscape-font-specification:Arial"
+           eamanager:artifactBoxTitle="dataObjectArtifact">Data Object</tspan></text>
+      <clipPath
+         id="clip-dataObjectArtifact">
+        <rect
+           height="165"
+           width="255"
+           id="rect4073"
+           x="0"
+           y="0" />
+      </clipPath>
+      <g
+         clip-path="url(#clip-dataObjectArtifact)"
+         id="flowRoot7619"
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:HP Simplified"
+         transform="translate(452.58458,149.08898)"
+         eamanager:artifactBoxContent="dataObjectArtifact"><text
+   style="font-size:11px;line-height:100%;overflow:hidden"
+   y="87"
+   x="90"
+   width="168"
+   height="92"
+   id="content-flowRoot7619"
+   sodipodi:linespacing="100%"><tspan
+     id="tspan4077">data objects desc.</tspan></text>
+
+</g>      <text
+         id="text7631"
+         sodipodi:linespacing="125%"
+         y="236.25526"
+         x="524.76147"
+         style="font-size:4.64651918px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:HP Simplified"
+         xml:space="preserve"><tspan
+           id="tspan7633"
+           style="font-size:9px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;fill:#808080;fill-opacity:1;font-family:HP Simplified;-inkscape-font-specification:Arial Bold"
+           y="236.25526"
+           x="524.76147"
+           sodipodi:role="line"
+           eamanager:artifactBoxCount="dataObjectArtifact">3</tspan></text>
+      <g
+         id="g4395"
+         transform="matrix(1.1146203,0,0,0.94761587,-157.45199,288.20873)">
+        <g
+           id="g4399"
+           transform="matrix(0.15122442,0,0,0.15523809,518.87434,-44.280792)">
+          <rect
+             transform="translate(475.69857,18.31607)"
+             style="fill:none;stroke:#000000;stroke-width:3.88878703;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+             id="rect4389"
+             width="100.69408"
+             height="94.054916"
+             x="98.481026"
+             y="-269.36182"
+             ry="2.8517921" />
+          <path
+             style="fill:none;stroke:#000000;stroke-width:3.88878703;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+             d="m 98.481028,-248.33778 99.587552,0 0,0"
+             id="path4393"
+             inkscape:connector-curvature="0"
+             transform="translate(475.69857,18.31607)" />
+        </g>
+      </g>
+    </g>
+    <g
+       style="display:inline;filter:url(#artifactBoxShadow)"
+       id="g7221"
+       transform="translate(-233.76659,344.79605)"
+       eamanager:artifactBox="applicationComponentArtifact">
+      <rect
+         ry="2.8517921"
+         y="201.38644"
+         x="510.2627"
+         height="124"
+         width="205"
+         style="fill:#ffffff;fill-opacity:1;stroke:#c5c5c5;stroke-width:1.21230006;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         id="rect7223" />
+      <text
+         sodipodi:linespacing="125%"
+         y="220.77817"
+         x="539.37463"
+         style="font-size:4.64651918px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:HP Simplified"
+         xml:space="preserve"
+         id="text7225"><tspan
+           eamanager:artifactBoxTitle="applicationComponentArtifact"
+           style="font-size:13px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:HP Simplified;-inkscape-font-specification:Arial"
+           y="220.77817"
+           x="539.37463"
+           sodipodi:role="line"
+           id="tspan7227">Application Component</tspan></text>
+      <clipPath
+         id="clip-applicationComponentArtifact">
+        <rect
+           height="165"
+           width="255"
+           id="rect4090"
+           x="0"
+           y="0" />
+      </clipPath>
+      <g
+         clip-path="url(#clip-applicationComponentArtifact)"
+         eamanager:artifactBoxContent="applicationComponentArtifact"
+         transform="translate(452.58458,149.08898)"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:HP Simplified"
+         xml:space="preserve"
+         id="flowRoot7229"><text
+   style="font-size:11px;line-height:100%;overflow:hidden"
+   y="87"
+   x="90"
+   width="168"
+   height="92"
+   id="content-flowRoot7229"
+   sodipodi:linespacing="100%"><tspan
+     id="tspan4094">app. comp. desc.</tspan></text>
+
+</g>      <text
+         xml:space="preserve"
+         style="font-size:4.64651918px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:HP Simplified"
+         x="524.76147"
+         y="236.25526"
+         sodipodi:linespacing="125%"
+         id="text7241"><tspan
+           eamanager:artifactBoxCount="applicationComponentArtifact"
+           sodipodi:role="line"
+           x="524.76147"
+           y="236.25526"
+           style="font-size:9px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;fill:#808080;fill-opacity:1;font-family:HP Simplified;-inkscape-font-specification:Arial Bold"
+           id="tspan7243">3</tspan></text>
+      <g
+         id="g17664"
+         transform="translate(565.58273,-277.57458)">
+        <g
+           id="g7500"
+           transform="translate(-341.25348,499.04664)"
+           style="display:inline">
+          <rect
+             ry="0"
+             rx="0"
+             y="-11.209287"
+             x="297.74655"
+             height="13.048959"
+             width="10.954528"
+             id="rect7478"
+             style="fill:none;stroke:#000000;stroke-width:0.67799997;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+          <rect
+             ry="0"
+             rx="0"
+             y="-9.4749241"
+             x="293.62924"
+             height="4.1490273"
+             width="7.9059324"
+             id="rect7478-4"
+             style="fill:#ffffff;stroke:#000000;stroke-width:0.67800003;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline" />
+        </g>
+        <rect
+           style="fill:#ffffff;stroke:#000000;stroke-width:0.67800003;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+           id="rect7498"
+           width="7.9059324"
+           height="4.1490273"
+           x="-47.624229"
+           y="495.02969"
+           rx="0"
+           ry="0" />
+      </g>
+    </g>
+    <g
+       id="g6879"
+       style="display:inline;filter:url(#artifactBoxShadow)"
+       transform="translate(-233.51681,168.26197)"
+       eamanager:artifactBox="applicationServiceArtifact">
+      <rect
+         id="rect6881"
+         style="fill:#ffffff;fill-opacity:1;stroke:#c5c5c5;stroke-width:1.21230006;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         width="205"
+         height="124"
+         x="510.2627"
+         y="201.38644"
+         ry="2.8517921" />
+      <text
+         id="text6883"
+         xml:space="preserve"
+         style="font-size:4.64651918px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:HP Simplified"
+         x="539.37463"
+         y="220.77817"
+         sodipodi:linespacing="125%"><tspan
+           id="tspan6885"
+           sodipodi:role="line"
+           x="539.37463"
+           y="220.77817"
+           style="font-size:13px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:HP Simplified;-inkscape-font-specification:Arial"
+           eamanager:artifactBoxTitle="applicationServiceArtifact">Application Service</tspan></text>
+      <clipPath
+         id="clip-applicationServiceArtifact">
+        <rect
+           height="165"
+           width="255"
+           id="rect4108"
+           x="0"
+           y="0" />
+      </clipPath>
+      <g
+         clip-path="url(#clip-applicationServiceArtifact)"
+         id="flowRoot6887"
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:HP Simplified"
+         transform="translate(452.58458,149.08898)"
+         eamanager:artifactBoxContent="applicationServiceArtifact"><text
+   style="font-size:11px;line-height:100%;overflow:hidden"
+   y="87"
+   x="90"
+   width="168"
+   height="92"
+   id="content-flowRoot6887"
+   sodipodi:linespacing="100%"><tspan
+     id="tspan4112">app. svc. desc.</tspan></text>
+
+</g>      <text
+         id="text6899"
+         sodipodi:linespacing="125%"
+         y="236.25526"
+         x="524.76147"
+         style="font-size:4.64651918px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:HP Simplified"
+         xml:space="preserve"><tspan
+           id="tspan6901"
+           style="font-size:9px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;fill:#808080;fill-opacity:1;font-family:HP Simplified;-inkscape-font-specification:Arial Bold"
+           y="236.25526"
+           x="524.76147"
+           sodipodi:role="line"
+           eamanager:artifactBoxCount="applicationServiceArtifact">3</tspan></text>
+      <rect
+         rx="5.5217981"
+         ry="4.5226197"
+         y="210.64499"
+         x="515.98407"
+         height="10.038358"
+         width="17.383438"
+         id="rect6349-5"
+         style="fill:none;stroke:#000000;stroke-width:0.67799997;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline" />
+    </g>
+    <g
+       transform="translate(-236.61227,-170.11984)"
+       style="display:inline;filter:url(#artifactBoxShadow)"
+       id="g5840"
+       eamanager:artifactBox="businessServiceArtifact">
+      <rect
+         ry="2.8517921"
+         y="201.38644"
+         x="510.2627"
+         height="124"
+         width="205"
+         style="fill:#ffffff;fill-opacity:1;stroke:#c5c5c5;stroke-width:1.21230006;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         id="rect5842" />
+      <text
+         sodipodi:linespacing="125%"
+         y="220.77817"
+         x="539.37463"
+         style="font-size:4.64651918px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:HP Simplified"
+         xml:space="preserve"
+         id="text5844"><tspan
+           eamanager:artifactBoxTitle="businessServiceArtifact"
+           style="font-size:13px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:HP Simplified;-inkscape-font-specification:Arial"
+           y="220.77817"
+           x="539.37463"
+           sodipodi:role="line"
+           id="tspan5846">Business Services</tspan></text>
+      <clipPath
+         id="clip-businessServiceArtifact">
+        <rect
+           height="165"
+           width="255"
+           id="rect4139"
+           x="0"
+           y="0" />
+      </clipPath>
+      <g
+         clip-path="url(#clip-businessServiceArtifact)"
+         eamanager:artifactBoxContent="businessServiceArtifact"
+         transform="translate(452.58458,149.08898)"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:HP Simplified"
+         xml:space="preserve"
+         id="flowRoot5848"><text
+   style="font-size:11px;line-height:100%;overflow:hidden"
+   y="87"
+   x="90"
+   width="168"
+   height="92"
+   id="content-flowRoot5848"
+   sodipodi:linespacing="100%"><tspan
+     id="tspan4143">BS desc.</tspan></text>
+
+</g>      <text
+         xml:space="preserve"
+         style="font-size:4.64651918px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:HP Simplified"
+         x="524.76147"
+         y="236.25526"
+         sodipodi:linespacing="125%"
+         id="text5860"><tspan
+           eamanager:artifactBoxCount="businessServiceArtifact"
+           sodipodi:role="line"
+           x="524.76147"
+           y="236.25526"
+           style="font-size:9px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;fill:#808080;fill-opacity:1;font-family:HP Simplified;-inkscape-font-specification:Arial Bold"
+           id="tspan5862">3</tspan></text>
+      <rect
+         rx="5.5217981"
+         ry="4.5226197"
+         y="210.99854"
+         x="516.98407"
+         height="10.038358"
+         width="17.383438"
+         id="rect6349-5-6"
+         style="fill:none;stroke:#000000;stroke-width:0.67799997;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Connections"
+     transform="translate(4.8364163,13.999999)">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline"
+       d="m 226.39095,761.96756 73.84357,-1.08589"
+       id="path15247"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-end="#g8050"
+       inkscape:connection-end-point="d4"
+       inkscape:connection-start="#g8536"
+       inkscape:connection-start-point="d4" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline"
+       d="m 505.82032,590.86513 73.57063,0.26409"
+       id="path15249"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#g7221"
+       inkscape:connection-start-point="d4"
+       inkscape:connection-end="#g7611"
+       inkscape:connection-end-point="d4" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 402.5351,310.7722 0.41315,41.1909"
+       id="path15251"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#g6089"
+       inkscape:connection-start-point="d4"
+       inkscape:connection-end="#g6879"
+       inkscape:connection-end-point="d4" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 504.41325,248.83552 72.77164,0.045"
+       id="path15253"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#g6089"
+       inkscape:connection-start-point="d4"
+       inkscape:connection-end="#g5939"
+       inkscape:connection-end-point="d4" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#DotM);marker-end:url(#Arrow1Lend)"
+       d="m 403.40804,528.49718 0.0743,-52.53408"
+       id="path15255"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#g7221"
+       inkscape:connection-start-point="d4"
+       inkscape:connection-end="#g6879"
+       inkscape:connection-end-point="d4" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 401.91325,248.7722 0,0"
+       id="path16767"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#g6089"
+       inkscape:connection-start-point="d4"
+       inkscape:connection-end="#g6089"
+       inkscape:connection-end-point="d4" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#DotM);marker-end:url(#Arrow1Lend);display:inline"
+       d="m 228.22738,248.51171 71.18587,0.10676"
+       id="path16769"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-end-point="d4"
+       inkscape:connection-end="#g6089"
+       inkscape:connection-start="#g6287"
+       inkscape:connection-start-point="d4" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#DotM);marker-end:url(#Arrow1Lend)"
+       d="m 401.39825,186.7722 -0.40861,-49.19091"
+       id="path17143"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#g6089"
+       inkscape:connection-start-point="d4"
+       inkscape:connection-end="#g5840"
+       inkscape:connection-end-point="d4" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 502.97464,75.428137 72.2153,-0.107906"
+       id="path17517"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#g5840"
+       inkscape:connection-start-point="d4"
+       inkscape:connection-end="#g6533"
+       inkscape:connection-end-point="d4" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 402.94959,697.37436 0.15567,-44.87718"
+       id="path17519"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#g8050"
+       inkscape:connection-start-point="d4"
+       inkscape:connection-end="#g7221"
+       inkscape:connection-end-point="d4" />
+  </g>
+  <script
+     id="script4159">
+    document.getElementById(&quot;layer1&quot;).addEventListener(&quot;mousedown&quot;, onMouseDown, false);
+    function onMouseDown(evt){
+        parent.Ext4.ComponentManager.get('archimateIntroductoryViewpoint').calculateMousePosition(evt);
+    }
+  </script>
+</svg>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><taxonomy check="true" xmlns="http://systinet.com/uddi/taxonomy/v3/5.5">
+  <tModel tModelKey="uddi:com.systinet.soa:model:taxonomies:scriptExecuteOn" deleted="false" xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <name xmlns="urn:uddi-org:api_v3">scriptExecuteOn</name>
+    <categoryBag xmlns="urn:uddi-org:api_v3">
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="tModel"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="businessService"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="businessEntity"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="bindingTemplate"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Checked value set" keyValue="checked"/>
+    </categoryBag>
+  </tModel>
+  <compatibilityBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <compatibility>tModel</compatibility>
+    <compatibility>businessService</compatibility>
+    <compatibility>businessEntity</compatibility>
+    <compatibility>bindingTemplate</compatibility>
+  </compatibilityBag>
+  <categorizationBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <categorization>categorization</categorization>
+  </categorizationBag>
+  <validation xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <categories>
+        <category keyName="Dashboard and UI" keyValue="dashboard" disabled="true"/>
+           <category keyName="UI Included Code" keyValue="include" disabled="false"/>
+           <category keyName="Javascript Report" keyValue="report" disabled="false"/>
+           <category keyName="Heat map" keyValue="heatmapPortlet" disabled="false"/>
+           <category keyName="Model View" keyValue="modelView" disabled="false"/>
+           <category keyName="Radar Chart" keyValue="radarPortlet" disabled="false"/>
+           <category keyName="Structure Map" keyValue="structureMapPortlet" disabled="false"/>
+		   <category keyName="Matrix Report" keyValue="dataArchitectureMatrixPortlet" disabled="false"/>
+
+        <category keyName="Data Management" keyValue="dataManagement" disabled="true"/>
+           <category keyName="Data Source Definition" keyValue="dataSource" disabled="false"/>
+           <category keyName="XML Data Import" keyValue="xmlDataImport" disabled="false"/>
+           <category keyName="Shortcuts Definition" keyValue="shortcutsDefinition" disabled="false"/>
+           <category keyName="Repository data consistency check" keyValue="repositoryDiagnostic" disabled="false"/>
+           <category keyName="Survey" keyValue="survey" disabled="false"/>
+
+        <category keyName="System" keyValue="system" disabled="true"/>
+           <category keyName="Executed on server startup/shutdown" keyValue="startup" disabled="false"/>
+           <category keyName="Remote invocation" keyValue="remote" disabled="false"/>
+           <category keyName="Lifecycle action" keyValue="lifecycle" disabled="false"/>
+           <category keyName="Task/Batch" keyValue="task" disabled="false"/>
+           <category keyName="CSA Topology Design Template" keyValue="csaTopologyDesignTemplate" disabled="false"/>
+    </categories>
+  </validation>
+</taxonomy>
+        

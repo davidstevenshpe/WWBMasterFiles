@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- FORMAT:
+        <property name="shared.ui.artifact-icons.${ARTIFACT_SDM_NAME}" value="${ICON_NAME_WITHOUT_EXTENSION}"/>
+    -->
+
+    <property name="shared.ui.artifact-icons.artifact" value="artifact"/>
+    <property name="shared.ui.artifact-icons.aoiPreparationToolArtifact" value="aoiPreparationToolArtifact"/>
+    <property name="shared.ui.artifact-icons.assertionArtifact" value="assertionArtifact"/>
+    <property name="shared.ui.artifact-icons.bacDiscoveryToolArtifact" value="bacDiscoveryToolArtifact"/>
+    <property name="shared.ui.artifact-icons.bacEntityArtifact" value="bacEntityArtifact"/>
+    <property name="shared.ui.artifact-icons.bacServerArtifact" value="bacServerArtifact"/>
+    <property name="shared.ui.artifact-icons.businessPolicyArtifact" value="businessPolicyArtifact"/>
+    <property name="shared.ui.artifact-icons.collectionArtifact" value="collectionArtifact"/>
+    <property name="shared.ui.artifact-icons.contactArtifact" value="contactArtifact"/>
+    <property name="shared.ui.artifact-icons.contractArtifact" value="contractArtifact"/>
+    <property name="shared.ui.artifact-icons.contractRequestArtifact" value="contractRequestArtifact"/>
+    <property name="shared.ui.artifact-icons.documentationArtifact" value="documentationArtifact"/>
+    <property name="shared.ui.artifact-icons.dtdArtifact" value="dtdArtifact"/>
+    <property name="shared.ui.artifact-icons.endpointArtifact" value="endpointArtifact"/>
+    <property name="shared.ui.artifact-icons.externalEntityArtifact" value="externalEntityArtifact"/>
+    <property name="shared.ui.artifact-icons.applicationComponentArtifact" value="applicationComponentArtifact"/>
+    <property name="shared.ui.artifact-icons.hpsoaBpelProcessArtifact" value="hpsoaBpelProcessArtifact"/>
+    <property name="shared.ui.artifact-icons.businessProcessArtifact" value="businessProcessArtifact"/>
+    <property name="shared.ui.artifact-icons.hpsoaOperationArtifact" value="hpsoaOperationArtifact"/>
+    <property name="shared.ui.artifact-icons.businessProcessArtifact" value="businessProcessArtifact"/>
+    <property name="shared.ui.artifact-icons.projectArtifact" value="projectArtifact"/>
+    <property name="shared.ui.artifact-icons.hpsoaScaArtifact" value="hpsoaScaArtifact"/>
+    <property name="shared.ui.artifact-icons.hpsoaStmServerArtifact" value="hpsoaStmServerArtifact"/>
+    <property name="shared.ui.artifact-icons.hpsoaTechnicalPolicyArtifact" value="hpsoaTechnicalPolicyArtifact"/>
+    <property name="shared.ui.artifact-icons.applicationComponentArtifact" value="applicationComponentArtifact"/>
+    <property name="shared.ui.artifact-icons.impactToolArtifact" value="impactToolArtifact"/>
+    <property name="shared.ui.artifact-icons.applicationInterfaceArtifact" value="applicationInterfaceArtifact"/>
+    <property name="shared.ui.artifact-icons.jobToolArtifact" value="jobToolArtifact"/>
+    <property name="shared.ui.artifact-icons.lifecycleValidationToolArtifact" value="lifecycleValidationToolArtifact"/>
+    <property name="shared.ui.artifact-icons.organizationUnitArtifact" value="organizationUnitArtifact"/>
+    <property name="shared.ui.artifact-icons.personArtifact" value="personArtifact"/>
+    <property name="shared.ui.artifact-icons.policyComplianceToolArtifact" value="policyComplianceToolArtifact"/>
+    <property name="shared.ui.artifact-icons.registryArtifact" value="registryArtifact"/>
+    <property name="shared.ui.artifact-icons.ucmdbRepository" value="ucmdbRepository"/>
+    <property name="shared.ui.artifact-icons.ppmRepository" value="ppmRepository"/>
+    <property name="shared.ui.artifact-icons.sparxEaRepository" value="sparxEaRepository"/>
+	<property name="shared.ui.artifact-icons.csaRepository" value="csaRepository"/>
+	<property name="shared.ui.artifact-icons.rdbmsRepository" value="rdbmsRepository"/>
+    <property name="shared.ui.artifact-icons.reportArtifact" value="reportArtifact"/>
+    <property name="shared.ui.artifact-icons.reportingToolArtifact" value="reportingToolArtifact"/>
+    <property name="shared.ui.artifact-icons.sloArtifact" value="sloArtifact"/>
+    <property name="shared.ui.artifact-icons.soamServerArtifact" value="soamServerArtifact"/>
+    <property name="shared.ui.artifact-icons.storedSearchArtifact" value="storedSearchArtifact"/>
+    <property name="shared.ui.artifact-icons.syncToolArtifact" value="syncToolArtifact"/>
+    <property name="shared.ui.artifact-icons.taskArtifact" value="taskArtifact"/>
+    <property name="shared.ui.artifact-icons.taxonomyArtifact" value="taxonomyArtifact"/>
+    <property name="shared.ui.artifact-icons.toolArtifact" value="toolArtifact"/>
+    <property name="shared.ui.artifact-icons.trendCleanerToolArtifact" value="trendCleanerToolArtifact"/>
+    <property name="shared.ui.artifact-icons.trendPreparationToolArtifact" value="trendPreparationToolArtifact"/>
+    <property name="shared.ui.artifact-icons.uddiEntityArtifact" value="uddiEntityArtifact"/>
+    <property name="shared.ui.artifact-icons.uddiRegistryArtifact" value="uddiRegistryArtifact"/>
+    <property name="shared.ui.artifact-icons.webArtifact" value="webArtifact"/>
+    <property name="shared.ui.artifact-icons.webServiceArtifact" value="webServiceArtifact"/>
+    <property name="shared.ui.artifact-icons.wsdlArtifact" value="wsdlArtifact"/>
+    <property name="shared.ui.artifact-icons.wsPolicyArtifact" value="wsPolicyArtifact"/>
+    <property name="shared.ui.artifact-icons.xmlSchemaArtifact" value="xmlSchemaArtifact"/>
+    <property name="shared.ui.artifact-icons.xmlServiceArtifact" value="xmlServiceArtifact"/>
+    <property name="shared.ui.artifact-icons.xqueryArtifact" value="xqueryArtifact"/>
+    <property name="shared.ui.artifact-icons.xsltArtifact" value="xsltArtifact"/>
+	<property name="shared.ui.artifact-icons.svgArtifact" value="svgArtifact"/>
+	<property name="shared.ui.artifact-icons.diagramArtifact" value="diagramArtifact"/>
+	<property name="shared.ui.artifact-icons.surveyArtifact" value="surveyArtifact"/>
+	<property name="shared.ui.artifact-icons.groupingArtifact" value="groupingArtifact"/>
+	<property name="shared.ui.artifact-icons.junctionArtifact" value="junctionArtifact"/>
+	<property name="shared.ui.artifact-icons.surveyDefinitionArtifact" value="surveyDefinitionArtifact"/>
+    <property name="shared.ui.artifact-icons.csvTemplateArtifact" value="csvTemplateArtifact"/>
+    
+    <!-- Application Layer-->
+    <property name="shared.ui.artifact-icons.appCollaborationArtifact" value="appCollaborationArtifact"/>
+    <property name="shared.ui.artifact-icons.applicationComponentArtifact" value="applicationComponentArtifact"/>
+    <property name="shared.ui.artifact-icons.applicationFunctionArtifact" value="applicationFunctionArtifact"/>
+    <property name="shared.ui.artifact-icons.applicationInteractionArtifact" value="applicationInteractionArtifact"/>
+    <property name="shared.ui.artifact-icons.applicationInterfaceArtifact" value="applicationInterfaceArtifact"/>
+    <property name="shared.ui.artifact-icons.applicationServiceArtifact" value="applicationServiceArtifact"/>
+    <property name="shared.ui.artifact-icons.dataObjectArtifact" value="dataObjectArtifact"/>
+    <property name="shared.ui.artifact-icons.operationArtifact" value="operationArtifact"/>
+    
+     <!--  Business Layer -->
+    <property name="shared.ui.artifact-icons.businessActorArtifact" value="businessActorArtifact"/>
+    <property name="shared.ui.artifact-icons.businessCollaborationArtifact" value="businessCollaborationArtifact"/>
+    <property name="shared.ui.artifact-icons.businessEventArtifact" value="businessEventArtifact"/>
+    <property name="shared.ui.artifact-icons.businessFunctionArtifact" value="businessFunctionArtifact"/>
+    <property name="shared.ui.artifact-icons.businessInteractionArtifact" value="businessInteractionArtifact"/>
+    <property name="shared.ui.artifact-icons.businessInterfaceArtifact" value="businessInterfaceArtifact"/>
+    <property name="shared.ui.artifact-icons.businessObjectArtifact" value="businessObjectArtifact"/>
+    <property name="shared.ui.artifact-icons.businessContractArtifact" value="businessObjectArtifact"/>
+    <property name="shared.ui.artifact-icons.businessProcessArtifact" value="businessProcessArtifact"/>
+    <property name="shared.ui.artifact-icons.businessRoleArtifact" value="businessRoleArtifact"/>
+    <property name="shared.ui.artifact-icons.businessServiceArtifact" value="businessServiceArtifact"/>
+    <property name="shared.ui.artifact-icons.locationArtifact" value="locationArtifact"/>
+    <property name="shared.ui.artifact-icons.meaningArtifact" value="meaningArtifact"/>
+    <property name="shared.ui.artifact-icons.productArtifact" value="productArtifact"/>
+    <property name="shared.ui.artifact-icons.representationArtifact" value="representationArtifact"/>
+    <property name="shared.ui.artifact-icons.valueArtifact" value="valueArtifact"/>
+    
+    <!-- Technology Layer -->
+    <property name="shared.ui.artifact-icons.communicationPathArtifact" value="communicationPathArtifact"/>
+    <property name="shared.ui.artifact-icons.deploymentArtifact" value="deploymentArtifact"/>
+    <property name="shared.ui.artifact-icons.infrastructureFunctionArtifact" value="infrastructureFunctionArtifact"/>
+    <property name="shared.ui.artifact-icons.infrastructureInterface" value="infrastructureInterface"/>
+    <property name="shared.ui.artifact-icons.infrastructureServiceArtifact" value="infrastructureServiceArtifact"/>
+    <property name="shared.ui.artifact-icons.nodeArtifact" value="nodeArtifact"/>
+    <property name="shared.ui.artifact-icons.deviceArtifact" value="deviceArtifact"/>
+    <property name="shared.ui.artifact-icons.networkArtifact" value="networkArtifact"/>
+    <property name="shared.ui.artifact-icons.systemSoftwareArtifact" value="systemSoftwareArtifact"/>
+    <property name="shared.ui.artifact-icons.deploymentSpecification" value="deploymentArtifact"/>
+    
+    <!-- Motivation -->
+    <property name="shared.ui.artifact-icons.assessmentArtifact" value="assessmentArtifact"/>
+    <property name="shared.ui.artifact-icons.constraintArtifact" value="constraintArtifact"/>
+    <property name="shared.ui.artifact-icons.driverArtifact" value="driverArtifact"/>
+    <property name="shared.ui.artifact-icons.goalArtifact" value="goalArtifact"/>
+    <property name="shared.ui.artifact-icons.principleArtifact" value="principleArtifact"/>
+    <property name="shared.ui.artifact-icons.requirementArtifact" value="requirementArtifact"/>
+    <property name="shared.ui.artifact-icons.motivationArtifact" value="stakeholder"/>
+    <property name="shared.ui.artifact-icons.stakeholderArtifact" value="stakeholder"/>
+
+    <!-- Implementation and Migration -->
+    <property name="shared.ui.artifact-icons.workPackageArtifact" value="workPackageArtifact"/>
+    <property name="shared.ui.artifact-icons.plateauArtifact" value="plateauArtifact"/>
+    <property name="shared.ui.artifact-icons.deliverableArtifact" value="deliverableArtifact"/>
+    <property name="shared.ui.artifact-icons.programArtifact" value="workPackageArtifact"/>
+    <property name="shared.ui.artifact-icons.financialProfileArtifact" value="financialArtifact"/>
+    <property name="shared.ui.artifact-icons.implementationAndMigration" value="stakeholder"/>
+    <property name="shared.ui.artifact-icons.gapArtifact" value="gapArtifact"/>
+
+    <!-- Manually added mappings (virtual contract artifacts for Navigator) -->
+    <property name="shared.ui.artifact-icons.vd0_abstractContractArtifact" value="vd0_abstractContractArtifact"/>
+    <property name="shared.ui.artifact-icons.vd0_acceptedContractArtifact" value="vd0_abstractContractArtifact"/>
+    <property name="shared.ui.artifact-icons.vd0_rejectedContractArtifact" value="vd0_abstractContractArtifact"/>
+    <property name="shared.ui.artifact-icons.vd0_revokedContractArtifact" value="vd0_abstractContractArtifact"/>
+    <property name="shared.ui.artifact-icons.vd0_requestedContractArtifact" value="vd0_requestedContractArtifact"/>
+
+    <!-- TODO move these two into an extension -->
+    <property name="shared.ui.artifact-icons.hpsoaLogicalComponentArtifact" value="alm_logical-component"/>
+    <property name="shared.ui.artifact-icons.hpsoaMavenModuleArtifact" value="alm_maven-module"/>
+
+    <property name="shared.ui.artifact-icons.r_HTTPSArtifact" value="r_HTTPSArtifact"/>
+    <property name="shared.ui.artifact-icons.r_loadBalancingArtifact" value="r_loadBalancingArtifact"/>
+    <property name="shared.ui.artifact-icons.r_datapowerXI50Artifact" value="r_datapowerXI50Artifact"/>
+    <property name="shared.ui.artifact-icons.r_websphereJMSArtifact" value="r_websphereJMSArtifact"/>
+    <property name="shared.ui.artifact-icons.r_interfaceArtifact" value="r_interfaceArtifact"/>
+    <property name="shared.ui.artifact-icons.r_deviceArtifact" value="r_deviceArtifact"/>
+    <property name="shared.ui.artifact-icons.r_l7ProxyArtifact" value="r_l7ProxyArtifact"/>
+    <property name="shared.ui.artifact-icons.r_messageProcessingPolicy" value="r_messageProcessingPolicy"/>
+    <property name="shared.ui.artifact-icons.r_xi50ProcessingPolicyArtifact" value="r_xi50ProcessingPolicyArtifact"/>
+    <property name="shared.ui.artifact-icons.r_l7GatewayArtifact" value="r_l7GatewayArtifact"/>
+    <property name="shared.ui.artifact-icons.r_proxyArtifact" value="r_proxyArtifact"/>
+    <property name="shared.ui.artifact-icons.r_identityManagementArtifact" value="r_identityManagementArtifact"/>
+    <property name="shared.ui.artifact-icons.r_xi50WebServiceProxyArtifact" value="r_xi50WebServiceProxyArtifact"/>
+    <property name="shared.ui.artifact-icons.r_HTTPArtifact" value="r_HTTPArtifact"/>
+    <property name="shared.ui.artifact-icons.r_l7ProcessingPolicyArtifact" value="r_l7ProcessingPolicyArtifact"/>
+
+</configuration>

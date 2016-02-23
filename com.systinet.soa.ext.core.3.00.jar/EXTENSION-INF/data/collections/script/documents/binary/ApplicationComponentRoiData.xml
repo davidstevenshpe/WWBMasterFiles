@@ -1,0 +1,15 @@
+<query>
+  <parameters>
+	<!-- 0: any cost, 1: >= $1M, 2: >= $2M -->
+	<parameter name="cost" label="cost" type="number" defaultValue="0"/>	
+  </parameters>
+  
+  <orderBy>annualCostTotal ASC, returnOnInvestment ASC, name ASC</orderBy>
+  
+  SELECT a._uuid as uuid, a.name as name, afp.annualCostTotal as annualCostTotal, afp.annualCostLaborInt as annualCostLaborInt, 
+         afp.annualCostLaborExt as annualCostLaborExt, (afp.annualCostLaborExt + afp.annualCostLaborInt) as annualCostLabor, 
+         afp.annualCostSw as annualCostSw, afp.annualCostHw as annualCostHw, afp.annualCostOther as annualCostOther, 
+         afp.returnOnInvestment as returnOnInvestment, afp.netPresentValue as netPresentValue, afp.entityHealth.val as entityHealth, afp.transformationCost as transformationCost 
+  FROM applicationComponentArtifact a join appFinancialProfileArtifact afp using afp.profileOf where (afp.annualCostTotal is not null) 
+	   and ((:cost=0) or ((:cost=1) and (afp.annualCostTotal >= 1000000)) or ((:cost=2) and (afp.annualCostTotal >= 2000000))) 
+</query>

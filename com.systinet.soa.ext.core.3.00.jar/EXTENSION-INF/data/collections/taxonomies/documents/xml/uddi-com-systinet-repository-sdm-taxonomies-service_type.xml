@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taxonomy xmlns="http://systinet.com/uddi/taxonomy/v3/5.5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:r="http://systinet.com/2005/05/repository" xmlns:a="http://systinet.com/2005/05/soa/model/artifact" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:rest="http://systinet.com/2005/05/soa/resource" xmlns:pt="http://systinet.com/2005/05/soa/model/property/type" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:p="http://systinet.com/2005/05/soa/model/property" xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup" check="true">
+	<tModel xmlns="http://systinet.com/uddi/taxonomy/v3/5.0" deleted="false" tModelKey="uddi:hp.com:soa:model:service:type">
+		<name xmlns="urn:uddi-org:api_v3">Service Type Taxonomy</name>
+		<description xmlns="urn:uddi-org:api_v3">Taxonomy of service type.</description>
+		<categoryBag xmlns="urn:uddi-org:api_v3">
+			<keyedReference keyName="Compatibility" keyValue="tModel" tModelKey="uddi:systinet.com:taxonomy:compatibility"/>
+			<keyedReference keyName="Compatibility" keyValue="businessService" tModelKey="uddi:systinet.com:taxonomy:compatibility"/>
+			<keyedReference keyName="Compatibility" keyValue="businessEntity" tModelKey="uddi:systinet.com:taxonomy:compatibility"/>
+			<keyedReference keyName="Compatibility" keyValue="bindingTemplate" tModelKey="uddi:systinet.com:taxonomy:compatibility"/>
+			<keyedReference keyName="Checked value set" keyValue="checked" tModelKey="uddi:uddi.org:categorization:types"/>
+		</categoryBag>
+	</tModel>
+	<compatibilityBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+		<compatibility>tModel</compatibility>
+		<compatibility>businessService</compatibility>
+		<compatibility>businessEntity</compatibility>
+		<compatibility>bindingTemplate</compatibility>
+	</compatibilityBag>
+	<categorizationBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+		<categorization>categorization</categorization>
+	</categorizationBag>
+	<validation xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+		<categories>
+			<category disabled="false" keyName="Business service" keyValue="businessService"/>
+			<category disabled="false" keyName="Application service" keyValue="applicationService"/>
+			<category disabled="false" keyName="Infrastructure service" keyValue="infrastructureService"/>
+		</categories>
+	</validation>
+</taxonomy>

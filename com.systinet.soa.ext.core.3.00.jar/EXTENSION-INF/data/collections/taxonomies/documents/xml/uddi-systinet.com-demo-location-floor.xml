@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taxonomy check="false" brief="false" xmlns="http://systinet.com/uddi/taxonomy/v3/5.5">
+  <tModel tModelKey="uddi:systinet.com:demo:location:floor" deleted="false" tModelKeyV2="uuid:84984619-d615-38f8-b97e-2513feb62b94" xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <name xmlns="urn:uddi-org:api_v3">demo:location:floor</name>
+    <description xmlns="urn:uddi-org:api_v3">Specifies the floor on which the department is located</description>
+    <categoryBag xmlns="urn:uddi-org:api_v3">
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Categorization system" keyValue="categorization"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Unchecked valueset" keyValue="unchecked"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="businessEntity"/>
+    </categoryBag>
+  </tModel>
+  <compatibilityBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <compatibility>businessEntity</compatibility>
+  </compatibilityBag>
+  <categorizationBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <categorization>categorization</categorization>
+  </categorizationBag>
+</taxonomy>

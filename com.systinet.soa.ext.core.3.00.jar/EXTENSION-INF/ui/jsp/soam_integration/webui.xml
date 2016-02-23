@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config name="soam" savingPeriod="5000">
+    <webFramework>
+    
+        <component name="/integration/soam/servicestatus" page="/soam/soamIntegrationServiceStatus.jsp"
+                   className="com.systinet.platform.ui.integration.soam.SoamIntegrationServiceStatusComponent"/>
+        <component name="/integration/soam/servicestatus/cell"
+                   page="/soam/soamIntegrationServiceStatusCell.jsp"
+                   className="com.systinet.platform.ui.integration.soam.SoamIntegrationServiceStatusCellComponent"/>
+
+        <component name="/integration/soamServerArtifact/connectionCheckerNew"
+                   className="com.hp.systinet.integration.ui.tools.NewSoamConnectionCheckerComponent"
+                   page="@/integration/testconnection"/>
+ 
+    </webFramework>
+</config>

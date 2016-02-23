@@ -1,0 +1,649 @@
+<config name="ui-sc-administration" savingPeriod="5000">
+    <webFramework>
+<!-- UI Role -->
+		<component name="/admin/uirole/viewLinker" page="/admin/uirole/viewUIRoleLinker.jsp"
+       		className="com.hp.systinet.sc.ui.admin.uirole.ViewUIRoleLinker" >
+       	</component>
+        <task uri="/admin/uirole/viewLinker" component="/admin/uirole/viewLinker" />
+        
+        <component name="/admin/uirole/createLinker" page="/admin/uirole/createLinker.jsp" 
+            className="com.hp.systinet.sc.ui.admin.role.bulk.CreateLinkerComponentImpl"/>
+        <task uri="/admin/uirole/createLinker" component="/admin/uirole/createLinker" />
+        
+        <component name="/admin/uirole/view" page="/admin/uirole/viewUIRole.jsp"
+       		className="com.hp.systinet.sc.ui.admin.uirole.ViewUIRole" >
+       	</component>
+        <task uri="/common/uirole/view" component="/admin/uirole/view" />
+        
+        <component name="/admin/uirole/edit" page="/admin/uirole/editUIRole.jsp" 
+        	className="com.hp.systinet.sc.ui.admin.uirole.EditUIRole" >
+        	<parameter paramName="Mode" paramValue="Edit"/>
+        </component>
+        <component name="/admin/uirole/editLinker" page="/admin/uirole/editUIRoleLinker.jsp" className="com.hp.systinet.sc.ui.admin.uirole.EditUIRoleLinkerComponent" />
+        <task uri="/admin/uirole/edit" component="/admin/uirole/edit" />
+        
+        <component name="/admin/uirole/bulk/deleteUIRoles" page="/admin/uirole/bulk/deleteUIRoles.jsp"
+         className="com.hp.systinet.sc.ui.admin.uirole.bulk.DeleteUIRolesComponent"/>
+         
+		<component name="/admin/uirole/deleteUIRole" page="/admin/uirole/deleteUIRole.jsp"
+         className="com.hp.systinet.sc.ui.admin.uirole.DeleteUIRoleComponent"/>
+         
+        <component name="/admin/uirole/create" page="/admin/uirole/createUIRole.jsp"
+       		className="com.hp.systinet.sc.ui.admin.uirole.EditUIRole" >
+        	<parameter paramName="Mode" paramValue="Create"/>
+        </component>
+
+        <task uri="/admin/uirole/create" component="/admin/uirole/create" >
+			<parameter paramName="captionKey" paramValue="com.hp.systinet.sc.ui.admin.util.uimessages$UI_ROLE_CREATE"/>
+        </task>
+
+        <component name="/admin/uirole/selectTabs" page="/admin/uirole/selectTabs.jsp"
+         className="com.hp.systinet.sc.ui.admin.uirole.SelectTabsComponent"/>
+
+         <component name="/admin/uirole/removeUIRoles" page="/admin/uirole/removeUIRoles.jsp"
+         className="com.hp.systinet.sc.ui.admin.uirole.RemoveUIRolesComponent"/>
+         
+         <component name="/admin/uirole/selectUIRole" page="/admin/uirole/selectUIRole.jsp" className="com.hp.systinet.sc.ui.admin.uirole.SelectUIRolesComponent"/>
+         <component name="/admin/uirole/selectUIRoleWindow" page="/admin/uirole/selectUIRoleWindow.jsp"/>
+         
+<!-- Datasource executeAsRole UI -->
+        <component name="/admin/script/role/roleSelectorWidget" page="/admin/script/role/roleSelectorWidget.jsp" 
+        	className="com.hp.systinet.sc.ui.admin.script.role.RoleSelectorWidget" >
+        </component>
+        <component name="/admin/script/role/selectedRoleViewWidget" page="/admin/script/role/selectedRoleViewWidget.jsp" 
+        	className="com.hp.systinet.sc.ui.admin.script.role.SelectedRoleViewWidget" >
+        </component>
+        <component name="/admin/script/role/selectedRoleFilterWidget" page="/admin/script/role/selectedRoleFilterWidget.jsp" 
+        	className="com.hp.systinet.sc.ui.admin.script.role.SelectedRoleFilterWidget" >
+        </component>
+<!-- Role -->		
+        <component name="/admin/role/browseRole" page="/admin/role/browseRole.jsp"	 />
+        <task uri="/admin/role/browse" component="/admin/role/browseRole" >
+         	<parameter paramName="captionKey" paramValue="com.hp.systinet.sc.ui.admin.util.uimessages$BROWSE_LIST"/>
+       </task>
+        <component name="/admin/role/edit" page="/admin/role/editRole.jsp" 
+        	className="com.hp.systinet.sc.ui.admin.role.EditRole" >
+        	<parameter paramName="Mode" paramValue="Edit"/>
+        </component>
+        <component name="/admin/role/editLinker" page="/admin/role/editRoleLinker.jsp" className="com.hp.systinet.sc.ui.admin.role.EditRoleLinkerComponent" />
+        <task uri="/admin/role/edit" component="/admin/role/edit" />
+        	
+       <component name="/admin/role/create" page="/admin/role/createRole.jsp"
+       		className="com.hp.systinet.sc.ui.admin.role.EditRole" >
+        	<parameter paramName="Mode" paramValue="Create"/>
+        </component>
+        <task uri="/admin/role/create" component="/admin/role/create" >
+			<parameter paramName="captionKey" paramValue="com.hp.systinet.sc.ui.admin.util.uimessages$ROLE_CREATE"/>
+        </task>
+       <component name="/admin/role/view" page="/admin/role/viewRole.jsp"
+       		className="com.hp.systinet.sc.ui.admin.role.ViewRole" >
+       	</component>
+        <task uri="/common/role/view" component="/admin/role/view" />
+         	
+        <component name="/admin/role/viewLinker" page="/admin/role/viewRoleLinker.jsp"
+       		className="com.hp.systinet.sc.ui.admin.role.ViewRoleLinker" >
+       	</component>
+        <task uri="/admin/role/viewLinker" component="/admin/role/viewLinker" />
+        
+        <component name="/admin/role/createLinker" page="/admin/role/createLinker.jsp" 
+            className="com.hp.systinet.sc.ui.admin.role.bulk.CreateLinkerComponentImpl"/>
+        <task uri="/admin/role/createLinker" component="/admin/role/createLinker" />
+        
+        <component name="/admin/role/roleTypeFormat" className="com.hp.systinet.sc.ui.admin.role.RoleTypeFormat" page="/admin/role/roleTypeFormat.jsp" />
+        <component name="/admin/role/bulk/deleteRoles" page="/admin/common/retirePrincipals.jsp"
+         className="com.hp.systinet.sc.ui.admin.role.bulk.DeleteRolesComponent"/>
+         
+		<component name="/admin/role/deleteRole" page="/admin/role/deleteRole.jsp"
+         className="com.hp.systinet.sc.ui.admin.role.DeleteRoleComponent"/>
+
+		<component name="/admin/role/subRoles" page="/admin/role/subRoles.jsp"
+         className="com.hp.systinet.sc.ui.admin.role.SubRolesComponent"/>
+
+		<component name="/admin/role/addSubRolesSelector" page="/admin/common/selectPrincipal.jsp" className="com.hp.systinet.sc.ui.admin.role.AddSubRolesSelectorComponent">
+            <parameter paramName="disableUsersTab" paramValue="true"/>
+            <parameter paramName="disableGroupsTab" paramValue="true"/>
+        </component>
+        
+		<component name="/admin/role/removeSubRoles" page="/admin/role/removeSubRoles.jsp"
+         className="com.hp.systinet.sc.ui.admin.role.RemoveSubRolesComponent"/>
+
+		<component name="/admin/role/roleUiAccess" page="/admin/role/roleUiAccess.jsp"
+         className="com.hp.systinet.sc.ui.admin.role.RoleUiAccessComponent"/>
+
+		<component name="/admin/role/roleContains" page="/admin/role/roleContains.jsp"
+         className="com.hp.systinet.sc.ui.admin.role.RoleContainsComponent"/>
+
+		<!-- Groups -->
+        <task uri="/admin/group/browse" component="/admin/group/browseGroup" >
+            <parameter paramName="captionKey" paramValue="com.hp.systinet.sc.ui.admin.util.uimessages$GROUP_LIST"/>
+        </task>
+        
+        <task uri="/admin/group/createLinker" component="/admin/group/createLinker" /><!-- Group bulk 'Create Group' operation -->
+        <component name="/admin/group/createLinker" page="/admin/group/createLinker.jsp" 
+            className="com.hp.systinet.sc.ui.admin.group.bulk.CreateLinkerComponent" /><!-- Group bulk 'Create Group' operation -->        
+        
+        <task uri="/admin/group/retireLinker" component="/admin/group/retireLinker" /><!-- Group bulk 'Retire group(s)' operation -->
+        <component name="/admin/group/retireLinker" page="/admin/group/retireLinker.jsp" /> <!-- Group bulk 'Retire' operation -->                
+                        
+        <task uri="/common/group/view" component="/admin/group/viewGroup" />
+        
+        <component name="/admin/group/editGroupLinker" page="/admin/group/editGroupLinker.jsp" className="com.hp.systinet.sc.ui.admin.group.CommonGroupAction" />
+        
+        <task uri="/admin/group/edit" component="/admin/group/editGroup" />
+		
+		<component name="/admin/group/viewGroupLinker" page="/admin/group/viewGroupLinker.jsp" className="com.hp.systinet.sc.ui.admin.group.ViewGroupLinker">
+        	<parameter paramName="groupName" paramValue="${groupName}"/>  
+        </component>
+		
+        <component name="/admin/group/browseGroup" page="/admin/group/browseGroup.jsp">
+        	<parameter paramName="customizationId" value="admin.group.table" />  
+        </component>        
+        
+        <component name="/admin/group/groupStatus" page="/admin/group/groupStatus.jsp" className="com.hp.systinet.sc.ui.admin.group.GroupStatus">
+        </component>                
+        
+        <component name="/admin/group/viewGroup" page="/admin/group/viewGroup.jsp" className="com.hp.systinet.sc.ui.admin.group.ViewGroup">
+        </component>
+        
+        <component name="/admin/group/editGroup" page="/admin/group/editGroup.jsp" className="com.hp.systinet.sc.ui.admin.group.EditGroup">
+        </component>
+        
+        <component name="/admin/group/addMember" page="/admin/group/addMember.jsp" className="com.hp.systinet.sc.ui.admin.group.AddMember">
+        </component>
+        
+        <component name="/admin/group/create" page="/admin/group/createGroup.jsp"
+       		className="com.hp.systinet.sc.ui.admin.group.CreateGroup" >
+        	<parameter paramName="Mode" paramValue="Create"/>
+        </component>
+        <task uri="/admin/group/create" component="/admin/group/create" >
+			<parameter paramName="captionKey" paramValue="com.hp.systinet.sc.ui.admin.util.uimessages$GROUP_CREATE"/>
+        </task>
+        
+        <component name="/admin/group/retire" page="/admin/group/retireGroup.jsp" className="com.hp.systinet.sc.ui.admin.group.CommonGroupAction" >
+        </component>
+        
+        <component name="/admin/group/setGroupOwnership" page="/admin/group/setGroupOwnership.jsp" className="com.hp.systinet.sc.ui.admin.group.SetGroupOwnership" >
+        </component>
+        
+        <component name="/admin/group/setGroupDefaultDomain" page="/admin/group/setGroupDefaultDomain.jsp" className="com.hp.systinet.sc.ui.admin.group.SetGroupDefaultDomain" >
+        </component>
+        
+         <component name="/admin/group/bulk/retirePrincipals" page="/admin/common/retirePrincipals.jsp"
+       		className="com.hp.systinet.sc.ui.admin.group.bulk.RetireGroupBulkOperation" >
+        </component>
+
+        <component name="/admin/group/bulk/delete" page="/admin/group/bulk/deleteGroups.jsp"
+       		className="com.hp.systinet.sc.ui.admin.group.bulk.DeleteGroupsComponent" >
+        </component>
+        
+        <component name="/admin/group/delete" page="/admin/group/deleteGroup.jsp"
+       		className="com.hp.systinet.sc.ui.admin.group.DeleteGroupComponent" >
+        </component>
+        
+        <!-- User Profiles -->
+        <task uri="/admin/user/browse" component="/admin/user/browseUserProfile" >
+            <parameter paramName="captionKey" paramValue="com.hp.systinet.sc.ui.admin.util.uimessages$USER_PROFILES"/>
+        </task>
+        
+        <task uri ="/admin/user/view" component="/admin/user/viewUserTabs"/>        
+        <task uri ="/admin/user/viewGroupsAndRoles"  component="/admin/user/viewGroupsAndRoles" />
+        <task uri ="/admin/user/addUserGroupsLinker"  component="/admin/user/addUserGroupsLinker" />
+        <task uri ="/admin/user/removeUserGroupsLinker"  component="/admin/user/removeUserGroupsLinker" />
+        
+        <task uri ="/admin/user/editUserProfile"  component="/admin/user/editUserProfileComponent"/>
+        	
+        <task uri ="/admin/user/deleteUserProfile"  component="/core/contextActions/deleteArtifact" >
+        	 <parameter paramName="artifact" paramValue="${artifact}"/>
+        </task>
+        <task uri ="/admin/user/newPersonArtifact"  component="/admin/user/newPersonArtifact" >
+            <restrictions  allowOwner="true">
+                <role>UserGroupManager</role>
+            </restrictions>
+            <parameter paramName="artifactType" paramValue="personArtifact"/>
+        </task>
+        <component name="/admin/user/browseUserProfile" page="/admin/user/browseUserProfile.jsp"/>
+        <component name="/admin/user/editPersonArtifact" page="@/core/contextActions/editArtifact" className="com.hp.systinet.sc.ui.admin.user.EditPersonArtifact" />
+        
+        <!-- BULK operations -->
+        <component name="/admin/user/bulk/createUserLinker" page="/admin/user/bulk/createUserLinker.jsp" className="com.hp.systinet.sc.ui.admin.user.bulk.CreateUserLinkerComponent" />
+        <component name="/admin/user/bulk/deleteUsers" page="/admin/user/bulk/deleteUsers.jsp" className="com.hp.systinet.sc.ui.impl.admin.user.bulk.DeleteUsersComponentImpl"/>
+        <component name="/admin/user/bulk/enableDisableUsers" page="/admin/user/bulk/disableEnableUsers.jsp" className="com.hp.systinet.sc.ui.impl.admin.user.bulk.DisableEnableUsersComponentImpl">
+			<parameter paramName="status" paramValue="S1"/>
+        </component>
+        <component name="/admin/user/bulk/disableEnableUsers" page="/admin/user/bulk/disableEnableUsers.jsp" className="com.hp.systinet.sc.ui.impl.admin.user.bulk.DisableEnableUsersComponentImpl">
+			<parameter paramName="status" paramValue="S2"/>
+        </component>
+        <component name="/admin/user/bulk/ldapSyncUserProfiles" page="/admin/user/bulk/ldapSyncUsers.jsp" className="com.hp.systinet.sc.ui.impl.admin.user.bulk.LdapSynchronizationComponentImpl"/>
+        <component name="/admin/user/bulk/newArtifactsOwnerBy" page="/admin/user/bulk/usersOwnerBy.jsp" className="com.hp.systinet.sc.ui.impl.admin.user.bulk.UsersOwnerByComponent"/>
+        <component name="/admin/common/newArtifactsOwnerByWindow" page="/admin/common/usersOwnerByWindow.jsp" className="com.hp.systinet.sc.ui.admin.common.UsersOwnerByWindowComponent"/>
+        <component name="/admin/user/bulk/ldapImportUsers" page="/admin/user/bulk/ldapImportUsers.jsp" className="com.hp.systinet.sc.ui.impl.admin.user.bulk.LdapImportComponent"/>        
+        <component name="/admin/user/bulk/setUserDefaultDomain" page="/admin/user/bulk/setUserDefaultDomain.jsp" className="com.hp.systinet.sc.ui.impl.admin.user.bulk.SetUserDefaultDomainComponent"/>
+        <component name="/admin/user/bulk/setUserDefaultDomainWindow" page="/admin/user/bulk/setUserDefaultDomainWindow.jsp" className="com.hp.systinet.sc.ui.impl.admin.user.bulk.SetUserDefaultDomainWindowComponent"/>
+        <component name="/admin/user/bulk/retirePrincipals" page="/admin/common/retirePrincipals.jsp" className="com.hp.systinet.sc.ui.impl.admin.user.bulk.RetireUsersComponent"/>
+        <component name="/admin/common/retirePrincipalsWindow" page="/admin/common/retirePrincipalsWindow.jsp" className="com.hp.systinet.sc.ui.impl.admin.user.bulk.RetireUsersWindowComponent"/>
+        <component name="/admin/common/principalRetirementReportLink" page="/admin/common/principalRetirementReportLink.jsp" className="com.hp.systinet.sc.ui.impl.admin.widgets.PrincipalLinkWidget"/>
+        
+        <!-- Detail actions -->
+        <component name="/admin/user/actions" page="/admin/common/confirmation.jsp"
+            className="com.hp.systinet.sc.ui.admin.user.UserAction" >
+        </component>
+        
+        <component name="/admin/user/newPersonArtifact" className="com.hp.systinet.sc.ui.admin.user.NewPersonArtifactComponent" page="@/core/artifact/newArtifact" />
+        
+        <component name="/admin/user/newLoginName" className="com.hp.systinet.sc.ui.admin.user.NewLoginNameComponent" page="/admin/user/newLoginName.jsp" />
+        
+        <component name="/admin/user/retireUser" page="/admin/user/retireUser.jsp" className="com.hp.systinet.sc.ui.admin.user.UserAction" />
+   
+        <component name="/admin/user/deleteUser" page="/admin/user/deleteUser.jsp"/>
+   
+        
+        <component name="/admin/user/externalUser" page="/admin/user/externalUser.jsp" className="com.hp.systinet.sc.ui.admin.user.ExternalUserComponent"/>
+        
+        <component name ="/admin/user/viewGroupsAndRoles" className="com.hp.systinet.sc.ui.admin.user.ViewGroupsAndRolesComponent" page="/admin/user/viewGroupsAndRoles.jsp"/>
+        <component name ="/admin/user/removeUserGroupsLinker" className="com.hp.systinet.sc.ui.admin.user.RemoveGroupUserProfileComponent" page="/admin/user/removeUserGroupsLinker.jsp"/>
+        <component name ="/admin/user/viewGroupLinkRenderer" page="/admin/user/groupLink.jsp"/>
+        
+        <component name="/admin/group/bulk/removeMembers" page="/admin/group/bulk/removeMember.jsp" className="com.hp.systinet.sc.ui.admin.group.bulk.RemoveMember" />
+        
+        <!-- Configuration -->
+        <!-- Basic -->
+		<task uri="/admin/configuration/homepage" component="/admin/configuration/viewConfigTabs"
+			>
+			<parameter paramName="captionKey" paramValue="com.hp.systinet.sc.ui.admin.config.basic.BasicSettingsMessages$configuration.title"/> 
+		</task>
+ 
+        <component name ="/admin/configuration/viewConfigTabs" className="com.hp.systinet.sc.ui.admin.config.basic.BasicSettings" 
+        	page="/admin/config/viewConfigTabs.jsp"/>
+		<component name="/admin/configuration/basicSettings" 
+			page="admin/config/basic/basicSettings.jsp"
+			className="com.hp.systinet.sc.ui.admin.config.basic.BasicSettings" />			        
+
+		<!-- License -->
+		<task uri="/common/license/enterKey" component="/admin/configuration/wizard/enterKey">
+			<parameter paramName="captionKey"
+				paramValue="com.hp.systinet.sc.ui.admin.config.license.LicenseMessages$enterLicenseKey_title" />
+		</task>
+	
+		<task uri="/common/license/licenseSummary" component="/admin/configuration/wizard/licenseSummary">
+			<parameter paramName="captionKey"
+				paramValue="com.hp.systinet.sc.ui.admin.config.license.LicenseMessages$licenseSummary_title" />
+		</task>
+		<task uri="/common/license/browseLicensedUsers" component="/admin/configuration/license/browseLicensedUsers">
+			<parameter paramName="captionKey"
+				paramValue="com.hp.systinet.sc.ui.admin.config.license.LicenseMessages$editLicensedUsers_title" />
+		</task>
+
+		<component name="/admin/configuration/wizard/enterKey"
+			page="/admin/config/license/licenseKey.jsp" className="com.hp.systinet.sc.ui.admin.config.license.EnterKey" />
+		<component name="/admin/configuration/wizard/licenseSummary"
+			page="/admin/config/license/licenseSummary.jsp" className="com.hp.systinet.sc.ui.admin.config.license.LicenseSummary" />
+	
+		<component name="/admin/configuration/licenseOverview" page="admin/config/license/licenseOverview.jsp"
+			className="com.hp.systinet.sc.ui.admin.config.license.LicenseOverview" />
+		<component name="/admin/configuration/license/browseLicensedUsers" page="admin/config/license/browseLicensedUsers.jsp"
+			className="com.hp.systinet.sc.ui.admin.config.license.BrowseLicensedUsersComponent" />
+		<component name="/admin/configuration/license/removeLicensedUsers" page="admin/config/license/removeLicensedUsers.jsp"
+			className="com.hp.systinet.sc.ui.admin.config.license.RemoveLicensedUsersComponent" />
+			
+		<!-- SelfTest -->
+		<component name="/admin/configuration/selfTest" 
+			page="admin/config/selftest/selfTest.jsp"
+			className="com.hp.systinet.sc.ui.admin.config.selftest.SelfTest" />
+		<component name="/admin/configuration/preferences/selfTestReport" 
+			page="admin/config/selftest/preferences/selfTestReport.jsp" className="com.hp.systinet.sc.ui.admin.config.selftest.SelfTestReport" />
+			
+		<!-- System Settings -->
+		<task uri ="/admin/configuration/system/browse" component ="/admin/configuration/system/browse"/>
+		
+		<task uri="/admin/configuration/system/action/downloadProperty" component="/admin/configuration/system/action/downloadProperty" style="">
+		</task>
+		
+		<task uri="/admin/configuration/system/action/exportProperties" component="/admin/configuration/system/action/exportProperties"  style=""/>
+ 
+		<component name="/admin/configuration/system/browse" page="admin/config/system/browseSystemProperties.jsp"/>
+
+        <!-- Shortcut -->
+        <!-- Manage Shortcut -->
+        <task uri="/admin/shortcut/homepage" component="/admin/shortcut/manageShortcuts">
+            <parameter paramName="captionKey" paramValue="com.hp.systinet.sc.ui.admin.shortcut.ManageShortcutsMessages$manageShortcuts.title"/>
+        </task>
+        <component name="/admin/integrations/mappingsTab" page="admin/integrations/mappingsTab.jsp"/>
+        <component name="/admin/integrations/serversTab" page="admin/integrations/serversTab.jsp"/>
+        <component name="/admin/integrations/manageIntegrations" page="admin/integrations/manageIntegrations.jsp"/>
+        <task uri="/admin/integrations/homepage" component="/admin/integrations/manageIntegrations">
+            <parameter paramName="captionKey" paramValue="com.hp.systinet.sc.ui.admin.util.uimessages$INTEGRATIONS"/>
+        </task>
+
+        <component name ="/admin/shortcut/manageShortcuts" page="/admin/shortcut/manageShortcuts.jsp"/>
+        <component name="/admin/shortcut/overview" page="admin/shortcut/overview.jsp" className="com.hp.systinet.sc.ui.admin.shortcut.ShortcutsOverviewComponent"/>
+        <component name="/admin/shortcut/statistics" page="admin/shortcut/statistics.jsp"/>
+        <component name="/admin/shortcut/browseStatistic" page="admin/shortcut/browseStatistic.jsp" />
+        <component name="/admin/shortcut/performance" page="admin/shortcut/performance.jsp"/>
+        <component name="/admin/shortcut/browsePerformance" page="admin/shortcut/browsePerformance.jsp"/>
+        <component name="/admin/shortcut/shortcutsConfigurationTable" page="admin/shortcut/shortcutsConfigurationTable.jsp"/>
+        <component name="/admin/shortcut/shortcutAction" page="admin/shortcut/shortcutAction.jsp" className="com.hp.systinet.sc.ui.admin.shortcut.ShortcutActionComponent"/>
+        <component name="/reports/shortcutsCalculationOperation" page="admin/report/shortcutsCalculationReport.jsp" className="com.hp.systinet.sc.impl.report.ExecutionReportComponentBase" />
+
+        <!-- Report Cleanup Settings -->
+        <component name="/admin/configuration/reportCleanup"
+            page="admin/config/cleanup/reportCleanup.jsp"
+            className="com.hp.systinet.sc.ui.admin.config.cleanup.ReportCleanup" />
+
+		<!-- Actions System Settings -->
+		<component name="/admin/configuration/system/actionLinkers" className ="com.hp.systinet.sc.ui.admin.config.system.SystemActionLinkersComponent" page="admin/config/system/actionLinkers.jsp"/>	
+		
+		<component name="/admin/configuration/system/action/editProperty" className ="com.hp.systinet.sc.ui.admin.config.system.action.SystemEditPropertyComponent" page="admin/config/system/action/editProperty.jsp"/>
+		<component name="/admin/configuration/system/action/editPropertyWindow" className ="com.hp.systinet.sc.ui.admin.config.system.action.SystemEditPropertyWindowComponent" page="admin/config/system/action/editPropertyWindow.jsp"/>	
+		
+		<component name="/admin/configuration/system/action/downloadProperty" className ="com.hp.systinet.sc.ui.admin.config.system.action.SystemDownloadPropertyComponent" />	
+		<component name="/admin/configuration/system/action/uploadDownloadLinker" className ="com.hp.systinet.sc.ui.admin.config.system.action.SystemUploadDownloadLinkerComponent" page="admin/config/system/action/uploadDownloadLinker.jsp"/>	
+		
+		<component name="/admin/configuration/system/action/exportProperties" className ="com.hp.systinet.sc.ui.admin.config.system.action.ExportZipComponent" />
+		
+		<component name="/admin/configuration/system/action/deleteProperty" className ="com.hp.systinet.sc.ui.admin.config.system.action.SystemDeletePropertyComponent" page="admin/config/system/action/deleteProperty.jsp"/>	
+		
+		<component name="/admin/configuration/system/action/addProperty" className ="com.hp.systinet.sc.ui.admin.config.system.action.SystemAddPropertyComponent" page="admin/config/system/action/addProperty.jsp"/>
+		
+		<component name="/admin/configuration/system/action/selectDomainLinker" className ="com.hp.systinet.sc.ui.admin.config.system.action.SelectDomainLinkerComponent" page="admin/config/system/action/selectDomainLinker.jsp"/>	
+		
+		<component name="/admin/configuration/system/action/importZip" className ="com.hp.systinet.sc.ui.admin.config.system.action.ImportZipComponent" page="admin/config/system/action/importZip.jsp"/>	
+		<component name="/admin/configuration/system/action/exportZip" page="admin/config/system/action/exportZip.jsp"/>	
+		
+		<!-- Domain -->
+		<task uri="/admin/domain/browse" component="/admin/domain/browseDomain" >
+			<parameter paramName="captionKey" paramValue="com.hp.systinet.sc.ui.admin.domain.DomainMessages$browseDomain.title" />
+		</task>
+
+		<task uri="/admin/domain/create" component="/admin/domain/createDomain" >
+			<parameter paramName="captionKey" paramValue="com.hp.systinet.sc.ui.admin.domain.DomainMessages$createDomain.title" />
+		</task>
+
+		<task uri="/admin/domain/edit" component="/admin/domain/editDomain" />
+		<task uri="/admin/domain/action/delete" component="/admin/domain/action/deleteDomain" >
+			<parameter paramName="captionKey" paramValue="com.hp.systinet.sc.ui.admin.domain.DomainMessages$action.deleteDomain.title" />
+		</task>
+		
+		<task uri="/admin/domain/acl/create" component="/admin/domain/acl/createRule" >
+			<parameter paramName="captionKey" paramValue="com.hp.systinet.sc.ui.admin.domain.DomainMessages$createRule.title" />
+		</task>
+
+		<task uri="/admin/domain/acl/edit" component="/admin/domain/acl/editRule" >
+			<parameter paramName="captionKey" paramValue="com.hp.systinet.sc.ui.admin.domain.DomainMessages$editRule.title" />
+		</task>
+
+        <component name="/admin/domain/acl/defaultAcl" page="/admin/domain/acl/defaultAcl.jsp" className="com.hp.systinet.sc.ui.admin.domain.acl.DefaultAclComponent"/>
+        <component name="/admin/domain/role/rolesAssignment" className="com.hp.systinet.sc.ui.admin.domain.role.RolesAssignmentComponent" page="/admin/domain/role/rolesAssignment.jsp"/>        
+	    
+	    
+	    <component name="/admin/domain/member/membersAssignment" page="/admin/domain/member/membersAssignment.jsp" className="com.hp.systinet.sc.ui.admin.domain.member.MembersAssignmentComponent"/>
+	    <component name="/admin/domain/member/viewRoles" page="/admin/domain/member/viewRoles.jsp" />	    
+	    <component name="/admin/domain/member/editRoles" page="/admin/domain/member/editRoles.jsp" />
+	    <component name="/admin/domain/member/memberRolesSelector" page="/admin/domain/member/memberRolesSelector.jsp" className="com.hp.systinet.sc.ui.admin.domain.member.RolesSelectorWindowComponent"/>
+	            
+		
+        <component name="/admin/domain/statisticsDomain" className="com.hp.systinet.sc.ui.impl.admin.domain.StatisticsDomainComponent" page="/admin/domain/statisticsDomain.jsp"/>
+        <component name="/admin/domain/defaultRole" className="com.hp.systinet.sc.ui.impl.admin.domain.DefaultRoleComponent" page="/admin/domain/defaultRole.jsp"/>
+
+		<component name="/admin/domain/browseDomain" page="admin/domain/browseDomain.jsp" className="com.hp.systinet.sc.ui.admin.domain.BrowseDomainComponent" />
+		<component name="/admin/domain/createLinker" page="admin/domain/createLinker.jsp" className="com.hp.systinet.sc.ui.admin.domain.bulk.CreateLinkerComponent" />
+		<component name="/admin/domain/createDomain" page="admin/domain/createDomain.jsp" className="com.hp.systinet.sc.ui.admin.domain.CreateDomainComponent" />
+		<component name="/admin/domain/editDomain" page="admin/domain/editDomain.jsp" className="com.hp.systinet.sc.ui.admin.domain.EditDomainComponent" />
+		
+		<component name="/admin/domain/bulk/deleteDomain" page="admin/domain/deleteDomain.jsp" className="com.hp.systinet.sc.ui.admin.domain.bulk.BulkDeleteDomainComponent" />
+		<component name="/admin/domain/action/deleteDomain" page="admin/domain/deleteDomainSingle.jsp" className="com.hp.systinet.sc.ui.admin.domain.action.DeleteDomainComponent" />
+		
+        <component name="/admin/domain/acl/browseRule" className="com.hp.systinet.sc.ui.impl.admin.domain.acl.BrowseRuleComponent" page="/admin/domain/acl/browseRule.jsp"/>
+		<component name="/admin/domain/acl/createLinker" page="admin/domain/acl/createLinker.jsp" />        
+		<component name="/admin/domain/acl/editLinker" page="admin/domain/acl/editLinker.jsp" />
+        <component name="/admin/domain/acl/createRule" className="com.hp.systinet.sc.ui.admin.domain.acl.CreateRuleComponent" page="/admin/domain/acl/ruleLayout.jsp"/>
+        <component name="/admin/domain/acl/editRule" className="com.hp.systinet.sc.ui.admin.domain.acl.EditRuleComponent" page="/admin/domain/acl/ruleLayout.jsp"/>
+		<component name="/admin/domain/acl/createCreateRule" className="com.hp.systinet.sc.ui.impl.admin.domain.acl.CreateCreateRuleComponent" page="/admin/domain/acl/createCreateRule.jsp"/>
+		<component name="/admin/domain/acl/editCreateRule" page="/admin/domain/acl/editCreateRule.jsp"/>
+		<component name="/admin/domain/acl/createAccessRule" className="com.hp.systinet.sc.ui.impl.admin.domain.acl.CreateAccessRuleComponent"  page="/admin/domain/acl/createAccessRule.jsp"/>
+		<component name="/admin/domain/acl/editAccessRule" className="com.hp.systinet.sc.ui.impl.admin.domain.acl.EditAccessRuleComponent" page="/admin/domain/acl/editAccessRule.jsp"/>        
+        <component name="/admin/domain/acl/removeRule" className="com.hp.systinet.sc.ui.impl.admin.domain.acl.RemoveRuleComponent" page="/admin/domain/acl/removeRule.jsp"/>
+        <component name="/admin/domain/acl/addMembersRule" className="com.hp.systinet.sc.ui.impl.admin.domain.acl.AddMembersRuleComponent" page="/admin/domain/acl/addMembersRule.jsp"/>
+        <component name="/admin/domain/acl/removeMembersRule" className="com.hp.systinet.sc.ui.impl.admin.domain.acl.RemoveMembersRuleComponent" page="/admin/domain/acl/removeMembersRule.jsp"/>
+        <component name="/admin/domain/acl/addConditionsRule" className="com.hp.systinet.sc.ui.impl.admin.domain.acl.AddConditionsRuleComponent" page="/admin/domain/acl/addConditionsRule.jsp"/>
+        
+        <component name="/admin/domain/acl/addConditionsRuleLinker" page="/admin/domain/acl/addConditionsRuleLinker.jsp"/>
+        <component name="/admin/domain/acl/editRuleConditionLinker" page="/admin/domain/acl/editRuleConditionLinker.jsp"/>
+        <component name="/admin/domain/acl/removeConditionsRule" className="com.hp.systinet.sc.ui.impl.admin.domain.acl.RemoveConditionsRuleComponent" page="/admin/domain/acl/removeConditionsRule.jsp"/>
+
+        <component name="/admin/domain/acl/ruleCondition" className="com.hp.systinet.sc.ui.impl.admin.domain.acl.RuleConditionComponent" page="/admin/domain/acl/ruleCondition.jsp"/>
+        <component name="/admin/domain/acl/ruleConditionWindow" className="com.hp.systinet.sc.ui.impl.admin.domain.acl.RuleConditionWindowComponent" page="/admin/domain/acl/ruleConditionWindow.jsp"/>
+        <component name="/admin/domain/acl/readAction" className="com.hp.systinet.sc.ui.impl.admin.domain.acl.AclReadActionComponent" page="/admin/domain/acl/readAction.jsp"/>
+        <component name="/admin/domain/acl/writeAction" className="com.hp.systinet.sc.ui.impl.admin.domain.acl.AclWriteActionComponent" page="/admin/domain/acl/writeAction.jsp"/>
+        <component name="/admin/domain/acl/viewAclScope" className="com.hp.systinet.sc.ui.impl.admin.domain.acl.AclScopeComponent"  page="/admin/domain/acl/viewAclScope.jsp"/>
+        <component name="/admin/domain/acl/viewGrantedTo" page="/admin/domain/acl/viewGrantedTo.jsp" className="com.hp.systinet.sc.ui.impl.admin.domain.acl.ViewGrantedToComponent"/>
+        <component name="/admin/domain/acl/viewCondition" page="/admin/domain/acl/viewCondition.jsp" className="com.hp.systinet.sc.ui.impl.admin.domain.acl.ViewConditionComponent"/>
+        <component name="/admin/domain/acl/accessGrantedFrom" page="/admin/domain/acl/accessGrantedFrom.jsp" className="com.hp.systinet.sc.ui.impl.admin.domain.acl.AccessGrantedFromComponent"/>
+        
+        <component name="/admin/domain/role/browseRole" className="com.hp.systinet.sc.ui.admin.domain.role.BrowseRoleComponent" page="/admin/domain/role/browseRole.jsp"/>
+        <component name="/admin/domain/role/addMembersRole" className="com.hp.systinet.sc.ui.admin.domain.role.AddMembersRoleComponent" page="/admin/domain/role/addMembersRole.jsp"/>
+        <component name="/admin/domain/role/removeMembersRole" className="com.hp.systinet.sc.ui.admin.domain.role.RemoveMembersRoleComponent" page="/admin/domain/role/removeMembersRole.jsp"/>
+        <component name="/admin/domain/role/viewRoleScope" page="/admin/domain/role/viewRoleScope.jsp" className="com.hp.systinet.sc.ui.admin.domain.role.ViewRoleScopeComponent"/>
+        <component name="/admin/common/principalLink" page="/admin/common/principalLink.jsp" className="com.hp.systinet.sc.ui.admin.common.PrincipalLinkComponent"/>
+        <component name="/admin/domai/role/addMemberSelector" page="/admin/common/selectPrincipal.jsp" className="com.hp.systinet.sc.ui.admin.domain.role.AddMemeberSelectorComponent">
+            <parameter paramName="disableRolesTab" paramValue="true"/>
+        </component>
+
+		<component name="/admin/domain/contact/addContact" className="com.hp.systinet.sc.ui.admin.domain.AddContactComponent" page="/admin/domain/addContact.jsp"/>        		
+		<component name="/admin/domain/contact/removeContact" className="com.hp.systinet.sc.ui.admin.domain.RemoveContactComponent" page="/admin/domain/removeContact.jsp"/>
+		<component name="/admin/domain/contact/manageContacts" className="com.hp.systinet.sc.ui.admin.domain.ManageContactsComponent" page="/admin/domain/manageContacts.jsp"/>
+		
+		<!-- Server -->
+		<component name="/admin/server/listView" 
+			page="admin/server/serverList.jsp" className="com.hp.systinet.sc.ui.admin.server.ViewServerList"/>
+		<component name="/admin/server/browseAllServers" 
+			page="admin/server/browseAllServers.jsp" className="com.hp.systinet.sc.ui.admin.server.BrowseAllServersComponent" />
+		<component name="/admin/server/browseServer" className="com.hp.systinet.sc.ui.admin.server.BrowseServerComponent" />
+		<task uri="/admin/server/browse" component="/admin/server/browseServer" style="">
+			<parameter paramName="captionKey" paramValue="com.hp.systinet.sc.ui.admin.server.ServerMessage$server.browser.title" />
+		</task>
+
+        <!-- Task -->
+        <component name="/admin/task/tasksLeftMenuLink" page="admin/task/tasksLeftMenuLink.jsp"
+            className="com.hp.systinet.sc.ui.admin.task.TasksLeftMenuLink"/>
+        <component name="/admin/task/browseTaskTable" page="admin/task/browseTaskTable.jsp"/>
+        <component name="/admin/task/browseTaskCalendar" page="admin/task/browseTaskCalendar.jsp"
+            className="com.hp.systinet.sc.ui.admin.task.BrowseTaskCalendar"/>
+        <component name="/admin/task/taskCalendarItem" page="admin/task/taskCalendarItem.jsp" 
+            className="com.hp.systinet.sc.ui.admin.task.TaskCalendarItem"/>
+        <component name="/admin/task/browseTask" page="admin/task/browseTask.jsp">
+            <parameter paramName="fromLeftMenu" paramValue="fromLeftMenu"/>
+        </component>
+        <component name="/admin/task/taskStatus" page="admin/task/taskStatus.jsp"
+                className="com.hp.systinet.sc.ui.admin.task.TaskStatus"/>
+        <component name="/admin/task/scheduledRunTime" page="admin/task/scheduledRunTime.jsp"
+                className="com.hp.systinet.sc.ui.admin.task.ScheduledRunTime"/>
+        <component name="/admin/task/bulk/actionRunTask" page="admin/task/bulk/actionRunTask.jsp"
+                   className="com.hp.systinet.sc.ui.admin.task.bulk.ActionRunTask"/>
+        <component name="/admin/task/bulk/actionStopTask" page="admin/task/bulk/actionStopTask.jsp"
+                   className="com.hp.systinet.sc.ui.admin.task.bulk.ActionStopTask"/>
+        <component name="/admin/task/bulk/actionCancelSchedule" page="admin/task/bulk/actionCancelSchedule.jsp"
+                   className="com.hp.systinet.sc.ui.admin.task.bulk.ActionCancelSchedule"/>
+        <component name="/admin/task/bulk/actionDeleteTask" page="admin/task/bulk/actionDeleteTask.jsp"
+                   className="com.hp.systinet.sc.ui.admin.task.bulk.ActionDeleteTask"/>
+        <component name="/admin/task/scheduledWidget" page="admin/task/scheduledWidget.jsp"
+                className="com.hp.systinet.sc.ui.admin.task.ScheduledWidget"/>
+        <component name="/admin/task/runStopTaskComponent" page="admin/task/runStopTaskComponent.jsp"
+                   className="com.hp.systinet.sc.ui.admin.task.RunStopTaskComponent"/>
+        <component name="/admin/task/executionHistory" page="admin/task/executionHistory.jsp"/>
+        <component name="/admin/task/runTime" page="admin/task/runTime.jsp"
+                   className="com.hp.systinet.sc.ui.admin.task.RunTime"/>
+        <component name="/admin/task/reportStatus" page="admin/task/reportStatus.jsp"
+                   className="com.hp.systinet.sc.ui.admin.task.ReportStatus"/>
+        <component name="/admin/task/viewTaskArtifactSelector" page="admin/task/artifactSelector/viewTaskArtifactSelector.jsp"
+                   className="com.hp.systinet.sc.ui.admin.task.artifactSelector.ViewTaskArtifactSelector"/>
+
+
+        <component name="/admin/task/scheduleTaskButton" page="admin/task/scheduleTaskButton.jsp"
+                className="com.hp.systinet.sc.ui.admin.task.ScheduleTaskButton"/>
+        <component name="/admin/task/scheduleTaskButtonInCalendar" page="admin/task/scheduleTaskButtonInCalendar.jsp"/>
+        <component name="/admin/task/artifactSelector/selectorEditor"
+                   className="com.hp.systinet.sc.ui.admin.task.artifactSelector.SelectorEditor"
+                   page="admin/task/artifactSelector/selectorEditor.jsp"/>
+        <component name="/admin/task/artifactSelector/selectorViewer"
+                   className="com.hp.systinet.sc.ui.admin.task.artifactSelector.SelectorViewer"
+                   page="admin/task/artifactSelector/selectorViewer.jsp"/>
+        <component name="/admin/task/artifactSelector/individual/artifactListEditor"
+                   className="com.hp.systinet.sc.ui.admin.task.artifactSelector.individual.ArtifactListEditor"
+                   page="admin/task/artifactSelector/individual/artifactListEditor.jsp"/>
+        <component name="/admin/task/artifactSelector/individual/artifactListViewer"
+                   className="com.hp.systinet.sc.ui.admin.task.artifactSelector.individual.ArtifactListViewer"
+                   page="admin/task/artifactSelector/individual/artifactListViewer.jsp"/>
+        <component name="/admin/task/artifactSelector/individual/action/addArtifactsAction"
+                   className="com.hp.systinet.sc.ui.admin.task.artifactSelector.individual.action.AddArtifactsAction"
+                   page="admin/task/artifactSelector/individual/action/addArtifactsAction.jsp"/>
+        <component name="/admin/task/artifactSelector/individual/action/removeArtifactsAction"
+                   className="com.hp.systinet.sc.ui.admin.task.artifactSelector.individual.action.RemoveArtifactsAction"
+                   page="admin/task/artifactSelector/individual/action/removeArtifactsAction.jsp"/>
+                   
+        <component name="/admin/task/editTaskContextAction"
+                   className="com.hp.systinet.sc.ui.admin.task.EditTaskAction"
+                   page="admin/task/editTaskAction.jsp"/>                        
+        <component name="/admin/task/editTaskArtifactSelector"
+                   className="com.hp.systinet.sc.ui.admin.task.artifactSelector.EditTaskArtifactSelector"
+                   page="admin/task/artifactSelector/editTaskArtifactSelector.jsp"/>                      
+        <component name="/admin/task/customTaskParamSection" page="admin/task/customTaskParamSection.jsp"
+                   className="com.hp.systinet.sc.ui.admin.task.CustomTaskParamSection"/>                   
+        <component name="/admin/task/taskImplementationSelector" page="admin/task/taskImplementationSelector.jsp"
+                   className="com.hp.systinet.sc.ui.admin.task.TaskImplementationSelector"/>
+        <component name="/admin/task/editTaskArtifact" page="admin/task/editTaskArtifact.jsp" 
+            className="com.hp.systinet.sc.ui.admin.task.EditTaskArtifactComponent"/>
+        <component name="/admin/task/newTaskArtifact" page="admin/task/newTaskArtifact.jsp" 
+            className="com.hp.systinet.sc.ui.admin.task.NewTaskArtifactComponent"/>
+        <component name="/admin/task/runningTaskProgressBar"
+                   className="com.hp.systinet.sc.ui.admin.task.RunningTaskProgressBar"/>
+        <component name="/admin/task/editTaskScheduleSection" page="admin/task/editTaskScheduleSection.jsp" 
+                   className="com.hp.systinet.sc.ui.admin.task.EditTaskScheduleSection" />
+
+        <component name="/admin/task/addTaskAction" page="admin/task/addTaskAction.jsp"
+            className="com.hp.systinet.sc.ui.admin.task.AddTaskAction"/>
+                   
+        <task uri="/admin/task/browse" component="/admin/task/browseTask"/>
+
+        <task uri="/admin/task/browseFromMenu" component="/admin/task/browseTask">
+            <parameter paramName="fromLeftMenu" paramValue="true" />
+        </task>
+
+        <task uri="/admin/task/newTaskArtifact" component="/admin/task/newTaskArtifact" />
+        <task uri="/admin/task/editTaskArtifact" component="/admin/task/editTaskArtifact" />
+
+		<component name="/admin/server/editServer"
+			page="admin/server/editServer.jsp" className="com.hp.systinet.sc.ui.admin.server.EditServerDetail"/>
+		<component name="/admin/server/viewServer" 
+			page="admin/server/viewServer.jsp" className="com.hp.systinet.sc.ui.admin.server.ViewServerDetail"/>
+		<component name="/admin/server/uddiWizard" 
+			page="admin/server/uddiWizard.jsp" className="com.hp.systinet.sc.ui.admin.server.UddiWizardComponent"/>
+		
+		<task uri="/admin/server/edit" component="/admin/server/editServer" >
+			<parameter paramName="captionKey" paramValue="com.hp.systinet.sc.ui.admin.server.ServerMessage$server.browser.edit.title" />
+		</task>
+		<task uri="/admin/server/view" component="/admin/server/viewServer" >
+			<parameter paramName="captionKey" paramValue="com.hp.systinet.sc.ui.admin.server.ServerMessage$server.browser.view.title" />
+		</task>
+        <task uri ="/admin/server/uddi"  component="/admin/server/uddiWizard" />
+		
+		<component name ="/admin/server/serverCredentialSection" page="admin/server/credstore/serverCredentialSection.jsp"/>
+		<component name ="/admin/server/registryServerCredential" page="admin/server/credstore/registryServerCredential.jsp" className ="com.hp.systinet.sc.ui.admin.server.credstore.ServerCredentialComponent"/>
+		<component name ="/admin/server/editRegistryCredential" page="admin/server/credstore/editRegistryCredential.jsp" className ="com.hp.systinet.sc.ui.admin.server.credstore.EditServerCredentialComponent"/>
+		<component name ="/admin/server/editRegistryCredentialWindow" page="admin/server/credstore/editRegistryCredentialWindow.jsp" className ="com.hp.systinet.sc.ui.admin.server.credstore.EditServerCredentialWindowComponent"/>
+        <component name ="/admin/server/removeRegistryCredential" page="admin/server/credstore/removeRegistryCredential.jsp" className ="com.hp.systinet.sc.ui.admin.server.credstore.RemoveServerCredentialComponent"/>
+        <component name="/admin/server/saveCredential" className ="com.hp.systinet.sc.ui.admin.server.credstore.ServerSaveCredentialComponent" page="admin/server/credstore/saveCredential.jsp" />
+        <!-- Stores and reads version taxonomy from artifact's CategoryBag and displays it as drop-down box or simple label. -->
+        <component name="/admin/server/versionCategoryBag" page="admin/server/versionCategoryBag.jsp"
+                   className="com.hp.systinet.sc.ui.admin.server.VersionCategoryBag"/>
+
+		<!-- TODO -->
+		<task uri="/admin/test" component="/admin/test" />
+
+        <task uri="/admin/common/noPermission" component="/admin/common/noPermission">
+            <parameter paramName="captionKey" paramValue="com.hp.systinet.sc.ui.admin.util.uimessages$web.noPermission_NoPermission"/>
+        </task>
+	           
+        <component name="/admin/test" page="test/test.jsp">
+        </component>        
+        
+        <component name="/admin/user/security/defaultSecurity" page="admin/user/security/defaultSecurity.jsp" className="com.hp.systinet.sc.ui.impl.admin.user.security.DefaultSecurityComponentImpl"/>        
+
+        <component name="/admin/user/security/primaryGroup" page="admin/user/security/primaryGroup.jsp" className="com.hp.systinet.sc.ui.impl.admin.user.security.PrimaryGroupComponentImpl"/>
+        
+        <component name="/admin/common/domainSelector" page="admin/common/domainSelector.jsp" className="com.hp.systinet.sc.ui.admin.common.DomainSelectorComponent"/>
+        <component name="/admin/common/domainSelectorWindow" page="admin/common/domainSelectorWindow.jsp" className="com.hp.systinet.sc.ui.admin.common.DomainSelectorWindowComponent"/>
+        
+        <component name="/admin/common/domainRoles" page="/admin/common/domainRoles.jsp" className="com.hp.systinet.sc.ui.admin.common.DomainRolesComponentImpl"/>
+        
+		<component name="/admin/common/selectPrincipal" page="/admin/common/selectPrincipal.jsp" className="com.hp.systinet.sc.ui.admin.common.SelectPrincipalComponent"/>
+        <component name="/admin/common/roleSelector" page="/admin/common/roleSelector.jsp" className="com.hp.systinet.sc.ui.admin.common.RoleSelectorComponent"/>
+        
+        <component name="/admin/common/noPermission" page="admin/common/noPermission.jsp" className="com.hp.systinet.sc.ui.admin.common.NoPermissionComponent"/>
+        <component name="/common/viewDescription" className="com.hp.systinet.sc.ui.admin.common.ViewDescriptionColumn" page="/admin/common/viewDescription.jsp"/>
+               
+        <component name="/admin/domain/export/exportDomain" page="/admin/domain/export/exportDomain.jsp" className="com.hp.systinet.sc.ui.admin.domain.export.ExportDomainComponent" />
+        <component name="/admin/domain/export/exportDomainWindow" page="/admin/domain/export/exportDomainWindow.jsp" className="com.hp.systinet.sc.ui.admin.domain.export.ExportDomainWindowComponent" />
+        
+        <component name="/admin/common/domainRolesSelector" page="/admin/common/domainRolesSelector.jsp" className="com.hp.systinet.sc.ui.admin.common.DomainRolesSelectorComponent"/>
+        <component name="/admin/common/domainRolesSelectorWindow" page="/admin/common/domainRolesSelectorWindow.jsp" className="com.hp.systinet.sc.ui.admin.common.DomainRolesSelectorWindowComponent"/>
+        
+        <!-- policies, assertions -->
+        <component name="/admin/common/referencedFromSection" page="/admin/common/referencedFromSection.jsp" />
+        <component name="/admin/common/referencedFrom" page="/admin/common/referencedFrom.jsp" className="com.hp.systinet.sc.ui.admin.common.ReferencedFromComponent" />
+        <component name="/admin/common/referencedFromMoreLinks" page="/admin/common/referencedFromMoreLinks.jsp" />
+        
+        <component name="/admin/policy/technical/removeTechnicalPolicyReferences" page="/admin/policy/technical/removeTechnicalPolicyReferences.jsp" className="com.hp.systinet.sc.ui.admin.policy.technical.RemoveTechnicalPolicyReferencesComponent" />
+        <component name="/admin/policy/addPolicy" page="/admin/policy/technical/addPolicy.jsp"/>        
+        <component name="/admin/policy/technical/technicalPolicyReferences" page="/admin/policy/technical/technicalPolicyReferences.jsp" className="com.hp.systinet.sc.ui.admin.policy.technical.TechnicalPolicyReferencesComponent" />        
+        
+        <component name="/admin/policy/technical/addAssertion" page="/admin/policy/technical/addAssertion.jsp"/>
+        <component name="/admin/policy/technical/addAssertionParameters" page="/admin/policy/technical/addAssertionParameters.jsp" className="com.hp.systinet.sc.ui.admin.policy.technical.AddAssertionParametersComponent" />
+        <component name="/admin/policy/technical/assertionContentWindow" page="/admin/policy/technical/assertionContentWindow.jsp" className="com.hp.systinet.sc.ui.admin.policy.technical.AssertionContentWindowComponent" />
+        <component name="/admin/policy/technical/editAssertionActionLinkers" page="/admin/policy/technical/editAssertionActionLinkers.jsp"/>        
+        <component name="/admin/policy/technical/applicableTo" page="/admin/policy/technical/applicableTo.jsp" className="com.hp.systinet.sc.ui.admin.policy.technical.ApplicableToComponent"/>
+        <component name="/admin/policy/technical/assertionParameters" page="/admin/policy/technical/parameters.jsp" className="com.hp.systinet.sc.ui.admin.policy.technical.ParametersComponent"/>
+        <component name="/admin/policy/technical/assertionSeverity" page="/admin/policy/technical/severity.jsp" className="com.hp.systinet.sc.ui.admin.policy.technical.SeverityComponent"/>
+        <component name="/admin/policy/technical/viewName" page="/admin/policy/technical/viewName.jsp" className="com.hp.systinet.sc.ui.admin.policy.technical.ViewNameComponent"/>
+        
+        <component name="/admin/policy/createArtifactLinker" page="/admin/policy/createArtifactLinker.jsp" className="com.hp.systinet.sc.ui.admin.policy.PolicyArtifactContextAction" />
+        <component name="/admin/policy/editArtifactContextAction" page="/admin/policy/editArtifactContextAction.jsp" className="com.hp.systinet.sc.ui.admin.policy.PolicyArtifactContextAction" />
+        
+        <component name="/admin/policy/bulk/delete" page="@/core/impl/bulk/delete" className="com.hp.systinet.sc.ui.admin.common.PolicyDeleteComponent" />
+        <component name="/admin/policy/contextActions/delete" page="/admin/common/deletePolicy.jsp" className="com.hp.systinet.sc.ui.admin.common.PolicyContextDeleteComponent" />
+        <component name="/admin/policy/bulk/deleteSingle" page="/admin/common/deleteSinglePolicy.jsp" className="com.hp.systinet.sc.ui.admin.common.PolicyDeleteSingleComponent" />
+        <component name="/admin/policy/bulk/deleteSingleWindow" page="/admin/common/deleteSinglePolicyWindow.jsp" className="com.hp.systinet.sc.ui.admin.common.PolicyDeleteSingleWindowComponent" />
+        
+        <component name="/admin/assertion/technicalDetail" page="/admin/assertion/technicalDetail.jsp" className="com.hp.systinet.sc.ui.admin.assertion.TechnicalDetailComponent" />
+        <component name="/admin/assertion/applicableTo" page="/admin/assertion/applicableTo.jsp" className="com.hp.systinet.sc.ui.admin.assertion.ApplicableToComponent" />
+        <component name="/admin/assertion/implementation" page="/admin/assertion/implementation.jsp" className="com.hp.systinet.sc.ui.admin.assertion.ImplementationComponent" />
+        <component name="/admin/assertion/optionalParameter" page="/admin/assertion/optionalParameter.jsp" />
+        
+        <component name="/admin/policy/browseArtifactLink" page="/admin/policy/browseArtifactLink.jsp" className="com.hp.systinet.sc.ui.admin.policy.BrowseArtifactLinkComponent" />
+        <component name="/admin/widget/table/filter/applicableTo" page="@/core/impl/widget/table/filter/string" className="com.hp.systinet.sc.ui.admin.policy.ApplicableWidgetComponent" />
+        <component name="/reports/principalReplace" page="/admin/report/retirementPrincipalsReport.jsp"
+                    className="com.hp.systinet.sc.ui.admin.report.PrincipalsRetirementReportComponent"/>
+        
+        <component name="/admin/common/customizationSwitch" page="/admin/common/customizationSwitch.jsp" className="com.hp.systinet.sc.ui.admin.common.CustomizationSwitchComponent"/>
+        
+        <component name="/admin/common/domainLink" page="@/core/impl/widget/domainIdLinkWidget" className="com.hp.systinet.sc.ui.admin.common.DomainLinkComponent" />
+        <!-- diagnostic report -->
+        <component name="/reports/repositoryDataDiagnosticReportId" page="/admin/report/repositoryDataDiagnosticReport.jsp" className="com.hp.systinet.sc.ui.admin.report.RepositoryDataDiagnosticReportComponent"/>
+        <!-- diagnostic report widgets -->
+        <component name="/reports/diagnostic/testRenderer" page="/admin/report/diagnostic/testRenderer.jsp" className="com.hp.systinet.sc.ui.admin.report.diagnostic.TestRendererComponent"/>
+        <component name="/reports/diagnostic/detailsRenderer" page="/admin/report/diagnostic/detailsRenderer.jsp" className="com.hp.systinet.sc.ui.admin.report.diagnostic.DetailsRendererComponent"/>
+        <component name="/reports/diagnostic/assertionListRenderer" page="/admin/report/diagnostic/assertionListRenderer.jsp" className="com.hp.systinet.sc.ui.admin.report.diagnostic.AssertionListRenderer"/>
+        <!-- default report for a job -->
+        <component name="/reports/jobToolArtifact" page="/admin/report/jobToolReport.jsp" className="com.hp.systinet.sc.ui.admin.report.ReportComponentBase"/>
+        
+        <component name="/script/scriptExceptionRenderer" page="/admin/script/scriptExceptionRenderer.jsp" className="com.hp.systinet.sc.ui.admin.script.ScriptExceptionRenderer"/>
+        <task uri="/admin/governance/constraints" component="/pm/formvalidation/formValidationPage">
+            <parameter paramName="captionKey" paramValue="com.hp.systinet.sc.ui.admin.util.uimessages$integrity.constraints"/>
+        </task>
+        <component name="/admin/caching/statistics" page="/admin/caching/statistics.jsp" className="com.hp.systinet.sc.ui.admin.caching.CachingStatisticsComponent"/>
+        <component name="/admin/caching/dataSourceLink" page="/admin/caching/dataSourceLink.jsp" className="com.hp.systinet.sc.ui.admin.caching.DataSourceLinkComponent"/>
+        <component name="/admin/caching/databaseIndexing" page="/admin/caching/databaseIndexing.jsp" className="com.hp.systinet.sc.ui.admin.caching.DatabaseIndexingComponent"/>
+        <task uri="/admin/caching/databaseIndexing" component="/admin/caching/databaseIndexing">
+            <parameter paramName="captionKey" paramValue="com.hp.systinet.sc.ui.admin.util.uimessages$database.indexing"/>
+        </task>
+    </webFramework>
+</config>

@@ -1,0 +1,28 @@
+<config name="sync-ui" savingPeriod="5000">
+    <webFramework>
+        <!-- allow to view/edit integration properties of a synchronizationRepository supplied -->
+        <component name="/sync/common/integrationProperties" page="common/integrationProperties.jsp"
+                   className="com.hp.systinet.sync.ui.IntegrationPropertiesComponent"/>
+        <component name="/admin/sync/editSyncRepository" page="admin/sync/editSyncRepository.jsp"
+                   className="com.hp.systinet.sync.ui.EditSyncRepositoryComponent"/>
+        <task uri="/admin/sync/editSyncRepository" component="/admin/sync/editSyncRepository" />
+        <component name="/sync/common/associatedImportTask" page="common/associatedImportTask.jsp"
+                   className="com.hp.systinet.sync.ui.AssociatedImportTaskComponent"/>
+
+        <!-- External link -->
+        <component name="/sync/common/externalLinkPpm" page="/common/externalLink.jsp" className="com.hp.systinet.sync.ui.ExternalLinkPpm" />
+
+        <!-- Widgets -->
+        <component name="/sync-ui/widget/mappingConfigurationWidget" page="widget/mappingConfigurationWidget.jsp"
+              className="com.hp.systinet.sync.ui.widget.MappingConfigurationWidget"/>
+        <component name="/sync-ui/widget/baseUrlWidget" page="widget/baseUrlWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.ConfigurableDataTypeWidget">
+            <parameter paramName="dataType" paramValue="nameUrlPair"/>
+        </component>
+
+        <!-- Reports -->
+        <component name="/reports/syncImport" page="report/syncImport.jsp"
+              className="com.hp.systinet.sync.ui.report.ImportReportComponent"/>
+        <component name="/reports/syncAssociation" page="report/syncAssociation.jsp"
+              className="com.hp.systinet.sync.ui.report.AssociationReportComponent"/>
+    </webFramework>
+</config>

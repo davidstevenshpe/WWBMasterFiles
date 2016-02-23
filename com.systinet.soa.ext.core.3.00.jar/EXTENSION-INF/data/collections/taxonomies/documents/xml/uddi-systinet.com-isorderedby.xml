@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taxonomy check="true" brief="false" xmlns="http://systinet.com/uddi/taxonomy/v3/5.5">
+  <tModel tModelKey="uddi:systinet.com:isorderedby" deleted="false" tModelKeyV2="uuid:fee048e0-ecf6-3bee-a5e1-e6f2d828110f" xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <name xmlns="urn:uddi-org:api_v3">systinet-com:isOrderedBy</name>
+    <description xml:lang="en" xmlns="urn:uddi-org:api_v3">A checked category system used to indicate the type ordering of taxonomy's values</description>
+    <categoryBag xmlns="urn:uddi-org:api_v3">
+      <keyedReference tModelKey="uddi:uddi.org:categorization:entitykeyvalues" keyName="entityKeyValues" keyValue="tModelKey"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:validatedBy" keyName="" keyValue="uddi:cccbde70-f1bf-11d8-a007-cae17391a007"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:entitykeyvalues" keyName="entityKeyValues" keyValue="tModelKey"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:system" keyName="system tModel" keyValue="yes"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Categorization system" keyValue="categorization"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="tModel"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Checked value set" keyValue="checked"/>
+    </categoryBag>
+  </tModel>
+  <compatibilityBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <compatibility>tModel</compatibility>
+  </compatibilityBag>
+  <categorizationBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <categorization>categorization</categorization>
+  </categorizationBag>
+  <validation xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <bindingTemplate bindingKey="uddi:cccbde72-f1bf-11d8-a007-cae17391a007" serviceKey="uddi:ccca57d0-f1bf-11d8-a007-cae17391a007" xmlns="urn:uddi-org:api_v3">
+      <accessPoint useType="endPoint">class:com.systinet.uddi.publishing.v1.validation.service.IsOrderedByValidator</accessPoint>
+      <tModelInstanceDetails>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:v1_validateValues"/>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:isOrderedBy"/>
+      </tModelInstanceDetails>
+    </bindingTemplate>
+    <bindingTemplate bindingKey="uddi:cccbde71-f1bf-11d8-a007-cae17391a007" serviceKey="uddi:ccca57d0-f1bf-11d8-a007-cae17391a007" xmlns="urn:uddi-org:api_v3">
+      <accessPoint useType="endPoint">class:com.systinet.uddi.publishing.v2.validation.service.IsOrderedByValidator</accessPoint>
+      <tModelInstanceDetails>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:v2_validateValues"/>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:isOrderedBy"/>
+      </tModelInstanceDetails>
+    </bindingTemplate>
+    <bindingTemplate bindingKey="uddi:cccbde70-f1bf-11d8-a007-cae17391a007" serviceKey="uddi:ccca57d0-f1bf-11d8-a007-cae17391a007" xmlns="urn:uddi-org:api_v3">
+      <accessPoint useType="endPoint">class:com.systinet.uddi.publishing.v3.validation.service.IsOrderedByValidator</accessPoint>
+      <tModelInstanceDetails>
+        <tModelInstanceInfo tModelKey="uddi:uddi.org:v3_valueSetValidation"/>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:isOrderedBy"/>
+      </tModelInstanceDetails>
+    </bindingTemplate>
+  </validation>
+</taxonomy>

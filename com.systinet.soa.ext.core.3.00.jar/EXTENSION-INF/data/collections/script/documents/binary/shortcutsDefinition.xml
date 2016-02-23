@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcutsDefinition xmlns="urn:com.hp.eam.shortcuts.definition:1.0">
+
+  <shortcut id="projectToAppShortcut" relationshipType="realizes" autoApprove="true" label="Realized Components" inverseLabel="Realized by Projects" delayedCalculation="true">
+    <source localName="projectArtifact" relationshipType="realizes" />
+    <intermediate localName="deliverableArtifact" generateName="Deliverables of ${source.name}" relationshipType="realizes" />
+    <target localName="applicationComponentArtifact" />
+  </shortcut>
+  
+  <!-- 
+  Required by 'Capability to project mapping' structure map to include 
+  all projects in ancestor business functions
+  -->
+  <shortcut id="projectToBFunctionShortcut" relationshipType="realizes" autoApprove="true" label="Realized Business Functions" inverseLabel="Realized by Projects" delayedCalculation="true">
+    <source localName="projectArtifact" relationshipType="realizes" />
+    <target localName="businessFunctionArtifact" hierarchyRelationshipType="composes"/>
+  </shortcut>
+  
+  <shortcut id="proposalToProjectShortcut" relationshipType="realizedBy" autoApprove="true" label="Implementing Projects" inverseLabel="Covered Proposal(s)" delayedCalculation="false">
+    <source localName="proposalArtifact" relationshipType="realizedBy"/>
+    <intermediate localName="plateauArtifact" generateName="Associated Plateaus" relationshipType="realizedBy" />
+    <intermediate localName="deliverableArtifact" generateName="Associated Deliverables" relationshipType="realizedBy" />
+    <target localName="projectArtifact"/>
+  </shortcut>
+  <!--
+  <shortcut id="serverDeployAppCompShortcut" relationshipType="usedBy" autoApprove="true" label="Deploying Applications" inverseLabel="Hosted On" delayedCalculation="false">
+    <source localName="nodeArtifact" relationshipType="composedOf"/>
+    <intermediate localName="infrastructureInterface" generateName="Assigned To" relationshipType="assignedTo" />
+    <intermediate localName="infrastructureServiceArtifact" generateName="Used By Applications" relationshipType="usedBy" />
+    <target localName="applicationComponentArtifact"/>
+  </shortcut>
+  -->
+  
+  <shortcut id="nodeToAppCompShortcut" relationshipType="usedBy" autoApprove="true" label="Deployed Applications" inverseLabel="Used Servers/Nodes" delayedCalculation="false">
+    <source localName="nodeArtifact" relationshipType="realizes"/>
+    <!-- skip intermediate-->
+	<!--intermediate localName="infrastructureFunction" generateName="Realizes" relationshipType="realizes" /-->
+    <intermediate localName="infrastructureServiceArtifact" generateName="Used By Applications" relationshipType="usedBy" />
+    <target localName="applicationComponentArtifact"/>
+  </shortcut>
+  
+  <shortcut id="infraServiceOfferedByNodeShortcut" relationshipType="realizedBy" autoApprove="true" label="Offered Servers/Nodes" inverseLabel="Offered by Infrastructure Services" delayedCalculation="false">
+    <source localName="infrastructureServiceArtifact" relationshipType="realizedBy"/>
+	<!-- skip intermediate -->
+    <!--intermediate localName="infrastructureInterface" generateName="Provided interfaces" relationshipType="composes" /-->
+    <target localName="nodeArtifact"/>
+  </shortcut>
+  
+</shortcutsDefinition>

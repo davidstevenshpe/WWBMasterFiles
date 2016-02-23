@@ -1,0 +1,35 @@
+<r:meta xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:r="http://systinet.com/2005/05/repository"
+        xmlns:rest="http://systinet.com/2005/05/soa/resource"
+        xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+        xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+        xmlns:p="http://systinet.com/2005/05/soa/model/property">
+   <r:path>/taxonomies/uddi-com-systinet-repository-sdm-taxonomies-proxyLayout</r:path>
+   <r:uuid>a790ecd1-d1f4-4865-bdcf-6046fb3a747d</r:uuid>
+   <r:collection>/taxonomies/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType>text/xml; charset=utf-8</r:contentType>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp/>
+      <r:creator>systinet:admin</r:creator>
+      <r:lastDataRevision>1</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:taxonomyArtifact>
+            <nameGroup xmlns="http://systinet.com/2005/05/soa/model/propertyGroup">
+               <name xmlns="http://systinet.com/2005/05/soa/model/property">proxyLayout</name>
+            </nameGroup>
+            <p:checked>true</p:checked>
+            <p:hierarchical>false</p:hierarchical>
+            <p:revision>0</p:revision>
+         </a:taxonomyArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

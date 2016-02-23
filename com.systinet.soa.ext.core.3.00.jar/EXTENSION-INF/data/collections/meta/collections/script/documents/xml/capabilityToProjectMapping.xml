@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/script/d77d4f4e-ee6f-4f8e-bc4e-6166982bbe1f</r:path>
+   <r:collection>/script/</r:collection>
+   <r:binary>true</r:binary>
+   <r:contentType>text/javascript</r:contentType>
+   <r:owner>admin</r:owner>
+   <r:uuid>d77d4f4e-ee6f-4f8e-bc4e-6166982bbe1f</r:uuid>
+   <r:domainId>defaultDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>2100594857</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2014-04-24T08:15:13.518Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>admin</r:creator>
+      <r:lastDataRevision>1</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:portletScriptArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                                  xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                                  xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                                  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                                  xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                                  xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                  deleted="0"
+                                  xlink:href="script/d77d4f4e-ee6f-4f8e-bc4e-6166982bbe1f">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="System"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:system"/>
+               <p:artifactType name="Managed script"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:system:script"/>
+               <p:artifactType name="Portlet Script"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:platform:artifacts:portletScriptArtifact"/>
+            </g:artifactTypeGroup>
+            <g:nameGroup>
+               <p:name>CapabilityToProjectMapping.js</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup/>
+            <p:revision>1</p:revision>
+            <g:keywordGroup/>
+            <p:location>/scripts/CapabilityToProjectMapping.js</p:location>
+            <p:isCached>0</p:isCached>
+            <p:checksum>2100594857</p:checksum>
+            <p:dataLength>2174</p:dataLength>
+            <p:contentType>text/javascript</p:contentType>
+            <g:applicableToArtifactGroup/>
+            <p:portletHeader>Capabilities to Project Mapping</p:portletHeader>
+            <p:portletAddActionLabel>Capabilities to Project Mapping</p:portletAddActionLabel>
+            <p:defaultHeight>800</p:defaultHeight>
+            <p:scriptCategory name="Transformation"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:portletCategory"
+                                 value="transformation"/>
+            <p:r_scriptLanguage name="Javascript"
+                                taxonomyUri="uddi:com.systinet.soa:model:taxonomies:scriptLanguage"
+                                value="Javascript"/>
+            <p:r_scriptExecuteOn name="Structure Map"
+                                 taxonomyUri="uddi:com.systinet.soa:model:taxonomies:scriptExecuteOn"
+                                 value="structureMapPortlet"/>
+         </a:portletScriptArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

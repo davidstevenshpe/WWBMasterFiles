@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pm:Assertion xmlns:pm="http://systinet.com/2005/10/soa/policy">
+    <pm:Template>
+        <p0:MultipleDeliverables xmlns:p0="http://systinet.com/assertions" xmlns:pm="http://systinet.com/2005/10/soa/policy"/>
+    </pm:Template>
+    <pm:Validation SourceType="xmlns(ns=http://systinet.com/2005/05/soa/resource)qname(ns:resource)">
+        <XQuery xmlns="http://systinet.com/2005/10/soa/policy/validation" xmlns:pm="http://systinet.com/2005/10/soa/policy" xmlns:xlink="http://www.w3.org/1999/xlink/">declare namespace val="http://systinet.com/2005/10/soa/policy/validation";
+declare namespace pm="http://systinet.com/2005/10/soa/policy/report";
+declare namespace rest="http://systinet.com/2005/05/soa/resource";
+declare namespace g="http://systinet.com/2005/05/soa/model/propertyGroup";
+declare namespace p="http://systinet.com/2005/05/soa/model/property";
+declare namespace xlink="http://www.w3.org/1999/xlink";
+declare namespace a="http://systinet.com/2005/05/soa/model/artifact";
+
+if (exists(/rest:resource/rest:descriptor/a:deliverableArtifact)) then
+	val:assertionOK()
+else
+	let $deliverables := /rest:resource/rest:descriptor//g:realizedByGroup/p:realizedBy[(empty(@deleted) or @deleted='false') and starts-with(@xlink:href,'deliverableArtifacts')]
+	let $deliverable_message :=
+		for $d in $deliverables
+		let $same_enddate_deliverableUuids := $deliverables[@useType=$d/@useType]/@xlink:href
+		return
+			if (count($same_enddate_deliverableUuids) &lt; 2) then
+				()
+			else
+				concat('Realized by deliverable uuid: ', substring-before(substring-after($d/@xlink:href,'/'),'?'), ', target stage: ', $d/@useType)
+	return
+		if (empty($deliverable_message)) then
+			val:assertionOK()
+		else
+			val:assertionFailed(string-join($deliverable_message, '&amp;lt;br/&gt;'))
+</XQuery>
+    </pm:Validation>
+</pm:Assertion>

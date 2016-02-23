@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pm:Assertion xmlns:pm="http://systinet.com/2005/10/soa/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <pm:Parameter Name="documentType"  Optional="true" Type="pm:taxonomy" Taxonomy="uddi:systinet.com:soa:model:taxonomies:documentTypes" XPointer="xpointer(@documentType)">
+        <pm:Description>Document type to restrict applicability.</pm:Description>
+    </pm:Parameter>
+    <pm:Parameter Name="artifactType"  Optional="false" Type="pm:taxonomy" Taxonomy="uddi:systinet.com:soa:model:taxonomies:artifactTypes" XPointer="xpointer(@artifactType)">
+        <pm:Description>Artifact type to restrict applicability.</pm:Description>
+    </pm:Parameter>
+    <pm:Template>
+	<a:HasDocumentation xmlns:a="http://systinet.com/assertions"/>
+    </pm:Template>
+    <pm:Bundle>
+        <pm:String Key="no-doc">The artifact does not have any documentation assigned.</pm:String>
+        <pm:String Key="bad-doc">The artifact does not have any documentation of the given type assigned.</pm:String>
+    </pm:Bundle>
+    <pm:Validation SourceType="xmlns(ns=http://systinet.com/2005/05/soa/resource)qname(ns:resource)">
+	<XQuery xmlns="http://systinet.com/2005/10/soa/policy/validation">
+import module namespace pm = &quot;http://systinet.com/2005/10/soa/policy/validation/xquery&quot;;
+
+declare namespace val=&quot;http://systinet.com/2005/10/soa/policy/validation&quot;;
+declare namespace rest=&quot;http://systinet.com/2005/05/soa/resource&quot;;
+declare namespace a=&quot;http://systinet.com/2005/05/soa/model/artifact&quot;;
+declare namespace g=&quot;http://systinet.com/2005/05/soa/model/propertyGroup&quot;;
+declare namespace p=&quot;http://systinet.com/2005/05/soa/model/property&quot;;
+declare namespace xlink=&quot;http://www.w3.org/1999/xlink&quot;;
+
+declare variable $metadata.source.url as xs:string external;
+declare variable $documentType as xs:string external;
+declare variable $artifactType as xs:string external;
+
+if (empty(/rest:resource/rest:descriptor/a:*[1]/g:artifactTypeGroup/p:artifactType[@value=$artifactType])) then
+    val:assertionNotApplicable()
+else
+    let $docs := /rest:resource/rest:descriptor/a:*[1]/g:documentationGroup/p:documentation[@deleted='false' or @deleted='0']
+    return
+	if (empty($docs)) then
+	    val:assertionFailed(val:l10n('no-doc'))
+	else
+	    let $ok :=
+		for $doc in $docs
+		    return pm:downloadS2Resource($doc/@xlink:href, $metadata.source.url)/rest:resource/rest:descriptor/a:documentationArtifact/p:documentType[@value=$documentType]
+	    return
+		if (empty($ok)) then
+		    val:assertionFailed(val:l10n('bad-doc'))
+		else
+		    val:assertionOK()
+	</XQuery>
+    </pm:Validation>
+</pm:Assertion>

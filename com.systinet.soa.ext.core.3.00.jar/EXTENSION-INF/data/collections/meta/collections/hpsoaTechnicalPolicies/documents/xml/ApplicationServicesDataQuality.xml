@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/hpsoaTechnicalPolicies/645de28e-9fab-45c0-b703-414192ff6886</r:path>
+   <r:collection>/hpsoaTechnicalPolicies/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType>text/xml</r:contentType>
+   <r:owner>systinet:admin</r:owner>
+   <r:uuid>645de28e-9fab-45c0-b703-414192ff6886</r:uuid>
+   <r:domainId>topLevelDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>2487667589</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2014-05-12T08:34:33.244Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>systinet:admin</r:creator>
+      <r:lastDataRevision>1</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:hpsoaTechnicalPolicyArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                                         xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                                         xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                                         xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                                         xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                                         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                         deleted="0"
+                                         xlink:href="hpsoaTechnicalPolicies/645de28e-9fab-45c0-b703-414192ff6886">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="Content"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:content"/>
+               <p:artifactType name="Policy"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:soa:policy"/>
+               <p:artifactType name="Technical Policy"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:soa:policy:technicalPolicy"/>
+            </g:artifactTypeGroup>
+            <g:r_referencedAssertionGroup>
+               <p:r_referencedAssertion xlink:href="assertions/ContactPersonIsAssigned"/>
+               <p:r_referencedAssertion xlink:href="assertions/ApplServiceProvidedByApplComponent"/>
+               <p:r_referencedAssertion xlink:href="assertions/ApplicationServiceIsLinkedToTheBusinessLayer"/>
+               <p:r_referencedAssertion xlink:href="assertions/ApplicationServiceIsAssignedToApplicationInterface"/>
+            </g:r_referencedAssertionGroup>
+            <g:r_referencedTechnicalPolicyGroup>
+               <p:r_referencedTechnicalPolicy xlink:href="hpsoaTechnicalPolicies/ddfdee0c-8499-4077-a607-8d75c316d67b"/>
+            </g:r_referencedTechnicalPolicyGroup>
+            <g:nameGroup>
+               <p:name>Application Services Data Quality</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup/>
+            <p:revision>1</p:revision>
+            <g:keywordGroup/>
+            <p:isCached>0</p:isCached>
+            <p:checksum>2487667589</p:checksum>
+            <p:dataLength>3152</p:dataLength>
+            <p:contentType>text/xml</p:contentType>
+            <g:applicableSourceQNameGroup>
+               <p:applicableSourceQName>{http://systinet.com/2005/05/soa/model/artifact}applicationServiceArtifact</p:applicableSourceQName>
+            </g:applicableSourceQNameGroup>
+         </a:hpsoaTechnicalPolicyArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

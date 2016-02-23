@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/assertions/SingleDelShouldNotBeDeliveredBy2DiffProjects</r:path>
+   <r:collection>/assertions/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType>text/xml; charset=utf-8</r:contentType>
+   <r:owner>systinet:admin</r:owner>
+   <r:uuid>2d61375a-5ea5-4b7b-b40b-b8c15c78f6ff</r:uuid>
+   <r:domainId>topLevelDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2014-03-28T04:52:32.599Z</r:timestamp>
+      <r:creator>systinet:admin</r:creator>
+      <r:lastDataRevision>1</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:assertionArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                              xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                              xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                              xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                              xlink:href="assertions/SingleDelShouldNotBeDeliveredBy2DiffProjects">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="Content"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:content"/>
+               <p:artifactType name="Policy"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:soa:policy"/>
+               <p:artifactType name="Assertion"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:soa:policy:assertion"/>
+            </g:artifactTypeGroup>
+            <g:nameGroup>
+               <p:name>Deliverable Is Realized By At Most One Project</p:name>
+            </g:nameGroup>
+			
+            <g:descriptionGroup>
+               <p:description>&lt;P&gt;
+	Duplication of work is detected when a deliverable artifact is realized by more than one project or work package.&lt;/P&gt;</p:description>
+            </g:descriptionGroup>
+			
+            <p:assertionQName>{urn:localhost:com:enter-your-organization-or-project-specific-namespace}SingleDelShouldNotBeDeliveredBy2DiffProjects</p:assertionQName>
+            <g:applicableSourceMimetypeGroup/>
+            <g:applicableSourceQNameGroup>
+               <p:applicableSourceQName>{http://systinet.com/2005/05/soa/model/artifact}deliverableArtifact</p:applicableSourceQName>
+            </g:applicableSourceQNameGroup>
+            <g:r_usedTaxonomyGroup/>
+         </a:assertionArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

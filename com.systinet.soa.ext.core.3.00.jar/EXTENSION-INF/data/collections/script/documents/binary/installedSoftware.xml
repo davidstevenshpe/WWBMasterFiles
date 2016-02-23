@@ -1,0 +1,8 @@
+<query>
+SELECT a._uuid, count(n._uuid) costValue, a._lastApprovedStage.name as stage, 
+	(a.name || ' ' || (CASE WHEN (a.version='1.0' or a.version is null) THEN N'' ELSE a.version END)) as name 
+FROM systemSoftwareArtifact a left join nodeArtifact n using n.assignedTo 
+GROUP BY a.name, a.version, a._uuid, a._lastApprovedStage.name 
+HAVING count(n._uuid) > 0
+ORDER BY costValue desc
+</query>

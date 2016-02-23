@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config name="integration" savingPeriod="5000">
+    <webFramework>
+        <component name="/integration/widgets/simplePasswordWidget" page="integration/widgets/simplePasswordWidget.jsp"
+              className="com.hp.systinet.ui.integration.widgets.SimplePasswordWidgetComponent"/>
+
+        <component name="/integration/widgets/publishLocationWidget" page="@/core/impl/widget/textWidget"
+              className="com.hp.systinet.ui.integration.widgets.PublishLocationWidgetComponent"/>
+
+        <component name="/integration/metrics/metricsPage" page="integration/metrics/metricsPage.jsp"/>
+        <component name="/integration/metrics/synchronization" page="integration/metrics/synchronization.jsp"/>
+
+        <component name="/integration/metrics/metricsTab" page="/integration/metrics/metricsTab.jsp"
+                   className="com.hp.systinet.integration.ui.MetricsTab">
+            <parameter paramName="customizationId" paramValue="customizationId"/>
+        </component>
+
+        <component name="/integration/ucmdbImport/ucmdbImport"
+                   page="integration/ucmdbImport/ucmdbImport.jsp"
+                   className="com.hp.systinet.integration.ucmdbImport.UcmdbImport" />
+        <task uri="/common/integration/import/ucmdbImport" component="/integration/ucmdbImport/ucmdbImport"
+              style="/core/impl/layout/newUi">
+            <parameter paramName="captionKey" paramValue="com.systinet.platform.ui.integration.IntegrationL10n$web.ucmdbImport" />
+        </task>
+
+        <component name="/integration/ucmdbImport/ucmdbImportContents"
+                   page="@/core/customization/customizableComponent"
+                   className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizationId" paramValue="integration.ucmdbImport"/>
+            <parameter paramName="customizedComponent" paramValue="/core/layout/columnsInternal"/>
+            <parameter paramName="dontCustomize" paramValue="true"/>
+        </component>
+
+        <component name="/integration/ucmdbImport/ucmdbIgnoredContents"
+                   page="@/core/customization/customizableComponent"
+                   className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizationId" paramValue="integration.ucmdbIgnored"/>
+            <parameter paramName="customizedComponent" paramValue="/core/layout/columnsInternal"/>
+            <parameter paramName="dontCustomize" paramValue="true"/>
+        </component>
+
+        <component name="/integration/ucmdbImport/ucmdbRogueContents"
+                   page="@/core/customization/customizableComponent"
+                   className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizationId" paramValue="integration.ucmdbRogue"/>
+            <parameter paramName="customizedComponent" paramValue="/core/layout/columnsInternal"/>
+            <parameter paramName="dontCustomize" paramValue="true"/>
+        </component>
+
+        <component name="/integration/ucmdbImport/importLinkPanel"
+                   page="integration/ucmdbImport/importLinkPanel.jsp"/>
+
+        <component name="/integration/ucmdbImport/ucmdbImportTable"
+                   page="integration/ucmdbImport/ucmdbImportTable.jsp"
+                   className="com.hp.systinet.integration.ucmdbImport.UcmdbTable"/>
+
+        <component name="/integration/ucmdbImport/ucmdbIgnoredTable"
+                   page="integration/ucmdbImport/ucmdbIgnoredTable.jsp"
+                   className="com.hp.systinet.integration.ucmdbImport.UcmdbTable"/>
+
+        <component name="/integration/ucmdbImport/ucmdbRogueTable"
+                   page="integration/ucmdbImport/ucmdbRogueTable.jsp"
+                   className="com.hp.systinet.integration.ucmdbImport.UcmdbTable"/>
+
+        <component name="/integration/ucmdbImport/actionMarkAsRogue"
+                   page="integration/ucmdbImport/actionMarkAs.jsp"
+                   className="com.hp.systinet.integration.ucmdbImport.ActionMarkAsRogue"/>
+
+        <component name="/integration/ucmdbImport/actionMarkAsIgnored"
+                   page="integration/ucmdbImport/actionMarkAs.jsp"
+                   className="com.hp.systinet.integration.ucmdbImport.ActionMarkAsIgnored"/>
+
+        <component name="/integration/ucmdbImport/actionMarkAsDiscovered"
+                   page="integration/ucmdbImport/actionMarkAs.jsp"
+                   className="com.hp.systinet.integration.ucmdbImport.ActionMarkAsDiscovered"/>
+
+        <!--uses jsp from /core/impl/util/artifactLinkRenderer component (page="@/core/util/providerLinksRenderer")-->
+        <component name="/integration/ucmdbImport/relatedArtifacts" page="@/core/util/providerLinksRenderer"
+                   className="com.hp.systinet.integration.ucmdbImport.RelatedArtifactsLinksRenderer"/>
+        <component name="/integration/ucmdbImport/mergeDuplicates" page="integration/ucmdbImport/mergeDuplicates.jsp"
+                   className="com.hp.systinet.integration.ucmdbImport.MergeDuplicates"/>
+        <component name="/integration/ucmdbImport/mergeDuplicatesContent"
+                   page="integration/ucmdbImport/mergeDuplicatesContent.jsp"/>
+        <component name="/integration/ucmdbImport/serviceLinkWithMatchingStatus"
+                   page="integration/ucmdbImport/serviceLinkWithMatchingStatus.jsp"/>
+
+
+        <component name="/integration/ucmdbImport/ucmdbImportMenuLink"
+                   page="integration/ucmdbImport/ucmdbImportMenuLink.jsp"
+                   className="com.hp.systinet.integration.ucmdbImport.UcmdbImportMenuLink" />
+
+        <component name="/integration/ucmdbImport/ucmdbImportLink"
+                   page="integration/ucmdbImport/ucmdbImportLink.jsp"
+                   className="com.hp.systinet.integration.ucmdbImport.UcmdbImportMenuLink" />
+
+        <component name="/integration/ucmdbImport/ucmdbRogue" page="integration/ucmdbImport/ucmdbRogue.jsp"
+                   className="com.hp.systinet.integration.ucmdbImport.UcmdbRogue" />
+        <task uri="/common/integration/import/ucmdbRogue" component="/integration/ucmdbImport/ucmdbRogue"
+              style="/core/impl/layout/newUi">
+            <parameter paramName="captionKey" paramValue="com.systinet.platform.ui.integration.IntegrationL10n$import.link.viewUcmdbRogue" />
+        </task>
+
+        <component name="/integration/ucmdbImport/ucmdbIgnored" page="integration/ucmdbImport/ucmdbIgnored.jsp"
+                           className="com.hp.systinet.integration.ucmdbImport.UcmdbIgnored" />
+        <task uri="/common/integration/import/ucmdbIgnored" component="/integration/ucmdbImport/ucmdbIgnored"
+              style="/core/impl/layout/newUi">
+            <parameter paramName="captionKey" paramValue="com.systinet.platform.ui.integration.IntegrationL10n$import.link.viewUcmdbIgnored" />
+        </task>
+
+        <component name="/integration/dataIntegrationSection"
+                   page="integration/dataIntegrationSection.jsp"
+                   className="com.hp.systinet.integration.ui.DataIntegrationSection" />
+
+        <component name="/integration/ui/common/pieChartComponent"
+                   page="integration/ui/common/pieChartComponent.jsp"
+                   className="com.hp.systinet.integration.ui.common.PieChartComponent" />
+
+        <component name="/integration/ui/common/pieChartSample"
+                   page="integration/ui/common/pieChartSample.jsp"
+                   className="com.hp.systinet.integration.ui.common.PieChartSample" />
+
+        <component name="/reports/ucmdbDiscoveryReportRenderer"
+                   page="integration/discovery/report/ucmdbDiscoveryReportRenderer.jsp"
+                   className="com.hp.systinet.integration.ucmdbImport.report.UcmdbDiscoveryReportComponent"/>
+
+        <component name="/integration/widgets/mergeDuplicatesWidget"
+                   page="integration/widgets/mergeDuplicatesWidget.jsp"
+                   className="com.hp.systinet.ui.integration.widgets.MergeDuplicatesWidget"/>
+
+        <component name="/integration/discovery/discoveryInfoMessage"
+                   page="integration/discovery/discoveryInfoMessage.jsp"/>
+
+        <component name="/integration/testconnection" page="/integration/testConnection.jsp" />
+    </webFramework>
+</config>

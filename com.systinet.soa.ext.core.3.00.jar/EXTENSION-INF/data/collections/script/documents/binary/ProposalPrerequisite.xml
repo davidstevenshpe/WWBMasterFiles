@@ -1,0 +1,35 @@
+<query>
+    <parameters>
+      <parameter name="proposalUuid" label="proposalUuid" type="uuid" artifactLocalName="proposalArtifact"/>
+      <parameter name="coreSdmList" label="coreSdmList" type="string" defaultValue="businessActorArtifact,businessCollaborationArtifact,businessEventArtifact,businessFunctionArtifact,businessInteractionArtifact,businessInterfaceArtifact,businessContractArtifact,businessObjectArtifact,businessProcessArtifact,businessRoleArtifact,businessServiceArtifact,locationArtifact,productArtifact,representationArtifact,appCollaborationArtifact,databaseSchemaArtifact,j2eeApplicationArtifact,webApplicationArtifact,applicationComponentArtifact,applicationFunctionArtifact,hpsoaBpelProcessArtifact,applicationInteractionArtifact,fileExchangeArtifact,databaseInterfaceArtifact,publishSubscribeArtifact,queueArtifact,restInterfaceArtifact,remoteProcInvocationArtifact,webServiceArtifact,userInterfaceArtifact,webArtifact,xmlServiceArtifact,applicationInterfaceArtifact,applicationServiceArtifact,binaryDocumentArtifact,csvFileArtifact,xmlDocumentArtifact,sqlTableArtifact,dataObjectArtifact,messageArtifact,rpcCallArtifact,storedProcedureArtifact,hpsoaOperationArtifact,deploymentArtifact,networkArtifact,communicationPathArtifact,deploymentSpecification,infrastructureFunctionArtifact,endpointArtifact,infrastructureInterface,infrastructureServiceArtifact,serverArtifact,deviceArtifact,serverGroupArtifact,nodeArtifact,systemSoftwareArtifact"/>
+      <parameter name="query" label="query" type="string" defaultValue="%%"/>
+    </parameters>
+
+    <!-- Proposal realizedBy Plateau aggregates (core element) -->
+    select distinct core._uuid as uuid, core.name as coreName, core.version as coreVersion, core._artifactTypeName as sdmName, core._sdmName as type,  
+           core._ownerName as owner, core._lastApprovedStage.name as lastApprovedStage, core.aggregatedBy.useType as targetStage, 
+           pl._uuid as plateauUuid, pl.name as plateauName
+    from artifactBase core, plateauArtifact pl, proposalArtifact pr
+    where bind(pr.realizedBy, pl) and bind(core.aggregatedBy, pl)
+          and pr._uuid = :proposalUuid
+          and (:coreSdmList like ('%' || core._sdmName || '%'))
+          and core.aggregatedBy.prerequisite = 1
+          and (upper(core.name) like :query or upper(core._artifactTypeName) like :query)
+
+    <!-- Collect other proposal and project that is planning for each core element -->
+    <query name="realizedBy">
+       <!-- Other proposals  -->
+       select pr._uuid as uuid, pr.name as name, pr._sdmName as type 
+       from artifactBase core, plateauArtifact pl, proposalArtifact pr
+       where core._uuid = :parent and pr._uuid &lt;&gt; :proposalUuid
+             and bind(pr.realizedBy, pl) and bind(core.aggregatedBy, pl) and core.aggregatedBy.prerequisite = 0
+         
+       union 
+      
+       <!-- Other projects -->
+       select p._uuid as uuid, p.name as name, p._sdmName as type 
+       from artifactBase core, deliverableArtifact d, projectArtifact p
+       where core._uuid = :parent
+       and bind(d.realizedBy, p) and bind(core.realizedBy, d) and core.realizedBy.prerequisite = 0
+    </query>
+</query>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?><pm:Assertion xmlns:pm="http://systinet.com/2005/10/soa/policy" xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup" xmlns:r="http://systinet.com/2005/05/repository" xmlns:p="http://systinet.com/2005/05/soa/model/property" xmlns:a="http://systinet.com/2005/05/soa/model/artifact" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:pt="http://systinet.com/2005/05/soa/model/property/type" xmlns:rest="http://systinet.com/2005/05/soa/resource" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><pm:Template><p0:UnnaturalLifeCycleTransitionsIsNotAllowed xmlns:p0="urn:localhost:com:enter-your-organization-or-project-specific-namespace"/></pm:Template><pm:Validation><JavaScriptValidator xmlns="http://systinet.com/2005/10/soa/policy/validation" xmlns:xlink="http://www.w3.org/1999/xlink/">/**
+ * This function is called iteratively by the java script validator,
+ * There are some java script objects pre-initialized in the scripting context (e.g. repositoryService ...)  
+ * You can find others and configure more in the managed script environment.js
+ *
+ * @param  resource
+ *         an external resource or an artifact
+ *
+ * @param  params
+ *         a map of params
+ */
+function validate(resource, params) {
+	var artifact = resource;
+    repositoryService.fetchArtifactProperties(artifact, ArtifactPartSelector.ALL_PROPERTIES);
+    var invalid = 0;
+    var repoQueryService = beanFactoryHelper.getBean(Packages.com.hp.systinet.dql.RepositoryQueryService);
+	var dqlQuery = "(select d._uuid as uuid, d.name as name, d._sdmName as sdmName, d.endDate as endDate, d.description as description, d.realizes.useType as targetStage, p.endDate as projectEndDate, p.plannedFinishDate as plannedFinishDate" +
+	    				" from deliverableArtifact d" +
+	    				" JOIN artifactBase a ON bind (d.realizes, a)" +
+	    				" LEFT OUTER JOIN projectArtifact p ON bind (d.realizedBy, p)" +
+	    				" where a._uuid = '" +
+	    				artifact.get_uuid() + "')" +
+	    				" UNION" +
+	    				"(select d._uuid as uuid, d.name as name, d._sdmName as sdmName, d.endDate as endDate, d.description as description, d.aggregates.useType as targetStage, p.endDate as projectEndDate, p.plannedFinishDate as plannedFinishDate" +
+	    				" from plateauArtifact d" +
+	    				" JOIN artifactBase a ON bind (d.aggregates, a)" +
+	    				" LEFT OUTER JOIN projectArtifact p ON bind (d.realizedBy, p)" +
+	    				" where a._uuid = '" +
+	    				artifact.get_uuid() + "')";
+	var dqlResult = null;
+	var dqlStatement = repoQueryService.parse(dqlQuery); 
+	var request = new Packages.com.hp.systinet.dql.DqlRequest(dqlStatement); 
+	repoQueryService.compileQuery(request);
+	dqlResult = repoQueryService.query(request);
+	var jsobjs = dqlResult.getData();
+	
+    var aldFactory = beanFactoryHelper.getBean(Packages.com.hp.systinet.lifecycle.ui.common.ArtifactLifecycleDataFactory);
+    var lfeData = aldFactory.create(artifact.get_uuid());
+    var govRec = lfeData.getGovernanceRecord();
+    var lastStatedTime = null;
+    var currentStage = null;
+    var isStageApproved = false;
+    if (govRec != null &amp;&amp; govRec.getState() != null) {
+    	currentStage = govRec.getState().getName();
+    	lastStatedTime = govRec.getNextStateStarted();
+    	var status = govRec.getLifecycleStatus();
+    	if (status == "APROVED") {
+    		isStageApproved = true;
+    		
+    	}
+    }
+    
+	if (govRec != null &amp;&amp; jsobjs.size() &gt; 0) {
+		for(var row=0;row&lt;jsobjs.size(); row++) {
+		    var jobject = jsobjs.get(row);
+		    var targetStage = jobject.get("targetStage");
+		    var planDate = jobject.get("endDate");
+		    var sdmName = jobject.get("sdmName");
+		    var name = jobject.get("name");
+		    var uuid = jobject.get("uuid");
+		    if (sdmName == "deliverableArtifact" &amp;&amp; planDate == null) {
+		    				if (jobject.get("projectEndDate") != null) {
+		    					planDate = jobject.get("projectEndDate")
+		    				}
+		    				else {
+		    					if (jobject.get("plannedFinishDate") != null) {
+		    						planDate = jobject.get("plannedFinishDate");
+		    					}
+		    				}
+		    			}
+		    var stage = getGovernanceState(govRec.getProcessId(), currentStage);
+		    if (currentStage != null &amp;&amp; targetStage != null &amp;&amp; !(Packages.com.hp.systinet.sc.ui.relations.DeliverableColorManagement.isTransitionableToStage(stage, targetStage, new HashSet()))) {
+		    	return new JsValidationResult(JsValidationCode.FAILED, "Unnatural transition is planned from current stage: " + currentStage + " to target stage: " + targetStage + " of " + sdmName + " " + name);
+		    }
+		    if (currentStage != null &amp;&amp; targetStage != null &amp;&amp; lastStatedTime != null &amp;&amp; planDate != null &amp;&amp; lastStatedTime &lt; planDate &amp;&amp; Packages.com.hp.systinet.sc.ui.relations.DeliverableColorManagement.isTransitionableToStage(stage, targetStage, new HashSet())) {
+		    	return new JsValidationResult(JsValidationCode.FAILED, "Unnatural transition is planned from current stage: " + currentStage + " with last stated time at: " + lastStatedTime + " to target stage: " + targetStage + " with planned end date: " + planDate + " of " + sdmName + " " + name);
+		    }
+		    else {
+		    	for (var row2=0; row2&lt;jsobjs.size(); row2++) {
+		    		var jobject2 = jsobjs.get(row2);
+		    		var uuid2 = jobject2.get("uuid");
+		    		if (uuid != uuid2) {
+		    			var targetStage2 = jobject2.get("targetStage");
+		    			var planDate2 = jobject2.get("endDate");
+		    			var sdmName2 = jobject2.get("sdmName");
+		    			if (sdmName2 == "deliverableArtifact" &amp;&amp; planDate2 == null) {
+		    				if (jobject2.get("projectEndDate") != null) {
+		    					planDate2 = jobject2.get("projectEndDate")
+		    				}
+		    				else {
+		    					if (jobject2.get("plannedFinishDate") != null) {
+		    						planDate2 = jobject2.get("plannedFinishDate");
+		    					}
+		    				}
+		    			}
+		    			
+		    			if (targetStage != null) {
+		    				var stage = getGovernanceState(govRec.getProcessId(), targetStage);
+		    				if (planDate != null &amp;&amp; planDate2 != null &amp;&amp; planDate &gt; planDate2 &amp;&amp; Packages.com.hp.systinet.sc.ui.relations.DeliverableColorManagement.isTransitionableToStage(stage, targetStage2, new HashSet())) {
+		    					return new JsValidationResult(JsValidationCode.FAILED, "Unnatural transition is planned from target stage: " + targetStage + " with end date: " + planDate + " to target stage: " + targetStage2 + " with end date: " + planDate2 + ".");
+		    				}
+		    				if (planDate != null &amp;&amp; planDate2 != null &amp;&amp; planDate &lt; planDate2 &amp;&amp; !Packages.com.hp.systinet.sc.ui.relations.DeliverableColorManagement.isTransitionableToStage(stage, targetStage2, new HashSet())) {
+		    					return new JsValidationResult(JsValidationCode.FAILED, "Unnatural transition is planned from target stage: " + targetStage + " with end date: " + planDate + " to target stage: " + targetStage2 + " with end date: " + planDate2 + ".");
+		    				}
+		    			}
+		    			
+		    		}
+		    	}
+		    	return JsValidationResult(JsValidationCode.OK);
+		    }
+		     
+		}
+	  }
+	  else {
+	    	 return new JsValidationResult(JsValidationCode.OK);
+	  }
+    function getGovernanceState(processId, stageName){
+        var result = null;
+        if(stageName != null &amp;&amp; processId != null){
+        	var processApi = beanFactoryHelper.getBean("platform.lifecycle.processApi");
+            var process = processApi.getProcess(processId);
+            if(process != null){
+            	var stagesList = process.getStates();
+                for(var row3=0;row3&lt;stagesList.size();row3++){
+                	var stage = stagesList.get(row3);
+                    if(stageName == stage.getState().getName()){
+                        result = stage;
+                        break;
+                    }
+                }
+            }
+        }
+        return result;
+    };
+   
+}
+</JavaScriptValidator></pm:Validation></pm:Assertion>

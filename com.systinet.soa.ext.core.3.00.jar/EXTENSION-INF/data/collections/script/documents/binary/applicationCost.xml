@@ -1,0 +1,25 @@
+<closure maxDepth="1" maxResults="250" maxProcessingTime="10000" seedsAsResults="true">
+    <defaultSeedQuery>
+      select f._uuid from applicationComponentArtifact f LEFT JOIN appFinancialProfileArtifact pfp on bind(f.financialProfile) where not exists 
+        (select 1 from applicationComponentArtifact f1 join applicationComponentArtifact f2 
+               using f2.composedOf where f1._uuid=f._uuid) and pfp.annualCostTotal is not null
+    </defaultSeedQuery>
+    
+    <orderBy>costValue ASC, name ASC</orderBy>
+
+    <resultArtifacts>
+        <artifact sdmName="applicationComponentArtifact">                      
+           <field name="costValue" query="SELECT pfp.annualCostTotal as costValue FROM  applicationComponentArtifact p LEFT JOIN appFinancialProfileArtifact pfp on bind(p.financialProfile) where p._uuid=:uuid"/>
+           <field name="density" query="SELECT pfp.entityHealth.val as density FROM  applicationComponentArtifact p LEFT JOIN appFinancialProfileArtifact pfp on bind(p.financialProfile) where p._uuid=:uuid"/>           
+        </artifact>  
+    </resultArtifacts>
+
+    <traversableArtifacts>
+        <artifact sdmName="applicationComponentArtifact"/>
+    </traversableArtifacts>
+
+    <traversableRelations>
+        <relation sdmName="composedOf"/>
+    </traversableRelations>
+
+</closure>

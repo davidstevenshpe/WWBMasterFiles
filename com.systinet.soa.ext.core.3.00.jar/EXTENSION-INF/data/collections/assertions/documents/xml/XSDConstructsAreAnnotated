@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pm:Assertion xmlns:pm="http://systinet.com/2005/10/soa/policy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:a="http://systinet.com/2005/05/soa/model/artifact" xmlns:r="http://systinet.com/2005/05/repository" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:pt="http://systinet.com/2005/05/soa/model/property/type" xmlns:rest="http://systinet.com/2005/05/soa/resource" xmlns:p="http://systinet.com/2005/05/soa/resource" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup">
+        <p:Template xmlns:p="http://systinet.com/2005/10/soa/policy">
+          <XSDConstructsAreAnnotated xmlns="http://systinet.com/2005/10/soa/policy/best-practice"/>
+        </p:Template>
+        <pm:Bundle>
+            <pm:String Key="no-doc">The schema contains a top-level xs:{0} "{1}" which is not documented. Add the documentation to xs:annotation/xs:documentation.</pm:String>
+        </pm:Bundle>
+        <pm:Validation SourceType="xmlns(ns=http://www.w3.org/2001/XMLSchema)qname(ns:schema)" xmlns:val="http://systinet.com/2005/10/soa/policy/validation">
+          <val:XQuery>
+
+    declare namespace xs="http://www.w3.org/2001/XMLSchema";
+    declare namespace val="http://systinet.com/2005/10/soa/policy/validation";
+
+    let $namedElements := /xs:schema/*[(local-name() = "element" or local-name() = "attribute" or local-name() = "complexType" or local-name() = "simpleType") and @name]
+    let $errElements := $namedElements[not(xs:annotation/xs:documentation)]
+    return
+        if (count($errElements) = 0) then
+            if (count($namedElements) = 0) then
+                val:assertionNotApplicable()
+            else
+                val:assertionOK()
+        else
+            for $err in $errElements
+            return
+                val:assertionFailed(val:l10n('no-doc', local-name($err), $err/@name), $err)
+
+          </val:XQuery>
+        </pm:Validation>
+      </pm:Assertion>

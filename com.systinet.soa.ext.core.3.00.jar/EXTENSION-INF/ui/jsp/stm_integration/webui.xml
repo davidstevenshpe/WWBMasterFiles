@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config name="stm" savingPeriod="5000">
+    <webFramework>
+        <component name="/integration/stm/servicestatus" page="/stm/stmIntegrationServiceStatus.jsp"
+                   className="com.systinet.platform.ui.integration.alm.AlmIntegrationServiceStatusComponent"/>
+        <component name="/integration/stm/servicestatus/cell" page="/stm/stmIntegrationServiceStatusCell.jsp"/>
+        <component name="/integration/stm/servicestatus/servicePublisher" page="/stm/stmIntegrationServicePublisher.jsp"/>
+        
+        <component name="/integration/metrics/servicestatus" page="@/core/customization/customizableComponent" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+           <parameter paramName="customizedComponent" paramValue="/core/layout/artifactDetail"/>
+           <parameter paramName="mode" paramValue="view"/>
+        </component> 
+         
+        <component name="/integration/alm/servicestatus" page="@/core/customization/customizableComponent" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+           <parameter paramName="customizedComponent" paramValue="/core/layout/artifactDetail"/>
+           <parameter paramName="mode" paramValue="view"/>
+        </component>                  
+
+		<component name="/integration/hpsoaStmServerArtifact/connectionCheckerNew"
+                   className="com.hp.systinet.integration.ui.tools.NewAlmConnectionCheckerComponent" 
+                   page="@/integration/testconnection"/>
+       <!-- Widget -->
+        <component name="/integration/stm/urlWidget" page="@/core/impl/widget/nameUrlPairWidget" 
+        	className="com.hp.systinet.integration.ui.widget.NewWidgetAlmUrl">
+            <parameter paramName="dataType" paramValue="nameUrlPair"/>
+        </component>
+    </webFramework>
+</config>

@@ -1,0 +1,107 @@
+/*
+ *********      SURVEY SAMPLE        ************
+ **
+ ** Survey STRUCTURE:
+ **
+ **   predefinitions: type, value
+ **   processing: mapping properties of scores
+ **   steps: each step will have 1-many questions
+ **
+ **
+ ** Question TYPES:
+ **
+ **   'single-choice' : radio buttons with default values: { 'Yes' : true, 'No' : false, 'Don\'t know': undefined }
+ **   'multi-choices': checkboxes
+ **   'textarea': textarea for multi-line text input
+ **   'text'
+ **   'number'
+ **   'taxonomy' : combobox, will update the selected value to mapped property of Artifact base on question[@type = 'taxonomy'].mapping
+ **   'relationship' : linked artifacts of Artifact base on the relationship and the specified useType
+ **
+ ** Question MAPPING:
+ **   An answer of question can be mapped to artifact property value
+ **
+ ** Question DEPENDENCY (Conditional Questions)
+ ** A question can be defined as dependent on other questions as below
+ **   doNotAnswerWhen: [{questionID:'id1', values:['false']}, {questionID:'id2', values:['yes']}]
+ ** Question dependency is applicable to single-choice and taxonomy questions only
+ ** 
+ ** Default VALUES:
+ **
+ **   predefinedType: if question has no type, it will use the default
+ **   predefinedValues: predefined option values of default type
+ **
+ ** SCORES:
+ **   question[@type='score']: each question which type is score will have 1-many type of scores: technical score, financial score,...
+ **   Each type score, 1 of 4 ways calculation can be set: { 'avg' : average score, 'min' : minimum score, 'max': maximum score, 'first': first answer }
+ **   avg is default
+ **
+ ** COLOR PATTERNS:
+ **
+ **   Theme: blue(default): #5fa2dd, green: #9cc96b, purple: #986291, orange: #ebaa4b, red: #f76c51, jade green: #4ebcda
+ **   Icons: cloud, user, info, home, heart, gift, signal, gear, file, trash, clock-o, road, lock, inbox, flag, tags, list
+ ** or all the icons which defined in font awesome. See more:  http://fortawesome.github.io/Font-Awesome/icons/
+ */
+{
+  icon: 'cloud',
+  steps: [
+    {
+      name: 'Estimate HW Requirements',
+      description: 'Estimate the number of servers and server class utilized by this application. This will give you an ability to create basic estimate of application running costs. You can have more accurate estimates if you model application deployments in detail.',
+      icon: 'server',
+      background: '#ebaa4b',
+      questions: [
+        {
+          question: 'How many servers are utilized for this application ?',
+          id: 'numberOfServers',
+          type: 'number'
+        },
+        {
+          question: 'What is the server class of the servers used by this application ? Server class identifies server basic parameters like processing power, memory and storage size.',
+          type: 'relationship',
+          id: 'serverClass',
+          mapping: {
+            relationshipName: 'serverClass',
+            label: 'Used Server Class',
+            artifactTypes: [
+              'serverClassArtifact'
+            ],
+            tableViewOnly: false
+          }
+        }
+      ]
+    },
+    {
+      name: 'Assign Deployment Reference Model',
+      description: 'You can assign a reference model of application deployment (infrastructure service) to the application. This will help you to estimate costs of deployment of the application and it will allow you to build/reuse a service design for automated deployment of the application.',
+      icon: 'cubes',
+      background: '#C28A22',
+      questions: [
+        {
+          question: 'Select deployment/reference models for this application',
+          type: 'relationship',
+          id: 'referenceModels',
+          mapping: {
+            relationshipName: 'uses',
+            label: 'Deployment models (infrastructure services)',
+            artifactTypes: [
+              'infrastructureServiceArtifact'
+            ],
+            tableViewOnly: true,
+            readOnly: false,
+            deleteOnly: false
+          }
+        }
+      ]
+    },        
+    {
+      name: 'Finish',
+      description: 'Thank you for participating in this survey',
+      icon: 'check',
+      background: '#4ebcda'
+    }
+  ],
+  onCompletion: function(surveyedArtifact, questions, calculatedScores) {
+    if (questions.has('numberOfServers')) setProperty(surveyedArtifact, 'estimatedNumberOfServers', questions.getInt('numberOfServers'));
+  }
+}

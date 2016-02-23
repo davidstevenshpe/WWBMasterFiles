@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/toolArtifacts/syncAssociationTool</r:path>
+   <r:collection>/toolArtifacts/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType></r:contentType>
+   <r:owner>systinet:admin</r:owner>
+   <r:uuid>f17ad220-63a2-47bc-9d6a-51b2345084ec</r:uuid>
+   <r:domainId>topLevelDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2015-05-27T06:21:43.995Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>systinet:admin</r:creator>
+      <r:lastDataRevision>0</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:jobToolArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                            xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                            xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                            xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                            xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                            deleted="0"
+                            xlink:href="toolArtifacts/syncAssociationTool">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="System"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:system"/>
+               <p:artifactType name="Tool" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:system:tool"/>
+               <p:artifactType name="Job Tool"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:system:tool:job"/>
+            </g:artifactTypeGroup>
+            <g:nameGroup>
+               <p:name>Deployment Specification Association Update Task</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup/>
+            <p:revision>1</p:revision>
+            <g:keywordGroup/>
+            <p:jobClassId>syncAssociationTool</p:jobClassId>
+            <g:r_jobParameterGroup/>
+         </a:jobToolArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

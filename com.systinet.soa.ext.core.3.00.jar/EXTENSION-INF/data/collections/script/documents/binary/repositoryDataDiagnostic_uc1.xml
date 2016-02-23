@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tests>
+    <test name="Nonexistent Relationships" desc="Artifact has outgoing/incoming relationship with nonexistent artifact">
+        <sql>
+        	SELECT R.uuid, R.fk_artifactType, R.d_name
+			FROM ry_docRel DR INNER JOIN ry_resource R ON DR.sourceId=R.id
+			WHERE (DR.targetId NOT IN (SELECT R2.id FROM ry_resource R2 WHERE R2.m_deleted='0'))
+				  AND DR.obsolete='0'
+				  AND R.m_deleted='0'
+       			  AND R.fk_artifactType NOT IN ('taxonomyArtifact','collectionArtifact','jobToolArtifact','assertionArtifact','hpsoaDomainArtifact','r_scriptArtifact','reportArtifact','personArtifact')
+			UNION 
+			SELECT R.uuid, R.fk_artifactType, R.d_name
+			FROM ry_docRel DR INNER JOIN ry_resource R ON DR.sourceId=R.id
+			WHERE DR.sourceId NOT IN (SELECT R2.id FROM ry_resource R2 WHERE R2.m_deleted='0')
+				  AND DR.obsolete='0'
+				  AND R.m_deleted='0'
+			      AND R.fk_artifactType NOT IN ('taxonomyArtifact','collectionArtifact','jobToolArtifact','assertionArtifact','hpsoaDomainArtifact','r_scriptArtifact','reportArtifact','personArtifact')
+			ORDER BY fk_artifactType
+		</sql>
+    </test>
+    <test name="Orphan" desc="Artifact does not have relationship with any artifact">
+    	<sql>
+    		SELECT R.uuid, R.fk_artifactType, R.d_name
+			FROM ry_resource R
+			WHERE R.id NOT IN (SELECT DR.sourceId FROM ry_docRel DR WHERE DR.obsolete='0' AND DR.targetDeleted='0') 
+				  AND R.id NOT IN (SELECT DR.targetId FROM ry_docRel DR WHERE DR.targetId &gt; 0 AND DR.obsolete='0' AND DR.deleted='0')
+				  AND R.m_deleted='0'
+				  AND R.fk_artifactType NOT IN ('taxonomyArtifact','collectionArtifact','jobToolArtifact','assertionArtifact','hpsoaDomainArtifact','r_scriptArtifact','reportArtifact','personArtifact')
+			ORDER BY fk_artifactType
+    	</sql>
+    </test>
+</tests>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<impactToolConfig>
+   <global>
+      <reverse>
+         <relationship type="{http://systinet.com/2005/05/soa/model/property}consumerContractor"/>
+        </reverse>
+        <system>
+            <artifact type="urn:com:systinet:soa:model:artifacts:soa:agreement:request"/>
+        </system>
+    </global>
+            
+    <!-- This impact should be shown for all artifact types -->
+    <impactType description="Shows all affected artifacts by given artifact. Includes all relationships of all visited artifacts"
+               direction="impactOverContract"
+               name="Affected Artifacts"
+               relationshipDirection="incoming">
+        <scope>
+            <artifact type="urn:com:systinet:soa:model:artifacts"/>
+        </scope>
+        
+        <artifactType allArtifacts="true" allRelationships="true"
+                    value="urn:com:systinet:soa:model:artifacts">
+            <!-- allRelationships="false" - traverse metioned-above relationships only
+                allArtifacts="false" - include artifacts contained in this impact type only
+                allRelationships="true" - traverse all outgoing relationships from business service
+                allArtifacts="true" - include all artifacts from a relationship, but don't traverse in deep if
+                it is not contained in this impact type
+            -->
+            <ignoreRelationship type="{http://systinet.com/2005/05/soa/model/property}r_previousVersion"/>
+            <ignoreRelationship type="{http://systinet.com/2005/05/soa/model/property}r_nextVersion"/>
+        </artifactType>
+    </impactType>
+
+    <!-- This impact should be shown for all artifact types -->
+    <impactType description="Shows whole dependency tree for given artifact. Includes all relationships of all visited artifacts"
+               direction="dependOverProvides"
+               name="Dependency Tree"
+               relationshipDirection="outgoing">
+        <scope>
+            <artifact type="urn:com:systinet:soa:model:artifacts"/>
+        </scope>
+
+        <artifactType allArtifacts="true" allRelationships="true"
+                    value="urn:com:systinet:soa:model:artifacts">
+            <ignoreRelationship type="{http://systinet.com/2005/05/soa/model/property}r_previousVersion"/>
+            <ignoreRelationship type="{http://systinet.com/2005/05/soa/model/property}r_nextVersion"/>
+        </artifactType>
+                
+    </impactType>
+
+    <impactType description="Change owner report" direction="changeOwnerDependency"
+               name="Change owner report"
+               relationshipDirection="outgoing">
+        <scope>
+            <artifact type="urn:com:systinet:soa:model:artifacts"/>
+        </scope>
+        
+        <artifactType allArtifacts="true" allRelationships="true"
+                    value="urn:com:systinet:soa:model:artifacts">
+            <ignoreRelationship type="{http://systinet.com/2005/05/soa/model/property}r_previousVersion"/>
+            <ignoreRelationship type="{http://systinet.com/2005/05/soa/model/property}r_nextVersion"/>
+        </artifactType>
+                      
+    </impactType>
+
+    <impactType description="Shows whole dependency tree for given artifact excluding Endpoint and Operation artifacts. Includes all relationships of all visited artifacts"
+               direction="dependOverProvides"
+               name="Consumption Tree"
+               relationshipDirection="outgoing">
+        <scope>
+            <artifact type="urn:com:systinet:soa:model:artifacts"/>
+        </scope>
+       
+        <artifactType allArtifacts="true" allRelationships="false"
+                    value="urn:com:systinet:soa:model:artifacts">
+            <relationship type="{http://systinet.com/2005/05/soa/model/property}r_bsConsistsOf"/>
+            <relationship type="{http://systinet.com/2005/05/soa/model/property}hpsoaProvidesBusinessService"/>
+            <relationship type="{http://systinet.com/2005/05/soa/model/property}r_subProcess"/>
+            <relationship type="{http://systinet.com/2005/05/soa/model/property}r_projectContent"/>
+            <relationship type="{http://systinet.com/2005/05/soa/model/property}service"/>
+        </artifactType>
+                
+    </impactType>
+
+    <impactType description="Shows all affected artifacts by given artifact enriched by SLO artifacts. Includes all relationships of all visited artifacts."
+               direction="impactOverContract"
+               name="Applicable SLO"
+               relationshipDirection="incoming">
+        <scope>
+            <artifact type="urn:com:systinet:soa:model:artifacts"/>
+        </scope>
+        <reverse>
+            <relationship type="{http://systinet.com/2005/05/soa/model/property}artifactSlo"/>
+        </reverse>
+        
+        <artifactType allArtifacts="true" allRelationships="true"
+                    value="urn:com:systinet:soa:model:artifacts">
+            <ignoreRelationship type="{http://systinet.com/2005/05/soa/model/property}r_previousVersion"/>
+            <ignoreRelationship type="{http://systinet.com/2005/05/soa/model/property}r_nextVersion"/>
+        </artifactType>
+    </impactType>
+</impactToolConfig>

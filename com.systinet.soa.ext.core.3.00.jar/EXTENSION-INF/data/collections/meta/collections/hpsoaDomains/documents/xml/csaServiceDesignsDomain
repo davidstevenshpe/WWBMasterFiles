@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/hpsoaDomains/csaServiceDesignsDomain</r:path>
+   <r:collection>/hpsoaDomains/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType></r:contentType>
+   <r:owner>systinet:admin</r:owner>
+   <r:uuid>6087bd4a-a2d2-11e4-89d3-123b93f75cba</r:uuid>
+   <r:type>document</r:type>
+   <r:domainId>topLevelDomain</r:domainId>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>1970-01-01T00:00:00.000Z</r:timestamp>
+      <r:creator>systinet:admin</r:creator>
+      <r:lastDataRevision>0</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:hpsoaDomainArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                                xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                                xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                                xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                                deleted="0"
+                                xlink:href="hpsoaDomains/6087bd4a-a2d2-11e4-89d3-123b93f75cba">
+            <g:nameGroup>
+               <p:name>CSA Service Designs</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup>
+               <p:description>&lt;P&gt;
+&lt;SPAN style="color: rgb(68, 72, 102); font-family: HPSimplified, Arial, Verdana, Helvetica, sans-serif; font-size: 13px; line-height: 15px;"&gt;Contains CSA service designs (infrastructure services) and  topology components (deployment specifications), which are synchronized with Enterprise Maps.&lt;/SPAN&gt;
+&lt;/P&gt;     </p:description>
+            </g:descriptionGroup>
+            <p:revision>1</p:revision>
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="System"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:system"/>
+               <p:artifactType name="Domain"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:system:domain"/>
+            </g:artifactTypeGroup>
+            <g:keywordGroup/>
+			<p:domainType name="Reference Model"
+                          taxonomyUri="uddi:systinet.com:soa:model:taxonomies:domainTypes"
+                          value="Reference"/>
+            <p:r_localId>csaServiceDesignsDomain</p:r_localId>
+            <p:r_location>/csaServiceDesignsDomain</p:r_location>
+         </a:hpsoaDomainArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

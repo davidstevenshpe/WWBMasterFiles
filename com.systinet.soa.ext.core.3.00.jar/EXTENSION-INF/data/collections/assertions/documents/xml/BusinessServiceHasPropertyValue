@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pm:Assertion xmlns:pm="http://systinet.com/2005/10/soa/policy"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xmlns:r="http://systinet.com/2005/05/repository"
+              xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+              xmlns:rest="http://systinet.com/2005/05/soa/resource"
+              xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xmlns:p="http://systinet.com/2005/05/soa/model/property"
+              xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup">
+    <pm:Template>
+        <BusinessServiceHasProperty xmlns="http://systinet.com/2005/10/soa/policy/best-practice"
+                       xmlns:p="http://systinet.com/2005/10/soa/policy"/>
+    </pm:Template>
+    <pm:Parameter xmlns:p1="http://www.w3.org/2001/XMLSchema" Name="propertyName" Optional="false" Type="p1:string"
+                  XPointer="xpointer(@propertyName)">
+        <pm:Description>Searched property name</pm:Description>
+    </pm:Parameter>
+    <pm:Parameter xmlns:p1="http://www.w3.org/2001/XMLSchema" Name="categoryName" Optional="false" Type="p1:string"
+                  XPointer="xpointer(@categoryName)">
+        <pm:Description>Expected category value</pm:Description>
+    </pm:Parameter>
+    <pm:Bundle>
+        <pm:String Key="no-property">This service does not have expected value of property {0}, required is "{1}".</pm:String>
+    </pm:Bundle>
+    <pm:Validation
+            SourceType="xmlns(ns=http://systinet.com/2005/05/soa/resource)qname(ns:resource)">
+        <val:XQuery xmlns:val="http://systinet.com/2005/10/soa/policy/validation"
+                    xmlns:xlink="http://www.w3.org/1999/xlink/">
+declare namespace rest="http://systinet.com/2005/05/soa/resource";
+declare namespace a="http://systinet.com/2005/05/soa/model/artifact";
+declare namespace p="http://systinet.com/2005/05/soa/model/property";
+declare namespace val="http://systinet.com/2005/10/soa/policy/validation";
+
+declare variable $metadata.source.url external;
+declare variable $propertyName as xs:string external;
+declare variable $categoryName as xs:string external;
+
+if
+ (empty(rest:resource/rest:descriptor/a:*/p:*[local-name()=$propertyName and @name=$categoryName]))
+then
+ val:assertionFailed(val:l10n('no-property', $propertyName, $categoryName))
+else
+ val:assertionOK()
+        </val:XQuery>
+    </pm:Validation>
+</pm:Assertion>

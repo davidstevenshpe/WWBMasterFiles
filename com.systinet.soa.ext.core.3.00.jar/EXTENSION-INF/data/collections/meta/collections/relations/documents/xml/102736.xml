@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:relationship xmlns:r="http://systinet.com/2005/05/repository">
+   <r:id>102736</r:id>
+   <r:type>{http://systinet.com/2005/05/soa/model/property}r_appliedTechnicalPolicy</r:type>
+   <r:state>open</r:state>
+   <r:deleted>false</r:deleted>
+   <r:obsolete>false</r:obsolete>
+   <r:b1>false</r:b1>
+   <r:createdOn>2015-09-22T06:59:36.399Z</r:createdOn>
+   <r:source>
+      <r:path>/hpsoaPolicyReports/9f9da9c1-0c49-40ab-9de1-e74144239187</r:path>
+      <r:revision>1</r:revision>
+      <r:revisionTo>0</r:revisionTo>
+   </r:source>
+   <r:target>
+      <r:path>/hpsoaTechnicalPolicies/c8a52011-2f6f-47c9-8b98-ab067b0d91b7</r:path>
+      <r:uuid>c8a52011-2f6f-47c9-8b98-ab067b0d91b7</r:uuid>
+      <r:revision>1</r:revision>
+      <r:revisionTo>0</r:revisionTo>
+      <r:deleted>false</r:deleted>
+   </r:target>
+</r:relationship>

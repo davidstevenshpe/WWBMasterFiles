@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository" xmlns:xlink="http://www.w3.org/1999/xlink">
+   <r:path>/hpsoaTechnicalPolicies/artifact-property-validity</r:path>
+   <r:collection>/hpsoaTechnicalPolicies/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType>text/xml</r:contentType>
+   <r:owner>systinet:admin</r:owner>
+   <r:uuid>0b7f00fd-5908-4471-b0ee-6a912ce3c403</r:uuid>
+   <r:domainId>topLevelDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2012-02-13T07:09:42.154Z</r:timestamp>
+      <r:creator>systinet:admin</r:creator>
+      <r:lastDataRevision>1</r:lastDataRevision>
+   </r:revision>
+   <r:relationships>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/artifact-property-validity">
+     <r:path>hpsoaTechnicalPolicies/artifact-property-validity</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/ArtifactPropertyValidator">
+     <r:path>assertions/ArtifactPropertyValidator</r:path>
+    </r:target>
+   </r:relationship>
+   </r:relationships>
+   <r:extensions>
+      <r:descriptor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:a="http://systinet.com/2005/05/soa/model/artifact" xmlns:wsi="http://www.ws-i.org/testing/2004/07/assertions/" xmlns:rest="http://systinet.com/2005/05/soa/resource" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:p="http://systinet.com/2005/05/soa/model/property" xmlns:sbp="http://systinet.com/2005/10/soa/policy/bpa" xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup" xmlns:pm="http://systinet.com/2005/10/soa/policy">
+         <a:hpsoaTechnicalPolicyArtifact deleted="0" xlink:href="hpsoaTechnicalPolicies/artifact-property-validity.xml" xml:base="https://localhost:8443/soa/systinet/platform/rest/repository/">
+           <g:r_referencedAssertionGroup>
+            <p:r_referencedAssertion deleted="0" xlink:href="assertions/ArtifactPropertyValidator"/>
+           </g:r_referencedAssertionGroup>
+           <g:nameGroup>
+               <p:name>Systinet Artifact Property Validator</p:name>
+           </g:nameGroup>
+           <g:descriptionGroup>
+               <p:description>Systinet Artifact Property Validator</p:description>
+           </g:descriptionGroup>
+           <g:artifactTypeGroup>
+             <p:artifactType name="Artifact" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes" value="urn:com:systinet:soa:model:artifacts"/>
+             <p:artifactType name="SOA" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes" value="urn:com:systinet:soa:model:artifacts:soa"/>
+             <p:artifactType name="Policy" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes" value="urn:com:systinet:soa:model:artifacts:soa:policy"/>
+             <p:artifactType name="Technical Policy" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes" value="urn:com:systinet:soa:model:artifacts:soa:policy:technicalPolicy"/>
+           </g:artifactTypeGroup>
+           <p:lastRevision>1</p:lastRevision>
+           <p:revision>1</p:revision>
+	   <g:applicableSourceQNameGroup>
+          <p:applicableSourceQName>{http://systinet.com/2005/05/soa/resource}resource</p:applicableSourceQName>
+            </g:applicableSourceQNameGroup>
+            <p:isCached>false</p:isCached>
+         </a:hpsoaTechnicalPolicyArtifact>	 
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

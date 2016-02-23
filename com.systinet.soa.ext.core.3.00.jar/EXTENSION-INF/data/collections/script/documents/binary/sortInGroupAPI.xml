@@ -1,0 +1,187 @@
+/* This is the mandatory method which is called from Systinet to sort Documentation table.
+ * We use Rhino(ver. 1.7R2) library to call and execute this script.
+ * This method covers two main sort methods in Type and Type-Version. We need it to match our requirement.  
+ * Do NOT change name of function (sort) and parameter (rows), we use this fixed name to pass and execute Sort script
+ * Do NOT remove Type and Version column in XML Customization file when use this custom sort.
+ * Should input number for Version field
+ * Valid Version values: 1.1, 1.2.3, BS 1.1, BS 2.2.2 etc..  
+ */
+function sort(rows){
+	var resultList = sortInVersion(rows);
+	resultList = sortInTypeAndVersion(resultList);
+	return resultList;
+}
+
+/* Global variables*/
+var DOCUMENT_TYPE_KEY 	= "a.documentType.name";
+var VERSION_KEY 		= "a.version";
+
+function sortInVersion(rows){
+	var resultList = new Packages.java.util.ArrayList();
+	var tempList = new Packages.java.util.ArrayList();
+	
+	//sort in Version column
+	for(var i=0; i<rows.size(); i++){
+		var row = rows.get(i);
+		if(tempList.size()==0){
+			tempList.add(row);
+			if((i+1)==rows.size()){
+				resultList.addAll(tempList);
+				tempList.clear();
+				break;
+			}else{
+				continue;
+			}
+		}
+		var type1 = row.get(DOCUMENT_TYPE_KEY)==null?"":row.get(DOCUMENT_TYPE_KEY).toString();
+		var type2 = tempList.get(0).get(DOCUMENT_TYPE_KEY)==null?"":tempList.get(0).get(DOCUMENT_TYPE_KEY).toString();
+		
+		if(type1.equalsIgnoreCase(type2)){
+			tempList.add(row);
+		}else{
+			if(tempList.size()>1){
+				//sort in version column
+				tempList = bubbleSort(tempList);
+			}
+			//add results to resultList
+			resultList.addAll(tempList);
+			tempList.clear();
+			i--;
+		}
+	}
+	
+	if(!tempList.isEmpty()){
+		resultList.addAll(bubbleSort(tempList));
+		tempList.clear();
+	}
+	return resultList;
+}
+
+function sortInTypeAndVersion(rows){
+	//sort in Type and Version column
+	var resultList = new Packages.java.util.ArrayList();
+	var rowsSize = rows.size();
+	while(rowsSize>0){
+		for(var i=0; ; ){
+			try{
+				if(resultList.size() == 0){
+					resultList.add(rows.remove(i));
+					rowsSize--;
+				}else{
+					if(isAbleToAddIn(resultList, rows.get(i))){
+						resultList.add(rows.remove(i));						
+						rowsSize--;
+					}else{
+						i++;
+					}
+				}
+			}catch(e){
+				break;
+			}
+		}
+		if(rowsSize > 0){
+			var isAddAll = true;
+			var obj1FirstValue = rows.get(0).get(DOCUMENT_TYPE_KEY);
+			for(var j=0; j<rows.size(); j++){
+				if(!compareObjects(obj1FirstValue, rows.get(j).get(DOCUMENT_TYPE_KEY))){
+					isAddAll = false;
+					break;
+				}
+			}
+			if(isAddAll){
+				resultList.addAll(rows);
+				rows.clear();
+				rowsSize = 0;
+			}
+		}
+	}
+	return resultList;
+}
+
+/**************UTILITY METHODS**************/
+/*
+ * Swap objects in array
+ * */
+function swapObject(arr, idx){
+	var tmp = arr.get(idx);
+	arr.set(idx, arr.get(idx+1));
+	arr.set(idx+1, tmp);
+	return arr;
+}
+
+/*
+ * Compare 2 version string recursively
+ * @return: true: v1 is lesser than v2, otherwise false
+ * */
+function isSwapped(v1, v2){
+	var arrNum1 = v1.split("\\.", 2);
+	var arrNum2 = v2.split("\\.", 2);
+	if((arrNum1.length == 1 && arrNum2.length == 1) || (parseInt(arrNum1[0]) != parseInt(arrNum2[0]))){
+		return parseInt(arrNum1[0]) < parseInt(arrNum2[0]);
+	}
+	if(arrNum1.length < arrNum2.length) return true;
+	else if(arrNum1.length > arrNum2.length) return false;
+	return isSwapped(arrNum1[1], arrNum2[1]);
+}
+
+/*
+ * Sort Descending base on Version
+ */
+function bubbleSort(arr) {
+	var swapped = true;
+	var j = 0;
+	var tmp;
+	while (swapped) {
+		swapped = false;
+		j++;
+		for (var i = 0; i < arr.size() - j; i++) {
+			var version1Str = arr.get(i).get(VERSION_KEY) == null ? "0" : arr.get(i).get(VERSION_KEY).toString().replaceAll("[^0-9\\.]+","").replaceAll("[\\.]+$","");
+			var version2Str = arr.get(i+1).get(VERSION_KEY) == null ? "0" : arr.get(i+1).get(VERSION_KEY).toString().replaceAll("[^0-9\\.]+","").replaceAll("[\\.]+$","");
+			swapped = isSwapped(version1Str, version2Str);
+			if(swapped){
+				arr = swapObject(arr, i);
+			}
+		}                
+	}
+	return arr;
+}
+
+/*
+ * Check whether an element can be added into list or not
+ * It compares between 'last item in list' and 'element' base on type and version value
+ * Return false if they have same type but not same version, otherwise true   
+ * @param list: array
+ * @param element: item
+ * @return true: able to add in, otherwise false
+ * */
+function isAbleToAddIn(list, element){
+	
+	var row = list.get(list.size()-1);
+	var obj1FirstValue  = row.get(DOCUMENT_TYPE_KEY);
+	var obj1SecondValue = row.get(VERSION_KEY);
+	
+	var obj2FirstValue  = element.get(DOCUMENT_TYPE_KEY);
+	var obj2SecondValue = element.get(VERSION_KEY);
+	
+	if(compareObjects(obj1FirstValue, obj2FirstValue) && !compareObjects(obj1SecondValue, obj2SecondValue)) return false;		
+	return true;
+}
+
+/*
+ * Compare 2 string objects
+ * @param obj1
+ * @param obj2
+ * @return true: equal, false: not equal
+ */
+function compareObjects(obj1, obj2){
+	if(obj1==null && obj2==null){
+		return true;
+	}else if(obj1!=null && obj2==null){
+		return false;
+	}else if(obj1==null && obj2!=null){
+		return false;
+	}else{
+		return obj1.toString().equalsIgnoreCase(obj2.toString());
+	}
+	return false;
+}

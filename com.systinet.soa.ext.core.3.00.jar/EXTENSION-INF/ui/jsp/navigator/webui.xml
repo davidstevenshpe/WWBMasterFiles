@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config name="ui-navigator-web" savingPeriod="5000">
+    <webFramework>
+
+        <component name="/navigator/portlet/bookmarks" page="portlet/bookmarks.jsp" className="com.hp.systinet.navigator.ui.BookmarksPortlet"/>
+
+        <component name="/navigator" page="navigatorComponent.jsp" className="com.hp.systinet.navigator.ui.NavigatorComponent"/>
+
+        <component name="/navigator/layout/navigatorMain" page="navigatorMain.jsp"  className="com.hp.systinet.sc.ui.impl.layout.NewUiMain"/>
+		
+		<component name="/navigator/layout/navigatorLayout" page="navigatorLayout.jsp"/>
+
+        <component name="/navigator/layout/headerLayoutEmpty" page="empty.jsp"/>
+
+
+        <!-- Note: "captionKey" parameter is necessary for proper navigator in frames functionality -->
+
+		<!-- old UI navigator task -->
+        <task uri="/navigator" component="/navigator" style="">
+            <parameter paramName="captionKey" paramValue="com.hp.systinet.navigator.ui.navigator$navigator.task.label"/>
+        </task>
+        
+        <!-- new UI navigator task -->
+        <task uri="/common/navigator" component="/navigator/layout/headerLayoutEmpty" style="/navigator/layout/navigatorMain">
+            <parameter paramName="captionKey" paramValue="com.hp.systinet.navigator.ui.navigator$navigator.task.label"/>
+        </task>
+        
+        <!-- new UI navigator with impact task -->
+        <task uri="/common/navigator/impact" component="/navigator/layout/headerLayoutEmpty" style="/navigator/layout/navigatorMain">
+            <parameter paramName="captionKey" paramValue="com.hp.systinet.navigator.ui.navigator$navigator.task.label"/>
+            <parameter paramName="highlight" paramValue="impact" />
+        </task>
+
+        <!-- new UI navigator homepage task -->
+        <task uri="/navigator/homepage" component="/navigator/layout/headerLayoutEmpty" style="/navigator/layout/navigatorMain">
+            <parameter paramName="captionKey" paramValue="com.hp.systinet.navigator.ui.navigator$navigator.task.label"/>
+        </task>
+    </webFramework>
+</config>

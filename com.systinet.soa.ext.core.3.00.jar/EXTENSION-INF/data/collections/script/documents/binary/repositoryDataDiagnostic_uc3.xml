@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tests>
+    <test name="Check duplicate taxonomy ID" desc="Taxonomy has a duplicated taxonomy id">
+        <sql>
+        	SELECT R.uuid, R.fk_artifactType, R.d_name
+			FROM ry_resource R, ry_taxTModel taxTModel
+			WHERE R.id = taxTModel.fk_inTaxonomy 
+				  AND taxTModel.tModelKeyLower IN
+					  (SELECT ry_taxTModel.tModelKeyLower 
+					   FROM ry_taxTModel
+					   GROUP BY ry_taxTModel.tModelKeyLower
+					   HAVING COUNT(ry_taxTModel.tModelKeyLower) &gt; 1)
+			ORDER BY R.d_name
+		</sql>
+    </test>
+    <test name="Taxonomy ID format is invalid" desc="Taxonomy key must start with &quot;uddi&quot;">
+    	<sql>
+    		SELECT R.uuid, R.fk_artifactType, R.d_name
+			FROM ry_resource R INNER JOIN ry_taxTModel taxTModel ON R.id = taxTModel.fk_inTaxonomy
+			WHERE taxTModel.tModelKey NOT LIKE 'uddi:%'
+			ORDER BY R.d_name
+    	</sql>
+    </test>
+	 <test name="Taxonomy has duplicated categories" desc="Category value is duplicated by another category in the same taxonomy">
+    	<sql>
+    		SELECT R.uuid, R.fk_artifactType, R.d_name
+			FROM ry_resource R, ry_taxTModel taxTModel
+			WHERE R.id = taxTModel.fk_inTaxonomy 
+				  AND taxTModel.tModelKeyLower IN
+					  (SELECT ry_taxCategory.tModelKeyLower
+					   FROM ry_taxCategory
+					   GROUP BY ry_taxCategory.keyValue, ry_taxCategory.tModelKeyLower
+					   HAVING COUNT(keyValue) &gt; 1)
+			ORDER BY R.d_name
+    	</sql>
+    </test>
+	<test name="Artifact uses invalid taxonomy" desc="Artifact uses non-existing category or non-existing taxonomy ID">
+    	<sql>
+    		-- Find artifacts which use non-existing taxonomy ID
+			SELECT R.uuid, R.fk_artifactType, R.d_name
+			FROM ry_resource R INNER JOIN rygt_ctgryPty ON R.id = rygt_ctgryPty.fk_resource_id
+			WHERE rygt_ctgryPty.taxUri NOT IN (SELECT ry_taxTModel.tModelKey FROM ry_taxTModel)
+			-- Find artifacts which use non-existing category 
+			UNION
+			SELECT R.uuid, R.fk_artifactType, R.d_name
+			FROM ry_resource R INNER JOIN rygt_ctgryPty ON R.id = rygt_ctgryPty.fk_resource_id
+			WHERE EXISTS (SELECT 1  FROM ry_taxCategory WHERE LOWER(rygt_ctgryPty.taxUri) = ry_taxCategory.tModelKeyLower)
+			AND rygt_ctgryPty.val NOT IN (SELECT ry_taxCategory.keyValue 
+											FROM ry_taxCategory 
+											WHERE LOWER(rygt_ctgryPty.taxUri) = ry_taxCategory.tModelKeyLower)
+			ORDER BY d_name
+    	</sql>
+    </test>
+</tests>

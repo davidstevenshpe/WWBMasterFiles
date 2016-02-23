@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><taxonomy check="true" xmlns="http://systinet.com/uddi/taxonomy/v3/5.5">
+  <tModel tModelKey="uddi:systinet.com:soa:model:taxonomies:policyCategory" deleted="false" xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <name xmlns="urn:uddi-org:api_v3">systinet-com:soa:model:taxonomies:policyCategory</name>
+    <description xmlns="urn:uddi-org:api_v3">Category of the policy.</description>
+    <categoryBag xmlns="urn:uddi-org:api_v3">
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Checked value set" keyValue="checked"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="tModel"/>
+    </categoryBag>
+  </tModel>
+  <compatibilityBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <compatibility>tModel</compatibility>
+  </compatibilityBag>
+  <categorizationBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <categorization>categorization</categorization>
+  </categorizationBag>
+  <validation xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <categories>
+      <category keyName="Audit" keyValue="uddi:systinet.com:soa:model:taxonomies:policyCategory:audit" disabled="false"/>
+      <category keyName="Security" keyValue="uddi:systinet.com:soa:model:taxonomies:policyCategory:security" disabled="false"/>
+      <category keyName="TrafficManagement" keyValue="uddi:systinet.com:soa:model:taxonomies:policyCategory:trafficManagement" disabled="false"/>
+      <category keyName="PayloadInspection" keyValue="uddi:systinet.com:soa:model:taxonomies:policyCategory:payloadInspection" disabled="false"/>
+      <category keyName="ProtocolMediation" keyValue="uddi:systinet.com:soa:model:taxonomies:policyCategory:protocolMediation" disabled="false"/>
+      <category keyName="Other" keyValue="uddi:systinet.com:soa:model:taxonomies:policyCategory:other" disabled="false"/>
+    </categories>
+  </validation>
+</taxonomy>

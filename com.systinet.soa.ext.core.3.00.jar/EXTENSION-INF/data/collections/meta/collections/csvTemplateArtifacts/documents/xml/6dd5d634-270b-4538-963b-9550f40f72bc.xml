@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/csvTemplateArtifacts/6dd5d634-270b-4538-963b-9550f40f72bc</r:path>
+   <r:collection>/csvTemplateArtifacts/</r:collection>
+   <r:binary>true</r:binary>
+   <r:contentType>text/csv</r:contentType>
+   <r:owner>systinet:admin</r:owner>
+   <r:uuid>6dd5d634-270b-4538-963b-9550f40f72bc</r:uuid>
+   <r:domainId>defaultDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>1401408910</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2015-03-24T11:47:01.744Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>systinet:admin</r:creator>
+      <r:lastDataRevision>1</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:csvTemplateArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                                xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                                xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                                xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                                xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                deleted="0"
+                                xlink:href="csvTemplateArtifacts/6dd5d634-270b-4538-963b-9550f40f72bc">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="Content"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:content"/>
+               <p:artifactType name="Spreadsheet Template"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:content:csvTemplateArtifact"/>
+            </g:artifactTypeGroup>
+            <g:nameGroup>
+               <p:name>Person CSV Template</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup>
+               <p:description>&lt;P&gt;
+	
+
+&lt;SPAN style="color: rgb(68, 72, 102); font-family: HPSimplified, Arial, Verdana, Helvetica, sans-serif; font-size: 13px; line-height: 15px;"&gt;CSV template for importing Person.&lt;/SPAN&gt;
+
+&lt;/P&gt;</p:description>
+            </g:descriptionGroup>
+            <p:revision>1</p:revision>
+            <g:keywordGroup/>
+            <p:version>1.0</p:version>
+            <p:location>/topLevelDomain/personArtifact.csv</p:location>
+            <p:isCached>0</p:isCached>
+            <p:checksum>1401408910</p:checksum>
+            <p:dataLength>25600</p:dataLength>
+            <p:r_filename>personArtifact.csv</p:r_filename>
+            <p:contentType>text/csv</p:contentType>
+            <p:syncStatus>IDENTICAL</p:syncStatus>
+            <p:syncLastChecked>2015-03-24T06:56:48.677Z</p:syncLastChecked>
+            <g:applicableToArtifactGroup>
+               <p:applicableToArtifact name="Person"
+                                       taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                                       value="urn:com:systinet:soa:model:artifacts:content:contact:person"/>
+            </g:applicableToArtifactGroup>
+         </a:csvTemplateArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

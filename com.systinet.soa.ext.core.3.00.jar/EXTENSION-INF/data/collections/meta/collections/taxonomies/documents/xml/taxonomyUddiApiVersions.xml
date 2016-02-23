@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+    <r:path>/taxonomies/uddi-com-systinet-repository-sdm-taxonomies-uddiApiVersions</r:path>
+    <r:collection>/taxonomies/</r:collection>
+    <r:binary>false</r:binary>
+    <r:contentType/>
+    <r:owner>admin</r:owner>
+    <r:uuid>2e1ce2d2-7f1a-42c8-a9bc-0e2adcc4e966</r:uuid>
+    <r:domainId>topLevelDomain</r:domainId>
+    <r:type>document</r:type>
+    <r:deleted>false</r:deleted>
+    <r:cached>false</r:cached>
+    <r:checkSum>0</r:checkSum>
+    <r:revision>
+        <r:number>1</r:number>
+        <r:timestamp/>
+        <r:creator>admin</r:creator>
+        <r:lastDataRevision>1</r:lastDataRevision>
+    </r:revision>
+    <r:extensions>
+        <r:descriptor>
+            <a:taxonomyArtifact
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                xlink:href="taxonomies/1.xml" xmlns:aa="http://systinet.com/2005/05/soa/model/propertyGroup">
+                <p:checked xmlns:p="http://systinet.com/2005/05/soa/model/property">true</p:checked>
+                <p:hierarchical xmlns:p="http://systinet.com/2005/05/soa/model/property">false</p:hierarchical>
+                <p:isCached xmlns:p="http://systinet.com/2005/05/soa/model/property">false</p:isCached>
+                <g:nameGroup xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup">
+                    <p:name xmlns:p="http://systinet.com/2005/05/soa/model/property" xml:lang="en">uddi:systinet.com:soa:model:taxonomies:uddiApiVersions</p:name>
+                </g:nameGroup>
+                <g:descriptionGroup xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup">
+                    <p:description xmlns:p="http://systinet.com/2005/05/soa/model/property" xml:lang="en">UDDI API version</p:description>
+                </g:descriptionGroup>
+                <aa:artifactTypeGroup xmlns:ab="http://systinet.com/2005/05/soa/model/property">
+                    <ab:artifactType
+                        value="urn:com:systinet:soa:model:artifacts"
+                        name="Artifact" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"/>
+                    <ab:artifactType
+                        value="urn:com:systinet:soa:model:artifacts:content"
+                        name="Repository" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"/>
+                    <ab:artifactType
+                        value="urn:com:systinet:soa:model:artifacts:content:categorization"
+                        name="Categorization" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"/>
+                    <ab:artifactType
+                        value="urn:com:systinet:soa:model:artifacts:content:categorization:taxonomy"
+                        name="Taxonomy" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"/>
+                </aa:artifactTypeGroup>
+            </a:taxonomyArtifact>
+        </r:descriptor>
+    </r:extensions>
+</r:meta>

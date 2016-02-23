@@ -1,0 +1,227 @@
+/*
+ *********      SURVEY SAMPLE        ************
+ **
+ ** Survey STRUCTURE:
+ **
+ **   predefinitions: type, value
+ **   processing: mapping properties of scores
+ **   steps: each step will have 1-many questions
+ **
+ **
+ ** Question TYPES:
+ **
+ **   'single-choice' : radio buttons with default values: { 'Yes' : true, 'No' : false, 'Don\'t know': undefined }
+ **   'multi-choices': checkboxes
+ **   'textarea': textarea for multi-line text input
+ **   'text'
+ **   'number'
+ **   'taxonomy' : combobox, will update the selected value to mapped property of Artifact base on question[@type = 'taxonomy'].mapping
+ **   'relationship' : linked artifacts of Artifact base on the relationship and the specified useType
+ **
+ ** Question MAPPING:
+ **   An answer of question can be mapped to artifact property value
+ **
+ ** Question DEPENDENCY (Conditional Questions)
+ ** A question can be defined as dependent on other questions as below
+ **   doNotAnswerWhen: [{questionID:'id1', values:['false']}, {questionID:'id2', values:['yes']}]
+ ** Question dependency is applicable to single-choice and taxonomy questions only
+ ** 
+ ** Default VALUES:
+ **
+ **   predefinedType: if question has no type, it will use the default
+ **   predefinedValues: predefined option values of default type
+ **
+ ** SCORES:
+ **   question[@type='score']: each question which type is score will have 1-many type of scores: technical score, financial score,...
+ **   Each type score, 1 of 4 ways calculation can be set: { 'avg' : average score, 'min' : minimum score, 'max': maximum score, 'first': first answer }
+ **   avg is default
+ **
+ ** COLOR PATTERNS:
+ **
+ **   You can custom background/buttons by predefined theme values: 'primary'(default), 'success', 'info', 'mint', 'purple', 'pink', 'dark', 'warning', 'danger'
+ **   Theme: blue(default): #5fa2dd, green: #9cc96b, purple: #986291, orange: #ebaa4b, red: #f76c51, jade green: #4ebcda
+ **   Icons: cloud, user, info, home, heart, gift, signal, gear, file, trash, clock-o, road, lock, inbox, flag, tags, list
+ ** or all the icons which defined in font awesome. See more:  http://fortawesome.github.io/Font-Awesome/icons/
+ */
+{
+    icon: 'cloud',
+    predefinedType: 'single-choice',
+    predefinedValues: [{
+        'true': 'Yes'
+    }, {
+        'false': 'No'
+    }, {
+        'undefined': 'Don\'t know'
+    }],
+    processing: {
+        scores: [{
+            name: 'financialScore',
+            property: 'financialAlignment'
+        }]
+    },
+
+    onCompletion: function(surveyedArtifact, questions, calculatedScores) {
+        /*
+        var avgScore = calculateGroup('avg', surveyedArtifact, 'c_cloudAssessment_FinancialAlignment');
+        setProperty(surveyedArtifact, 'financialAlignment', avgScore);
+        */
+    },
+
+    steps: [{
+        name: 'Financial Profile',
+        description: '',
+        icon: 'inbox',
+        background: '#ebaa4b',
+        questions: [{
+            question: 'What are the current annual hardware costs for hosting this application in your datacenter ?',
+            id: 'currentAnnualCostHw',
+            type: 'number',
+            mapping: {
+                type: 'property',
+                property: 'annualCostHw',
+                relationshipName: 'financialProfile',
+                artifactTypes: ['appFinancialProfileArtifact']
+            }
+        }, {
+            question: 'What are the current annual costs related to maintenance of this application ?  (This doesn\'t include costs billed by 3rd party - outsourcing, consultants etc.)',
+            id: 'currentAnnualCostLaborInt',
+            type: 'number',
+            mapping: {
+                type: 'financial-property',
+                property: 'annualCostLaborInt'
+            }
+        }, {
+            question: 'Are there some other costs related to this application ?',
+            id: 'otherCostExists',
+            type: 'single-choice',
+            mapping: {
+                type: 'score',
+                scores: {
+                    financialScore: {
+                        'true': 100,
+                        'false': 0,
+                        'undefined': 10
+                    }
+                }
+            }
+        }, {
+            question: 'Please enter an estimate of these costs.',
+            id: 'estimatedAnnualCostOther',
+            type: 'number',
+            mapping: {
+                type: 'financial-property',
+                property: 'annualCostOther'
+            },
+            doNotAnswerWhen: [{
+                questionID: 'otherCostExists',
+                values: ['false','undefined']
+            }]
+        }]
+    }, {
+        name: '3rd Party Associated Costs',
+        description: '',
+        icon: 'gift',
+        background: '#f76c51',
+        questions: [{
+            question: 'What are the current annual 3rd party software license costs related to this application ?',
+            id: 'currentAnnualCostSw',
+            type: 'number',
+            mapping: {
+                type: 'financial-property',
+                property: 'annualCostSw'
+            }
+        }, {
+            question: 'What are the current annual costs related to maintenance of this application billed by 3rd party - outsourcing, consultants etc. ?',
+            id: 'currentAnnualCostLaborExt',
+            type: 'number',
+            mapping: {
+                type: 'financial-property',
+                property: 'annualCostLaborExt'
+            }
+        }]
+    }, {
+        name: 'Transformation',
+        description: '',
+        icon: 'gear',
+        background: '#9cc96b',
+        questions: [{
+            question: 'If the application depends on a 3rd party software (database, middleware or similar) which needs a per CPU or per hostname licensing, is it feasible to buy the extra licenses needed because of the transformation ?',
+            id: 'transformation_01',
+            type: 'single-choice',
+            mapping: {
+                type: 'score',
+                scores: {
+                    financialScore: {
+                        'true': 100,
+                        'false': 0,
+                        'undefined': 10
+                    }
+                }
+            }
+        }, {
+            question: 'Can your organization accommodate the billing model offered by cloud providers?',
+            id: 'transformation_02',
+            type: 'single-choice',
+            mapping: {
+                type: 'score',
+                scores: {
+                    financialScore: {
+                        'true': 100,
+                        'false': 0,
+                        'undefined': 10
+                    }
+                }
+            }
+        }, {
+            question: 'Is it feasible to get a budget and other resources needed for the transformation?',
+            id: 'transformation_03',
+            type: 'single-choice',
+            mapping: {
+                type: 'score',
+                scores: {
+                    financialScore: {
+                        'true': 100,
+                        'false': 0,
+                        'undefined': 10
+                    }
+                }
+            }
+        }]
+    }, {
+        name: 'Transformation Cost',
+        description: '',
+        icon: 'signal',
+        questions: [{
+            question: 'Can you put an rough estimate of the costs of the labour work/additional software costs needed for the transformation ?',
+            id: 'transformation_cost_01',
+            type: 'single-choice',
+            mapping: {
+                type: 'score',
+                scores: {
+                    financialScore: {
+                        'true': 100,
+                        'false': 0,
+                        'undefined': 10
+                    }
+                }
+            }
+        }, {
+            question: 'Please enter an estimate of these costs.',
+            id: 'transformation_cost_02',
+            type: 'number',
+            mapping: {
+                type: 'financial-property',
+                property: 'transformationCost'
+            },
+            doNotAnswerWhen: [{
+                questionID: 'transformation_cost_01',
+                values: ['false','undefined']
+            }]
+        }]
+    }, {
+        name: 'Finish',
+        description: 'Thank you for participating in this survey',
+        icon: 'check',
+        background: '#4ebcda'
+    }]
+}

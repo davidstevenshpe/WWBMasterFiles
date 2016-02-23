@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsp:Policy xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+    <p0:HasAtLeastOneApprovedReference sourceArtifactType="urn:com:archimate:businessLayer:artifacts:businessService" stage="uddi:systinet.com:soa:model:taxonomies:lifecycleStages:production" targetArtifactType="urn:com:archimate:businessLayer:artifacts:businessProcessArtifact" xmlns:p0="urn:com.hp.systinet.soa:lifecycle-assertions" xmlns:pm="http://systinet.com/2005/10/soa/policy"/>
+</wsp:Policy>

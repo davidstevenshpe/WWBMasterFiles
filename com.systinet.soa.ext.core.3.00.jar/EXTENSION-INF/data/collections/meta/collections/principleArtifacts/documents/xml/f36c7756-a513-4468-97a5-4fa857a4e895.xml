@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/principleArtifacts/f36c7756-a513-4468-97a5-4fa857a4e895</r:path>
+   <r:collection>/principleArtifacts/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType></r:contentType>
+   <r:owner>admin</r:owner>
+   <r:uuid>f36c7756-a513-4468-97a5-4fa857a4e895</r:uuid>
+   <r:domainId>defaultDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2013-12-09T10:55:31.192Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>admin</r:creator>
+      <r:lastDataRevision>0</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:principleArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                              xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                              xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                              xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                              deleted="0"
+                              xlink:href="principleArtifacts/f36c7756-a513-4468-97a5-4fa857a4e895">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="Motivation"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:motivationArtifact"/>
+               <p:artifactType name="Principle"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:principleArtifact"/>
+            </g:artifactTypeGroup>
+            <g:aggregatesGroup>
+               <p:aggregates xlink:href="principleArtifacts/cff48ff6-5942-4e91-838b-0f7b0d516b38"/>
+               <p:aggregates xlink:href="principleArtifacts/cf33d69d-e3b3-46ee-ba93-c69af68a0c3e"/>
+               <p:aggregates xlink:href="principleArtifacts/61d31f8b-9bd2-474c-af02-5415b354e805"/>
+               <p:aggregates xlink:href="principleArtifacts/2b79c410-4167-4c97-9e58-847f0f45328c"/>
+               <p:aggregates xlink:href="principleArtifacts/56985271-ca4d-4073-894b-7544993ba46d"/>
+               <p:aggregates xlink:href="principleArtifacts/04954535-5d2d-4b74-a14d-b504662ab0df"/>
+            </g:aggregatesGroup>
+            <g:nameGroup>
+               <p:name>Proven solution</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup>
+               <p:description>All applications and underlying technology should be based on proven solutions. A use of the experimental, unproven or non-supported technologies should be avoided in the enterprise environment to minimize a negative impact to business processes and enterprise activities.</p:description>
+            </g:descriptionGroup>
+            <p:revision>1</p:revision>
+            <g:keywordGroup/>
+            <p:version>1.0</p:version>
+            <g:architectureLayerGroup>
+               <p:architectureLayer name="Application Layer"
+                                    taxonomyUri="uddi:systinet.com:soa:model:taxonomies:architectureLayer"
+                                    value="applicationLayer"/>
+               <p:architectureLayer name="Technology Layer"
+                                    taxonomyUri="uddi:systinet.com:soa:model:taxonomies:architectureLayer"
+                                    value="technologyLayer"/>
+            </g:architectureLayerGroup>
+            <g:qualityFeatureGroup>
+               <p:qualityFeature name="Effectiveness"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="effectiveness"/>
+               <p:qualityFeature name="Reliability"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="reliability"/>
+            </g:qualityFeatureGroup>
+            <p:rationale>Usage of proven solutions minimizes operational risks, negative impacts to business activities, and increases the stability and reliability of the information environment.
+Experimental and unproven solutions increase the probability of an introduction of unwanted errors, instability and vulnerabilities to the information environment. Moreover - operation of such solutions may require additional costs for maintenance, support, development, and operation.
+While the proven solutions have a large installed base that offers a wide experience how to use and manage such solutions (user forums and communities, shared tips and tricks, known errors etc.), the unproven solutions are not able to provide such knowledge basis on which the IT staff could rely on. Very often the organization stands alone and acts as a pioneer of blind alleys.</p:rationale>
+            <p:implications>The application and technology solutions planned for deployment to the information environment must not be an experimental or unproven solution.
+There should be references from the customers, who use or have used the solution for a similar purpose (for at least a year). The references must be public and verifiable.
+An availability of reliable implementation partners, support, knowledge base, user community, and detailed solution documentation should be taken into account when selecting the solution.
+In the case of out-of-the-box solutions, the official benchmarks and analysis provided by specialized companies can be used as a guide.
+All incidents, problems, and errors relating to the solution should be collected and documented. They can serve as knowledge base or reference for further solution development, or for another implementation of the solution within the enterprise.
+The formalized processed for application development and testing, as well as for the acquisition of IT solutions needs to be implemented and strictly followed.</p:implications>
+         </a:principleArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

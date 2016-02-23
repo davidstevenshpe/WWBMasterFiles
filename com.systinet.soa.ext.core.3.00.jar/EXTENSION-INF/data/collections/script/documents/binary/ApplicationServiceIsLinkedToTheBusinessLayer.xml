@@ -1,0 +1,29 @@
+<closure maxDepth="10" maxResults="400" maxProcessingTime="30000"> 
+
+    <!-- Defines which relations is traverse-able from specified artifact to another artifact  -->
+    <traversableRelations>
+ 
+ <!-- Defines direct relations from ApplicationService to the BusinessLayer (Service/Process/Interaction) -->
+       <relation sdmName="usedBy" sourceArtifact="applicationServiceArtifact" targetArtifact="businessFunctionArtifact"/>
+             <relation sdmName="usedBy" sourceArtifact="applicationServiceArtifact" targetArtifact="businessProcessArtifact"/>
+             <relation sdmName="usedBy" sourceArtifact="applicationServiceArtifact" targetArtifact="businessInteractionArtifact"/>
+    
+ <!-- Defines relations from ApplicationService to the Business Layer via other Application Services -->
+       <relation sdmName="usedBy" sourceArtifact="applicationServiceArtifact" targetArtifact="applicationFunctionArtifact"/>
+    <relation sdmName="realizes" sourceArtifact="applicationFunctionArtifact" targetArtifact="applicationServiceArtifact"/>
+    <relation sdmName="assignedFrom" sourceArtifact="applicationFunctionArtifact" targetArtifact="applicationComponentArtifact"/>
+    <relation sdmName="composedOf" sourceArtifact="applicationComponentArtifact" targetArtifact="applicationInterfaceArtifact"/>
+    <relation sdmName="assignedTo" sourceArtifact="applicationInterfaceArtifact" targetArtifact="businessServiceArtifact"/>
+    <relation sdmName="usedBy" sourceArtifact="businessServiceArtifact" targetArtifact="businessFunctionArtifact"/>
+    <relation sdmName="usedBy" sourceArtifact="businessServiceArtifact" targetArtifact="businessProcessArtifact"/>
+    <relation sdmName="usedBy" sourceArtifact="businessServiceArtifact" targetArtifact="businessInteractionArtifact"/>
+    <relation sdmName="assignedFrom" sourceArtifact="applicationServiceArtifact" targetArtifact="applicationInterfaceArtifact"/>
+	
+ <!-- applicationComponents could composedOf application Components -->
+    <realation sdmName="composes" sourceArtifact="applicationComponentArtifact" targetArtifact="applicationComponentArtifact"/>
+    
+ </traversableRelations>
+ <resultArtifacts>
+	<artifact sdmName="applicationServiceArtifact"/>
+ </resultArtifacts>
+</closure>

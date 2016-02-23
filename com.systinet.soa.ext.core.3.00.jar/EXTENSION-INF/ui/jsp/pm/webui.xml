@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config name="tornado_ui_user" savingPeriod="5000">
+    <webFramework>
+        <!-- Compliance Panel -->
+        <component name="/pm/common/compliance/compliancePanel" page="/common/compliance/compliancePanel.jsp"/>
+                   
+        <component name="/pm/common/compliance/lifecycleCompliancePanel" page="/common/compliance/lifecycleCompliancePanel.jsp"
+                   className="com.hp.systinet.policy.ui.compliance.LifecycleCompliancePanel"/>
+
+        <!-- Form Validation -->
+        <component name="/pm/formvalidation/formValidationPage"
+                   page="/formvalidation/formValidationPage.jsp"
+                   className="com.hp.systinet.policy.ui.formvalidation.FormValidationPage"/>
+        <component name="/pm/formvalidation/formValidationBox"
+                   page="/formvalidation/formValidationBox.jsp"
+                   className="com.hp.systinet.policy.ui.formvalidation.FormValidationBox"/>
+        <component name="/pm/formvalidation/addPolicyAction"
+                   page="/formvalidation/addPolicyAction.jsp"
+                   className="com.hp.systinet.policy.ui.formvalidation.AddPolicyAction"/>
+        <component name="/pm/formvalidation/removePolicyAction"
+                   page="/formvalidation/removePolicyAction.jsp"
+                   className="com.hp.systinet.policy.ui.formvalidation.RemovePolicyAction"/>
+
+        <!-- Form validation exception error renderer -->
+        <component name="/formvalidation/exceptionRenderer" page="/formvalidation/exceptionRenderer.jsp"
+                   className="com.hp.systinet.policy.ui.formvalidation.ExceptionRenderer"/>
+
+        <!-- Annotated sources panel -->
+        <component name="/pm/report/sources/annotatedSourcesPanel" page="/report/sources/annotatedSourcesPanel.jsp"
+                className="com.hp.systinet.policy.ui.report.sources.AnnotatedSourcesPanel"/>
+        <component name="/pm/report/sources/sourceRenderer" page="/report/sources/sourceRenderer.jsp"
+                className="com.hp.systinet.policy.ui.report.sources.SourceRenderer"/>
+    </webFramework>
+</config>

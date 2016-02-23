@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:relationship xmlns:r="http://systinet.com/2005/05/repository">
+   <r:id>1</r:id>
+   <r:type>{http://systinet.com/2005/05/soa/model/property}tool</r:type>
+   <r:state>open</r:state>
+   <r:deleted>false</r:deleted>
+   <r:obsolete>false</r:obsolete>
+   <r:createdOn>2010-06-28T00:00:00.000Z</r:createdOn>
+   <r:source>
+      <r:path>/taskArtifacts/recycleBinCleanerTask</r:path>
+      <r:revision>1</r:revision>
+      <r:revisionTo>0</r:revisionTo>
+   </r:source>
+   <r:target>
+      <r:path>/toolArtifacts/recycleBinCleaner.xml</r:path>
+      <r:uuid>775fe065-c1ad-4de7-8caa-38353ca48a57</r:uuid>
+      <r:revision>1</r:revision>
+      <r:revisionTo>0</r:revisionTo>
+      <r:deleted>false</r:deleted>
+   </r:target>
+</r:relationship>

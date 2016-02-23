@@ -1,0 +1,29 @@
+<closure maxDepth="5" maxResults="100" maxProcessingTime="30000" debug="false" seedsAsResults="false" nodesTraversedOnlyOnce="true">
+  <defaultSeedQuery>select isa._uuid from infrastructureServiceArtifact isa where isa._uuid=:isaUuid</defaultSeedQuery>
+    <traversableRelations>
+        <relation sdmName="realizedBy" sourceArtifact="infrastructureServiceArtifact" targetArtifact="serverArtifact"/> 
+        <relation sdmName="usedBy" sourceArtifact="infrastructureServiceArtifact" targetArtifact="applicationComponentArtifact"/>
+        <relation sdmName="associatedWith" sourceArtifact="infrastructureServiceArtifact" targetArtifact="systemSoftwareArtifact"/>
+        <relation sdmName="specializedBy" sourceArtifact="applicationComponentArtifact" targetArtifact="applicationComponentArtifact"/>
+        <relation sdmName="specializedBy" sourceArtifact="systemSoftwareArtifact" targetArtifact="systemSoftwareArtifact"/>
+        <relation sdmName="usedBy,assignedTo" sourceArtifact="serverArtifact" targetArtifact="systemSoftwareArtifact" supportShortcut="false"/>
+        <relation sdmName="usedBy" sourceArtifact="serverArtifact" targetArtifact="applicationComponentArtifact" supportShortcut="false"/>
+    </traversableRelations>
+    <parameters>
+         <parameter name="domainIDs" label="domainIDs" type="string" defaultValueQuery="select r_localId from hpsoaDomainArtifact"/>
+         <parameter name="isaUuid" label="isaUuid" type="string"/>
+     </parameters>
+    <resultArtifacts>
+		<artifact sdmName="serverArtifact">
+			<field name="version" property="version"/>
+		</artifact>
+		<artifact sdmName="applicationComponentArtifact" filter="from applicationComponentArtifact aca left outer join applicationComponentArtifact aca_1 using aca_1.specializes where aca_1._uuid = :uuid or (aca._uuid = :uuid and aca_1._uuid is null)">
+			<field name="version" property="version"/>
+			<field name="deploymentSpec" query="select ds._uuid, ds.name, ds.version from applicationComponentArtifact ac, deploymentSpecification ds where bind(ac.realizedBy, ds) and ac._uuid=:uuid and ds.deploymentSpecificationType.val='CSA Component' and (ds._domainId='csaServiceDesignsDomain' or ds._domainName like 'CSA Service Designs')"/>					
+		</artifact>
+  		<artifact sdmName="systemSoftwareArtifact" filter="from systemSoftwareArtifact ssa left outer join systemSoftwareArtifact ssa_1 using ssa_1.specializes where ssa_1._uuid = :uuid or (ssa._uuid = :uuid and ssa_1._uuid is null)">
+  			<field name="version" property="version"/>
+  			<field name="deploymentSpec" query="select ds._uuid, ds.name, ds.version from systemSoftwareArtifact ss, deploymentSpecification ds where bind(ss.realizedBy, ds) and ss._uuid=:uuid and ds.deploymentSpecificationType.val='CSA Component' and (ds._domainId='csaServiceDesignsDomain' or ds._domainName like 'CSA Service Designs')"/>
+		</artifact>  
+  </resultArtifacts>
+</closure>

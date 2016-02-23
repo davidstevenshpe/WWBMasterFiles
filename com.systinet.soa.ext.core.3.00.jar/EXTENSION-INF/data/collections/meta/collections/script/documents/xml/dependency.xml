@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+    <r:path>script/dependency.xml</r:path>
+    <r:collection>script/</r:collection>
+    <r:binary>1</r:binary>
+    <r:contentType>text/javascript</r:contentType>
+    <r:type>document</r:type>
+    <r:deleted>0</r:deleted>
+    <r:uuid>de5b9a6e-2239-4191-aec7-38f4531538ee</r:uuid>
+    <r:domainId>topLevelDomain</r:domainId>
+    <r:revision>
+        <r:number>1</r:number>
+        <r:timestamp>2013-07-15T07:09:57.250Z</r:timestamp>
+        <r:creator>systinet:admin</r:creator>
+        <r:lastDataRevision>1</r:lastDataRevision>
+    </r:revision>
+    <r:relationships/>
+    <r:cached>0</r:cached>
+    <r:checksum>0</r:checksum>
+    <r:extensions>
+        <r:descriptor>
+            <a:dataSourceDefinitionArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                                xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                                xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                                xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                                deleted="0"
+                                xlink:href="script/de5b9a6e-2239-4191-aec7-38f4531538ee">
+                <g:artifactTypeGroup>
+                    <p:artifactType name="Artifact" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes" value="urn:com:systinet:soa:model:artifacts"/>
+                    <p:artifactType name="System" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes" value="urn:com:systinet:soa:model:artifacts:system"/>
+                    <p:artifactType name="Managed script" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes" value="urn:com:systinet:soa:model:artifacts:system:script"/>
+                    <p:artifactType name="Data Source Definition" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes" value="urn:com:platform:artifacts:datasourceArtifact"/>
+                </g:artifactTypeGroup>
+                <g:nameGroup>
+                    <p:name>DefaultDependencyDefinition.xml</p:name>
+                </g:nameGroup>
+                <g:descriptionGroup>
+                    <p:description>Abstract definition of default impact calculation. Doesn't contain definitions of the result format; just how to traverse relationships</p:description>
+                </g:descriptionGroup>
+                <p:revision>1</p:revision>
+                <p:location>/scripts/DefaultDependencyDefinition.xml</p:location>
+                <p:contentType>text/javascript</p:contentType>
+                <p:executeAs>RepositoryAdministrator</p:executeAs>
+                <p:readSecurityMode name="Full read security" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:readSecurityMode" value="fullReadSecurity"/>
+                <p:clientSideCaching>0</p:clientSideCaching>
+                <p:serverSideCaching>0</p:serverSideCaching>
+                <p:r_scriptLanguage name="XML" taxonomyUri="uddi:com.systinet.soa:model:taxonomies:scriptLanguage" value="XML"/>
+                <p:r_scriptExecuteOn name="Data Source Definition" taxonomyUri="uddi:com.systinet.soa:model:taxonomies:scriptExecuteOn" value="dataSource"/>
+            </a:dataSourceDefinitionArtifact>
+        </r:descriptor>
+    </r:extensions>
+</r:meta>

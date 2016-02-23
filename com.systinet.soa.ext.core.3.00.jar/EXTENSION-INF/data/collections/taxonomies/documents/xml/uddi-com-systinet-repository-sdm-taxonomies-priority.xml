@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taxonomy check="false" xmlns="http://systinet.com/uddi/taxonomy/v3/5.5">
+    <tModel deleted="false" tModelKey="uddi:systinet.com:soa:model:taxonomies:priority" xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+        <name xmlns="urn:uddi-org:api_v3">Priority</name>
+        <description xmlns="urn:uddi-org:api_v3">JMS priority taxonomy</description>
+        <categoryBag xmlns="urn:uddi-org:api_v3">
+            <keyedReference keyName="Compatibility" keyValue="tModel" tModelKey="uddi:systinet.com:taxonomy:compatibility"/>
+            <keyedReference keyName="Compatibility" keyValue="businessService" tModelKey="uddi:systinet.com:taxonomy:compatibility"/>
+            <keyedReference keyName="Compatibility" keyValue="businessEntity" tModelKey="uddi:systinet.com:taxonomy:compatibility"/>
+            <keyedReference keyName="Compatibility" keyValue="bindingTemplate" tModelKey="uddi:systinet.com:taxonomy:compatibility"/>
+            <keyedReference keyName="Unchecked value set" keyValue="unchecked" tModelKey="uddi:uddi.org:categorization:types"/>
+            <keyedReference keyName="" keyValue="uddi:systinet.com:comparator:numeric" tModelKey="uddi:systinet.com:isorderedby"/>
+        </categoryBag>
+    </tModel>
+    <compatibilityBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+        <compatibility>tModel</compatibility>
+        <compatibility>businessService</compatibility>
+        <compatibility>businessEntity</compatibility>
+        <compatibility>bindingTemplate</compatibility>
+    </compatibilityBag>
+    <categorizationBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+        <categorization>categorization</categorization>
+    </categorizationBag>
+    <transformation>
+        <tModel deleted="false" tModelKey="uddi:systinet.com:comparator:numeric" xmlns="urn:uddi-org:api_v3">
+            <name>systinet-com:comparator:numeric</name>
+            <description>TaxonomyResource.description_numeric</description>
+            <categoryBag>
+                <keyedReference keyName="" keyValue="comparator" tModelKey="uddi:systinet.com:comparator"/>
+                <keyedReference keyName="" keyValue="uddi:cc0c0310-0877-11d9-b839-9310ea30b839" tModelKey="uddi:systinet.com:isTransformedBy"/>
+            </categoryBag>
+        </tModel>
+        <bindingTemplate bindingKey="uddi:cc0c0310-0877-11d9-b839-9310ea30b839" serviceKey="uddi:systinet.com:uddi:service:transformer_kr_numeric" xmlns="urn:uddi-org:api_v3">
+            <description>wsdl:type representing port</description>
+            <accessPoint useType="endpoint">class:com.systinet.uddi.inquiry.transformer.service.NumericTransformer</accessPoint>
+            <tModelInstanceDetails>
+                <tModelInstanceInfo tModelKey="uddi:systinet.com:uddi:service:binding:transformer_kr">
+                    <instanceDetails>
+                        <instanceParms>KeyedReferenceTransformerApi</instanceParms>
+                    </instanceDetails>
+                </tModelInstanceInfo>
+                <tModelInstanceInfo tModelKey="uddi:systinet.com:uddi:service:porttype:transformer_kr">
+                    <instanceDetails>
+                        <instanceParms>KeyedReferenceTransformerApi</instanceParms>
+                    </instanceDetails>
+                </tModelInstanceInfo>
+                <tModelInstanceInfo tModelKey="uddi:systinet.com:comparator:numeric"/>
+            </tModelInstanceDetails>
+            <categoryBag>
+                <keyedReference keyName="uddi.org:xml:namespace" keyValue="http://systinet.com/uddi/transformer_kr/5.5" tModelKey="uddi:uddi.org:xml:namespace"/>
+                <keyedReference keyName="uddi.org:wsdl:types" keyValue="port" tModelKey="uddi:uddi.org:wsdl:types"/>
+                <keyedReference keyName="uddi.org:xml:localName" keyValue="KeyedReferenceTransformerApi" tModelKey="uddi:uddi.org:xml:localName"/>
+            </categoryBag>
+        </bindingTemplate>
+    </transformation>
+</taxonomy>

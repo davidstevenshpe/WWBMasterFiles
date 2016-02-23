@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/principleArtifacts/415e19bc-7d88-4cca-9cda-2b64341eca49</r:path>
+   <r:collection>/principleArtifacts/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType></r:contentType>
+   <r:owner>admin</r:owner>
+   <r:uuid>415e19bc-7d88-4cca-9cda-2b64341eca49</r:uuid>
+   <r:domainId>defaultDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2013-12-09T10:54:51.287Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>admin</r:creator>
+      <r:lastDataRevision>0</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:principleArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                              xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                              xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                              xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                              deleted="0"
+                              xlink:href="principleArtifacts/415e19bc-7d88-4cca-9cda-2b64341eca49">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="Motivation"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:motivationArtifact"/>
+               <p:artifactType name="Principle"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:principleArtifact"/>
+            </g:artifactTypeGroup>
+            <g:aggregatesGroup>
+               <p:aggregates xlink:href="principleArtifacts/b01957c3-07a9-4750-b934-4edc65d7e97d"/>
+               <p:aggregates xlink:href="principleArtifacts/8b392482-97ed-4935-a35e-ed18e8fef4e9"/>
+               <p:aggregates xlink:href="principleArtifacts/a8b82557-2902-4203-b8ab-0330a6d787cf"/>
+               <p:aggregates xlink:href="principleArtifacts/8b828c63-6f90-408a-ad34-331f88d12b91"/>
+            </g:aggregatesGroup>
+            <g:nameGroup>
+               <p:name>Auditability</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup>
+               <p:description>Applications and underlying technology are auditable regarding the access to them, changes made in them, suspicious transactions and other factors relating to their security, reliability and operability.</p:description>
+            </g:descriptionGroup>
+            <p:revision>1</p:revision>
+            <g:keywordGroup/>
+            <p:version>1.0</p:version>
+            <g:architectureLayerGroup>
+               <p:architectureLayer name="Application Layer"
+                                    taxonomyUri="uddi:systinet.com:soa:model:taxonomies:architectureLayer"
+                                    value="applicationLayer"/>
+               <p:architectureLayer name="Technology Layer"
+                                    taxonomyUri="uddi:systinet.com:soa:model:taxonomies:architectureLayer"
+                                    value="technologyLayer"/>
+            </g:architectureLayerGroup>
+            <g:qualityFeatureGroup>
+               <p:qualityFeature name="Confidentiality"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="confidentiality"/>
+               <p:qualityFeature name="Reliability"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="reliability"/>
+               <p:qualityFeature name="Efficiency"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="efficiency"/>
+               <p:qualityFeature name="Availability"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="availability"/>
+               <p:qualityFeature name="Compliance"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="compliance"/>
+            </g:qualityFeatureGroup>
+            <p:rationale>Applications as well as technology are accessed by many users with various levels of permission. They are also the subject of many planned and operational changes. To increase transparency of the information environment, its manageability, security and reliability, the applications and underlying [?] must provide reasonable auditing mechanisms, which enable a retrospective trace record of suspicious activities, interventions, changes and security breaches. 
+At the very basic level, the auditing mechanisms must enable identification of manufactured activity (transactions, changes, errors, etc.) and its originator. In specific cases, the audit on level of code or manipulated data can be required, so the applications should provide various levels of auditing that can be enabled/disabled as required.
+No application or technology without built-in audit mechanisms should be allowed for use in enterprise environment.</p:rationale>
+            <p:implications>Auditing requirements must be defined, documented, and required in applications and underlying technology. The requirements should reflect various needs of auditing. Incorporation and proper functioning of auditing mechanisms needs to be part of functional and user acceptance testing before deployment of applications and technologies can operate effectively. Concerning instances of changes modifying the functionality of an application or technology, the auditing mechanisms need to be re-tested and their proper functioning must be confirmed. An initial, basic level of auditing should be setup as an integral part of the application or technical documentation. The mechanisms how to increase/decrease the level of auditing and instruction how to deal with audit functions should be also described there. As the audit records can contain sensitive information, there must be a clearly defined responsibility matrix specifying who can use the audit functions, for what application or technology, in which cases, and how the information needs to be secured.</p:implications>
+         </a:principleArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

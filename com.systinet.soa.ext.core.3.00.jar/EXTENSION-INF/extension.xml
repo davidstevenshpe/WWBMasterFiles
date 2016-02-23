@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension uri="com.systinet.soa.ext.core" version="3.00" readOnly="true" timeStamp="201411131200" production="true" format="3" type="urn:platform">
+   <name>Core</name>
+   <description>HP Enterprise Maps</description>
+</extension>

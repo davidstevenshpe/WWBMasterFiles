@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taxonomy check="true" brief="false" xmlns="http://systinet.com/uddi/taxonomy/v3/5.5">
+  <tModel tModelKey="uddi:systinet.com:dependency" deleted="false" tModelKeyV2="uuid:179e5540-f27b-11d6-9738-b8a03c50a862" xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <name xmlns="urn:uddi-org:api_v3">systinet-com:dependency</name>
+    <description xml:lang="en" xmlns="urn:uddi-org:api_v3">Taxonomy, which links two structures. KeyName must be one of businessEntity, businessService,
+bindingTemplate and tModel. KeyValue must be existing UDDI key of specified structure.</description>
+    <categoryBag xmlns="urn:uddi-org:api_v3">
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Uncacheable checked value set" keyValue="uncacheable"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:entitykeyvalues" keyName="entityKeyValues" keyValue="businessKey"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:entitykeyvalues" keyName="entityKeyValues" keyValue="serviceKey"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:entitykeyvalues" keyName="entityKeyValues" keyValue="bindingKey"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:entitykeyvalues" keyName="entityKeyValues" keyValue="tModelKey"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Categorization system" keyValue="categorization"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="tModel"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="businessEntity"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="businessService"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="bindingTemplate"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Checked value set" keyValue="checked"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:validatedby" keyName="" keyValue="uddi:8daf5d60-c380-11d8-b05c-7c163510b05c"/>
+    </categoryBag>
+  </tModel>
+  <compatibilityBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <compatibility>tModel</compatibility>
+    <compatibility>businessEntity</compatibility>
+    <compatibility>businessService</compatibility>
+    <compatibility>bindingTemplate</compatibility>
+  </compatibilityBag>
+  <categorizationBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <categorization>categorization</categorization>
+  </categorizationBag>
+  <validation xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <bindingTemplate bindingKey="uddi:8db15930-c380-11d8-b05c-7c163510b05c" serviceKey="uddi:8dadafb0-c380-11d8-b05c-7c163510b05c" xmlns="urn:uddi-org:api_v3">
+      <accessPoint useType="endPoint">class:com.systinet.uddi.publishing.v1.validation.service.SystinetDependencyValidator</accessPoint>
+      <tModelInstanceDetails>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:v1_validateValues"/>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:dependency"/>
+      </tModelInstanceDetails>
+    </bindingTemplate>
+    <bindingTemplate bindingKey="uddi:8db0bcf0-c380-11d8-b05c-7c163510b05c" serviceKey="uddi:8dadafb0-c380-11d8-b05c-7c163510b05c" xmlns="urn:uddi-org:api_v3">
+      <accessPoint useType="endPoint">class:com.systinet.uddi.publishing.v2.validation.service.SystinetDependencyValidator</accessPoint>
+      <tModelInstanceDetails>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:v2_validateValues"/>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:dependency"/>
+      </tModelInstanceDetails>
+    </bindingTemplate>
+    <bindingTemplate bindingKey="uddi:8daf5d60-c380-11d8-b05c-7c163510b05c" serviceKey="uddi:8dadafb0-c380-11d8-b05c-7c163510b05c" xmlns="urn:uddi-org:api_v3">
+      <accessPoint useType="endPoint">class:com.systinet.uddi.publishing.v3.validation.service.SystinetDependencyValidator</accessPoint>
+      <tModelInstanceDetails>
+        <tModelInstanceInfo tModelKey="uddi:uddi.org:v3_valueSetValidation"/>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:dependency"/>
+      </tModelInstanceDetails>
+    </bindingTemplate>
+  </validation>
+</taxonomy>

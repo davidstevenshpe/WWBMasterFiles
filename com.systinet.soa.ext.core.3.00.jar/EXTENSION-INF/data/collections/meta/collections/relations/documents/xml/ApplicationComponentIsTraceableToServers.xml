@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:relationship xmlns:r="http://systinet.com/2005/05/repository">
+   <r:id>7392398</r:id>
+   <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+   <r:state>open</r:state>
+   <r:deleted>false</r:deleted>
+   <r:obsolete>false</r:obsolete>
+   <r:createdOn>2014-03-28T04:55:35.184Z</r:createdOn>
+   <r:source>
+      <r:path>/hpsoaTechnicalPolicies/ApplicationComponentIsTraceableToServers</r:path>
+      <r:revision>1</r:revision>
+      <r:revisionTo>0</r:revisionTo>
+   </r:source>
+   <r:target>
+      <r:path>/assertions/ApplicationComponentIsTraceableToServers</r:path>
+      <r:uuid>e0f0627e-f5b2-4346-b8fc-42a70593e2cf</r:uuid>
+      <r:revision>1</r:revision>
+      <r:revisionTo>0</r:revisionTo>
+      <r:deleted>false</r:deleted>
+   </r:target>
+</r:relationship>

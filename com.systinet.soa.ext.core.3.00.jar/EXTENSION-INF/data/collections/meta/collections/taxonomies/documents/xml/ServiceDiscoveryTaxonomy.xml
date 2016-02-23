@@ -1,0 +1,41 @@
+<r:meta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rest="http://systinet.com/2005/05/soa/resource" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:pt="http://systinet.com/2005/05/soa/model/property/type" xmlns:p="http://systinet.com/2005/05/soa/model/property" xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup" xmlns:a="http://systinet.com/2005/05/soa/model/artifact" xmlns:r="http://systinet.com/2005/05/repository" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <r:path>/taxonomies/servicediscoverytaxonomy</r:path>
+   <r:collection>/taxonomies/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType>text/xml; charset=utf-8</r:contentType>
+   <r:owner>systinet:admin</r:owner>
+   <r:uuid>605628b0-ef35-42a6-a165-606d85703f5f</r:uuid>
+   <r:domainId>topLevelDomain</r:domainId>   
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>  
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2008-02-27T13:22:41.078Z</r:timestamp>
+      <r:creator>admin</r:creator>
+      <r:lastDataRevision>1</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:taxonomyArtifact deleted="0" xlink:href="taxonomies/servicediscoverytaxonomy" xml:base="http://b208.devlab.ad:8080/soa/systinet/platform/rest/repository/">
+            <nameGroup xmlns="http://systinet.com/2005/05/soa/model/propertyGroup">
+               <name xmlns="http://systinet.com/2005/05/soa/model/property">Service Discovery Taxonomy</name>
+            </nameGroup>
+            <checked xmlns="http://systinet.com/2005/05/soa/model/property">true</checked>
+            <hierarchical xmlns="http://systinet.com/2005/05/soa/model/property">false</hierarchical>
+            <isCached xmlns="http://systinet.com/2005/05/soa/model/property">false</isCached>
+            <descriptionGroup xmlns="http://systinet.com/2005/05/soa/model/propertyGroup">
+               <description xmlns="http://systinet.com/2005/05/soa/model/property">SDM taxonomy for categarization of discovered artifacts.</description>
+            </descriptionGroup>
+            <artifactTypeGroup xmlns="http://systinet.com/2005/05/soa/model/propertyGroup">
+               <artifactType xmlns="http://systinet.com/2005/05/soa/model/property" name="Artifact" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes" value="urn:com:systinet:soa:model:artifacts"/>
+               <artifactType xmlns="http://systinet.com/2005/05/soa/model/property" name="Content" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes" value="urn:com:systinet:soa:model:artifacts:content"/>
+               <artifactType xmlns="http://systinet.com/2005/05/soa/model/property" name="Categorization" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes" value="urn:com:systinet:soa:model:artifacts:content:categorization"/>
+               <artifactType xmlns="http://systinet.com/2005/05/soa/model/property" name="Taxonomy" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes" value="urn:com:systinet:soa:model:artifacts:content:categorization:taxonomy"/>
+            </artifactTypeGroup>
+            <lastRevision xmlns="http://systinet.com/2005/05/soa/model/property">1</lastRevision>
+            <revision xmlns="http://systinet.com/2005/05/soa/model/property">1</revision>
+         </a:taxonomyArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

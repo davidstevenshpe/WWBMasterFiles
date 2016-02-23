@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/principleArtifacts/dfc2075b-e330-4d3a-b9a1-cbe91eb27432</r:path>
+   <r:collection>/principleArtifacts/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType></r:contentType>
+   <r:owner>admin</r:owner>
+   <r:uuid>dfc2075b-e330-4d3a-b9a1-cbe91eb27432</r:uuid>
+   <r:domainId>defaultDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2013-12-09T10:55:09.163Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>admin</r:creator>
+      <r:lastDataRevision>0</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:principleArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                              xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                              xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                              xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                              deleted="0"
+                              xlink:href="principleArtifacts/dfc2075b-e330-4d3a-b9a1-cbe91eb27432">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="Motivation"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:motivationArtifact"/>
+               <p:artifactType name="Principle"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:principleArtifact"/>
+            </g:artifactTypeGroup>
+            <g:aggregatesGroup>
+               <p:aggregates xlink:href="principleArtifacts/979985ae-bbb9-49bd-92a6-a75342e1ba92"/>
+               <p:aggregates xlink:href="principleArtifacts/9d7dd6a1-8692-49b2-9b33-5f09fb2f769d"/>
+               <p:aggregates xlink:href="principleArtifacts/6965bff2-9f74-4a23-b5c6-669f792b20ce"/>
+               <p:aggregates xlink:href="principleArtifacts/4d411eb3-e9b1-4348-948d-e4261b63bfd8"/>
+               <p:aggregates xlink:href="principleArtifacts/19071d7d-6a53-4170-9cf7-2fba7a525e9e"/>
+               <p:aggregates xlink:href="principleArtifacts/3bd08d63-7e04-44cc-85f1-109d4cc2d598"/>
+            </g:aggregatesGroup>
+            <g:nameGroup>
+               <p:name>Information is shared</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup>
+               <p:description>Organizations and users have access to information they require to perform their duties. Information is shared across the enterprise functions and organizations.</p:description>
+            </g:descriptionGroup>
+            <p:revision>1</p:revision>
+            <g:keywordGroup/>
+            <p:version>1.0</p:version>
+            <g:architectureLayerGroup>
+               <p:architectureLayer name="Business Layer"
+                                    taxonomyUri="uddi:systinet.com:soa:model:taxonomies:architectureLayer"
+                                    value="businessLayer"/>
+            </g:architectureLayerGroup>
+            <g:qualityFeatureGroup>
+               <p:qualityFeature name="Availability"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="availability"/>
+               <p:qualityFeature name="Confidentiality"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="confidentiality"/>
+               <p:qualityFeature name="Reliability"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="reliability"/>
+            </g:qualityFeatureGroup>
+            <p:rationale>Timely access to accurate, reliable information is crucial for effective decision-making of the enterprise. Maintenance of information in a single application (data source) and its following sharing is more time and cost effective , than maintaining duplicate information in multiple applications (data sources). Moreover - maintenance of information in a single application or source reduces data unreliability, inconsistency and increases data quality management effectiveness.
+Effectiveness and success of enterprise decision-making is dependent on the ability to gain and combine accurate data whenever it's required, from various data sources and applications. Any obstruction relating to unnecessary data cleaning (deduplication, value correction, a single source of truth -SSOT, re-keying, etc.) negatively influences any effective decision-making.</p:rationale>
+            <p:implications>To enable an effective data sharing across the enterprise, there must be defined, developed, and followed a common set of policies, procedures and standards governing an information management. 
+These must be supported by standard data models, data elements, service models, technical models and other metadata describing the environment, data sharing techniques and mechanisms. A unified repository needs to be developed and used for storing of such metadata.
+If there are legacy systems storing important data, then tools capable to migrate data from legacy systems to a shared environment need to be utilized, which can require some investment.
+For new applications and systems, the common development guidelines and policies must be defined, adopted, and enforced to ensure that data/information is stored in single place and shared across the enterprise. It must be supported by common methods and tools for creating, maintaining, and accessing the data shared across the enterprise.
+Sharing of data will require a change of mind setup of all users and organizations within the enterprise. The users must bear in mind that data sharing must not compromise the data security principles (i.e.. under no circumstances will the data sharing principle cause confidential data to be compromised).</p:implications>
+         </a:principleArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

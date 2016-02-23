@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/svgArtifacts/bca0f911-d49c-4d0e-8179-7676538ccd4b</r:path>
+   <r:collection>/svgArtifacts/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType>image/svg+xml</r:contentType>
+   <r:uuid>bca0f911-d49c-4d0e-8179-7676538ccd4b</r:uuid>
+   <r:domainId>topLevelDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2015-03-25T15:57:10.695Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>lubomirzrnecko</r:creator>
+      <r:lastDataRevision>1</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:svgArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                        xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                        xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                        xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        deleted="0"
+                        xlink:href="svgArtifacts/bca0f911-d49c-4d0e-8179-7676538ccd4b">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="Content"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:content"/>
+               <p:artifactType name="XML" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:content:xmlSpecifications"/>
+               <p:artifactType name="SVG File"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:content:xmlSpecifications:svgContent"/>
+            </g:artifactTypeGroup>
+            <g:nameGroup>
+               <p:name>Architecture Model Viewpoint</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup>
+                    <p:description>SVG content of Architecture Model Viewpoint</p:description>
+            </g:descriptionGroup>
+            <p:revision>1</p:revision>
+            <g:keywordGroup/>
+            <p:version>1.0</p:version>
+            <p:location>/svgArtifacts/architectureModelViewpoint.svg</p:location>
+            <p:contentType>image/svg+xml</p:contentType>
+            <p:svgContentType name="Viewpoint"
+                              taxonomyUri="uddi:systinet.com:soa:model:taxonomies:svgContentType"
+                              value="viewpoint"/>
+         </a:svgArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

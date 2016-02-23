@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/principleArtifacts/9f2719a6-fa1d-41b6-8a22-e83e985d14ae</r:path>
+   <r:collection>/principleArtifacts/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType></r:contentType>
+   <r:owner>admin</r:owner>
+   <r:uuid>9f2719a6-fa1d-41b6-8a22-e83e985d14ae</r:uuid>
+   <r:domainId>defaultDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2013-12-09T10:53:15.644Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>admin</r:creator>
+      <r:lastDataRevision>0</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:principleArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                              xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                              xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                              xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                              deleted="0"
+                              xlink:href="principleArtifacts/9f2719a6-fa1d-41b6-8a22-e83e985d14ae">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="Motivation"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:motivationArtifact"/>
+               <p:artifactType name="Principle"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:principleArtifact"/>
+            </g:artifactTypeGroup>
+            <g:nameGroup>
+               <p:name>Integrated user support</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup>
+               <p:description>Users are supported in a consistent and integrated manner</p:description>
+            </g:descriptionGroup>
+            <p:revision>1</p:revision>
+            <g:keywordGroup/>
+            <p:version>1.0</p:version>
+            <g:architectureLayerGroup>
+               <p:architectureLayer name="Technology Layer"
+                                    taxonomyUri="uddi:systinet.com:soa:model:taxonomies:architectureLayer"
+                                    value="technologyLayer"/>
+            </g:architectureLayerGroup>
+            <g:qualityFeatureGroup>
+               <p:qualityFeature name="Effectiveness"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="effectiveness"/>
+               <p:qualityFeature name="Efficiency"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="efficiency"/>
+               <p:qualityFeature name="Availability"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="availability"/>
+               <p:qualityFeature name="Reliability"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="reliability"/>
+            </g:qualityFeatureGroup>
+            <p:rationale>Applications as well as technology infrastructure may be subjected to errors. If such a situation happens, users are restricted in their work and  business related activities can be negatively affected.
+There must a unified mechanism how users can report errors they are experiencing,  how they will be informed in case of a service or application problem, and how the expert help is provided to them.
+The user support should be provided through well defined, designed, and deployed supporting processes, and through carefully selected supporting tools.
+A suitable combination of supporting processes and tools can dramatically speed up and streamline the process of user support. It can prevent unexpected losses (financial as well as productive or reputation).</p:rationale>
+            <p:implications>The mechanisms of user support should follow the service level objectives specified and documented in SLAs. These objectives determine the mechanisms how the user support will be provided within the enterprise.
+To ensure a highly effective user support, the supporting processes focused on user support (Incident Management, Request Management etc.) need to defined, designed, deployed, and used.
+These processes should be sufficiently supported by a carefully selected set of the supporting tools, enabling effective and efficient handling of user requests (typically via some kind of service desk, knowledge base, self-service portal, etc.).
+In case of large enterprises operating around the globe, the mechanisms of user support must be very carefully designed to reflect various factors, which significantly influence the overall effectiveness, efficiency and usability of user support (e.g. time shifts, local and cultural specifics, language barriers, degree of computer skills etc.).
+The users have to be continuously trained how to effectively use a provided user support service, especially at times when the mechanisms of support are changed.
+The mechanisms of user support need to be documented (in easy understandable form) and available to all users in the enterprise.
+The user support should conform to user nature, i.e. communication should be based on natural language (no IT specific terminology), usage of user support tools should be intuitive, operators should be supportive and positive etc.</p:implications>
+         </a:principleArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

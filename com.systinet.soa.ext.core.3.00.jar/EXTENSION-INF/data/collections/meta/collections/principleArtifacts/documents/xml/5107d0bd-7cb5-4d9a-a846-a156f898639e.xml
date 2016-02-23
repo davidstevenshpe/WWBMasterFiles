@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/principleArtifacts/5107d0bd-7cb5-4d9a-a846-a156f898639e</r:path>
+   <r:collection>/principleArtifacts/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType></r:contentType>
+   <r:owner>admin</r:owner>
+   <r:uuid>5107d0bd-7cb5-4d9a-a846-a156f898639e</r:uuid>
+   <r:domainId>defaultDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2013-12-09T10:55:04.016Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>admin</r:creator>
+      <r:lastDataRevision>0</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:principleArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                              xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                              xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                              xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                              deleted="0"
+                              xlink:href="principleArtifacts/5107d0bd-7cb5-4d9a-a846-a156f898639e">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="Motivation"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:motivationArtifact"/>
+               <p:artifactType name="Principle"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:principleArtifact"/>
+            </g:artifactTypeGroup>
+            <g:aggregatesGroup>
+               <p:aggregates xlink:href="principleArtifacts/73a18ff2-e3ea-4c98-b151-914c3c7a1abc"/>
+               <p:aggregates xlink:href="principleArtifacts/a75314e3-2047-4031-bed5-0de1dbbedba0"/>
+               <p:aggregates xlink:href="principleArtifacts/5568e6db-a4e6-4234-88b8-442dd3c2c59f"/>
+               <p:aggregates xlink:href="principleArtifacts/b985befe-1f25-4332-ac76-81a8ea91a6f3"/>
+               <p:aggregates xlink:href="principleArtifacts/059dbe70-f981-45d2-a564-dc17687114ff"/>
+               <p:aggregates xlink:href="principleArtifacts/f363db55-84e3-4115-b440-d3f760ba24c9"/>
+               <p:aggregates xlink:href="principleArtifacts/a8eba8aa-4996-4303-8352-dccb5d0bcbf5"/>
+               <p:aggregates xlink:href="principleArtifacts/3921879e-8feb-4bb1-adb2-57ce51f86f2e"/>
+               <p:aggregates xlink:href="principleArtifacts/446bcb96-1cb6-4ee6-9867-c21f815104fe"/>
+               <p:aggregates xlink:href="principleArtifacts/dfc2075b-e330-4d3a-b9a1-cbe91eb27432"/>
+               <p:aggregates xlink:href="principleArtifacts/eb80e2b0-cc69-4a71-8ab3-2ed2c23efe91"/>
+            </g:aggregatesGroup>
+            <g:nameGroup>
+               <p:name>Information is a critical asset</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup>
+               <p:description>Information is a critical asset providing a significant value to the enterprise, and as such it must be managed accordingly.</p:description>
+            </g:descriptionGroup>
+            <p:revision>1</p:revision>
+            <g:keywordGroup/>
+            <p:version>1.0</p:version>
+            <g:architectureLayerGroup>
+               <p:architectureLayer name="Business Layer"
+                                    taxonomyUri="uddi:systinet.com:soa:model:taxonomies:architectureLayer"
+                                    value="businessLayer"/>
+            </g:architectureLayerGroup>
+            <g:qualityFeatureGroup>
+               <p:qualityFeature name="Effectiveness"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="effectiveness"/>
+               <p:qualityFeature name="Efficiency"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="efficiency"/>
+               <p:qualityFeature name="Reliability"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="reliability"/>
+               <p:qualityFeature name="Availability"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="availability"/>
+               <p:qualityFeature name="Integrity"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="integrity"/>
+            </g:qualityFeatureGroup>
+            <p:rationale>Information represents a critical enterprise resource determining - very often - the success or loss of a company. Information has real and measurable value.
+Complete, accurate, timely and reliable information is crucial for accurate, timely decision making. Accurate and timely decisions are vital for success of enterprise.
+Information, as a critical asset, must be managed and protected. 
+It must be guaranteed that relevant, complete, and accurate information is available whenever required, and that it is delivered in a timely, correct, consistent, and usable manner through the optimal use of resources while protecting information from unauthorized disclosure or misuse.</p:rationale>
+            <p:implications>It must be ensured that all organizations and users within the enterprise understand the meaning and relationships of principles: data is an asset, data is shared, and data is accessible.
+Management of information should not be understood as simple data ownership, but as a data stewardship. Data stewards within any organization must be defined and vested with the authority to manage data for which they are accountable.
+Data stewards are accountable for the quality of data/information. As information is a critical asset and source of value to the enterprise, the data stewards must be assigned at the enterprise management level.
+There must be developed, implemented, and used formal procedures and mechanisms enabling the management of data quality (prevention and correction of data errors). These procedures and mechanisms need to be measured and evaluated for their effectiveness and efficiency (i.e. sustained data quality), and corrected if necessary.
+Individual data stewards are entitled to suggest changes of these data quality procedures and mechanisms in order to increase data quality and the effectiveness of data quality management procedures.</p:implications>
+         </a:principleArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

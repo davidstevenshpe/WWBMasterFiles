@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/principleArtifacts/a8eba8aa-4996-4303-8352-dccb5d0bcbf5</r:path>
+   <r:collection>/principleArtifacts/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType></r:contentType>
+   <r:owner>admin</r:owner>
+   <r:uuid>a8eba8aa-4996-4303-8352-dccb5d0bcbf5</r:uuid>
+   <r:domainId>defaultDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2013-12-09T10:54:56.198Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>admin</r:creator>
+      <r:lastDataRevision>0</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:principleArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                              xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                              xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                              xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                              deleted="0"
+                              xlink:href="principleArtifacts/a8eba8aa-4996-4303-8352-dccb5d0bcbf5">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="Motivation"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:motivationArtifact"/>
+               <p:artifactType name="Principle"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:principleArtifact"/>
+            </g:artifactTypeGroup>
+            <g:aggregatesGroup>
+               <p:aggregates xlink:href="principleArtifacts/910e5ad4-26a0-40dd-93f8-28c810dcf167"/>
+               <p:aggregates xlink:href="principleArtifacts/644639b1-9f69-461e-8596-1e5406a2db9b"/>
+            </g:aggregatesGroup>
+            <g:nameGroup>
+               <p:name>Common Vocabulary and Data Definitions</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup>
+               <p:description>Information is defined consistently throughout the enterprise, and the definitions are understandable and available to all users.
+Every user and organization within the enterprise should understand the basic terminology of information management used in the enterprise.</p:description>
+            </g:descriptionGroup>
+            <p:revision>1</p:revision>
+            <g:keywordGroup/>
+            <p:version>1.0</p:version>
+            <g:architectureLayerGroup>
+               <p:architectureLayer name="Business Layer"
+                                    taxonomyUri="uddi:systinet.com:soa:model:taxonomies:architectureLayer"
+                                    value="businessLayer"/>
+               <p:architectureLayer name="Technology Layer"
+                                    taxonomyUri="uddi:systinet.com:soa:model:taxonomies:architectureLayer"
+                                    value="technologyLayer"/>
+            </g:architectureLayerGroup>
+            <g:qualityFeatureGroup>
+               <p:qualityFeature name="Integrity"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="integrity"/>
+               <p:qualityFeature name="Reliability"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="reliability"/>
+               <p:qualityFeature name="Effectivity"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="effectivity"/>
+            </g:qualityFeatureGroup>
+            <p:rationale>Information, applications, application components, etc. - all these must have a common definition across the enterprise to enable a mutual understanding between involved parties. A common vocabulary can facilitate communication and prevent misunderstandings, misinterpretations and thus avoid unwanted results.
+Moreover, the common vocabulary makes a vital basis for effective and efficient data exchange and data sharing within the information system.</p:rationale>
+            <p:implications>A unified terminology and common understanding are keys to success in the information environment.
+The enterprise must initially establish a common vocabulary that will be used uniformly across the enterprise.
+There must be the role of a data administrator (or a vocabulary administrator) that will be responsible for accuracy and currency of this vocabulary. Whenever a new data definition is required, the administrator should reconcile the terminology and update the vocabulary, if necessary.
+Ambiguities and conflicts resulting from multiple definitions used by individual departments in the enterprise must give way to accepted enterprise-wide definitions and understanding.
+As the enterprises become more and more dependent on information and technologies processing the data, a mutual understanding - driven by the common vocabulary - is vital for an effective usage of information and evolution of the information environment.</p:implications>
+         </a:principleArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

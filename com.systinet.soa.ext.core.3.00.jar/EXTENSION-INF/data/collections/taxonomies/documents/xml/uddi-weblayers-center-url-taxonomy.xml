@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taxonomy check="false" brief="false" xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+  <tModel tModelKey="uddi:weblayers:center:url:taxonomy" tModelKeyV2="uuid:340e4bc0-2bc7-11db-a2a0-ff4284b0a29f">
+    <name xmlns="urn:uddi-org:api_v3">WebLayers Center URL</name>
+    <description xmlns="urn:uddi-org:api_v3">Taxonomy which represents various WebLayers Center URLs</description>
+    <categoryBag xmlns="urn:uddi-org:api_v3">
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Categorization system" keyValue="categorization"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Identifier system" keyValue="identifier"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="bindingTemplate"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="businessEntity"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="businessService"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="tModel"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Unchecked value set" keyValue="unchecked"/>
+    </categoryBag>
+  </tModel>
+  <compatibilityBag>
+    <compatibility>bindingTemplate</compatibility>
+    <compatibility>businessEntity</compatibility>
+    <compatibility>businessService</compatibility>
+    <compatibility>tModel</compatibility>
+  </compatibilityBag>
+  <categorizationBag>
+    <categorization>categorization</categorization>
+    <categorization>identifier</categorization>
+  </categorizationBag>
+</taxonomy>

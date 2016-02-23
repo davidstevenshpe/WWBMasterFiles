@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pm:Assertion xmlns:pm="http://systinet.com/2005/10/soa/policy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:a="http://systinet.com/2005/05/soa/model/artifact" xmlns:r="http://systinet.com/2005/05/repository" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:pt="http://systinet.com/2005/05/soa/model/property/type" xmlns:rest="http://systinet.com/2005/05/soa/resource" xmlns:p="http://systinet.com/2005/05/soa/resource" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup">
+        <p:Template xmlns:p="http://systinet.com/2005/10/soa/policy">
+          <RelativeReferencesInImports xmlns="http://systinet.com/2005/10/soa/policy/best-practice"/>
+        </p:Template>
+        <pm:Bundle>
+            <pm:String Key="bad-xsd">This xs:{0} uses absolute reference to another schema.</pm:String>
+            <pm:String Key="bad-wsdl">This wsdl:import uses absolute reference to another WSDL or XML schema document.</pm:String>
+        </pm:Bundle>
+        <pm:Validation SourceType="xmlns(ns=http://www.w3.org/2001/XMLSchema)qname(ns:schema)" xmlns:val="http://systinet.com/2005/10/soa/policy/validation">
+          <val:XQuery>
+
+    declare namespace xs = "http://www.w3.org/2001/XMLSchema";
+    declare namespace val="http://systinet.com/2005/10/soa/policy/validation";
+
+    let $errors :=
+        for $el in //xs:*[local-name() = 'include' or local-name() = 'import'] where ($el/@schemaLocation and contains($el/@schemaLocation, ':'))
+        return
+            val:assertionFailed(val:l10n('bad-xsd', local-name($el)), $el)
+    return
+        if (empty($errors)) then
+            val:assertionOK()
+        else
+            ()
+
+          </val:XQuery>
+        </pm:Validation>
+        <pm:Validation SourceType="xmlns(ns=http://schemas.xmlsoap.org/wsdl/)qname(ns:definitions)" xmlns:val="http://systinet.com/2005/10/soa/policy/validation">
+          <pm:Description/>
+          <val:XQuery>
+
+    declare namespace wsdl="http://schemas.xmlsoap.org/wsdl/";
+    declare namespace val="http://systinet.com/2005/10/soa/policy/validation";
+
+    let $errors :=
+        for $el in //wsdl:import where ($el/@location and contains($el/@location, ':'))
+        return
+            val:assertionFailed(val:l10n('bad-wsdl'), $el)
+    return
+        if (empty($errors)) then
+            val:assertionOK()
+        else
+            ()
+
+          </val:XQuery>
+        </pm:Validation>
+      </pm:Assertion>

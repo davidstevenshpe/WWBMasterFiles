@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taxonomy check="false" xmlns="http://systinet.com/uddi/taxonomy/v3/5.5">
+    <tModel deleted="false" tModelKey="uddi:systinet.com:soa:model:taxonomies:jndiParameter" xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+        <name xmlns="urn:uddi-org:api_v3">Jndi Parameter</name>
+        <description xmlns="urn:uddi-org:api_v3">JMS jndi parameter taxonomy</description>
+        <categoryBag xmlns="urn:uddi-org:api_v3">
+            <keyedReference keyName="Compatibility" keyValue="tModel" tModelKey="uddi:systinet.com:taxonomy:compatibility"/>
+            <keyedReference keyName="Compatibility" keyValue="businessService" tModelKey="uddi:systinet.com:taxonomy:compatibility"/>
+            <keyedReference keyName="Compatibility" keyValue="businessEntity" tModelKey="uddi:systinet.com:taxonomy:compatibility"/>
+            <keyedReference keyName="Compatibility" keyValue="bindingTemplate" tModelKey="uddi:systinet.com:taxonomy:compatibility"/>
+            <keyedReference keyName="Unchecked value set" keyValue="unchecked" tModelKey="uddi:uddi.org:categorization:types"/>
+            <keyedReference keyName="" keyValue="tModelKey" tModelKey="uddi:uddi.org:categorization:entitykeyvalues"/>
+            <keyedReference keyName="" keyValue="uddi:systinet.com:comparator:string" tModelKey="uddi:systinet.com:isorderedby"/>
+        </categoryBag>
+    </tModel>
+    <compatibilityBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+        <compatibility>tModel</compatibility>
+        <compatibility>businessService</compatibility>
+        <compatibility>businessEntity</compatibility>
+        <compatibility>bindingTemplate</compatibility>
+    </compatibilityBag>
+    <categorizationBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+        <categorization>categorization</categorization>
+    </categorizationBag>
+    <transformation>
+        <tModel deleted="false" tModelKey="uddi:systinet.com:comparator:string" xmlns="urn:uddi-org:api_v3">
+            <name>systinet-com:comparator:string</name>
+            <description>TaxonomyResource.description_string</description>
+            <categoryBag>
+                <keyedReference keyName="" keyValue="comparator" tModelKey="uddi:systinet.com:comparator"/>
+                <keyedReference keyName="" keyValue="uddi:9310ea31-0877-11d9-b839-9310ea30b839" tModelKey="uddi:systinet.com:isTransformedBy"/>
+            </categoryBag>
+        </tModel>
+        <bindingTemplate bindingKey="uddi:9310ea31-0877-11d9-b839-9310ea30b839" serviceKey="uddi:systinet.com:uddi:service:transformer_kr_string" xmlns="urn:uddi-org:api_v3">
+            <description>wsdl:type representing service</description>
+            <accessPoint useType="endpoint">class:com.systinet.uddi.inquiry.transformer.service.StringTransformer</accessPoint>
+            <tModelInstanceDetails>
+                <tModelInstanceInfo tModelKey="uddi:systinet.com:uddi:service:binding:transformer_kr">
+                    <instanceDetails>
+                        <instanceParms>KeyedReferenceTransformerApi</instanceParms>
+                    </instanceDetails>
+                </tModelInstanceInfo>
+                <tModelInstanceInfo tModelKey="uddi:systinet.com:uddi:service:porttype:transformer_kr">
+                    <instanceDetails>
+                        <instanceParms>KeyedReferenceTransformerApi</instanceParms>
+                    </instanceDetails>
+                </tModelInstanceInfo>
+                <tModelInstanceInfo tModelKey="uddi:systinet.com:comparator:string"/>
+            </tModelInstanceDetails>
+            <categoryBag>
+                <keyedReference keyName="uddi.org:xml:namespace" keyValue="http://systinet.com/uddi/transformer_kr/5.5" tModelKey="uddi:uddi.org:xml:namespace"/>
+                <keyedReference keyName="uddi.org:wsdl:types" keyValue="port" tModelKey="uddi:uddi.org:wsdl:types"/>
+                <keyedReference keyName="uddi.org:xml:localName" keyValue="KeyedReferenceTransformerApi" tModelKey="uddi:uddi.org:xml:localName"/>
+            </categoryBag>
+        </bindingTemplate>
+    </transformation>
+</taxonomy>

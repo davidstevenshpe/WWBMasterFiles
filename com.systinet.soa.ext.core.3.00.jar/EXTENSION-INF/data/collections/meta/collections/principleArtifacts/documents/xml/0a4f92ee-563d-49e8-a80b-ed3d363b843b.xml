@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/principleArtifacts/0a4f92ee-563d-49e8-a80b-ed3d363b843b</r:path>
+   <r:collection>/principleArtifacts/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType></r:contentType>
+   <r:owner>admin</r:owner>
+   <r:uuid>0a4f92ee-563d-49e8-a80b-ed3d363b843b</r:uuid>
+   <r:domainId>defaultDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2013-12-09T10:55:24.104Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>admin</r:creator>
+      <r:lastDataRevision>0</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:principleArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                              xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                              xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                              xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                              deleted="0"
+                              xlink:href="principleArtifacts/0a4f92ee-563d-49e8-a80b-ed3d363b843b">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="Motivation"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:motivationArtifact"/>
+               <p:artifactType name="Principle"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:principleArtifact"/>
+            </g:artifactTypeGroup>
+            <g:aggregatesGroup>
+               <p:aggregates xlink:href="principleArtifacts/c03f1535-149b-4c79-8fef-4db0b52ee150"/>
+               <p:aggregates xlink:href="principleArtifacts/37af52e9-8693-4ac3-8748-dddeeed94aaa"/>
+               <p:aggregates xlink:href="principleArtifacts/a9430f9e-2df6-4ec1-bae8-a57920578ca4"/>
+               <p:aggregates xlink:href="principleArtifacts/a3ac6122-ed9e-4e68-8437-47e5e8c3fa6b"/>
+               <p:aggregates xlink:href="principleArtifacts/fedf6d17-348f-4281-aa28-77c8eb432ade"/>
+               <p:aggregates xlink:href="principleArtifacts/9837f12b-3d44-43d0-9b5d-e110f7e6e787"/>
+               <p:aggregates xlink:href="principleArtifacts/159b17f3-6acb-4d74-9d79-23b210c3017d"/>
+               <p:aggregates xlink:href="principleArtifacts/2ce93d6e-66f7-4669-aa5d-fec12dfe11e2"/>
+               <p:aggregates xlink:href="principleArtifacts/acc0e6e4-91d7-4f01-8243-25a1d491c3bd"/>
+               <p:aggregates xlink:href="principleArtifacts/1c0e1799-49c0-42ea-a3f5-f390055e979a"/>
+               <p:aggregates xlink:href="principleArtifacts/14f22686-ff33-4c86-af82-ec0e1ff5f1d9"/>
+               <p:aggregates xlink:href="principleArtifacts/c8d3e410-d75a-4828-8fa5-b609e4fea24d"/>
+               <p:aggregates xlink:href="principleArtifacts/2b4a7b97-e3a4-49aa-ace9-a244f6c361e9"/>
+            </g:aggregatesGroup>
+            <g:nameGroup>
+               <p:name>IT Responsibility</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup>
+               <p:description>The IT organization is responsible for the development, testing, deployment, operation, and management of IT processes and infrastructure that provide solutions to meet business and compliance requirements for functionality, service levels, costs, and delivery.</p:description>
+            </g:descriptionGroup>
+            <p:revision>1</p:revision>
+            <g:keywordGroup/>
+            <p:version>1.0</p:version>
+            <g:architectureLayerGroup>
+               <p:architectureLayer name="Business Layer"
+                                    taxonomyUri="uddi:systinet.com:soa:model:taxonomies:architectureLayer"
+                                    value="businessLayer"/>
+            </g:architectureLayerGroup>
+            <g:qualityFeatureGroup>
+               <p:qualityFeature name="Effectiveness"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="effectiveness"/>
+               <p:qualityFeature name="Efficiency"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="efficiency"/>
+            </g:qualityFeatureGroup>
+            <p:rationale>IT services, processes, and technologies are designed, developed, deployed, and operated based on an effective alignment between needs, capabilities, and costs.
+Effective and efficient solutions provide clear benefits to the enterprise; they have reasonable costs and operate with an acceptable level of risk.
+Based on the alignment, the meaningful projects with the highest value for the enterprise are identified and realized.</p:rationale>
+            <p:implications>A formalized Business - IT strategic alignment framework and process must be created, deployed, and used.
+A formalized process to manage business needs and requirements (also known as Demand Management) must be defined, deployed, and used.
+A project portfolio management framework enabling an effective project prioritization must be created, deployed, and used.
+IT service, data, application, and technology models must be created to enable integrated quality solutions and to maximize benefits.</p:implications>
+         </a:principleArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

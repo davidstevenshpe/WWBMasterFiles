@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema targetNamespace="http://systinet.com/2005/05/soa/model/property/type"
+           xmlns="http://systinet.com/2005/05/soa/model/property/type" 
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:xlink="http://www.w3.org/1999/xlink"
+           elementFormDefault="qualified">
+    <xs:complexType name="scheduledPropertyType">
+        <xs:sequence>
+            <xs:element ref="schedulingDetails" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="enabled" type="xs:boolean" use="required"/>
+        <xs:attribute name="running" type="xs:boolean" use="required"/>
+        <xs:attribute name="temporary" type="xs:boolean" use="optional"/>
+        <xs:attribute name="nodeId" type="xs:string" use="optional"/>
+    </xs:complexType>
+    <xs:element name="schedulingDetails">
+        <xs:annotation xmlns:rdb="http://systinet.com/2006/08/soa/model/rdbmapping">
+            <xs:appinfo>
+                <rdb:ignore context="top-level"/>
+            </xs:appinfo>
+        </xs:annotation>
+
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="recurrence" minOccurs="0" maxOccurs="1"/>
+            </xs:sequence>
+            <xs:attribute name="runImmediatelyAfterRestart" type="xs:boolean" use="required"/>
+            <xs:attribute name="time" type="xs:dateTime" use="required"/>
+            <xs:attribute name="scheduledRunTime" type="xs:dateTime" use="optional"/>
+            <xs:attribute name="lastRunTime" type="xs:dateTime" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="recurrence">
+        <xs:annotation xmlns:rdb="http://systinet.com/2006/08/soa/model/rdbmapping">
+            <xs:appinfo>
+                <rdb:ignore context="top-level"/>
+            </xs:appinfo>
+        </xs:annotation>
+
+        <xs:complexType>
+            <xs:attribute name="repeated" type="xs:integer" use="required"/>
+            <xs:attribute name="customRepeatTime" type="xs:long" use="optional"/>
+            <xs:attribute name="repeatMax" use="optional" type="xs:integer"/>
+            <xs:attribute name="repeatUntil" type="xs:dateTime" use="optional"/>
+            <xs:attribute name="type" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="none"/>
+                        <xs:enumeration value="interval"/>
+                        <xs:enumeration value="hourly"/>
+                        <xs:enumeration value="daily"/>
+                        <xs:enumeration value="weekly"/>
+                        <xs:enumeration value="monthly"/>
+                        <xs:enumeration value="yearly"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

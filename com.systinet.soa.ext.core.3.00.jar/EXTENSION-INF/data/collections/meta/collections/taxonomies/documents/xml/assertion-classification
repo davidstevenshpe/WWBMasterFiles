@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:rest="http://systinet.com/2005/05/soa/resource" xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/taxonomies/uddi-systinet.com-taxonomy-assertion-classification</r:path>
+   <r:collection>/taxonomies/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType>text/xml; charset=utf-8</r:contentType>
+   <r:owner>systinet:admin</r:owner><r:uuid>090f70f9-48fe-450b-9760-bf03c935430b</r:uuid>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>  
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2007-04-12T11:34:39.891Z</r:timestamp>
+      <r:creator>admin</r:creator>
+      <r:lastDataRevision>1</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <taxonomyArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pt="http://systinet.com/2005/05/soa/model/property/type" xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup" xmlns:p="http://systinet.com/2005/05/soa/model/property" xmlns="http://systinet.com/2005/05/soa/model/artifact" deleted="0" xlink:href="taxonomies/assertion-classification">
+            <nameGroup xmlns="http://systinet.com/2005/05/soa/model/propertyGroup">
+               <name xmlns="http://systinet.com/2005/05/soa/model/property">Assertion Classification Taxonomy</name>
+            </nameGroup>
+            <descriptionGroup xmlns="http://systinet.com/2005/05/soa/model/propertyGroup">
+	       <description xmlns="http://systinet.com/2005/05/soa/model/property">Taxonomy containing the initial classification of Policy Manager's assertions.</description>
+	    </descriptionGroup>
+	    <artifactTypeGroup xmlns="http://systinet.com/2005/05/soa/model/propertyGroup">
+               <artifactType xmlns="http://systinet.com/2005/05/soa/model/property" name="Artifact" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes" value="urn:com:systinet:soa:model:artifacts"/>
+               <artifactType xmlns="http://systinet.com/2005/05/soa/model/property" name="Content" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes" value="urn:com:systinet:soa:model:artifacts:content"/>
+               <artifactType xmlns="http://systinet.com/2005/05/soa/model/property" name="Categorization" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes" value="urn:com:systinet:soa:model:artifacts:content:categorization"/>
+               <artifactType xmlns="http://systinet.com/2005/05/soa/model/property" name="Taxonomy" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes" value="urn:com:systinet:soa:model:artifacts:content:categorization:taxonomy"/>
+            </artifactTypeGroup>
+	    <checked xmlns="http://systinet.com/2005/05/soa/model/property">true</checked>
+            <hierarchical xmlns="http://systinet.com/2005/05/soa/model/property">false</hierarchical>
+            <isCached xmlns="http://systinet.com/2005/05/soa/model/property">false</isCached>
+            <lastRevision xmlns="http://systinet.com/2005/05/soa/model/property">1</lastRevision>
+            <revision xmlns="http://systinet.com/2005/05/soa/model/property">1</revision>
+         </taxonomyArtifact>
+         
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

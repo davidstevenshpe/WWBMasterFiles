@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://systinet.com/2005/05/soa/model/property/type"
+            xmlns="http://systinet.com/2005/05/soa/model/property/type"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified">
+
+  <xsd:complexType name="instanceDetailPropertyType">
+    <xsd:annotation>
+      <xsd:documentation>Instance detail.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="overviewdoc" type="xsd:anyURI" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="instanceParms" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+    <xsd:attribute name="tmodelKey" type="xsd:string" use="required"/>
+  </xsd:complexType>
+
+</xsd:schema>

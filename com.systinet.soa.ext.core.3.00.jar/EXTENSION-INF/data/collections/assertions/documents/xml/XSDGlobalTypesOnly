@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pm:Assertion xmlns:pm="http://systinet.com/2005/10/soa/policy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:a="http://systinet.com/2005/05/soa/model/artifact" xmlns:r="http://systinet.com/2005/05/repository" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:pt="http://systinet.com/2005/05/soa/model/property/type" xmlns:rest="http://systinet.com/2005/05/soa/resource" xmlns:p="http://systinet.com/2005/05/soa/resource" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup">
+        <p:Template xmlns:p="http://systinet.com/2005/10/soa/policy">
+          <bp:XSDGlobalTypesOnly xmlns:bp="http://systinet.com/2005/10/soa/policy/bpa"/>
+        </p:Template>
+        <pm:Bundle>
+            <pm:String Key="anon-type">Anonymous {0} type declaration is prohibited. To fix the problem make the declaration top-level and give it a name.</pm:String>
+        </pm:Bundle>
+        <pm:Validation SourceType="xmlns(ns=http://www.w3.org/2001/XMLSchema)qname(ns:schema)" xmlns:val="http://systinet.com/2005/10/soa/policy/validation">
+          <val:XQuery>
+
+    declare namespace xs="http://www.w3.org/2001/XMLSchema";
+    declare namespace val="http://systinet.com/2005/10/soa/policy/validation";
+
+    declare variable $metadata.source.url external;
+
+    let $anonTypes := //xs:*[(local-name() = 'complexType' or local-name() = 'simpleType') and not(parent::xs:schema)]
+    return
+        if (count($anonTypes) = 0) then
+            val:assertionOK()
+        else
+            for $err in $anonTypes
+            return
+                val:assertionFailed(val:l10n('anon-type', substring-before(local-name($err), 'Type')), $err)
+
+          </val:XQuery>
+        </pm:Validation>
+      </pm:Assertion>

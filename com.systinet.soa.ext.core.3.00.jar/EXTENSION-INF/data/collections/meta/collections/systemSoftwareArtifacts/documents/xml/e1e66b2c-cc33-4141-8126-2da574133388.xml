@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/systemSoftwareArtifacts/e1e66b2c-cc33-4141-8126-2da574133388</r:path>
+   <r:collection>/systemSoftwareArtifacts/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType></r:contentType>
+   <r:owner>admin</r:owner>
+   <r:uuid>e1e66b2c-cc33-4141-8126-2da574133388</r:uuid>
+   <r:domainId>defaultDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2015-07-03T00:12:05.347Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>systinet:admin</r:creator>
+      <r:lastDataRevision>0</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:operatingSystemArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                                    xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                                    xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                                    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                                    xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                    deleted="0"
+                                    xlink:href="systemSoftwareArtifacts/e1e66b2c-cc33-4141-8126-2da574133388">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="Technology Layer"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:technologyLayer:artifacts:technologyLayerArtifact"/>
+               <p:artifactType name="Node" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:technologyLayer:artifacts:nodeArtifact"/>
+               <p:artifactType name="System Software"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:technologyLayer:artifacts:systemSoftwareArtifact"/>
+               <p:artifactType name="Operating System"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:cloud-assessment:artifacts:operatingSystemArtifact"/>
+            </g:artifactTypeGroup>
+            <g:assignedFromGroup>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/3a3b86fa-50f5-4072-9680-13863720ab25"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/b161261d-2de2-48a4-bfea-8d9017451d2f"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/a47b4578-74e7-498e-841e-f40d68228590"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/76449c9c-19c0-4fbf-a090-86413046c03c"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/19fae51d-72fb-4459-bf5c-20b0f109a68c"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/0e79acf7-bb47-4f2d-91ff-10c25c01d7fd"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/354d73ec-33cc-481f-ba1a-b53bf3b700d3"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/46249da9-0bef-4653-b2f1-7bfe99b1ff41"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/0b9135f6-5471-4e89-a86f-823171479e28"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/6a951686-7b49-415e-9a32-eae339d70550"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/47afcac4-7a49-42b6-bd3e-1031d4ba3ba4"/>
+            </g:assignedFromGroup>
+            <g:nameGroup>
+               <p:name>SUSE Linux</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup>
+               <p:description>&lt;P&gt;
+	It is built on top of the open source Linux kernel and is distributed with system and application software from other open source projects. SUSE Linux is of German origin, basically an acronym of Software und System-Entwicklung (software and systems development), and mainly, was developed in Europe. The first version appeared in early 1994, making SUSE one of the oldest existing commercial distributions. It is known for its YaST configuration tool.&lt;/P&gt;</p:description>
+            </g:descriptionGroup>
+            <p:revision>1</p:revision>
+            <g:keywordGroup/>
+            <p:version>1.0</p:version>
+            <p:osType name="Linux" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:os_type"
+                      value="linux"/>
+         </a:operatingSystemArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

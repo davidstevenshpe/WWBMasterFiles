@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/principleArtifacts/836a1617-7b9d-47b8-9f35-06e0ba472b7c</r:path>
+   <r:collection>/principleArtifacts/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType></r:contentType>
+   <r:owner>admin</r:owner>
+   <r:uuid>836a1617-7b9d-47b8-9f35-06e0ba472b7c</r:uuid>
+   <r:domainId>defaultDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2013-12-09T10:54:51.733Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>admin</r:creator>
+      <r:lastDataRevision>0</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:principleArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                              xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                              xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                              xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                              deleted="0"
+                              xlink:href="principleArtifacts/836a1617-7b9d-47b8-9f35-06e0ba472b7c">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="Motivation"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:motivationArtifact"/>
+               <p:artifactType name="Principle"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:principleArtifact"/>
+            </g:artifactTypeGroup>
+            <g:aggregatesGroup>
+               <p:aggregates xlink:href="principleArtifacts/fcfaf9df-18a1-4e18-86b3-6fec7596dc72"/>
+            </g:aggregatesGroup>
+            <g:nameGroup>
+               <p:name>Automation</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup>
+               <p:description>Tasks, activities, and functions that can be automated are automated to ensure their effectiveness, efficiency and reduction of possible human errors.</p:description>
+            </g:descriptionGroup>
+            <p:revision>1</p:revision>
+            <g:keywordGroup/>
+            <p:version>1.0</p:version>
+            <g:architectureLayerGroup>
+               <p:architectureLayer name="Application Layer"
+                                    taxonomyUri="uddi:systinet.com:soa:model:taxonomies:architectureLayer"
+                                    value="applicationLayer"/>
+               <p:architectureLayer name="Technology Layer"
+                                    taxonomyUri="uddi:systinet.com:soa:model:taxonomies:architectureLayer"
+                                    value="technologyLayer"/>
+            </g:architectureLayerGroup>
+            <g:qualityFeatureGroup>
+               <p:qualityFeature name="Effectiveness"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="effectiveness"/>
+               <p:qualityFeature name="Efficiency"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="efficiency"/>
+            </g:qualityFeatureGroup>
+            <p:rationale>Along with the provisioning of information, the key intention of applications and underlying technology is an automation of tasks, functions and activities relating to data manipulation (creation, modification, archiving, disposal, management of accesses etc.). 
+Automation is capable to significantly speed up data processing (even high volumes), reduce or even eliminate errors related to human activity.
+Applications and information systems should be designed, developed, and deployed to support automation of tasks, functions, or activities.
+Automation should not be limited just on the business-related applications, but should be involved everywhere, where it's reasonable (processing of large amount of data, aggregation of incoherent data, data correlation, time dependent data processing etc.) and cost beneficial.</p:rationale>
+            <p:implications>Tasks, functions, and activities with a potential to be automated need to be identified within business and supporting processes.
+An automated solution must be defined, designed, and implemented into applications and underlying technology. If there are out-of-the-box solutions providing a sufficient level of automation, and which satisfy business process needs, these should preferably be selected.
+Automated solutions should comply with other principles to avoid potential security breaches, inconsistency of information, inability to manage the information environment, and negative impacts to business.
+Any application of an automated solution needs to be documented within the architecture.</p:implications>
+         </a:principleArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

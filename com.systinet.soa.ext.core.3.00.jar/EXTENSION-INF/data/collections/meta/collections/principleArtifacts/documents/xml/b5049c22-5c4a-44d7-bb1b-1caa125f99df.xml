@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/principleArtifacts/b5049c22-5c4a-44d7-bb1b-1caa125f99df</r:path>
+   <r:collection>/principleArtifacts/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType></r:contentType>
+   <r:owner>admin</r:owner>
+   <r:uuid>b5049c22-5c4a-44d7-bb1b-1caa125f99df</r:uuid>
+   <r:domainId>defaultDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2013-12-09T10:55:20.177Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>admin</r:creator>
+      <r:lastDataRevision>0</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:principleArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                              xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                              xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                              xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                              deleted="0"
+                              xlink:href="principleArtifacts/b5049c22-5c4a-44d7-bb1b-1caa125f99df">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="Motivation"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:motivationArtifact"/>
+               <p:artifactType name="Principle"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:motivationExtension:artifacts:principleArtifact"/>
+            </g:artifactTypeGroup>
+            <g:aggregatesGroup>
+               <p:aggregates xlink:href="principleArtifacts/d06b1d8c-7103-4a9f-ad41-0230552143bf"/>
+               <p:aggregates xlink:href="principleArtifacts/f6242d44-3991-4a5a-868f-1aea76a7f492"/>
+               <p:aggregates xlink:href="principleArtifacts/6847d0ea-6e7c-4c31-a2a8-14f99daa8138"/>
+               <p:aggregates xlink:href="principleArtifacts/dd92c34e-ea88-417d-ad2e-42f35ef2a47c"/>
+               <p:aggregates xlink:href="principleArtifacts/97a2a78f-40e0-49b0-9d8d-b93728aa18c2"/>
+               <p:aggregates xlink:href="principleArtifacts/f6bc9350-a04e-435b-ab62-ed01fb33fb89"/>
+               <p:aggregates xlink:href="principleArtifacts/2cfc6202-bbad-4630-a6e2-0ef2fa97075e"/>
+               <p:aggregates xlink:href="principleArtifacts/58d2e1b1-d9e8-48a4-bbbf-8c3485fa719f"/>
+               <p:aggregates xlink:href="principleArtifacts/300655ed-0101-482f-8c95-2f5336591c34"/>
+               <p:aggregates xlink:href="principleArtifacts/809fd56c-2787-4040-a7e8-b7d6d44e84d3"/>
+               <p:aggregates xlink:href="principleArtifacts/81df658c-34f4-4d98-8c28-c1dad6977819"/>
+               <p:aggregates xlink:href="principleArtifacts/ddecedb9-cf8b-46b8-8813-5a12149b7bda"/>
+               <p:aggregates xlink:href="principleArtifacts/bf85e565-229d-45c3-b024-faa708cbef0b"/>
+               <p:aggregates xlink:href="principleArtifacts/c16bc0ad-6941-4b24-9736-297a5c013559"/>
+               <p:aggregates xlink:href="principleArtifacts/f3f85462-0b27-4751-a8d9-f01823d2eff5"/>
+               <p:aggregates xlink:href="principleArtifacts/39728fb0-2bbd-418a-bbc7-bcc27e7550c4"/>
+            </g:aggregatesGroup>
+            <g:nameGroup>
+               <p:name>Interoperability</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup>
+               <p:description>Software and hardware should conform to defined standards that promote interoperability for data, applications, and technology.</p:description>
+            </g:descriptionGroup>
+            <p:revision>1</p:revision>
+            <g:keywordGroup/>
+            <p:version>1.0</p:version>
+            <g:architectureLayerGroup>
+               <p:architectureLayer name="Technology Layer"
+                                    taxonomyUri="uddi:systinet.com:soa:model:taxonomies:architectureLayer"
+                                    value="technologyLayer"/>
+            </g:architectureLayerGroup>
+            <g:qualityFeatureGroup>
+               <p:qualityFeature name="Effectiveness"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="effectiveness"/>
+               <p:qualityFeature name="Efficiency"
+                                 taxonomyUri="uddi:systinet.com:soa:model:taxonomies:qualityFeature"
+                                 value="efficiency"/>
+            </g:qualityFeatureGroup>
+            <p:rationale>Technology standards help ensure a required interoperability of involved technical components, thus reducing costs for customization and additional development while manageability of the environment becomes easier. Non-standard, vendor specific technology very often requires additional costs to be able to ensure required interoperability.
+Standards also make the environment transparent, easy, maintainable, and open to development.</p:rationale>
+            <p:implications>Interoperability standards based on industry standards need to be defined, developed and followed. The existing IT platforms must be identified and documented.
+Any non-standard solution must have a reasonable business justification; its suitability for an information environment must be proven, and the architectural exception must be obtained.
+Use of any non-standard solution needs to be fully documented and monitored over time. If the solution is beneficial, it can be proposed as a part of interoperability standards in the information environment.
+A process for management standards must be defined, developed and implemented.
+Interoperability standards should be linked with architecture blueprints.</p:implications>
+         </a:principleArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

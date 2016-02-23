@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pm:Assertion xmlns:pm="http://systinet.com/2005/10/soa/policy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:a="http://systinet.com/2005/05/soa/model/artifact" xmlns:r="http://systinet.com/2005/05/repository" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:pt="http://systinet.com/2005/05/soa/model/property/type" xmlns:rest="http://systinet.com/2005/05/soa/resource" xmlns:p="http://systinet.com/2005/05/soa/resource" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup">
+        <p:Template xmlns:p="http://systinet.com/2005/10/soa/policy">
+          <IllegalWSDLXSDCharacters xmlns="http://systinet.com/2005/10/soa/policy/best-practice"/>
+        </p:Template>
+        <pm:Bundle>
+            <pm:String Key="bad">The document contains an element which has a name ("{0}") consisting of some illegal characters(_ . ; : -). To fix this problem, rename the element not to contain those illegal characters.</pm:String>
+        </pm:Bundle>
+        <pm:Validation SourceType="xmlns(ns=http://schemas.xmlsoap.org/wsdl/)qname(ns:definitions)" xmlns:val="http://systinet.com/2005/10/soa/policy/validation">
+          <val:XQuery>
+
+    declare namespace val="http://systinet.com/2005/10/soa/policy/validation";
+
+    declare function local:wrongName($name as xs:string) as xs:boolean {
+        contains($name, "_") or contains($name, ".") or contains($name, ";") or contains($name, ":") or contains($name, "-")
+    };
+
+    let $errors :=
+        for $el in //*[@name] where (local:wrongName($el/@name))
+        return
+            val:assertionFailed(val:l10n('bad', $el/@name), $el)
+    return
+        if (empty($errors)) then
+            val:assertionOK()
+        else
+            ()
+
+          </val:XQuery>
+        </pm:Validation>
+        <pm:Validation SourceType="xmlns(ns=http://www.w3.org/2001/XMLSchema)qname(ns:schema)" xmlns:val="http://systinet.com/2005/10/soa/policy/validation">
+          <val:XQuery>
+    declare namespace val="http://systinet.com/2005/10/soa/policy/validation";
+
+    declare function local:wrongName($name as xs:string) as xs:boolean {
+        contains($name, "_") or contains($name, ".") or contains($name, ";") or contains($name, ":") or contains($name, "-")
+    };
+
+    let $errors :=
+        for $el in //*[@name] where (local:wrongName($el/@name))
+        return
+            val:assertionFailed(val:l10n('bad', $el/@name), $el)
+    return
+        if (empty($errors)) then
+            val:assertionOK()
+        else
+            ()
+          </val:XQuery>
+        </pm:Validation>
+      </pm:Assertion>

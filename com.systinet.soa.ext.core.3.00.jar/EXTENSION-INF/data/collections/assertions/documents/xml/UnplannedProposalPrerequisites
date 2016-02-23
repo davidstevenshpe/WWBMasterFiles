@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><pm:Assertion xmlns:pm="http://systinet.com/2005/10/soa/policy" xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup" xmlns:r="http://systinet.com/2005/05/repository" xmlns:p="http://systinet.com/2005/05/soa/model/property" xmlns:a="http://systinet.com/2005/05/soa/model/artifact" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:pt="http://systinet.com/2005/05/soa/model/property/type" xmlns:rest="http://systinet.com/2005/05/soa/resource" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><pm:Template><p0:UnplannedProposalPrerequisites xmlns:p0="urn:localhost:com:enter-your-organization-or-project-specific-namespace"/></pm:Template><pm:Validation><JavaScriptValidator xmlns="http://systinet.com/2005/10/soa/policy/validation" xmlns:xlink="http://www.w3.org/1999/xlink/">/**
+ * This function is called iteratively by the java script validator,
+ * There are some java script objects pre-initialized in the scripting context (e.g. repositoryService ...)  
+ * You can find others and configure more in the managed script environment.js
+ *
+ * @param  resource
+ *         an external resource or an artifact
+ *
+ * @param  params
+ *         a map of params
+ */
+function validate(resource, params) {
+    var plateau = resource;
+    repositoryService.fetchArtifactProperties(plateau, new ArtifactPartSelector("aggregates"));
+    var listPlannedElements = plateau.getMultiRelationProperty("aggregates");
+    var listUnplannedElements = [];
+   for (var row1=0;row1&lt;listPlannedElements.size();row1++){
+        var relatedElement = listPlannedElements.get(row1);
+		var prerequisite = relatedElement.getAttributes().get("prerequisite");
+        if (prerequisite != null &amp;&amp; prerequisite.toString() == "true") {
+	        var artifactUuid = relatedElement.getTargetId();
+	        var artifact = repositoryService.getArtifact(UUID.toUuid(java.lang.String.valueOf(artifactUuid)));
+		    repositoryService.fetchArtifactProperties(artifact, new ArtifactPartSelector("realizedBy").merge(new ArtifactPartSelector("aggregatedBy")));
+		    var listPlannedDeliverables = artifact.getMultiRelationProperty("realizedBy");
+		    var listPlannedPlateaus = artifact.getMultiRelationProperty("aggregatedBy");
+		    var aldFactory = beanFactoryHelper.getBean(Packages.com.hp.systinet.lifecycle.ui.common.ArtifactLifecycleDataFactory);
+		    var lfeData = aldFactory.create(artifact.get_uuid());
+		    var govRec = lfeData.getGovernanceRecord();
+		    var lastApprovedStage = null;
+		    var targetStage = null;
+		    var isPlanned = false;
+		    var workingPlateauUuid = plateau.get_uuid();
+		    var targetUuid = "";
+		    var targetSdmName = "";
+		    var prerequisites = "";
+		    if (govRec != null &amp;&amp; govRec.getLastApprovedState() != null) {
+		    	lastApprovedStage = govRec.getLastApprovedState().getName();
+		    }
+		    if (!isPlanned) {
+			    for (var row=0; row &lt; listPlannedDeliverables.size(); row++) {
+				    var relation = listPlannedDeliverables.get(row);
+				    targetSdmName = relation.getSourceSdmName();
+					targetStage = relation.getUseType();
+					prerequisites = relation.getAttributes().get("prerequisite");
+					if (targetSdmName == "deliverableArtifact") {
+						if (targetStage !== null &amp;&amp; lastApprovedStage !== null &amp;&amp; targetStage.toString() != lastApprovedStage.toString() &amp;&amp; prerequisites != null &amp;&amp; prerequisites.toString() == "false") {
+							 isPlanned = true;
+							 break;
+						}
+						else if (((targetStage === null &amp;&amp; lastApprovedStage !== null)|| (targetStage !== null &amp;&amp; lastApprovedStage === null)) &amp;&amp; prerequisites != null &amp;&amp; prerequisites.toString() == "false"){
+							 isPlanned = true;
+							 break;
+						}
+					}
+					
+				}
+			}
+			if (!isPlanned) {
+				for (var row=0; row &lt; listPlannedPlateaus.size(); row++) {
+				    var relation = listPlannedPlateaus.get(row);
+					targetSdmName = relation.getSourceSdmName();
+				    targetUuid = relation.getSourceId();
+					targetStage = relation.getUseType();
+					prerequisites = relation.getAttributes().get("prerequisite");
+					if (targetSdmName == "plateauArtifact" &amp;&amp; workingPlateauUuid.toString() != targetUuid.toString()) {
+						if (targetStage !== null &amp;&amp; lastApprovedStage !== null &amp;&amp; targetStage.toString() != lastApprovedStage.toString() &amp;&amp; prerequisites != null &amp;&amp; prerequisites.toString() == "false") {
+						  isPlanned = true;
+						  break;
+						}
+						else if (((targetStage === null &amp;&amp; lastApprovedStage !== null)|| (targetStage !== null &amp;&amp; lastApprovedStage === null)) &amp;&amp; prerequisites != null &amp;&amp; prerequisites.toString() == "false"){
+						  isPlanned = true;
+						  break;
+						}
+					} 
+				}
+			}
+			if (!isPlanned) {
+				listUnplannedElements.push(relatedElement.getTargetId().toString());
+			}
+		}
+	}
+    if (listUnplannedElements.length == 0){
+       return JsValidationResult(JsValidationCode.OK);
+    }
+    else {
+       return JsValidationResult(JsValidationCode.FAILED, "This plateau is listing prerequisites ("+ listUnplannedElements.toString() +") which have not been planned to be realized by any proposal or project");
+    }
+    
+}
+</JavaScriptValidator></pm:Validation></pm:Assertion>

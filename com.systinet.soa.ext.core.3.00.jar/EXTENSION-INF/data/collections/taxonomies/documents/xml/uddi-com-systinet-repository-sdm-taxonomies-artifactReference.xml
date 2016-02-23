@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taxonomy check="true" brief="false" xmlns="http://systinet.com/uddi/taxonomy/v3/5.5">
+  <tModel tModelKey="uddi:systinet.com:soa:model:taxonomies:artifactReference" deleted="false" tModelKeyV2="uuid:6f820c59-cfa7-3e1b-bf45-72f735ec0f04" xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <name xmlns="urn:uddi-org:api_v3">systinet-com:soa:model:taxonomies:artifactReference</name>
+    <description xmlns="urn:uddi-org:api_v3">A checked category system used to refer from entity to the tModel representing platform business service</description>
+    <categoryBag xmlns="urn:uddi-org:api_v3">
+      <keyedReference tModelKey="uddi:uddi.org:categorization:entitykeyvalues" keyName="" keyValue="businessKey"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:entitykeyvalues" keyName="" keyValue="serviceKey"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:entitykeyvalues" keyName="" keyValue="bindingKey"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:entitykeyvalues" keyName="" keyValue="tModelKey"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Categorization system" keyValue="categorization"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="bindingTemplate"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="businessEntity"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="businessService"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="tModel"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Checked value set" keyValue="checked"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:validatedby" keyName="" keyValue="uddi:fe773cb0-e2a5-11db-b316-63c7eed0b316"/>
+      <keyedReference tModelKey="uddi:systinet.com:isorderedby" keyName="" keyValue="uddi:systinet.com:comparator:string"/>
+    </categoryBag>
+  </tModel>
+  <compatibilityBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <compatibility>bindingTemplate</compatibility>
+    <compatibility>businessEntity</compatibility>
+    <compatibility>businessService</compatibility>
+    <compatibility>tModel</compatibility>
+  </compatibilityBag>
+  <categorizationBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <categorization>categorization</categorization>
+  </categorizationBag>
+  <validation xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <bindingTemplate bindingKey="uddi:fe773cb0-e2a5-11db-b316-63c7eed0b316" serviceKey="uddi:fe758f00-e2a5-11db-b316-63c7eed0b316" xmlns="urn:uddi-org:api_v3">
+      <accessPoint useType="endPoint">class:com.systinet.uddi.publishing.v3.validation.service.InternalValidator</accessPoint>
+      <tModelInstanceDetails>
+        <tModelInstanceInfo tModelKey="uddi:uddi.org:v3_valuesetvalidation"/>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:soa:model:taxonomies:artifactReference"/>
+      </tModelInstanceDetails>
+    </bindingTemplate>
+    <bindingTemplate bindingKey="uddi:fe795f90-e2a5-11db-b316-63c7eed0b316" serviceKey="uddi:fe758f00-e2a5-11db-b316-63c7eed0b316" xmlns="urn:uddi-org:api_v3">
+      <accessPoint useType="endPoint">class:com.systinet.uddi.publishing.v2.validation.service.InternalValidator</accessPoint>
+      <tModelInstanceDetails>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:v2_validatevalues"/>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:soa:model:taxonomies:artifactReference"/>
+      </tModelInstanceDetails>
+    </bindingTemplate>
+    <bindingTemplate bindingKey="uddi:fe7a49f0-e2a5-11db-b316-63c7eed0b316" serviceKey="uddi:fe758f00-e2a5-11db-b316-63c7eed0b316" xmlns="urn:uddi-org:api_v3">
+      <accessPoint useType="endPoint">class:com.systinet.uddi.publishing.v1.validation.service.InternalValidator</accessPoint>
+      <tModelInstanceDetails>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:v1_validatevalues"/>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:soa:model:taxonomies:artifactReference"/>
+      </tModelInstanceDetails>
+    </bindingTemplate>
+  </validation>
+  <transformation>
+    <tModel tModelKey="uddi:systinet.com:comparator:string" deleted="false" xmlns="urn:uddi-org:api_v3">
+      <name>systinet-com:comparator:string</name>
+      <description>A category system used to indicate string comparison</description>
+      <categoryBag>
+        <keyedReference tModelKey="uddi:systinet.com:comparator" keyName="" keyValue="comparator"/>
+        <keyedReference tModelKey="uddi:systinet.com:isTransformedBy" keyName="" keyValue="uddi:9310ea31-0877-11d9-b839-9310ea30b839"/>
+      </categoryBag>
+    </tModel>
+    <bindingTemplate bindingKey="uddi:9310ea31-0877-11d9-b839-9310ea30b839" serviceKey="uddi:systinet.com:uddi:service:transformer_kr_string" xmlns="urn:uddi-org:api_v3">
+      <description>wsdl:type representing port</description>
+      <accessPoint useType="endpoint">class:com.systinet.uddi.inquiry.transformer.service.StringTransformer</accessPoint>
+      <tModelInstanceDetails>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:uddi:service:binding:transformer_kr">
+          <instanceDetails>
+            <instanceParms>KeyedReferenceTransformerApi</instanceParms>
+          </instanceDetails>
+        </tModelInstanceInfo>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:uddi:service:porttype:transformer_kr">
+          <instanceDetails>
+            <instanceParms>KeyedReferenceTransformerApi</instanceParms>
+          </instanceDetails>
+        </tModelInstanceInfo>
+      </tModelInstanceDetails>
+      <categoryBag>
+        <keyedReference tModelKey="uddi:uddi.org:xml:namespace" keyName="uddi.org:xml:namespace" keyValue="http://systinet.com/uddi/transformer_kr/5.5"/>
+        <keyedReference tModelKey="uddi:uddi.org:wsdl:types" keyName="uddi.org:wsdl:types" keyValue="port"/>
+        <keyedReference tModelKey="uddi:uddi.org:xml:localName" keyName="uddi.org:xml:localName" keyValue="KeyedReferenceTransformerApi"/>
+      </categoryBag>
+    </bindingTemplate>
+  </transformation>
+</taxonomy>

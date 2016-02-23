@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:relationship xmlns:r="http://systinet.com/2005/05/repository">
+   <r:id>7462175</r:id>
+   <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+   <r:state>open</r:state>
+   <r:deleted>false</r:deleted>
+   <r:obsolete>false</r:obsolete>
+   <r:createdOn>2014-05-12T08:51:55.847Z</r:createdOn>
+   <r:source>
+      <r:path>/hpsoaTechnicalPolicies/a104b5a0-4dbe-4d59-9b14-62e5adcde7ff</r:path>
+      <r:revision>1</r:revision>
+      <r:revisionTo>0</r:revisionTo>
+   </r:source>
+   <r:target>
+      <r:path>/assertions/ArchimateComplianceValidator</r:path>
+      <r:uuid>293ff029-ad9f-4a1f-9df6-a61f28f5ed1e</r:uuid>
+      <r:revision>1</r:revision>
+      <r:revisionTo>0</r:revisionTo>
+      <r:deleted>false</r:deleted>
+   </r:target>
+</r:relationship>

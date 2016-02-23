@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:acl xmlns:r="http://systinet.com/2005/05/repository" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <r:owner xsi:type="xsd:string">systinet:admin</r:owner>
+   <r:ace>
+      <r:principal type="role">Administrator@topLevelDomain</r:principal>
+      <r:permission defaultAceId="0585b7d3-ccc8-4a9b-b11f-8f0324747e82">read</r:permission>
+      <r:permission defaultAceId="1a3911a6-1ff5-46f5-873b-2b6f4a7e0875">write</r:permission>
+   </r:ace>
+</r:acl>

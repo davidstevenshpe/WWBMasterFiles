@@ -1,0 +1,13 @@
+<query>
+SELECT sum(art.aggregatedBy.internalEffort) as internalEffort, 
+       sum(art.aggregatedBy.externalEffort) as externalEffort, 
+       sum(art.aggregatedBy.cost) as cost
+    FROM artifactBase art, 
+         plateauArtifact p , 
+         proposalArtifact prop
+    WHERE bind(art.aggregatedBy, p) 
+        and bind(p.realizes, prop) 
+        and prop._uuid = :proposalUuid 
+        and art._sdmName &lt;> 'proposalArtifact'
+        and art.aggregatedBy.prerequisite in (:prerequisite1,:prerequisite2)
+</query>

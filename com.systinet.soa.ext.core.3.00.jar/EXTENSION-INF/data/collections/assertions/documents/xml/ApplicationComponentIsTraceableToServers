@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><pm:Assertion xmlns:pm="http://systinet.com/2005/10/soa/policy" xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup" xmlns:r="http://systinet.com/2005/05/repository" xmlns:p="http://systinet.com/2005/05/soa/model/property" xmlns:a="http://systinet.com/2005/05/soa/model/artifact" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:pt="http://systinet.com/2005/05/soa/model/property/type" xmlns:rest="http://systinet.com/2005/05/soa/resource" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><pm:Template><p0:ApplicationComponentIsTraceableToServers xmlns:p0="urn:localhost:com:enter-your-organization-or-project-specific-namespace"/></pm:Template><pm:Validation SourceType="xmlns(ns=http://systinet.com/2005/05/soa/model/artifact)qname(ns:applicationComponentArtifact)"><JavaScriptValidator xmlns="http://systinet.com/2005/10/soa/policy/validation" xmlns:xlink="http://www.w3.org/1999/xlink/">/**
+ * This function is called iteratively by the java script validator,
+ * There are some java script objects pre-initialized in the scripting context (e.g. repositoryService ...)  
+ * You can find others and configure more in the managed script environment.js
+ *
+ * @param  resource
+ *         an external resource or an artifact
+ *
+ * @param  params
+ *         a map of params
+ */
+function validate(resource, params) {
+	var artifact = resource;
+	var closureComputation = closureApiFactory.getDefinition("/scripts/ApplicationComponentsRelatedToServer.xml");
+	var aldFactory = beanFactoryHelper.getBean(Packages.com.hp.systinet.lifecycle.ui.common.ArtifactLifecycleDataFactory);
+    var lfeData = aldFactory.create(artifact.get_uuid());
+    var govRec = lfeData.getGovernanceRecord();
+    var lastApprovedStageName = null;
+    if (govRec != null &amp;&amp; govRec.getLastApprovedState()!= null){
+      lastApprovedStageName = govRec.getLastApprovedState().getName()
+    }
+    if (lastApprovedStageName == "Production") {
+	    try {
+			var hasPaths = closureComputation.pathToTypeExists(artifact.get_uuid().toString(), "serverArtifact");
+			if (hasPaths) {
+				return new JsValidationResult(JsValidationCode.OK);
+			}
+			else {
+				return new JsValidationResult(JsValidationCode.FAILED, "Production application is not traceable to an infrastructure server");
+			}
+		} catch(error) {
+			return new JsValidationResult(JsValidationCode.IMPLEMENTATION_ERROR);
+		}
+    }
+    else {
+    	return new JsValidationResult(JsValidationCode.OK);
+    }
+}
+</JavaScriptValidator></pm:Validation></pm:Assertion>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://systinet.com/2005/05/soa/model/property/type"
+           xmlns="http://systinet.com/2005/05/soa/model/property/type"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+    <xs:complexType name="categoryPropertyType">
+        <xs:annotation xmlns:rdb="http://systinet.com/2006/08/soa/model/rdbmapping">
+            <xs:appinfo>
+                <rdb:table name="gt_ctgryPty" context="multiple">
+                    <rdb:ommit-foreign-key>
+                        <rdb:context table-property-key="artifact" table-property-value="true"/>
+                    </rdb:ommit-foreign-key>
+                    <rdb:column name="fk_resource_id" type="number">
+                        <rdb:foreign-key table-name="resource" column-name="id"/>
+                    </rdb:column>
+                </rdb:table>
+            </xs:appinfo>
+        </xs:annotation>
+
+        <xs:attribute name="taxonomyUri" type="xs:anyURI" use="required">
+            <xs:annotation xmlns:rdb="http://systinet.com/2006/08/soa/model/rdbmapping">
+                <xs:appinfo>
+                    <rdb:ignore context="single"/>
+                    <rdb:type name="ascii(255)"/>
+                </xs:appinfo>
+            </xs:annotation>
+        </xs:attribute>
+
+        <xs:attribute name="name" type="xs:string" use="required">
+            <xs:annotation xmlns:rdb="http://systinet.com/2006/08/soa/model/rdbmapping">
+                <xs:appinfo>
+                    <rdb:type name="string(255)"/>
+                </xs:appinfo>
+            </xs:annotation>
+        </xs:attribute>
+
+        <xs:attribute name="value" type="xs:string" use="required">
+            <xs:annotation xmlns:rdb="http://systinet.com/2006/08/soa/model/rdbmapping">
+                <xs:appinfo>
+                    <rdb:type name="string(255)"/>
+                </xs:appinfo>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+
+</xs:schema>

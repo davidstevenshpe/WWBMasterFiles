@@ -1,0 +1,5 @@
+sep=,
+name|key=true,version|key=true,description,owner,providedBy|target=personArtifact|property=name|useType=businessExpert,providedBy|target=personArtifact|property=name|useType=financialAnalyst,providedBy|target=personArtifact|property=name|useType=technicalSupport,domainId,composedOf|target=applicationComponentArtifact|property=name
+App DB Sample,1,App Database,admin,,,Nicole Smith,defaultDomain,
+App AS Sample,3,App Application Server,admin,,,Jack Foster,defaultDomain,
+App Sample,3,App - sample app for EM import,nsmith,Andy Miller,Bev Bailey,Dave Olson|Andy Miller|Joseph Banks,defaultDomain,App DB Sample|App AS Sample

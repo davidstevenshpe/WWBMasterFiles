@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><pm:Assertion xmlns:pm="http://systinet.com/2005/10/soa/policy" xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup" xmlns:r="http://systinet.com/2005/05/repository" xmlns:p="http://systinet.com/2005/05/soa/model/property" xmlns:a="http://systinet.com/2005/05/soa/model/artifact" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:pt="http://systinet.com/2005/05/soa/model/property/type" xmlns:rest="http://systinet.com/2005/05/soa/resource" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><pm:Template><p0:BusinessFunctionStatusIsSet xmlns:p0="http://systinet.com/assertions"/></pm:Template><pm:Validation SourceType="xmlns(ns=http://systinet.com/2005/05/soa/model/artifact)qname(ns:businessFunctionArtifact)"><JavaScriptValidator xmlns="http://systinet.com/2005/10/soa/policy/validation" xmlns:xlink="http://www.w3.org/1999/xlink/">/**
+ * This function is called iteratively by the java script validator,
+ * There are some java script objects pre-initialized in the scripting context (e.g. repositoryService ...)  
+ * You can find others and configure more in the managed script environment.js
+ *
+ * @param  resource
+ *         an external resource or an artifact
+ *
+ * @param  params
+ *         a map of params
+ */
+function validate(resource, params) {
+    var artifact = resource;
+    repositoryService.fetchArtifactProperties(artifact,ArtifactPartSelector.ALL_PROPERTIES);
+    var businessFunctionType = artifact.getProperty("businessFunctionStatus");
+    if (businessFunctionType == null) {
+    	return JsValidationResult(JsValidationCode.FAILED, "Business Function Status property has still not been set.");
+    }
+    else {
+    	return JsValidationResult(JsValidationCode.OK);
+    }
+}
+</JavaScriptValidator></pm:Validation></pm:Assertion>

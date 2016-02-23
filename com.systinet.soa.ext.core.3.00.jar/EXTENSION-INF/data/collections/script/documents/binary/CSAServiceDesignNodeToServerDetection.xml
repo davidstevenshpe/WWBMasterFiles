@@ -1,0 +1,17 @@
+ <closure maxDepth="3" maxResults="100" maxProcessingTime="30000" debug="false" seedsAsResults="false">
+  <defaultSeedQuery>select artifact._uuid from artifactBase artifact where artifact._uuid=:uuid</defaultSeedQuery>
+    <traversableRelations>
+        <!--This path is to detect artifact (application component, system software) specializing to abstract artifact (application component, system software) and 'use' server-->
+        <relation sdmName="specializes" sourceArtifact="applicationComponentArtifact" targetArtifact="applicationComponentArtifact"/>
+        <relation sdmName="specializes" sourceArtifact="systemSoftwareArtifact" targetArtifact="systemSoftwareArtifact"/>
+        <relation sdmName="uses" sourceArtifact="applicationComponentArtifact" targetArtifact="serverArtifact" supportShortcut="false"/>
+        <relation sdmName="uses,assignedFrom" sourceArtifact="systemSoftwareArtifact" targetArtifact="serverArtifact"/>
+    </traversableRelations>
+    <parameters>
+         <parameter name="domainIDs" label="domainIDs" type="string" defaultValueQuery="select r_localId from hpsoaDomainArtifact"/>
+         <parameter name="uuid" label="uuid" type="string"/>
+     </parameters>
+    <resultArtifacts>
+		<artifact sdmName="serverArtifact"/>
+  </resultArtifacts>
+</closure>

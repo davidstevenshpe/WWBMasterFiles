@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tests>
+	<test name="Invalid Data" desc="Artifact has invalid property">
+		<appliedTechnicalPolicy xlink:href="hpsoaTechnicalPolicies/artifact-property-validity" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+		<dqlDataSource>
+			select _uuid from artifactBase where {availableArtifactTypes} and _sdmName not like 'r_scriptArtifact' order by _uuid
+		</dqlDataSource>
+	</test>
+	<test name="Duplicated Location" desc="Artifact has duplicated location with other artifact">
+        <dql>
+        	select a._uuid, a._sdmName, a.name, a.location as location from artifactBase a, artifactBase b where a.location = b.location and a._uuid not like b._uuid
+		</dql>
+    </test>
+</tests>

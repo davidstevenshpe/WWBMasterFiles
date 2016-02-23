@@ -1,0 +1,32 @@
+<query>
+  <parameters>
+	<!-- 0: any cost, 1: >= $1M, 2: >= $2M -->
+	<parameter name="cost" label="cost" type="number" defaultValue="0"/>
+	<!-- 0: any npv, 1: >= $1M, 2: >= $2M -->
+	<parameter name="npv" label="npv" type="number" defaultValue="0"/>
+	<!-- 0: any roi, 1: >= 0, 2: <= 0 -->
+	<parameter name="roi" label="roi" type="number" defaultValue="0"/>
+  </parameters>
+  
+  <orderBy>annualCostTotalVal DESC, netPresentValueVal DESC, returnOnInvestmentVal DESC, name ASC</orderBy>
+  
+  select 
+		a._uuid as uuid, 
+  		a.name as name,  		 
+  		afp.annualCostTotal as annualCostTotalVal, 
+  		afp.annualCostLaborInt as annualCostLaborIntVal, 
+  		afp.annualCostLaborExt as annualCostLaborExtVal, 
+  		afp.annualCostSw as annualCostSwVal, 
+  		afp.annualCostHw as annualCostHwVal, 
+  		afp.annualCostOther as annualCostOtherVal,
+  		afp.transformationCost as transformationCostVal,   		
+  		afp.returnOnInvestment as returnOnInvestmentVal, 
+  		afp.netPresentValue as netPresentValueVal
+  		
+  from applicationComponentArtifact a join appFinancialProfileArtifact afp using afp.profileOf
+   
+  where (afp.annualCostTotal is not null) 
+		and ((:cost=0) or ((:cost=1) and (afp.annualCostTotal >= 1000000)) or ((:cost=2) and (afp.annualCostTotal >= 2000000))) 
+		and ((:npv=0) or ((:npv=1) and (afp.netPresentValue >= 1000000)) or ((:npv=2) and (afp.netPresentValue >= 2000000))) 
+		and ((:roi=0) or ((:roi=1) and (afp.returnOnInvestment >= 0)) or ((:roi=2) and (0 >= afp.returnOnInvestment))) 
+</query>

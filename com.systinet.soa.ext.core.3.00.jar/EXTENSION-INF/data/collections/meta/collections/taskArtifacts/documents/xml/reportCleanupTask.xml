@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/taskArtifacts/reportCleanupTask</r:path>
+   <r:collection>/taskArtifacts/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType></r:contentType>
+   <r:owner>systinet:admin</r:owner>
+   <r:uuid>443c970e-9b0e-4203-9ac2-31a5f32f52a8</r:uuid>
+   <r:domainId>topLevelDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2010-06-23T00:00:00.000Z</r:timestamp>
+      <r:creator>systinet:admin</r:creator>
+      <r:lastDataRevision>0</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:taskArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                         xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                         xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                         xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                         xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                         xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                         xlink:href="taskArtifacts/reportCleanupTask">
+            <g:nameGroup>
+               <p:name xmlns:mr="http://systinet.com/2005/05/repository" xml:lang="en">Report Cleanup Task</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup>
+               <p:description xmlns:mr="http://systinet.com/2005/05/repository" xml:lang="en">Runs Report Cleanup Job</p:description>
+            </g:descriptionGroup>
+            <g:keywordGroup/>
+            <p:r_taskType name="System Task" taxonomyUri="uddi:hp.com:soa:model:task:type" value="system"/>
+            <p:tool xlink:href="toolArtifacts/reportCleanupJobTool.xml"/>
+            <p:scheduled enabled="true" running="false" temporary="false">
+               <pt:schedulingDetails runImmediatelyAfterRestart="false" scheduledRunTime="2010-06-01T01:30:00.000Z"
+                                     time="2010-06-01T01:30:00.000Z">
+                  <pt:recurrence repeated="0" type="daily"/>
+               </pt:schedulingDetails>
+            </p:scheduled>
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="System"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:system"/>
+               <p:artifactType name="Task" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:system:task"/>
+            </g:artifactTypeGroup>
+            <p:isCached>false</p:isCached>
+         </a:taskArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

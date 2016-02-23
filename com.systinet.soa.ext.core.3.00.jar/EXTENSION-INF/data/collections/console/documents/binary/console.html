@@ -1,0 +1,336 @@
+<html>
+<head>
+<title>Generic console for Systinet Platform REST protocol</title>
+<script src="http.js"></script>
+<script>
+function getCallback() {
+    if (httpReq.readyState == 4) {
+        // only if "OK"
+        document.Comm.ResponseStatusCode.value = httpReq.status;
+        if (httpReq.status >= 200 && httpReq.status <= 299) {
+            document.Comm.ResponseContent.value = httpReq.responseText;
+            document.Comm.ResponseContentType.value = httpReq.getResponseHeader("Content-Type");
+        } else {
+            document.Comm.ResponseContent.value = httpReq.responseText;
+            document.Comm.ResponseContentType.value = httpReq.getResponseHeader("Content-Type");
+            alert("Error occured during GET:\n" + httpReq.statusText);
+        }
+    }
+}
+
+function postCallback() {
+    if (httpReq.readyState == 4) {
+        // only if "OK"
+        document.Comm.ResponseStatusCode.value = httpReq.status; 
+        if (httpReq.status >= 200 && httpReq.status <= 299) {
+            document.Comm.ResponseContent.value = httpReq.responseText;
+            document.Comm.ResponseContentType.value = httpReq.getResponseHeader("Content-Type");
+        } else {
+            document.Comm.ResponseContent.value = httpReq.responseText;
+            document.Comm.ResponseContentType.value = httpReq.getResponseHeader("Content-Type");
+            alert("Error during HTTP POST operation\n" + httpReq.statusText);
+        }
+    }
+}
+
+function createUpdateFromFile(operation) {
+    if (document.Comm2.filename.value == "") {
+        alert("No File specified!");
+        return false;
+    }
+    document.Comm2.action = preparePostURI(document.Comm.URLInput.value, operation, document.Comm2.contentType.value);
+    alert("Going to submit " + document.Comm2.action + "\nResponse will be opened in new window");
+    document.Comm2.submit();
+}
+
+function prepareGetURI(uri) {
+    var ret = "";
+    if (document.Comm.SelectorMeta.checked) {
+        ret = ret + ((ret == "")?"":"&") + "meta";
+    }
+    if (document.Comm.SelectorDesc.checked) {
+        ret = ret + ((ret == "")?"":"&") + "desc";
+    }
+    if (document.Comm.SelectorData.checked) {
+        ret = ret + ((ret == "")?"":"&") + "data";
+    }
+    if (document.Comm.SelectorAcl.checked) {
+        ret = ret + ((ret == "")?"":"&") + "acl";
+    }
+    if (document.Comm.SelectorOriginal.checked) {
+        ret = ret + ((ret == "")?"":"&") + "original";
+    }
+    if (document.Comm.SelectorRSS.checked) {
+        ret = ret + ((ret == "")?"":"&") + "rss";
+        if (trim(document.Comm.rssVal.value) != "" && trim(document.Comm.rssVal.value) != "<default>") {
+            ret = ret + "=" + trim(document.Comm.rssVal.value);
+        }
+    }
+    if (document.Comm.SelectorExecute.checked) {
+        ret = ret + ((ret == "")?"":"&") + "execute";
+    }
+    if (document.Comm.SelectorHistory.checked) {
+        ret = ret + ((ret == "")?"":"&") + "history";
+    }
+    if (document.Comm.SelectorDeleted.checked) {
+        ret = ret + ((ret == "")?"":"&") + "deleted";
+    }
+    if (document.Comm.SelectorView.checked) {
+        ret = ret + ((ret == "")?"":"&") + "view";
+    }
+    if (trim(document.Comm.SelectorRevision.value) != "") {
+        ret = ret + ((ret == "")?"":"&") + "revision=" + trim(document.Comm.SelectorRevision.value);
+    }
+    if (trim(document.Comm.SelectorDatetime.value) != "") {
+        ret = ret + ((ret == "")?"":"&") + "datetime=" + trim(document.Comm.SelectorDatetime.value);
+    }
+    if (trim(document.Comm.Fulltext.value) != "") {
+        ret = ret + ((ret == "")?"":"&") + "fulltext=" + trim(document.Comm.Fulltext.value);
+    }
+    if (trim(document.Comm.ResourceName.value) != "") {
+        ret = ret + ((ret == "")?"":"&") + "resource=" + trim(document.Comm.ResourceName.value);
+    }
+    if (document.Comm.SelectorExist.checked) {
+        ret = ret + ((ret == "")?"":"&") + "exist";
+    }
+    uri = prepareCommonURI(uri)
+    if (uri.indexOf("?") >= 0) {
+        uri = uri + "&" + ret;
+    } else {
+        uri = uri + "?" + ret;
+    }
+    return uri;
+}
+
+function preparePostURI(uri, action, contentType) {
+    var ret = "";
+    if (trim(document.Comm.ResourceName.value) != "") {
+        ret = "resource=" + trim(document.Comm.ResourceName.value)
+    }
+    if (action != "") {
+        ret = ret + ((ret == "")?"":"&") + trim(action);
+        if (trim(action) == "update") {
+            if (trim(document.Comm.SelectorUpdateRevision.value) != "") {
+                ret = ret + ((ret == "")?"":"&") + "revision=" + trim(document.Comm.SelectorUpdateRevision.value);
+            }
+            if (trim(document.Comm.SelectorUpdateDatetime.value) != "") {
+                ret = ret + ((ret == "")?"":"&") + "datetime=" + trim(document.Comm.SelectorUpdateDatetime.value);
+            }
+            if (document.Comm.SelectorUpdateDesc.checked) {
+                ret = ret + ((ret == "")?"":"&") + "desc";
+            }
+            if (document.Comm.SelectorUpdateAcl.checked) {
+                ret = ret + ((ret == "")?"":"&") + "acl";
+            }
+        }
+        if (trim(action) == "create") {
+            if (document.Comm.SelectorCreateDesc.checked) {
+                ret = ret + ((ret == "")?"":"&") + "desc";
+            }
+            if (document.Comm.SelectorCreateAcl.checked) {
+                ret = ret + ((ret == "")?"":"&") + "acl";
+            }
+        }
+        if (trim(action) == "delete" || trim(action) == "purge") {
+            if (trim(document.Comm.SelectorDeletePurgeRevision.value) != "") {
+                ret = ret + ((ret == "")?"":"&") + "revision=" + trim(document.Comm.SelectorDeletePurgeRevision.value);
+            }
+            if (trim(document.Comm.SelectorDeletePurgeDatetime.value) != "") {
+                ret = ret + ((ret == "")?"":"&") + "datetime=" + trim(document.Comm.SelectorDeletePurgeDatetime.value);
+            }
+        }
+    }
+    if (trim(contentType) != "") {
+        ret = ret + ((ret == "")?"":"&") + "&contentType=" + trim(contentType);
+    }
+    uri = prepareCommonURI(uri)
+    if (uri.indexOf("?") >= 0) {
+        uri = uri + "&" + ret;
+    } else {
+        uri = uri + "?" + ret;
+    }
+    return uri;
+}
+
+function prepareCommonURI(uri) {
+    var ret = "";
+    if (trim(document.Comm.styleUri.value) != "") {
+        ret = ret + ((ret == "")?"":"&") + "style=" + trim(document.Comm.styleUri.value);
+    }
+    if (document.Comm.SelectorExport.checked) {
+        ret = ret + ((ret == "")?"":"&") + "export";
+        if (trim(document.Comm.exportVal.value) != "" && trim(document.Comm.exportVal.value) != "<default>") {
+            ret = ret + "=" + trim(document.Comm.exportVal.value);
+        }
+    }
+    if (ret != "") {
+        if (uri.indexOf("?") >= 0) {
+            uri = uri + "&" + ret;
+        } else {
+            uri = uri + "?" + ret;
+        }
+    }
+    return uri;
+}
+
+function doGet() {
+    if (document.Comm.SelectorMeta.checked || document.Comm.SelectorDesc.checked || document.Comm.SelectorData.checked || document.Comm.SelectorAcl.checked || document.Comm.SelectorExist.checked ) {
+        httpGet(prepareGetURI(document.Comm.URLInput.value), getCallback)
+    } else {
+        uri = prepareGetURI(document.Comm.URLInput.value)
+        window.open(uri);
+    }
+}
+
+function trim(str) {
+    if (str.length > 0) {
+        while (str.substring(0, 1) == ' ') {
+            str = str.substring(1, str.length);
+        }
+        while (str.substring(str.length - 1, str.length) == ' ') {
+            str = str.substring(0, str.length - 1);
+        }
+    }
+    return str;
+}
+
+function prefill(value) {
+    if (value == ":foo:") {
+        resourceUrl = "http://localhost:8080/uddi/restBasic/report/selector/"
+        resourceName = "MyWSISelector"
+        contentType = "text/xml;charset=utf-8"
+        content = "...content here..."
+    }
+    document.Comm.URLInput.value = resourceUrl;
+    document.Comm.ResourceName.value = resourceName;
+    document.Comm.RequestContentType.value = contentType;
+    document.Comm.RequestContent.value = content;
+}
+
+</script>
+</head>
+
+<body onLoad="dummy=window.location.href.lastIndexOf('console/console.html'); document.Comm.URLInput.value=window.location.href.substring(0,dummy)">
+<h3>Generic console for Systinet Platform REST protocol</h3>
+
+<form name="Comm" method="POST">
+<h4>Resource identification</h4>
+URL: <input size="60" name="URLInput" value="http://localhost:8080/uddi/restBasic"/>
+<br/>
+ResourceName: <input size="20" name="ResourceName" value=""/>
+
+<hr/>
+<h4>Request</h4>
+ContentType: <input size="30" name="RequestContentType" value=""/>
+(Well Known Mimetypes: <select name="RequestMime"
+                               onChange="document.Comm.RequestContentType.value=document.Comm.RequestMime.value">
+    <option value='application/xml;charset=utf-8'>application/xml [REST serialization]</option>
+    <option value='text/xml;charset=utf-8'>text/xml [XML]</option>
+    <option value='text/html;charset=utf-8'>text/html [HTML]</option>
+    <option value='text/plain;charset=utf-8'>text/plain [Plain text]</option>
+</select>)
+
+<br/>Content
+<br/><textarea cols="110" rows="15" name='RequestContent'></textarea>
+<br/><button
+        onClick="document.Comm.RequestContentType.value=document.Comm.ResponseContentType.value;document.Comm.RequestContent.value=document.Comm.ResponseContent.value; return false">
+    Copy Response to Request</button>
+<button onClick="document.Comm.RequestContentType.value='';document.Comm.RequestContent.value=''; return false">
+    Clear Request</button>
+[Prefills: <select name="Prefills" onChange="prefill(document.Comm.Prefills.value);">
+    <option value=''>Select Your Request Prefill</option>
+</select>]
+
+<br/>
+<table border=1>
+    <tr>
+        <td rowspan="4">
+            <table>
+                <tr><td>
+                    <input type="button" value="Get" onClick="doGet(); return false"/>
+                    Revision <input type="text" size="4" name="SelectorRevision"/>
+                    Datetime <input type="text" size="24" name="SelectorDatetime"/>
+                </td></tr>
+                <tr><td>
+                    <input type="checkbox" name="SelectorMeta" checked="on">Metadata</input>
+                    <input type="checkbox" name="SelectorDesc">Descriptor</input>
+                    <input type="checkbox" name="SelectorData">Data</input>
+                    <input type="checkbox" name="SelectorAcl">Acl</input>
+                    <input type="checkbox" name="SelectorHistory">History</input>
+                    <input type="checkbox" name="SelectorDeleted">Deleted</input>
+                </td></tr>
+                <tr><td>
+                    <input type="checkbox" name="SelectorOriginal">Original</input>
+                    <input type="checkbox" name="SelectorView">View</input>
+                    <input type="checkbox" name="SelectorRSS">RSS</input> (<input type="text" name="rssVal"
+                                                                                  value="<default>"
+                                                                                  onkeypress="document.Comm.SelectorRSS.checked=true"/>
+                    )
+                </td></tr>
+                <tr><td><input type="checkbox" name="SelectorExist">Exist</input></td></tr>
+                <tr><td>
+                    <input type="checkbox" name="SelectorExecute">Execute (XQuery/Report/FullText)</input>
+                    <br/>Fulltext <input type="text" name="Fulltext"
+                                         onkeypress="document.Comm.SelectorExecute.checked=true;document.Comm.SelectorData.checked=true"/>
+                    ( use '*' as a wildcard)
+                </td></tr>
+            </table>
+        </td>
+        <td>
+            <td>
+                <input type="button" value="Create"
+                       onClick="httpPost(preparePostURI(document.Comm.URLInput.value,'create',''), document.Comm.RequestContent.value, postCallback, document.Comm.RequestContentType.value); return false"/>
+                <input type="checkbox" name="SelectorCreateDesc">Descriptor</input>
+                <input type="checkbox" name="SelectorCreateAcl">Acl</input>
+            </td>
+            <tr><td/><td>
+                <input type="button" value="Update"
+                       onClick="httpPost(preparePostURI(document.Comm.URLInput.value,'update',''), document.Comm.RequestContent.value, postCallback, document.Comm.RequestContentType.value); return false"/>
+                Revision <input type="text" size="4" name="SelectorUpdateRevision"/>
+                Datetime <input type="text" size="24" name="SelectorUpdateDatetime"/>
+                <input type="checkbox" name="SelectorUpdateDesc">Descriptor</input>
+                <input type="checkbox" name="SelectorUpdateAcl">Acl</input>
+            </td></tr>
+            <tr><td/><td>
+                <input type="button" value="Delete"
+                       onClick="httpPost(preparePostURI(document.Comm.URLInput.value,'delete',''), '', postCallback, document.Comm.RequestContentType.value); return false"/>
+                <input type="button" value="Purge"
+                       onClick="httpPost(preparePostURI(document.Comm.URLInput.value,'purge',''), '', postCallback, document.Comm.RequestContentType.value); return false"/>
+                Revision <input type="text" size="4" name="SelectorDeletePurgeRevision"/>
+                Datetime <input type="text" size="24" name="SelectorDeletePurgeDatetime"/>
+            </td></tr>
+            <tr><td/><td>
+                <input type="button" value="Undelete"
+                       onClick="httpPost(preparePostURI(document.Comm.URLInput.value,'undelete',''), '', postCallback, document.Comm.RequestContentType.value); return false"/>
+            </td></tr>
+        </td></tr>
+    <tr><td colspan="3">
+        <input type="checkbox" name="SelectorExport">Export</input> (<input type="text" name="exportVal"
+                                                                            value="<default>"
+                                                                            onkeypress="document.Comm.SelectorExport.checked=true"/>
+        )
+        Stylesheet URI<input type="text" name="styleUri"/>
+    </td></tr>
+</table>
+
+<h4>Response</h4>
+ContentType: <input size="30" name="ResponseContentType" value="" readonly="true"/> StatusCode: <input size="5" name="ResponseStatusCode" value="" readonly="true"/>
+<br/>Request URI: <input size="60" name="ResponseRequestURI" value="" readonly="true"/>
+<br/>Content
+<br/><textarea cols="110" rows="15" name='ResponseContent' readonly="true"></textarea>
+
+</form>
+
+<hr/>
+<h4>Resource Create/Update via HTML Form File Upload</h4>
+
+<form name="Comm2" method="POST" enctype="multipart/form-data" target="_blank">
+    SourceFile <input type="file" name="filename"/>
+    <br/>
+    ContentType (optional)<input type="text" name="contentType"/>
+    <br/>
+</form>
+<button onClick="createUpdateFromFile('create')">Create From File</button>
+<button onClick="createUpdateFromFile('update')">Update From File</button>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config name="bac" savingPeriod="5000">
+    <webFramework>
+        <component name="/integration/bac/widgets/encryptedPasswordWidget"
+                   page="@/integration/widgets/simplePasswordWidget"
+                   className="com.hp.systinet.ui.bac.widgets.EncryptedPasswordWidgetComponent"/>
+
+        <component name="/integration/bac/urlWidget" page="@/core/impl/widget/nameUrlPairWidget"
+            className="com.hp.systinet.ui.bac.widgets.NewWidgetBacUrl">
+            <parameter paramName="dataType" paramValue="nameUrlPair"/>
+        </component>
+
+        <component name="/integration/ucmdbImport/ucmdbInfoMessage"
+                   className="com.hp.systinet.integration.ucmdbImport.UcmdbInfoMessage" />
+
+        <!--This component only encapsulates ucmdb import actions into one syswf:block-->
+        <component name="/integration/ucmdbImport/importActionsArea"
+                   page="integration/ucmdbImport/importActionsArea.jsp"/>
+
+        <component name="/integration/ucmdbImport/startImportButton"
+                   page="integration/ucmdbImport/startImportButton.jsp"
+                   className="com.hp.systinet.integration.ucmdbImport.StartImportButton" />
+
+        <component name="/integration/ucmdbImport/importScheduleAction"
+                   page="integration/ucmdbImport/importScheduleAction.jsp"
+                   className="com.hp.systinet.integration.ucmdbImport.ImportScheduleAction" />
+
+        <component name="/integration/bac/bacIntegrationSection"
+                   page="integration/bac/bacIntegrationSection.jsp"
+                   className="com.systinet.platform.ui.bacintegration.BacIntegrationSection" />
+
+        <component name="/integration/bac/bacIntegrationSectionDetail"
+                   page="integration/bac/bacIntegrationSectionDetail.jsp"/>
+
+        <component name="/integration/bacServerArtifact/connectionCheckerNew"
+                   className="com.hp.systinet.integration.ui.tools.NewBacConnectionCheckerComponent"
+                   page="@/integration/testconnection"/>
+
+        <component name="/integration/bac/servicestatus" page="/integration/bac/bacIntegrationServiceStatus.jsp"
+                   className="com.systinet.platform.ui.bacintegration.BacIntegrationServiceStatusComponent" />
+        <component name="/integration/bac/servicestatus/cell"
+                   page="/integration/bac/bacIntegrationServiceStatusCell.jsp"
+                   className="com.systinet.platform.ui.bacintegration.BacIntegrationServiceStatusCellComponent" />
+    </webFramework>
+</config>

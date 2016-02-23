@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcutsDefinition xmlns="urn:com.hp.eam.shortcuts.definition:1.0">
+  <shortcut id="infraServiceToSoftware" relationshipType="associatedWith" autoApprove="true" label="Associated Software" inverseLabel="Associated Deployments" delayedCalculation="true">
+    <source localName="infrastructureServiceArtifact" relationshipType="realizedBy" />
+    <intermediate localName="serverArtifact" relationshipType="assignedTo" generateName="${source.name} Server"/>
+    <target localName="systemSoftwareArtifact"/>
+  </shortcut>
+</shortcutsDefinition>

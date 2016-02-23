@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <r:path>/hpsoaTechnicalPolicies/AllSubServicesInProduction</r:path>
+  <r:collection>/hpsoaTechnicalPolicies/</r:collection>
+  <r:binary>false</r:binary>
+  <r:contentType>text/xml</r:contentType>
+  <r:owner>systinet:admin</r:owner>
+  <r:uuid>dd923793-c57c-40ad-b69f-dcb311aa1239</r:uuid>
+  <r:domainId>topLevelDomain</r:domainId>
+  <r:type>document</r:type>
+  <r:deleted>false</r:deleted>
+  <r:cached>false</r:cached>
+  <r:checkSum>0</r:checkSum>
+  <r:revision>
+    <r:number>1</r:number>
+    <r:timestamp>2009-06-09T16:41:58.886Z</r:timestamp>
+    <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+    <r:creator>systinet:admin</r:creator>
+    <r:lastDataRevision>1</r:lastDataRevision>
+  </r:revision>
+  <r:relationships>
+   <r:relationship>
+    <r:deleted>0</r:deleted>
+    <r:type>{http://systinet.com/2005/05/soa/model/property}r_referencedAssertion</r:type>
+    <r:source xlink:href="hpsoaTechnicalPolicies/AllSubServicesInProduction">
+     <r:path>hpsoaTechnicalPolicies/AllSubServicesInProduction</r:path>
+    </r:source>
+    <r:target xlink:href="assertions/HasApprovedReferences">
+     <r:path>assertions/HasApprovedReferences</r:path>
+    </r:target>
+   </r:relationship>
+  </r:relationships>
+  <r:extensions>
+    <r:descriptor>
+      <a:hpsoaTechnicalPolicyArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:rest="http://systinet.com/2005/05/soa/resource" xmlns:pt="http://systinet.com/2005/05/soa/model/property/type" xmlns:p="http://systinet.com/2005/05/soa/model/property" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup" deleted="0" xlink:href="hpsoaTechnicalPolicies/AllSubServicesInProduction">
+        <g:r_referencedAssertionGroup>
+          <p:r_referencedAssertion deleted="0" xlink:href="assertions/HasApprovedReferences"/>
+        </g:r_referencedAssertionGroup>
+        <g:nameGroup>
+          <p:name>All Sub-services in Production</p:name>
+        </g:nameGroup>
+        <g:descriptionGroup>
+          <p:description>All sub services are approved in Production stage</p:description>
+        </g:descriptionGroup>
+        <p:revision>1</p:revision>
+        <g:artifactTypeGroup>
+          <p:artifactType name="Artifact" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes" value="urn:com:systinet:soa:model:artifacts"/>
+          <p:artifactType name="SOA" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes" value="urn:com:systinet:soa:model:artifacts:soa"/>
+          <p:artifactType name="Policy" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes" value="urn:com:systinet:soa:model:artifacts:soa:policy"/>
+          <p:artifactType name="Technical Policy" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes" value="urn:com:systinet:soa:model:artifacts:soa:policy:technicalPolicy"/>
+        </g:artifactTypeGroup>
+        <g:applicableSourceQNameGroup>
+          <p:applicableSourceQName>{http://systinet.com/2005/05/soa/resource}resource</p:applicableSourceQName>
+        </g:applicableSourceQNameGroup>
+        <p:isCached>false</p:isCached>
+      </a:hpsoaTechnicalPolicyArtifact>
+    </r:descriptor>
+  </r:extensions>
+</r:meta>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/systemSoftwareArtifacts/fda20dff-9f25-4167-9a80-533ecfafce09</r:path>
+   <r:collection>/systemSoftwareArtifacts/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType></r:contentType>
+   <r:owner>admin</r:owner>
+   <r:uuid>fda20dff-9f25-4167-9a80-533ecfafce09</r:uuid>
+   <r:domainId>defaultDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2015-08-24T09:33:53.622Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>systinet:admin</r:creator>
+      <r:lastDataRevision>0</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:operatingSystemArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                                    xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                                    xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                                    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                                    xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                    deleted="0"
+                                    xlink:href="systemSoftwareArtifacts/fda20dff-9f25-4167-9a80-533ecfafce09">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="Technology Layer"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:technologyLayer:artifacts:technologyLayerArtifact"/>
+               <p:artifactType name="Node" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:technologyLayer:artifacts:nodeArtifact"/>
+               <p:artifactType name="System Software"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:technologyLayer:artifacts:systemSoftwareArtifact"/>
+               <p:artifactType name="Operating System"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:cloud-assessment:artifacts:operatingSystemArtifact"/>
+            </g:artifactTypeGroup>
+            <g:assignedFromGroup>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/862051c3-d0dd-4c84-9e04-1fe4c92a7000"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/ca93fa06-1505-45ea-af1f-65b423bb38a9"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/ef5f579b-49e9-4161-9d40-137d4f4efa7b"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/520a6c2e-89db-4591-a250-b9c2e0160973"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/258d5c2e-7793-4ac0-85e3-b4d7921f4018"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/98431268-369a-4c24-8f9d-f66d3fb33b87"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/7dc30ad5-3143-44dd-8663-86d96802dd0f"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/32b794dc-17d8-45da-abe3-75aee98adb51"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/14c6a3d8-a4f1-4506-b15d-571cdb7135f6"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/a6af112a-abea-438e-8d56-b3870a6fd106"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/ef5dcc31-a7b6-4bb6-a3cd-62a4ec428761"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/025c8b4b-07b7-4d30-af63-1c81cf4a2a56"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/357e35be-771a-486f-b2a5-c1037248fac7"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/f7ce4ce4-7540-40fd-a584-754e8650dbd4"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/be5363c0-e00e-420c-9701-a8df7f63e4f2"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/36b7b51a-5bfc-4bdf-b433-b29dce11d6bc"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/d0babce2-c257-4366-b7dd-a089a8b05192"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/7daa9378-da89-41c3-881f-df978a4082e4"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/6396aebf-cf42-44e2-bc67-d37d8890d6aa"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/4efbb9b0-2a15-4e31-82bd-c81e6f1fa60d"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/17015e97-fe51-4655-9244-4450902c010e"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/5ea9cccc-a822-463e-92d3-22b9bf62aaf0"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/dfa3a176-f244-4e5a-a5a2-c421b448c6f5"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/343edaa1-9a0a-43c7-ab97-4772c1f9e836"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/9af3f1dd-adcc-4bea-840e-61f57cd2c883"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/c8064c8a-33c4-41d6-b0bc-455f7d29bda6"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/6083ddbf-a2ae-4484-845d-d2d971d736ca"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/c0ee59f2-1aca-4719-ba53-bdfddfc311d2"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/c7ff781a-fc2b-410e-8eb5-9045fceaa76a"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/66b51c87-2be3-487c-9c14-079895992014"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/de079dda-fdc8-45ae-be03-2f26f007ea32"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/236f32cd-65bc-4382-8adf-5c9b0ecebe95"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/8602c83a-877d-4fdd-93b1-b7dd4a2f8723"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/85d9de95-ffce-4fbd-b6fe-075b484f4231"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/30582a47-e00c-4781-9074-5674f594d5e9"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/c434e061-96a1-449d-afde-bcf9e4fbe765"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/3096b7af-3318-4265-b121-868a42d8d3d2"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/10c35bc6-c6ab-4d81-b8ec-4edcca02bbbe"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/c06b71c9-178d-425f-9200-28f69eb7e98c"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/9d90d72e-a618-48f5-a884-55c5a9118860"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/9e0b9412-5e9d-4daf-aba9-fcd2fb651e7c"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/c229dc98-9150-4923-a29a-af4048b0a500"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/01e0fc6f-9a66-4236-9498-b4d4312569cf"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/a1dceda1-4d03-4fb1-8026-ebe2c1434083"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/3a565fb0-2488-4890-a7a0-764992f49bd4"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/bcc05a00-9284-4d91-adf6-12005a404796"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/ee3cc7f4-b218-4385-8d3a-181e0b140d20"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/cc3a98dc-623d-4bce-b5d6-46bdbd63d2e4"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/f3edc104-5af6-4cc8-b3c7-ead5a7b6b1ab"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/bcba1f5e-48c6-4df1-8323-fc620659b538"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/d17befd7-95d8-4641-bc32-c2475e539803"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/022998d0-ee43-40e5-8d5a-760a24235122"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/93b5e638-6422-4ecd-b646-9368abdbd7ed"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/b7cb8a7c-2254-47ed-8da2-57636eebb989"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/6fa7dd82-b5e8-4274-97af-441959fafda9"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/27a8fa54-8403-42c5-8aaa-a30ef1b85205"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/f097673a-6fe6-4b49-bac4-a3bfec7ad32e"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/20778d00-1a60-42f6-a598-17e83f8254f5"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/45d1b1a3-c925-41b2-bb2e-47ff3ba013df"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/bf5e42f3-616c-4e28-bdb9-a2f69ff70fdd"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/9a2c3b04-23a2-4bd4-8269-175b9c9bdbfc"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/b6406400-b0db-42cc-befa-8e217dc244e2"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/3efd724c-2453-40c6-ae9c-171ed8200a8c"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/1d0500d1-e505-44a7-b7d3-02604277702d"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/b20d4d4b-43c4-4d9b-942f-5cbd6b769286"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/fe1fbde0-7263-4fc8-8fe9-7abe51f6f4fd"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/7938d8c5-ec62-41b2-ad1a-a0f500718dac"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/63bdace1-6c4b-4f10-a894-a4cbfbe8e700"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/be9a123f-6de7-4dba-9119-bf62c13368d1"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/b3d46220-f02a-4a70-bb4e-447bac8ad2f7"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/09baee26-f16e-4094-aff5-bf7c0f9583d2"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/96ecc3c8-8b5e-46f2-bf40-a64716cad511"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/4a082e46-e019-4710-8a1b-98f0a59f5d86"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/bacc74b8-e776-415a-825c-11a77900c3b9"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/3e2e1a44-d9a0-44fd-897a-078b2f348eac"/>
+            </g:assignedFromGroup>
+            <g:nameGroup>
+               <p:name>Linux</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup>
+               <p:description>Further unspecified open source Linux distribution</p:description>
+            </g:descriptionGroup>
+            <p:revision>1</p:revision>
+            <g:keywordGroup/>
+            <p:version>1.0</p:version>
+            <p:osType name="Linux" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:os_type"
+                      value="linux"/>
+         </a:operatingSystemArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

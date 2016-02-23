@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://systinet.com/2005/05/soa/model/property/type"
+           xmlns="http://systinet.com/2005/05/soa/model/property/type"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:xlink="http://www.w3.org/1999/xlink"
+           elementFormDefault="qualified">
+
+    <xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="../../helpers/xlink.xsd"/>
+
+    <xs:complexType name="portDocumentRelationshipPropertyType">
+        <xsd:annotation xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                        xmlns:rdb="http://systinet.com/2006/08/soa/model/rdbmapping">
+            <xsd:appinfo>
+                <rdb:relationship table="docRel"/>
+            </xsd:appinfo>
+        </xsd:annotation>
+        <xs:attribute ref="xlink:href" use="required"/>
+        <xs:attribute name="serviceLocalname" type="xs:string" use="required"/>
+        <xs:attribute name="serviceNamespace" type="xs:anyURI" use="required"/>
+        <xs:attribute name="portLocalname" type="xs:string" use="required"/>
+        <xs:attribute name="useType" type="xs:string" use="optional">
+            <xs:annotation xmlns:rdb="http://systinet.com/2006/08/soa/model/rdbmapping">
+                <xs:appinfo>
+                    <rdb:type name="string(31)"/>
+                </xs:appinfo>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="deleted" type="xs:boolean" use="optional"/>
+    </xs:complexType>
+</xs:schema>
+

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pm:Assertion xmlns:pm="http://systinet.com/2005/10/soa/policy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <pm:Parameter Name="disallowedStatusValues" XPointer="xpointer(@DisallowedStatusValues)" Type="xs:string">
+        <pm:Description>Comma separated list of requirement coverage status values which are not allowed</pm:Description>
+    </pm:Parameter>
+    <pm:Template xmlns:alm="http://hp.com/2012/11/alm">
+        <alm:AlmServiceHasNoReqsOfCoverStatus DisallowedStatusValues="Not Completed,No Run"/>
+    </pm:Template>
+    <pm:Bundle>
+        <pm:String Key="no-alm-server-defined">No ALM Server is defined</pm:String>
+        <pm:String Key="service-not-registered">Service is not registered in ALM</pm:String>
+        <pm:String Key="service-has-requirements">Service has requirements of coverage status: {0}</pm:String>
+    </pm:Bundle>
+    <pm:Validation SourceType="xmlns(ns=http://systinet.com/2005/05/soa/model/artifact)qname(ns:webServiceArtifact)">
+        <XQuery xmlns="http://systinet.com/2005/10/soa/policy/validation">
+
+(: ----------------------------------------------------------------- :)
+(: Policy to check whether a service has any requirements with       :)
+(: given coverage status                                             :)
+(: ----------------------------------------------------------------- :)
+
+declare namespace val="http://systinet.com/2005/10/soa/policy/validation";
+declare namespace pm="http://systinet.com/2005/10/soa/policy/report";
+declare namespace rest="http://systinet.com/2005/05/soa/resource";
+declare namespace a="http://systinet.com/2005/05/soa/model/artifact";
+declare namespace p="http://systinet.com/2005/05/soa/model/property";
+declare namespace g="http://systinet.com/2005/05/soa/model/propertyGroup";
+declare namespace alm="http://hp.com/2012/11/alm";
+declare namespace atom="http://www.w3.org/2005/Atom";
+
+declare variable $disallowedStatusValues as xs:string external;
+
+
+if (empty(/rest:resource/rest:descriptor/a:webServiceArtifact)) then
+    val:assertionNotApplicable()    
+else
+    let $almServers := alm:getAlmServerList()
+    return
+        if (empty($almServers/alm:server)) then
+            val:assertionFailed(val:l10n('no-alm-server-defined'))
+        else
+            let $uuid := string(/rest:resource/rest:metadata/rest:uuid)
+            let $hasService :=
+                for $almServer in $almServers/alm:server
+				let $doc := alm:getAlmBeans($almServer, 'almService',$uuid)
+				where (not(empty($doc/alm:bean)))
+                return
+                    true()
+			
+            return
+                if (empty($hasService)) then
+                    val:assertionFailed(val:l10n('service-not-registered'))
+                else
+                    (
+					let $availableStatuses :=
+					for $almServer in $almServers/alm:server
+					let $requirements := alm:getAlmBeans($almServer, 'almReq',$uuid)
+					where (not(empty($requirements/alm:bean)))
+					return
+						for $requirement in $requirements/alm:bean
+						return
+							string($requirement/@status)
+					return
+                        let $inputStatuses := tokenize($disallowedStatusValues, " *, *")
+                        let $valueIntersect := distinct-values($availableStatuses[.=$inputStatuses])
+                        return
+                            if (empty($valueIntersect)) then
+                                val:assertionOK()
+                            else
+                                val:assertionFailed(val:l10n('service-has-requirements', string-join($valueIntersect, ', ')))
+					)
+
+        </XQuery>
+    </pm:Validation>
+</pm:Assertion>

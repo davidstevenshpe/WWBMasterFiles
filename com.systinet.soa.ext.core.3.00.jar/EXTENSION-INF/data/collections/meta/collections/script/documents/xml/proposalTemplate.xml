@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/script/67b2cf98-b869-4a6f-a771-32ff740bccce</r:path>
+   <r:collection>/script/</r:collection>
+   <r:binary>true</r:binary>
+   <r:contentType>text/javascript</r:contentType>
+   <r:owner>admin</r:owner>
+   <r:uuid>67b2cf98-b869-4a6f-a771-32ff740bccce</r:uuid>
+   <r:domainId>defaultDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>1564910560</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2014-09-05T09:11:09.235Z</r:timestamp>
+      <r:timestampTo>2014-09-05T09:11:22.551Z</r:timestampTo>
+      <r:creator>admin</r:creator>
+      <r:lastDataRevision>1</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:r_scriptArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                             xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                             xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                             xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                             xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                             deleted="0"
+                             xlink:href="script/67b2cf98-b869-4a6f-a771-32ff740bccce">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="System"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:system"/>
+               <p:artifactType name="Managed script"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts:system:script"/>
+            </g:artifactTypeGroup>
+            <g:nameGroup>
+               <p:name>ProposalTemplate</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup>
+               <p:description>Creates initial architecture elements, packages and diagrams for a proposal artifact.</p:description>
+            </g:descriptionGroup>
+            <p:revision>1</p:revision>
+            <g:keywordGroup/>
+            <p:location>/scripts/ProposalTemplate</p:location>
+            <p:isCached>0</p:isCached>
+            <p:checksum>1564910560</p:checksum>
+            <p:dataLength>9158</p:dataLength>
+            <p:contentType>text/javascript</p:contentType>
+            <p:r_scriptLanguage name="Javascript"
+                                taxonomyUri="uddi:com.systinet.soa:model:taxonomies:scriptLanguage"
+                                value="Javascript"/>
+            <p:r_scriptExecuteOn name="Remote invocation"
+                                 taxonomyUri="uddi:com.systinet.soa:model:taxonomies:scriptExecuteOn"
+                                 value="remote"/>
+         </a:r_scriptArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

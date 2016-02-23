@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pm:Assertion xmlns:pm="http://systinet.com/2005/10/soa/policy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:r="http://systinet.com/2005/05/repository" xmlns:a="http://systinet.com/2005/05/soa/model/artifact" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:rest="http://systinet.com/2005/05/soa/resource" xmlns:pt="http://systinet.com/2005/05/soa/model/property/type" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:p="http://systinet.com/2005/05/soa/model/property" xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup">
+    <pm:Template>
+        <p0:BusinessServiceMustBeDocumented xmlns:p0="http://systinet.com/assertions"/>
+    </pm:Template>
+    <pm:Bundle>
+        <pm:String Key="no-doc">The Service does not reference any documentation. Please add references to detailed documentation describing the service and its intended use.</pm:String>
+    </pm:Bundle>
+    <pm:Validation SourceType="xmlns(ns=http://systinet.com/2005/05/soa/resource)qname(ns:resource)">
+        <XQuery xmlns="http://systinet.com/2005/10/soa/policy/validation" xmlns:xlink="http://www.w3.org/1999/xlink/">
+declare namespace val="http://systinet.com/2005/10/soa/policy/validation";
+declare namespace pm="http://systinet.com/2005/10/soa/policy/report";
+declare namespace rest="http://systinet.com/2005/05/soa/resource";
+declare namespace a="http://systinet.com/2005/05/soa/model/artifact";
+declare namespace p="http://systinet.com/2005/05/soa/model/property";
+declare namespace g="http://systinet.com/2005/05/soa/model/propertyGroup";
+
+let $condition := /rest:resource/rest:descriptor/a:businessServiceArtifact/g:documentationGroup/p:documentation[@deleted='false' or @deleted='0']
+
+return
+   if ($condition) then
+      val:assertionOK()
+   else
+      val:assertionFailed(val:l10n('no-doc'))
+        </XQuery>
+    </pm:Validation>
+</pm:Assertion>

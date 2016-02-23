@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://systinet.com/2005/05/soa/model/property/type"
+            xmlns="http://systinet.com/2005/05/soa/model/property/type"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified">
+
+    <xsd:complexType name="addressPropertyType">
+        <xsd:annotation>
+            <xsd:documentation>Address property.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="addressLine" minOccurs="0" maxOccurs="unbounded">
+                <xsd:complexType>
+                    <xsd:simpleContent>
+                        <xsd:extension base="xsd:string">
+                            <xsd:attribute name="useType" type="xsd:string" use="required">
+                                <xsd:annotation xmlns:rdb="http://systinet.com/2006/08/soa/model/rdbmapping">
+                                    <xsd:appinfo>
+                                        <rdb:type name="string(31)"/>
+                                    </xsd:appinfo>
+                                </xsd:annotation>
+                            </xsd:attribute>
+                        </xsd:extension>
+                    </xsd:simpleContent>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="city" type="xsd:string" minOccurs="0" maxOccurs="1">
+            </xsd:element>
+            <xsd:element name="stateProvince" type="xsd:string" minOccurs="0" maxOccurs="1">
+            </xsd:element>
+            <xsd:element name="postalCode" type="xsd:string" minOccurs="0" maxOccurs="1">
+            </xsd:element>
+            <xsd:element name="country" type="xsd:string" minOccurs="1" maxOccurs="1">
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+</xsd:schema>

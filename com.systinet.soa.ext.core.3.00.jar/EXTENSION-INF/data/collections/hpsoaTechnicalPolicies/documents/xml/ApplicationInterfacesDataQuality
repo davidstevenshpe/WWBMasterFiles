@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsp:Policy xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+    <wsp:PolicyReference URI="../hpsoaTechnicalPolicies/aba36fb0-76ed-4d6b-8f66-4612e3d19eef"/>
+	<wsp:PolicyReference URI="../hpsoaTechnicalPolicies/5fb97163-fb3c-4601-8c2f-864647bc85fd"/>
+</wsp:Policy>

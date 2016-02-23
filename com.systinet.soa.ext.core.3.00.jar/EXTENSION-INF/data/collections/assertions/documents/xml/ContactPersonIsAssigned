@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><pm:Assertion xmlns:pm="http://systinet.com/2005/10/soa/policy" xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup" xmlns:r="http://systinet.com/2005/05/repository" xmlns:p="http://systinet.com/2005/05/soa/model/property" xmlns:a="http://systinet.com/2005/05/soa/model/artifact" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:pt="http://systinet.com/2005/05/soa/model/property/type" xmlns:rest="http://systinet.com/2005/05/soa/resource" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><pm:Template><p0:ContactPersonIsAssigned xmlns:p0="http://systinet.com/assertions" artifactType="applicationServiceArtifact,applicationComponentArtifact,applicationInterfaceArtifact,businessServiceArtifact,businessProcessArtifact,businessFunctionArtifact,businessInteractionArtifact" contactRole="architect,developer,administrator,projectManager,technicalSupport,operationsManager,businessExpert"/></pm:Template><pm:Parameter xmlns:p1="http://www.w3.org/2001/XMLSchema" Name="artifactType" Optional="false" Type="p1:string" XPointer="xpointer(@artifactType)"><pm:Description>Comma-separated list of artifact SDM names that restrict applicibilty of this assertion.</pm:Description></pm:Parameter><pm:Parameter xmlns:p1="http://www.w3.org/2001/XMLSchema" Name="contactRole" Optional="true" Type="p1:string" XPointer="xpointer(@contactRole)"><pm:Description>Contact Role that should be assigned</pm:Description></pm:Parameter><pm:Validation><JavaScriptValidator xmlns="http://systinet.com/2005/10/soa/policy/validation" xmlns:xlink="http://www.w3.org/1999/xlink/">
+/**
+ * This function is called iteratively by the java script validator,
+ * There are some java script objects pre-initialized in the scripting context (e.g. repositoryService ...)  
+ * You can find others and configure more in the managed script environment.js
+ *
+ * @param  resource
+ *         an external resource or an artifact
+ *
+ * @param  params
+ *         a map of params
+ */
+function validate(resource, params) {
+    var artifact = resource;
+    repositoryService.fetchArtifactProperties(artifact, ArtifactPartSelector.ALL_PROPERTIES);
+    var artifactTypes = params.get("artifactType");
+    var contactRole = params.get("contactRole");
+    var listSeparatorChar = ",";
+    var contactRelationshipName = "providedBy";
+    var isApplicable = false;
+    if (artifactTypes != null) {
+        try {
+            var artifactTypesList = artifactTypes.split(listSeparatorChar);
+                for (var row=0; row&lt;artifactTypesList.length; row++) {
+                    if (artifact.get_artifactSdmName() == artifactTypesList[row]) {
+                        isApplicable=true;
+                        break;
+                    }
+                }
+            } catch (err) {
+            if (artifact.get_artifactSdmName() == artifactTypes) {
+                isApplicable=true;
+            }
+        }
+    }
+    if (isApplicable) {
+        var currentRelationContactsList = artifact.getMultiRelationProperty(contactRelationshipName);
+        if (contactRole != null &amp;&amp; contactRole.trim().length() != 0) {
+            var unassignedContactRoleList = [];
+            var requiredContactRoleList = contactRole.split(listSeparatorChar);
+            for (var i = 0; i&lt;requiredContactRoleList.length; i++) {
+                unassignedContactRoleList.push(requiredContactRoleList[i].toString());
+            }
+            if (currentRelationContactsList != null &amp;&amp; !currentRelationContactsList.isEmpty()) {
+                for (var row = 0; row&lt;currentRelationContactsList.size(); row++) {
+                    var contactRelation = currentRelationContactsList.get(row);
+                    var contactRoleName = contactRelation.getUseType();
+                    if (contactRoleName != null) {
+                        contactRoleName = contactRoleName.trim();
+                        // Note: unassignedContactRoleList.indexOf() doesn't work. Thus, we have to use 'for' to iterate the role list
+                        for (var i = 0; i&lt;unassignedContactRoleList.length; i++) {
+                            if (unassignedContactRoleList[i] == contactRoleName) {
+                                // Remove the role from the unassigned list if there is a contact assigned to it.
+                                unassignedContactRoleList.splice(i, 1);
+                                i = -1; // Reset the index
+                            }
+                        }
+
+                        if (unassignedContactRoleList.length == 0) { // Contacts are assigned to all the roles
+                            break;
+                        }
+                    }
+                }
+            }
+            if (unassignedContactRoleList.length == 0) {
+                return JsValidationResult(JsValidationCode.OK);
+            } else {
+                return JsValidationResult(JsValidationCode.FAILED, "No contact is assigned to the following roles: " + unassignedContactRoleList.join(", "));
+            }
+        } else { // No contact role is defined. Let's return OK
+            return JsValidationResult(JsValidationCode.OK);
+        }
+    } else {
+        return new JsValidationResult(JsValidationCode.NOT_APPLICABLE);
+    }
+}
+</JavaScriptValidator></pm:Validation></pm:Assertion>

@@ -1,0 +1,34 @@
+<closure maxDepth="5" maxResults="10000" maxProcessingTime="30000" debug="false" nodesTraversedOnlyOnce="false" seedsAsResults="true">
+    <!-- Defines which relations are traversable from specified artifact to another artifact  -->
+   <defaultSeedQuery>
+      select f._uuid from businessFunctionArtifact f where not exists 
+        (select 1 from businessFunctionArtifact f1 join businessFunctionArtifact f2 
+               using f2.composedOf where f1._uuid=f._uuid)
+    </defaultSeedQuery>
+    <traversableRelations>
+      <relation sdmName="composedOf" sourceArtifact="businessFunctionArtifact" targetArtifact="businessFunctionArtifact"/>
+      <relation sdmName="aggregates" sourceArtifact="businessFunctionArtifact" targetArtifact="businessProcessArtifact"/>
+      <relation sdmName="triggers" sourceArtifact="businessProcessArtifact" targetArtifact="businessProcessArtifact"/>
+      <relation sdmName="uses" sourceArtifact="businessProcessArtifact" targetArtifact="applicationServiceArtifact"/>      
+      <relation sdmName="uses" sourceArtifact="businessFunctionArtifact" targetArtifact="applicationServiceArtifact"/>
+      <relation sdmName="assignedFrom" sourceArtifact="applicationServiceArtifact" targetArtifact="applicationComponentArtifact"/>
+      <relation sdmName="realizedBy" sourceArtifact="applicationServiceArtifact" targetArtifact="applicationComponentArtifact"/>
+      <relation sdmName="uses" sourceArtifact="businessFunctionArtifact" targetArtifact="applicationComponentArtifact"/>
+      <relation sdmName="assignedFrom" sourceArtifact="businessFunctionArtifact" targetArtifact="applicationComponentArtifact"/>
+      <!-- businessFunction to application service -->
+    </traversableRelations>
+	<orderBy>investmentPriority desc, name desc</orderBy>
+    <resultArtifacts>
+       <artifact sdmName="businessFunctionArtifact">
+           <field name="businessFunctionType" property="businessFunctionType.name"/>
+           <field name="businessFunctionStatus" property="businessFunctionStatus.name"/>
+           <field name="investmentPriority" property="investmentPriority.name"/>
+       </artifact>
+       <artifact sdmName="applicationComponentArtifact">
+         <!--<field name="systemSoftware" multipleResults="true" description="system software that runs the component in the present infrastructure" query="select distinct s.name, s.version, s._lastApprovedStage.name as lastApprovedStage from systemSoftwareArtifact s join nodeArtifact n using n.assignedTo join infrastructureServiceArtifact i using i.realizedBy join applicationComponentArtifact a using a.uses where a._uuid=:uuid"/>-->
+         <field name="systemSoftware" multipleResults="true" description="system software that runs the component in the present infrastructure" 
+         query="select distinct s.name, s.version, s._lastApprovedStage.name as lastApprovedStage from systemSoftwareArtifact s join nodeArtifact n using n.assignedTo join applicationComponentArtifact a using a.uses where a._uuid=:uuid union 
+                select distinct s.name, s.version, s._lastApprovedStage.name as lastApprovedStage from systemSoftwareArtifact s join nodeArtifact n using n.assignedTo join infrastructureInterface i using i.composes join applicationComponentArtifact a using a.uses where a._uuid=:uuid"/>
+      </artifact>
+    </resultArtifacts>
+</closure>

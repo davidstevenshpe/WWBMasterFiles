@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:meta xmlns:r="http://systinet.com/2005/05/repository">
+   <r:path>/systemSoftwareArtifacts/13bb8ee6-45d5-4375-9e5f-326ef0bac3e7</r:path>
+   <r:collection>/systemSoftwareArtifacts/</r:collection>
+   <r:binary>false</r:binary>
+   <r:contentType></r:contentType>
+   <r:owner>admin</r:owner>
+   <r:uuid>13bb8ee6-45d5-4375-9e5f-326ef0bac3e7</r:uuid>
+   <r:domainId>defaultDomain</r:domainId>
+   <r:type>document</r:type>
+   <r:deleted>false</r:deleted>
+   <r:cached>false</r:cached>
+   <r:checkSum>0</r:checkSum>
+   <r:revision>
+      <r:number>1</r:number>
+      <r:timestamp>2015-08-24T09:35:58.258Z</r:timestamp>
+      <r:timestampTo>292278994-08-17T07:12:55.807Z</r:timestampTo>
+      <r:creator>systinet:admin</r:creator>
+      <r:lastDataRevision>0</r:lastDataRevision>
+   </r:revision>
+   <r:extensions>
+      <r:descriptor>
+         <a:operatingSystemArtifact xmlns:a="http://systinet.com/2005/05/soa/model/artifact"
+                                    xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup"
+                                    xmlns:p="http://systinet.com/2005/05/soa/model/property"
+                                    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                                    xmlns:pt="http://systinet.com/2005/05/soa/model/property/type"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    xmlns:rest="http://systinet.com/2005/05/soa/resource"
+                                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                    deleted="0"
+                                    xlink:href="systemSoftwareArtifacts/13bb8ee6-45d5-4375-9e5f-326ef0bac3e7">
+            <g:artifactTypeGroup>
+               <p:artifactType name="Artifact"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:systinet:soa:model:artifacts"/>
+               <p:artifactType name="Technology Layer"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:technologyLayer:artifacts:technologyLayerArtifact"/>
+               <p:artifactType name="Node" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:technologyLayer:artifacts:nodeArtifact"/>
+               <p:artifactType name="System Software"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:archimate:technologyLayer:artifacts:systemSoftwareArtifact"/>
+               <p:artifactType name="Operating System"
+                               taxonomyUri="uddi:systinet.com:soa:model:taxonomies:artifactTypes"
+                               value="urn:com:cloud-assessment:artifacts:operatingSystemArtifact"/>
+            </g:artifactTypeGroup>
+            <g:assignedFromGroup>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/bdf6e765-6482-4e17-91b7-7cedee124d53"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/e5536c7e-2ed0-4718-adf0-0e2a649342aa"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/295691f6-4ed9-4f2a-9bd9-9bdce205636e"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/1555136e-ec8c-4475-a2f5-9032b9ebceac"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/7d2ea2d6-e07a-4fed-98f9-45b86c27299a"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/3677655d-1764-4066-a5f4-b0e42d040485"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/efbcb0ec-6392-4391-84ef-375552e76cd7"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/e9cc65c1-ee24-4c50-928f-fece5770c7e2"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/2713ee9b-5ad9-4428-a0b7-ed0cbaee67b0"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/e0bd3715-d4fa-41c8-bcf1-4e966f1002b7"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/922b31ee-accf-4ef8-9626-051c82fc333c"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/6bf1c8d8-03c2-4fdd-8859-275ddf67a876"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/1191c88d-c96c-467b-8608-e49fd4c53290"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/3f4be925-e297-4310-9af9-69a1ca10b65f"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/39e05615-3a4b-4fed-94cd-361d19150010"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/f3672ded-cc9f-426d-9437-6c7ab1492e74"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/c74f2660-4114-469e-88e6-ee19dc1add87"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/355637f3-8848-4387-a8d8-38be9dbd786b"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/d3ec79af-116c-47e7-a20e-ca2b05e78e41"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/cc991147-189a-429f-bb3d-0eeeb3216c78"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/cd1fda29-d5f2-495e-9709-d4d94ff119eb"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/56d6203f-1370-427a-ad6c-13e93a0f6539"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/e6414374-9383-4eda-b18d-52363edba7c7"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/d882e226-05e5-4c8a-ac4d-bebee0b14942"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/933353e2-5fed-41ec-93c9-343da1e73c5a"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/7193d939-1408-44e8-8f27-e56c3ed05009"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/3373bad9-8e02-4566-8988-08e1d4dcbb4e"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/983e3419-c1c9-4ebf-b948-644b93e2739e"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/a176d715-194d-43e1-97c1-a497ff303265"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/bffa2838-715c-4c82-a654-170f0ae8dfd3"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/5eaf6048-0d3f-4618-9f66-1378a98b14f3"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/d8490ea2-ac81-4581-bb2d-47284699687c"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/66e6304a-b165-4d1d-94e4-298256cdfd99"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/d1b5ff54-7715-47f5-93b8-6f6537a98417"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/6fa6ec32-ef75-40f6-972a-cf99264f6fb0"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/015a1f31-3f7a-4a20-a548-1d3710ec29c0"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/501cddda-d8df-4281-bdf3-12dc7fe38c12"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/1d7c7b8f-07cf-4a70-a57a-11f99807d56a"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/4acc2ec7-8497-4394-89a3-ec66086d5765"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/89700298-89c4-4233-b699-3a80ff836b4d"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/dfee059e-5aa8-47dc-bb49-673a43267261"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/d3ff3db3-6e79-4ace-b558-19ac70de3849"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/045cc75b-004c-4b52-a4dc-b20aa4469938"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/a1be7800-c567-4da8-806a-05a1650597f0"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/01ed96e2-48da-496e-b4b3-7574805f791e"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/b1b596a3-8a5d-4ced-8cf1-199dadf14f38"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/602fd2d8-c95d-4f0d-ad4e-f1dc76e5381a"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/84ce7940-dc22-4d1e-a2df-f45423a7d50d"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/1992f814-2d4a-4bb5-9a3b-c7d1dda857c6"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/83485159-1695-47a1-9b08-8bbddfce7951"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/9675da08-5980-4e2f-ab6c-932e5a76a8af"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/3eabab56-5bc4-4d1c-8eee-7a75658778e6"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/92060888-de69-47b9-ac3f-e8cdf390f3da"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/c9097283-e8e0-49aa-866c-e71d1e719187"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/63e9ab6c-da19-4615-96c8-1e737549e66b"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/d7c4aec0-a967-4ba0-b038-6db1d1ff080b"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/07e2a2bf-117e-485b-8132-db1cdbacedfb"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/9b878c4f-712b-40ac-a433-87c4db2cf51f"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/b5eec659-10fa-4732-af81-f50fd93ddbd5"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/0925bbf1-20c0-42c6-8025-7b5f4afe9ec3"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/b8c253be-b699-468f-b8fa-08e03d80d88e"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/a198c66c-6db5-4eb3-9893-29903b1e61cd"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/02ffa4ac-57a2-409b-81b3-a354670aaab9"/>
+               <p:assignedFrom b1="false" xlink:href="nodeArtifacts/960a9179-f790-40ed-9118-0a23d4cc62db"/>
+            </g:assignedFromGroup>
+            <g:nameGroup>
+               <p:name>Red Hat Enterprise Linux (RHEL)</p:name>
+            </g:nameGroup>
+            <g:descriptionGroup>
+               <p:description>Red Hat Enterprise Linux (RHEL) is a Linux distribution developed by Red Hat and targeted toward the commercial market. Red Hat Enterprise Linux is released in server versions for x86, x86-64, Itanium, PowerPC and IBM System z, and desktop versions for x86 and x86-64. All of the Red Hat's official support and training, together with the Red Hat Certification Program, focuses on the Red Hat Enterprise Linux platform. Red Hat Enterprise Linux is often abbreviated to RHEL, although this is not an official designation.</p:description>
+            </g:descriptionGroup>
+            <p:revision>1</p:revision>
+            <g:keywordGroup/>
+            <p:version>1.0</p:version>
+            <p:osType name="Linux" taxonomyUri="uddi:systinet.com:soa:model:taxonomies:os_type"
+                      value="linux"/>
+         </a:operatingSystemArtifact>
+      </r:descriptor>
+   </r:extensions>
+</r:meta>

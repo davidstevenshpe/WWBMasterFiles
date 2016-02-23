@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taxonomy xmlns="http://systinet.com/uddi/taxonomy/v3/5.5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:r="http://systinet.com/2005/05/repository" xmlns:a="http://systinet.com/2005/05/soa/model/artifact" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:rest="http://systinet.com/2005/05/soa/resource" xmlns:pt="http://systinet.com/2005/05/soa/model/property/type" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:p="http://systinet.com/2005/05/soa/model/property" xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup" brief="false" check="true">
+    <tModel xmlns="http://systinet.com/uddi/taxonomy/v3/5.0" deleted="false" tModelKey="uddi:systinet.com:soa:model:taxonomies:protocols" tModelKeyV2="uuid:f4d671dd-a11b-3f52-b4bb-7c07deb6a601">
+        <name xmlns="urn:uddi-org:api_v3">Protocols taxonomy</name>
+        <description xmlns="urn:uddi-org:api_v3">SDM taxonomy.</description>
+        <overviewDoc xmlns="urn:uddi-org:api_v3">
+            <overviewURL>http://www.systinet.com</overviewURL>
+        </overviewDoc>
+        <categoryBag xmlns="urn:uddi-org:api_v3">
+            <keyedReference keyName="uddi-org:types:cacheable" keyValue="cacheable" tModelKey="uddi:uddi.org:categorization:types"/>
+            <keyedReference keyName="uddi-org:types:valueSet" keyValue="valueSet" tModelKey="uddi:uddi.org:categorization:types"/>
+            <keyedReference keyName="Categorization system" keyValue="categorization" tModelKey="uddi:uddi.org:categorization:types"/>
+            <keyedReference keyName="Compatibility" keyValue="tModel" tModelKey="uddi:systinet.com:taxonomy:compatibility"/>
+            <keyedReference keyName="Compatibility" keyValue="businessEntity" tModelKey="uddi:systinet.com:taxonomy:compatibility"/>
+            <keyedReference keyName="Compatibility" keyValue="businessService" tModelKey="uddi:systinet.com:taxonomy:compatibility"/>
+            <keyedReference keyName="Compatibility" keyValue="bindingTemplate" tModelKey="uddi:systinet.com:taxonomy:compatibility"/>
+            <keyedReference keyName="" keyValue="uddi:d7d5ac90-e4d6-11da-bf82-c9765be1bf81" tModelKey="uddi:uddi.org:categorization:validatedby"/>
+            <keyedReference keyName="Checked value set" keyValue="checked" tModelKey="uddi:uddi.org:categorization:types"/>
+        </categoryBag>
+    </tModel>
+    <compatibilityBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+        <compatibility>tModel</compatibility>
+        <compatibility>businessEntity</compatibility>
+        <compatibility>businessService</compatibility>
+        <compatibility>bindingTemplate</compatibility>
+    </compatibilityBag>
+    <categorizationBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+        <categorization>categorization</categorization>
+    </categorizationBag>
+    <validation xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+        <categories>
+            <category disabled="false" keyName="SOAP" keyValue="uddi:systinet.com:soa:model:taxonomies:protocols:soap"/>
+            <category disabled="false" keyName="HTTP" keyValue="uddi:systinet.com:soa:model:taxonomies:protocols:http"/>
+            <category disabled="false" keyName="REST" keyValue="uddi:systinet.com:soa:model:taxonomies:protocols:rest"/>
+            <category disabled="false" keyName="Atom" keyValue="uddi:systinet.com:soa:model:taxonomies:protocols:atom"/>
+            <category disabled="false" keyName="XML-RPC" keyValue="uddi:systinet.com:soa:model:taxonomies:protocols:xmlRpc"/>
+        </categories>
+        <bindingTemplate xmlns="urn:uddi-org:api_v3" bindingKey="uddi:d7d5ac90-e4d6-11da-bf82-c9765be1bf81" serviceKey="uddi:d7d0f1a0-e4d6-11da-bf82-c9765be1bf81">
+            <accessPoint useType="endPoint">class:com.systinet.uddi.publishing.v3.validation.service.InternalValidator</accessPoint>
+            <tModelInstanceDetails>
+                <tModelInstanceInfo tModelKey="uddi:uddi.org:v3_valuesetvalidation"/>
+                <tModelInstanceInfo tModelKey="uddi:systinet.com:soa:model:taxonomies:protocols"/>
+            </tModelInstanceDetails>
+        </bindingTemplate>
+        <bindingTemplate xmlns="urn:uddi-org:api_v3" bindingKey="uddi:d7da6780-e4d6-11da-bf82-c9765be1bf81" serviceKey="uddi:d7d0f1a0-e4d6-11da-bf82-c9765be1bf81">
+            <accessPoint useType="endPoint">class:com.systinet.uddi.publishing.v2.validation.service.InternalValidator</accessPoint>
+            <tModelInstanceDetails>
+                <tModelInstanceInfo tModelKey="uddi:systinet.com:v2_validatevalues"/>
+                <tModelInstanceInfo tModelKey="uddi:systinet.com:soa:model:taxonomies:protocols"/>
+            </tModelInstanceDetails>
+        </bindingTemplate>
+        <bindingTemplate xmlns="urn:uddi-org:api_v3" bindingKey="uddi:d7df2270-e4d6-11da-bf82-c9765be1bf81" serviceKey="uddi:d7d0f1a0-e4d6-11da-bf82-c9765be1bf81">
+            <accessPoint useType="endPoint">class:com.systinet.uddi.publishing.v1.validation.service.InternalValidator</accessPoint>
+            <tModelInstanceDetails>
+                <tModelInstanceInfo tModelKey="uddi:systinet.com:v1_validatevalues"/>
+                <tModelInstanceInfo tModelKey="uddi:systinet.com:soa:model:taxonomies:protocols"/>
+            </tModelInstanceDetails>
+        </bindingTemplate>
+    </validation>
+</taxonomy>

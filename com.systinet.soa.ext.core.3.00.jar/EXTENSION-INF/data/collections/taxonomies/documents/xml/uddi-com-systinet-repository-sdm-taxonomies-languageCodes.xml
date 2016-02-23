@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taxonomy check="true" brief="false" xmlns="http://systinet.com/uddi/taxonomy/v3/5.5">
+  <tModel tModelKey="uddi:systinet.com:soa:model:taxonomies:languageCodes" deleted="false" tModelKeyV2="uuid:680d259c-189c-3e72-946a-e3c78d35f834" xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <name xmlns="urn:uddi-org:api_v3">systinet-com:repository:sdm:taxonomies:languageCodes</name>
+    <description xmlns="urn:uddi-org:api_v3">Language Codes</description>
+    <overviewDoc xmlns="urn:uddi-org:api_v3">
+      <overviewURL>http://www.systinet.com</overviewURL>
+    </overviewDoc>
+    <categoryBag xmlns="urn:uddi-org:api_v3">
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="uddi-org:types:cacheable" keyValue="cacheable"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="uddi-org:types:valueSet" keyValue="valueSet"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Categorization system" keyValue="categorization"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="tModel"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="businessEntity"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="businessService"/>
+      <keyedReference tModelKey="uddi:systinet.com:taxonomy:compatibility" keyName="Compatibility" keyValue="bindingTemplate"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:types" keyName="Checked value set" keyValue="checked"/>
+      <keyedReference tModelKey="uddi:uddi.org:categorization:validatedby" keyName="" keyValue="uddi:bbec49d0-e4d6-11da-bf82-c9765be1bf81"/>
+    </categoryBag>
+  </tModel>
+  <compatibilityBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <compatibility>tModel</compatibility>
+    <compatibility>businessEntity</compatibility>
+    <compatibility>businessService</compatibility>
+    <compatibility>bindingTemplate</compatibility>
+  </compatibilityBag>
+  <categorizationBag xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <categorization>categorization</categorization>
+  </categorizationBag>
+  <validation xmlns="http://systinet.com/uddi/taxonomy/v3/5.0">
+    <categories>
+      <category keyName="English" keyValue="en" disabled="false"/>
+      <category keyName="Afar" keyValue="aa" disabled="false"/>
+      <category keyName="Abkhazian" keyValue="ab" disabled="false"/>
+      <category keyName="Afrikaans" keyValue="af" disabled="false"/>
+      <category keyName="Amharic" keyValue="am" disabled="false"/>
+      <category keyName="Arabic" keyValue="ar" disabled="false"/>
+      <category keyName="Assamese" keyValue="as" disabled="false"/>
+      <category keyName="Aymara" keyValue="ay" disabled="false"/>
+      <category keyName="Azerbaijani" keyValue="az" disabled="false"/>
+      <category keyName="Bashkir" keyValue="ba" disabled="false"/>
+      <category keyName="Byelorussian" keyValue="be" disabled="false"/>
+      <category keyName="Bulgarian" keyValue="bg" disabled="false"/>
+      <category keyName="Bihari" keyValue="bh" disabled="false"/>
+      <category keyName="Bislama" keyValue="bi" disabled="false"/>
+      <category keyName="Bengali; Bangla" keyValue="bn" disabled="false"/>
+      <category keyName="Tibetan" keyValue="bo" disabled="false"/>
+      <category keyName="Breton" keyValue="br" disabled="false"/>
+      <category keyName="Catalan" keyValue="ca" disabled="false"/>
+      <category keyName="Corsican" keyValue="co" disabled="false"/>
+      <category keyName="Czech" keyValue="cs" disabled="false"/>
+      <category keyName="Welsh" keyValue="cy" disabled="false"/>
+      <category keyName="Danish" keyValue="da" disabled="false"/>
+      <category keyName="German" keyValue="de" disabled="false"/>
+      <category keyName="Bhutani" keyValue="dz" disabled="false"/>
+      <category keyName="Greek" keyValue="el" disabled="false"/>
+      <category keyName="Esperanto" keyValue="eo" disabled="false"/>
+      <category keyName="Spanish" keyValue="es" disabled="false"/>
+      <category keyName="Estonian" keyValue="et" disabled="false"/>
+      <category keyName="Basque" keyValue="eu" disabled="false"/>
+      <category keyName="Persian" keyValue="fa" disabled="false"/>
+      <category keyName="Finnish" keyValue="fi" disabled="false"/>
+      <category keyName="Fiji" keyValue="fj" disabled="false"/>
+      <category keyName="Faeroese" keyValue="fo" disabled="false"/>
+      <category keyName="French" keyValue="fr" disabled="false"/>
+      <category keyName="Frisian" keyValue="fy" disabled="false"/>
+      <category keyName="Irish" keyValue="ga" disabled="false"/>
+      <category keyName="Scots Gaelic" keyValue="gd" disabled="false"/>
+      <category keyName="Galician" keyValue="gl" disabled="false"/>
+      <category keyName="Guarani" keyValue="gn" disabled="false"/>
+      <category keyName="Gujarati" keyValue="gu" disabled="false"/>
+      <category keyName="Hausa" keyValue="ha" disabled="false"/>
+      <category keyName="Hebrew" keyValue="he" disabled="false"/>
+      <category keyName="Hindi" keyValue="hi" disabled="false"/>
+      <category keyName="Croatian" keyValue="hr" disabled="false"/>
+      <category keyName="Hungarian" keyValue="hu" disabled="false"/>
+      <category keyName="Armenian" keyValue="hy" disabled="false"/>
+      <category keyName="Interlingua" keyValue="ia" disabled="false"/>
+      <category keyName="Indonesian" keyValue="id" disabled="false"/>
+      <category keyName="Interlingue" keyValue="ie" disabled="false"/>
+      <category keyName="Inupiak" keyValue="ik" disabled="false"/>
+      <category keyName="Icelandic" keyValue="is" disabled="false"/>
+      <category keyName="Italian" keyValue="it" disabled="false"/>
+      <category keyName="Japanese" keyValue="ja" disabled="false"/>
+      <category keyName="Javanese" keyValue="jw" disabled="false"/>
+      <category keyName="Georgian" keyValue="ka" disabled="false"/>
+      <category keyName="Kazakh" keyValue="kk" disabled="false"/>
+      <category keyName="Greenlandic" keyValue="kl" disabled="false"/>
+      <category keyName="Cambodian" keyValue="km" disabled="false"/>
+      <category keyName="Kannada" keyValue="kn" disabled="false"/>
+      <category keyName="Korean" keyValue="ko" disabled="false"/>
+      <category keyName="Kashmiri" keyValue="ks" disabled="false"/>
+      <category keyName="Kurdish" keyValue="ku" disabled="false"/>
+      <category keyName="Kirghiz" keyValue="ky" disabled="false"/>
+      <category keyName="Latin" keyValue="la" disabled="false"/>
+      <category keyName="Lingala" keyValue="ln" disabled="false"/>
+      <category keyName="Laothian" keyValue="lo" disabled="false"/>
+      <category keyName="Lithuanian" keyValue="lt" disabled="false"/>
+      <category keyName="Latvian, Lettish" keyValue="lv" disabled="false"/>
+      <category keyName="Malagasy" keyValue="mg" disabled="false"/>
+      <category keyName="Maori" keyValue="mi" disabled="false"/>
+      <category keyName="Macedonian" keyValue="mk" disabled="false"/>
+      <category keyName="Malayalam" keyValue="ml" disabled="false"/>
+      <category keyName="Mongolian" keyValue="mn" disabled="false"/>
+      <category keyName="Moldavian" keyValue="mo" disabled="false"/>
+      <category keyName="Marathi" keyValue="mr" disabled="false"/>
+      <category keyName="Malay" keyValue="ms" disabled="false"/>
+      <category keyName="Maltese" keyValue="mt" disabled="false"/>
+      <category keyName="Burmese" keyValue="my" disabled="false"/>
+      <category keyName="Nauru" keyValue="na" disabled="false"/>
+      <category keyName="Nepali" keyValue="ne" disabled="false"/>
+      <category keyName="Dutch" keyValue="nl" disabled="false"/>
+      <category keyName="Norwegian" keyValue="no" disabled="false"/>
+      <category keyName="Occitan" keyValue="oc" disabled="false"/>
+      <category keyName="Oromo (Afan)" keyValue="om" disabled="false"/>
+      <category keyName="Oriya" keyValue="or" disabled="false"/>
+      <category keyName="Punjabi" keyValue="pa" disabled="false"/>
+      <category keyName="Polish" keyValue="pl" disabled="false"/>
+      <category keyName="Pashto, Pushto" keyValue="ps" disabled="false"/>
+      <category keyName="Portuguese" keyValue="pt" disabled="false"/>
+      <category keyName="Quechua" keyValue="qu" disabled="false"/>
+      <category keyName="Rhaeto-Romance" keyValue="rm" disabled="false"/>
+      <category keyName="Kirundi" keyValue="rn" disabled="false"/>
+      <category keyName="Romanian" keyValue="ro" disabled="false"/>
+      <category keyName="Russian" keyValue="ru" disabled="false"/>
+      <category keyName="Kinyarwanda" keyValue="rw" disabled="false"/>
+      <category keyName="Sanskrit" keyValue="sa" disabled="false"/>
+      <category keyName="Sindhi" keyValue="sd" disabled="false"/>
+      <category keyName="Sangro" keyValue="sg" disabled="false"/>
+      <category keyName="Serbo-Croatian" keyValue="sh" disabled="false"/>
+      <category keyName="Singhalese" keyValue="si" disabled="false"/>
+      <category keyName="Slovak" keyValue="sk" disabled="false"/>
+      <category keyName="Slovenian" keyValue="sl" disabled="false"/>
+      <category keyName="Samoan" keyValue="sm" disabled="false"/>
+      <category keyName="Shona" keyValue="sn" disabled="false"/>
+      <category keyName="Somali" keyValue="so" disabled="false"/>
+      <category keyName="Albanian" keyValue="sq" disabled="false"/>
+      <category keyName="Serbian" keyValue="sr" disabled="false"/>
+      <category keyName="Siswati" keyValue="ss" disabled="false"/>
+      <category keyName="Sesotho" keyValue="st" disabled="false"/>
+      <category keyName="Sundanese" keyValue="su" disabled="false"/>
+      <category keyName="Swedish" keyValue="sv" disabled="false"/>
+      <category keyName="Swahili" keyValue="sw" disabled="false"/>
+      <category keyName="Tamil" keyValue="ta" disabled="false"/>
+      <category keyName="Tegulu" keyValue="te" disabled="false"/>
+      <category keyName="Tajik" keyValue="tg" disabled="false"/>
+      <category keyName="Thai" keyValue="th" disabled="false"/>
+      <category keyName="Tigrinya" keyValue="ti" disabled="false"/>
+      <category keyName="Turkmen" keyValue="tk" disabled="false"/>
+      <category keyName="Tagalog" keyValue="tl" disabled="false"/>
+      <category keyName="Setswana" keyValue="tn" disabled="false"/>
+      <category keyName="Tonga" keyValue="to" disabled="false"/>
+      <category keyName="Turkish" keyValue="tr" disabled="false"/>
+      <category keyName="Tsonga" keyValue="ts" disabled="false"/>
+      <category keyName="Tatar" keyValue="tt" disabled="false"/>
+      <category keyName="Twi" keyValue="tw" disabled="false"/>
+      <category keyName="Ukrainian" keyValue="uk" disabled="false"/>
+      <category keyName="Urdu" keyValue="ur" disabled="false"/>
+      <category keyName="Uzbek" keyValue="uz" disabled="false"/>
+      <category keyName="Vietnamese" keyValue="vi" disabled="false"/>
+      <category keyName="Volapuk" keyValue="vo" disabled="false"/>
+      <category keyName="Wolof" keyValue="wo" disabled="false"/>
+      <category keyName="Xhosa" keyValue="xh" disabled="false"/>
+      <category keyName="Yiddish" keyValue="yi" disabled="false"/>
+      <category keyName="Yoruba" keyValue="yo" disabled="false"/>
+      <category keyName="Chinese" keyValue="zh" disabled="false"/>
+      <category keyName="Zulu" keyValue="zu" disabled="false"/>
+    </categories>
+    <bindingTemplate bindingKey="uddi:bbec49d0-e4d6-11da-bf82-c9765be1bf81" serviceKey="uddi:bbe78ee0-e4d6-11da-bf82-c9765be1bf81" xmlns="urn:uddi-org:api_v3">
+      <accessPoint useType="endPoint">class:com.systinet.uddi.publishing.v3.validation.service.InternalValidator</accessPoint>
+      <tModelInstanceDetails>
+        <tModelInstanceInfo tModelKey="uddi:uddi.org:v3_valuesetvalidation"/>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:soa:model:taxonomies:languageCodes"/>
+      </tModelInstanceDetails>
+    </bindingTemplate>
+    <bindingTemplate bindingKey="uddi:bbf104c0-e4d6-11da-bf82-c9765be1bf81" serviceKey="uddi:bbe78ee0-e4d6-11da-bf82-c9765be1bf81" xmlns="urn:uddi-org:api_v3">
+      <accessPoint useType="endPoint">class:com.systinet.uddi.publishing.v2.validation.service.InternalValidator</accessPoint>
+      <tModelInstanceDetails>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:v2_validatevalues"/>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:soa:model:taxonomies:languageCodes"/>
+      </tModelInstanceDetails>
+    </bindingTemplate>
+    <bindingTemplate bindingKey="uddi:bbf5bfb0-e4d6-11da-bf82-c9765be1bf81" serviceKey="uddi:bbe78ee0-e4d6-11da-bf82-c9765be1bf81" xmlns="urn:uddi-org:api_v3">
+      <accessPoint useType="endPoint">class:com.systinet.uddi.publishing.v1.validation.service.InternalValidator</accessPoint>
+      <tModelInstanceDetails>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:v1_validatevalues"/>
+        <tModelInstanceInfo tModelKey="uddi:systinet.com:soa:model:taxonomies:languageCodes"/>
+      </tModelInstanceDetails>
+    </bindingTemplate>
+  </validation>
+</taxonomy>

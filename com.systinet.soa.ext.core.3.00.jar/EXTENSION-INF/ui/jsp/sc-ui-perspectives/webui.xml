@@ -1,0 +1,280 @@
+<config name="ui-sc-perspectives" savingPeriod="5000">
+    <webFramework>
+    
+        <!-- API Components Start -->
+<!--        <task uri="/partner/homepage" component="/partner/homepage" style="/core/impl/layout/newUi" />
+        <task uri="/analyst/homepage" component="/analyst/homepage" style="/core/impl/layout/newUi" />
+        <task uri="/provider/homepage" component="/provider/homepage" style="/core/impl/layout/newUi" />-->
+
+        <task uri="/catalog/homepage" component="/catalog/homepage" style="/core/impl/layout/newUi" />
+        <task uri="/catalog/homepagecsa" component="/catalog/homepage" style="/core/impl/layout/newUi">
+        	<parameter paramName="customizationId" paramValue="catalog.homepagecsa"/>
+        </task>
+
+
+        <task uri="/admin/homepage" component="/admin/homepage" style="/core/impl/layout/newUi" >
+         	<parameter paramName="captionKey" paramValue="com.hp.systinet.sc.ui.util.uimessages$ADMINISTRATION"/>
+        </task>
+        <task uri="/reports/homepage" component="/reports/homepage" style="/core/impl/layout/newUi" />
+        <task uri="/common/categorization/categoryView" component="/core/taxonomy/browser/categoryView">
+            <parameter paramName="breadcrumbsComponent" paramValue="/core/taxonomy/browser/categoryBreadcrumbs" />
+        </task>
+ 
+        <!-- Homepage -->
+<!--
+        <component name="/analyst/homepage" page="@/core/customization/customizableComponent" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizationId" paramValue="analyst.homepage"/>
+            <parameter paramName="customizedComponent" paramValue="/core/layout/columnsInternal"/>
+        </component>        
+        <component name="/partner/homepage" page="@/core/customization/customizableComponent" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizationId" paramValue="partner.homepage"/>
+            <parameter paramName="customizedComponent" paramValue="/core/layout/columnsInternal"/>
+        </component>
+        <component name="/provider/homepage" page="@/core/customization/customizableComponent" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizationId" paramValue="provider.homepage"/>
+            <parameter paramName="customizedComponent" paramValue="/core/layout/columnsInternal"/>
+        </component>
+        -->
+        <component name="/catalog/homepage" page="@/core/customization/customizableComponent" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizationId" paramValue="catalog.homepage${uiContext}"/>
+            <parameter paramName="customizedComponent" paramValue="/core/layout/columnsInternal"/>
+        </component>
+        <component name="/admin/homepage" page="@/core/customization/customizableComponent" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizationId" paramValue="admin.homepage"/>
+            <parameter paramName="customizedComponent" paramValue="/core/layout/columnsInternal"/>
+        </component>
+        <component name="/reports/homepage" page="@/core/customization/customizableComponent" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizationId" paramValue="reports.homepage"/>
+            <parameter paramName="customizedComponent" paramValue="/core/layout/columnsInternal"/>
+        </component>
+
+        <!-- Contacts, Provider -->
+        <component name="/core/contact/addContact" page="core/contact/addContact.jsp" className="com.hp.systinet.sc.ui.contact.AddContactComponent"/>
+        <component name="/core/contact/contacts" page="core/contact/contacts.jsp"/>
+        <component name="/core/contact/contactsMenu" page="core/contact/contactsMenu.jsp" className="com.hp.systinet.sc.ui.contact.ContactsMenuComponent"/>        
+        <component name="/core/contact/contractProvider" page="core/contact/contractProvider.jsp" className="com.hp.systinet.sc.ui.contact.ContractProviderComponent"/>        
+        <component name="/core/contact/manageContacts" page="core/contact/manageContacts.jsp" className="com.hp.systinet.sc.ui.contact.ManageContactsComponent"/>    
+        
+        <!-- Contracts -->
+        <component name="/core/contract/action/contractRequestWizard" page="core/contract/action/contractRequestWizard.jsp"
+                   className="com.hp.systinet.sc.ui.contract.ContractRequestWizardAction"/>
+        <component name="/core/contract/contractRequestWizard" page="core/contract/contractRequestWizard.jsp" 
+                   className="com.hp.systinet.sc.ui.contract.ContractRequestWizard"/>        
+        <component name="/core/contract/myContracts" page="core/contract/myContracts.jsp"
+                   className="com.hp.systinet.sc.ui.contract.MyContracts" />
+		<component name="/core/contract/deleteContractLinker" page="core/impl/contract/deleteContractLinker.jsp"
+                   className="com.hp.systinet.sc.ui.contract.DeleteContractLinker" />                          
+                   
+        <!-- Documentation -->   
+        <component name="/core/documentation/uploadDocument" page="core/documentation/uploadDocument.jsp" className="com.hp.systinet.sc.ui.impl.documentation.UploadDocumentComponent"/>
+        <component name="/core/documentation/uploadDocumentInternal" page="core/documentation/uploadDocumentInternal.jsp" className="com.hp.systinet.sc.ui.impl.documentation.UploadDocumentInternalComponent"/>                   
+        
+        <component name="/core/documentation/addDocumentReference" page="core/documentation/addDocumentReference.jsp" className="com.hp.systinet.sc.ui.documentation.AddDocumentReferenceComponent"/>
+        <component name="/core/documentation/addDocumentReferenceInternal" page="core/documentation/addDocumentReferenceInternal.jsp"/>
+                        
+        <component name="/core/downloadWsdl" page="/core/downloadWsdl.jsp" className="com.hp.systinet.sc.ui.DownloadWsdlComponent" />
+
+        <component name="/core/dataattachment/uploadDataContent" page="core/dataattachment/uploadDataContent.jsp" className="com.hp.systinet.sc.ui.impl.dataattachment.UploadDataContentComponent"/>
+        <component name="/core/dataattachment/uploadDataContentInternal" page="core/dataattachment/uploadDataContentInternal.jsp" className="com.hp.systinet.sc.ui.impl.dataattachment.UploadDataContentInternalComponent"/>
+        <component name="/core/dataattachment/noContentMessage" page="core/dataattachment/noContentMessage.jsp" className="com.hp.systinet.sc.ui.impl.dataattachment.NoContentMessageComponent"/>
+        <component name="/core/dataattachment/changeDataContent" page="core/dataattachment/changeDataContent.jsp" className="com.hp.systinet.sc.ui.impl.dataattachment.NoContentMessageComponent"/>
+        
+        <!-- Taxonomy Browser -->     
+        <component name="/core/taxonomy/browser/categoryView" page="/core/taxonomy/browser/categoryView.jsp" className="com.hp.systinet.sc.ui.taxonomy.browser.CategoryView"/>
+        <component name="/core/taxonomy/browser/categoryBreadcrumbs" page="/core/taxonomy/browser/categoryBreadcrumbs.jsp" className="com.hp.systinet.sc.ui.taxonomy.browser.CategoryBreadcrumbs"/>     
+
+        <component name="/core/taxonomy/homepage/homepageView" page="@/async/asyncComponent" className="com.hp.systinet.webfw.async.AsyncComponent">
+            <parameter paramName="asyncComponentName" paramValue="/core/taxonomy/homepage/homepageViewInternal"/>
+        </component>
+        <component name="/core/taxonomy/homepage/homepageViewInternal" page="/core/taxonomy/homepage/homepageView.jsp" className="com.hp.systinet.sc.ui.taxonomy.homepage.HomepageView"/>
+
+        <component name="/core/taxonomy/all/allCategoriesView" page="@/async/asyncComponent" className="com.hp.systinet.webfw.async.AsyncComponent">
+            <parameter paramName="asyncComponentName" paramValue="/core/taxonomy/all/allCategoriesViewInternal"/>
+        </component>
+        <component name="/core/taxonomy/all/allCategoriesViewInternal" page="/core/taxonomy/all/allCategoriesView.jsp" className="com.hp.systinet.sc.ui.taxonomy.all.AllCategoriesView"/>
+        
+        <component name="/core/util/parentLinksRenderer" page="core/util/artifactLinksRenderer.jsp" className="com.hp.systinet.sc.ui.util.ParentLinksRenderer"/>        
+        <component name="/core/util/providerLinksRenderer" page="core/util/artifactLinksRenderer.jsp" className="com.hp.systinet.sc.ui.util.ProviderLinksRenderer"></component>
+        <component name="/core/util/keywordsLinkRendeder" page="core/util/keywordsLinkRenderer.jsp" className="com.hp.systinet.sc.ui.util.KeywordsLinksRenderer"/>
+        <component name="/core/util/inBusinessServiceLinksRenderer" page="core/util/artifactLinksRenderer.jsp" className="com.hp.systinet.sc.ui.util.InBusinessServiceLinksRenderer" />
+        <component name="/core/util/projectLinksRenderer" page="core/util/artifactLinksRenderer.jsp" className="com.hp.systinet.sc.ui.util.ProjectLinksRenderer"/>
+        <component name="/core/util/personTypeRenderer" page="core/util/personTypeRenderer.jsp" className="com.hp.systinet.sc.ui.util.PersonTypeRenderer"/>
+        
+        <!-- API Components End -->
+        
+        <!-- IMPL Components Start -->
+        
+        <task uri="/common/artifact/contacts" component="/core/contact/contacts" />
+        <task uri="/common/contract/contracstRequestWizard" component="/core/contract/contractRequestWizard" context="..">
+            <parameter paramName="captionKey" paramValue="com.hp.systinet.sc.ui.util.uimessages$CONTRACT_REQUEST"/>    
+        </task>
+        <task uri="/common/artifact/contracts" component="/core/impl/contract/contracts" context="..">
+            <parameter paramName="captionKey" paramValue="com.hp.systinet.sc.ui.util.uimessages$CONTRACTS"/>
+        </task> 
+        
+        <!-- Contacts -->
+        <component name="/core/impl/contact/addContactWindow" page="/core/impl/contact/addContactWindow.jsp"/>
+        
+        <!-- Contracts -->
+        <component name="/core/impl/contract/contracts" page="@/core/customization/customizableComponent" className="com.hp.systinet.sc.ui.customization.CustomizableComponent">
+            <parameter paramName="customizationId" paramValue="shared.contracts"/>
+            <parameter paramName="customizedComponent" paramValue="/core/layout/columnsInternal"/>
+            <parameter paramName="dontCustomize" paramValue="true"/>
+        </component>
+                <component name="/core/impl/contract/providerView" page="core/impl/contract/providerView.jsp" className="com.hp.systinet.sc.ui.impl.contract.ProviderView"/>
+        <component name="/core/impl/contract/requestStatus" page="/core/impl/contract/showContractRequestStatus.jsp" className="com.hp.systinet.sc.ui.impl.contract.ShowContractRequestStatus"/>
+        
+        <!-- Contract Request Wizard Steps -->
+        <component name="/core/impl/contract/changeConsumerStep" page="core/impl/contract/changeConsumerStep.jsp" className="com.hp.systinet.sc.ui.impl.contract.ChangeConsumerStep"/>      
+        <component name="/core/impl/contract/messageDocumentsStep" page="core/impl/contract/messageDocumentsStep.jsp" className="com.hp.systinet.sc.ui.impl.contract.MessageDocumentsStep"/>            
+        <component name="/core/impl/contract/searchConsumerStep" page="core/impl/contract/searchConsumerStep.jsp" className="com.hp.systinet.sc.ui.impl.contract.SearchConsumerStep"/>    
+        <component name="/core/impl/contract/selectConsumerStep" page="core/impl/contract/selectConsumerStep.jsp" className="com.hp.systinet.sc.ui.impl.contract.SelectConsumerStep"/>    
+        <component name="/core/impl/contract/selectSLOStep" page="core/impl/contract/selectSLOStep.jsp" className="com.hp.systinet.sc.ui.impl.contract.SelectSLOStep"/>
+        <component name="/core/impl/contract/summaryStep" page="core/impl/contract/summaryStep.jsp" className="com.hp.systinet.sc.ui.impl.contract.SummaryStep"/>
+        
+        <!--  FIX - johnny - rename to /core/impl/contract/contractsTable -->
+        <component name="/core/impl/favorites/contractsTable" page="core/impl/contract/contractsTable.jsp"/>
+        
+        <!-- TAXONOMY BROWSER REMAKE -->
+        <component name="/core/impl/taxonomy/categoryLink" page="/core/impl/taxonomy/categoryLink.jsp" />
+        <component name="/core/impl/taxonomy/taxonomyLink" page="/core/impl/taxonomy/taxonomyLink.jsp" />
+        
+        <!-- Table Widgets -->        
+        <component name="/core/impl/widget/consumableWidget" page="core/impl/widgets/consumableWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.ConsumableWidget"/>
+        <component name="/core/impl/widget/currentStageWidget" page="core/impl/widgets/currentStageWidget.jsp" className="com.hp.systinet.sc.ui.impl.widgets.CurrentStageWidget"/>
+        <component name="/core/impl/widget/taxonomyLinkWidget" page="core/impl/widgets/taxonomyLinkWidget.jsp"  className="com.hp.systinet.sc.ui.impl.widgets.TaxonomyLinkWidget"/>
+        <component name="/core/impl/widget/categoryLinkWidget" page="core/impl/widgets/categoryLinkWidget.jsp"  className="com.hp.systinet.sc.ui.impl.widgets.CategoryLinkWidget"/>
+
+        <component name="/core/impl/widget/util/taxonomyBrowser" page="core/impl/widgets/shared/taxonomyBrowser.jsp" className="com.hp.systinet.sc.ui.impl.widgets.shared.TaxonomyBrowser"/>        
+        <component name="/core/impl/widget/util/taxonomyBrowserButton" page="core/impl/widgets/shared/taxonomyBrowserWindow.jsp"/>                
+
+        <!-- Domains/roles devel page -->
+        <task uri="/provider/domains" component="/core/impl/domains/domains" userRole="developer"/>
+        <component name="/core/impl/domains/domains" page="core/impl/domains/domains.jsp" className="com.hp.systinet.sc.ui.impl.domains.DomainsComponent"/>
+
+        <!-- IMPL Components End -->
+        
+        <!-- Composite Browser -->
+        <component name="/core/composite/compositeBrowser" page="core/composite/compositeBrowser.jsp" className="com.hp.systinet.sc.ui.composite.CompositeBrowserComponent"/>
+        <component name="/core/impl/composite/parentPath" page="core/impl/composite/parentPath.jsp" className="com.hp.systinet.sc.ui.impl.composite.ParentPathComponent"/>
+        <component name="/core/impl/composite/parentPathWindow" page="core/impl/composite/parentPathWindow.jsp" className="com.hp.systinet.sc.ui.impl.composite.ParentPathWindowComponent"/>
+        <component name="/core/impl/composite/ruleSetSwitcher" page="core/impl/composite/ruleSetSwitcher.jsp" className="com.hp.systinet.sc.ui.impl.composite.RuleSetSwitcherComponent"/>
+
+        <!--  File Import -->
+        <task uri="/common/imports/importFile" component="/core/imports/importFile" />
+        <component name="/core/imports/importFile" page="core/imports/importFile.jsp" className="com.hp.systinet.sc.ui.imports.ImportFileComponent">
+            <parameter paramName="customizationId" paramValue="shared.imports.importFileTabs"/>
+            <parameter paramName="dontCustomize" paramValue="true"/>
+        </component>
+        
+        <component name="/core/impl/imports/file/publishFromLocal" page="core/impl/imports/file/publishFromLocal.jsp" className="com.hp.systinet.sc.ui.impl.imports.file.PublishFromLocalComponent"/>
+        <component name="/core/impl/imports/file/publishFromRemote" page="core/impl/imports/file/publishFromRemote.jsp" className="com.hp.systinet.sc.ui.impl.imports.file.PublishFromRemoteComponent"/>
+        <component name="/core/impl/imports/file/locationOptions" page="core/impl/imports/file/locationOptions.jsp" className="com.hp.systinet.sc.ui.impl.imports.file.LocationOptionsComponent"/>
+        <component name="/core/impl/imports/file/advancedOptions" page="core/impl/imports/file/advancedOptions.jsp" className="com.hp.systinet.sc.ui.impl.imports.file.AdvancedOptionsComponent"/>
+        <component name="/core/impl/imports/file/selectServerFolder" page="core/impl/imports/file/selectServerFolder.jsp"/>
+        <component name="/core/impl/imports/file/locationAfterUpload" page="core/impl/imports/file/locationAfterUpload.jsp" className="com.hp.systinet.sc.ui.impl.imports.file.LocationAfterUploadComponent"/>
+        
+        <component name="/core/impl/imports/options" page="core/impl/imports/options.jsp" className="com.hp.systinet.sc.ui.impl.imports.OptionsComponent"/>
+        
+        <component name="/core/impl/imports/duplicatesResolution" page="core/impl/imports/duplicatesResolution.jsp" className="com.hp.systinet.sc.ui.impl.imports.DuplicatesResolutionComponent"/>
+        <component name="/core/impl/imports/collisionsResolution" page="core/impl/imports/collisionsResolution.jsp" className="com.hp.systinet.sc.ui.impl.imports.CollisionsResolutionComponent"/>
+        <component name="/core/impl/imports/wsdlPublishingResolution" page="core/impl/imports/wsdlPublishingResolution.jsp" className="com.hp.systinet.sc.ui.impl.imports.WsdlPublishingResolutionComponent"/>
+        
+        <component name="/core/impl/imports/rollbackAction" page="/core/impl/imports/rollbackAction.jsp" className="com.hp.systinet.sc.ui.impl.imports.RollbackActionComponent" />
+
+        <component name="/core/impl/bulk/synchronize" page="/core/impl/imports/synchronize.jsp" className="com.hp.systinet.sc.ui.impl.imports.SynchronizeComponent" />
+        <component name="/core/impl/bulk/synchronizeWindow" page="/core/impl/imports/synchronizeWindow.jsp" />
+        
+        <component name="/core/data/dataIntegration" page="/core/impl/data/dataIntegration.jsp" className="com.hp.systinet.sc.ui.impl.data.DataIntegrationComponent" /> 
+        
+        <!-- Report Renderers -->
+        <component name="/reports/publishing" page="core/impl/report/publishing.jsp" className="com.hp.systinet.sc.ui.impl.report.PublishingReportComponent"/>
+        <component name="/reports/publishingRollback" page="core/impl/report/publishingRollback.jsp" className="com.hp.systinet.sc.ui.impl.report.PublishingRollbackReportComponent"/>
+        <component name="/reports/reportDescriptionItem" page="core/impl/report/reportDescriptionItem.jsp" className="com.hp.systinet.sc.ui.impl.report.ReportDescriptionItemComponent"/>
+        
+        <!-- WSDL Browser -->
+        <component name="/core/schema/browserWindow" page="core/schema/browserWindow.jsp" className="com.hp.systinet.sc.ui.impl.schema.BrowserWindowComponent"/>
+        
+        <component name="/core/schema/browserWindowWrapped" page="@/core/wrap/wrapComponent" className="com.hp.systinet.sc.ui.wrap.WrapComponent">
+            <parameter paramName="wrappedComponent" paramValue="/core/schema/browserWindow"/>
+        </component>
+        
+        <component name="/core/schema/browserModalWindow" page="core/schema/browserModalWindow.jsp" className="com.hp.systinet.sc.ui.impl.schema.BrowserModalWindowComponent"/>
+        
+        
+        <component name="/core/schema/browserWindowContent" page="core/schema/browserWindowContent.jsp" className="com.hp.systinet.sc.ui.impl.schema.BrowserWindowContentComponent"/>
+        
+        <component name="/core/schema/viewWsdl" page="core/schema/viewWsdl.jsp" className="com.hp.systinet.sc.ui.impl.schema.ViewWsdlComponent"/>
+        <component name="/core/schema/viewSchemaIndex" page="core/schema/viewSchemaIndex.jsp" className="com.hp.systinet.sc.ui.impl.schema.ViewSchemaIndexComponent"/>
+        <component name="/core/schema/viewSchemaElement" page="core/schema/viewSchemaElement.jsp" className="com.hp.systinet.sc.ui.impl.schema.ViewSchemaElementComponent"/>
+        <component name="/core/schema/elementStructure" page="core/schema/elementStructure.jsp" className="com.hp.systinet.sc.ui.impl.schema.ElementStructureComponent"/>
+        <component name="/core/schema/viewXml" page="core/schema/viewXml.jsp" className="com.hp.systinet.sc.ui.impl.schema.ViewXmlComponent"/>
+        
+        
+        <component name="/core/schema/view/schemaViewBox" page="core/schema/view/schemaViewBox.jsp" />
+        <component name="/core/schema/view/schemaViewConnection" page="core/schema/view/schemaViewConnection.jsp" />
+        <component name="/core/schema/view/schemaViewHint" page="core/schema/view/schemaViewHint.jsp" />
+        
+        <!-- WSDL page stuff -->
+        <component name="/core/wsdl/changeServerFolder" page="/core/wsdl/changeServerFolder.jsp" className="com.hp.systinet.sc.ui.wsdl.ChangeServerFolderComponent" />
+        <component name="/core/impl/wsdl/changeServerFolderWindow" page="/core/impl/wsdl/changeServerFolderWindow.jsp" className="com.hp.systinet.sc.ui.impl.wsdl.ChangeServerFolderWindowComponent" />
+        
+        <task uri="/common/duplicates" component="/core/dataattachment/duplicates" />
+        <component name="/core/dataattachment/duplicates" page="/core/dataattachment/duplicates.jsp" className="com.hp.systinet.sc.ui.dataattachment.DuplicatesComponent" />
+        <component name="/core/dataattachment/compareDuplicatesAction" page="@/core/impl/history/compareRevisions" className="com.hp.systinet.sc.ui.dataattachment.CompareDuplicatesAction" />
+        
+        <component name="/core/dataattachment/duplicatesAction" page="/core/dataattachment/duplicatesAction.jsp" className="com.hp.systinet.sc.ui.dataattachment.DuplicatesAction" />
+        
+        <component name="/core/dataattachment/serverFolderWidget" page="/core/dataattachment/serverFolderWidget.jsp" className="com.hp.systinet.sc.ui.dataattachment.ServerFolderWidget" />
+        <component name="/core/dataattachment/downloadContentAction" page="/core/dataattachment/downloadContentAction.jsp" className="com.hp.systinet.sc.ui.dataattachment.DownloadContentAction" />
+        <component name="/core/dataattachment/downloadContent" className="com.hp.systinet.sc.ui.dataattachment.DownloadContentComponent" />
+        <task uri="/common/downloadContent" component="/core/dataattachment/downloadContent" style="" />
+
+        <!-- Credential Store -->
+        <component name ="/core/credstore/credentialManagement" className ="com.hp.systinet.sc.ui.credstore.CredentialManagementComponent" page="/core/credstore/credentialManagement.jsp"/>
+        <component name ="/core/credstore/credential/credentialManagementWindow"  page="/core/credstore/credentialManagementWindow.jsp"/>
+        
+        <component name ="/core/credstore/actionLinkers" className ="com.hp.systinet.sc.ui.credstore.ActionLinkers" page="/core/credstore/actionLinkers.jsp"/>
+        <component name ="/core/credstore/editCredential" className ="com.hp.systinet.sc.ui.credstore.EditCredentialComponent" page="/core/credstore/editCredential.jsp"/>
+        <component name ="/core/credstore/editCredentialWindow" className ="com.hp.systinet.sc.ui.credstore.EditCredentialWindowComponent" page="/core/credstore/editCredentialWindow.jsp"/>
+        <component name ="/core/credstore/deleteAllCredentials" className ="com.hp.systinet.sc.ui.credstore.DeleteAllCredentialsComponent" page="/core/credstore/deleteAllCredentials.jsp"/>
+        <component name ="/core/credstore/resourceAddress" className ="com.hp.systinet.sc.ui.credstore.ResourceAddressComponent" page="/core/credstore/resourceAddress.jsp"/>
+        <component name ="/core/credstore/addCredential" page="/core/credstore/addCredential.jsp"/>
+        <component name ="/core/credstore/serverLinker" className ="com.hp.systinet.sc.ui.credstore.RegistryServerLinker" page="/core/credstore/serverLinker.jsp"/>
+        <component name ="/core/credstore/descWithCredLink" className="com.hp.systinet.sc.ui.credstore.DescWithCredLinkComponent" page="/core/credstore/descWithCredLink.jsp"/>
+        
+        
+        
+        <task uri="/core/credstore/credentialManagement" component="/core/credstore/credentialManagement" >
+        </task>
+        
+        <!-- Upload WSDL to BS -->
+        <component name="/core/wsdl/upload" page="/core/wsdl/upload.jsp" className="com.hp.systinet.sc.ui.wsdl.UploadComponent" />
+        <component name="/core/wsdl/uploadWindow" page="/core/impl/wsdl/uploadWindow.jsp" className="com.hp.systinet.sc.ui.impl.wsdl.UploadWindowComponent" />
+        
+        <component name="/core/wsdl/changeSOAPWsdl" page="/core/wsdl/changeSOAPWsdl.jsp" className="com.hp.systinet.sc.ui.wsdl.ChangeSOAPWsdlComponent" />
+        <component name="/core/wsdl/createSOAP" page="/core/wsdl/createSOAP.jsp" className="com.hp.systinet.sc.ui.wsdl.CreateSOAPComponent" />
+
+       
+
+        
+        <component name="/core/messages/executionReportWithProgress" page="@/core/wrap/wrapComponent" className="com.hp.systinet.sc.ui.wrap.WrapComponent">
+            <parameter paramName="wrappedComponent" paramValue="/core/messages/executionReportWithProgressWrapped"/>
+        </component>
+        <component name="/core/messages/executionReportWithProgressWrapped" page="/core/messages/executionReportWithProgress.jsp" className="com.hp.systinet.sc.ui.messages.ExecutionReportWithProgressComponent" />
+
+        <!-- TODO REVIEW (Svata, Sep 6, 2010): MessageWithProgress is either a reusable component, and should be in ui-sc-components, or administration-specific component
+            and should be in ui-sc-administration. Refactor. 
+        -->
+        <component name="/core/messages/messageWithProgress" page="@/core/wrap/wrapComponent" className="com.hp.systinet.sc.ui.wrap.WrapComponent">
+            <parameter paramName="wrappedComponent" paramValue="/core/messages/messageWithProgressWrapped"/>
+        </component>
+        <component name="/core/messages/messageWithProgressWrapped" page="/core/messages/messageWithProgress.jsp" />
+
+        <component name="/partner/contract/actions/requestConsumption" page="@/contract/actions/requestConsumption"
+                   className="com.hp.systinet.contract.ui.actions.RequestConsumptionAction">
+            <parameter paramName="canChangeConsumer" paramValue="false"/>
+        </component>
+        
+    </webFramework>
+</config>

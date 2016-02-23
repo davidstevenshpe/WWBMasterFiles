@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pm:Assertion xmlns:pm="http://systinet.com/2005/10/soa/policy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:a="http://systinet.com/2005/05/soa/model/artifact" xmlns:r="http://systinet.com/2005/05/repository" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:pt="http://systinet.com/2005/05/soa/model/property/type" xmlns:rest="http://systinet.com/2005/05/soa/resource" xmlns:p="http://systinet.com/2005/05/soa/resource" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:g="http://systinet.com/2005/05/soa/model/propertyGroup">
+        <pm:Template>
+          <bp:WSDLDeclareSOAPNamespace xmlns:bp="http://systinet.com/2005/10/soa/policy/bpa"/>
+        </pm:Template>
+        <pm:Bundle>
+            <pm:String Key="error">The binding element seems to be intended as a SOAP binding. If it is, change its namespace to "http://schemas.xmlsoap.org/wsdl/soap/". If not, change or remove the transport attribute.</pm:String>
+        </pm:Bundle>
+        <pm:Validation SourceType="xmlns(ns=http://schemas.xmlsoap.org/wsdl/)qname(ns:definitions)" xmlns:val="http://systinet.com/2005/10/soa/policy/validation">
+          <val:XQuery>
+
+    declare namespace val="http://systinet.com/2005/10/soa/policy/validation";
+    declare namespace wsdl="http://schemas.xmlsoap.org/wsdl/";
+
+    let $bindings := /wsdl:definitions/wsdl:binding/*[local-name()="binding" and @transport]
+    return
+        if ((count($bindings)=0)) then
+            val:assertionNotApplicable()
+        else
+            let $res :=
+                for $el in $bindings[@transport="http://schemas.xmlsoap.org/soap/http" and namespace-uri()!="http://schemas.xmlsoap.org/wsdl/soap/"]
+                return
+                    val:assertionFailed(val:l10n('error'), $el)
+        return
+            if (empty($res)) then
+                val:assertionOK()
+            else
+                ()
+
+    </val:XQuery>
+        </pm:Validation>
+      </pm:Assertion>

@@ -1,0 +1,251 @@
+var dh = Ext.DomHelper;
+
+var uiMessageTpl = {tag:'div', cls:'UI SystemMessage {type}', cn:[
+      {tag:'div', cls:'MessageContainer', cn:[
+        {tag:'div', cls:'Text', html:'<span class="UI Icon {type}">{text}</span>'},
+        {tag:'div', cls:'x-clear'}
+      ]}
+    ]};
+
+function createAlmChartTemplate(){
+    var almChartTpl = {tag:'div', cn:[
+      {tag:'div', cls:'Title', cn:[
+        {tag:'h3', html: 'Quality ({serverName})'}
+      ]},
+
+      {tag:'div', cls:'Content', cn:[
+        {tag:'table', cls: 'UI Table Properties', cn:[
+          {tag:'tr', cn:[
+            {tag:'td', cn:[
+              {tag:'div', cn:[
+                {tag:'h4', cls:'Subheader', html:'Requirements Coverage ({reqs})'},
+                {tag:'div', id:'{reqChartId}', style:"height:{reqChartHeight};"}
+              ]},
+
+              {tag:'a', href:'{reqUrl}', html:'View In ALM'}
+            ]},
+            
+            {tag:'td', cn:[
+              {tag:'div', cn:[
+                {tag:'h4', cls:'Subheader', html:'Defects ({defects})'},
+                {tag:'div', id:'{defectChartId}', style:"height:{defectChartHeight};"}
+              ]},
+              
+              {tag:'a', href:'{defectUrl}', html:'View In ALM'}
+            ]}
+          ]},
+
+          {tag:'tr', cn:[
+            {tag:'td', cn:[
+              {tag:'div', cls:'OffsetTop', cn:[
+                {tag:'h4', cls:'Subheader', html: "Tests ({tests})"},
+                {tag:'a', href:'{testUrl}', html:'View In ALM'}
+              ]}
+            ]}
+          ]}
+        ]}	
+      ]}
+    ]}; 
+
+    return dh.createTemplate(almChartTpl);
+} 
+
+function createAlmPublishUrlTemplate(){
+    var almPublishUrlTpl = {tag:'div', cn:[
+      {tag:'div', cls:'Title', cn:[
+        {tag:'h3', html:'Quality'}
+      ]},
+
+      {tag:'div', cls:'Content', cn:[
+        {tag:'i', html:'No details available. Register service in Service Test Management first.'},
+        {tag:'br'},
+        {tag:'a', href:'{publishUrl}', html:'Register in ALM on {serverName}'}
+      ]}
+    ]};
+    return dh.createTemplate(almPublishUrlTpl);
+}
+
+function createUIMessageTemplate(){  
+    return dh.createTemplate(uiMessageTpl);
+}
+
+function createAlmMessageTemplate(){
+    var missingEnvsTpl = {tag:'div', cn:[
+      {tag:'div', cls:'Title', cn:[
+        {tag:'h3', html:'Quality'}
+      ]},
+
+      {tag:'div', cls:'Content', cn:[
+        uiMessageTpl
+      ]}
+    ]};
+    return dh.createTemplate(missingEnvsTpl);
+}
+
+function createAlmPublishMenuTemplate(){
+    var almPublishUrlTpl = {tag:'div', cn:[
+      {tag:'div', cls:'Title', cn:[
+        {tag:'h3', html:'Quality'}
+      ]},
+
+      {tag:'div', cls:'Content', cn:[
+        {tag:'i', html:'No details available. Register service in Service Test Management first.'},
+        {tag:'br'},
+        {tag:'div', id:'{publishMenuId}', cls:'MenuButton'}
+      ]}
+    ]};
+    return dh.createTemplate(almPublishUrlTpl);
+}
+
+function createAlmPublishLink(containerId, missingServers){
+    if(missingServers.length > 1){
+      var publishMenuId = 'publishMenuId';
+      createAlmPublishMenuTemplate().append(containerId,{
+        publishMenuId: publishMenuId
+      });
+      new Ext.Button({
+        renderTo: publishMenuId,
+        arrowAlign: 'right',
+        menu: missingServers,
+        split: true,
+        text: 'Register in ALM on ...'
+      });
+    } else {
+      createAlmPublishUrlTemplate().append(containerId,{
+        serverName: missingServers[0].text,
+        publishUrl:missingServers[0].href
+      });
+    }
+}
+
+function processStatusBar(containerId, processBarId, processed, content){
+    if(processed){
+      var processBar = Ext.get(processBarId).dom;
+      processBar.parentNode.removeChild(processBar);
+    } else {
+      var processBarTpl = {tag:'div', id:'{id}', cn:[
+        {tag:'div', cls:'Title', cn:[
+          {tag:'h3', html:'{title}'}
+        ]},
+        {tag:'div', cls:'UI Icon Working', html:'{text}'}
+      ]};
+      dh.createTemplate(processBarTpl).append(containerId, {
+        id:processBarId,
+        text:content.text,
+        title:content.title
+      });
+    }
+}
+
+function createAlmServicePublisher(containerId, servers){
+    var missingServers = servers.missingServers;
+    var missingEnvs = servers.missingEnvs;
+    var missingCount = missingServers.length + missingEnvs.length;
+    if(missingCount > 0){
+        if(missingServers.length > 0){
+           createAlmPublishLink(containerId, missingServers);
+        }
+
+        if(missingEnvs.length > 0){
+           createAlmMessageTemplate().append(containerId,{
+             type:"Warning",
+             text:"<strong>Warning:</strong> Service has no endpoints defined for environment(s):" + parseArraysToString(missingEnvs)
+           });
+        }
+    }
+}
+
+function createAlmDefaultChart(containerId, servers, height){
+    for(var i = 0; i < servers.beans.length; i++){
+      var server = servers.beans[i];
+      if(server.status != 'SERVICE_MISSING'){
+        if(server.status == 'OK'){
+          createAlmPieChart(containerId, server, height);
+        } else if(server.status == 'CONNECTIVITY_ERROR'){
+          createAlmMessageTemplate().append(containerId,{
+            type:"Error",     
+            text:"Error connecting to ALM server."
+          });
+        } else {
+          createAlmMessageTemplate().append(containerId,{
+            type:"Error",
+            text:"Internal error has occured while obtaining data from ALM server. Check log data."
+          });
+        }
+      }
+    }
+}
+
+function createAlmPieChart(containerId, server, height){   
+    var chartHeight = (height != null || height != undefined) ? height : "170px";
+    var entities = server.entities;
+    var serverId = server.props.uuid;
+    var reqChartId= serverId + 'ReqChart';
+    var reqChartHeight = entities.almReq.total > 0 ? chartHeight : "0px";
+    var reqMap = calculateAlmProps(entities.almReq, 'status');
+    var defectChartId= serverId + 'DefectChart';
+    var defectChartHeight = entities.almDefect.total > 0 ? chartHeight : "0px";
+    var defectMap = calculateAlmProps(entities.almDefect, 'severity');
+
+    createAlmChartTemplate().append(containerId,{
+      serverName: server.props.name,      
+      reqs: entities.almReq.total,
+      reqChartHeight:reqChartHeight,
+      reqUrl:entities.almReq.href,
+      reqChartId: reqChartId,
+      defects: entities.almDefect.total,
+      defectChartHeight:defectChartHeight,
+      defectUrl:entities.almDefect.href,
+      defectChartId: defectChartId,
+      tests: entities.almTest.total,
+      testUrl:entities.almTest.href
+    });
+
+    createReqPieChart(reqChartId, reqMap);
+    createDefectPieChart(defectChartId, defectMap);
+}
+
+function createReqPieChart(chartId, map){
+    setPieChart(chartId, {
+      animate: false,
+      data: [map['Not Covered'] != undefined ? map['Not Covered']: 0, map['No Run'] != undefined ? map['No Run']: 0, map['N/A'] != undefined ? map['N/A']: 0, map['Failed'] != undefined ? map['Failed']: 0, map['Passed'] != undefined ? map['Passed']: 0, map['Not Completed'] != undefined ? map['Not Completed']: 0],
+      legend: ['Not Covered(##)','No Run(##)','N/A(##)','Failed(##)','Passed(##)','Not Completed(##)'],
+      legendpos: 'east', 
+      colors: ['#0F4780','#21779B','#838383','#BF1F26','#45AB26','#16ABA3']
+    });   
+}
+
+function createDefectPieChart(chartId, map){
+    setPieChart(chartId, {
+      animate: false,
+      data: [map['1-Low'] != undefined ? map['1-Low']: 0, map['2-Medium'] != undefined ? map['2-Medium']: 0, map['3-High'] != undefined ? map['3-High']: 0, map['4-Very High'] != undefined ? map['4-Very High']: 0, map['5-Urgent'] != undefined ? map['5-Urgent']: 0],
+      legend: ['1-Low(##)','2-Medium(##)','3-High(##)','4-Very High(##)','5-Urgent(##)'],
+      legendpos: 'east', 
+      colors: ['#336633','#B5BF00','#DE9007','#D54837','#CC0066']
+    });
+}
+
+function calculateAlmProps(entity, value){
+    var props = entity.props;
+    var map = {}; 
+    map['totalEntities'] = 0;
+    for(var i = 0 ; i < props.length ; i++){
+       var property = props[i][value];
+       var count = map[property];
+       map[property] = count != undefined ? ++count : 1;
+       map['totalEntities'] += 1;
+    } 
+    return map;
+}
+
+function parseArraysToString(arrayList){
+  var result = "[";
+  for(var i = 0 ; i < arrayList.length ; i ++){
+    if(i > 0){
+      result += ", ";
+    }
+    result += arrayList[i];
+  }
+  result += "]";
+  return result; 
+}
